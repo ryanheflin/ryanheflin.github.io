@@ -8,15 +8,12 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
-
-    /* Hide all tabs by default */
     .tab-content { 
       display: none;
       opacity: 0;
-      transform: translateX(-60px); /* start left */
+      transform: translateX(-60px);
       transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.77,0,.18,1);
     }
-    /* When active, show and slide/fade in */
     .tab-content.active {
       display: block;
       opacity: 1;
@@ -26,10 +23,10 @@
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
-  <!-- HEADER with Logo + Title -->
+  <!-- HEADER -->
   <header class="flex items-center py-8 px-8">
-    <!-- Soccer ball SVG logo -->
     <span class="inline-block w-14 h-14 mr-4">
+      <!-- simple soccer ball SVG -->
       <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
         <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
         <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
@@ -40,56 +37,93 @@
     <div>
       <h1 class="text-5xl font-bold uppercase tracking-wide text-gray-50">Ex Profundo</h1>
       <p class="text-xl mt-2 max-w-xl">
-        Data analysis portfolio focused on professional soccer. Explore visualizations, dashboards, and analysis tools.
+        Data analysis portfolio focused on professional soccer. Explore visualizations, dashboards, and tools across multiple club data usage areas.
       </p>
     </div>
   </header>
 
   <!-- TABS NAVIGATION -->
-  <div class="flex justify-center space-x-4 border-b border-gray-700 pb-2">
-    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
-            data-tab="home" data-color="border-yellow-400" data-slide="left">Home</button>
-    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
-            data-tab="visualizations" data-color="border-blue-400" data-slide="right">Visualizations</button>
-    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
-            data-tab="tools" data-color="border-green-400" data-slide="left">Tools</button>
+  <div class="flex flex-wrap justify-center space-x-2 border-b border-gray-700 pb-2 text-sm md:text-base">
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="home" data-color="border-yellow-400" data-slide="left">Home</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="scouting" data-color="border-purple-400" data-slide="right">Player Scouting</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="player-analysis" data-color="border-green-400" data-slide="left">Player Analysis</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="tactics" data-color="border-blue-400" data-slide="right">Tactical Analysis</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="injury" data-color="border-red-400" data-slide="left">Injury Prevention</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="budget" data-color="border-yellow-400" data-slide="right">Budget & Salaries</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="youth" data-color="border-pink-400" data-slide="left">Youth Development</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="match-prep" data-color="border-indigo-400" data-slide="right">Match Preparation</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="fan" data-color="border-teal-400" data-slide="left">Fan Engagement</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="training" data-color="border-orange-400" data-slide="right">Sports Science</button>
+    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="transfers" data-color="border-lime-400" data-slide="left">Transfer Market</button>
   </div>
 
   <!-- HOME -->
   <section id="home" class="tab-content active px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome to Ex Profundo</h2>
-    <p class="mb-4">
-      This portfolio highlights my work in soccer analytics, including player stats, team performance insights, and interactive dashboards.
-    </p>
+    <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome</h2>
+    <p class="mb-4">Explore tools and visualizations across all major soccer club data usage areas.</p>
   </section>
 
-  <!-- VISUALIZATIONS -->
-  <section id="visualizations" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-blue-500">Visualizations</h2>
-    <p class="mb-4">Interactive graphics, charts, and reports made with Tableau, Power BI, and R.</p>
-    <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-blue-500">
-      <p class="text-center text-lg text-gray-400">Add your Tableau / Power BI embeds here.</p>
-    </div>
+  <!-- PLAYER SCOUTING -->
+  <section id="scouting" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-purple-400">Player Scouting & Recruitment</h2>
+    <p class="mb-4">Identify and evaluate top talent.</p>
+    <!-- Example embedded app -->
+    <iframe src="#" width="100%" height="600px" style="border:none;"></iframe>
   </section>
 
-  <!-- TOOLS -->
-  <section id="tools" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-green-500">Tools</h2>
-    <p class="mb-4">Interactive tools and scripts for match analysis and projections.</p>
-    <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-green-500">
-      <h3 class="text-xl font-semibold mb-4">MLS Goals vs xG Interactive Dashboard</h3>
-      <iframe src="https://exprofundo.shinyapps.io/shiny_scripts/" 
-              width="100%" height="700px" style="border:none;">
-      </iframe>
-    </div>
+  <!-- PLAYER ANALYSIS -->
+  <section id="player-analysis" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-green-400">Individual Player Analysis</h2>
+    <p class="mb-4">Compare performance, track progress, and monitor workloads.</p>
+  </section>
 
-    <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-green-500">
-  <h3 class="text-xl font-semibold mb-4">MLS Team Points vs Salary by Year</h3>
-  <iframe src="https://exprofundo.shinyapps.io/TEST/" 
-          width="100%" height="700px" style="border:none;">
-  </iframe>
-</div>
-    
+  <!-- TACTICS -->
+  <section id="tactics" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-blue-400">Tactical Analysis</h2>
+    <p class="mb-4">Match heatmaps, passing networks, and tactical diagrams.</p>
+  </section>
+
+  <!-- INJURY -->
+  <section id="injury" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-red-400">Injury Prevention & Player Health</h2>
+    <p class="mb-4">Track injuries, recovery, and workload.</p>
+  </section>
+
+  <!-- BUDGET -->
+  <section id="budget" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Budget & Salary Analytics</h2>
+    <p class="mb-4">Evaluate salary efficiency and budget planning.</p>
+    <iframe src="https://exprofundo.shinyapps.io/TEST/" width="100%" height="600px" style="border:none;"></iframe>
+  </section>
+
+  <!-- YOUTH -->
+  <section id="youth" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-pink-400">Youth Development</h2>
+    <p class="mb-4">Track academy progress and identify promotion candidates.</p>
+  </section>
+
+  <!-- MATCH PREP -->
+  <section id="match-prep" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-indigo-400">Match Preparation</h2>
+    <p class="mb-4">Opponent analysis and game planning.</p>
+  </section>
+
+  <!-- FAN -->
+  <section id="fan" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-teal-400">Fan Engagement & Marketing</h2>
+    <p class="mb-4">Social sentiment and ticket sales analytics.</p>
+  </section>
+
+  <!-- TRAINING -->
+  <section id="training" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-orange-400">Sports Science & Training</h2>
+    <p class="mb-4">Optimize training loads and recovery schedules.</p>
+  </section>
+
+  <!-- TRANSFERS -->
+  <section id="transfers" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-lime-400">Transfer Market Dynamics</h2>
+    <p class="mb-4">Track transfer trends and model scenarios.</p>
   </section>
 
   <!-- FOOTER -->
@@ -97,44 +131,41 @@
     &copy; 2025 Ex Profundo. Built for a data analysis portfolio.
   </footer>
 
-  <!-- TAB SWITCH SCRIPT -->
+  <!-- JS for Tab Switching -->
   <script>
     const tabs = document.querySelectorAll(".tab-btn");
     const contents = document.querySelectorAll(".tab-content");
 
     function setActiveTab(tab) {
-      // Remove active styles and slide classes from all
       tabs.forEach(btn => {
-        btn.classList.remove("bg-gray-800", "text-white", "border-b-2", "border-yellow-400", "border-blue-400", "border-green-400", "font-bold");
+        btn.classList.remove("bg-gray-800", "text-white", "border-b-2",
+          "border-yellow-400","border-blue-400","border-green-400","border-purple-400",
+          "border-red-400","border-pink-400","border-indigo-400","border-teal-400",
+          "border-orange-400","border-lime-400","font-bold");
       });
       contents.forEach(c => {
         c.classList.remove("active");
-        c.style.transform = ""; // reset slide direction
+        c.style.transform = "";
       });
 
-      // Add style to active tab
       tab.classList.add("bg-gray-800", "text-white", "border-b-2", tab.dataset.color, "font-bold");
 
-      // Set slide direction for animation
       const dir = tab.dataset.slide === "right" ? "translateX(60px)" : "translateX(-60px)";
       const section = document.getElementById(tab.dataset.tab);
       section.style.transform = dir;
-      // Trigger fade & slide
       setTimeout(() => {
         section.classList.add("active");
         section.style.transform = "translateX(0)";
-      }, 10); // let display:block apply first
+      }, 10);
     }
-
-    // Set first tab active on load
     setActiveTab(tabs[0]);
-
-    // Click event
     tabs.forEach(tab => {
       tab.addEventListener("click", () => setActiveTab(tab));
     });
   </script>
+
 </body>
 </html>
+
 
 
