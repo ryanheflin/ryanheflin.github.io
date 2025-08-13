@@ -1,90 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex Profundo | Data Analysis Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ex Profundo | Data Analysis Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Hide all tabs by default */
+    .tab-content { 
+      display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+    /* When active, show and fade in */
+    .tab-content.active {
+      display: block;
+      opacity: 1;
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
 
-    <!-- Header -->
-    <header class="text-center py-8">
-        <h1 class="text-5xl font-bold uppercase tracking-wide text-gray-50">Ex Profundo</h1>
-        <p class="text-xl mt-4 max-w-2xl mx-auto">
-            Data analysis portfolio focused on professional soccer. Explore visualizations, dashboards, and analysis tools.
-        </p>
-    </header>
+  <!-- HEADER -->
+  <header class="text-center py-8">
+    <h1 class="text-5xl font-bold uppercase tracking-wide text-gray-50">Ex Profundo</h1>
+    <p class="text-xl mt-4 max-w-2xl mx-auto">
+      Data analysis portfolio focused on professional soccer. Explore visualizations, dashboards, and analysis tools.
+    </p>
+  </header>
 
-    <!-- Tabs Navigation -->
-    <div class="flex justify-center space-x-4 border-b border-gray-700 pb-2">
-        <button class="tab-btn text-lg px-4 py-2 rounded-t-lg bg-gray-800 text-white" data-tab="home">Home</button>
-        <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" data-tab="visualizations">Visualizations</button>
-        <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" data-tab="tools">Tools</button>
+  <!-- TABS NAVIGATION -->
+  <div class="flex justify-center space-x-4 border-b border-gray-700 pb-2">
+    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
+            data-tab="home" data-color="border-yellow-400">Home</button>
+    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
+            data-tab="visualizations" data-color="border-blue-400">Visualizations</button>
+    <button class="tab-btn text-lg px-4 py-2 rounded-t-lg hover:bg-gray-800" 
+            data-tab="tools" data-color="border-green-400">Tools</button>
+  </div>
+
+  <!-- HOME -->
+  <section id="home" class="tab-content active px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome to Ex Profundo</h2>
+    <p class="mb-4">
+      This portfolio highlights my work in soccer analytics, including player stats, team performance insights, and interactive dashboards.
+    </p>
+  </section>
+
+  <!-- VISUALIZATIONS -->
+  <section id="visualizations" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-blue-500">Visualizations</h2>
+    <p class="mb-4">Interactive graphics, charts, and reports made with Tableau, Power BI, and R.</p>
+    <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-blue-500">
+      <p class="text-center text-lg text-gray-400">Add your Tableau / Power BI embeds here.</p>
     </div>
+  </section>
 
-    <!-- Content Sections -->
+  <!-- TOOLS -->
+  <section id="tools" class="tab-content px-6 py-8">
+    <h2 class="text-3xl font-bold mb-4 text-green-500">Tools</h2>
+    <p class="mb-4">Interactive tools and scripts for match analysis and projections.</p>
+    <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-green-500">
+      <h3 class="text-xl font-semibold mb-4">MLS Goals vs xG Interactive Dashboard</h3>
+      <iframe src="https://exprofundo.shinyapps.io/shiny_scripts/" 
+              width="100%" height="700px" style="border:none;">
+      </iframe>
+    </div>
+  </section>
 
-    <!-- Home -->
-    <section id="home" class="tab-content active px-6 py-8">
-        <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome to Ex Profundo</h2>
-        <p class="mb-4">
-            This portfolio highlights my work in soccer analytics, including player stats, team performance insights, and interactive dashboards. Use the tabs above to explore my tools and visualizations.
-        </p>
-    </section>
+  <!-- FOOTER -->
+  <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
+    &copy; 2024 Ex Profundo by Ryan Heflin
+  </footer>
 
-    <!-- Visualizations -->
-    <section id="visualizations" class="tab-content px-6 py-8">
-        <h2 class="text-3xl font-bold mb-4 text-blue-500">Visualizations</h2>
-        <p class="mb-4">Interactive graphics, charts, and reports made with Tableau, Power BI, and R.</p>
+  <!-- TAB SWITCH SCRIPT -->
+  <script>
+    const tabs = document.querySelectorAll(".tab-btn");
+    const contents = document.querySelectorAll(".tab-content");
 
-        <!-- Example Placeholder -->
-        <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-blue-500">
-            <p class="text-center text-lg text-gray-400">Add your Tableau / Power BI embeds here.</p>
-        </div>
-    </section>
+    function setActiveTab(tab) {
+      // Remove active styles from all
+      tabs.forEach(btn => {
+        btn.classList.remove("bg-gray-800", "text-white", "border-b-2", "border-yellow-400", "border-blue-400", "border-green-400", "font-bold");
+      });
+      contents.forEach(c => c.classList.remove("active"));
 
-    <!-- Tools -->
-    <section id="tools" class="tab-content px-6 py-8">
-        <h2 class="text-3xl font-bold mb-4 text-green-500">Tools</h2>
-        <p class="mb-4">Interactive tools and scripts for match analysis and projections.</p>
+      // Add style to active tab
+      tab.classList.add("bg-gray-800", "text-white", "border-b-2", tab.dataset.color, "font-bold");
 
-        <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-green-500">
-            <h3 class="text-xl font-semibold mb-4">MLS Goals vs xG Interactive Dashboard</h3>
-            <iframe src="https://exprofundo.shinyapps.io/shiny_scripts/" 
-                    width="100%" height="700px" style="border:none;">
-            </iframe>
-        </div>
-    </section>
+      // Show correct section with fade
+      const section = document.getElementById(tab.dataset.tab);
+      section.classList.add("active");
+    }
 
-    <!-- Footer -->
-    <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
-        &copy; 2025 Ex Profundo. Built for a data analysis portfolio.
-    </footer>
+    // Set first tab active
+    setActiveTab(tabs[0]);
 
-    <!-- Tab Switching Script -->
-    <script>
-        const tabs = document.querySelectorAll(".tab-btn");
-        const contents = document.querySelectorAll(".tab-content");
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                // Remove active state from all
-                tabs.forEach(btn => btn.classList.remove("bg-gray-800", "text-white"));
-                contents.forEach(c => c.classList.remove("active"));
-                
-                // Add active states to selected
-                tab.classList.add("bg-gray-800", "text-white");
-                document.getElementById(tab.dataset.tab).classList.add("active");
-            });
-        });
-    </script>
+    // Click event
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => setActiveTab(tab));
+    });
+  </script>
 
 </body>
 </html>
+
