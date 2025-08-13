@@ -5,6 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ex Profundo | Data Analysis Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primaryGold: '#FFC500',
+        secondaryPurple: '#7C3AED',
+        accentTeal: '#14B8A6',
+        neutralLight: '#E5E7EB',
+        neutralDark: '#1F2937',
+        errorRed: '#EF4444'
+      },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
     body { font-family: 'Inter', sans-serif; }
@@ -172,7 +192,28 @@
       tab.addEventListener("click", () => setActiveTab(tab));
     });
   </script>
-
+<div style="
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 50;
+">
+  <!-- RFH SVG -->
+  <svg viewBox="0 0 120 120" fill="none"
+       xmlns="http://www.w3.org/2000/svg">
+    <circle cx="60" cy="60" r="58" stroke="#FFC500" stroke-width="4"/>
+    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" 
+          font-family="Inter, sans-serif" font-weight="700" font-size="48" 
+          fill="#7C3AED" letter-spacing="6">
+      RFH
+    </text>
+    <line x1="30" y1="80" x2="90" y2="80" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
+  </svg>
+</div>
 </body>
 </html>
 
