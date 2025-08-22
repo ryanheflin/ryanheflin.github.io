@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Page Header -->
-<header class="flex flex-col items-center py-8 px-8 space-y-4">
-  <!-- Soccer Ball SVG -->
-  <span class="inline-block w-14 h-14">
-    <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
-      <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
-      <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
-      <circle cx="32" cy="32" r="10" stroke="#FFC500" stroke-width="2"/>
-      <path d="M24 34l-8 4m32 0l-8-4m-8 0l0 10" stroke="#FFC500" stroke-width="2"/>
-    </svg>
-  </span>
-
-  <!-- Title -->
-  <h1 class="text-4xl font-bold text-teal-400 uppercase tracking-wide">Ex Profundo</h1>
-  <h2 class="text-xl text-gray-400 max-w-xl text-center">
-    A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.
-  </h2>
-</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ex Profundo | Soccer Data Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <body class="bg-gray-900 text-gray-100 antialiased">
-  <header class="flex items-center py-8 px-8">
-    <!-- Soccer Ball SVG and branding -->
-    <span class="inline-block w-14 h-14 mr-4">
+  <!-- Centered Header with Logo and Title -->
+  <header class="flex flex-col items-center py-8 px-8 space-y-4">
+    <!-- Soccer Ball SVG -->
+    <span class="inline-block w-14 h-14">
       <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
         <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
         <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
@@ -29,12 +18,17 @@
         <path d="M24 34l-8 4m32 0l-8-4m-8 0l0 10" stroke="#FFC500" stroke-width="2"/>
       </svg>
     </span>
-    <div>
-      <h1 class="text-5xl font-bold uppercase tracking-wide text-gray-50">Ex Profundo</h1>
-      <p class="text-xl mt-2 max-w-xl">A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.</p>
-    </div>
+    
+    <!-- Title -->
+    <h1 class="text-5xl font-bold uppercase tracking-wide text-yellow-400">Ex Profundo</h1>
+    
+    <!-- Subtitle -->
+    <p class="text-xl text-gray-400 max-w-xl text-center">
+      A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.
+    </p>
   </header>
-  <!-- Navbar: paste shared Navbar here -->
+
+  <!-- Navigation Bar -->
   <nav class="flex flex-wrap justify-center space-x-4 p-4 bg-gray-800 border-b border-gray-700">
     <a href="index.html" class="text-yellow-400 font-bold">Home</a>
     <a href="performance.html" class="hover:text-primaryGold">Player Performance</a>
@@ -43,17 +37,21 @@
     <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
     <a href="process.html" class="hover:text-primaryGold">My Process</a>
   </nav>
-  <main class="px-6 py-8 text-center">
-    <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome</h2>
-    <p class="mb-4">Explore interactive dashboards, custom visualizations, and analytical tools organized by real soccer club data needs.</p>
-    <p class="mb-4">Select a category above to view detailed work in each area.</p>
+
+  <!-- Main Content -->
+  <main class="px-6 py-8 text-center max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Welcome</h2>
+    <p class="mb-4">
+      Explore interactive dashboards, custom visualizations, and analytical tools organized by real soccer club data needs.
+    </p>
+    <p>
+      Use the navigation above to view detailed work in each key area of soccer analytics.
+    </p>
   </main>
+
+  <!-- Footer -->
   <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
-    &copy; 2024 Ex Profundo by Ryan Heflin
+    &copy; 2025 Ex Profundo by Ryan Heflin
   </footer>
 </body>
 </html>
-
-
-
-
