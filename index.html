@@ -6,52 +6,52 @@
   <title>Ex Profundo | Soccer Data Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
-  <!-- Centered Header with Logo and Title -->
-  <header class="flex flex-col items-center py-8 px-8 space-y-4">
-    <!-- Soccer Ball SVG -->
-    <span class="inline-block w-14 h-14">
-      <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
-        <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
-        <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
-        <circle cx="32" cy="32" r="10" stroke="#FFC500" stroke-width="2"/>
-        <path d="M24 34l-8 4m32 0l-8-4m-8 0l0 10" stroke="#FFC500" stroke-width="2"/>
-      </svg>
-    </span>
-    
-    <!-- Title -->
-    <h1 class="text-5xl font-bold uppercase tracking-wide text-yellow-400">Ex Profundo</h1>
-    
-    <!-- Subtitle -->
-    <p class="text-xl text-gray-400 max-w-xl text-center">
-      A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.
-    </p>
-  </header>
+<body class="bg-gray-900 text-gray-100 antialiased flex min-h-screen">
 
-  <!-- Navigation Bar -->
-  <nav class="flex flex-wrap justify-center space-x-4 p-4 bg-gray-800 border-b border-gray-700">
-    <a href="index.html" class="text-yellow-400 font-bold">Home</a>
-    <a href="performance.html" class="hover:text-primaryGold">Player Performance</a>
-    <a href="scouting.html" class="hover:text-primaryGold">Recruitment & Scouting</a>
-    <a href="tactics.html" class="hover:text-primaryGold">Tactical Analysis</a>
-    <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
-    <a href="process.html" class="hover:text-primaryGold">My Process</a>
+  <!-- Sidebar Navigation -->
+  <nav class="fixed top-0 left-0 h-full w-56 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8">
+    <!-- Logo and Title -->
+    <div class="flex flex-col items-center space-y-4">
+      <span class="inline-block w-14 h-14">
+        <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
+          <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
+          <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
+          <circle cx="32" cy="32" r="10" stroke="#FFC500" stroke-width="2"/>
+          <path d="M24 34l-8 4m32 0l-8-4m-8 0l0 10" stroke="#FFC500" stroke-width="2"/>
+        </svg>
+      </span>
+      <h1 class="text-3xl font-bold uppercase tracking-wide text-yellow-400 text-center">Ex Profundo</h1>
+      <p class="text-sm text-gray-400 text-center max-w-xs">
+        A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex flex-col space-y-4 text-lg">
+      <a href="index.html" class="text-yellow-400 font-bold hover:text-primaryGold">Home</a>
+      <a href="performance.html" class="hover:text-primaryGold">Player Performance</a>
+      <a href="scouting.html" class="hover:text-primaryGold">Recruitment & Scouting</a>
+      <a href="tactics.html" class="hover:text-primaryGold">Tactical Analysis</a>
+      <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
+      <a href="process.html" class="hover:text-primaryGold">My Process</a>
+    </div>
   </nav>
 
-  <!-- Main Content -->
-  <main class="px-6 py-8 text-center max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4 text-yellow-400">Welcome</h2>
-    <p class="mb-4">
+  <!-- Main Content Area -->
+  <main class="ml-56 flex-grow px-10 py-12 max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6 text-yellow-400">Welcome</h2>
+    <p class="mb-6 text-lg">
       Explore interactive dashboards, custom visualizations, and analytical tools organized by real soccer club data needs.
     </p>
-    <p>
-      Use the navigation above to view detailed work in each key area of soccer analytics.
+    <p class="text-lg">
+      Use the navigation on the left to view detailed work in each key area of soccer analytics.
     </p>
   </main>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
+  <footer class="fixed bottom-0 left-56 right-0 text-center text-gray-500 text-sm py-4 border-t border-gray-700 bg-gray-900">
     &copy; 2025 Ex Profundo by Ryan Heflin
   </footer>
+
 </body>
 </html>
