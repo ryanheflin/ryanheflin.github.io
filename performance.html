@@ -6,33 +6,60 @@
   <title>Ex Profundo | Player Performance</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-900 text-gray-100 antialiased">
-  <!-- Header and Navbar (same as index.html) -->
-  <header class="flex items-center py-8 px-8">
-    <h1 class="text-4xl font-bold text-yellow-500">Player Performance</h1>
-  </header>
-  <!-- Navbar: paste shared Navbar here -->
-  <nav class="flex flex-wrap justify-center space-x-4 p-4 bg-gray-800 border-b border-gray-700">
-    <a href="index.html" class="hover:text-primaryGold">Home</a>
-    <a href="performance.html" class="text-yellow-400 font-bold">Player Performance</a>
-    <a href="scouting.html" class="hover:text-primaryGold">Recruitment & Scouting</a>
-    <a href="tactics.html" class="hover:text-primaryGold">Tactical Analysis</a>
-    <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
-    <a href="process.html" class="hover:text-primaryGold">My Process</a>
+<body class="bg-gray-900 text-gray-100 antialiased flex min-h-screen">
+
+  <!-- Sidebar Navigation -->
+  <nav class="fixed top-0 left-0 h-full w-56 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8">
+    <!-- Logo and Title -->
+    <div class="flex flex-col items-center space-y-4">
+      <span class="inline-block w-14 h-14">
+        <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
+          <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
+          <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
+          <circle cx="32" cy="32" r="10" stroke="#FFC500" stroke-width="2"/>
+          <path d="M24 34l-8 4m32 0l-8-4m-8 0l0 10" stroke="#FFC500" stroke-width="2"/>
+        </svg>
+      </span>
+      <h1 class="text-3xl font-bold uppercase tracking-wide text-yellow-400 text-center">Ex Profundo</h1>
+      <p class="text-sm text-gray-400 text-center max-w-xs">
+        A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.
+      </p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex flex-col space-y-4 text-lg">
+      <a href="index.html" class="hover:text-primaryGold">Home</a>
+      <a href="performance.html" class="text-yellow-400 font-bold hover:text-yellow-300">Player Performance</a>
+      <a href="scouting.html" class="hover:text-primaryGold">Recruitment & Scouting</a>
+      <a href="tactics.html" class="hover:text-primaryGold">Tactical Analysis</a>
+      <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
+      <a href="process.html" class="hover:text-primaryGold">My Process</a>
+    </div>
   </nav>
-  <main class="px-6 py-8">
-    <h2 class="text-2xl font-bold mb-4 text-yellow-400">Individual and Squad Analytics</h2>
-    <p class="mb-4">Metrics, visualizations, and dashboards for tracking player output, technical quality, and physical performance.</p>
-    <!-- Example dashboard embed -->
-    <!--
-    <iframe src="YOUR_DASHBOARD_URL_HERE"
-            width="100%" height="700px" style="border:none;">
-    </iframe>
-    -->
-    <!-- Add content, downloads, tables, notes as needed -->
+
+  <!-- Main Content Area -->
+  <main class="ml-56 flex-grow px-10 py-12 max-w-5xl mx-auto">
+    <header class="mb-8">
+      <h1 class="text-4xl font-bold text-yellow-500">Player Performance</h1>
+    </header>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-4 text-yellow-400">Individual and Squad Analytics</h2>
+      <p class="mb-6">Metrics, visualizations, and dashboards for tracking player output, technical quality, and physical performance.</p>
+      <!-- Example dashboard embed -->
+      <!--
+      <iframe src="YOUR_DASHBOARD_URL_HERE"
+              width="100%" height="700px" style="border:none;">
+      </iframe>
+      -->
+      <!-- Add content, downloads, tables, notes as needed -->
+    </section>
   </main>
-  <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
+
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-56 right-0 text-center text-gray-500 text-sm py-4 border-t border-gray-700 bg-gray-900">
     &copy; 2025 Ex Profundo
   </footer>
+
 </body>
 </html>
