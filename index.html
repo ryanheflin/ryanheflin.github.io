@@ -2,51 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ex Profundo | Data Analysis Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Ex Profundo | Soccer Data Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primaryGold: '#FFC500',
-        secondaryPurple: '#7C3AED',
-        accentTeal: '#14B8A6',
-        neutralLight: '#E5E7EB',
-        neutralDark: '#1F2937',
-        errorRed: '#EF4444'
-      },
-      fontFamily: {
-        inter: ['Inter', 'sans-serif']
-      }
-    }
-  }
-}
-</script>
-
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
-    .tab-content { 
-      display: none;
-      opacity: 0;
-      transform: translateX(-60px);
-      transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.77,0,.18,1);
-    }
-    .tab-content.active {
-      display: block;
-      opacity: 1;
-      transform: translateX(0);
-    }
-  </style>
 </head>
 <body class="bg-gray-900 text-gray-100 antialiased">
-
-  <!-- HEADER -->
   <header class="flex items-center py-8 px-8">
+    <!-- Soccer Ball SVG and branding -->
     <span class="inline-block w-14 h-14 mr-4">
-      <!-- simple soccer ball SVG -->
       <svg viewBox="0 0 64 64" fill="none" class="w-full h-full">
         <circle cx="32" cy="32" r="31" fill="#402C16" stroke="#FFC500" stroke-width="2"/>
         <path d="M32 15l8 6v10l-8 5-8-5V21l8-6z" fill="#FFC500"/>
@@ -56,166 +19,29 @@ tailwind.config = {
     </span>
     <div>
       <h1 class="text-5xl font-bold uppercase tracking-wide text-gray-50">Ex Profundo</h1>
-      <p class="text-xl mt-2 max-w-xl">
-        Data analysis portfolio focused on professional soccer. Explore visualizations, dashboards, and tools across multiple club data usage areas.
-      </p>
+      <p class="text-xl mt-2 max-w-xl">A portfolio of actionable soccer analytics: player, club, tactics, finances, and craft.</p>
     </div>
   </header>
-
-  <!-- TABS NAVIGATION -->
-  <div class="flex flex-wrap justify-center space-x-2 border-b border-gray-700 pb-2 text-sm md:text-base">
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="home" data-color="border-yellow-400" data-slide="left">Home</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="scouting" data-color="border-purple-400" data-slide="right">Player Scouting</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="player-analysis" data-color="border-green-400" data-slide="left">Player Analysis</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="tactics" data-color="border-blue-400" data-slide="right">Tactical Analysis</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="injury" data-color="border-red-400" data-slide="left">Injury Prevention</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="budget" data-color="border-yellow-400" data-slide="right">Budget & Salaries</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="youth" data-color="border-pink-400" data-slide="left">Youth Development</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="match-prep" data-color="border-indigo-400" data-slide="right">Match Preparation</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="fan" data-color="border-teal-400" data-slide="left">Fan Engagement</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="training" data-color="border-orange-400" data-slide="right">Sports Science</button>
-    <button class="tab-btn px-2 py-2 hover:bg-gray-800" data-tab="transfers" data-color="border-lime-400" data-slide="left">Transfer Market</button>
-  </div>
-
-  <!-- HOME -->
-  <section id="home" class="tab-content active px-6 py-8">
+  <!-- Navbar: paste shared Navbar here -->
+  <nav class="flex flex-wrap justify-center space-x-4 p-4 bg-gray-800 border-b border-gray-700">
+    <a href="index.html" class="text-yellow-400 font-bold">Home</a>
+    <a href="performance.html" class="hover:text-primaryGold">Player Performance</a>
+    <a href="scouting.html" class="hover:text-primaryGold">Recruitment & Scouting</a>
+    <a href="tactics.html" class="hover:text-primaryGold">Tactical Analysis</a>
+    <a href="finance.html" class="hover:text-primaryGold">Finance & Club Ops</a>
+    <a href="process.html" class="hover:text-primaryGold">My Process</a>
+  </nav>
+  <main class="px-6 py-8 text-center">
     <h2 class="text-3xl font-bold mb-4 text-yellow-500">Welcome</h2>
-    <p class="mb-4">Explore tools and visualizations across all major soccer club data usage areas.</p>
-  </section>
-
-  <!-- PLAYER SCOUTING -->
-<section id="scouting" class="tab-content px-6 py-8">
-  <h2 class="text-3xl font-bold mb-4 text-purple-400">Player Scouting & Recruitment</h2>
-  <p class="mb-4">Identify and evaluate top talent, including overperforming squads and players compared to their expected goals.</p>
-  <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-purple-400 mb-8">
-    <h3 class="text-xl font-semibold mb-4">MLS Goals vs xG Interactive Dashboard</h3>
-    <iframe src="https://exprofundo.shinyapps.io/shiny_scripts/" 
-            width="100%" height="700px" style="border:none;">
-    </iframe>
-  </div>
-</section>
-
-  <!-- PLAYER ANALYSIS -->
-  <section id="player-analysis" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-green-400">Individual Player Analysis</h2>
-    <p class="mb-4">Compare performance, track progress, and monitor workloads.</p>
-  </section>
-
-  <!-- TACTICS -->
-  <section id="tactics" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-blue-400">Tactical Analysis</h2>
-    <p class="mb-4">Match heatmaps, passing networks, and tactical diagrams.</p>
-  </section>
-
-  <!-- INJURY -->
-  <section id="injury" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-red-400">Injury Prevention & Player Health</h2>
-    <p class="mb-4">Track injuries, recovery, and workload.</p>
-  </section>
-
-  <!-- BUDGET -->
-<section id="budget" class="tab-content px-6 py-8">
-  <h2 class="text-3xl font-bold mb-4 text-yellow-400">Budget & Salary Analytics</h2>
-  <p class="mb-4">Evaluate salary efficiency and budget planning with respect to team performance and league comparisons.</p>
-  <div class="bg-gray-800 rounded-lg p-6 shadow-xl border-t-4 border-yellow-400">
-    <h3 class="text-xl font-semibold mb-4">MLS Team Points vs Salary by Year</h3>
-    <iframe src="https://exprofundo.shinyapps.io/TEST/" 
-            width="100%" height="700px" style="border:none;">
-    </iframe>
-  </div>
-</section>
-
-  <!-- YOUTH -->
-  <section id="youth" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-pink-400">Youth Development</h2>
-    <p class="mb-4">Track academy progress and identify promotion candidates.</p>
-  </section>
-
-  <!-- MATCH PREP -->
-  <section id="match-prep" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-indigo-400">Match Preparation</h2>
-    <p class="mb-4">Opponent analysis and game planning.</p>
-  </section>
-
-  <!-- FAN -->
-  <section id="fan" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-teal-400">Fan Engagement & Marketing</h2>
-    <p class="mb-4">Social sentiment and ticket sales analytics.</p>
-  </section>
-
-  <!-- TRAINING -->
-  <section id="training" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-orange-400">Sports Science & Training</h2>
-    <p class="mb-4">Optimize training loads and recovery schedules.</p>
-  </section>
-
-  <!-- TRANSFERS -->
-  <section id="transfers" class="tab-content px-6 py-8">
-    <h2 class="text-3xl font-bold mb-4 text-lime-400">Transfer Market Dynamics</h2>
-    <p class="mb-4">Track transfer trends and model scenarios.</p>
-  </section>
-
-  <!-- FOOTER -->
+    <p class="mb-4">Explore interactive dashboards, custom visualizations, and analytical tools organized by real soccer club data needs.</p>
+    <p class="mb-4">Select a category above to view detailed work in each area.</p>
+  </main>
   <footer class="text-center text-gray-500 mt-12 text-sm py-4 border-t border-gray-700">
-    &copy; 2024 Ex Profundo by Ryan Heflin
+    &copy; 2025 Ex Profundo by Ryan Heflin
   </footer>
-
-  <!-- JS for Tab Switching -->
-  <script>
-    const tabs = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".tab-content");
-
-    function setActiveTab(tab) {
-      tabs.forEach(btn => {
-        btn.classList.remove("bg-gray-800", "text-white", "border-b-2",
-          "border-yellow-400","border-blue-400","border-green-400","border-purple-400",
-          "border-red-400","border-pink-400","border-indigo-400","border-teal-400",
-          "border-orange-400","border-lime-400","font-bold");
-      });
-      contents.forEach(c => {
-        c.classList.remove("active");
-        c.style.transform = "";
-      });
-
-      tab.classList.add("bg-gray-800", "text-white", "border-b-2", tab.dataset.color, "font-bold");
-
-      const dir = tab.dataset.slide === "right" ? "translateX(60px)" : "translateX(-60px)";
-      const section = document.getElementById(tab.dataset.tab);
-      section.style.transform = dir;
-      setTimeout(() => {
-        section.classList.add("active");
-        section.style.transform = "translateX(0)";
-      }, 10);
-    }
-    setActiveTab(tabs[0]);
-    tabs.forEach(tab => {
-      tab.addEventListener("click", () => setActiveTab(tab));
-    });
-  </script>
-<div style="
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 80px;
-  height: 80px;
-  opacity: 0.15;
-  pointer-events: none;
-  z-index: 50;
-">
-  <!-- RFH SVG -->
-  <svg viewBox="0 0 120 120" fill="none"
-       xmlns="http://www.w3.org/2000/svg">
-    <circle cx="60" cy="60" r="58" stroke="#FFC500" stroke-width="4"/>
-    <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" 
-          font-family="Inter, sans-serif" font-weight="700" font-size="48" 
-          fill="#7C3AED" letter-spacing="6">
-      RFH
-    </text>
-    <line x1="30" y1="80" x2="90" y2="80" stroke="#14B8A6" stroke-width="3" stroke-linecap="round"/>
-  </svg>
-</div>
 </body>
 </html>
+
 
 
 
