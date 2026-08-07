@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practice Plan | CE Altafulla U15</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+
+  <!-- Sidebar Navigation -->
+  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
+    <div class="flex flex-col items-center space-y-3">
+      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-16 h-16 object-contain" />
+      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
+        Ex Profundo
+      </h1>
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
+        CE Altafulla S15
+      </span>
+    </div>
+
+    <div class="flex flex-col space-y-2 text-base font-medium">
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📅 Season Schedule
+      </a>
+      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
+        📋 Practice Plan
+      </a>
+      <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📊 Game Analytics
+      </a>
+      <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        ℹ️ Rules & Coach
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
+    <header class="mb-8">
+      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Practice Plan & Curriculum</h2>
+      <p class="text-gray-400">Weekly training objectives, tactical principles, and development sessions.</p>
+    </header>
+
+    <!-- Sub-tabs -->
+    <div class="flex space-x-4 border-b border-gray-700 mb-6">
+      <button onclick="switchTab('weekly')" id="tab-btn-weekly" class="tab-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">
+        Weekly Schedule
+      </button>
+      <button onclick="switchTab('principles')" id="tab-btn-principles" class="tab-btn pb-2 font-semibold text-gray-400 hover:text-white">
+        Tactical Principles
+      </button>
+    </div>
+
+    <!-- Tab 1: Weekly Plan -->
+    <div id="tab-weekly" class="tab-content">
+      <div class="space-y-4">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <div class="flex justify-between items-center mb-2">
+            <h3 class="text-xl font-bold">Week 1: Build-up in the First Third</h3>
+            <span class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">Current Focus</span>
+          </div>
+          <p class="text-sm text-gray-300 mb-3">Focus on body shape receiving from the center-backs and finding interior passes into midfielders under pressure.</p>
+          <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
+            <li><strong>Tuesday:</strong> 4v4+3 Position Play Rondo & Exit Drills</li>
+            <li><strong>Thursday:</strong> 8v8 Conditioned Game with High Pressing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Playing Principles -->
+    <div id="tab-principles" class="tab-content hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-lg font-bold mb-2 text-blue-400">Attacking Phase</h3>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>Create width and depth immediately upon regaining possession.</li>
+            <li>Look for third-man runs in the half-spaces.</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-lg font-bold mb-2 text-yellow-400">Defensive Phase</h3>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>Immediate counter-press upon loss within 5 seconds.</li>
+            <li>Maintain compact vertical lines (under 30 meters).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
+  </footer>
+
+  <script>
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('text-white', 'border-b-2');
+        btn.classList.add('text-gray-400');
+        btn.style.borderColor = 'transparent';
+      });
+
+      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
+      activeBtn.classList.add('text-white', 'border-b-2');
+      activeBtn.style.borderColor = 'var(--altafulla-yellow)';
+    }
+  </script>
+</body>
+</html>
