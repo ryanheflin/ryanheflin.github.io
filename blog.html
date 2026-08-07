@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Coach's Notes | CE Altafulla U15</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+
+  <!-- Sidebar Navigation -->
+  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
+    <div class="flex flex-col items-center space-y-3">
+      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-16 h-16 object-contain" />
+      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
+        Ex Profundo
+      </h1>
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
+        CE Altafulla S15
+      </span>
+    </div>
+
+    <div class="flex flex-col space-y-2 text-base font-medium">
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📅 Season Schedule
+      </a>
+      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📋 Practice Plan
+      </a>
+      <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📊 Game Analytics
+      </a>
+      <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
+        ✍️ Coach's Notes
+      </a>
+      <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        ℹ️ Rules & Coach
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full space-y-8">
+    <header>
+      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Coach's Blog & Video Notes</h2>
+      <p class="text-gray-400 text-sm">Post-match thoughts, tactical film studies, weekly reviews, and parent Q&A.</p>
+    </header>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex space-x-2 border-b border-gray-700 pb-3 overflow-x-auto">
+      <button onclick="filterPosts('all')" id="filter-all" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-700 text-white" style="color: var(--altafulla-yellow);">
+        All Posts
+      </button>
+      <button onclick="filterPosts('match-report')" id="filter-match-report" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800">
+        ⚽ Match Reports
+      </button>
+      <button onclick="filterPosts('video-analysis')" id="filter-video-analysis" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800">
+        🎥 Video Clips
+      </button>
+      <button onclick="filterPosts('practice-review')" id="filter-practice-review" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800">
+        📋 Weekly Practice
+      </button>
+      <button onclick="filterPosts('qa')" id="filter-qa" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800">
+        💬 Q&A & Notes
+      </button>
+    </div>
+
+    <!-- LATEST / FEATURED POST -->
+    <article class="post-card featured-post bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg space-y-4">
+      <div class="flex items-center justify-between">
+        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-yellow-400 text-black uppercase">
+          Latest Post • Match Report
+        </span>
+        <span class="text-xs text-gray-400">October 14, 2026</span>
+      </div>
+
+      <h3 class="text-2xl font-bold text-white">Deconstructing the Second Half Press vs. Reus</h3>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        In this post-match breakdown, we look at why our high block worked so effectively in the final 30 minutes, how our double pivot adjusted their spacing, and three key moments from the film that show player growth.
+      </p>
+
+      <!-- Embedded Video or Image placeholder if needed -->
+      <div class="bg-gray-900 border border-gray-700 rounded-lg p-4 text-center">
+        <p class="text-xs text-gray-400 mb-2">🎥 Match Clip: High Press Trigger & Turnovers</p>
+        <div class="aspect-video max-w-2xl mx-auto bg-black flex items-center justify-center rounded">
+          <span class="text-xs text-gray-500">[ Embed Video / Veo Link / YouTube Clip Here ]</span>
+        </div>
+      </div>
+
+      <div class="pt-2 flex justify-between items-center text-xs text-gray-400">
+        <span>By Coach Ryan Heflin</span>
+        <span>5 min read</span>
+      </div>
+    </article>
+
+
+    <!-- CATALOGUE / ARCHIVE GRID -->
+    <section>
+      <h4 class="text-lg font-bold mb-4 text-gray-300">Previous Posts & Notes</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- Post Item 1 -->
+        <article class="post-card match-report bg-gray-800 p-5 rounded-xl border border-gray-700 space-y-2">
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-blue-400 font-semibold uppercase">Practice Review</span>
+            <span class="text-gray-400">Oct 8, 2026</span>
+          </div>
+          <h5 class="text-base font-bold text-white">Week 3 Practice Summary: Positional Rotations</h5>
+          <p class="text-xs text-gray-400 line-clamp-2">
+            A quick review of our Tuesday and Thursday sessions focusing on midfielder rotations in the build-up phase.
+          </p>
+        </article>
+
+        <!-- Post Item 2 -->
+        <article class="post-card video-analysis bg-gray-800 p-5 rounded-xl border border-gray-700 space-y-2">
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-yellow-400 font-semibold uppercase">Video Analysis</span>
+            <span class="text-gray-400">Oct 2, 2026</span>
+          </div>
+          <h5 class="text-base font-bold text-white">Film Study: Scanning Before Receiving</h5>
+          <p class="text-xs text-gray-400 line-clamp-2">
+            Three short 10-second clips highlighting body orientation and head checks prior to receiving the ball.
+          </p>
+        </article>
+
+        <!-- Post Item 3 -->
+        <article class="post-card qa bg-gray-800 p-5 rounded-xl border border-gray-700 space-y-2">
+          <div class="flex justify-between items-center text-xs">
+            <span class="text-green-400 font-semibold uppercase">Q&A</span>
+            <span class="text-gray-400">Sep 25, 2026</span>
+          </div>
+          <h5 class="text-base font-bold text-white">Parent Q&A: Playing Time & Hydration Standards</h5>
+          <p class="text-xs text-gray-400 line-clamp-2">
+            Answering recent questions regarding substitution rotations and heat preparation for early afternoon kickoff times.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
+  </footer>
+
+  <script>
+    function filterPosts(category) {
+      const posts = document.querySelectorAll('.post-card');
+      
+      // Update Button Styles
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('bg-gray-700', 'text-white');
+        btn.classList.add('bg-gray-800', 'text-gray-400');
+        btn.style.color = '';
+      });
+
+      const activeBtn = document.getElementById(`filter-${category}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-gray-700', 'text-white');
+        activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
+        activeBtn.style.color = 'var(--altafulla-yellow)';
+      }
+
+      // Filter Post Visibility
+      posts.forEach(post => {
+        if (category === 'all' || post.classList.contains(category) || post.classList.contains('featured-post')) {
+          post.classList.remove('hidden');
+        } else {
+          post.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
