@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Ex Profundo | Soccer Data Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CE Altafulla U15 | Ex Profundo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom colors for your palette */
     :root {
       --altafulla-yellow: #f2e40a;
       --altafulla-black: #000000;
@@ -14,42 +13,209 @@
     }
   </style>
 </head>
-<body class="bg-gray-900 text-white antialiased flex min-h-screen">
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
   <!-- Sidebar Navigation -->
-<nav class="fixed top-0 left-0 h-full w-56 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8">
+  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
     <!-- Logo and Title -->
-   <div class="flex flex-col items-center space-y-4">
-  <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-14 h-14 object-contain" />
-  <h1 class="text-3xl font-bold uppercase tracking-wide text-sounder-blue text-center" style="color: var(--sounder-blue);">Ex Profundo</h1>
-  <p class="text-sm text-gray-400 text-center max-w-xs">
-    CE Altafulla S15 
-  </p>
-</div>
-    <!-- Navigation Links -->
-    <div class="flex flex-col space-y-4 text-lg" style="color: white;">
-      <a href="index.html" class="font-bold" style="color: var(---altafulla-yellow);">Latest Update</a>
-      <a href="performance.html" class="hover:--altafulla-yellow">Season Schedule</a>
-      <a href="scouting.html" class="hover:--altafulla-yellow">Practice Plan</a>
-      <a href="tactics.html" class="hover:--altafulla-yellow">Season Data Trends</a>
-      <a href="finance.html" class="hover:--altafulla-yellow">About the Team</a>
+    <div class="flex flex-col items-center space-y-3">
+      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-16 h-16 object-contain" />
+      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
+        Ex Profundo
+      </h1>
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
+        CE Altafulla S15 (2026/2027)
+      </span>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <div class="flex flex-col space-y-2 text-base font-medium">
+      <button onclick="switchTab('schedule')" id="nav-schedule" class="nav-btn text-left px-4 py-2.5 rounded-lg transition-colors hover:bg-gray-700 hover:text-white text-gray-300">
+        📅 Season Schedule
+      </button>
+      <button onclick="switchTab('curriculum')" id="nav-curriculum" class="nav-btn text-left px-4 py-2.5 rounded-lg transition-colors hover:bg-gray-700 hover:text-white text-gray-300">
+        📋 Practice Plan
+      </button>
+      <button onclick="switchTab('data')" id="nav-data" class="nav-btn text-left px-4 py-2.5 rounded-lg transition-colors hover:bg-gray-700 hover:text-white text-gray-300">
+        📊 Game Analytics
+      </button>
+      <button onclick="switchTab('about')" id="nav-about" class="nav-btn text-left px-4 py-2.5 rounded-lg transition-colors hover:bg-gray-700 hover:text-white text-gray-300">
+        ℹ️ Rules & Coach Profile
+      </button>
     </div>
   </nav>
 
   <!-- Main Content Area -->
-  <main class="ml-56 flex-grow px-10 py-12 max-w-4xl mx-auto">
+  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
 
-    <section class="text-center mb-16">
-      <h2 class="text-5xl font-extrabold mb-4" style="color: var(--altafulla-yellow);">Welcome to Ex Profundo</h2>
-      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-        2026/2027 S15 CE Altafulla Season Website
+    <!-- 1. SEASON SCHEDULE PAGE -->
+    <section id="page-schedule" class="page-content hidden">
+      <header class="mb-8">
+        <h2 class="text-3xl font-extrabold mb-2" style="color: var(--altafulla-yellow);">Season Schedule</h2>
+        <p class="text-gray-400">Match fixtures, locations, and team announcements.</p>
+      </header>
+
+      <!-- Sub-tabs -->
+      <div class="flex space-x-4 border-b border-gray-700 mb-6">
+        <button onclick="switchSubTab('schedule', 'upcoming')" id="sub-schedule-upcoming" class="sub-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">Upcoming Matches</button>
+        <button onclick="switchSubTab('schedule', 'results')" id="sub-schedule-results" class="sub-btn pb-2 font-semibold text-gray-400 hover:text-white">Past Results</button>
+      </div>
+
+      <!-- Sub-tab Content -->
+      <div id="subcontent-schedule-upcoming" class="sub-content">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-xl font-bold mb-2">Next Match: vs. Rival FC</h3>
+          <p class="text-sm text-gray-300">Saturday | 10:00 AM | Home Field</p>
+        </div>
+      </div>
+      <div id="subcontent-schedule-results" class="sub-content hidden">
+        <p class="text-gray-400">Past match scores will be archived here.</p>
+      </div>
     </section>
 
 
+    <!-- 2. PRACTICE PLAN / CURRICULUM PAGE -->
+    <section id="page-curriculum" class="page-content hidden">
+      <header class="mb-8">
+        <h2 class="text-3xl font-extrabold mb-2" style="color: var(--altafulla-yellow);">Practice Plan & Curriculum</h2>
+        <p class="text-gray-400">Weekly focus areas, drills, and tactical guidelines.</p>
+      </header>
+
+      <!-- Sub-tabs -->
+      <div class="flex space-x-4 border-b border-gray-700 mb-6">
+        <button onclick="switchSubTab('curriculum', 'weekly')" id="sub-curriculum-weekly" class="sub-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">Weekly Plan</button>
+        <button onclick="switchSubTab('curriculum', 'principles')" id="sub-curriculum-principles" class="sub-btn pb-2 font-semibold text-gray-400 hover:text-white">Playing Principles</button>
+      </div>
+
+      <div id="subcontent-curriculum-weekly" class="sub-content">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-xl font-bold mb-2">Week 1 Focus: Build-up Play & Passing Angles</h3>
+          <p class="text-sm text-gray-300">Sessions on Tuesday and Thursday at 18:00.</p>
+        </div>
+      </div>
+      <div id="subcontent-curriculum-principles" class="sub-content hidden">
+        <p class="text-gray-400">Possession and defensive phase guidelines.</p>
+      </div>
+    </section>
+
+
+    <!-- 3. GAME DATA PAGE -->
+    <section id="page-data" class="page-content hidden">
+      <header class="mb-8">
+        <h2 class="text-3xl font-extrabold mb-2" style="color: var(--altafulla-yellow);">Season Data Trends</h2>
+        <p class="text-gray-400">Performance metrics and match statistics.</p>
+      </header>
+
+      <!-- Sub-tabs -->
+      <div class="flex space-x-4 border-b border-gray-700 mb-6">
+        <button onclick="switchSubTab('data', 'team')" id="sub-data-team" class="sub-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">Team Stats</button>
+        <button onclick="switchSubTab('data', 'individual')" id="sub-data-individual" class="sub-btn pb-2 font-semibold text-gray-400 hover:text-white">Player Data</button>
+      </div>
+
+      <div id="subcontent-data-team" class="sub-content">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-xl font-bold mb-2">Season Metrics</h3>
+          <p class="text-sm text-gray-300">Goals scored, clean sheets, and possession averages.</p>
+        </div>
+      </div>
+      <div id="subcontent-data-individual" class="sub-content hidden">
+        <p class="text-gray-400">Minutes played and individual development tracking.</p>
+      </div>
+    </section>
+
+
+    <!-- 4. ABOUT & RULES PAGE -->
+    <section id="page-about" class="page-content hidden">
+      <header class="mb-8">
+        <h2 class="text-3xl font-extrabold mb-2" style="color: var(--altafulla-yellow);">About & Team Rules</h2>
+        <p class="text-gray-400">Standards, expectations, and coaching background.</p>
+      </header>
+
+      <!-- Sub-tabs -->
+      <div class="flex space-x-4 border-b border-gray-700 mb-6">
+        <button onclick="switchSubTab('about', 'rules')" id="sub-about-rules" class="sub-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">Team Rules & Expectations</button>
+        <button onclick="switchSubTab('about', 'coach')" id="sub-about-coach" class="sub-btn pb-2 font-semibold text-gray-400 hover:text-white">Coach Profile (Ryan Heflin)</button>
+      </div>
+
+      <div id="subcontent-about-rules" class="sub-content">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-3">
+          <h3 class="text-xl font-bold">Squad Standards</h3>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-1">
+            <li>Arrive 15 minutes prior to session start time.</li>
+            <li>Shin guards and full kit required for every training.</li>
+            <li>Respect teammates, opponents, and referees.</li>
+          </ul>
+        </div>
+      </div>
+      <div id="subcontent-about-coach" class="sub-content hidden">
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h3 class="text-xl font-bold mb-2">Ryan Heflin</h3>
+          <p class="text-sm text-gray-300">Head Coach — CE Altafulla U15</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <!-- Footer -->
-  <footer class="fixed bottom-0 left-56 right-0 text-center text-gray-400 text-sm py-4 border-t border-gray-700" style="background-color: var(--cascade-shale);">
-    &copy; 2026 Ex Profundo by Ryan Heflin
+  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
+  <!-- Simple JavaScript for Dynamic Navigation -->
+  <script>
+    function switchTab(tabId) {
+      // Hide all pages
+      document.querySelectorAll('.page-content').forEach(el => el.classList.add('hidden'));
+      
+      // Reset sidebar active states
+      document.querySelectorAll('.nav-btn').forEach(btn => {
+        btn.classList.remove('bg-gray-700', 'text-white');
+        btn.classList.add('text-gray-300');
+        btn.style.color = '';
+      });
+
+      // Show targeted page
+      const activePage = document.getElementById(`page-${tabId}`);
+      if (activePage) activePage.classList.remove('hidden');
+
+      // Highlight active sidebar button
+      const activeBtn = document.getElementById(`nav-${tabId}`);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-gray-700');
+        activeBtn.style.color = 'var(--altafulla-yellow)';
+      }
+    }
+
+    function switchSubTab(pageId, subId) {
+      // Hide sub-contents within this page
+      const page = document.getElementById(`page-${pageId}`);
+      page.querySelectorAll('.sub-content').forEach(el => el.classList.add('hidden'));
+
+      // Reset sub-tab button styling
+      page.querySelectorAll('.sub-btn').forEach(btn => {
+        btn.classList.remove('text-white', 'border-b-2');
+        btn.classList.add('text-gray-400');
+        btn.style.borderColor = 'transparent';
+      });
+
+      // Show targeted sub-content
+      const activeSub = document.getElementById(`subcontent-${pageId}-${subId}`);
+      if (activeSub) activeSub.classList.remove('hidden');
+
+      // Highlight active sub-tab button
+      const activeSubBtn = document.getElementById(`sub-${pageId}-${subId}`);
+      if (activeSubBtn) {
+        activeSubBtn.classList.add('text-white', 'border-b-2');
+        activeSubBtn.classList.remove('text-gray-400');
+        activeSubBtn.style.borderColor = 'var(--altafulla-yellow)';
+      }
+    }
+
+    // Default to 'Schedule' on initial page load
+    document.addEventListener('DOMContentLoaded', () => {
+      switchTab('schedule');
+    });
+  </script>
 </body>
 </html>
