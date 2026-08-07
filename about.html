@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About & Rules | CE Altafulla U15</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+
+  <!-- Sidebar Navigation -->
+  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
+    <div class="flex flex-col items-center space-y-3">
+      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-16 h-16 object-contain" />
+      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
+        Ex Profundo
+      </h1>
+      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
+        CE Altafulla S15
+      </span>
+    </div>
+
+    <div class="flex flex-col space-y-2 text-base font-medium">
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📅 Season Schedule
+      </a>
+      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📋 Practice Plan
+      </a>
+      <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+        📊 Game Analytics
+      </a>
+      <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
+        ℹ️ Rules & Coach
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full space-y-8">
+    <header>
+      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">About the Team & Standards</h2>
+      <p class="text-gray-400">Team expectations, code of conduct, and coaching philosophy.</p>
+    </header>
+
+    <!-- Squad Rules -->
+    <section class="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-4">
+      <h3 class="text-xl font-bold flex items-center gap-2">
+        <span>📜</span> Squad Standards & Expectations
+      </h3>
+      <ul class="space-y-3 text-sm text-gray-300">
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 font-bold">1.</span>
+          <span><strong>Punctuality:</strong> Arrive 15 minutes before practice. Late arrivals impact team tactical preparation.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 font-bold">2.</span>
+          <span><strong>Equipment:</strong> Shin guards, water bottles, and official CE Altafulla training kits are mandatory for every session.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 font-bold">3.</span>
+          <span><strong>Communication:</strong> Notify coaches at least 24 hours in advance if a player cannot attend training or matches.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-yellow-400 font-bold">4.</span>
+          <span><strong>Respect:</strong> Zero tolerance for poor sportsmanship toward referees, opponents, or teammates.</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Coach Profile -->
+    <section class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+      <h3 class="text-xl font-bold mb-3 flex items-center gap-2">
+        <span>⚽</span> Head Coach Profile
+      </h3>
+      <div class="space-y-2">
+        <h4 class="text-lg font-semibold text-white">Ryan Heflin</h4>
+        <p class="text-xs text-yellow-400 font-semibold uppercase">Head Coach — CE Altafulla U15 (S15)</p>
+        <p class="text-sm text-gray-300 pt-2 leading-relaxed">
+          Focusing on positional play, tactical intelligence, and player development for the 2026/2027 season.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
+  </footer>
+</body>
+</html>
