@@ -4,13 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Practice Plan | CE Altafulla U15</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/site.js" defer></script>
+
   <style>
     :root {
       --altafulla-yellow: #f2e40a;
       --altafulla-black: #000000;
       --altafulla-blue: #62bed6;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -20,541 +26,1593 @@
   <!-- Shared Sidebar -->
   <div id="site-sidebar"></div>
 
-<!-- Main Content -->
-  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8">
 
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-10">
+
+
+    <!-- =========================================================
+         PAGE HEADER
+    ========================================================== -->
     <header>
-      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+      <h2
+        class="text-3xl font-extrabold mb-1"
+        style="color: var(--altafulla-yellow);"
+      >
         Practice Plan
       </h2>
+
       <p class="text-gray-400 text-sm">
         A season-long framework for how our training develops, adapts, and connects to the game.
       </p>
     </header>
 
-    <!-- Game Rules & Standards -->
-    <section class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-      <h3 class="text-sm font-bold uppercase tracking-wide mb-4" style="color: var(--altafulla-blue);">
-        Game Rules & Standards
-      </h3>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <!-- =========================================================
+         PRIMARY CURRICULUM NAVIGATION
+    ========================================================== -->
+    <section class="space-y-6">
 
-        <!-- Game Rules -->
+      <div class="border-b border-gray-700">
+        <div class="flex gap-6 overflow-x-auto">
+
+          <button
+            onclick="switchMainTab('roadmap')"
+            id="main-tab-btn-roadmap"
+            class="main-tab-btn pb-3 font-semibold text-white border-b-2 whitespace-nowrap"
+            style="border-color: var(--altafulla-yellow);"
+          >
+            Season Roadmap
+          </button>
+
+          <button
+            onclick="switchMainTab('weekly')"
+            id="main-tab-btn-weekly"
+            class="main-tab-btn pb-3 font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
+          >
+            Weekly Plan
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- =======================================================
+           MAIN TAB 1: SEASON ROADMAP
+      ======================================================== -->
+      <div id="main-tab-roadmap" class="main-tab-content space-y-6">
+
         <div>
-          <h4 class="text-sm font-bold text-white mb-3">
-            Game Rules
-          </h4>
+          <h3 class="text-xl font-bold text-white">
+            2026/27 Development Roadmap
+          </h3>
 
-          <div class="space-y-4">
-
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">With the Ball</span>
-              <ul class="text-sm text-gray-300 space-y-1.5 mt-2">
-                <li>Ball forward → <span class="text-white font-semibold">lines move up.</span></li>
-                <li>Ball backward → <span class="text-white font-semibold">get wide.</span></li>
-                <li>Ball Wide → <span class="text-white font-semibold">1v1. </span></li>
-                <li>Ball Inside → <span class="text-white font-semibold">combine.</span></li>
-                <li>Ball one side → <span class="text-white font-semibold">far side tucks.</span></li>
-                <li>Ball in the air → <span class="text-white font-semibold">one under, one beyond.</span></li>
-                <li>Ball in the air → <span class="text-white font-semibold">don't let it bounce.</span></li>
-                <li>Can't go forward → <span class="text-white font-semibold">keep it.</span></li>
-                <li>Space behind → <span class="text-white font-semibold">threaten it.</span></li>
-              </ul>
-            </div>
-
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Without the Ball</span>
-              <ul class="text-sm text-gray-300 space-y-1.5 mt-2">
-                <li>Nearest player → <span class="text-white font-semibold">delay.</span></li>
-                <li>One player presses → <span class="text-white font-semibold">all support.</span></li>
-                <li>When we are organized → <span class="text-white font-semibold">press high. </span></li>
-                <li>We see trigger → <span class="text-white font-semibold">run the trap.</span></li>
-                <li>Press broken → <span class="text-white font-semibold">recover together.</span></li>
-                <li>Protect inside → <span class="text-white font-semibold">force wide/back.</span></li>      
-
-              </ul>
-            </div>
-
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Transition</span>
-              <ul class="text-sm text-gray-300 space-y-1.5 mt-2">
-                <li>Lose it → <span class="text-white font-semibold">hunt it.</span></li>
-                <li>Win it → <span class="text-white font-semibold">look forward first.</span></li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Standards -->
-        <div>
-          <h4 class="text-sm font-bold text-white mb-3">
-            Our Standards
-          </h4>
-
-          <div class="space-y-3">
-
-            <div class="bg-gray-900/60 p-3 rounded-lg border border-gray-700">
-              <p class="text-sm font-semibold text-white">Details matter.</p>
-              <p class="text-xs text-gray-400 mt-1">
-                The little things change the game.
-              </p>
-            </div>
-
-            <div class="bg-gray-900/60 p-3 rounded-lg border border-gray-700">
-              <p class="text-sm font-semibold text-white">Body language matters.</p>
-              <p class="text-xs text-gray-400 mt-1">
-                Head up. Respond well. Stay positive and ready for the next action.
-              </p>
-            </div>
-
-            <div class="bg-gray-900/60 p-3 rounded-lg border border-gray-700">
-              <p class="text-sm font-semibold text-white">Every movement has a purpose.</p>
-              <p class="text-xs text-gray-400 mt-1">
-                Know what you're creating, closing, supporting, or threatening.
-              </p>
-            </div>
-
-            <div class="bg-gray-900/60 p-3 rounded-lg border border-gray-700">
-              <p class="text-sm font-semibold text-white">Help the player next to you.</p>
-              <p class="text-xs text-gray-400 mt-1">
-                Communicate. Cover. Support. Make their job easier.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Tabs -->
-    <div class="flex space-x-6 border-b border-gray-700 overflow-x-auto">
-      <button onclick="switchTab('roadmap')" id="tab-btn-roadmap"
-        class="tab-btn pb-3 font-semibold text-white border-b-2 whitespace-nowrap"
-        style="border-color: var(--altafulla-yellow);">
-        Season Roadmap
-      </button>
-
-      <button onclick="switchTab('weekly')" id="tab-btn-weekly"
-        class="tab-btn pb-3 font-semibold text-gray-400 hover:text-white whitespace-nowrap border-b-2 border-transparent">
-        Weekly Plan
-      </button>
-
-      <button onclick="switchTab('principles')" id="tab-btn-principles"
-        class="tab-btn pb-3 font-semibold text-gray-400 hover:text-white whitespace-nowrap border-b-2 border-transparent">
-        Playing Principles
-      </button>
-    </div>
-
-    <!-- TAB 1: ROADMAP -->
-    <div id="tab-roadmap" class="tab-content space-y-6">
-
-      <div>
-        <h3 class="text-xl font-bold text-white">2026/27 Development Roadmap</h3>
-        <p class="text-sm text-gray-400 mt-1">
-          The season is organized into broad phases, each building on the habits and understanding developed before it.
-        </p>
-      </div>
-
-      <div class="space-y-4">
-
-        <!-- Foundation -->
-        <div id="phase-1" data-phase-index="1" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 1–4</span>
-              <h4 id="phase-title-1" class="text-xl font-bold text-white mt-1">Foundation</h4>
-              <p class="text-sm text-gray-400 mt-1">Introduction → Build Habits</p>
-            </div>
-            <div id="phase-badge-1"></div>
-          </div>
-        </div>
-
-        <!-- Style Implementation -->
-        <div id="phase-2" data-phase-index="2" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 5–8</span>
-          <h4 id="phase-title-2" class="text-xl font-bold text-white mt-1">Style Implementation</h4>
-          <p class="text-sm text-gray-400 mt-1">Reduce Chaos → Build Structure</p>
-          <div id="phase-badge-2" class="mt-3"></div>
-        </div>
-
-        <!-- Stability & Development -->
-        <div id="phase-3" data-phase-index="3" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 9–12</span>
-          <h4 id="phase-title-3" class="text-xl font-bold text-white mt-1">Stability & Development</h4>
-          <p class="text-sm text-gray-400 mt-1">Make Structure Consistent Under Pressure</p>
-          <div id="phase-badge-3" class="mt-3"></div>
-        </div>
-
-        <!-- Organization -->
-        <div id="phase-4" data-phase-index="4" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 13–16</span>
-          <h4 id="phase-title-4" class="text-xl font-bold text-white mt-1">Organization</h4>
-          <p class="text-sm text-gray-400 mt-1">Start Controlling Matches</p>
-          <div id="phase-badge-4" class="mt-3"></div>
-        </div>
-
-        <!-- Consolidation -->
-        <div id="phase-5" data-phase-index="5" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 17–20</span>
-          <h4 id="phase-title-5" class="text-xl font-bold text-white mt-1">Consolidation</h4>
-          <p class="text-sm text-gray-400 mt-1">Review → Reinforce → Connect</p>
-          <div id="phase-badge-5" class="mt-3"></div>
-        </div>
-
-        <!-- Application -->
-        <div id="phase-6" data-phase-index="6" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 21–24</span>
-          <h4 id="phase-title-6" class="text-xl font-bold text-white mt-1">Application</h4>
-          <p class="text-sm text-gray-400 mt-1">Adaptation → Reading Games</p>
-          <div id="phase-badge-6" class="mt-3"></div>
-        </div>
-
-        <!-- Tactical Growth -->
-        <div id="phase-7" data-phase-index="7" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 25–28</span>
-          <h4 id="phase-title-7" class="text-xl font-bold text-white mt-1">Tactical Growth</h4>
-          <p class="text-sm text-gray-400 mt-1">Add Complexity & Flexibility</p>
-          <div id="phase-badge-7" class="mt-3"></div>
-        </div>
-
-        <!-- Total Control / Refinement -->
-        <div id="phase-8" data-phase-index="8" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 29–32</span>
-          <h4 id="phase-title-8" class="text-xl font-bold text-white mt-1">Total Control & Refinement</h4>
-          <p class="text-sm text-gray-400 mt-1">Play the Game on Your Terms</p>
-          <div id="phase-badge-8" class="mt-3"></div>
-        </div>
-
-        <!-- Efficiency -->
-        <div id="phase-9" data-phase-index="9" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 33–36</span>
-          <h4 id="phase-title-9" class="text-xl font-bold text-white mt-1">Efficiency</h4>
-          <p class="text-sm text-gray-400 mt-1">Clarity & Confidence</p>
-          <div id="phase-badge-9" class="mt-3"></div>
-        </div>
-
-        <!-- Final Phase -->
-        <div id="phase-10" data-phase-index="10" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
-          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 37–40</span>
-          <h4 id="phase-title-10" class="text-xl font-bold text-white mt-1">Final Phase</h4>
-          <p class="text-sm text-gray-400 mt-1">Refine → Adapt → Compete</p>
-          <div id="phase-badge-10" class="mt-3"></div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- TAB 2: WEEKLY -->
-    <div id="tab-weekly" class="tab-content hidden space-y-6">
-
-      <!-- Current Week -->
-      <section class="bg-gray-800 p-4 md:p-6 rounded-xl border border-yellow-400/60 shadow-lg space-y-5">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
-          <div>
-            <span id="current-week-label" class="text-xs uppercase tracking-wide text-gray-500">Week 1</span>
-            <h3 id="current-week-phase" class="text-2xl font-bold text-white mt-1">Foundation — Introduction</h3>
-            <p class="text-sm text-gray-400 mt-1">Primary Theme: Build Habits</p>
-          </div>
-          <span id="current-week-badge" class="self-start text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
-            Current Focus
-          </span>
-        </div>
-
-        <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
-          <h4 class="text-sm font-bold uppercase tracking-wide mb-2" style="color: var(--altafulla-blue);">
-            Weekly Objective
-          </h4>
-          <p class="text-sm text-gray-300 leading-relaxed">
-            Introduce the basic habits, language, and decision-making framework that will connect
-            our attacking, defending, and transition principles throughout the season.
+          <p class="text-sm text-gray-400 mt-1">
+            The season is organized into broad phases, each building on the habits and understanding developed before it.
           </p>
         </div>
 
-        <div>
-          <h4 class="text-sm font-bold uppercase tracking-wide text-gray-400 mb-3">Game Moments</h4>
-          <div class="flex flex-wrap gap-2">
-            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">In Possession</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Out of Possession</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Attacking Transition</span>
-            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Defensive Transition</span>
-          </div>
+
+        <!-- Roadmap Cards -->
+        <div id="roadmap-container" class="space-y-4">
+          <!-- Generated automatically with JavaScript -->
         </div>
+
+      </div>
+
+
+      <!-- =======================================================
+           MAIN TAB 2: WEEKLY PLAN
+      ======================================================== -->
+      <div id="main-tab-weekly" class="main-tab-content hidden space-y-6">
+
+
+        <!-- Phase Header -->
+        <section class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700">
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+
+            <button
+              id="previous-phase-btn"
+              onclick="changePhase(-1)"
+              class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-left"
+            >
+              ← Previous Phase
+            </button>
+
+
+            <div class="text-center flex-1">
+              <span
+                id="weekly-phase-weeks"
+                class="text-xs uppercase tracking-wide text-gray-500"
+              >
+                Weeks 1–4
+              </span>
+
+              <h3
+                id="weekly-phase-name"
+                class="text-2xl font-bold text-white mt-1"
+              >
+                Foundation
+              </h3>
+
+              <p
+                id="weekly-phase-detail"
+                class="text-sm text-gray-400 mt-1"
+              >
+                Introduction → Build Habits
+              </p>
+            </div>
+
+
+            <button
+              id="next-phase-btn"
+              onclick="changePhase(1)"
+              class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-right"
+            >
+              Next Phase →
+            </button>
+
+          </div>
+
+        </section>
+
+
+        <!-- Weekly Cards -->
+        <div id="weekly-container" class="space-y-5">
+          <!-- Generated automatically with JavaScript -->
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         DIVIDER
+    ========================================================== -->
+    <div class="border-t border-gray-700"></div>
+
+
+    <!-- =========================================================
+         OUR FOOTBALL
+    ========================================================== -->
+    <section class="space-y-6">
+
+      <div>
+        <span
+          class="text-xs uppercase font-bold tracking-widest"
+          style="color: var(--altafulla-blue);"
+        >
+          Our Football
+        </span>
+
+        <h3 class="text-xl font-bold text-white mt-1">
+          Shared Language & Principles
+        </h3>
+
+        <p class="text-sm text-gray-400 mt-1">
+          The rules, principles, and standards that connect everything we do in training and matches.
+        </p>
+      </div>
+
+
+      <!-- Reference Tabs -->
+      <div class="border-b border-gray-700">
+        <div class="flex gap-6 overflow-x-auto">
+
+          <button
+            onclick="switchReferenceTab('rules')"
+            id="reference-tab-btn-rules"
+            class="reference-tab-btn pb-3 text-sm font-semibold text-white border-b-2 whitespace-nowrap"
+            style="border-color: var(--altafulla-blue);"
+          >
+            Game Rules
+          </button>
+
+          <button
+            onclick="switchReferenceTab('principles')"
+            id="reference-tab-btn-principles"
+            class="reference-tab-btn pb-3 text-sm font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
+          >
+            Playing Principles
+          </button>
+
+          <button
+            onclick="switchReferenceTab('standards')"
+            id="reference-tab-btn-standards"
+            class="reference-tab-btn pb-3 text-sm font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
+          >
+            Standards
+          </button>
+
+        </div>
+      </div>
+
+
+      <!-- =======================================================
+           REFERENCE TAB: GAME RULES
+      ======================================================== -->
+      <div id="reference-tab-rules" class="reference-tab-content">
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
-          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Session 1</span>
-              <h4 class="text-lg font-bold text-white mt-1">Attacking Principles</h4>
-            </div>
-            <div class="text-sm text-gray-300 space-y-2">
-              <p><span class="text-gray-500">Game Phase:</span> Build-up / Possession</p>
-              <p><span class="text-gray-500">Technical Detail:</span> Receiving, passing angles, body shape</p>
-              <p><span class="text-gray-500">Positional Detail:</span> CB, FB, midfield relationships</p>
-            </div>
-            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
-              View Session →
-            </a>
+
+          <!-- With the Ball -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <h4
+              class="text-sm font-bold uppercase tracking-wide mb-4"
+              style="color: var(--altafulla-blue);"
+            >
+              With the Ball
+            </h4>
+
+            <ul class="text-sm text-gray-300 space-y-3">
+
+              <li>
+                Ball forward →
+                <span class="text-white font-semibold">lines move up.</span>
+              </li>
+
+              <li>
+                Ball backward →
+                <span class="text-white font-semibold">get wide.</span>
+              </li>
+
+              <li>
+                Ball wide →
+                <span class="text-white font-semibold">1v1.</span>
+              </li>
+
+              <li>
+                Ball inside →
+                <span class="text-white font-semibold">combine.</span>
+              </li>
+
+              <li>
+                Ball one side →
+                <span class="text-white font-semibold">far side tucks.</span>
+              </li>
+
+              <li>
+                Ball in the air →
+                <span class="text-white font-semibold">one under, one beyond.</span>
+              </li>
+
+              <li>
+                Ball in the air →
+                <span class="text-white font-semibold">don't let it bounce.</span>
+              </li>
+
+              <li>
+                Can't go forward →
+                <span class="text-white font-semibold">keep it.</span>
+              </li>
+
+              <li>
+                Space behind →
+                <span class="text-white font-semibold">threaten it.</span>
+              </li>
+
+            </ul>
+
           </div>
 
-          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Session 2</span>
-              <h4 class="text-lg font-bold text-white mt-1">Defensive Principles</h4>
-            </div>
-            <div class="text-sm text-gray-300 space-y-2">
-              <p><span class="text-gray-500">Game Phase:</span> Pressing / Defending Build-up</p>
-              <p><span class="text-gray-500">Technical Detail:</span> Body orientation, pressure, cover</p>
-              <p><span class="text-gray-500">Positional Detail:</span> Unit distances and support</p>
-            </div>
-            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
-              View Session →
-            </a>
+
+          <!-- Without the Ball -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <h4 class="text-sm font-bold uppercase tracking-wide text-yellow-400 mb-4">
+              Without the Ball
+            </h4>
+
+            <ul class="text-sm text-gray-300 space-y-3">
+
+              <li>
+                Nearest player →
+                <span class="text-white font-semibold">delay.</span>
+              </li>
+
+              <li>
+                One player presses →
+                <span class="text-white font-semibold">all support.</span>
+              </li>
+
+              <li>
+                When we are organized →
+                <span class="text-white font-semibold">press high.</span>
+              </li>
+
+              <li>
+                We see trigger →
+                <span class="text-white font-semibold">run the trap.</span>
+              </li>
+
+              <li>
+                Press broken →
+                <span class="text-white font-semibold">recover together.</span>
+              </li>
+
+              <li>
+                Protect inside →
+                <span class="text-white font-semibold">force wide/back.</span>
+              </li>
+
+            </ul>
+
           </div>
 
-          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
-            <div>
-              <span class="text-xs uppercase tracking-wide text-gray-500">Session 3</span>
-              <h4 class="text-lg font-bold text-white mt-1">Transition Principles</h4>
-            </div>
-            <div class="text-sm text-gray-300 space-y-2">
-              <p><span class="text-gray-500">Game Phase:</span> Loss & Regain</p>
-              <p><span class="text-gray-500">Technical Detail:</span> First action after transition</p>
-              <p><span class="text-gray-500">Positional Detail:</span> Team distances and reaction</p>
-            </div>
-            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
-              View Session →
-            </a>
+
+          <!-- Transition -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <h4 class="text-sm font-bold uppercase tracking-wide text-green-400 mb-4">
+              Transition
+            </h4>
+
+            <ul class="text-sm text-gray-300 space-y-3">
+
+              <li>
+                Lose it →
+                <span class="text-white font-semibold">hunt it.</span>
+              </li>
+
+              <li>
+                Win it →
+                <span class="text-white font-semibold">look forward first.</span>
+              </li>
+
+            </ul>
+
           </div>
 
         </div>
-      </section>
 
-      <!-- Next Week -->
-      <section class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-3">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
-          <div>
-            <span class="text-xs uppercase tracking-wide text-gray-500">Week 2</span>
-            <h3 class="text-xl font-bold text-white mt-1">Foundation</h3>
-          </div>
-          <span class="self-start text-xs px-2.5 py-1 bg-gray-700 text-gray-300 rounded-full">
-            Planned
-          </span>
-        </div>
-        <p class="text-sm text-gray-300">
-          Planned focus: to be confirmed based on Week 1, player understanding, and the problems we identify in training and matches.
-        </p>
-      </section>
+      </div>
 
-      <!-- Future Weeks -->
-      <section class="space-y-4">
-        <h3 class="text-lg font-bold text-gray-200">Upcoming Weeks</h3>
+
+      <!-- =======================================================
+           REFERENCE TAB: PLAYING PRINCIPLES
+      ======================================================== -->
+      <div
+        id="reference-tab-principles"
+        class="reference-tab-content hidden"
+      >
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
-            <span class="text-xs uppercase tracking-wide text-gray-500">Week 3</span>
-            <h4 class="text-base font-bold text-white mt-1">Foundation</h4>
-            <p class="text-sm text-gray-400 mt-1">Planned focus to be added.</p>
+
+
+          <!-- In Possession -->
+          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+
+            <h4
+              class="text-lg font-bold mb-3"
+              style="color: var(--altafulla-blue);"
+            >
+              In Possession
+            </h4>
+
+            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+              <li>Create useful width and depth.</li>
+              <li>Recognize space before receiving.</li>
+              <li>Play forward when the opportunity is there.</li>
+              <li>Use circulation to move the opponent and create new spaces.</li>
+              <li>Support the player on the ball with clear passing options.</li>
+            </ul>
+
           </div>
 
-          <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
-            <span class="text-xs uppercase tracking-wide text-gray-500">Week 4</span>
-            <h4 class="text-base font-bold text-white mt-1">Foundation</h4>
-            <p class="text-sm text-gray-400 mt-1">Planned focus to be added.</p>
+
+          <!-- Out of Possession -->
+          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+
+            <h4 class="text-lg font-bold mb-3 text-yellow-400">
+              Out of Possession
+            </h4>
+
+            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+              <li>Protect dangerous spaces first.</li>
+              <li>Stay connected and compact as a team.</li>
+              <li>Recognize when to press, delay, or recover.</li>
+              <li>Support the first defender with cover and communication.</li>
+              <li>Defend together rather than as isolated individuals.</li>
+            </ul>
+
           </div>
-        </div>
-      </section>
-    </div>
 
-    <!-- TAB 3: PRINCIPLES -->
-    <div id="tab-principles" class="tab-content hidden space-y-6">
 
-      <div>
-        <h3 class="text-xl font-bold text-white">Playing Principles</h3>
-        <p class="text-sm text-gray-400 mt-1">
-          These principles connect the work we do across different sessions and game situations.
-        </p>
-      </div>
+          <!-- Attacking Transition -->
+          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h4 class="text-lg font-bold mb-3 text-green-400">
+              Attacking Transition
+            </h4>
 
-        <!-- In Possession -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-          <h4 class="text-lg font-bold mb-3" style="color: var(--altafulla-blue);">
-            In Possession
-          </h4>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>Create useful width and depth.</li>
-            <li>Recognize space before receiving.</li>
-            <li>Play forward when the opportunity is there.</li>
-            <li>Use circulation to move the opponent and create new spaces.</li>
-            <li>Support the player on the ball with clear passing options.</li>
-          </ul>
-        </div>
+            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+              <li>Recognize immediately whether we can attack forward.</li>
+              <li>Exploit space before the opponent can reorganize.</li>
+              <li>Support the first action with forward and wide options.</li>
+              <li>If the counter is not available, secure possession and reorganize.</li>
+            </ul>
 
-        <!-- Out of Possession -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-          <h4 class="text-lg font-bold mb-3 text-yellow-400">
-            Out of Possession
-          </h4>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>Protect dangerous spaces first.</li>
-            <li>Stay connected and compact as a team.</li>
-            <li>Recognize when to press, delay, or recover.</li>
-            <li>Support the first defender with cover and communication.</li>
-            <li>Defend together rather than as isolated individuals.</li>
-          </ul>
+          </div>
+
+
+          <!-- Defensive Transition -->
+          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+
+            <h4 class="text-lg font-bold mb-3 text-red-400">
+              Defensive Transition
+            </h4>
+
+            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+              <li>React immediately when possession is lost.</li>
+              <li>Protect the most dangerous spaces first.</li>
+              <li>Recognize whether we can recover the ball or need to recover our shape.</li>
+              <li>Communicate and solve the transition together.</li>
+            </ul>
+
+          </div>
+
         </div>
 
-        <!-- Attacking Transition -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-          <h4 class="text-lg font-bold mb-3 text-green-400">
-            Attacking Transition
-          </h4>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>Recognize immediately whether we can attack forward.</li>
-            <li>Exploit space before the opponent can reorganize.</li>
-            <li>Support the first action with forward and wide options.</li>
-            <li>If the counter is not available, secure possession and reorganize.</li>
-          </ul>
-        </div>
 
-        <!-- Defensive Transition -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-          <h4 class="text-lg font-bold mb-3 text-red-400">
-            Defensive Transition
-          </h4>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>React immediately when possession is lost.</li>
-            <li>Protect the most dangerous spaces first.</li>
-            <li>Recognize whether we can recover the ball or need to recover our shape.</li>
-            <li>Communicate and solve the transition together.</li>
-          </ul>
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 mt-4">
+
+          <p class="text-sm text-gray-300 leading-relaxed">
+            These principles are not intended to create one fixed answer for every situation.
+            The goal is to help players recognize problems, communicate, and choose solutions together.
+          </p>
+
         </div>
 
       </div>
 
-      <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-        <p class="text-sm text-gray-300 leading-relaxed">
-          These principles are not intended to create one fixed answer for every situation.
-          The goal is to help players recognize problems, communicate, and choose solutions together.
-        </p>
+
+      <!-- =======================================================
+           REFERENCE TAB: STANDARDS
+      ======================================================== -->
+      <div
+        id="reference-tab-standards"
+        class="reference-tab-content hidden"
+      >
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+          <!-- Details Matter -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <p class="text-base font-semibold text-white">
+              Details matter.
+            </p>
+
+            <p class="text-sm text-gray-400 mt-2">
+              The little things change the game.
+            </p>
+
+          </div>
+
+
+          <!-- Body Language -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <p class="text-base font-semibold text-white">
+              Body language matters.
+            </p>
+
+            <p class="text-sm text-gray-400 mt-2">
+              Head up. Respond well. Stay positive and ready for the next action.
+            </p>
+
+          </div>
+
+
+          <!-- Purpose -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <p class="text-base font-semibold text-white">
+              Every movement has a purpose.
+            </p>
+
+            <p class="text-sm text-gray-400 mt-2">
+              Know what you're creating, closing, supporting, or threatening.
+            </p>
+
+          </div>
+
+
+          <!-- Help Others -->
+          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+
+            <p class="text-base font-semibold text-white">
+              Help the player next to you.
+            </p>
+
+            <p class="text-sm text-gray-400 mt-2">
+              Communicate. Cover. Support. Make their job easier.
+            </p>
+
+          </div>
+
+        </div>
+
       </div>
 
-    </div>
+    </section>
 
   </main>
 
-  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer
+    class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
+  >
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+  ========================================================== -->
   <script>
 
-    // Automatic season phase/week tracking.
-    // Week 1 begins on Sunday, August 23, 2026.
-    // Each curriculum phase lasts four consecutive weeks.
+    /* ==========================================================
+       SEASON DATA
+    ========================================================== */
+
+    // Week 1 begins Sunday, August 23, 2026.
     const seasonStart = new Date('2026-08-23T00:00:00');
+
     const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
 
+
     const curriculumPhases = [
-      { name: 'Foundation', detail: 'Introduction', startWeek: 1, endWeek: 4 },
-      { name: 'Style Implementation', detail: 'Reduce Chaos → Build Structure', startWeek: 5, endWeek: 8 },
-      { name: 'Stability & Development', detail: 'Make Structure Consistent Under Pressure', startWeek: 9, endWeek: 12 },
-      { name: 'Organization', detail: 'Start Controlling Matches', startWeek: 13, endWeek: 16 },
-      { name: 'Consolidation', detail: 'Review → Reinforce → Connect', startWeek: 17, endWeek: 20 },
-      { name: 'Application', detail: 'Adaptation → Reading Games', startWeek: 21, endWeek: 24 },
-      { name: 'Tactical Growth', detail: 'Add Complexity & Flexibility', startWeek: 25, endWeek: 28 },
-      { name: 'Total Control & Refinement', detail: 'Play the Game on Your Terms', startWeek: 29, endWeek: 32 },
-      { name: 'Efficiency', detail: 'Clarity & Confidence', startWeek: 33, endWeek: 36 },
-      { name: 'Final Phase', detail: 'Refine → Adapt → Compete', startWeek: 37, endWeek: 40 }
+
+      {
+        name: 'Foundation',
+        detail: 'Introduction → Build Habits',
+        startWeek: 1,
+        endWeek: 4
+      },
+
+      {
+        name: 'Style Implementation',
+        detail: 'Reduce Chaos → Build Structure',
+        startWeek: 5,
+        endWeek: 8
+      },
+
+      {
+        name: 'Stability & Development',
+        detail: 'Make Structure Consistent Under Pressure',
+        startWeek: 9,
+        endWeek: 12
+      },
+
+      {
+        name: 'Organization',
+        detail: 'Start Controlling Matches',
+        startWeek: 13,
+        endWeek: 16
+      },
+
+      {
+        name: 'Consolidation',
+        detail: 'Review → Reinforce → Connect',
+        startWeek: 17,
+        endWeek: 20
+      },
+
+      {
+        name: 'Application',
+        detail: 'Adaptation → Reading Games',
+        startWeek: 21,
+        endWeek: 24
+      },
+
+      {
+        name: 'Tactical Growth',
+        detail: 'Add Complexity & Flexibility',
+        startWeek: 25,
+        endWeek: 28
+      },
+
+      {
+        name: 'Total Control & Refinement',
+        detail: 'Play the Game on Your Terms',
+        startWeek: 29,
+        endWeek: 32
+      },
+
+      {
+        name: 'Efficiency',
+        detail: 'Clarity & Confidence',
+        startWeek: 33,
+        endWeek: 36
+      },
+
+      {
+        name: 'Final Phase',
+        detail: 'Refine → Adapt → Compete',
+        startWeek: 37,
+        endWeek: 40
+      }
+
     ];
 
+
+    /* ==========================================================
+       WEEKLY CURRICULUM
+    ========================================================== */
+
+    const weeks = [
+
+      {
+        week: 1,
+        focus: 'How We Play',
+        description: 'Introduction to all four game moments and our shared language.'
+      },
+
+      {
+        week: 2,
+        focus: 'Starting Attacks from the Goalkeeper',
+        description: 'Create calm, connected solutions to begin attacks from our own goal.'
+      },
+
+      {
+        week: 3,
+        focus: "Defending the Opponent's Build-Up",
+        description: 'Organize pressure to control where and how the opponent progresses.'
+      },
+
+      {
+        week: 4,
+        focus: 'Reacting Immediately When We Lose the Ball',
+        description: 'Develop the collective reaction required to hunt, delay, or recover.'
+      },
+
+
+      {
+        week: 5,
+        focus: 'Building from the Back Against Pressure',
+        description: 'Maintain calm structure and create solutions when the opponent presses.'
+      },
+
+      {
+        week: 6,
+        focus: 'Progressing from the Back Line into Midfield',
+        description: 'Connect the defensive and midfield lines while maintaining forward intent.'
+      },
+
+      {
+        week: 7,
+        focus: 'Creating Scoring Opportunities from Wide Areas',
+        description: 'Use width, isolation, combinations, and supporting runs to create chances.'
+      },
+
+      {
+        week: 8,
+        focus: 'Attacking Immediately After Regaining Possession',
+        description: 'Recognize and exploit forward opportunities before the opponent reorganizes.'
+      },
+
+
+      {
+        week: 9,
+        focus: 'Escaping an Aggressive High Press',
+        description: 'Recognize pressure and create the free player through positioning and movement.'
+      },
+
+      {
+        week: 10,
+        focus: 'Pressing the Opponent into Predictable Areas',
+        description: 'Use pressure and cover to guide the opponent toward our pressing traps.'
+      },
+
+      {
+        week: 11,
+        focus: 'Winning First and Second Balls from Direct Play',
+        description: 'Compete for the first contact and organize collectively around the second ball.'
+      },
+
+      {
+        week: 12,
+        focus: 'Protecting Against Counters While We Attack',
+        description: 'Maintain balance and rest defense while committing players forward.'
+      },
+
+
+      {
+        week: 13,
+        focus: "Building and Sustaining Attacks in the Opponent's Half",
+        description: 'Keep pressure on the opponent through connected possession and positioning.'
+      },
+
+      {
+        week: 14,
+        focus: 'Defending Our Half: Protect the Center and Force Wide',
+        description: 'Stay compact, protect dangerous spaces, and guide play away from goal.'
+      },
+
+      {
+        week: 15,
+        focus: 'Keeping the Opponent Pinned After Our Attack Breaks Down',
+        description: 'Compress space and regain second balls to sustain attacking pressure.'
+      },
+
+      {
+        week: 16,
+        focus: 'Recovering Our Shape When the Press Is Broken',
+        description: 'Delay the attack and reconnect quickly when the opponent escapes pressure.'
+      },
+
+
+      {
+        week: 17,
+        focus: 'Playing Through Pressure from Goalkeeper to Midfield',
+        description: 'Revisit and connect our build-up principles under realistic pressure.'
+      },
+
+      {
+        week: 18,
+        focus: "Creating and Exploiting Space Around the Opponent's Box",
+        description: 'Recognize combinations, movements, and spaces that create finishing opportunities.'
+      },
+
+      {
+        week: 19,
+        focus: 'Regaining Possession Through Collective Pressing',
+        description: 'Connect pressing triggers, support, cover, and compactness.'
+      },
+
+      {
+        week: 20,
+        focus: 'Managing the Moments Immediately Before and After Turnovers',
+        description: 'Improve positioning and decision-making around changes of possession.'
+      },
+
+
+      {
+        week: 21,
+        focus: 'Choosing Short Build or Direct Play Against Different Presses',
+        description: 'Read the opponent and select the solution that best exploits the available space.'
+      },
+
+      {
+        week: 22,
+        focus: 'Attacking an Opponent Who Defends Deep and Compact',
+        description: 'Create and exploit space against opponents protecting the area around their goal.'
+      },
+
+      {
+        week: 23,
+        focus: 'Defending Against an Opponent Who Plays Direct',
+        description: 'Control depth, first contacts, second balls, and the spaces around them.'
+      },
+
+      {
+        week: 24,
+        focus: 'Recognizing When to Press High and When to Defend in a Mid-Block',
+        description: 'Read team organization and choose the appropriate defensive height.'
+      },
+
+
+      {
+        week: 25,
+        focus: 'Creating a Free Player Against Different First-Line Presses',
+        description: 'Manipulate opponent pressure through positioning, rotation, and numerical superiority.'
+      },
+
+      {
+        week: 26,
+        focus: 'Creating Wide Overloads with Winger, Fullback and Midfielder',
+        description: 'Create multiple solutions around the ball to isolate or combine in wide areas.'
+      },
+
+      {
+        week: 27,
+        focus: 'Creating Space Through 9, 10 and Midfield Rotations',
+        description: 'Use coordinated movement to disrupt defensive references and create central space.'
+      },
+
+      {
+        week: 28,
+        focus: 'Switching the Point of Attack When One Side Becomes Crowded',
+        description: 'Recognize overloads and move the opponent before exploiting the opposite side.'
+      },
+
+
+      {
+        week: 29,
+        focus: 'Controlling Territory Through Sustained Possession',
+        description: 'Use the ball and team positioning to keep the game in advantageous areas.'
+      },
+
+      {
+        week: 30,
+        focus: 'Attacking Repeatedly Without Becoming Vulnerable to the Counter',
+        description: 'Balance attacking numbers with positioning that protects the next transition.'
+      },
+
+      {
+        week: 31,
+        focus: 'Changing the Tempo',
+        description: 'Be patient until the opportunity appears, then attack quickly and decisively.'
+      },
+
+      {
+        week: 32,
+        focus: 'Controlling Momentum When a Match Becomes Chaotic',
+        description: 'Restore structure, calm the game, and regain control through collective decisions.'
+      },
+
+
+      {
+        week: 33,
+        focus: 'Recognizing and Exploiting Space Behind the Defensive Line',
+        description: 'Identify moments to threaten depth and attack the space behind.'
+      },
+
+      {
+        week: 34,
+        focus: 'Recognizing and Exploiting Space Between the Lines',
+        description: 'Find players between units and connect forward actions from central spaces.'
+      },
+
+      {
+        week: 35,
+        focus: 'Turning Wide Entries into High-Quality Chances',
+        description: 'Improve the final movements, support, delivery, and occupation of finishing spaces.'
+      },
+
+      {
+        week: 36,
+        focus: 'Turning Regains into Chances Before the Opponent Recovers',
+        description: 'Attack transition moments with immediate forward intent and coordinated support.'
+      },
+
+
+      {
+        week: 37,
+        focus: 'Protecting a Lead Without Losing Our Identity',
+        description: 'Control risk while continuing to play with purpose and confidence.'
+      },
+
+      {
+        week: 38,
+        focus: 'Breaking Down an Opponent While Chasing the Game',
+        description: 'Increase attacking pressure while maintaining clarity and collective structure.'
+      },
+
+      {
+        week: 39,
+        focus: 'Changing Our Structure Without Changing Our Style',
+        description: 'Adapt positioning and roles while preserving our core playing principles.'
+      },
+
+      {
+        week: 40,
+        focus: 'Reading and Solving the Match',
+        description: 'Bring the complete game model together and solve the problems the match presents.'
+      }
+
+    ];
+
+
+
+    /* ==========================================================
+       CURRENT SEASON STATUS
+    ========================================================== */
+
     function getSeasonStatus() {
+
       const now = new Date();
+
       let currentWeek = 1;
 
+
       if (now >= seasonStart) {
-        currentWeek = Math.floor((now - seasonStart) / MS_PER_WEEK) + 1;
+
+        currentWeek =
+          Math.floor((now - seasonStart) / MS_PER_WEEK) + 1;
+
       }
 
-      // Before the season begins, keep Foundation shown as the Current Phase.
-      currentWeek = Math.max(1, Math.min(40, currentWeek));
 
-      const phaseIndex = Math.min(9, Math.floor((currentWeek - 1) / 4));
+      currentWeek = Math.max(
+        1,
+        Math.min(40, currentWeek)
+      );
+
+
+      const phaseIndex =
+        Math.min(
+          curriculumPhases.length - 1,
+          Math.floor((currentWeek - 1) / 4)
+        );
+
+
       return {
         week: currentWeek,
-        phaseIndex,
+        phaseIndex: phaseIndex,
         phase: curriculumPhases[phaseIndex]
       };
+
     }
 
-    function updateSeasonStatus() {
-      const status = getSeasonStatus();
 
-      document.querySelectorAll('.phase-card').forEach(card => {
-        card.classList.remove('border-yellow-400/60', 'shadow-lg');
-        card.classList.add('border-gray-700');
-      });
+    const seasonStatus = getSeasonStatus();
 
-      for (let i = 1; i <= curriculumPhases.length; i++) {
-        const badge = document.getElementById(`phase-badge-${i}`);
-        if (badge) badge.innerHTML = '';
-      }
+    let selectedPhaseIndex = seasonStatus.phaseIndex;
 
-      const currentCard = document.getElementById(`phase-${status.phaseIndex + 1}`);
-      if (currentCard) {
-        currentCard.classList.remove('border-gray-700');
-        currentCard.classList.add('border-yellow-400/60', 'shadow-lg');
-      }
 
-      const currentBadge = document.getElementById(`phase-badge-${status.phaseIndex + 1}`);
-      if (currentBadge) {
-        currentBadge.innerHTML = `
-          <span class="inline-block text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
-            Current Phase
-          </span>
-        `;
-      }
 
-      const weekLabel = document.getElementById('current-week-label');
-      if (weekLabel) weekLabel.textContent = `Week ${status.week}`;
+    /* ==========================================================
+       PRIMARY TAB NAVIGATION
+    ========================================================== */
 
-      const weekPhase = document.getElementById('current-week-phase');
-      if (weekPhase) weekPhase.textContent = `${status.phase.name} — ${status.phase.detail}`;
-    }
+    function switchMainTab(tabName) {
 
-    document.addEventListener('DOMContentLoaded', updateSeasonStatus);
+      document
+        .querySelectorAll('.main-tab-content')
+        .forEach(tab => {
+          tab.classList.add('hidden');
+        });
 
-    function switchTab(tabName) {
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.add('hidden');
-      });
 
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('text-white');
-        btn.classList.add('text-gray-400');
-        btn.classList.remove('border-yellow-400');
-        btn.classList.add('border-transparent');
-        btn.style.borderColor = 'transparent';
-      });
+      document
+        .querySelectorAll('.main-tab-btn')
+        .forEach(btn => {
 
-      const selectedTab = document.getElementById(`tab-${tabName}`);
-      const selectedBtn = document.getElementById(`tab-btn-${tabName}`);
+          btn.classList.remove('text-white');
+
+          btn.classList.add('text-gray-400');
+
+          btn.style.borderColor = 'transparent';
+
+        });
+
+
+      const selectedTab =
+        document.getElementById(`main-tab-${tabName}`);
+
+      const selectedButton =
+        document.getElementById(`main-tab-btn-${tabName}`);
+
 
       if (selectedTab) {
         selectedTab.classList.remove('hidden');
       }
 
-      if (selectedBtn) {
-        selectedBtn.classList.remove('text-gray-400', 'border-transparent');
-        selectedBtn.classList.add('text-white', 'border-b-2');
-        selectedBtn.style.borderColor = 'var(--altafulla-yellow)';
+
+      if (selectedButton) {
+
+        selectedButton.classList.remove('text-gray-400');
+
+        selectedButton.classList.add('text-white');
+
+        selectedButton.style.borderColor =
+          'var(--altafulla-yellow)';
+
       }
+
     }
+
+
+
+    /* ==========================================================
+       REFERENCE TAB NAVIGATION
+    ========================================================== */
+
+    function switchReferenceTab(tabName) {
+
+      document
+        .querySelectorAll('.reference-tab-content')
+        .forEach(tab => {
+          tab.classList.add('hidden');
+        });
+
+
+      document
+        .querySelectorAll('.reference-tab-btn')
+        .forEach(btn => {
+
+          btn.classList.remove('text-white');
+
+          btn.classList.add('text-gray-400');
+
+          btn.style.borderColor = 'transparent';
+
+        });
+
+
+      const selectedTab =
+        document.getElementById(
+          `reference-tab-${tabName}`
+        );
+
+      const selectedButton =
+        document.getElementById(
+          `reference-tab-btn-${tabName}`
+        );
+
+
+      if (selectedTab) {
+        selectedTab.classList.remove('hidden');
+      }
+
+
+      if (selectedButton) {
+
+        selectedButton.classList.remove('text-gray-400');
+
+        selectedButton.classList.add('text-white');
+
+        selectedButton.style.borderColor =
+          'var(--altafulla-blue)';
+
+      }
+
+    }
+
+
+
+    /* ==========================================================
+       ROADMAP
+    ========================================================== */
+
+    function renderRoadmap() {
+
+      const container =
+        document.getElementById('roadmap-container');
+
+      container.innerHTML = '';
+
+
+      curriculumPhases.forEach((phase, index) => {
+
+        const isCurrentPhase =
+          index === seasonStatus.phaseIndex;
+
+
+        const phaseCard =
+          document.createElement('div');
+
+
+        phaseCard.className =
+          `phase-card bg-gray-800 p-5 rounded-xl border ${
+            isCurrentPhase
+              ? 'border-yellow-400/60 shadow-lg'
+              : 'border-gray-700'
+          }`;
+
+
+        let weekButtons = '';
+
+
+        for (
+          let weekNumber = phase.startWeek;
+          weekNumber <= phase.endWeek;
+          weekNumber++
+        ) {
+
+          const isCurrentWeek =
+            weekNumber === seasonStatus.week;
+
+
+          weekButtons += `
+            <button
+              onclick="openWeek(${weekNumber})"
+              class="
+                text-xs px-3 py-1.5 rounded-full border transition-colors
+                ${
+                  isCurrentWeek
+                    ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
+                    : 'bg-gray-900/60 text-gray-300 border-gray-700 hover:border-gray-500 hover:text-white'
+                }
+              "
+            >
+              Week ${weekNumber}
+            </button>
+          `;
+
+        }
+
+
+        phaseCard.innerHTML = `
+
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
+
+            <div class="flex-1">
+
+              <span class="text-xs uppercase tracking-wide text-gray-500">
+                Weeks ${phase.startWeek}–${phase.endWeek}
+              </span>
+
+              <div class="flex flex-wrap items-center gap-3 mt-1">
+
+                <h4 class="text-xl font-bold text-white">
+                  ${phase.name}
+                </h4>
+
+                ${
+                  isCurrentPhase
+                    ? `
+                      <span class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
+                        Current Phase
+                      </span>
+                    `
+                    : ''
+                }
+
+              </div>
+
+              <p class="text-sm text-gray-400 mt-1">
+                ${phase.detail}
+              </p>
+
+
+              <div class="flex flex-wrap gap-2 mt-4">
+                ${weekButtons}
+              </div>
+
+            </div>
+
+
+            <button
+              onclick="openPhase(${index})"
+              class="self-start text-sm font-semibold whitespace-nowrap hover:underline"
+              style="color: var(--altafulla-blue);"
+            >
+              View Phase →
+            </button>
+
+          </div>
+
+        `;
+
+
+        container.appendChild(phaseCard);
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       OPEN PHASE FROM ROADMAP
+    ========================================================== */
+
+    function openPhase(index) {
+
+      selectedPhaseIndex = index;
+
+      switchMainTab('weekly');
+
+      renderWeeklyPhase();
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       OPEN SPECIFIC WEEK FROM ROADMAP
+    ========================================================== */
+
+    function openWeek(weekNumber) {
+
+      selectedPhaseIndex =
+        Math.floor((weekNumber - 1) / 4);
+
+
+      switchMainTab('weekly');
+
+      renderWeeklyPhase();
+
+
+      setTimeout(() => {
+
+        const weekCard =
+          document.getElementById(
+            `weekly-week-${weekNumber}`
+          );
+
+
+        if (weekCard) {
+
+          weekCard.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+
+        }
+
+      }, 100);
+
+    }
+
+
+
+    /* ==========================================================
+       PREVIOUS / NEXT PHASE
+    ========================================================== */
+
+    function changePhase(direction) {
+
+      const newIndex =
+        selectedPhaseIndex + direction;
+
+
+      if (
+        newIndex < 0 ||
+        newIndex >= curriculumPhases.length
+      ) {
+        return;
+      }
+
+
+      selectedPhaseIndex = newIndex;
+
+      renderWeeklyPhase();
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       WEEKLY PHASE VIEW
+    ========================================================== */
+
+    function renderWeeklyPhase() {
+
+      const phase =
+        curriculumPhases[selectedPhaseIndex];
+
+
+      document.getElementById(
+        'weekly-phase-weeks'
+      ).textContent =
+        `Weeks ${phase.startWeek}–${phase.endWeek}`;
+
+
+      document.getElementById(
+        'weekly-phase-name'
+      ).textContent =
+        phase.name;
+
+
+      document.getElementById(
+        'weekly-phase-detail'
+      ).textContent =
+        phase.detail;
+
+
+      const previousButton =
+        document.getElementById('previous-phase-btn');
+
+      const nextButton =
+        document.getElementById('next-phase-btn');
+
+
+      previousButton.disabled =
+        selectedPhaseIndex === 0;
+
+      nextButton.disabled =
+        selectedPhaseIndex ===
+        curriculumPhases.length - 1;
+
+
+      const container =
+        document.getElementById('weekly-container');
+
+
+      container.innerHTML = '';
+
+
+      const phaseWeeks =
+        weeks.filter(
+          week =>
+            week.week >= phase.startWeek &&
+            week.week <= phase.endWeek
+        );
+
+
+      phaseWeeks.forEach(week => {
+
+        const isCurrentWeek =
+          week.week === seasonStatus.week;
+
+
+        const weekCard =
+          document.createElement('section');
+
+
+        weekCard.id =
+          `weekly-week-${week.week}`;
+
+
+        weekCard.className =
+          `scroll-mt-24 bg-gray-800 p-4 md:p-6 rounded-xl border space-y-5 ${
+            isCurrentWeek
+              ? 'border-yellow-400/60 shadow-lg'
+              : 'border-gray-700'
+          }`;
+
+
+        weekCard.innerHTML = `
+
+          <!-- Week Header -->
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+
+            <div>
+
+              <span class="text-xs uppercase tracking-wide text-gray-500">
+                Week ${week.week}
+              </span>
+
+              <h3 class="text-xl md:text-2xl font-bold text-white mt-1">
+                ${week.focus}
+              </h3>
+
+              <p class="text-sm text-gray-400 mt-1">
+                ${week.description}
+              </p>
+
+            </div>
+
+
+            ${
+              isCurrentWeek
+                ? `
+                  <span class="self-start text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full whitespace-nowrap">
+                    Current Week
+                  </span>
+                `
+                : ''
+            }
+
+          </div>
+
+
+          <!-- Weekly Objective -->
+          <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
+
+            <h4
+              class="text-sm font-bold uppercase tracking-wide mb-2"
+              style="color: var(--altafulla-blue);"
+            >
+              Weekly Objective
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              ${week.description}
+            </p>
+
+          </div>
+
+
+          <!-- Sessions -->
+          <div>
+
+            <h4 class="text-xs font-bold uppercase tracking-wide text-gray-500 mb-3">
+              Training Sessions
+            </h4>
+
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+
+              <!-- Session 1 -->
+              <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
+
+                <div>
+
+                  <span class="text-xs uppercase tracking-wide text-gray-500">
+                    Session 1
+                  </span>
+
+                  <h5 class="text-lg font-bold text-white mt-1">
+                    Style of Play
+                  </h5>
+
+                </div>
+
+
+                <div class="text-sm text-gray-300 space-y-2">
+
+                  <p>
+                    <span class="text-gray-500">
+                      Tactical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Technical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Positional Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                </div>
+
+
+                <a
+                  href="#"
+                  class="inline-block text-xs font-semibold hover:underline"
+                  style="color: var(--altafulla-blue);"
+                >
+                  View Session →
+                </a>
+
+              </div>
+
+
+              <!-- Session 2 -->
+              <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
+
+                <div>
+
+                  <span class="text-xs uppercase tracking-wide text-gray-500">
+                    Session 2
+                  </span>
+
+                  <h5 class="text-lg font-bold text-white mt-1">
+                    Structure
+                  </h5>
+
+                </div>
+
+
+                <div class="text-sm text-gray-300 space-y-2">
+
+                  <p>
+                    <span class="text-gray-500">
+                      Tactical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Technical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Positional Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                </div>
+
+
+                <a
+                  href="#"
+                  class="inline-block text-xs font-semibold hover:underline"
+                  style="color: var(--altafulla-blue);"
+                >
+                  View Session →
+                </a>
+
+              </div>
+
+
+              <!-- Session 3 -->
+              <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
+
+                <div>
+
+                  <span class="text-xs uppercase tracking-wide text-gray-500">
+                    Session 3
+                  </span>
+
+                  <h5 class="text-lg font-bold text-white mt-1">
+                    Application
+                  </h5>
+
+                </div>
+
+
+                <div class="text-sm text-gray-300 space-y-2">
+
+                  <p>
+                    <span class="text-gray-500">
+                      Tactical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Technical Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                  <p>
+                    <span class="text-gray-500">
+                      Positional Focus:
+                    </span>
+                    To be added.
+                  </p>
+
+                </div>
+
+
+                <a
+                  href="#"
+                  class="inline-block text-xs font-semibold hover:underline"
+                  style="color: var(--altafulla-blue);"
+                >
+                  View Session →
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        `;
+
+
+        container.appendChild(weekCard);
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       INITIALIZE PAGE
+    ========================================================== */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+
+        renderRoadmap();
+
+        renderWeeklyPhase();
+
+        switchMainTab('roadmap');
+
+        switchReferenceTab('rules');
+
+      }
+    );
+
   </script>
 
 </body>
