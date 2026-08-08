@@ -1617,6 +1617,20 @@
 
           </div>
 
+          <!-- Session Plan -->
+          ${session.sessionPlan ? `
+            <div>
+              <a
+                href="${session.sessionPlan}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                style="color: var(--altafulla-blue);"
+              >
+                📋 View Session Plan →
+              </a>
+            </div>
+          ` : ''}
 
           <!-- If You Missed It -->
           <div
