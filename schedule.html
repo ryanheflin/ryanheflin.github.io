@@ -1,200 +1,94 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Schedule | CE Altafulla U15</title>
+  <title>Season Schedule | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/site.js" defer></script>
 
   <style>
-
     :root {
-
       --altafulla-yellow: #f2e40a;
-
       --altafulla-black: #000000;
-
       --altafulla-blue: #62bed6;
-
     }
-
   </style>
-
 </head>
 
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
+  <!-- Shared Sidebar -->
+  <div id="site-sidebar"></div>
 
-
-  <!-- Sidebar Navigation -->
-
-  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
-
-    <div class="flex flex-col items-center space-y-3">
-
-      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-24 h-24 object-contain" />
-
-      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
-
-        Ex Profundo
-
-      </h1>
-
-      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
-
-        CE Altafulla S15
-
-      </span>
-
-    </div>
-
-
-
-    <div class="flex flex-col space-y-2 text-base font-medium">
-
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-
-        ✍️ Coach's Notes
-
-      </a>
-
-      <a href="schedule.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
-
-        📋 Season Schedule
-
-      </a>
-
-      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-
-        📋 Practice Plan
-
-      </a>
-
-      <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-
-        📊 Game Analytics
-
-      </a>
-
-      <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-
-        ℹ️ Rules & Coach
-
-      </a>
-
-    </div>
-
-  </nav>
-
-
-
-  <!-- Main Content Area -->
-
-  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
+  <!-- Main Content -->
+  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full">
 
     <header class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-
       <div>
-
-        <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Season Schedule & Results</h2>
-
-        <p class="text-gray-400 text-sm">Live fixtures, match times, and official standings directly from FCF.</p>
-
+        <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+          Season Schedule & Results
+        </h2>
+        <p class="text-gray-400 text-sm">
+          Live fixtures, match times, and official standings directly from FCF.
+        </p>
       </div>
 
-      
-
-      <a id="fcf-direct-link" 
-
-         href="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a" 
-
-         target="_blank" 
-
-         rel="noopener noreferrer"
-
-         class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md"
-
-         style="background-color: var(--altafulla-yellow);">
-
+      <a
+        id="fcf-direct-link"
+        href="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
+        style="background-color: var(--altafulla-yellow);"
+      >
         🔗 Open on FCF.cat ↗
-
       </a>
-
     </header>
 
-
-
     <!-- Embedded FCF Page -->
-
-    <div class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8">
-
-      <div class="relative w-full rounded-lg overflow-hidden bg-white" style="height: 750px;">
-
-        <iframe 
-
+    <section class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8">
+      <div class="relative w-full rounded-lg overflow-hidden bg-white h-[560px] md:h-[750px]">
+        <iframe
           id="fcf-iframe"
-
-          src="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a" 
-
+          src="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
           class="w-full h-full border-0"
-
           title="CE Altafulla FCF Schedule"
-
           loading="lazy">
-
         </iframe>
-
       </div>
-
-    </div>
-
-
+    </section>
 
     <!-- Match Day Logistics -->
+    <section class="mb-8">
+      <h3 class="text-xl font-bold mb-4">Match Day Logistics</h3>
 
-    <h3 class="text-xl font-bold mb-4">Match Day Logistics</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-2 text-white">📍 Home Field Address</h4>
+          <p class="text-sm text-gray-300">Estadi Municipal Joan Pijuan</p>
+          <p class="text-xs text-gray-400 mt-1">
+            Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona
+          </p>
+        </div>
 
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-
-        <h4 class="text-lg font-bold mb-2 text-white">📍 Home Field Address</h4>
-
-        <p class="text-sm text-gray-300">Estadi Municipal Joan Pijuan</p>
-
-        <p class="text-xs text-gray-400 mt-1">Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona</p>
-
-      </div>
-
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-
-        <h4 class="text-lg font-bold mb-2 text-white">⌚ Arrival & Call-Up Times</h4>
-
-        <p class="text-sm text-gray-300">Home matches: 60 minutes prior to kickoff.</p>
-
-        <p class="text-sm text-gray-300 mt-1">Away matches: 60 minutes prior to kickoff.</p>
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-2 text-white">⌚ Arrival & Call-Up Times</h4>
+          <p class="text-sm text-gray-300">Home matches: 60 minutes prior to kickoff.</p>
+          <p class="text-sm text-gray-300 mt-1">Away matches: 60 minutes prior to kickoff.</p>
+        </div>
 
       </div>
-
-    </div>
+    </section>
 
   </main>
 
-
-
-  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
-
+  <!-- Responsive Footer -->
+  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
-
   </footer>
 
 </body>
-
-</html> 
-
+</html>
