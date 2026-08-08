@@ -28,7 +28,7 @@
     </div>
 
     <div class="flex flex-col space-y-2 text-base font-medium">
-        <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
         ✍️ Coach's Notes
       </a>
       <a href="schedule.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
@@ -73,7 +73,7 @@
     </div>
 
     <!-- LATEST / FEATURED POST -->
-    <article class="post-card featured-post bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg space-y-4">
+    <article class="post-card featured-post match-report bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg space-y-4">
       <div class="flex items-center justify-between">
         <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-yellow-400 text-black uppercase">
           Latest Post • Match Report
@@ -86,7 +86,6 @@
         In this post-match breakdown, we look at why our high block worked so effectively in the final 30 minutes, how our double pivot adjusted their spacing, and three key moments from the film that show player growth.
       </p>
 
-      <!-- Embedded Video or Image placeholder if needed -->
       <div class="bg-gray-900 border border-gray-700 rounded-lg p-4 text-center">
         <p class="text-xs text-gray-400 mb-2">🎥 Match Clip: High Press Trigger & Turnovers</p>
         <div class="aspect-video max-w-2xl mx-auto bg-black flex items-center justify-center rounded">
@@ -100,6 +99,95 @@
       </div>
     </article>
 
+    <!-- PREVIOUS POSTS LIST SECTION -->
+    <section class="space-y-4 pt-6">
+      <h3 class="text-xl font-bold text-gray-200 border-b border-gray-800 pb-2">Previous Posts</h3>
+
+      <ul class="divide-y divide-gray-800 border-t border-b border-gray-800">
+
+        <!-- Post 1 -->
+        <li class="post-item py-4 transition-colors hover:bg-gray-800/50 px-2 rounded-lg" data-category="practice-review">
+          <a href="posts/midweek-possession-drills.html" class="flex flex-col md:flex-row md:items-center justify-between gap-2 group">
+            <div class="flex items-baseline space-x-3">
+              <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Oct 08, 2026</span>
+              <div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">
+                  Midweek Focus: 3v2 Transition & Speed of Play
+                </h4>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-1">
+                  Key takeaways from Wednesday's training sessions on quick vertical passing.
+                </p>
+              </div>
+            </div>
+            <span class="self-start md:self-center text-[10px] font-bold px-2 py-0.5 rounded bg-gray-800 text-blue-400 border border-gray-700">
+              Weekly Practice
+            </span>
+          </a>
+        </li>
+
+        <!-- Post 2 -->
+        <li class="post-item py-4 transition-colors hover:bg-gray-800/50 px-2 rounded-lg" data-category="video-analysis">
+          <a href="posts/defending-set-pieces-film.html" class="flex flex-col md:flex-row md:items-center justify-between gap-2 group">
+            <div class="flex items-baseline space-x-3">
+              <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Sep 29, 2026</span>
+              <div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">
+                  Film Breakdown: Fixing Defensive Corner Coverage
+                </h4>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-1">
+                  A 3-minute video analysis pointing out zonal vs man-marking duties.
+                </p>
+              </div>
+            </div>
+            <span class="self-start md:self-center text-[10px] font-bold px-2 py-0.5 rounded bg-gray-800 text-purple-400 border border-gray-700">
+              Video Clips
+            </span>
+          </a>
+        </li>
+
+        <!-- Post 3 -->
+        <li class="post-item py-4 transition-colors hover:bg-gray-800/50 px-2 rounded-lg" data-category="match-report">
+          <a href="posts/match-report-nastic.html" class="flex flex-col md:flex-row md:items-center justify-between gap-2 group">
+            <div class="flex items-baseline space-x-3">
+              <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Sep 21, 2026</span>
+              <div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">
+                  Match Report: CE Altafulla 2 - 1 Gimnàstic
+                </h4>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-1">
+                  Grinding out a win at home through disciplined low-block organizing.
+                </p>
+              </div>
+            </div>
+            <span class="self-start md:self-center text-[10px] font-bold px-2 py-0.5 rounded bg-gray-800 text-yellow-400 border border-gray-700">
+              Match Report
+            </span>
+          </a>
+        </li>
+
+        <!-- Post 4 -->
+        <li class="post-item py-4 transition-colors hover:bg-gray-800/50 px-2 rounded-lg" data-category="qa">
+          <a href="posts/parent-qa-nutrition-hydration.html" class="flex flex-col md:flex-row md:items-center justify-between gap-2 group">
+            <div class="flex items-baseline space-x-3">
+              <span class="text-xs text-gray-500 font-mono w-24 flex-shrink-0">Sep 12, 2026</span>
+              <div>
+                <h4 class="text-sm font-semibold text-white group-hover:text-yellow-400 transition-colors">
+                  Parent Q&A: Pre-Game Nutrition & Recovery
+                </h4>
+                <p class="text-xs text-gray-400 mt-1 line-clamp-1">
+                  Addressing questions on meal timing before weekend morning kickoff times.
+                </p>
+              </div>
+            </div>
+            <span class="self-start md:self-center text-[10px] font-bold px-2 py-0.5 rounded bg-gray-800 text-green-400 border border-gray-700">
+              Q&A & Notes
+            </span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
   </main>
 
   <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
@@ -108,9 +196,7 @@
 
   <script>
     function filterPosts(category) {
-      const posts = document.querySelectorAll('.post-card');
-      
-      // Update Button Styles
+      // 1. Update Button Styles
       document.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.remove('bg-gray-700', 'text-white');
         btn.classList.add('bg-gray-800', 'text-gray-400');
@@ -124,12 +210,22 @@
         activeBtn.style.color = 'var(--altafulla-yellow)';
       }
 
-      // Filter Post Visibility
-      posts.forEach(post => {
-        if (category === 'all' || post.classList.contains(category) || post.classList.contains('featured-post')) {
-          post.classList.remove('hidden');
+      // 2. Filter Featured Cards
+      document.querySelectorAll('.post-card').forEach(card => {
+        if (category === 'all' || card.classList.contains(category)) {
+          card.classList.remove('hidden');
         } else {
-          post.classList.add('hidden');
+          card.classList.add('hidden');
+        }
+      });
+
+      // 3. Filter Previous Post List Items
+      document.querySelectorAll('.post-item').forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
         }
       });
     }
