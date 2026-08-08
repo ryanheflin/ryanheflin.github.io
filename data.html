@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Game Analytics | CE Altafulla U15</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/site.js" defer></script>
+
   <style>
     :root {
       --altafulla-yellow: #f2e40a;
@@ -14,16 +16,22 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
   <!-- Shared Sidebar -->
   <div id="site-sidebar"></div>
 
-  <!-- Main Content Area -->
-  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
-    <header class="mb-8">
-      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Season Data Trends</h2>
-      <p class="text-gray-400">Team performance metrics, match analysis, and individual reports.</p>
+  <!-- Main Content -->
+  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8">
+
+    <header>
+      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+        Game Analytics
+      </h2>
+      <p class="text-gray-400 text-sm">
+        Season results, match-by-match analysis, and team performance trends.
+      </p>
     </header>
 
     <!-- Season KPI Cards -->
@@ -32,14 +40,17 @@
         <span class="text-gray-400 text-xs font-bold uppercase">Record</span>
         <p class="text-2xl font-extrabold text-white mt-1">0W - 0D - 0L</p>
       </div>
+
       <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
         <span class="text-gray-400 text-xs font-bold uppercase">Goals Scored</span>
         <p class="text-2xl font-extrabold text-yellow-400 mt-1">0</p>
       </div>
+
       <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
         <span class="text-gray-400 text-xs font-bold uppercase">Goals Conceded</span>
         <p class="text-2xl font-extrabold text-blue-400 mt-1">0</p>
       </div>
+
       <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
         <span class="text-gray-400 text-xs font-bold uppercase">Clean Sheets</span>
         <p class="text-2xl font-extrabold text-green-400 mt-1">0</p>
@@ -48,66 +59,103 @@
 
     <!-- Match Selector Tabs -->
     <div class="flex space-x-2 border-b border-gray-700 pb-3 mb-6 overflow-x-auto">
-      <button onclick="showGame('overview')" id="game-btn-overview" class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 text-white" style="color: var(--altafulla-yellow);">
+      <button
+        onclick="showGame('overview')"
+        id="game-btn-overview"
+        class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 text-white whitespace-nowrap"
+        style="color: var(--altafulla-yellow);"
+      >
         📊 Season Overview
       </button>
-      <button onclick="showGame('match-1')" id="game-btn-match-1" class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm">
+
+      <button
+        onclick="showGame('match-1')"
+        id="game-btn-match-1"
+        class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap"
+      >
         Match 1: vs. TBD
       </button>
-      <button onclick="showGame('match-2')" id="game-btn-match-2" class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm">
+
+      <button
+        onclick="showGame('match-2')"
+        id="game-btn-match-2"
+        class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap"
+      >
         Match 2: vs. TBD
       </button>
     </div>
 
     <!-- View 1: Season Overview -->
     <div id="game-view-overview" class="game-view">
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
         <h3 class="text-xl font-bold mb-2">Team Statistics Summary</h3>
-        <p class="text-sm text-gray-300">Detailed metric breakdowns, pass accuracy graphs, and tactical trends will populate here as matches are played.</p>
+        <p class="text-sm text-gray-300">
+          Detailed metric breakdowns, pass accuracy graphs, and tactical trends will populate here as matches are played.
+        </p>
       </div>
     </div>
 
     <!-- View 2: Match 1 -->
     <div id="game-view-match-1" class="game-view hidden">
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <div class="flex justify-between items-center mb-4">
+      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
           <h3 class="text-xl font-bold">CE Altafulla vs. Opponent 1</h3>
           <span class="text-sm font-semibold text-gray-400">Matchday 1</span>
         </div>
-        <p class="text-sm text-gray-300">Post-game analysis and statistical breakdown for Match 1.</p>
+
+        <p class="text-sm text-gray-300">
+          Post-game analysis and statistical breakdown for Match 1.
+        </p>
       </div>
     </div>
 
     <!-- View 3: Match 2 -->
     <div id="game-view-match-2" class="game-view hidden">
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <div class="flex justify-between items-center mb-4">
+      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
           <h3 class="text-xl font-bold">Opponent 2 vs. CE Altafulla</h3>
           <span class="text-sm font-semibold text-gray-400">Matchday 2</span>
         </div>
-        <p class="text-sm text-gray-300">Post-game analysis and statistical breakdown for Match 2.</p>
+
+        <p class="text-sm text-gray-300">
+          Post-game analysis and statistical breakdown for Match 2.
+        </p>
       </div>
     </div>
+
   </main>
 
-  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+  <!-- Responsive Footer -->
+  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
   <script>
     function showGame(gameId) {
-      document.querySelectorAll('.game-view').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.game-view').forEach(view => {
+        view.classList.add('hidden');
+      });
+
       document.querySelectorAll('.game-btn').forEach(btn => {
-        btn.classList.remove('bg-gray-700', 'text-white');
-        btn.classList.add('text-gray-400');
+        btn.classList.remove('bg-gray-700', 'text-white', 'font-bold');
+        btn.classList.add('text-gray-400', 'font-semibold');
         btn.style.color = '';
       });
 
-      document.getElementById(`game-view-${gameId}`).classList.remove('hidden');
-      const activeBtn = document.getElementById(`game-btn-${gameId}`);
-      activeBtn.classList.add('bg-gray-700', 'text-white');
-      activeBtn.style.color = 'var(--altafulla-yellow)';
+      const selectedView = document.getElementById(`game-view-${gameId}`);
+      const selectedButton = document.getElementById(`game-btn-${gameId}`);
+
+      if (selectedView) {
+        selectedView.classList.remove('hidden');
+      }
+
+      if (selectedButton) {
+        selectedButton.classList.remove('text-gray-400', 'font-semibold');
+        selectedButton.classList.add('bg-gray-700', 'text-white', 'font-bold');
+        selectedButton.style.color = 'var(--altafulla-yellow)';
+      }
     }
   </script>
+
 </body>
 </html>
