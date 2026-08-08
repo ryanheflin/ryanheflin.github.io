@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Practice Plan | CE Altafulla U15</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/site.js" defer></script>
   <style>
     :root {
       --altafulla-yellow: #f2e40a;
@@ -16,39 +17,11 @@
 
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
-  <!-- Sidebar Navigation -->
-  <nav class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700 flex flex-col py-8 px-6 space-y-8 z-10">
-    <div class="flex flex-col items-center space-y-3">
-      <img src="EPLogo.png" alt="Ex Profundo Logo" class="w-24 h-24 object-contain" />
-      <h1 class="text-2xl font-bold uppercase tracking-wide text-center" style="color: var(--altafulla-blue);">
-        Ex Profundo
-      </h1>
-      <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
-        CE Altafulla S15
-      </span>
-    </div>
+  <!-- Shared Sidebar -->
+  <div id="site-sidebar"></div>
 
-    <div class="flex flex-col space-y-2 text-base font-medium">
-      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-        ✍️ Coach's Notes
-      </a>
-      <a href="schedule.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-        📅 Season Schedule
-      </a>
-      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
-        📋 Practice Plan
-      </a>
-      <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-        📊 Game Analytics
-      </a>
-      <a href="about.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
-        ℹ️ Expectations
-      </a>
-    </div>
-  </nav>
-
-  <!-- Main Content -->
-  <main class="ml-64 flex-grow p-10 max-w-6xl mx-auto w-full space-y-8">
+<!-- Main Content -->
+  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8">
 
     <header>
       <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
@@ -111,12 +84,11 @@
               <p class="text-sm text-gray-400 mt-1">Introduction → Build Habits</p>
             </div>
             <div id="phase-badge-1"></div>
-            </div>
           </div>
         </div>
 
         <!-- Style Implementation -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-2" data-phase-index="2" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 5–8</span>
           <h4 id="phase-title-2" class="text-xl font-bold text-white mt-1">Style Implementation</h4>
           <p class="text-sm text-gray-400 mt-1">Reduce Chaos → Build Structure</p>
@@ -124,7 +96,7 @@
         </div>
 
         <!-- Stability & Development -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-3" data-phase-index="3" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 9–12</span>
           <h4 id="phase-title-3" class="text-xl font-bold text-white mt-1">Stability & Development</h4>
           <p class="text-sm text-gray-400 mt-1">Make Structure Consistent Under Pressure</p>
@@ -132,7 +104,7 @@
         </div>
 
         <!-- Organization -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-4" data-phase-index="4" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 13–16</span>
           <h4 id="phase-title-4" class="text-xl font-bold text-white mt-1">Organization</h4>
           <p class="text-sm text-gray-400 mt-1">Start Controlling Matches</p>
@@ -140,7 +112,7 @@
         </div>
 
         <!-- Consolidation -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-5" data-phase-index="5" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 17–20</span>
           <h4 id="phase-title-5" class="text-xl font-bold text-white mt-1">Consolidation</h4>
           <p class="text-sm text-gray-400 mt-1">Review → Reinforce → Connect</p>
@@ -148,7 +120,7 @@
         </div>
 
         <!-- Application -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-6" data-phase-index="6" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 21–24</span>
           <h4 id="phase-title-6" class="text-xl font-bold text-white mt-1">Application</h4>
           <p class="text-sm text-gray-400 mt-1">Adaptation → Reading Games</p>
@@ -156,7 +128,7 @@
         </div>
 
         <!-- Tactical Growth -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-7" data-phase-index="7" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 25–28</span>
           <h4 id="phase-title-7" class="text-xl font-bold text-white mt-1">Tactical Growth</h4>
           <p class="text-sm text-gray-400 mt-1">Add Complexity & Flexibility</p>
@@ -164,7 +136,7 @@
         </div>
 
         <!-- Total Control / Refinement -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-8" data-phase-index="8" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 29–32</span>
           <h4 id="phase-title-8" class="text-xl font-bold text-white mt-1">Total Control & Refinement</h4>
           <p class="text-sm text-gray-400 mt-1">Play the Game on Your Terms</p>
@@ -172,7 +144,7 @@
         </div>
 
         <!-- Efficiency -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-9" data-phase-index="9" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 33–36</span>
           <h4 id="phase-title-9" class="text-xl font-bold text-white mt-1">Efficiency</h4>
           <p class="text-sm text-gray-400 mt-1">Clarity & Confidence</p>
@@ -180,7 +152,7 @@
         </div>
 
         <!-- Final Phase -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div id="phase-10" data-phase-index="10" class="phase-card bg-gray-800 p-5 rounded-xl border border-gray-700">
           <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 37–40</span>
           <h4 id="phase-title-10" class="text-xl font-bold text-white mt-1">Final Phase</h4>
           <p class="text-sm text-gray-400 mt-1">Refine → Adapt → Compete</p>
@@ -194,7 +166,7 @@
     <div id="tab-weekly" class="tab-content hidden space-y-6">
 
       <!-- Current Week -->
-      <section class="bg-gray-800 p-6 rounded-xl border border-yellow-400/60 shadow-lg space-y-5">
+      <section class="bg-gray-800 p-4 md:p-6 rounded-xl border border-yellow-400/60 shadow-lg space-y-5">
         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
           <div>
             <span id="current-week-label" class="text-xs uppercase tracking-wide text-gray-500">Week 1</span>
@@ -228,7 +200,7 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
-          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
             <div>
               <span class="text-xs uppercase tracking-wide text-gray-500">Session 1</span>
               <h4 class="text-lg font-bold text-white mt-1">Attacking Principles</h4>
@@ -243,7 +215,7 @@
             </a>
           </div>
 
-          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
             <div>
               <span class="text-xs uppercase tracking-wide text-gray-500">Session 2</span>
               <h4 class="text-lg font-bold text-white mt-1">Defensive Principles</h4>
@@ -258,7 +230,7 @@
             </a>
           </div>
 
-          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+          <div class="bg-gray-900/60 p-4 md:p-5 rounded-lg border border-gray-700 space-y-3">
             <div>
               <span class="text-xs uppercase tracking-wide text-gray-500">Session 3</span>
               <h4 class="text-lg font-bold text-white mt-1">Transition Principles</h4>
@@ -277,7 +249,7 @@
       </section>
 
       <!-- Next Week -->
-      <section class="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-3">
+      <section class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-3">
         <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
           <div>
             <span class="text-xs uppercase tracking-wide text-gray-500">Week 2</span>
@@ -325,7 +297,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
 
         <!-- In Possession -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
           <h4 class="text-lg font-bold mb-3" style="color: var(--altafulla-blue);">
             In Possession
           </h4>
@@ -339,7 +311,7 @@
         </div>
 
         <!-- Out of Possession -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
           <h4 class="text-lg font-bold mb-3 text-yellow-400">
             Out of Possession
           </h4>
@@ -353,7 +325,7 @@
         </div>
 
         <!-- Attacking Transition -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
           <h4 class="text-lg font-bold mb-3 text-green-400">
             Attacking Transition
           </h4>
@@ -366,7 +338,7 @@
         </div>
 
         <!-- Defensive Transition -->
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
           <h4 class="text-lg font-bold mb-3 text-red-400">
             Defensive Transition
           </h4>
@@ -391,7 +363,7 @@
 
   </main>
 
-  <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
