@@ -57,21 +57,21 @@
         <div class="flex gap-6 overflow-x-auto">
 
           <button
-            onclick="switchExpectationTab('standards')"
-            id="expectation-tab-btn-standards"
+            onclick="switchExpectationTab('values')"
+            id="expectation-tab-btn-values"
             class="expectation-tab-btn pb-3 text-sm font-semibold text-white border-b-2 whitespace-nowrap"
             style="border-color: var(--altafulla-blue);"
           >
-            Standards & Expectations
+            Core Values
           </button>
 
 
           <button
-            onclick="switchExpectationTab('values')"
-            id="expectation-tab-btn-values"
+            onclick="switchExpectationTab('standards')"
+            id="expectation-tab-btn-standards"
             class="expectation-tab-btn pb-3 text-sm font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
           >
-            Core Values
+            Standards & Expectations
           </button>
 
 
@@ -107,95 +107,11 @@
 
 
       <!-- =======================================================
-           STANDARDS & EXPECTATIONS
-      ======================================================== -->
-      <div
-        id="expectation-tab-standards"
-        class="expectation-tab-content"
-      >
-
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-6">
-
-          <div>
-            <h3 class="text-xl font-bold flex items-center gap-2">
-              <span>📜</span>
-              Team Standards & Expectations
-            </h3>
-
-            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
-              High standards do not mean expecting perfection. They mean taking
-              responsibility for how we prepare, how we compete, how we treat others,
-              and how we respond when things do not go our way.
-            </p>
-          </div>
-
-
-          <!-- Core Team Expectations -->
-          <div class="grid md:grid-cols-2 gap-4 text-sm">
-
-            <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
-              <h4 class="font-bold text-white mb-1">
-                Be Prepared
-              </h4>
-
-              <p class="text-gray-400 leading-relaxed">
-                Arrive on time and ready to train or play. Bring the required equipment,
-                take care of your body, and be mentally ready to work.
-              </p>
-            </div>
-
-
-            <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
-              <h4 class="font-bold text-white mb-1">
-                Communicate
-              </h4>
-
-              <p class="text-gray-400 leading-relaxed">
-                Communicate absences or problems as early as possible. Players should
-                increasingly learn to communicate directly with their coaches and
-                teammates.
-              </p>
-            </div>
-
-
-            <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
-              <h4 class="font-bold text-white mb-1">
-                Train With Purpose
-              </h4>
-
-              <p class="text-gray-400 leading-relaxed">
-                Be engaged, listen, ask questions, compete, and give your best effort.
-                Mistakes are part of learning; lack of effort or attention is something
-                we can control.
-              </p>
-            </div>
-
-
-            <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
-              <h4 class="font-bold text-white mb-1">
-                Represent the Team Well
-              </h4>
-
-              <p class="text-gray-400 leading-relaxed">
-                Our behavior represents ourselves, our teammates, our families, and
-                CE Altafulla. Treat teammates, opponents, referees, coaches, and
-                supporters with respect.
-              </p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =======================================================
            CORE VALUES
       ======================================================== -->
       <div
         id="expectation-tab-values"
-        class="expectation-tab-content hidden"
+        class="expectation-tab-content"
       >
 
         <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-5">
@@ -219,7 +135,7 @@
 
               <h4
                 class="text-lg font-bold mb-2"
-                style="color: var(--altafulla-yellow);"
+                style="color: var(--altafulla-blue);"
               >
                 Strength
               </h4>
@@ -239,7 +155,7 @@
 
               <h4
                 class="text-lg font-bold mb-2"
-                style="color: var(--altafulla-yellow);"
+                style="color: var(--altafulla-blue);"
               >
                 Discipline
               </h4>
@@ -258,7 +174,7 @@
 
               <h4
                 class="text-lg font-bold mb-2"
-                style="color: var(--altafulla-yellow);"
+                style="color: var(--altafulla-blue);"
               >
                 Teamwork
               </h4>
@@ -277,7 +193,7 @@
 
               <h4
                 class="text-lg font-bold mb-2"
-                style="color: var(--altafulla-yellow);"
+                style="color: var(--altafulla-blue);"
               >
                 Respect
               </h4>
@@ -307,6 +223,168 @@
 
 
       <!-- =======================================================
+           STANDARDS & EXPECTATIONS
+      ======================================================== -->
+      <div
+        id="expectation-tab-standards"
+        class="expectation-tab-content hidden"
+      >
+
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-6">
+
+          <div>
+            <h3 class="text-xl font-bold">
+              Team Standards & Expectations
+            </h3>
+
+            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+              High standards do not mean expecting perfection. They mean taking
+              responsibility for how we prepare, how we compete, how we treat others,
+              and how we respond when things do not go our way.
+            </p>
+          </div>
+
+
+          <div class="grid md:grid-cols-2 gap-4 text-sm">
+
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Be Prepared
+              </h4>
+
+              <p class="text-gray-300 leading-relaxed">
+                Arrive on time and ready to train or play. Bring the required equipment,
+                take care of your body, and be mentally ready to work.
+              </p>
+            </div>
+
+
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Communicate
+              </h4>
+
+              <p class="text-gray-300 leading-relaxed">
+                Communicate absences or problems as early as possible. Players should
+                increasingly learn to communicate directly with their coaches and
+                teammates.
+              </p>
+            </div>
+
+
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Train With Purpose
+              </h4>
+
+              <p class="text-gray-300 leading-relaxed">
+                Be engaged, listen, ask questions, compete, and give your best effort.
+                Mistakes are part of learning; lack of effort or attention is something
+                we can control.
+              </p>
+            </div>
+
+
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Represent the Team Well
+              </h4>
+
+              <p class="text-gray-300 leading-relaxed">
+                Our behavior represents ourselves, our teammates, our families, and
+                CE Altafulla. Treat teammates, opponents, referees, coaches, and
+                supporters with respect.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="pt-1">
+
+            <h4 class="text-sm font-bold uppercase tracking-wide text-gray-400 mb-4">
+              Everyday Standards
+            </h4>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+                <h4
+                  class="text-lg font-bold mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Details Matter
+                </h4>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  The little things change the game.
+                </p>
+              </div>
+
+
+              <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+                <h4
+                  class="text-lg font-bold mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Body Language Matters
+                </h4>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Head up. Respond well. Stay positive and ready for the next action.
+                </p>
+              </div>
+
+
+              <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+                <h4
+                  class="text-lg font-bold mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Every Movement Has a Purpose
+                </h4>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Know what you're creating, closing, supporting, or threatening.
+                </p>
+              </div>
+
+
+              <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+                <h4
+                  class="text-lg font-bold mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Help the Player Next to You
+                </h4>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  Communicate. Cover. Support. Make their job easier.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- =======================================================
            PARENT EXPECTATIONS
       ======================================================== -->
       <div
@@ -314,31 +392,82 @@
         class="expectation-tab-content hidden"
       >
 
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-4">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-5">
 
-          <h3 class="text-xl font-bold">
-            Players & Families
-          </h3>
+          <div>
+            <h3 class="text-xl font-bold">
+              Players & Families
+            </h3>
 
-
-          <p class="text-sm text-gray-300 leading-relaxed">
-            As players move through the Cadete years, they should gradually take more
-            responsibility for their own football. Players are encouraged to communicate
-            with coaches, ask questions, solve problems, reflect on their performances,
-            and learn to manage both success and disappointment.
-          </p>
+            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+              Supporting players as they take increasing responsibility for their football.
+            </p>
+          </div>
 
 
-          <p class="text-sm text-gray-300 leading-relaxed">
-            Families are an important part of that process. The best support is often
-            encouragement, perspective, and giving players enough space to find their
-            own solutions. Coaches, players, and families will not always see every
-            situation in exactly the same way, but communication should always remain
-            respectful and focused on the development of the player and the team.
-          </p>
+          <div class="grid md:grid-cols-2 gap-4">
+
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Player Responsibility
+              </h4>
+
+              <p class="text-sm text-gray-300 leading-relaxed">
+                As players move through the Cadete years, they should gradually take more
+                responsibility for their own football. Players are encouraged to communicate
+                with coaches, ask questions, solve problems, reflect on their performances,
+                and learn to manage both success and disappointment.
+              </p>
+
+            </div>
 
 
-          <p class="text-sm font-semibold text-white">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+
+              <h4
+                class="text-lg font-bold mb-2"
+                style="color: var(--altafulla-blue);"
+              >
+                Family Support
+              </h4>
+
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Families are an important part of that process. The best support is often
+                encouragement, perspective, and giving players enough space to find their
+                own solutions.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
+
+            <h4
+              class="text-lg font-bold mb-2"
+              style="color: var(--altafulla-blue);"
+            >
+              Communication
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed">
+              Coaches, players, and families will not always see every situation in exactly
+              the same way, but communication should always remain respectful and focused
+              on the development of the player and the team.
+            </p>
+
+          </div>
+
+
+          <p
+            class="text-sm text-gray-400 italic border-l-2 pl-4"
+            style="border-color: var(--altafulla-blue);"
+          >
             The goal is a demanding but positive environment in which players can
             compete, make mistakes, learn, and grow.
           </p>
@@ -356,14 +485,14 @@
         class="expectation-tab-content hidden"
       >
 
-        <div class="space-y-4">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-5">
 
           <div>
-            <h3 class="text-xl font-bold text-white">
+            <h3 class="text-xl font-bold">
               Game Rules
             </h3>
 
-            <p class="text-sm text-gray-400 mt-1">
+            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
               Simple shared cues that help us recognize situations and make decisions together.
             </p>
           </div>
@@ -373,10 +502,10 @@
 
 
             <!-- With the Ball -->
-            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
               <h4
-                class="text-sm font-bold uppercase tracking-wide mb-4"
+                class="text-lg font-bold mb-4"
                 style="color: var(--altafulla-blue);"
               >
                 With the Ball
@@ -454,9 +583,12 @@
 
 
             <!-- Without the Ball -->
-            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
-              <h4 class="text-sm font-bold uppercase tracking-wide text-yellow-400 mb-4">
+              <h4
+                class="text-lg font-bold mb-4"
+                style="color: var(--altafulla-blue);"
+              >
                 Without the Ball
               </h4>
 
@@ -511,9 +643,12 @@
 
 
             <!-- Transition -->
-            <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
-              <h4 class="text-sm font-bold uppercase tracking-wide text-green-400 mb-4">
+              <h4
+                class="text-lg font-bold mb-4"
+                style="color: var(--altafulla-blue);"
+              >
                 Transition
               </h4>
 
@@ -553,14 +688,14 @@
         class="expectation-tab-content hidden"
       >
 
-        <div class="space-y-4">
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700 space-y-5">
 
           <div>
-            <h3 class="text-xl font-bold text-white">
+            <h3 class="text-xl font-bold">
               Playing Principles
             </h3>
 
-            <p class="text-sm text-gray-400 mt-1">
+            <p class="text-sm text-gray-400 mt-2 leading-relaxed">
               Shared principles that guide how we recognize problems, communicate, and solve the game together.
             </p>
           </div>
@@ -570,7 +705,7 @@
 
 
             <!-- In Possession -->
-            <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
               <h4
                 class="text-lg font-bold mb-3"
@@ -592,9 +727,12 @@
 
 
             <!-- Out of Possession -->
-            <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
-              <h4 class="text-lg font-bold mb-3 text-yellow-400">
+              <h4
+                class="text-lg font-bold mb-3"
+                style="color: var(--altafulla-blue);"
+              >
                 Out of Possession
               </h4>
 
@@ -611,9 +749,12 @@
 
 
             <!-- Attacking Transition -->
-            <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
-              <h4 class="text-lg font-bold mb-3 text-green-400">
+              <h4
+                class="text-lg font-bold mb-3"
+                style="color: var(--altafulla-blue);"
+              >
                 Attacking Transition
               </h4>
 
@@ -629,9 +770,12 @@
 
 
             <!-- Defensive Transition -->
-            <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+            <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700">
 
-              <h4 class="text-lg font-bold mb-3 text-red-400">
+              <h4
+                class="text-lg font-bold mb-3"
+                style="color: var(--altafulla-blue);"
+              >
                 Defensive Transition
               </h4>
 
@@ -648,14 +792,13 @@
           </div>
 
 
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <p class="text-sm text-gray-300 leading-relaxed">
-              These principles are not intended to create one fixed answer for every situation.
-              The goal is to help players recognize problems, communicate, and choose solutions together.
-            </p>
-
-          </div>
+          <p
+            class="text-sm text-gray-400 italic border-l-2 pl-4"
+            style="border-color: var(--altafulla-blue);"
+          >
+            These principles are not intended to create one fixed answer for every situation.
+            The goal is to help players recognize problems, communicate, and choose solutions together.
+          </p>
 
         </div>
 
@@ -826,7 +969,7 @@
     document.addEventListener(
       'DOMContentLoaded',
       function() {
-        switchExpectationTab('standards');
+        switchExpectationTab('values');
       }
     );
 
