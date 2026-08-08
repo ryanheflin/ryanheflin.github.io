@@ -1,0 +1,45 @@
+<button
+  id="menuButton"
+  onclick="toggleSidebar()"
+  class="fixed top-4 left-4 z-50 md:hidden bg-gray-800 border border-gray-700
+         text-white rounded-lg px-3 py-2 shadow-lg"
+>
+  ☰
+</button>
+
+<div
+  id="sidebarOverlay"
+  onclick="closeSidebar()"
+  class="fixed inset-0 bg-black/60 z-30 hidden md:hidden"
+></div>
+
+<nav
+  id="sidebar"
+  class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700
+         flex flex-col py-8 px-6 space-y-8 z-40
+         transform -translate-x-full md:translate-x-0 transition-transform duration-300"
+>
+
+  <!-- logo etc -->
+
+  <a href="index.html">
+    ✍️ Coach's Notes
+  </a>
+
+  <a href="schedule.html">
+    📅 Season Schedule
+  </a>
+
+  <a href="curriculum.html">
+    📋 Practice Plan
+  </a>
+
+  <a href="data.html">
+    📊 Game Analytics
+  </a>
+
+  <a href="about.html">
+    ℹ️ About
+  </a>
+
+</nav>
