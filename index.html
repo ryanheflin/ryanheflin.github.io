@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Schedule | CE Altafulla U15</title>
+  <title>Coach's Notes | CE Altafulla U15</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -28,13 +28,14 @@
     </div>
 
     <div class="flex flex-col space-y-2 text-base font-medium">
-        <a href="blog.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+      <!-- Active Link: Coach's Notes -->
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
         ✍️ Coach's Notes
       </a>
-      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg bg-gray-700 font-bold" style="color: var(--altafulla-yellow);">
+      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
         📋 Season Schedule
       </a>
-      <a href="curriculum.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+      <a href="practice.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
         📋 Practice Plan
       </a>
       <a href="data.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
@@ -50,46 +51,48 @@
   <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
     <header class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
       <div>
-        <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Season Schedule & Results</h2>
-        <p class="text-gray-400 text-sm">Live fixtures, match times, and official standings directly from FCF.</p>
+        <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Coach's Notes</h2>
+        <p class="text-gray-400 text-sm">Weekly updates, tactic breakdowns, and team announcements.</p>
       </div>
-      
-      <a id="fcf-direct-link" 
-         href="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a" 
-         target="_blank" 
-         rel="noopener noreferrer"
-         class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md"
-         style="background-color: var(--altafulla-yellow);">
-        🔗 Open on FCF.cat ↗
-      </a>
     </header>
 
-    <!-- Embedded FCF Page -->
-    <div class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8">
-      <div class="relative w-full rounded-lg overflow-hidden bg-white" style="height: 750px;">
-        <iframe 
-          id="fcf-iframe"
-          src="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a" 
-          class="w-full h-full border-0"
-          title="CE Altafulla FCF Schedule"
-          loading="lazy">
-        </iframe>
-      </div>
-    </div>
+    <!-- Coach's Notes Articles / Feed -->
+    <div class="space-y-6">
+      
+      <!-- Note Entry 1 -->
+      <article class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-xl">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700" style="color: var(--altafulla-yellow);">
+            Tactical Analysis
+          </span>
+          <span class="text-xs text-gray-400">October 12, 2026</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Mid-Block Positioning & Counter-Pressing</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          Great energy during last match! Moving forward into next week's match, we need to focus on maintaining compact distances between our mid-line and defense when defending in a mid-block.
+        </p>
+        <a href="#" class="text-sm font-semibold hover:underline" style="color: var(--altafulla-blue);">
+          Read full note →
+        </a>
+      </article>
 
-    <!-- Match Day Logistics -->
-    <h3 class="text-xl font-bold mb-4">Match Day Logistics</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <h4 class="text-lg font-bold mb-2 text-white">📍 Home Field Address</h4>
-        <p class="text-sm text-gray-300">Estadi Municipal Joan Pijuan</p>
-        <p class="text-xs text-gray-400 mt-1">Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona</p>
-      </div>
-      <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-        <h4 class="text-lg font-bold mb-2 text-white">⌚ Arrival & Call-Up Times</h4>
-        <p class="text-sm text-gray-300">Home matches: 60 minutes prior to kickoff.</p>
-        <p class="text-sm text-gray-300 mt-1">Away matches: 60 minutes prior to kickoff.</p>
-      </div>
+      <!-- Note Entry 2 -->
+      <article class="bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-xl">
+        <div class="flex justify-between items-center mb-3">
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300">
+            Announcement
+          </span>
+          <span class="text-xs text-gray-400">October 5, 2026</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-2">Upcoming Focus for Next Week's Training</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+          We will be concentrating heavily on set-piece defending and transition speed when winning possession in the middle third. Please review the practice plan beforehand.
+        </p>
+        <a href="#" class="text-sm font-semibold hover:underline" style="color: var(--altafulla-blue);">
+          Read full note →
+        </a>
+      </article>
+
     </div>
   </main>
 
