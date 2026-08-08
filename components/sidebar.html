@@ -1,45 +1,91 @@
+<!-- Mobile Menu Button -->
 <button
   id="menuButton"
   onclick="toggleSidebar()"
-  class="fixed top-4 left-4 z-50 md:hidden bg-gray-800 border border-gray-700
-         text-white rounded-lg px-3 py-2 shadow-lg"
+  class="fixed top-4 left-4 z-50 md:hidden bg-gray-800 border border-gray-700 text-white rounded-lg px-3 py-2 shadow-lg"
+  aria-label="Open navigation"
 >
   ☰
 </button>
 
+<!-- Mobile Overlay -->
 <div
   id="sidebarOverlay"
   onclick="closeSidebar()"
   class="fixed inset-0 bg-black/60 z-30 hidden md:hidden"
 ></div>
 
+<!-- Sidebar -->
 <nav
   id="sidebar"
   class="fixed top-0 left-0 h-full w-64 bg-gray-800 border-r border-gray-700
          flex flex-col py-8 px-6 space-y-8 z-40
-         transform -translate-x-full md:translate-x-0 transition-transform duration-300"
+         transform -translate-x-full md:translate-x-0
+         transition-transform duration-300"
 >
 
-  <!-- logo etc -->
+  <!-- Logo / Team Identity -->
+  <div class="flex flex-col items-center space-y-3">
 
-  <a href="index.html">
-    ✍️ Coach's Notes
-  </a>
+    <img
+      src="EPLogo.png"
+      alt="Ex Profundo Logo"
+      class="w-24 h-24 object-contain"
+    />
 
-  <a href="schedule.html">
-    📅 Season Schedule
-  </a>
+    <h1
+      class="text-2xl font-bold uppercase tracking-wide text-center"
+      style="color: var(--altafulla-blue);"
+    >
+      Ex Profundo
+    </h1>
 
-  <a href="curriculum.html">
-    📋 Practice Plan
-  </a>
+    <span
+      class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-700 text-gray-300"
+    >
+      CE Altafulla S15
+    </span>
 
-  <a href="data.html">
-    📊 Game Analytics
-  </a>
+  </div>
 
-  <a href="about.html">
-    ℹ️ About
-  </a>
+  <!-- Navigation -->
+  <div class="flex flex-col space-y-2 text-base font-medium">
+
+    <a
+      href="index.html"
+      class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+    >
+      ✍️ Coach's Notes
+    </a>
+
+    <a
+      href="schedule.html"
+      class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+    >
+      📅 Season Schedule
+    </a>
+
+    <a
+      href="curriculum.html"
+      class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+    >
+      📋 Practice Plan
+    </a>
+
+    <a
+      href="data.html"
+      class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+    >
+      📊 Game Analytics
+    </a>
+
+    <a
+      href="about.html"
+      class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
+    >
+      ℹ️ Expectations
+    </a>
+
+  </div>
 
 </nav>
