@@ -13,6 +13,7 @@
     }
   </style>
 </head>
+
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
   <!-- Sidebar Navigation -->
@@ -28,7 +29,7 @@
     </div>
 
     <div class="flex flex-col space-y-2 text-base font-medium">
-         <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
+      <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
         ✍️ Coach's Notes
       </a>
       <a href="schedule.html" class="flex items-center gap-3 px-4 py-2.5 rounded-lg text-gray-300 hover:bg-gray-700 hover:text-white transition-colors">
@@ -46,59 +47,340 @@
     </div>
   </nav>
 
-  <!-- Main Content Area -->
-  <main class="ml-64 flex-grow p-10 max-w-5xl mx-auto w-full">
-    <header class="mb-8">
-      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">Practice Plan & Curriculum</h2>
-      <p class="text-gray-400">Weekly training objectives, tactical principles, and development sessions.</p>
+  <!-- Main Content -->
+  <main class="ml-64 flex-grow p-10 max-w-6xl mx-auto w-full space-y-8">
+
+    <header>
+      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+        Practice Plan
+      </h2>
+      <p class="text-gray-400 text-sm">
+        A season-long framework for how our training develops, adapts, and connects to the game.
+      </p>
     </header>
 
-    <!-- Sub-tabs -->
-    <div class="flex space-x-4 border-b border-gray-700 mb-6">
-      <button onclick="switchTab('weekly')" id="tab-btn-weekly" class="tab-btn pb-2 font-semibold text-white border-b-2" style="border-color: var(--altafulla-yellow);">
-        Weekly Schedule
+    <!-- About This Plan -->
+    <section class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+      <h3 class="text-sm font-bold uppercase tracking-wide mb-2" style="color: var(--altafulla-blue);">
+        About This Plan
+      </h3>
+      <p class="text-sm text-gray-300 leading-relaxed">
+        This roadmap provides a framework for our development across the season. Weekly objectives
+        and training sessions will evolve based on the players, our matches, and the problems the
+        team needs to solve. The direction is planned; the details remain adaptable.
+      </p>
+    </section>
+
+    <!-- Tabs -->
+    <div class="flex space-x-6 border-b border-gray-700 overflow-x-auto">
+      <button onclick="switchTab('roadmap')" id="tab-btn-roadmap"
+        class="tab-btn pb-3 font-semibold text-white border-b-2 whitespace-nowrap"
+        style="border-color: var(--altafulla-yellow);">
+        Season Roadmap
       </button>
-      <button onclick="switchTab('principles')" id="tab-btn-principles" class="tab-btn pb-2 font-semibold text-gray-400 hover:text-white">
-        Tactical Principles
+
+      <button onclick="switchTab('weekly')" id="tab-btn-weekly"
+        class="tab-btn pb-3 font-semibold text-gray-400 hover:text-white whitespace-nowrap border-b-2 border-transparent">
+        Weekly Plan
+      </button>
+
+      <button onclick="switchTab('principles')" id="tab-btn-principles"
+        class="tab-btn pb-3 font-semibold text-gray-400 hover:text-white whitespace-nowrap border-b-2 border-transparent">
+        Playing Principles
       </button>
     </div>
 
-    <!-- Tab 1: Weekly Plan -->
-    <div id="tab-weekly" class="tab-content">
+    <!-- TAB 1: ROADMAP -->
+    <div id="tab-roadmap" class="tab-content space-y-6">
+
+      <div>
+        <h3 class="text-xl font-bold text-white">2026/27 Development Roadmap</h3>
+        <p class="text-sm text-gray-400 mt-1">
+          The season is organized into broad phases, each building on the habits and understanding developed before it.
+        </p>
+      </div>
+
       <div class="space-y-4">
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-          <div class="flex justify-between items-center mb-2">
-            <h3 class="text-xl font-bold">Week 1: Build-up in the First Third</h3>
-            <span class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">Current Focus</span>
+
+        <!-- Foundation -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-yellow-400/60 shadow-lg">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+            <div>
+              <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 1–4</span>
+              <h4 class="text-xl font-bold text-white mt-1">Foundation</h4>
+              <p class="text-sm text-gray-400 mt-1">Introduction → Build Habits</p>
+            </div>
+            <span class="self-start text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
+              Current Phase
+            </span>
           </div>
-          <p class="text-sm text-gray-300 mb-3">Focus on body shape receiving from the center-backs and finding interior passes into midfielders under pressure.</p>
-          <ul class="list-disc list-inside text-xs text-gray-400 space-y-1">
-            <li><strong>Tuesday:</strong> 4v4+3 Position Play Rondo & Exit Drills</li>
-            <li><strong>Thursday:</strong> 8v8 Conditioned Game with High Pressing</li>
-          </ul>
         </div>
+
+        <!-- Style Implementation -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 5–8</span>
+          <h4 class="text-xl font-bold text-white mt-1">Style Implementation</h4>
+          <p class="text-sm text-gray-400 mt-1">Reduce Chaos → Build Structure</p>
+        </div>
+
+        <!-- Stability & Development -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 9–12</span>
+          <h4 class="text-xl font-bold text-white mt-1">Stability & Development</h4>
+          <p class="text-sm text-gray-400 mt-1">Make Structure Consistent Under Pressure</p>
+        </div>
+
+        <!-- Organization -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 13–16</span>
+          <h4 class="text-xl font-bold text-white mt-1">Organization</h4>
+          <p class="text-sm text-gray-400 mt-1">Start Controlling Matches</p>
+        </div>
+
+        <!-- Consolidation -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 17–20</span>
+          <h4 class="text-xl font-bold text-white mt-1">Consolidation</h4>
+          <p class="text-sm text-gray-400 mt-1">Review → Reinforce → Connect</p>
+        </div>
+
+        <!-- Application -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 21–24</span>
+          <h4 class="text-xl font-bold text-white mt-1">Application</h4>
+          <p class="text-sm text-gray-400 mt-1">Adaptation → Reading Games</p>
+        </div>
+
+        <!-- Tactical Growth -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 25–28</span>
+          <h4 class="text-xl font-bold text-white mt-1">Tactical Growth</h4>
+          <p class="text-sm text-gray-400 mt-1">Add Complexity & Flexibility</p>
+        </div>
+
+        <!-- Total Control / Refinement -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 29–32</span>
+          <h4 class="text-xl font-bold text-white mt-1">Total Control & Refinement</h4>
+          <p class="text-sm text-gray-400 mt-1">Play the Game on Your Terms</p>
+        </div>
+
+        <!-- Efficiency -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 33–36</span>
+          <h4 class="text-xl font-bold text-white mt-1">Efficiency</h4>
+          <p class="text-sm text-gray-400 mt-1">Clarity & Confidence</p>
+        </div>
+
+        <!-- Final Phase -->
+        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+          <span class="text-xs uppercase tracking-wide text-gray-500">Weeks 37–40</span>
+          <h4 class="text-xl font-bold text-white mt-1">Final Phase</h4>
+          <p class="text-sm text-gray-400 mt-1">Refine → Adapt → Compete</p>
+        </div>
+
       </div>
     </div>
 
-    <!-- Tab 2: Playing Principles -->
-    <div id="tab-principles" class="tab-content hidden">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-          <h3 class="text-lg font-bold mb-2 text-blue-400">Attacking Phase</h3>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>Create width and depth immediately upon regaining possession.</li>
-            <li>Look for third-man runs in the half-spaces.</li>
-          </ul>
+    <!-- TAB 2: WEEKLY -->
+    <div id="tab-weekly" class="tab-content hidden space-y-6">
+
+      <!-- Current Week -->
+      <section class="bg-gray-800 p-6 rounded-xl border border-yellow-400/60 shadow-lg space-y-5">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+          <div>
+            <span class="text-xs uppercase tracking-wide text-gray-500">Week 1</span>
+            <h3 class="text-2xl font-bold text-white mt-1">Foundation — Introduction</h3>
+            <p class="text-sm text-gray-400 mt-1">Primary Theme: Build Habits</p>
+          </div>
+          <span class="self-start text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
+            Current Focus
+          </span>
         </div>
-        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
-          <h3 class="text-lg font-bold mb-2 text-yellow-400">Defensive Phase</h3>
-          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-            <li>Immediate counter-press upon loss within 5 seconds.</li>
-            <li>Maintain compact vertical lines (under 30 meters).</li>
-          </ul>
+
+        <div class="bg-gray-900/60 p-4 rounded-lg border border-gray-700">
+          <h4 class="text-sm font-bold uppercase tracking-wide mb-2" style="color: var(--altafulla-blue);">
+            Weekly Objective
+          </h4>
+          <p class="text-sm text-gray-300 leading-relaxed">
+            Introduce the basic habits, language, and decision-making framework that will connect
+            our attacking, defending, and transition principles throughout the season.
+          </p>
         </div>
-      </div>
+
+        <div>
+          <h4 class="text-sm font-bold uppercase tracking-wide text-gray-400 mb-3">Game Moments</h4>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">In Possession</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Out of Possession</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Attacking Transition</span>
+            <span class="text-xs px-3 py-1 rounded-full bg-gray-700 text-gray-200">Defensive Transition</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+
+          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+            <div>
+              <span class="text-xs uppercase tracking-wide text-gray-500">Session 1</span>
+              <h4 class="text-lg font-bold text-white mt-1">Attacking Principles</h4>
+            </div>
+            <div class="text-sm text-gray-300 space-y-2">
+              <p><span class="text-gray-500">Game Phase:</span> Build-up / Possession</p>
+              <p><span class="text-gray-500">Technical Detail:</span> Receiving, passing angles, body shape</p>
+              <p><span class="text-gray-500">Positional Detail:</span> CB, FB, midfield relationships</p>
+            </div>
+            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
+              View Session →
+            </a>
+          </div>
+
+          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+            <div>
+              <span class="text-xs uppercase tracking-wide text-gray-500">Session 2</span>
+              <h4 class="text-lg font-bold text-white mt-1">Defensive Principles</h4>
+            </div>
+            <div class="text-sm text-gray-300 space-y-2">
+              <p><span class="text-gray-500">Game Phase:</span> Pressing / Defending Build-up</p>
+              <p><span class="text-gray-500">Technical Detail:</span> Body orientation, pressure, cover</p>
+              <p><span class="text-gray-500">Positional Detail:</span> Unit distances and support</p>
+            </div>
+            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
+              View Session →
+            </a>
+          </div>
+
+          <div class="bg-gray-900/60 p-5 rounded-lg border border-gray-700 space-y-3">
+            <div>
+              <span class="text-xs uppercase tracking-wide text-gray-500">Session 3</span>
+              <h4 class="text-lg font-bold text-white mt-1">Transition Principles</h4>
+            </div>
+            <div class="text-sm text-gray-300 space-y-2">
+              <p><span class="text-gray-500">Game Phase:</span> Loss & Regain</p>
+              <p><span class="text-gray-500">Technical Detail:</span> First action after transition</p>
+              <p><span class="text-gray-500">Positional Detail:</span> Team distances and reaction</p>
+            </div>
+            <a href="#" class="inline-block text-xs font-semibold hover:underline" style="color: var(--altafulla-blue);">
+              View Session →
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Next Week -->
+      <section class="bg-gray-800 p-6 rounded-xl border border-gray-700 space-y-3">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
+          <div>
+            <span class="text-xs uppercase tracking-wide text-gray-500">Week 2</span>
+            <h3 class="text-xl font-bold text-white mt-1">Foundation</h3>
+          </div>
+          <span class="self-start text-xs px-2.5 py-1 bg-gray-700 text-gray-300 rounded-full">
+            Planned
+          </span>
+        </div>
+        <p class="text-sm text-gray-300">
+          Planned focus: to be confirmed based on Week 1, player understanding, and the problems we identify in training and matches.
+        </p>
+      </section>
+
+      <!-- Future Weeks -->
+      <section class="space-y-4">
+        <h3 class="text-lg font-bold text-gray-200">Upcoming Weeks</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <span class="text-xs uppercase tracking-wide text-gray-500">Week 3</span>
+            <h4 class="text-base font-bold text-white mt-1">Foundation</h4>
+            <p class="text-sm text-gray-400 mt-1">Planned focus to be added.</p>
+          </div>
+
+          <div class="bg-gray-800 p-4 rounded-xl border border-gray-700">
+            <span class="text-xs uppercase tracking-wide text-gray-500">Week 4</span>
+            <h4 class="text-base font-bold text-white mt-1">Foundation</h4>
+            <p class="text-sm text-gray-400 mt-1">Planned focus to be added.</p>
+          </div>
+        </div>
+      </section>
     </div>
+
+    <!-- TAB 3: PRINCIPLES -->
+    <div id="tab-principles" class="tab-content hidden space-y-6">
+
+      <div>
+        <h3 class="text-xl font-bold text-white">Playing Principles</h3>
+        <p class="text-sm text-gray-400 mt-1">
+          These principles connect the work we do across different sessions and game situations.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- In Possession -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-3" style="color: var(--altafulla-blue);">
+            In Possession
+          </h4>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>Create useful width and depth.</li>
+            <li>Recognize space before receiving.</li>
+            <li>Play forward when the opportunity is there.</li>
+            <li>Use circulation to move the opponent and create new spaces.</li>
+            <li>Support the player on the ball with clear passing options.</li>
+          </ul>
+        </div>
+
+        <!-- Out of Possession -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-3 text-yellow-400">
+            Out of Possession
+          </h4>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>Protect dangerous spaces first.</li>
+            <li>Stay connected and compact as a team.</li>
+            <li>Recognize when to press, delay, or recover.</li>
+            <li>Support the first defender with cover and communication.</li>
+            <li>Defend together rather than as isolated individuals.</li>
+          </ul>
+        </div>
+
+        <!-- Attacking Transition -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-3 text-green-400">
+            Attacking Transition
+          </h4>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>Recognize immediately whether we can attack forward.</li>
+            <li>Exploit space before the opponent can reorganize.</li>
+            <li>Support the first action with forward and wide options.</li>
+            <li>If the counter is not available, secure possession and reorganize.</li>
+          </ul>
+        </div>
+
+        <!-- Defensive Transition -->
+        <div class="bg-gray-800 p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-3 text-red-400">
+            Defensive Transition
+          </h4>
+          <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
+            <li>React immediately when possession is lost.</li>
+            <li>Protect the most dangerous spaces first.</li>
+            <li>Recognize whether we can recover the ball or need to recover our shape.</li>
+            <li>Communicate and solve the transition together.</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          These principles are not intended to create one fixed answer for every situation.
+          The goal is to help players recognize problems, communicate, and choose solutions together.
+        </p>
+      </div>
+
+    </div>
+
   </main>
 
   <footer class="fixed bottom-0 left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
@@ -106,19 +388,33 @@
   </footer>
 
   <script>
-    function switchTab(tabId) {
-      document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    function switchTab(tabName) {
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.add('hidden');
+      });
+
       document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('text-white', 'border-b-2');
+        btn.classList.remove('text-white');
         btn.classList.add('text-gray-400');
+        btn.classList.remove('border-yellow-400');
+        btn.classList.add('border-transparent');
         btn.style.borderColor = 'transparent';
       });
 
-      document.getElementById(`tab-${tabId}`).classList.remove('hidden');
-      const activeBtn = document.getElementById(`tab-btn-${tabId}`);
-      activeBtn.classList.add('text-white', 'border-b-2');
-      activeBtn.style.borderColor = 'var(--altafulla-yellow)';
+      const selectedTab = document.getElementById(`tab-${tabName}`);
+      const selectedBtn = document.getElementById(`tab-btn-${tabName}`);
+
+      if (selectedTab) {
+        selectedTab.classList.remove('hidden');
+      }
+
+      if (selectedBtn) {
+        selectedBtn.classList.remove('text-gray-400', 'border-transparent');
+        selectedBtn.classList.add('text-white', 'border-b-2');
+        selectedBtn.style.borderColor = 'var(--altafulla-yellow)';
+      }
     }
   </script>
+
 </body>
 </html>
