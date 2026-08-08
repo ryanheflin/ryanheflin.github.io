@@ -169,381 +169,6 @@
 
     </section>
 
-
-    <!-- =========================================================
-         DIVIDER
-    ========================================================== -->
-    <div class="border-t border-gray-700"></div>
-
-
-    <!-- =========================================================
-         OUR FOOTBALL
-    ========================================================== -->
-    <section class="space-y-6">
-
-      <div>
-        <span
-          class="text-xs uppercase font-bold tracking-widest"
-          style="color: var(--altafulla-blue);"
-        >
-          Our Football
-        </span>
-
-        <h3 class="text-xl font-bold text-white mt-1">
-          Shared Language & Principles
-        </h3>
-
-        <p class="text-sm text-gray-400 mt-1">
-          The rules, principles, and standards that connect everything we do in training and matches.
-        </p>
-      </div>
-
-
-      <!-- Reference Tabs -->
-      <div class="border-b border-gray-700">
-        <div class="flex gap-6 overflow-x-auto">
-
-          <button
-            onclick="switchReferenceTab('rules')"
-            id="reference-tab-btn-rules"
-            class="reference-tab-btn pb-3 text-sm font-semibold text-white border-b-2 whitespace-nowrap"
-            style="border-color: var(--altafulla-blue);"
-          >
-            Game Rules
-          </button>
-
-          <button
-            onclick="switchReferenceTab('principles')"
-            id="reference-tab-btn-principles"
-            class="reference-tab-btn pb-3 text-sm font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
-          >
-            Playing Principles
-          </button>
-
-          <button
-            onclick="switchReferenceTab('standards')"
-            id="reference-tab-btn-standards"
-            class="reference-tab-btn pb-3 text-sm font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
-          >
-            Standards
-          </button>
-
-        </div>
-      </div>
-
-
-      <!-- =======================================================
-           REFERENCE TAB: GAME RULES
-      ======================================================== -->
-      <div id="reference-tab-rules" class="reference-tab-content">
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-
-
-          <!-- With the Ball -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <h4
-              class="text-sm font-bold uppercase tracking-wide mb-4"
-              style="color: var(--altafulla-blue);"
-            >
-              With the Ball
-            </h4>
-
-            <ul class="text-sm text-gray-300 space-y-3">
-
-              <li>
-                Ball forward →
-                <span class="text-white font-semibold">lines move up.</span>
-              </li>
-
-              <li>
-                Ball backward →
-                <span class="text-white font-semibold">get wide.</span>
-              </li>
-
-              <li>
-                Ball wide →
-                <span class="text-white font-semibold">1v1.</span>
-              </li>
-
-              <li>
-                Ball inside →
-                <span class="text-white font-semibold">combine.</span>
-              </li>
-
-              <li>
-                Ball one side →
-                <span class="text-white font-semibold">far side tucks.</span>
-              </li>
-
-              <li>
-                Ball in the air →
-                <span class="text-white font-semibold">one under, one beyond.</span>
-              </li>
-
-              <li>
-                Ball in the air →
-                <span class="text-white font-semibold">don't let it bounce.</span>
-              </li>
-
-              <li>
-                Can't go forward →
-                <span class="text-white font-semibold">keep it.</span>
-              </li>
-
-              <li>
-                Space behind →
-                <span class="text-white font-semibold">threaten it.</span>
-              </li>
-
-            </ul>
-
-          </div>
-
-
-          <!-- Without the Ball -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <h4 class="text-sm font-bold uppercase tracking-wide text-yellow-400 mb-4">
-              Without the Ball
-            </h4>
-
-            <ul class="text-sm text-gray-300 space-y-3">
-
-              <li>
-                Nearest player →
-                <span class="text-white font-semibold">delay.</span>
-              </li>
-
-              <li>
-                One player presses →
-                <span class="text-white font-semibold">all support.</span>
-              </li>
-
-              <li>
-                When we are organized →
-                <span class="text-white font-semibold">press high.</span>
-              </li>
-
-              <li>
-                We see trigger →
-                <span class="text-white font-semibold">run the trap.</span>
-              </li>
-
-              <li>
-                Press broken →
-                <span class="text-white font-semibold">recover together.</span>
-              </li>
-
-              <li>
-                Protect inside →
-                <span class="text-white font-semibold">force wide/back.</span>
-              </li>
-
-            </ul>
-
-          </div>
-
-
-          <!-- Transition -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <h4 class="text-sm font-bold uppercase tracking-wide text-green-400 mb-4">
-              Transition
-            </h4>
-
-            <ul class="text-sm text-gray-300 space-y-3">
-
-              <li>
-                Lose it →
-                <span class="text-white font-semibold">hunt it.</span>
-              </li>
-
-              <li>
-                Win it →
-                <span class="text-white font-semibold">look forward first.</span>
-              </li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- =======================================================
-           REFERENCE TAB: PLAYING PRINCIPLES
-      ======================================================== -->
-      <div
-        id="reference-tab-principles"
-        class="reference-tab-content hidden"
-      >
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-
-          <!-- In Possession -->
-          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-
-            <h4
-              class="text-lg font-bold mb-3"
-              style="color: var(--altafulla-blue);"
-            >
-              In Possession
-            </h4>
-
-            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-              <li>Create useful width and depth.</li>
-              <li>Recognize space before receiving.</li>
-              <li>Play forward when the opportunity is there.</li>
-              <li>Use circulation to move the opponent and create new spaces.</li>
-              <li>Support the player on the ball with clear passing options.</li>
-            </ul>
-
-          </div>
-
-
-          <!-- Out of Possession -->
-          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-
-            <h4 class="text-lg font-bold mb-3 text-yellow-400">
-              Out of Possession
-            </h4>
-
-            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-              <li>Protect dangerous spaces first.</li>
-              <li>Stay connected and compact as a team.</li>
-              <li>Recognize when to press, delay, or recover.</li>
-              <li>Support the first defender with cover and communication.</li>
-              <li>Defend together rather than as isolated individuals.</li>
-            </ul>
-
-          </div>
-
-
-          <!-- Attacking Transition -->
-          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-
-            <h4 class="text-lg font-bold mb-3 text-green-400">
-              Attacking Transition
-            </h4>
-
-            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-              <li>Recognize immediately whether we can attack forward.</li>
-              <li>Exploit space before the opponent can reorganize.</li>
-              <li>Support the first action with forward and wide options.</li>
-              <li>If the counter is not available, secure possession and reorganize.</li>
-            </ul>
-
-          </div>
-
-
-          <!-- Defensive Transition -->
-          <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-
-            <h4 class="text-lg font-bold mb-3 text-red-400">
-              Defensive Transition
-            </h4>
-
-            <ul class="list-disc list-inside text-sm text-gray-300 space-y-2">
-              <li>React immediately when possession is lost.</li>
-              <li>Protect the most dangerous spaces first.</li>
-              <li>Recognize whether we can recover the ball or need to recover our shape.</li>
-              <li>Communicate and solve the transition together.</li>
-            </ul>
-
-          </div>
-
-        </div>
-
-
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700 mt-4">
-
-          <p class="text-sm text-gray-300 leading-relaxed">
-            These principles are not intended to create one fixed answer for every situation.
-            The goal is to help players recognize problems, communicate, and choose solutions together.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- =======================================================
-           REFERENCE TAB: STANDARDS
-      ======================================================== -->
-      <div
-        id="reference-tab-standards"
-        class="reference-tab-content hidden"
-      >
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-
-          <!-- Details Matter -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <p class="text-base font-semibold text-white">
-              Details matter.
-            </p>
-
-            <p class="text-sm text-gray-400 mt-2">
-              The little things change the game.
-            </p>
-
-          </div>
-
-
-          <!-- Body Language -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <p class="text-base font-semibold text-white">
-              Body language matters.
-            </p>
-
-            <p class="text-sm text-gray-400 mt-2">
-              Head up. Respond well. Stay positive and ready for the next action.
-            </p>
-
-          </div>
-
-
-          <!-- Purpose -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <p class="text-base font-semibold text-white">
-              Every movement has a purpose.
-            </p>
-
-            <p class="text-sm text-gray-400 mt-2">
-              Know what you're creating, closing, supporting, or threatening.
-            </p>
-
-          </div>
-
-
-          <!-- Help Others -->
-          <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
-
-            <p class="text-base font-semibold text-white">
-              Help the player next to you.
-            </p>
-
-            <p class="text-sm text-gray-400 mt-2">
-              Communicate. Cover. Support. Make their job easier.
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
   </main>
 
 
@@ -678,7 +303,6 @@
         description: 'Develop the collective reaction required to hunt, delay, or recover.'
       },
 
-
       {
         week: 5,
         focus: 'Building from the Back Against Pressure',
@@ -702,7 +326,6 @@
         focus: 'Attacking Immediately After Regaining Possession',
         description: 'Recognize and exploit forward opportunities before the opponent reorganizes.'
       },
-
 
       {
         week: 9,
@@ -728,7 +351,6 @@
         description: 'Maintain balance and rest defense while committing players forward.'
       },
 
-
       {
         week: 13,
         focus: "Building and Sustaining Attacks in the Opponent's Half",
@@ -752,7 +374,6 @@
         focus: 'Recovering Our Shape When the Press Is Broken',
         description: 'Delay the attack and reconnect quickly when the opponent escapes pressure.'
       },
-
 
       {
         week: 17,
@@ -778,7 +399,6 @@
         description: 'Improve positioning and decision-making around changes of possession.'
       },
 
-
       {
         week: 21,
         focus: 'Choosing Short Build or Direct Play Against Different Presses',
@@ -802,7 +422,6 @@
         focus: 'Recognizing When to Press High and When to Defend in a Mid-Block',
         description: 'Read team organization and choose the appropriate defensive height.'
       },
-
 
       {
         week: 25,
@@ -828,7 +447,6 @@
         description: 'Recognize overloads and move the opponent before exploiting the opposite side.'
       },
 
-
       {
         week: 29,
         focus: 'Controlling Territory Through Sustained Possession',
@@ -853,7 +471,6 @@
         description: 'Restore structure, calm the game, and regain control through collective decisions.'
       },
 
-
       {
         week: 33,
         focus: 'Recognizing and Exploiting Space Behind the Defensive Line',
@@ -877,7 +494,6 @@
         focus: 'Turning Regains into Chances Before the Opponent Recovers',
         description: 'Attack transition moments with immediate forward intent and coordinated support.'
       },
-
 
       {
         week: 37,
@@ -1000,63 +616,6 @@
 
         selectedButton.style.borderColor =
           'var(--altafulla-yellow)';
-
-      }
-
-    }
-
-
-
-    /* ==========================================================
-       REFERENCE TAB NAVIGATION
-    ========================================================== */
-
-    function switchReferenceTab(tabName) {
-
-      document
-        .querySelectorAll('.reference-tab-content')
-        .forEach(tab => {
-          tab.classList.add('hidden');
-        });
-
-
-      document
-        .querySelectorAll('.reference-tab-btn')
-        .forEach(btn => {
-
-          btn.classList.remove('text-white');
-
-          btn.classList.add('text-gray-400');
-
-          btn.style.borderColor = 'transparent';
-
-        });
-
-
-      const selectedTab =
-        document.getElementById(
-          `reference-tab-${tabName}`
-        );
-
-      const selectedButton =
-        document.getElementById(
-          `reference-tab-btn-${tabName}`
-        );
-
-
-      if (selectedTab) {
-        selectedTab.classList.remove('hidden');
-      }
-
-
-      if (selectedButton) {
-
-        selectedButton.classList.remove('text-gray-400');
-
-        selectedButton.classList.add('text-white');
-
-        selectedButton.style.borderColor =
-          'var(--altafulla-blue)';
 
       }
 
@@ -1607,8 +1166,6 @@
         renderWeeklyPhase();
 
         switchMainTab('roadmap');
-
-        switchReferenceTab('rules');
 
       }
     );
