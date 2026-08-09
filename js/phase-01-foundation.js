@@ -54,6 +54,9 @@ const phase1Weeks = [
           'Stay connected.',
           'Make the opponent predictable.'
         ],
+ 
+        sessionPlan:
+          'sessions/session-01-go-forward.pdf', 
 
         missed: [
           'We defend together, not as individuals chasing the ball.',
