@@ -1,161 +1,1328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Game Analytics | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Shared Site JavaScript -->
   <script src="js/site.js" defer></script>
 
+
+  <!-- =========================================================
+       GAME DATA STORAGE
+
+       Every individual game file adds itself to seasonGames.
+
+       As matches are played, add one script line here:
+
+       <script src="js/games/game-01.js"></script>
+       <script src="js/games/game-02.js"></script>
+       etc.
+  ========================================================== -->
+
+  <script>
+    window.seasonGames = [];
+  </script>
+
+  <!--
+  <script src="js/games/game-01.js"></script>
+  <script src="js/games/game-02.js"></script>
+  -->
+
+
   <style>
+
     :root {
       --altafulla-yellow: #f2e40a;
       --altafulla-black: #000000;
       --altafulla-blue: #62bed6;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
   </style>
+
 </head>
 
+
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+
 
   <!-- Shared Sidebar -->
   <div id="site-sidebar"></div>
 
-  <!-- Main Content -->
-  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8">
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+
+  <main
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8"
+  >
+
+
+    <!-- =======================================================
+         PAGE HEADER
+    ======================================================== -->
 
     <header>
-      <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+
+      <h2
+        class="text-3xl font-extrabold mb-1"
+        style="color: var(--altafulla-yellow);"
+      >
         Game Analytics
       </h2>
+
       <p class="text-gray-400 text-sm">
         Season results, match-by-match analysis, and team performance trends.
       </p>
+
     </header>
 
-    <!-- Season KPI Cards -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
-        <span class="text-gray-400 text-xs font-bold uppercase">Record</span>
-        <p class="text-2xl font-extrabold text-white mt-1">0W - 0D - 0L</p>
-      </div>
 
-      <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
-        <span class="text-gray-400 text-xs font-bold uppercase">Goals Scored</span>
-        <p class="text-2xl font-extrabold text-yellow-400 mt-1">0</p>
-      </div>
 
-      <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
-        <span class="text-gray-400 text-xs font-bold uppercase">Goals Conceded</span>
-        <p class="text-2xl font-extrabold text-blue-400 mt-1">0</p>
-      </div>
+    <!-- =======================================================
+         SEASON KPI CARDS
+    ======================================================== -->
 
-      <div class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center">
-        <span class="text-gray-400 text-xs font-bold uppercase">Clean Sheets</span>
-        <p class="text-2xl font-extrabold text-green-400 mt-1">0</p>
-      </div>
-    </div>
+    <div
+      class="grid grid-cols-2 md:grid-cols-4 gap-4"
+    >
 
-    <!-- Match Selector Tabs -->
-    <div class="flex space-x-2 border-b border-gray-700 pb-3 mb-6 overflow-x-auto">
-      <button
-        onclick="showGame('overview')"
-        id="game-btn-overview"
-        class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 text-white whitespace-nowrap"
-        style="color: var(--altafulla-yellow);"
+      <!-- Record -->
+      <div
+        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
       >
-        📊 Season Overview
-      </button>
 
-      <button
-        onclick="showGame('match-1')"
-        id="game-btn-match-1"
-        class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap"
-      >
-        Match 1: vs. TBD
-      </button>
+        <span
+          class="text-gray-400 text-xs font-bold uppercase"
+        >
+          Record
+        </span>
 
-      <button
-        onclick="showGame('match-2')"
-        id="game-btn-match-2"
-        class="game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap"
-      >
-        Match 2: vs. TBD
-      </button>
-    </div>
-
-    <!-- View 1: Season Overview -->
-    <div id="game-view-overview" class="game-view">
-      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-        <h3 class="text-xl font-bold mb-2">Team Statistics Summary</h3>
-        <p class="text-sm text-gray-300">
-          Detailed metric breakdowns, pass accuracy graphs, and tactical trends will populate here as matches are played.
+        <p
+          id="season-record"
+          class="text-2xl font-extrabold text-white mt-1"
+        >
+          0W - 0D - 0L
         </p>
+
       </div>
+
+
+      <!-- Goals Scored -->
+      <div
+        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
+      >
+
+        <span
+          class="text-gray-400 text-xs font-bold uppercase"
+        >
+          Goals Scored
+        </span>
+
+        <p
+          id="season-goals-for"
+          class="text-2xl font-extrabold mt-1"
+          style="color: var(--altafulla-yellow);"
+        >
+          0
+        </p>
+
+      </div>
+
+
+      <!-- Goals Conceded -->
+      <div
+        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
+      >
+
+        <span
+          class="text-gray-400 text-xs font-bold uppercase"
+        >
+          Goals Conceded
+        </span>
+
+        <p
+          id="season-goals-against"
+          class="text-2xl font-extrabold mt-1"
+          style="color: var(--altafulla-blue);"
+        >
+          0
+        </p>
+
+      </div>
+
+
+      <!-- Clean Sheets -->
+      <div
+        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
+      >
+
+        <span
+          class="text-gray-400 text-xs font-bold uppercase"
+        >
+          Clean Sheets
+        </span>
+
+        <p
+          id="season-clean-sheets"
+          class="text-2xl font-extrabold text-green-400 mt-1"
+        >
+          0
+        </p>
+
+      </div>
+
     </div>
 
-    <!-- View 2: Match 1 -->
-    <div id="game-view-match-1" class="game-view hidden">
-      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
-          <h3 class="text-xl font-bold">CE Altafulla vs. Opponent 1</h3>
-          <span class="text-sm font-semibold text-gray-400">Matchday 1</span>
+
+
+    <!-- =======================================================
+         MATCH NAVIGATION
+    ======================================================== -->
+
+    <section class="space-y-6">
+
+
+      <div
+        id="game-navigation"
+        class="flex gap-2 border-b border-gray-700 pb-3 overflow-x-auto"
+      >
+
+        <!-- Season Overview -->
+        <button
+          onclick="showSeasonOverview()"
+          id="game-btn-overview"
+          class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 whitespace-nowrap"
+          style="color: var(--altafulla-yellow);"
+        >
+          📊 Season Overview
+        </button>
+
+
+        <!-- Individual game buttons generated automatically -->
+
+      </div>
+
+
+
+      <!-- =====================================================
+           CONTENT AREA
+      ====================================================== -->
+
+      <div id="game-content">
+
+
+        <!-- ===================================================
+             SEASON OVERVIEW
+        ==================================================== -->
+
+        <div
+          id="game-view-overview"
+          class="game-view space-y-6"
+        >
+
+
+          <!-- Team Summary -->
+          <div
+            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+          >
+
+            <h3
+              class="text-xl font-bold mb-2"
+            >
+              Team Statistics Summary
+            </h3>
+
+            <p
+              id="overview-message"
+              class="text-sm text-gray-300"
+            >
+              No matches have been played yet. Season trends and statistical analysis will populate here as match data is added.
+            </p>
+
+          </div>
+
+
+
+          <!-- Results -->
+          <div
+            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+          >
+
+            <div
+              class="flex items-center justify-between gap-4 mb-4"
+            >
+
+              <h3
+                class="text-xl font-bold"
+              >
+                Match Results
+              </h3>
+
+              <span
+                id="matches-played"
+                class="text-xs text-gray-500 uppercase tracking-wide font-bold"
+              >
+                0 Matches
+              </span>
+
+            </div>
+
+
+            <div
+              id="season-results"
+              class="space-y-3"
+            >
+
+              <p
+                class="text-sm text-gray-400"
+              >
+                Results will appear here once matches are played.
+              </p>
+
+            </div>
+
+          </div>
+
+
+
+          <!-- Season Trends -->
+          <div
+            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+          >
+
+            <h3
+              class="text-xl font-bold mb-2"
+            >
+              Season Trends
+            </h3>
+
+            <p
+              class="text-sm text-gray-300"
+            >
+              Team-level trends, recurring tactical observations, and season statistics can be added here as the sample of matches grows.
+            </p>
+
+          </div>
+
+
         </div>
 
-        <p class="text-sm text-gray-300">
-          Post-game analysis and statistical breakdown for Match 1.
-        </p>
-      </div>
-    </div>
 
-    <!-- View 3: Match 2 -->
-    <div id="game-view-match-2" class="game-view hidden">
-      <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-        <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
-          <h3 class="text-xl font-bold">Opponent 2 vs. CE Altafulla</h3>
-          <span class="text-sm font-semibold text-gray-400">Matchday 2</span>
-        </div>
+        <!-- Individual match content is inserted here dynamically -->
 
-        <p class="text-sm text-gray-300">
-          Post-game analysis and statistical breakdown for Match 2.
-        </p>
       </div>
-    </div>
+
+
+    </section>
+
 
   </main>
 
-  <!-- Responsive Footer -->
-  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer
+    class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
+  >
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
+
+
+  <!-- =========================================================
+       PAGE JAVASCRIPT
+  ========================================================== -->
+
   <script>
-    function showGame(gameId) {
-      document.querySelectorAll('.game-view').forEach(view => {
-        view.classList.add('hidden');
-      });
 
-      document.querySelectorAll('.game-btn').forEach(btn => {
-        btn.classList.remove('bg-gray-700', 'text-white', 'font-bold');
-        btn.classList.add('text-gray-400', 'font-semibold');
-        btn.style.color = '';
-      });
 
-      const selectedView = document.getElementById(`game-view-${gameId}`);
-      const selectedButton = document.getElementById(`game-btn-${gameId}`);
+    /* ==========================================================
+       GAME HELPERS
+    ========================================================== */
 
-      if (selectedView) {
-        selectedView.classList.remove('hidden');
+    function getGameResult(game) {
+
+      if (game.goalsFor > game.goalsAgainst) {
+        return 'W';
       }
 
-      if (selectedButton) {
-        selectedButton.classList.remove('text-gray-400', 'font-semibold');
-        selectedButton.classList.add('bg-gray-700', 'text-white', 'font-bold');
-        selectedButton.style.color = 'var(--altafulla-yellow)';
+      if (game.goalsFor < game.goalsAgainst) {
+        return 'L';
       }
+
+      return 'D';
+
     }
+
+
+
+    function getResultLabel(game) {
+
+      const result =
+        getGameResult(game);
+
+
+      if (result === 'W') {
+        return 'Win';
+      }
+
+      if (result === 'L') {
+        return 'Loss';
+      }
+
+      return 'Draw';
+
+    }
+
+
+
+    function getResultClasses(game) {
+
+      const result =
+        getGameResult(game);
+
+
+      if (result === 'W') {
+        return 'bg-green-500/10 text-green-400 border-green-500/30';
+      }
+
+      if (result === 'L') {
+        return 'bg-red-500/10 text-red-400 border-red-500/30';
+      }
+
+      return 'bg-gray-700 text-gray-300 border-gray-600';
+
+    }
+
+
+
+    /* ==========================================================
+       SEASON KPI CALCULATIONS
+    ========================================================== */
+
+    function calculateSeasonStats() {
+
+      const games =
+        window.seasonGames || [];
+
+
+      let wins = 0;
+      let draws = 0;
+      let losses = 0;
+
+      let goalsFor = 0;
+      let goalsAgainst = 0;
+
+      let cleanSheets = 0;
+
+
+      games.forEach(game => {
+
+        goalsFor +=
+          Number(game.goalsFor || 0);
+
+        goalsAgainst +=
+          Number(game.goalsAgainst || 0);
+
+
+        if (game.goalsFor > game.goalsAgainst) {
+
+          wins++;
+
+        } else if (
+          game.goalsFor < game.goalsAgainst
+        ) {
+
+          losses++;
+
+        } else {
+
+          draws++;
+
+        }
+
+
+        if (
+          Number(game.goalsAgainst) === 0
+        ) {
+
+          cleanSheets++;
+
+        }
+
+      });
+
+
+      return {
+        wins,
+        draws,
+        losses,
+        goalsFor,
+        goalsAgainst,
+        cleanSheets,
+        matches: games.length
+      };
+
+    }
+
+
+
+    function renderSeasonKPIs() {
+
+      const stats =
+        calculateSeasonStats();
+
+
+      document.getElementById(
+        'season-record'
+      ).textContent =
+        `${stats.wins}W - ${stats.draws}D - ${stats.losses}L`;
+
+
+      document.getElementById(
+        'season-goals-for'
+      ).textContent =
+        stats.goalsFor;
+
+
+      document.getElementById(
+        'season-goals-against'
+      ).textContent =
+        stats.goalsAgainst;
+
+
+      document.getElementById(
+        'season-clean-sheets'
+      ).textContent =
+        stats.cleanSheets;
+
+
+      document.getElementById(
+        'matches-played'
+      ).textContent =
+        `${stats.matches} ${
+          stats.matches === 1
+            ? 'Match'
+            : 'Matches'
+        }`;
+
+
+      if (stats.matches > 0) {
+
+        document.getElementById(
+          'overview-message'
+        ).textContent =
+          'Season totals and match-by-match observations are updated automatically as each match report is added.';
+
+      }
+
+    }
+
+
+
+    /* ==========================================================
+       MATCH NAVIGATION
+    ========================================================== */
+
+    function renderGameNavigation() {
+
+      const navigation =
+        document.getElementById(
+          'game-navigation'
+        );
+
+
+      const games =
+        [...(window.seasonGames || [])]
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+      games.forEach(game => {
+
+        const button =
+          document.createElement(
+            'button'
+          );
+
+
+        button.id =
+          `game-btn-${game.id}`;
+
+
+        button.className =
+          'game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap';
+
+
+        button.textContent =
+          `Match ${game.gameNumber}: ${game.homeAway === 'away' ? '@' : 'vs.'} ${game.opponent}`;
+
+
+        button.onclick =
+          () => showGame(game.id);
+
+
+        navigation.appendChild(
+          button
+        );
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       SEASON RESULTS
+    ========================================================== */
+
+    function renderSeasonResults() {
+
+      const container =
+        document.getElementById(
+          'season-results'
+        );
+
+
+      const games =
+        [...(window.seasonGames || [])]
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+      if (games.length === 0) {
+
+        return;
+
+      }
+
+
+      container.innerHTML = '';
+
+
+      games.forEach(game => {
+
+        const row =
+          document.createElement('button');
+
+
+        row.type =
+          'button';
+
+
+        row.onclick =
+          () => showGame(game.id);
+
+
+        row.className =
+          'w-full text-left bg-gray-900/60 border border-gray-700 rounded-lg p-4 hover:border-gray-500 transition-colors';
+
+
+        row.innerHTML = `
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+          >
+
+
+            <div>
+
+
+              <div
+                class="flex items-center flex-wrap gap-2"
+              >
+
+                <span
+                  class="text-xs text-gray-500 uppercase tracking-wide font-bold"
+                >
+                  Match ${game.gameNumber}
+                </span>
+
+
+                <span
+                  class="text-xs px-2 py-0.5 rounded-full border ${getResultClasses(game)}"
+                >
+                  ${getResultLabel(game)}
+                </span>
+
+              </div>
+
+
+              <h4
+                class="text-base font-bold text-white mt-1"
+              >
+                ${
+                  game.homeAway === 'away'
+                    ? `${game.opponent} vs. CE Altafulla`
+                    : `CE Altafulla vs. ${game.opponent}`
+                }
+              </h4>
+
+
+              ${
+                game.date
+                  ? `
+                    <p
+                      class="text-xs text-gray-500 mt-1"
+                    >
+                      ${game.date}
+                    </p>
+                  `
+                  : ''
+              }
+
+
+            </div>
+
+
+            <div
+              class="text-2xl font-black text-white"
+            >
+              ${game.goalsFor}–${game.goalsAgainst}
+            </div>
+
+
+          </div>
+
+        `;
+
+
+        container.appendChild(
+          row
+        );
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       MATCH VIEW
+    ========================================================== */
+
+    function createGameView(game) {
+
+      const result =
+        getGameResult(game);
+
+
+      const title =
+        game.homeAway === 'away'
+          ? `${game.opponent} vs. CE Altafulla`
+          : `CE Altafulla vs. ${game.opponent}`;
+
+
+      const clipsHTML =
+        Array.isArray(game.clips) &&
+        game.clips.length > 0
+          ? `
+
+            <section
+              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+            >
+
+              <h3
+                class="text-xl font-bold mb-4"
+              >
+                Video Clips
+              </h3>
+
+
+              <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-5"
+              >
+
+                ${game.clips
+                  .map(
+                    clip => `
+
+                      <div
+                        class="bg-gray-900/60 rounded-lg border border-gray-700 overflow-hidden"
+                      >
+
+                        ${
+                          clip.embedUrl
+                            ? `
+
+                              <div
+                                class="aspect-video"
+                              >
+
+                                <iframe
+                                  src="${clip.embedUrl}"
+                                  class="w-full h-full"
+                                  loading="lazy"
+                                  allowfullscreen
+                                ></iframe>
+
+                              </div>
+
+                            `
+                            : ''
+                        }
+
+
+                        <div class="p-4">
+
+                          <h4
+                            class="font-bold text-white"
+                          >
+                            ${clip.title}
+                          </h4>
+
+                          ${
+                            clip.description
+                              ? `
+                                <p
+                                  class="text-sm text-gray-400 mt-1"
+                                >
+                                  ${clip.description}
+                                </p>
+                              `
+                              : ''
+                          }
+
+                        </div>
+
+                      </div>
+
+                    `
+                  )
+                  .join('')}
+
+              </div>
+
+            </section>
+
+          `
+          : '';
+
+
+      return `
+
+        <div
+          id="game-view-${game.id}"
+          class="game-view space-y-6"
+        >
+
+
+          <!-- Match Header -->
+          <section
+            class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
+          >
+
+
+            <div
+              class="bg-gray-950 border-b border-gray-700 p-5 md:p-6"
+            >
+
+              <div
+                class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+              >
+
+
+                <div>
+
+                  <span
+                    class="text-xs uppercase tracking-[0.18em] font-bold"
+                    style="color: var(--altafulla-yellow);"
+                  >
+                    Matchday ${game.gameNumber}
+                  </span>
+
+
+                  <h3
+                    class="text-2xl md:text-3xl font-extrabold text-white mt-1"
+                  >
+                    ${title}
+                  </h3>
+
+
+                  <div
+                    class="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-400 mt-2"
+                  >
+
+                    ${
+                      game.date
+                        ? `<span>${game.date}</span>`
+                        : ''
+                    }
+
+                    ${
+                      game.competition
+                        ? `<span>${game.competition}</span>`
+                        : ''
+                    }
+
+                    ${
+                      game.location
+                        ? `<span>${game.location}</span>`
+                        : ''
+                    }
+
+                  </div>
+
+                </div>
+
+
+                <div
+                  class="flex items-center gap-4"
+                >
+
+                  <div
+                    class="text-4xl md:text-5xl font-black text-white"
+                  >
+                    ${game.goalsFor}
+                    <span class="text-gray-600">–</span>
+                    ${game.goalsAgainst}
+                  </div>
+
+
+                  <span
+                    class="text-xs px-3 py-1.5 rounded-full border font-bold ${getResultClasses(game)}"
+                  >
+                    ${result}
+                  </span>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+
+            ${
+              game.summary
+                ? `
+
+                  <div
+                    class="p-5 md:p-6"
+                  >
+
+                    <h4
+                      class="text-xs uppercase tracking-wide font-bold mb-2"
+                      style="color: var(--altafulla-blue);"
+                    >
+                      Match Summary
+                    </h4>
+
+                    <p
+                      class="text-sm text-gray-300 leading-relaxed"
+                    >
+                      ${game.summary}
+                    </p>
+
+                  </div>
+
+                `
+                : ''
+            }
+
+
+          </section>
+
+
+
+          <!-- Match KPIs -->
+          ${
+            game.metrics
+              ? renderGameMetrics(game.metrics)
+              : ''
+          }
+
+
+
+          <!-- What We Saw -->
+          ${
+            game.analysis
+              ? `
+
+                <section
+                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+                >
+
+                  <h3
+                    class="text-xl font-bold mb-4"
+                  >
+                    What We Saw
+                  </h3>
+
+
+                  <div
+                    class="text-sm text-gray-300 leading-relaxed space-y-3"
+                  >
+                    ${game.analysis}
+                  </div>
+
+
+                </section>
+
+              `
+              : ''
+          }
+
+
+
+          <!-- Connection to Game Model -->
+          ${
+            game.gameModel
+              ? `
+
+                <section
+                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+                >
+
+                  <h3
+                    class="text-xl font-bold mb-4"
+                  >
+                    Connection to Our Game Model
+                  </h3>
+
+
+                  <div
+                    class="text-sm text-gray-300 leading-relaxed space-y-3"
+                  >
+                    ${game.gameModel}
+                  </div>
+
+
+                </section>
+
+              `
+              : ''
+          }
+
+
+
+          <!-- What Comes Next -->
+          ${
+            game.nextSteps
+              ? `
+
+                <section
+                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+                >
+
+                  <h3
+                    class="text-xl font-bold mb-4"
+                  >
+                    What Comes Next
+                  </h3>
+
+
+                  <div
+                    class="text-sm text-gray-300 leading-relaxed space-y-3"
+                  >
+                    ${game.nextSteps}
+                  </div>
+
+
+                </section>
+
+              `
+              : ''
+          }
+
+
+
+          <!-- Video -->
+          ${clipsHTML}
+
+
+        </div>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       GAME METRICS
+    ========================================================== */
+
+    function renderGameMetrics(metrics) {
+
+      const entries =
+        Object.entries(metrics);
+
+
+      if (entries.length === 0) {
+        return '';
+      }
+
+
+      return `
+
+        <section>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+
+            ${entries
+              .map(
+                ([label, value]) => `
+
+                  <div
+                    class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
+                  >
+
+                    <span
+                      class="text-gray-400 text-xs font-bold uppercase"
+                    >
+                      ${label}
+                    </span>
+
+                    <p
+                      class="text-2xl font-extrabold text-white mt-1"
+                    >
+                      ${value}
+                    </p>
+
+                  </div>
+
+                `
+              )
+              .join('')}
+
+          </div>
+
+        </section>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       RENDER ALL GAME VIEWS
+    ========================================================== */
+
+    function renderGameViews() {
+
+      const container =
+        document.getElementById(
+          'game-content'
+        );
+
+
+      const games =
+        [...(window.seasonGames || [])]
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+      games.forEach(game => {
+
+        container.insertAdjacentHTML(
+          'beforeend',
+          createGameView(game)
+        );
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       VIEW SWITCHING
+    ========================================================== */
+
+    function resetGameButtons() {
+
+      document
+        .querySelectorAll('.game-btn')
+        .forEach(button => {
+
+          button.classList.remove(
+            'bg-gray-700',
+            'text-white'
+          );
+
+          button.classList.add(
+            'text-gray-400'
+          );
+
+          button.style.color = '';
+
+        });
+
+    }
+
+
+
+    function hideGameViews() {
+
+      document
+        .querySelectorAll('.game-view')
+        .forEach(view => {
+
+          view.classList.add(
+            'hidden'
+          );
+
+        });
+
+    }
+
+
+
+    function showSeasonOverview() {
+
+      hideGameViews();
+
+      resetGameButtons();
+
+
+      const overview =
+        document.getElementById(
+          'game-view-overview'
+        );
+
+
+      const button =
+        document.getElementById(
+          'game-btn-overview'
+        );
+
+
+      if (overview) {
+
+        overview.classList.remove(
+          'hidden'
+        );
+
+      }
+
+
+      if (button) {
+
+        button.classList.add(
+          'bg-gray-700',
+          'text-white'
+        );
+
+        button.classList.remove(
+          'text-gray-400'
+        );
+
+        button.style.color =
+          'var(--altafulla-yellow)';
+
+      }
+
+    }
+
+
+
+    function showGame(gameId) {
+
+      hideGameViews();
+
+      resetGameButtons();
+
+
+      const view =
+        document.getElementById(
+          `game-view-${gameId}`
+        );
+
+
+      const button =
+        document.getElementById(
+          `game-btn-${gameId}`
+        );
+
+
+      if (view) {
+
+        view.classList.remove(
+          'hidden'
+        );
+
+      }
+
+
+      if (button) {
+
+        button.classList.add(
+          'bg-gray-700',
+          'text-white'
+        );
+
+        button.classList.remove(
+          'text-gray-400'
+        );
+
+        button.style.color =
+          'var(--altafulla-yellow)';
+
+      }
+
+
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       INITIALIZE
+    ========================================================== */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+
+        renderSeasonKPIs();
+
+        renderGameNavigation();
+
+        renderSeasonResults();
+
+        renderGameViews();
+
+        showSeasonOverview();
+
+      }
+    );
+
+
   </script>
 
+
 </body>
+
 </html>
