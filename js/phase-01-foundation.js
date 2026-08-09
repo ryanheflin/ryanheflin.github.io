@@ -31,6 +31,9 @@ const phase1Weeks = [
           'If we cannot go forward → keep it.'
         ],
 
+        sessionPlan:
+          'sessions/session-01-go-forward.pdf', 
+
         missed: [
           'Our first thought with the ball is forward.',
           'If there is space behind the defense, someone should threaten it.',
@@ -54,9 +57,6 @@ const phase1Weeks = [
           'Stay connected.',
           'Make the opponent predictable.'
         ],
- 
-        sessionPlan:
-          'sessions/session-01-go-forward.pdf', 
 
         missed: [
           'We defend together, not as individuals chasing the ball.',
