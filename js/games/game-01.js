@@ -24,7 +24,7 @@ window.seasonGames.push({
   ========================================================== */
 
   summary:
-    'A positive opening match with good moments of control and progression. We created chances consistently, but still had moments where pressure caused us to abandon possession too easily.',
+    'A positive opening game with good moments of control and progression. We created chances consistently, but still had moments where pressure caused us to abandon possession too easily.',
 
 
   /* ==========================================================
@@ -110,7 +110,7 @@ window.seasonGames.push({
     </p>
 
     <p>
-      We retained 11 of our 14 throw-ins. We also regained possession
+      We retained 11 of our 19 throw-ins. We also regained possession
       from 5 of the opponent's 12 throw-ins. Our organization around
       throw-ins was generally positive, although there were still
       opportunities to improve our movement before the restart.
@@ -156,15 +156,15 @@ window.seasonGames.push({
   nextSteps: `
 
     <p>
-      Continue encouraging players to take purposeful risks while
+      We need to continue to take purposeful risks while
       reducing moments where pressure causes us to abandon the ball.
-      We should not become afraid of turnovers; instead, we want every
+      We should not become afraid of turnovers. Instead, we want every
       action to have a recognizable football reason behind it.
     </p>
 
     <p>
-      Continue reinforcing our throw-in habits on both sides of the
-      ball: create solutions when the throw is ours and become
+     We need to improve our throw-in habits on both sides of the
+      ball. Both create solutions when the throw is ours and become
       aggressive about winning the next action when the opponent
       restarts.
     </p>
