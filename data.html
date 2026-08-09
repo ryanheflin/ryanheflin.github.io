@@ -2,51 +2,69 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Game Analytics | CE Altafulla U15</title>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Game Analytics | CE Altafulla U15
+  </title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Shared Site JavaScript -->
-  <script src="js/site.js" defer></script>
+  <script
+    src="js/site.js"
+    defer
+  ></script>
 
 
   <!-- =========================================================
        GAME DATA STORAGE
-
-       Every individual game file adds itself to seasonGames.
-
-       As matches are played, add one script line here:
-
-       <script src="js/games/game-01.js"></script>
-       <script src="js/games/game-02.js"></script>
-       etc.
   ========================================================== -->
 
   <script>
+
     window.seasonGames = [];
+
   </script>
 
-  <script src="js/games/game-01.js"></script>
 
-  <!--
+  <!-- =========================================================
+       GAME FILES
+
+       Add each game here as it is played.
+
+       Example:
+
+       <script src="js/games/game-02.js"></script>
+       <script src="js/games/game-03.js"></script>
+  ========================================================== -->
+
   <script src="js/games/game-01.js"></script>
-  <script src="js/games/game-02.js"></script>
-  -->
 
 
   <style>
 
     :root {
+
       --altafulla-yellow: #f2e40a;
+
       --altafulla-black: #000000;
+
       --altafulla-blue: #62bed6;
+
     }
 
+
     html {
+
       scroll-behavior: smooth;
+
     }
 
   </style>
@@ -54,10 +72,15 @@
 </head>
 
 
-<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+<body
+  class="bg-gray-900 text-white antialiased flex min-h-screen pb-16"
+>
 
 
-  <!-- Shared Sidebar -->
+  <!-- =========================================================
+       SHARED SIDEBAR
+  ========================================================== -->
+
   <div id="site-sidebar"></div>
 
 
@@ -84,8 +107,12 @@
         Game Analytics
       </h2>
 
-      <p class="text-gray-400 text-sm">
-        Season results, match-by-match analysis, and team performance trends.
+
+      <p
+        class="text-gray-400 text-sm"
+      >
+        Season results, match-by-match analysis,
+        and team performance trends.
       </p>
 
     </header>
@@ -100,6 +127,7 @@
       class="grid grid-cols-2 md:grid-cols-4 gap-4"
     >
 
+
       <!-- Record -->
       <div
         class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
@@ -111,6 +139,7 @@
           Record
         </span>
 
+
         <p
           id="season-record"
           class="text-2xl font-extrabold text-white mt-1"
@@ -119,6 +148,7 @@
         </p>
 
       </div>
+
 
 
       <!-- Goals Scored -->
@@ -132,6 +162,7 @@
           Goals Scored
         </span>
 
+
         <p
           id="season-goals-for"
           class="text-2xl font-extrabold mt-1"
@@ -141,6 +172,7 @@
         </p>
 
       </div>
+
 
 
       <!-- Goals Conceded -->
@@ -154,6 +186,7 @@
           Goals Conceded
         </span>
 
+
         <p
           id="season-goals-against"
           class="text-2xl font-extrabold mt-1"
@@ -163,6 +196,7 @@
         </p>
 
       </div>
+
 
 
       <!-- Clean Sheets -->
@@ -176,6 +210,7 @@
           Clean Sheets
         </span>
 
+
         <p
           id="season-clean-sheets"
           class="text-2xl font-extrabold text-green-400 mt-1"
@@ -185,6 +220,7 @@
 
       </div>
 
+
     </div>
 
 
@@ -193,7 +229,9 @@
          MATCH NAVIGATION
     ======================================================== -->
 
-    <section class="space-y-6">
+    <section
+      class="space-y-6"
+    >
 
 
       <div
@@ -201,7 +239,7 @@
         class="flex gap-2 border-b border-gray-700 pb-3 overflow-x-auto"
       >
 
-        <!-- Season Overview -->
+
         <button
           onclick="showSeasonOverview()"
           id="game-btn-overview"
@@ -212,8 +250,6 @@
         </button>
 
 
-        <!-- Individual game buttons generated automatically -->
-
       </div>
 
 
@@ -222,7 +258,9 @@
            CONTENT AREA
       ====================================================== -->
 
-      <div id="game-content">
+      <div
+        id="game-content"
+      >
 
 
         <!-- ===================================================
@@ -236,7 +274,7 @@
 
 
           <!-- Team Summary -->
-          <div
+          <section
             class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
           >
 
@@ -246,21 +284,215 @@
               Team Statistics Summary
             </h3>
 
+
             <p
               id="overview-message"
               class="text-sm text-gray-300"
             >
-              No matches have been played yet. Season trends and statistical analysis will populate here as match data is added.
+              No matches have been played yet.
+              Season trends and statistical analysis
+              will populate here as match data is added.
             </p>
 
-          </div>
+          </section>
 
 
 
-          <!-- Results -->
-          <div
+          <!-- =================================================
+               GAME MODEL INDICATORS
+          ================================================== -->
+
+          <section
             class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
           >
+
+
+            <div class="mb-5">
+
+              <h3
+                class="text-xl font-bold"
+              >
+                Game Model Indicators
+              </h3>
+
+
+              <p
+                class="text-sm text-gray-400 mt-1"
+              >
+                Season-long indicators connected to how
+                we want to play.
+              </p>
+
+            </div>
+
+
+
+            <div
+              class="grid grid-cols-2 lg:grid-cols-4 gap-4"
+            >
+
+
+              <!-- Our Throw-Ins -->
+              <div
+                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+              >
+
+                <span
+                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                >
+                  Our Throw-Ins Retained
+                </span>
+
+
+                <p
+                  id="season-our-throwins"
+                  class="text-2xl font-extrabold mt-2"
+                  style="color: var(--altafulla-yellow);"
+                >
+                  —
+                </p>
+
+
+                <p
+                  id="season-our-throwins-detail"
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  0 / 0
+                </p>
+
+              </div>
+
+
+
+              <!-- Their Throw-Ins -->
+              <div
+                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+              >
+
+                <span
+                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                >
+                  Opponent Throw-Ins Won
+                </span>
+
+
+                <p
+                  id="season-their-throwins"
+                  class="text-2xl font-extrabold mt-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  —
+                </p>
+
+
+                <p
+                  id="season-their-throwins-detail"
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  0 / 0
+                </p>
+
+              </div>
+
+
+
+              <!-- Purposeless Turnovers / Match -->
+              <div
+                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+              >
+
+                <span
+                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                >
+                  Purposeless Turnovers / Match
+                </span>
+
+
+                <p
+                  id="season-purposeless-average"
+                  class="text-2xl font-extrabold text-white mt-2"
+                >
+                  —
+                </p>
+
+
+                <p
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  Season average
+                </p>
+
+              </div>
+
+
+
+              <!-- Total Purposeless Turnovers -->
+              <div
+                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+              >
+
+                <span
+                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                >
+                  Purposeless Turnovers
+                </span>
+
+
+                <p
+                  id="season-purposeless-total"
+                  class="text-2xl font-extrabold text-white mt-2"
+                >
+                  0
+                </p>
+
+
+                <p
+                  id="season-purposeless-detail"
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  0 kicks · 0 carries
+                </p>
+
+              </div>
+
+
+            </div>
+
+
+            <!-- Definition -->
+            <div
+              class="mt-5 pt-4 border-t border-gray-700"
+            >
+
+              <p
+                class="text-xs text-gray-500 leading-relaxed"
+              >
+                <strong class="text-gray-400">
+                  Purposeless turnover:
+                </strong>
+
+                an avoidable loss where a player had a
+                reasonable opportunity to make a controlled
+                football action but instead gave possession
+                away through a rushed, hopeful, or thoughtless
+                kick or carry.
+              </p>
+
+            </div>
+
+
+          </section>
+
+
+
+          <!-- =================================================
+               RESULTS
+          ================================================== -->
+
+          <section
+            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+          >
+
 
             <div
               class="flex items-center justify-between gap-4 mb-4"
@@ -272,6 +504,7 @@
                 Match Results
               </h3>
 
+
               <span
                 id="matches-played"
                 class="text-xs text-gray-500 uppercase tracking-wide font-bold"
@@ -280,6 +513,7 @@
               </span>
 
             </div>
+
 
 
             <div
@@ -295,12 +529,16 @@
 
             </div>
 
-          </div>
+
+          </section>
 
 
 
-          <!-- Season Trends -->
-          <div
+          <!-- =================================================
+               SEASON TRENDS
+          ================================================== -->
+
+          <section
             class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
           >
 
@@ -310,19 +548,20 @@
               Season Trends
             </h3>
 
+
             <p
               class="text-sm text-gray-300"
             >
-              Team-level trends, recurring tactical observations, and season statistics can be added here as the sample of matches grows.
+              Team-level trends, recurring tactical observations,
+              and season statistics can be added here as the
+              sample of matches grows.
             </p>
 
-          </div>
+          </section>
 
 
         </div>
 
-
-        <!-- Individual match content is inserted here dynamically -->
 
       </div>
 
@@ -354,18 +593,45 @@
 
 
     /* ==========================================================
-       GAME HELPERS
+       BASIC HELPERS
     ========================================================== */
+
+    function percentage(part, total) {
+
+      if (!total) {
+        return null;
+      }
+
+
+      return Math.round(
+        (part / total) * 100
+      );
+
+    }
+
+
 
     function getGameResult(game) {
 
-      if (game.goalsFor > game.goalsAgainst) {
+      if (
+        game.goalsFor >
+        game.goalsAgainst
+      ) {
+
         return 'W';
+
       }
 
-      if (game.goalsFor < game.goalsAgainst) {
+
+      if (
+        game.goalsFor <
+        game.goalsAgainst
+      ) {
+
         return 'L';
+
       }
+
 
       return 'D';
 
@@ -383,9 +649,11 @@
         return 'Win';
       }
 
+
       if (result === 'L') {
         return 'Loss';
       }
+
 
       return 'Draw';
 
@@ -400,12 +668,18 @@
 
 
       if (result === 'W') {
+
         return 'bg-green-500/10 text-green-400 border-green-500/30';
+
       }
 
+
       if (result === 'L') {
+
         return 'bg-red-500/10 text-red-400 border-red-500/30';
+
       }
+
 
       return 'bg-gray-700 text-gray-300 border-gray-600';
 
@@ -414,7 +688,7 @@
 
 
     /* ==========================================================
-       SEASON KPI CALCULATIONS
+       SEASON STATISTICS
     ========================================================== */
 
     function calculateSeasonStats() {
@@ -424,65 +698,192 @@
 
 
       let wins = 0;
+
       let draws = 0;
+
       let losses = 0;
 
+
       let goalsFor = 0;
+
       let goalsAgainst = 0;
 
       let cleanSheets = 0;
 
 
+      let ourThrowInsTotal = 0;
+
+      let ourThrowInsRetained = 0;
+
+
+      let theirThrowInsTotal = 0;
+
+      let theirThrowInsWon = 0;
+
+
+      let purposelessTotal = 0;
+
+      let purposelessKicks = 0;
+
+      let purposelessCarries = 0;
+
+
+
       games.forEach(game => {
 
+
         goalsFor +=
-          Number(game.goalsFor || 0);
+          Number(
+            game.goalsFor || 0
+          );
+
 
         goalsAgainst +=
-          Number(game.goalsAgainst || 0);
+          Number(
+            game.goalsAgainst || 0
+          );
 
 
-        if (game.goalsFor > game.goalsAgainst) {
+
+        if (
+          game.goalsFor >
+          game.goalsAgainst
+        ) {
 
           wins++;
 
-        } else if (
-          game.goalsFor < game.goalsAgainst
+        }
+
+        else if (
+          game.goalsFor <
+          game.goalsAgainst
         ) {
 
           losses++;
 
-        } else {
+        }
+
+        else {
 
           draws++;
 
         }
 
 
+
         if (
-          Number(game.goalsAgainst) === 0
+          Number(
+            game.goalsAgainst
+          ) === 0
         ) {
 
           cleanSheets++;
 
         }
 
+
+
+        /* Throw-Ins */
+
+        if (game.throwIns) {
+
+          ourThrowInsTotal +=
+            Number(
+              game.throwIns.oursTotal || 0
+            );
+
+
+          ourThrowInsRetained +=
+            Number(
+              game.throwIns.oursRetained || 0
+            );
+
+
+          theirThrowInsTotal +=
+            Number(
+              game.throwIns.theirsTotal || 0
+            );
+
+
+          theirThrowInsWon +=
+            Number(
+              game.throwIns.theirsWonByUs || 0
+            );
+
+        }
+
+
+
+        /* Purposeless Turnovers */
+
+        if (
+          game.purposelessTurnovers
+        ) {
+
+          purposelessTotal +=
+            Number(
+              game.purposelessTurnovers.total || 0
+            );
+
+
+          purposelessKicks +=
+            Number(
+              game.purposelessTurnovers.kicks || 0
+            );
+
+
+          purposelessCarries +=
+            Number(
+              game.purposelessTurnovers.carries || 0
+            );
+
+        }
+
+
       });
 
 
+
       return {
+
         wins,
+
         draws,
+
         losses,
+
         goalsFor,
+
         goalsAgainst,
+
         cleanSheets,
-        matches: games.length
+
+        matches:
+          games.length,
+
+        ourThrowInsTotal,
+
+        ourThrowInsRetained,
+
+        theirThrowInsTotal,
+
+        theirThrowInsWon,
+
+        purposelessTotal,
+
+        purposelessKicks,
+
+        purposelessCarries
+
       };
 
     }
 
 
+
+    /* ==========================================================
+       RENDER SEASON KPIs
+    ========================================================== */
 
     function renderSeasonKPIs() {
 
@@ -490,11 +891,17 @@
         calculateSeasonStats();
 
 
+
+      /* Record */
+
       document.getElementById(
         'season-record'
       ).textContent =
         `${stats.wins}W - ${stats.draws}D - ${stats.losses}L`;
 
+
+
+      /* Goals */
 
       document.getElementById(
         'season-goals-for'
@@ -514,6 +921,9 @@
         stats.cleanSheets;
 
 
+
+      /* Matches */
+
       document.getElementById(
         'matches-played'
       ).textContent =
@@ -524,12 +934,96 @@
         }`;
 
 
-      if (stats.matches > 0) {
+
+      /* Our Throw-Ins */
+
+      const ourThrowInPercentage =
+        percentage(
+          stats.ourThrowInsRetained,
+          stats.ourThrowInsTotal
+        );
+
+
+      document.getElementById(
+        'season-our-throwins'
+      ).textContent =
+        ourThrowInPercentage !== null
+          ? `${ourThrowInPercentage}%`
+          : '—';
+
+
+      document.getElementById(
+        'season-our-throwins-detail'
+      ).textContent =
+        `${stats.ourThrowInsRetained} / ${stats.ourThrowInsTotal}`;
+
+
+
+      /* Opponent Throw-Ins */
+
+      const theirThrowInPercentage =
+        percentage(
+          stats.theirThrowInsWon,
+          stats.theirThrowInsTotal
+        );
+
+
+      document.getElementById(
+        'season-their-throwins'
+      ).textContent =
+        theirThrowInPercentage !== null
+          ? `${theirThrowInPercentage}%`
+          : '—';
+
+
+      document.getElementById(
+        'season-their-throwins-detail'
+      ).textContent =
+        `${stats.theirThrowInsWon} / ${stats.theirThrowInsTotal}`;
+
+
+
+      /* Purposeless Turnovers */
+
+      document.getElementById(
+        'season-purposeless-total'
+      ).textContent =
+        stats.purposelessTotal;
+
+
+      document.getElementById(
+        'season-purposeless-detail'
+      ).textContent =
+        `${stats.purposelessKicks} kicks · ${stats.purposelessCarries} carries`;
+
+
+
+      const turnoverAverage =
+        stats.matches > 0
+          ? (
+              stats.purposelessTotal /
+              stats.matches
+            ).toFixed(1)
+          : null;
+
+
+      document.getElementById(
+        'season-purposeless-average'
+      ).textContent =
+        turnoverAverage !== null
+          ? turnoverAverage
+          : '—';
+
+
+
+      if (
+        stats.matches > 0
+      ) {
 
         document.getElementById(
           'overview-message'
         ).textContent =
-          'Season totals and match-by-match observations are updated automatically as each match report is added.';
+          'Season totals and game-model indicators update automatically as each match report is added.';
 
       }
 
@@ -558,6 +1052,7 @@
           );
 
 
+
       games.forEach(game => {
 
         const button =
@@ -575,11 +1070,18 @@
 
 
         button.textContent =
-          `Match ${game.gameNumber}: ${game.homeAway === 'away' ? '@' : 'vs.'} ${game.opponent}`;
+          `Match ${game.gameNumber}: ${
+            game.homeAway === 'away'
+              ? '@'
+              : 'vs.'
+          } ${game.opponent}`;
 
 
         button.onclick =
-          () => showGame(game.id);
+          () =>
+            showGame(
+              game.id
+            );
 
 
         navigation.appendChild(
@@ -613,20 +1115,27 @@
           );
 
 
-      if (games.length === 0) {
+
+      if (
+        games.length === 0
+      ) {
 
         return;
 
       }
 
 
+
       container.innerHTML = '';
+
 
 
       games.forEach(game => {
 
         const row =
-          document.createElement('button');
+          document.createElement(
+            'button'
+          );
 
 
         row.type =
@@ -634,11 +1143,15 @@
 
 
         row.onclick =
-          () => showGame(game.id);
+          () =>
+            showGame(
+              game.id
+            );
 
 
         row.className =
           'w-full text-left bg-gray-900/60 border border-gray-700 rounded-lg p-4 hover:border-gray-500 transition-colors';
+
 
 
         row.innerHTML = `
@@ -647,9 +1160,7 @@
             class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
           >
 
-
             <div>
-
 
               <div
                 class="flex items-center flex-wrap gap-2"
@@ -685,15 +1196,16 @@
               ${
                 game.date
                   ? `
+
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
                       ${game.date}
                     </p>
+
                   `
                   : ''
               }
-
 
             </div>
 
@@ -703,7 +1215,6 @@
             >
               ${game.goalsFor}–${game.goalsAgainst}
             </div>
-
 
           </div>
 
@@ -721,13 +1232,323 @@
 
 
     /* ==========================================================
+       GENERAL GAME METRICS
+    ========================================================== */
+
+    function renderGameMetrics(metrics) {
+
+      const entries =
+        Object.entries(
+          metrics
+        );
+
+
+      if (
+        entries.length === 0
+      ) {
+
+        return '';
+
+      }
+
+
+
+      return `
+
+        <section>
+
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+          >
+
+            ${entries
+              .map(
+                ([label, value]) => `
+
+                  <div
+                    class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
+                  >
+
+                    <span
+                      class="text-gray-400 text-xs font-bold uppercase"
+                    >
+                      ${label}
+                    </span>
+
+
+                    <p
+                      class="text-2xl font-extrabold text-white mt-1"
+                    >
+                      ${value}
+                    </p>
+
+                  </div>
+
+                `
+              )
+              .join('')}
+
+          </div>
+
+        </section>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       GAME MODEL INDICATORS — INDIVIDUAL MATCH
+    ========================================================== */
+
+    function renderGameModelIndicators(game) {
+
+
+      const throwIns =
+        game.throwIns || {};
+
+
+      const turnovers =
+        game.purposelessTurnovers || {};
+
+
+
+      const ourTotal =
+        Number(
+          throwIns.oursTotal || 0
+        );
+
+
+      const ourRetained =
+        Number(
+          throwIns.oursRetained || 0
+        );
+
+
+      const theirTotal =
+        Number(
+          throwIns.theirsTotal || 0
+        );
+
+
+      const theirsWon =
+        Number(
+          throwIns.theirsWonByUs || 0
+        );
+
+
+
+      const ourPercentage =
+        percentage(
+          ourRetained,
+          ourTotal
+        );
+
+
+      const theirPercentage =
+        percentage(
+          theirsWon,
+          theirTotal
+        );
+
+
+
+      const turnoverTotal =
+        Number(
+          turnovers.total || 0
+        );
+
+
+      const turnoverKicks =
+        Number(
+          turnovers.kicks || 0
+        );
+
+
+      const turnoverCarries =
+        Number(
+          turnovers.carries || 0
+        );
+
+
+
+      return `
+
+        <section
+          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+        >
+
+
+          <div class="mb-5">
+
+            <h3
+              class="text-xl font-bold"
+            >
+              Game Model Indicators
+            </h3>
+
+
+            <p
+              class="text-sm text-gray-400 mt-1"
+            >
+              Match-specific indicators connected
+              to our playing habits.
+            </p>
+
+          </div>
+
+
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-4"
+          >
+
+
+            <!-- Our Throw-Ins -->
+            <div
+              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+            >
+
+              <span
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Our Throw-Ins Retained
+              </span>
+
+
+              <p
+                class="text-3xl font-extrabold mt-2"
+                style="color: var(--altafulla-yellow);"
+              >
+                ${
+                  ourPercentage !== null
+                    ? `${ourPercentage}%`
+                    : '—'
+                }
+              </p>
+
+
+              <p
+                class="text-xs text-gray-500 mt-1"
+              >
+                ${ourRetained} of ${ourTotal}
+              </p>
+
+            </div>
+
+
+
+            <!-- Opponent Throw-Ins -->
+            <div
+              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+            >
+
+              <span
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Opponent Throw-Ins Won
+              </span>
+
+
+              <p
+                class="text-3xl font-extrabold mt-2"
+                style="color: var(--altafulla-blue);"
+              >
+                ${
+                  theirPercentage !== null
+                    ? `${theirPercentage}%`
+                    : '—'
+                }
+              </p>
+
+
+              <p
+                class="text-xs text-gray-500 mt-1"
+              >
+                ${theirsWon} of ${theirTotal}
+              </p>
+
+            </div>
+
+
+
+            <!-- Purposeless Turnovers -->
+            <div
+              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+            >
+
+              <span
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Purposeless Turnovers
+              </span>
+
+
+              <p
+                class="text-3xl font-extrabold text-white mt-2"
+              >
+                ${turnoverTotal}
+              </p>
+
+
+              <p
+                class="text-xs text-gray-500 mt-1"
+              >
+                ${turnoverKicks} kicks ·
+                ${turnoverCarries} carries
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+
+          <div
+            class="mt-5 pt-4 border-t border-gray-700"
+          >
+
+            <p
+              class="text-xs text-gray-500 leading-relaxed"
+            >
+
+              <strong
+                class="text-gray-400"
+              >
+                Purposeless turnover:
+              </strong>
+
+              an avoidable loss where a player had
+              a reasonable opportunity to make a
+              controlled football action but instead
+              gave possession away through a rushed,
+              hopeful, or thoughtless kick or carry.
+
+            </p>
+
+          </div>
+
+
+        </section>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
        MATCH VIEW
     ========================================================== */
 
     function createGameView(game) {
 
+
       const result =
         getGameResult(game);
+
 
 
       const title =
@@ -736,9 +1557,13 @@
           : `CE Altafulla vs. ${game.opponent}`;
 
 
+
       const clipsHTML =
-        Array.isArray(game.clips) &&
+        Array.isArray(
+          game.clips
+        ) &&
         game.clips.length > 0
+
           ? `
 
             <section
@@ -786,7 +1611,9 @@
                         }
 
 
-                        <div class="p-4">
+                        <div
+                          class="p-4"
+                        >
 
                           <h4
                             class="font-bold text-white"
@@ -794,14 +1621,17 @@
                             ${clip.title}
                           </h4>
 
+
                           ${
                             clip.description
                               ? `
+
                                 <p
                                   class="text-sm text-gray-400 mt-1"
                                 >
                                   ${clip.description}
                                 </p>
+
                               `
                               : ''
                           }
@@ -819,7 +1649,9 @@
             </section>
 
           `
+
           : '';
+
 
 
       return `
@@ -830,7 +1662,10 @@
         >
 
 
-          <!-- Match Header -->
+          <!-- ===============================================
+               MATCH HEADER
+          ================================================ -->
+
           <section
             class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
           >
@@ -839,6 +1674,7 @@
             <div
               class="bg-gray-950 border-b border-gray-700 p-5 md:p-6"
             >
+
 
               <div
                 class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
@@ -872,11 +1708,13 @@
                         : ''
                     }
 
+
                     ${
                       game.competition
                         ? `<span>${game.competition}</span>`
                         : ''
                     }
+
 
                     ${
                       game.location
@@ -889,6 +1727,7 @@
                 </div>
 
 
+
                 <div
                   class="flex items-center gap-4"
                 >
@@ -896,9 +1735,17 @@
                   <div
                     class="text-4xl md:text-5xl font-black text-white"
                   >
+
                     ${game.goalsFor}
-                    <span class="text-gray-600">–</span>
+
+                    <span
+                      class="text-gray-600"
+                    >
+                      –
+                    </span>
+
                     ${game.goalsAgainst}
+
                   </div>
 
 
@@ -913,7 +1760,9 @@
 
               </div>
 
+
             </div>
+
 
 
             ${
@@ -930,6 +1779,7 @@
                     >
                       Match Summary
                     </h4>
+
 
                     <p
                       class="text-sm text-gray-300 leading-relaxed"
@@ -948,16 +1798,32 @@
 
 
 
-          <!-- Match KPIs -->
+          <!-- ===============================================
+               GENERAL MATCH STATISTICS
+          ================================================ -->
+
           ${
             game.metrics
-              ? renderGameMetrics(game.metrics)
+              ? renderGameMetrics(
+                  game.metrics
+                )
               : ''
           }
 
 
 
-          <!-- What We Saw -->
+          <!-- ===============================================
+               GAME MODEL INDICATORS
+          ================================================ -->
+
+          ${renderGameModelIndicators(game)}
+
+
+
+          <!-- ===============================================
+               WHAT WE SAW
+          ================================================ -->
+
           ${
             game.analysis
               ? `
@@ -979,7 +1845,6 @@
                     ${game.analysis}
                   </div>
 
-
                 </section>
 
               `
@@ -988,7 +1853,10 @@
 
 
 
-          <!-- Connection to Game Model -->
+          <!-- ===============================================
+               CONNECTION TO GAME MODEL
+          ================================================ -->
+
           ${
             game.gameModel
               ? `
@@ -1010,7 +1878,6 @@
                     ${game.gameModel}
                   </div>
 
-
                 </section>
 
               `
@@ -1019,7 +1886,10 @@
 
 
 
-          <!-- What Comes Next -->
+          <!-- ===============================================
+               WHAT COMES NEXT
+          ================================================ -->
+
           ${
             game.nextSteps
               ? `
@@ -1041,7 +1911,6 @@
                     ${game.nextSteps}
                   </div>
 
-
                 </section>
 
               `
@@ -1050,7 +1919,7 @@
 
 
 
-          <!-- Video -->
+          <!-- VIDEO -->
           ${clipsHTML}
 
 
@@ -1063,66 +1932,7 @@
 
 
     /* ==========================================================
-       GAME METRICS
-    ========================================================== */
-
-    function renderGameMetrics(metrics) {
-
-      const entries =
-        Object.entries(metrics);
-
-
-      if (entries.length === 0) {
-        return '';
-      }
-
-
-      return `
-
-        <section>
-
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-
-            ${entries
-              .map(
-                ([label, value]) => `
-
-                  <div
-                    class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-                  >
-
-                    <span
-                      class="text-gray-400 text-xs font-bold uppercase"
-                    >
-                      ${label}
-                    </span>
-
-                    <p
-                      class="text-2xl font-extrabold text-white mt-1"
-                    >
-                      ${value}
-                    </p>
-
-                  </div>
-
-                `
-              )
-              .join('')}
-
-          </div>
-
-        </section>
-
-      `;
-
-    }
-
-
-
-    /* ==========================================================
-       RENDER ALL GAME VIEWS
+       RENDER GAME VIEWS
     ========================================================== */
 
     function renderGameViews() {
@@ -1142,11 +1952,15 @@
           );
 
 
+
       games.forEach(game => {
 
         container.insertAdjacentHTML(
           'beforeend',
-          createGameView(game)
+
+          createGameView(
+            game
+          )
         );
 
       });
@@ -1162,7 +1976,9 @@
     function resetGameButtons() {
 
       document
-        .querySelectorAll('.game-btn')
+        .querySelectorAll(
+          '.game-btn'
+        )
         .forEach(button => {
 
           button.classList.remove(
@@ -1170,9 +1986,11 @@
             'text-white'
           );
 
+
           button.classList.add(
             'text-gray-400'
           );
+
 
           button.style.color = '';
 
@@ -1185,7 +2003,9 @@
     function hideGameViews() {
 
       document
-        .querySelectorAll('.game-view')
+        .querySelectorAll(
+          '.game-view'
+        )
         .forEach(view => {
 
           view.classList.add(
@@ -1217,6 +2037,7 @@
         );
 
 
+
       if (overview) {
 
         overview.classList.remove(
@@ -1226,6 +2047,7 @@
       }
 
 
+
       if (button) {
 
         button.classList.add(
@@ -1233,9 +2055,11 @@
           'text-white'
         );
 
+
         button.classList.remove(
           'text-gray-400'
         );
+
 
         button.style.color =
           'var(--altafulla-yellow)';
@@ -1265,6 +2089,7 @@
         );
 
 
+
       if (view) {
 
         view.classList.remove(
@@ -1274,6 +2099,7 @@
       }
 
 
+
       if (button) {
 
         button.classList.add(
@@ -1281,9 +2107,11 @@
           'text-white'
         );
 
+
         button.classList.remove(
           'text-gray-400'
         );
+
 
         button.style.color =
           'var(--altafulla-yellow)';
@@ -1291,9 +2119,13 @@
       }
 
 
+
       window.scrollTo({
+
         top: 0,
+
         behavior: 'smooth'
+
       });
 
     }
@@ -1308,15 +2140,21 @@
       'DOMContentLoaded',
       function() {
 
+
         renderSeasonKPIs();
+
 
         renderGameNavigation();
 
+
         renderSeasonResults();
+
 
         renderGameViews();
 
+
         showSeasonOverview();
+
 
       }
     );
