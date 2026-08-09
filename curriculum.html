@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Practice Plan | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Shared Site JavaScript -->
   <script src="js/site.js" defer></script>
 
+  <!-- =========================================================
+       CURRICULUM PHASE DATA
+
+       Completed phases live in separate files.
+
+       As future phases are developed, create their files here
+       and replace the temporary placeholder data farther below.
+  ========================================================== -->
+
+  <script src="js/curriculum/phase-01-foundation.js"></script>
+
+  <script src="js/curriculum/phase-02-style-implementation.js"></script>
+
+
   <style>
+
     :root {
       --altafulla-yellow: #f2e40a;
       --altafulla-black: #000000;
@@ -18,22 +37,38 @@
     html {
       scroll-behavior: smooth;
     }
+
   </style>
+
 </head>
+
 
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
-  <!-- Shared Sidebar -->
+
+  <!-- =========================================================
+       SHARED SIDEBAR
+  ========================================================== -->
+
   <div id="site-sidebar"></div>
+
 
 
   <!-- =========================================================
        MAIN CONTENT
   ========================================================== -->
-  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-10">
 
-    <!-- PAGE HEADER -->
+  <main
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-10"
+  >
+
+
+    <!-- =======================================================
+         PAGE HEADER
+    ======================================================== -->
+
     <header>
+
       <h2
         class="text-3xl font-extrabold mb-1"
         style="color: var(--altafulla-yellow);"
@@ -42,16 +77,27 @@
       </h2>
 
       <p class="text-gray-400 text-sm">
-        A season-long framework for how our training develops, adapts, and connects to the game. Each session's actual progression will be dictated in the moment. 
+        A season-long framework for how our training develops, adapts,
+        and connects to the game. Each session's actual progression
+        will be dictated in the moment.
       </p>
+
     </header>
 
 
-    <!-- PRIMARY CURRICULUM NAVIGATION -->
+
+    <!-- =======================================================
+         PRIMARY CURRICULUM NAVIGATION
+    ======================================================== -->
+
     <section class="space-y-6">
 
+
+      <!-- Main Tabs -->
       <div class="border-b border-gray-700">
+
         <div class="flex gap-6 overflow-x-auto">
+
 
           <button
             onclick="switchMainTab('weekly')"
@@ -62,6 +108,7 @@
             Weekly Plan
           </button>
 
+
           <button
             onclick="switchMainTab('roadmap')"
             id="main-tab-btn-roadmap"
@@ -70,20 +117,34 @@
             Season Roadmap
           </button>
 
+
         </div>
+
       </div>
 
 
-      <!-- =======================================================
+
+      <!-- =====================================================
            WEEKLY PLAN
-      ======================================================== -->
-      <div id="main-tab-weekly" class="main-tab-content space-y-6">
+      ====================================================== -->
 
-        <!-- Phase Header -->
-        <section class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700">
+      <div
+        id="main-tab-weekly"
+        class="main-tab-content space-y-6"
+      >
 
-          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 
+        <!-- Phase Navigation -->
+        <section
+          class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+        >
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+          >
+
+
+            <!-- Previous Phase -->
             <button
               id="previous-phase-btn"
               onclick="changePhase(-1)"
@@ -92,6 +153,9 @@
               ← Previous Phase
             </button>
 
+
+
+            <!-- Current Phase -->
             <div class="text-center flex-1">
 
               <span
@@ -102,12 +166,14 @@
                 Weeks 1–4
               </span>
 
+
               <h3
                 id="weekly-phase-name"
                 class="text-2xl md:text-3xl font-extrabold text-white mt-1"
               >
                 Foundation
               </h3>
+
 
               <p
                 id="weekly-phase-detail"
@@ -118,6 +184,9 @@
 
             </div>
 
+
+
+            <!-- Next Phase -->
             <button
               id="next-phase-btn"
               onclick="changePhase(1)"
@@ -126,42 +195,67 @@
               Next Phase →
             </button>
 
+
           </div>
 
         </section>
 
 
+
         <!-- Weekly Cards -->
-        <div id="weekly-container" class="space-y-8"></div>
+        <div
+          id="weekly-container"
+          class="space-y-8"
+        ></div>
+
 
       </div>
 
 
-      <!-- =======================================================
+
+      <!-- =====================================================
            SEASON ROADMAP
-      ======================================================== -->
-      <div id="main-tab-roadmap" class="main-tab-content hidden space-y-6">
+      ====================================================== -->
+
+      <div
+        id="main-tab-roadmap"
+        class="main-tab-content hidden space-y-6"
+      >
+
 
         <div>
+
           <h3 class="text-xl font-bold text-white">
             2026/27 Development Roadmap
           </h3>
 
           <p class="text-sm text-gray-400 mt-1">
-            The season is organized into broad phases, each building on the habits and understanding developed before it.
+            The season is organized into broad phases, each building
+            on the habits and understanding developed before it.
           </p>
+
         </div>
 
-        <div id="roadmap-container" class="space-y-4"></div>
+
+        <div
+          id="roadmap-container"
+          class="space-y-4"
+        ></div>
+
 
       </div>
+
 
     </section>
 
   </main>
 
 
-  <!-- FOOTER -->
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
   <footer
     class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
   >
@@ -171,17 +265,28 @@
 
 
   <!-- =========================================================
-       JAVASCRIPT
+       PAGE JAVASCRIPT
   ========================================================== -->
+
   <script>
 
+
     /* ==========================================================
-       SEASON DATA
+       SEASON SETTINGS
     ========================================================== */
 
-    const seasonStart = new Date('2026-08-23T00:00:00');
-    const MS_PER_WEEK = 7 * 24 * 60 * 60 * 1000;
+    const seasonStart =
+      new Date('2026-08-23T00:00:00');
 
+
+    const MS_PER_WEEK =
+      7 * 24 * 60 * 60 * 1000;
+
+
+
+    /* ==========================================================
+       PHASE INFORMATION
+    ========================================================== */
 
     const curriculumPhases = [
 
@@ -260,967 +365,396 @@
 
 
     /* ==========================================================
-       WEEKLY CURRICULUM
+       PLACEHOLDER PHASE HELPER
+
+       Phases 3–10 have not yet been fully written.
+
+       This helper keeps the current weekly topics visible without
+       requiring all 120 session objects to live on this page.
+
+       When a phase is completed:
+
+       1. Create its JS file.
+       2. Load that file in the <head>.
+       3. Replace its placeholder variable in the "weeks" array
+          below with the new phase variable.
+    ========================================================== */
+
+    function createPlaceholderPhase(weekData) {
+
+      return weekData.map(item => ({
+
+        week: item.week,
+
+        focus: item.focus,
+
+        description: item.description
+
+      }));
+
+    }
+
+
+
+    /* ==========================================================
+       PHASE 3 PLACEHOLDER
+       Weeks 9–12
+    ========================================================== */
+
+    const phase3PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 9,
+          focus: 'Escaping an Aggressive High Press',
+          description:
+            'Recognize pressure and create the free player through positioning and movement.'
+        },
+
+        {
+          week: 10,
+          focus: 'Pressing the Opponent into Predictable Areas',
+          description:
+            'Use pressure and cover to guide the opponent toward our pressing traps.'
+        },
+
+        {
+          week: 11,
+          focus: 'Winning First and Second Balls from Direct Play',
+          description:
+            'Compete for the first contact and organize collectively around the second ball.'
+        },
+
+        {
+          week: 12,
+          focus: 'Protecting Against Counters While We Attack',
+          description:
+            'Maintain balance and rest defense while committing players forward.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 4 PLACEHOLDER
+       Weeks 13–16
+    ========================================================== */
+
+    const phase4PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 13,
+          focus: "Building and Sustaining Attacks in the Opponent's Half",
+          description:
+            'Keep pressure on the opponent through connected possession and positioning.'
+        },
+
+        {
+          week: 14,
+          focus: 'Defending Our Half: Protect the Center and Force Wide',
+          description:
+            'Stay compact, protect dangerous spaces, and guide play away from goal.'
+        },
+
+        {
+          week: 15,
+          focus: 'Keeping the Opponent Pinned After Our Attack Breaks Down',
+          description:
+            'Compress space and regain second balls to sustain attacking pressure.'
+        },
+
+        {
+          week: 16,
+          focus: 'Recovering Our Shape When the Press Is Broken',
+          description:
+            'Delay the attack and reconnect quickly when the opponent escapes pressure.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 5 PLACEHOLDER
+       Weeks 17–20
+    ========================================================== */
+
+    const phase5PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 17,
+          focus: 'Playing Through Pressure from Goalkeeper to Midfield',
+          description:
+            'Revisit and connect our build-up principles under realistic pressure.'
+        },
+
+        {
+          week: 18,
+          focus: "Creating and Exploiting Space Around the Opponent's Box",
+          description:
+            'Recognize combinations, movements, and spaces that create finishing opportunities.'
+        },
+
+        {
+          week: 19,
+          focus: 'Regaining Possession Through Collective Pressing',
+          description:
+            'Connect pressing triggers, support, cover, and compactness.'
+        },
+
+        {
+          week: 20,
+          focus: 'Managing the Moments Immediately Before and After Turnovers',
+          description:
+            'Improve positioning and decision-making around changes of possession.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 6 PLACEHOLDER
+       Weeks 21–24
+    ========================================================== */
+
+    const phase6PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 21,
+          focus: 'Choosing Short Build or Direct Play Against Different Presses',
+          description:
+            'Read the opponent and select the solution that best exploits the available space.'
+        },
+
+        {
+          week: 22,
+          focus: 'Attacking an Opponent Who Defends Deep and Compact',
+          description:
+            'Create and exploit space against opponents protecting the area around their goal.'
+        },
+
+        {
+          week: 23,
+          focus: 'Defending Against an Opponent Who Plays Direct',
+          description:
+            'Control depth, first contacts, second balls, and the spaces around them.'
+        },
+
+        {
+          week: 24,
+          focus: 'Recognizing When to Press High and When to Defend in a Mid-Block',
+          description:
+            'Read team organization and choose the appropriate defensive height.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 7 PLACEHOLDER
+       Weeks 25–28
+    ========================================================== */
+
+    const phase7PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 25,
+          focus: 'Creating a Free Player Against Different First-Line Presses',
+          description:
+            'Manipulate opponent pressure through positioning, rotation, and numerical superiority.'
+        },
+
+        {
+          week: 26,
+          focus: 'Creating Wide Overloads with Winger, Fullback and Midfielder',
+          description:
+            'Create multiple solutions around the ball to isolate or combine in wide areas.'
+        },
+
+        {
+          week: 27,
+          focus: 'Creating Space Through 9, 10 and Midfield Rotations',
+          description:
+            'Use coordinated movement to disrupt defensive references and create central space.'
+        },
+
+        {
+          week: 28,
+          focus: 'Switching the Point of Attack When One Side Becomes Crowded',
+          description:
+            'Recognize overloads and move the opponent before exploiting the opposite side.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 8 PLACEHOLDER
+       Weeks 29–32
+    ========================================================== */
+
+    const phase8PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 29,
+          focus: 'Controlling Territory Through Sustained Possession',
+          description:
+            'Use the ball and team positioning to keep the game in advantageous areas.'
+        },
+
+        {
+          week: 30,
+          focus: 'Attacking Repeatedly Without Becoming Vulnerable to the Counter',
+          description:
+            'Balance attacking numbers with positioning that protects the next transition.'
+        },
+
+        {
+          week: 31,
+          focus: 'Changing the Tempo',
+          description:
+            'Be patient until the opportunity appears, then attack quickly and decisively.'
+        },
+
+        {
+          week: 32,
+          focus: 'Controlling Momentum When a Match Becomes Chaotic',
+          description:
+            'Restore structure, calm the game, and regain control through collective decisions.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 9 PLACEHOLDER
+       Weeks 33–36
+    ========================================================== */
+
+    const phase9PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 33,
+          focus: 'Recognizing and Exploiting Space Behind the Defensive Line',
+          description:
+            'Identify moments to threaten depth and attack the space behind.'
+        },
+
+        {
+          week: 34,
+          focus: 'Recognizing and Exploiting Space Between the Lines',
+          description:
+            'Find players between units and connect forward actions from central spaces.'
+        },
+
+        {
+          week: 35,
+          focus: 'Turning Wide Entries into High-Quality Chances',
+          description:
+            'Improve the final movements, support, delivery, and occupation of finishing spaces.'
+        },
+
+        {
+          week: 36,
+          focus: 'Turning Regains into Chances Before the Opponent Recovers',
+          description:
+            'Attack transition moments with immediate forward intent and coordinated support.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       PHASE 10 PLACEHOLDER
+       Weeks 37–40
+    ========================================================== */
+
+    const phase10PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 37,
+          focus: 'Protecting a Lead Without Losing Our Identity',
+          description:
+            'Control risk while continuing to play with purpose and confidence.'
+        },
+
+        {
+          week: 38,
+          focus: 'Breaking Down an Opponent While Chasing the Game',
+          description:
+            'Increase attacking pressure while maintaining clarity and collective structure.'
+        },
+
+        {
+          week: 39,
+          focus: 'Changing Our Structure Without Changing Our Style',
+          description:
+            'Adapt positioning and roles while preserving our core playing principles.'
+        },
+
+        {
+          week: 40,
+          focus: 'Reading and Solving the Match',
+          description:
+            'Bring the complete game model together and solve the problems the match presents.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       COMPLETE SEASON CURRICULUM
+
+       Phase 1 and Phase 2 come from external files.
+
+       Phases 3–10 currently use lightweight placeholders.
+
+       Eventually this can become:
+
+       const weeks = [
+         ...phase1Weeks,
+         ...phase2Weeks,
+         ...phase3Weeks,
+         ...phase4Weeks,
+         ...
+       ];
     ========================================================== */
 
     const weeks = [
 
-      /* ========================================================
-         WEEK 1
-      ======================================================== */
-      {
-        week: 1,
-        focus: 'Play Our Way',
+      ...phase1Weeks,
 
-        description:
-          'Introduce the shared behaviors and language that define how we want to play in every moment of the game.',
+      ...phase2Weeks,
 
-        objective:
-          'Build instinctive reactions around forward play, collective defending, and immediate transition. Players should begin recognizing our core rules without needing constant instruction.',
+      ...phase3PlaceholderWeeks,
 
-        sessions: [
+      ...phase4PlaceholderWeeks,
 
-          {
-  number: 1,
-  title: 'Go Forward',
-  question: 'Where is the space?',
+      ...phase5PlaceholderWeeks,
 
-  purpose:
-    'Introduce our attacking mentality through real opposition. Learn to recognize when useful space is available ahead, behind, or around the opponent.',
+      ...phase6PlaceholderWeeks,
 
-  habits: [
-    'Look forward first.',
-    'Space behind → threaten it.',
-    'Ball forward → lines move up.',
-    'Support the player on the ball.',
-    'If we cannot go forward → keep it.'
-  ],
+      ...phase7PlaceholderWeeks,
 
-  sessionPlan: 'sessions/session-01-go-forward.pdf',
+      ...phase8PlaceholderWeeks,
 
-  missed: [
-    'Our first thought with the ball is forward.',
-    'If there is space behind the defense, someone should threaten it.',
-    'When the ball moves forward, the team moves forward with it.',
-    'If the forward option is not there, keep the ball and create another opportunity.'
-  ]
-},
-          {
-            number: 2,
-            title: 'Defend Together',
-            question: 'Where do we not want them to play?',
+      ...phase9PlaceholderWeeks,
 
-            purpose:
-              'Understand defending as a collective action rather than individual chasing. The first defender influences the ball while teammates protect important space.',
-
-            habits: [
-              'Nearest player delays.',
-              'Protect the inside.',
-              'One presses → everyone supports.',
-              'Stay connected.',
-              'Make the opponent predictable.'
-            ],
-
-            missed: [
-              'We defend together, not as individuals chasing the ball.',
-              'The closest player pressures or delays while everyone else protects space.',
-              'Protect the middle first and try to guide the opponent somewhere predictable.',
-              'If one player presses, the rest of the team must react with him.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'React',
-            question: 'What happens the instant the ball changes teams?',
-
-            purpose:
-              'Create an immediate team reaction to turnovers. Losing possession triggers pressure; winning possession triggers forward vision.',
-
-            habits: [
-              'Lose it → hunt it.',
-              'Win it → look forward first.',
-              'Closest players react immediately.',
-              'Everyone else closes space.',
-              'No advantage → secure the ball.'
-            ],
-
-            missed: [
-              'When we lose the ball, react immediately instead of stopping.',
-              'The closest players hunt the ball while everyone else closes space.',
-              'When we win it, our first look is forward.',
-              'If there is no immediate advantage, keep the ball and organize.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 2
-      ======================================================== */
-      {
-        week: 2,
-        focus: 'Create & Control Space',
-
-        description:
-          'Teach players how our positioning with and without the ball changes the space available to both teams.',
-
-        objective:
-          'Connect our first-week instincts to the central idea of the game model: creating useful space when we have the ball and controlling dangerous space when we do not.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Make the Field Big',
-            question: 'How can we create more space to play forward?',
-
-            purpose:
-              'Use width, depth, movement, and circulation to stretch the opponent and create the free player.',
-
-            habits: [
-              'Ball backward → get wide.',
-              'Create useful width and depth.',
-              'Support from different angles.',
-              'Move the opponent before attacking.',
-              'Find the free player.'
-            ],
-
-            missed: [
-              'When we need more space, make the field bigger.',
-              'A backward pass is a cue for players to get wide and create new angles.',
-              'Do not all move toward the ball — give the player on it different solutions.',
-              'We keep possession to create a forward opportunity, not just to collect passes.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Make Them Predictable',
-            question: 'Can we control where the opponent plays next?',
-
-            purpose:
-              'Develop the relationship between pressure, cover, compactness, and pressing direction so we can influence the opponent’s next action.',
-
-            habits: [
-              'Protect the inside.',
-              'Angle pressure toward our preferred space.',
-              'Cover behind the press.',
-              'Far players compress.',
-              'Backward pass → team steps forward.'
-            ],
-
-            missed: [
-              'Pressing is about controlling the opponent, not just running at the ball.',
-              'Protect the inside and use your pressure to encourage the pass we want.',
-              'The players behind the press must close the other options.',
-              'When the opponent plays backward, we step forward together.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Win It and Hurt Them',
-            question: 'Is the advantage available now?',
-
-            purpose:
-              'Develop our attacking transition decision: attack immediately when an advantage exists, but secure possession when it does not.',
-
-            habits: [
-              'Win it → forward first.',
-              'Space behind → attack it.',
-              'Wide players explode forward.',
-              'Support underneath and beyond.',
-              'No advantage → keep the ball.'
-            ],
-
-            missed: [
-              'When we regain the ball, look forward immediately.',
-              'If the opponent is disorganized or there is space behind, attack before they recover.',
-              'Players around the regain must give options ahead and underneath.',
-              'Playing quickly does not mean forcing the ball — if the advantage is gone, keep it.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 3
-      ======================================================== */
-      {
-        week: 3,
-        focus: 'Move Together',
-
-        description:
-          'Turn individual reactions into coordinated team behavior so that the entire group moves in response to the ball.',
-
-        objective:
-          'Develop collective movement around progression, pressing, and defensive transition. Players should begin acting as connected units rather than isolated individuals.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Forward Together',
-            question: 'When the ball moves forward, what does the rest of the team do?',
-
-            purpose:
-              'Teach the team to progress together. Forward actions should trigger supporting movements from every line.',
-
-            habits: [
-              'Ball forward → lines move up.',
-              'Defensive line squeezes.',
-              'Midfield supports underneath.',
-              'Far-side players move inside.',
-              'Maintain connections around the ball.'
-            ],
-
-            missed: [
-              'A forward pass is a cue for the entire team to move forward.',
-              'The player receiving needs support underneath and around him.',
-              'The back line must move up so the team does not become stretched.',
-              'Players away from the ball move with the action instead of watching it.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Press Together',
-            question: 'If one player presses, what must everyone else do?',
-
-            purpose:
-              'Build the first recognizable version of our collective high press using the habits already introduced.',
-
-            habits: [
-              'Organized → press.',
-              'First defender dictates.',
-              'Second defenders close options.',
-              'Protect central spaces.',
-              'Backward pass → step together.'
-            ],
-
-            missed: [
-              'We press aggressively when the team is organized enough to support it.',
-              'The first defender decides where the opponent should be allowed to play.',
-              'Everyone behind him closes options and protects the middle.',
-              'One player pressing alone is not our press — the team has to move together.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Hunt or Recover',
-            question: 'Can we realistically win the ball back now?',
-
-            purpose:
-              'Learn to recognize whether losing possession should trigger an aggressive counterpress or an immediate recovery into shape.',
-
-            habits: [
-              'Good numbers around the ball → hunt.',
-              'Opponent escapes pressure → recover.',
-              'Closest players delay.',
-              'Recover central space first.',
-              'Reconnect quickly.'
-            ],
-
-            missed: [
-              'After losing the ball, decide quickly: hunt or recover.',
-              'If we have players around the ball and can win it, counterpress together.',
-              'If the opponent escapes or has the advantage, stop chasing and recover.',
-              'When recovering, protect the center first and reconnect the team.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 4
-      ======================================================== */
-      {
-        week: 4,
-        focus: 'Put the Game Together',
-
-        description:
-          'Remove much of the scaffolding and challenge players to apply the habits from the first three weeks inside realistic football.',
-
-        objective:
-          'Test whether our game model is beginning to appear naturally. Players should recognize problems, choose solutions, and maintain our behaviors through all four moments.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Through, Around or Behind',
-            question: 'Where is the best space to attack?',
-
-            purpose:
-              'Bring the attacking principles together by recognizing that different defensive problems require different attacking solutions.',
-
-            habits: [
-              'High line → threaten behind.',
-              'Central space → play through.',
-              'Compact center → use width.',
-              'Crowded side → switch.',
-              'No advantage → recycle.'
-            ],
-
-            missed: [
-              'There is not one correct way to attack — read where the space is.',
-              'If they leave space behind, threaten behind.',
-              'If the center is open, play through; if they protect it, use the width.',
-              'If one side becomes crowded, switch the attack. If nothing is available, keep the ball.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Control the Opponent',
-            question: 'What defensive action gives us control of the next moment?',
-
-            purpose:
-              'Bring together pressing, delaying, recovering, trapping, and compact defending so the team can choose the right defensive response.',
-
-            habits: [
-              'Recognize whether to press or delay.',
-              'Protect dangerous central space.',
-              'Force predictable play.',
-              'Move together behind the press.',
-              'Recover quickly when pressure is broken.'
-            ],
-
-            missed: [
-              'Defending is about controlling space and the opponent’s options.',
-              'Press when we are organized; delay when we are not.',
-              'Protect dangerous central space and try to make their next pass predictable.',
-              'If our pressure is broken, recover and reconnect immediately.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Our Football',
-            question: 'Can we recognize ourselves in the game?',
-
-            purpose:
-              'Test whether the habits from the first month now appear naturally in football without constant instruction.',
-
-            habits: [
-              'Get the Ball.',
-              'Keep the Ball.',
-              'Be Dangerous.',
-              'Lose it → hunt or recover.',
-              'Win it → look forward first.'
-            ],
-
-            missed: [
-              'Our football should be recognizable regardless of the exercise or score.',
-              'With the ball: create space, look forward, support each other, and attack when the opportunity appears.',
-              'Without the ball: stay connected, control space, and defend together.',
-              'Every turnover demands an immediate reaction.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 5
-      ======================================================== */
-      {
-        week: 5,
-        focus: 'Building from the Back Against Pressure',
-
-        description:
-          'Use opponent pressure to create the free player and begin organizing our attacking structure from the goalkeeper and back line.',
-
-        objective:
-          'Develop calm, connected solutions against pressure. Players should understand that building short is not the objective — creating and exploiting the free player is.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Invite the Press',
-            question: 'Can their pressure create space for us?',
-
-            purpose:
-              'Understand how attracting pressure can create a free player elsewhere and begin establishing our relationships from the goalkeeper and back line.',
-
-            habits: [
-              'Goalkeeper participates in possession.',
-              'Create superiority around the first pressing line.',
-              'Do not hide behind opponents.',
-              'Attract pressure before releasing the ball.',
-              'If they do not press → take the space.'
-            ],
-
-            missed: [
-              'We do not play short just because the coach wants short passes — we are trying to create a free player.',
-              'Opponent pressure can help us because every player who comes to press leaves space somewhere else.',
-              'Show for the ball and create useful passing angles instead of hiding behind defenders.',
-              'If nobody presses you, carry the ball forward. If they press, find the player their pressure has freed.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Through, Around or Over',
-            question: 'Where did their press leave the space?',
-
-            purpose:
-              'Recognize different solutions against pressure instead of forcing one predetermined route out of the back.',
-
-            habits: [
-              'Through if midfield is free.',
-              'Around if the center is crowded.',
-              'Over if space exists behind the press.',
-              'Ball backward → create width.',
-              'Prepare to compete for second balls after direct play.'
-            ],
-
-            missed: [
-              'Against pressure, look for the space they have left — through, around, or over.',
-              'Playing directly is not a failure if the space behind their press is the best space to attack.',
-              'Do not force the pivot or another planned pass when the opponent has taken it away.',
-              'If we play over pressure, players higher up must anticipate and organize for the first and second ball.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Build to Attack',
-            question: 'Once we break the press, can we hurt them?',
-
-            purpose:
-              'Connect successful build-up to immediate progression. Escaping pressure should create an attacking advantage rather than become the end of the action.',
-
-            habits: [
-              'First player beyond the press looks forward.',
-              'Ball forward → team moves forward.',
-              'Wingers recognize space behind.',
-              '10 finds space beyond midfield pressure.',
-              'If the advantage disappears → secure possession.'
-            ],
-
-            missed: [
-              'Beating the press is not the objective — attacking the space created by beating it is.',
-              'Once we break their pressure, look forward immediately because the opponent may be disorganized.',
-              'The whole team moves up behind the ball so the attack stays connected.',
-              'If the immediate advantage disappears, keep possession and organize our attack.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 6
-      ======================================================== */
-      {
-        week: 6,
-        focus: 'Progressing from the Back Line into Midfield',
-
-        description:
-          'Connect the defensive and midfield lines and create players who can receive beyond pressure with the ability to continue forward.',
-
-        objective:
-          'Progress through midfield with purpose. Find players in useful spaces, manipulate the opponent when forward lanes are closed, and use combinations to continue through pressure.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Find the Player Between',
-            question: 'Who can receive beyond their first line of pressure?',
-
-            purpose:
-              'Create and recognize passing lanes into midfield, with receivers positioned to continue the attack rather than simply receive the ball.',
-
-            habits: [
-              'Scan before receiving.',
-              'Do not stand directly behind defenders.',
-              'Create diagonal passing lanes.',
-              'Receive with the next action in mind.',
-              'Support underneath the receiver.'
-            ],
-
-            missed: [
-              'We want to find midfielders beyond pressure, not simply pass to midfield for the sake of it.',
-              'Before receiving, scan so you know where the next space and pressure are.',
-              'Move out of defenders’ shadows and create a visible passing lane.',
-              'Try to receive in a position that allows the attack to continue forward.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Move Them to Play Through Them',
-            question: 'If the forward pass is not available now, how can we create it?',
-
-            purpose:
-              'Use circulation and movement to manipulate defenders until a forward passing lane appears.',
-
-            habits: [
-              'Do not force closed forward passes.',
-              'Move the ball to move the opponent.',
-              'Ball backward → expand.',
-              'Change the angle of attack.',
-              'Attack the central lane when it opens.'
-            ],
-
-            missed: [
-              'If we cannot go forward now, keep the ball and create a better opportunity.',
-              'Moving the ball should move the opponent — possession needs a purpose.',
-              'Backward and sideways passes can create the next forward pass.',
-              'When the opponent finally opens the central lane, recognize it and attack it quickly.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Connect and Go',
-            question: 'Can we play through midfield without slowing the attack down?',
-
-            purpose:
-              'Use bounce passes, third-player movement, and quick combinations to progress through pressure while maintaining forward momentum.',
-
-            habits: [
-              'Receiver does not always need to turn.',
-              'Use bounce passes to eliminate pressure.',
-              'Third player anticipates the combination.',
-              'One player connects while another threatens depth.',
-              'Once a line is broken → move forward.'
-            ],
-
-            missed: [
-              'Receiving between the lines does not mean you always have to turn — sometimes the fastest way forward is a bounce pass.',
-              'The third player should anticipate the combination before the ball arrives.',
-              'When one player comes toward the ball to connect, another should threaten forward space.',
-              'Once we break a line, the team should continue forward rather than automatically playing backward.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 7
-      ======================================================== */
-      {
-        week: 7,
-        focus: 'Creating Scoring Opportunities from Wide Areas',
-
-        description:
-          'Use width, isolation, combinations, and coordinated movement to turn wide possession into dangerous chances.',
-
-        objective:
-          'Understand how central progression creates wide opportunities, then develop the ability to isolate defenders, combine around them, and occupy the box effectively.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'Isolate and Attack',
-            question: 'Can we get our winger 1v1?',
-
-            purpose:
-              'Create situations where wide attackers receive with space and can attack an isolated defender decisively.',
-
-            habits: [
-              'Get the ball wide with space.',
-              'Receive facing the defender when possible.',
-              'Attack the defender decisively.',
-              'Change speed.',
-              'Teammates avoid crowding the 1v1.'
-            ],
-
-            missed: [
-              'Ball wide → our first thought is to attack the defender.',
-              'We want to create a real 1v1, so teammates should avoid bringing extra defenders into the winger’s space.',
-              'Receive ready to go forward and attack with confidence and a change of speed.',
-              'If a second defender comes to help, recognize that his movement has freed one of our teammates.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Combine to Free the Winger',
-            question: 'If the winger cannot beat the defender alone, how can we help?',
-
-            purpose:
-              'Develop winger, fullback, and midfielder relationships to create superiority and multiple solutions in wide areas.',
-
-            habits: [
-              'Winger can stay wide or move inside.',
-              'Fullback responds to the winger.',
-              'Midfielder provides a third angle.',
-              'Recognize overlap and underlap.',
-              'If they overload our side → consider switching.'
-            ],
-
-            missed: [
-              'The winger, fullback, and midfielder work as a relationship — do not all occupy the same space.',
-              'If the winger stays wide, another player may overlap, underlap, or support underneath depending on the defender.',
-              'Use combinations when the defender cannot be beaten alone.',
-              'If the opponent sends too many players to our side, the solution may be to switch the attack.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Finish the Attack',
-            question: 'When we beat them wide, where should everybody else go?',
-
-            purpose:
-              'Turn wide superiority into high-quality chances through coordinated occupation of finishing and supporting spaces.',
-
-            habits: [
-              'Attack different finishing spaces.',
-              'Arrive rather than stand in the box.',
-              'Opposite winger attacks the far side.',
-              'Midfielder supports the cutback.',
-              'Maintain balance behind the attack.'
-            ],
-
-            missed: [
-              'When the ball gets beyond the defender wide, everyone else has a job.',
-              'Do not all attack the same spot — occupy near, central, far, and cutback spaces.',
-              'Arrive into finishing space at the right moment instead of standing there waiting.',
-              'Players behind the attack stay organized because a clearance immediately creates the next transition.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEK 8
-      ======================================================== */
-      {
-        week: 8,
-        focus: 'Attacking Immediately After Regaining Possession',
-
-        description:
-          'Recognize and exploit the temporary space and disorder available before the opponent can recover its defensive organization.',
-
-        objective:
-          'Turn regains into coordinated attacks. Improve the first action, the movements around the regain, and the decision between counterattacking immediately or securing possession.',
-
-        sessions: [
-
-          {
-            number: 1,
-            title: 'First Look Forward',
-            question: 'What can we exploit before they reorganize?',
-
-            purpose:
-              'Develop the first action after a regain and recognize the spaces that exist while the opponent is still transitioning.',
-
-            habits: [
-              'Scan before the regain when possible.',
-              'First thought → forward.',
-              'Recognize space behind immediately.',
-              'First touch prepares the attack.',
-              'No forward advantage → keep it.'
-            ],
-
-            missed: [
-              'When we win the ball, look forward before the opponent has time to recover.',
-              'Try to scan before the regain so you already know where the space is.',
-              'Your first touch should help the next attacking action.',
-              'Forward first does not mean forward always — if the advantage is not there, keep the ball.'
-            ]
-          },
-
-          {
-            number: 2,
-            title: 'Run With the Regain',
-            question: 'How does the whole team turn a regain into an attack?',
-
-            purpose:
-              'Coordinate the movements around the player who wins possession so attacking transition becomes a team action rather than an individual counterattack.',
-
-            habits: [
-              'First runner threatens behind.',
-              'Second player supports the ball.',
-              'Third player creates another passing line.',
-              'Width appears quickly.',
-              'Defensive players move up behind the attack.'
-            ],
-
-            missed: [
-              'The player who wins the ball should not have to create the counterattack alone.',
-              'One player threatens behind, another supports the ball, and others create width and passing options.',
-              'Do not all run toward the ball — attack different spaces.',
-              'The rest of the team moves forward behind the counter so we stay connected if the attack continues or the ball is lost.'
-            ]
-          },
-
-          {
-            number: 3,
-            title: 'Counter or Control?',
-            question: 'Do we attack now, or do we keep it?',
-
-            purpose:
-              'Develop the decision-making that determines whether a regain becomes an immediate counterattack or the beginning of an organized possession.',
-
-            habits: [
-              'Advantage ahead → attack.',
-              'Space behind → attack.',
-              'Opponent disorganized → attack.',
-              'No forward advantage → secure possession.',
-              'As possession stabilizes → organize our structure.'
-            ],
-
-            missed: [
-              'A regain does not automatically mean counterattack — read the situation.',
-              'Attack immediately when we have space, numbers, or a disorganized opponent.',
-              'If the opponent is already organized or we are disconnected, keep the ball instead of forcing the counter.',
-              'Once we choose to keep possession, quickly establish our attacking structure and start creating the next advantage.'
-            ]
-          }
-
-        ]
-      },
-
-
-      /* ========================================================
-         WEEKS 9–40
-      ======================================================== */
-
-      {
-        week: 9,
-        focus: 'Escaping an Aggressive High Press',
-        description:
-          'Recognize pressure and create the free player through positioning and movement.'
-      },
-
-      {
-        week: 10,
-        focus: 'Pressing the Opponent into Predictable Areas',
-        description:
-          'Use pressure and cover to guide the opponent toward our pressing traps.'
-      },
-
-      {
-        week: 11,
-        focus: 'Winning First and Second Balls from Direct Play',
-        description:
-          'Compete for the first contact and organize collectively around the second ball.'
-      },
-
-      {
-        week: 12,
-        focus: 'Protecting Against Counters While We Attack',
-        description:
-          'Maintain balance and rest defense while committing players forward.'
-      },
-
-      {
-        week: 13,
-        focus: "Building and Sustaining Attacks in the Opponent's Half",
-        description:
-          'Keep pressure on the opponent through connected possession and positioning.'
-      },
-
-      {
-        week: 14,
-        focus: 'Defending Our Half: Protect the Center and Force Wide',
-        description:
-          'Stay compact, protect dangerous spaces, and guide play away from goal.'
-      },
-
-      {
-        week: 15,
-        focus: 'Keeping the Opponent Pinned After Our Attack Breaks Down',
-        description:
-          'Compress space and regain second balls to sustain attacking pressure.'
-      },
-
-      {
-        week: 16,
-        focus: 'Recovering Our Shape When the Press Is Broken',
-        description:
-          'Delay the attack and reconnect quickly when the opponent escapes pressure.'
-      },
-
-      {
-        week: 17,
-        focus: 'Playing Through Pressure from Goalkeeper to Midfield',
-        description:
-          'Revisit and connect our build-up principles under realistic pressure.'
-      },
-
-      {
-        week: 18,
-        focus: "Creating and Exploiting Space Around the Opponent's Box",
-        description:
-          'Recognize combinations, movements, and spaces that create finishing opportunities.'
-      },
-
-      {
-        week: 19,
-        focus: 'Regaining Possession Through Collective Pressing',
-        description:
-          'Connect pressing triggers, support, cover, and compactness.'
-      },
-
-      {
-        week: 20,
-        focus: 'Managing the Moments Immediately Before and After Turnovers',
-        description:
-          'Improve positioning and decision-making around changes of possession.'
-      },
-
-      {
-        week: 21,
-        focus: 'Choosing Short Build or Direct Play Against Different Presses',
-        description:
-          'Read the opponent and select the solution that best exploits the available space.'
-      },
-
-      {
-        week: 22,
-        focus: 'Attacking an Opponent Who Defends Deep and Compact',
-        description:
-          'Create and exploit space against opponents protecting the area around their goal.'
-      },
-
-      {
-        week: 23,
-        focus: 'Defending Against an Opponent Who Plays Direct',
-        description:
-          'Control depth, first contacts, second balls, and the spaces around them.'
-      },
-
-      {
-        week: 24,
-        focus: 'Recognizing When to Press High and When to Defend in a Mid-Block',
-        description:
-          'Read team organization and choose the appropriate defensive height.'
-      },
-
-      {
-        week: 25,
-        focus: 'Creating a Free Player Against Different First-Line Presses',
-        description:
-          'Manipulate opponent pressure through positioning, rotation, and numerical superiority.'
-      },
-
-      {
-        week: 26,
-        focus: 'Creating Wide Overloads with Winger, Fullback and Midfielder',
-        description:
-          'Create multiple solutions around the ball to isolate or combine in wide areas.'
-      },
-
-      {
-        week: 27,
-        focus: 'Creating Space Through 9, 10 and Midfield Rotations',
-        description:
-          'Use coordinated movement to disrupt defensive references and create central space.'
-      },
-
-      {
-        week: 28,
-        focus: 'Switching the Point of Attack When One Side Becomes Crowded',
-        description:
-          'Recognize overloads and move the opponent before exploiting the opposite side.'
-      },
-
-      {
-        week: 29,
-        focus: 'Controlling Territory Through Sustained Possession',
-        description:
-          'Use the ball and team positioning to keep the game in advantageous areas.'
-      },
-
-      {
-        week: 30,
-        focus: 'Attacking Repeatedly Without Becoming Vulnerable to the Counter',
-        description:
-          'Balance attacking numbers with positioning that protects the next transition.'
-      },
-
-      {
-        week: 31,
-        focus: 'Changing the Tempo',
-        description:
-          'Be patient until the opportunity appears, then attack quickly and decisively.'
-      },
-
-      {
-        week: 32,
-        focus: 'Controlling Momentum When a Match Becomes Chaotic',
-        description:
-          'Restore structure, calm the game, and regain control through collective decisions.'
-      },
-
-      {
-        week: 33,
-        focus: 'Recognizing and Exploiting Space Behind the Defensive Line',
-        description:
-          'Identify moments to threaten depth and attack the space behind.'
-      },
-
-      {
-        week: 34,
-        focus: 'Recognizing and Exploiting Space Between the Lines',
-        description:
-          'Find players between units and connect forward actions from central spaces.'
-      },
-
-      {
-        week: 35,
-        focus: 'Turning Wide Entries into High-Quality Chances',
-        description:
-          'Improve the final movements, support, delivery, and occupation of finishing spaces.'
-      },
-
-      {
-        week: 36,
-        focus: 'Turning Regains into Chances Before the Opponent Recovers',
-        description:
-          'Attack transition moments with immediate forward intent and coordinated support.'
-      },
-
-      {
-        week: 37,
-        focus: 'Protecting a Lead Without Losing Our Identity',
-        description:
-          'Control risk while continuing to play with purpose and confidence.'
-      },
-
-      {
-        week: 38,
-        focus: 'Breaking Down an Opponent While Chasing the Game',
-        description:
-          'Increase attacking pressure while maintaining clarity and collective structure.'
-      },
-
-      {
-        week: 39,
-        focus: 'Changing Our Structure Without Changing Our Style',
-        description:
-          'Adapt positioning and roles while preserving our core playing principles.'
-      },
-
-      {
-        week: 40,
-        focus: 'Reading and Solving the Match',
-        description:
-          'Bring the complete game model together and solve the problems the match presents.'
-      }
+      ...phase10PlaceholderWeeks
 
     ];
 
@@ -1234,36 +768,57 @@
 
       const now = new Date();
 
+
       let currentWeek = 1;
 
+
       if (now >= seasonStart) {
+
         currentWeek =
-          Math.floor((now - seasonStart) / MS_PER_WEEK) + 1;
+          Math.floor(
+            (now - seasonStart) / MS_PER_WEEK
+          ) + 1;
+
       }
 
-      currentWeek = Math.max(
-        1,
-        Math.min(40, currentWeek)
-      );
+
+      currentWeek =
+        Math.max(
+          1,
+          Math.min(40, currentWeek)
+        );
+
 
       const phaseIndex =
         Math.min(
           curriculumPhases.length - 1,
-          Math.floor((currentWeek - 1) / 4)
+          Math.floor(
+            (currentWeek - 1) / 4
+          )
         );
 
+
       return {
+
         week: currentWeek,
+
         phaseIndex: phaseIndex,
-        phase: curriculumPhases[phaseIndex]
+
+        phase:
+          curriculumPhases[phaseIndex]
+
       };
 
     }
 
 
-    const seasonStatus = getSeasonStatus();
 
-    let selectedPhaseIndex = seasonStatus.phaseIndex;
+    const seasonStatus =
+      getSeasonStatus();
+
+
+    let selectedPhaseIndex =
+      seasonStatus.phaseIndex;
 
 
 
@@ -1273,36 +828,64 @@
 
     function switchMainTab(tabName) {
 
+
       document
         .querySelectorAll('.main-tab-content')
         .forEach(tab => {
+
           tab.classList.add('hidden');
+
         });
+
+
 
       document
         .querySelectorAll('.main-tab-btn')
         .forEach(btn => {
 
           btn.classList.remove('text-white');
+
           btn.classList.add('text-gray-400');
-          btn.style.borderColor = 'transparent';
+
+          btn.style.borderColor =
+            'transparent';
 
         });
 
+
+
       const selectedTab =
-        document.getElementById(`main-tab-${tabName}`);
+        document.getElementById(
+          `main-tab-${tabName}`
+        );
+
 
       const selectedButton =
-        document.getElementById(`main-tab-btn-${tabName}`);
+        document.getElementById(
+          `main-tab-btn-${tabName}`
+        );
+
+
 
       if (selectedTab) {
+
         selectedTab.classList.remove('hidden');
+
       }
+
+
 
       if (selectedButton) {
 
-        selectedButton.classList.remove('text-gray-400');
-        selectedButton.classList.add('text-white');
+        selectedButton
+          .classList
+          .remove('text-gray-400');
+
+
+        selectedButton
+          .classList
+          .add('text-white');
+
 
         selectedButton.style.borderColor =
           'var(--altafulla-yellow)';
@@ -1319,111 +902,175 @@
 
     function renderRoadmap() {
 
+
       const container =
-        document.getElementById('roadmap-container');
+        document.getElementById(
+          'roadmap-container'
+        );
+
 
       container.innerHTML = '';
 
 
-      curriculumPhases.forEach((phase, index) => {
 
-        const isCurrentPhase =
-          index === seasonStatus.phaseIndex;
+      curriculumPhases.forEach(
+        (phase, index) => {
 
-        const phaseCard =
-          document.createElement('div');
 
-        phaseCard.className =
-          `phase-card bg-gray-800 p-5 rounded-xl border ${
-            isCurrentPhase
-              ? 'border-yellow-400/60 shadow-lg'
-              : 'border-gray-700'
-          }`;
+          const isCurrentPhase =
+            index ===
+            seasonStatus.phaseIndex;
 
-        let weekButtons = '';
 
-        for (
-          let weekNumber = phase.startWeek;
-          weekNumber <= phase.endWeek;
-          weekNumber++
-        ) {
 
-          const isCurrentWeek =
-            weekNumber === seasonStatus.week;
+          const phaseCard =
+            document.createElement('div');
 
-          weekButtons += `
-            <button
-              onclick="openWeek(${weekNumber})"
-              class="
-                text-xs px-3 py-1.5 rounded-full border transition-colors
-                ${
-                  isCurrentWeek
-                    ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
-                    : 'bg-gray-900/60 text-gray-300 border-gray-700 hover:border-gray-500 hover:text-white'
-                }
-              "
+
+
+          phaseCard.className =
+            `phase-card bg-gray-800 p-5 rounded-xl border ${
+              isCurrentPhase
+                ? 'border-yellow-400/60 shadow-lg'
+                : 'border-gray-700'
+            }`;
+
+
+
+          let weekButtons = '';
+
+
+
+          for (
+            let weekNumber = phase.startWeek;
+            weekNumber <= phase.endWeek;
+            weekNumber++
+          ) {
+
+
+            const isCurrentWeek =
+              weekNumber ===
+              seasonStatus.week;
+
+
+
+            weekButtons += `
+
+              <button
+                onclick="openWeek(${weekNumber})"
+                class="
+                  text-xs
+                  px-3
+                  py-1.5
+                  rounded-full
+                  border
+                  transition-colors
+
+                  ${
+                    isCurrentWeek
+                      ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
+                      : 'bg-gray-900/60 text-gray-300 border-gray-700 hover:border-gray-500 hover:text-white'
+                  }
+                "
+              >
+                Week ${weekNumber}
+              </button>
+
+            `;
+
+          }
+
+
+
+          phaseCard.innerHTML = `
+
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-5"
             >
-              Week ${weekNumber}
-            </button>
-          `;
-
-        }
 
 
-        phaseCard.innerHTML = `
+              <div class="flex-1">
 
-          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5">
 
-            <div class="flex-1">
+                <span
+                  class="text-xs uppercase tracking-wide text-gray-500"
+                >
+                  Weeks ${phase.startWeek}–${phase.endWeek}
+                </span>
 
-              <span class="text-xs uppercase tracking-wide text-gray-500">
-                Weeks ${phase.startWeek}–${phase.endWeek}
-              </span>
 
-              <div class="flex flex-wrap items-center gap-3 mt-1">
 
-                <h4 class="text-xl font-bold text-white">
-                  ${phase.name}
-                </h4>
+                <div
+                  class="flex flex-wrap items-center gap-3 mt-1"
+                >
 
-                ${
-                  isCurrentPhase
-                    ? `
-                      <span class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full">
-                        Current Phase
-                      </span>
-                    `
-                    : ''
-                }
+
+                  <h4
+                    class="text-xl font-bold text-white"
+                  >
+                    ${phase.name}
+                  </h4>
+
+
+                  ${
+                    isCurrentPhase
+                      ? `
+
+                        <span
+                          class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full"
+                        >
+                          Current Phase
+                        </span>
+
+                      `
+                      : ''
+                  }
+
+
+                </div>
+
+
+
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  ${phase.detail}
+                </p>
+
+
+
+                <div
+                  class="flex flex-wrap gap-2 mt-4"
+                >
+                  ${weekButtons}
+                </div>
+
 
               </div>
 
-              <p class="text-sm text-gray-400 mt-1">
-                ${phase.detail}
-              </p>
 
-              <div class="flex flex-wrap gap-2 mt-4">
-                ${weekButtons}
-              </div>
+
+              <button
+                onclick="openPhase(${index})"
+                class="self-start text-sm font-semibold whitespace-nowrap hover:underline"
+                style="color: var(--altafulla-blue);"
+              >
+                View Phase →
+              </button>
+
 
             </div>
 
+          `;
 
-            <button
-              onclick="openPhase(${index})"
-              class="self-start text-sm font-semibold whitespace-nowrap hover:underline"
-              style="color: var(--altafulla-blue);"
-            >
-              View Phase →
-            </button>
 
-          </div>
 
-        `;
+          container.appendChild(
+            phaseCard
+          );
 
-        container.appendChild(phaseCard);
-
-      });
+        }
+      );
 
     }
 
@@ -1435,15 +1082,25 @@
 
     function openPhase(index) {
 
-      selectedPhaseIndex = index;
 
-      switchMainTab('weekly');
+      selectedPhaseIndex =
+        index;
+
+
+      switchMainTab(
+        'weekly'
+      );
+
 
       renderWeeklyPhase();
 
+
       window.scrollTo({
+
         top: 0,
+
         behavior: 'smooth'
+
       });
 
     }
@@ -1451,33 +1108,48 @@
 
 
     /* ==========================================================
-       OPEN WEEK
+       OPEN SPECIFIC WEEK
     ========================================================== */
 
     function openWeek(weekNumber) {
 
-      selectedPhaseIndex =
-        Math.floor((weekNumber - 1) / 4);
 
-      switchMainTab('weekly');
+      selectedPhaseIndex =
+        Math.floor(
+          (weekNumber - 1) / 4
+        );
+
+
+      switchMainTab(
+        'weekly'
+      );
+
 
       renderWeeklyPhase();
 
+
+
       setTimeout(() => {
+
 
         const weekCard =
           document.getElementById(
             `weekly-week-${weekNumber}`
           );
 
+
         if (weekCard) {
 
           weekCard.scrollIntoView({
+
             behavior: 'smooth',
+
             block: 'start'
+
           });
 
         }
+
 
       }, 100);
 
@@ -1491,23 +1163,35 @@
 
     function changePhase(direction) {
 
+
       const newIndex =
-        selectedPhaseIndex + direction;
+        selectedPhaseIndex +
+        direction;
+
 
       if (
         newIndex < 0 ||
         newIndex >= curriculumPhases.length
       ) {
+
         return;
+
       }
 
-      selectedPhaseIndex = newIndex;
+
+      selectedPhaseIndex =
+        newIndex;
+
 
       renderWeeklyPhase();
 
+
       window.scrollTo({
+
         top: 0,
+
         behavior: 'smooth'
+
       });
 
     }
@@ -1520,49 +1204,69 @@
 
     function createSessionCard(session) {
 
-      const habits = session.habits
-        .map(
-          habit => `
-            <li class="flex gap-2">
-              <span
-                class="font-black"
-                style="color: var(--altafulla-yellow);"
-              >
-                ›
-              </span>
 
-              <span>${habit}</span>
-            </li>
-          `
-        )
-        .join('');
+      const habits =
+        session.habits
+          .map(
+            habit => `
+
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-yellow);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${habit}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
 
 
-      const missed = session.missed
-        .map(
-          point => `
-            <li class="flex gap-2">
-              <span
-                class="font-black"
-                style="color: var(--altafulla-blue);"
-              >
-                ›
-              </span>
 
-              <span>${point}</span>
-            </li>
-          `
-        )
-        .join('');
+      const missed =
+        session.missed
+          .map(
+            point => `
+
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-blue);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${point}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
+
 
 
       return `
+
         <div
           class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
         >
 
+
           <!-- Session Header -->
           <div>
+
 
             <span
               class="text-xs uppercase tracking-[0.18em] font-bold"
@@ -1571,19 +1275,30 @@
               Session ${session.number}
             </span>
 
-            <h5 class="text-xl font-extrabold text-white mt-1">
+
+
+            <h5
+              class="text-xl font-extrabold text-white mt-1"
+            >
               ${session.title}
             </h5>
 
-            <p class="text-sm font-semibold text-gray-300 mt-2">
+
+
+            <p
+              class="text-sm font-semibold text-gray-300 mt-2"
+            >
               “${session.question}”
             </p>
+
 
           </div>
 
 
+
           <!-- Purpose -->
           <div>
+
 
             <h6
               class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
@@ -1591,17 +1306,21 @@
               Purpose
             </h6>
 
+
             <p
               class="text-sm text-gray-300 leading-relaxed"
             >
               ${session.purpose}
             </p>
 
+
           </div>
+
 
 
           <!-- Habits -->
           <div>
+
 
             <h6
               class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
@@ -1609,33 +1328,48 @@
               Habits to Build
             </h6>
 
+
             <ul
               class="text-sm text-gray-300 space-y-1.5"
             >
               ${habits}
             </ul>
 
+
           </div>
 
-          <!-- Session Plan -->
-          ${session.sessionPlan ? `
-            <div>
-              <a
-                href="${session.sessionPlan}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                style="color: var(--altafulla-blue);"
-              >
-                📋 View Session Plan →
-              </a>
-            </div>
-          ` : ''}
+
+
+          <!-- Session Plan PDF -->
+          ${
+            session.sessionPlan
+              ? `
+
+                <div>
+
+                  <a
+                    href="${session.sessionPlan}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                    style="color: var(--altafulla-blue);"
+                  >
+                    📋 View Session Plan →
+                  </a>
+
+                </div>
+
+              `
+              : ''
+          }
+
+
 
           <!-- If You Missed It -->
           <div
             class="border-t border-gray-700 pt-4"
           >
+
 
             <h6
               class="text-xs uppercase tracking-wide font-bold mb-2"
@@ -1644,15 +1378,19 @@
               If You Missed It
             </h6>
 
+
             <ul
               class="text-sm text-gray-400 space-y-1.5"
             >
               ${missed}
             </ul>
 
+
           </div>
 
+
         </div>
+
       `;
 
     }
@@ -1660,7 +1398,9 @@
 
 
     /* ==========================================================
-       GENERIC SESSION CARD
+       PLACEHOLDER SESSION CARD
+
+       Used for phases that have not yet been fully developed.
     ========================================================== */
 
     function createPlaceholderSessionCard(
@@ -1668,12 +1408,16 @@
       title
     ) {
 
+
       return `
+
         <div
           class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-4"
         >
 
+
           <div>
+
 
             <span
               class="text-xs uppercase tracking-[0.18em] font-bold"
@@ -1682,17 +1426,27 @@
               Session ${number}
             </span>
 
-            <h5 class="text-lg font-bold text-white mt-1">
+
+            <h5
+              class="text-lg font-bold text-white mt-1"
+            >
               ${title}
             </h5>
 
+
           </div>
 
-          <p class="text-sm text-gray-400">
+
+
+          <p
+            class="text-sm text-gray-400"
+          >
             Session details to be developed.
           </p>
 
+
         </div>
+
       `;
 
     }
@@ -1705,8 +1459,12 @@
 
     function renderWeeklyPhase() {
 
+
       const phase =
-        curriculumPhases[selectedPhaseIndex];
+        curriculumPhases[
+          selectedPhaseIndex
+        ];
+
 
 
       document.getElementById(
@@ -1715,10 +1473,12 @@
         `Weeks ${phase.startWeek}–${phase.endWeek}`;
 
 
+
       document.getElementById(
         'weekly-phase-name'
       ).textContent =
         phase.name;
+
 
 
       document.getElementById(
@@ -1727,25 +1487,38 @@
         phase.detail;
 
 
+
       const previousButton =
-        document.getElementById('previous-phase-btn');
+        document.getElementById(
+          'previous-phase-btn'
+        );
+
 
       const nextButton =
-        document.getElementById('next-phase-btn');
+        document.getElementById(
+          'next-phase-btn'
+        );
+
 
 
       previousButton.disabled =
         selectedPhaseIndex === 0;
+
 
       nextButton.disabled =
         selectedPhaseIndex ===
         curriculumPhases.length - 1;
 
 
+
       const container =
-        document.getElementById('weekly-container');
+        document.getElementById(
+          'weekly-container'
+        );
+
 
       container.innerHTML = '';
+
 
 
       const phaseWeeks =
@@ -1756,207 +1529,288 @@
         );
 
 
-      phaseWeeks.forEach(week => {
 
-        const isCurrentWeek =
-          week.week === seasonStatus.week;
-
-
-        const weekCard =
-          document.createElement('section');
+      phaseWeeks.forEach(
+        week => {
 
 
-        weekCard.id =
-          `weekly-week-${week.week}`;
+          const isCurrentWeek =
+            week.week ===
+            seasonStatus.week;
 
 
-        weekCard.className =
-          `scroll-mt-24 overflow-hidden rounded-2xl border ${
-            isCurrentWeek
-              ? 'border-yellow-400/70 shadow-xl'
-              : 'border-gray-700'
-          }`;
+
+          const weekCard =
+            document.createElement(
+              'section'
+            );
 
 
-        const hasDetailedSessions =
-          Array.isArray(week.sessions);
+
+          weekCard.id =
+            `weekly-week-${week.week}`;
 
 
-        let sessionsHTML = '';
+
+          weekCard.className =
+            `scroll-mt-24 overflow-hidden rounded-2xl border ${
+              isCurrentWeek
+                ? 'border-yellow-400/70 shadow-xl'
+                : 'border-gray-700'
+            }`;
 
 
-        if (hasDetailedSessions) {
 
-          sessionsHTML =
-            week.sessions
-              .map(session => createSessionCard(session))
-              .join('');
-
-        } else {
-
-          sessionsHTML = `
-            ${createPlaceholderSessionCard(1, 'Style of Play')}
-            ${createPlaceholderSessionCard(2, 'Structure')}
-            ${createPlaceholderSessionCard(3, 'Application')}
-          `;
-
-        }
+          const hasDetailedSessions =
+            Array.isArray(
+              week.sessions
+            );
 
 
-        const objective =
-          week.objective || week.description;
+
+          let sessionsHTML = '';
 
 
-        weekCard.innerHTML = `
 
-          <!-- HIGH-VISIBILITY WEEK HEADER -->
-          <div
-            class="bg-gray-950 border-b border-gray-700"
-          >
+          if (hasDetailedSessions) {
+
+
+            sessionsHTML =
+              week.sessions
+                .map(
+                  session =>
+                    createSessionCard(
+                      session
+                    )
+                )
+                .join('');
+
+
+          } else {
+
+
+            sessionsHTML = `
+
+              ${createPlaceholderSessionCard(
+                1,
+                'Style of Play'
+              )}
+
+              ${createPlaceholderSessionCard(
+                2,
+                'Structure'
+              )}
+
+              ${createPlaceholderSessionCard(
+                3,
+                'Application'
+              )}
+
+            `;
+
+          }
+
+
+
+          const objective =
+            week.objective ||
+            week.description;
+
+
+
+          weekCard.innerHTML = `
+
+
+            <!-- ================================================
+                 HIGH-VISIBILITY WEEK HEADER
+            ================================================= -->
 
             <div
-              class="flex flex-col md:flex-row md:items-stretch"
+              class="bg-gray-950 border-b border-gray-700"
             >
 
-              <!-- Week Number -->
+
               <div
-                class="px-5 py-4 md:px-7 md:py-6 flex md:flex-col items-center md:items-start justify-center gap-2 md:gap-0 md:min-w-[165px]"
-                style="
-                  background-color: var(--altafulla-yellow);
-                  color: #000000;
-                "
+                class="flex flex-col md:flex-row md:items-stretch"
               >
 
-                <span
-                  class="text-xs uppercase tracking-[0.2em] font-black"
-                >
-                  Week
-                </span>
 
-                <span
-                  class="text-4xl md:text-5xl font-black leading-none"
-                >
-                  ${week.week}
-                </span>
-
-              </div>
-
-
-              <!-- Week Theme -->
-              <div
-                class="flex-1 px-5 py-5 md:px-7 md:py-6"
-              >
-
+                <!-- Week Number -->
                 <div
-                  class="flex flex-col md:flex-row md:items-start md:justify-between gap-3"
+                  class="px-5 py-4 md:px-7 md:py-6 flex md:flex-col items-center md:items-start justify-center gap-2 md:gap-0 md:min-w-[165px]"
+                  style="
+                    background-color: var(--altafulla-yellow);
+                    color: #000000;
+                  "
                 >
 
-                  <div>
 
-                    <h3
-                      class="text-2xl md:text-3xl font-extrabold text-white"
-                    >
-                      ${week.focus}
-                    </h3>
+                  <span
+                    class="text-xs uppercase tracking-[0.2em] font-black"
+                  >
+                    Week
+                  </span>
 
-                    <p
-                      class="text-sm text-gray-400 mt-2 max-w-3xl leading-relaxed"
-                    >
-                      ${week.description}
-                    </p>
+
+                  <span
+                    class="text-4xl md:text-5xl font-black leading-none"
+                  >
+                    ${week.week}
+                  </span>
+
+
+                </div>
+
+
+
+                <!-- Week Theme -->
+                <div
+                  class="flex-1 px-5 py-5 md:px-7 md:py-6"
+                >
+
+
+                  <div
+                    class="flex flex-col md:flex-row md:items-start md:justify-between gap-3"
+                  >
+
+
+                    <div>
+
+
+                      <h3
+                        class="text-2xl md:text-3xl font-extrabold text-white"
+                      >
+                        ${week.focus}
+                      </h3>
+
+
+                      <p
+                        class="text-sm text-gray-400 mt-2 max-w-3xl leading-relaxed"
+                      >
+                        ${week.description}
+                      </p>
+
+
+                    </div>
+
+
+
+                    ${
+                      isCurrentWeek
+                        ? `
+
+                          <span
+                            class="self-start text-xs px-3 py-1.5 font-black rounded-full whitespace-nowrap"
+                            style="
+                              background-color: var(--altafulla-yellow);
+                              color: #000000;
+                            "
+                          >
+                            Current Week
+                          </span>
+
+                        `
+                        : ''
+                    }
+
 
                   </div>
 
 
-                  ${
-                    isCurrentWeek
-                      ? `
-                        <span
-                          class="self-start text-xs px-3 py-1.5 font-black rounded-full whitespace-nowrap"
-                          style="
-                            background-color: var(--altafulla-yellow);
-                            color: #000000;
-                          "
-                        >
-                          Current Week
-                        </span>
-                      `
-                      : ''
-                  }
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- ================================================
+                 WEEK CONTENT
+            ================================================= -->
+
+            <div
+              class="bg-gray-800 p-4 md:p-6 space-y-6"
+            >
+
+
+              <!-- Weekly Objective -->
+              <div
+                class="bg-gray-900/70 p-4 md:p-5 rounded-xl border border-gray-700"
+              >
+
+
+                <h4
+                  class="text-xs font-bold uppercase tracking-[0.16em] mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Weekly Objective
+                </h4>
+
+
+                <p
+                  class="text-sm text-gray-300 leading-relaxed"
+                >
+                  ${objective}
+                </p>
+
+
+              </div>
+
+
+
+              <!-- Sessions -->
+              <div>
+
+
+                <div
+                  class="flex items-center justify-between gap-3 mb-4"
+                >
+
+
+                  <h4
+                    class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500"
+                  >
+                    Training Sessions
+                  </h4>
+
+
+                  <span
+                    class="text-xs text-gray-500"
+                  >
+                    3 Sessions
+                  </span>
+
 
                 </div>
 
-              </div>
-
-            </div>
-
-          </div>
 
 
-          <!-- Week Content -->
-          <div
-            class="bg-gray-800 p-4 md:p-6 space-y-6"
-          >
-
-            <!-- Weekly Objective -->
-            <div
-              class="bg-gray-900/70 p-4 md:p-5 rounded-xl border border-gray-700"
-            >
-
-              <h4
-                class="text-xs font-bold uppercase tracking-[0.16em] mb-2"
-                style="color: var(--altafulla-blue);"
-              >
-                Weekly Objective
-              </h4>
-
-              <p
-                class="text-sm text-gray-300 leading-relaxed"
-              >
-                ${objective}
-              </p>
-
-            </div>
-
-
-            <!-- Sessions -->
-            <div>
-
-              <div
-                class="flex items-center justify-between gap-3 mb-4"
-              >
-
-                <h4
-                  class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500"
+                <div
+                  class="grid grid-cols-1 xl:grid-cols-3 gap-4"
                 >
-                  Training Sessions
-                </h4>
+                  ${sessionsHTML}
+                </div>
 
-                <span
-                  class="text-xs text-gray-500"
-                >
-                  3 Sessions
-                </span>
 
               </div>
 
-
-              <div
-                class="grid grid-cols-1 xl:grid-cols-3 gap-4"
-              >
-                ${sessionsHTML}
-              </div>
 
             </div>
 
-          </div>
 
-        `;
+          `;
 
 
-        container.appendChild(weekCard);
 
-      });
+          container.appendChild(
+            weekCard
+          );
+
+        }
+      );
 
     }
 
@@ -1970,16 +1824,29 @@
       'DOMContentLoaded',
       function() {
 
+
         renderRoadmap();
+
 
         renderWeeklyPhase();
 
-        switchMainTab('weekly');
+
+        /*
+          Weekly Plan remains the default tab.
+        */
+
+        switchMainTab(
+          'weekly'
+        );
+
 
       }
     );
 
+
   </script>
 
+
 </body>
+
 </html>
