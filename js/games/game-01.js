@@ -58,7 +58,7 @@ window.seasonGames.push({
 
   throwIns: {
 
-    oursTotal: 14,
+    oursTotal: 19,
 
     oursRetained: 11,
 
