@@ -22,8 +22,8 @@
   ========================================================== -->
 
   <script src="js/phase-01-foundation.js"></script>
-
   <script src="js/phase-02-style-implementation.js"></script>
+  <script src="js/phase-03-stability-development.js"></script>
 
 
   <style>
@@ -367,17 +367,7 @@
     /* ==========================================================
        PLACEHOLDER PHASE HELPER
 
-       Phases 3–10 have not yet been fully written.
-
-       This helper keeps the current weekly topics visible without
-       requiring all 120 session objects to live on this page.
-
-       When a phase is completed:
-
-       1. Create its JS file.
-       2. Load that file in the <head>.
-       3. Replace its placeholder variable in the "weeks" array
-          below with the new phase variable.
+       Used only for phases that have not yet been developed.
     ========================================================== */
 
     function createPlaceholderPhase(weekData) {
@@ -393,46 +383,6 @@
       }));
 
     }
-
-
-
-    /* ==========================================================
-       PHASE 3 PLACEHOLDER
-       Weeks 9–12
-    ========================================================== */
-
-    const phase3PlaceholderWeeks =
-      createPlaceholderPhase([
-
-        {
-          week: 9,
-          focus: 'Escaping an Aggressive High Press',
-          description:
-            'Recognize pressure and create the free player through positioning and movement.'
-        },
-
-        {
-          week: 10,
-          focus: 'Pressing the Opponent into Predictable Areas',
-          description:
-            'Use pressure and cover to guide the opponent toward our pressing traps.'
-        },
-
-        {
-          week: 11,
-          focus: 'Winning First and Second Balls from Direct Play',
-          description:
-            'Compete for the first contact and organize collectively around the second ball.'
-        },
-
-        {
-          week: 12,
-          focus: 'Protecting Against Counters While We Attack',
-          description:
-            'Maintain balance and rest defense while committing players forward.'
-        }
-
-      ]);
 
 
 
@@ -719,19 +669,14 @@
     /* ==========================================================
        COMPLETE SEASON CURRICULUM
 
-       Phase 1 and Phase 2 come from external files.
+       Phases 1–3 come from external files.
 
-       Phases 3–10 currently use lightweight placeholders.
+       Phases 4–10 currently use lightweight placeholders.
 
-       Eventually this can become:
-
-       const weeks = [
-         ...phase1Weeks,
-         ...phase2Weeks,
-         ...phase3Weeks,
-         ...phase4Weeks,
-         ...
-       ];
+       As each phase is developed, replace its placeholder with:
+       ...phase4Weeks
+       ...phase5Weeks
+       etc.
     ========================================================== */
 
     const weeks = [
@@ -740,7 +685,7 @@
 
       ...phase2Weeks,
 
-      ...phase3PlaceholderWeeks,
+      ...phase3Weeks,
 
       ...phase4PlaceholderWeeks,
 
@@ -1399,8 +1344,6 @@
 
     /* ==========================================================
        PLACEHOLDER SESSION CARD
-
-       Used for phases that have not yet been fully developed.
     ========================================================== */
 
     function createPlaceholderSessionCard(
