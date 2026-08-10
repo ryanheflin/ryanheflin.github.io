@@ -1198,7 +1198,19 @@
           )
           .join('');
 
-
+      ${session.positions ? `
+        <div class="bg-gray-800/70 p-3 rounded-lg border border-gray-700">
+          <p class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1">
+            Enfoque Posicional
+          </p>
+          <p class="text-sm font-semibold text-white">
+            ${session.positions.focus}
+          </p>
+          <p class="text-xs text-gray-400 mt-1 leading-relaxed">
+            ${session.positions.detail}
+          </p>
+        </div>
+      ` : ''}
 
       const missed =
         session.missed
