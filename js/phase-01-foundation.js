@@ -17,7 +17,7 @@ const phase1Weeks = [
 
       {
         number: 1,
-        title: 'Go Forward',
+        title: 'Find the Free Man',
         question: 'Where is the space?',
 
         purpose:
@@ -31,8 +31,6 @@ const phase1Weeks = [
           'If we cannot go forward → keep it.'
         ],
 
-        sessionPlan:
-          'sessions/session-01-go-forward.pdf', 
 
         missed: [
           'Our first thought with the ball is forward.',
