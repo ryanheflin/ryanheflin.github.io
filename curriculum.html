@@ -2,69 +2,40 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-
-  <title>
-    Análisis de Partidos | CE Altafulla U15
-  </title>
+  <title>Plan de Entrenamiento | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Shared Site JavaScript -->
-  <script
-    src="js/site.js"
-    defer
-  ></script>
-
+  <script src="js/site.js" defer></script>
 
   <!-- =========================================================
-       GAME DATA STORAGE
+       CURRICULUM PHASE DATA
+
+       Completed phases live in separate files.
+
+       As future phases are developed, create their files here
+       and replace the temporary placeholder data farther below.
   ========================================================== -->
 
-  <script>
-
-    window.seasonGames = [];
-
-  </script>
-
-
-  <!-- =========================================================
-       GAME FILES
-
-       Add each game here as it is played.
-
-       Example:
-
-       <script src="js/games/game-02.js"></script>
-       <script src="js/games/game-03.js"></script>
-  ========================================================== -->
-
-  <script src="js/games/game-01.js"></script>
+  <script src="js/phase-01-foundation.js"></script>
+  <script src="js/phase-02-style-implementation.js"></script>
+  <script src="js/phase-03-stability-development.js"></script>
 
 
   <style>
 
     :root {
-
       --altafulla-yellow: #f2e40a;
-
       --altafulla-black: #000000;
-
       --altafulla-blue: #62bed6;
-
     }
 
-
     html {
-
       scroll-behavior: smooth;
-
     }
 
   </style>
@@ -72,9 +43,7 @@
 </head>
 
 
-<body
-  class="bg-gray-900 text-white antialiased flex min-h-screen pb-16"
->
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
 
   <!-- =========================================================
@@ -90,7 +59,7 @@
   ========================================================== -->
 
   <main
-    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8"
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-10"
   >
 
 
@@ -98,156 +67,170 @@
          PAGE HEADER
     ======================================================== -->
 
-    <header>
+    <header class="space-y-3">
 
-      <h2
-        class="text-3xl font-extrabold mb-1"
-        style="color: var(--altafulla-yellow);"
-      >
-        Análisis de Partidos
-      </h2>
+      <div>
+
+        <h2
+          class="text-3xl font-extrabold mb-1"
+          style="color: var(--altafulla-yellow);"
+        >
+          Plan de Entrenamiento
+        </h2>
+
+        <p
+          class="text-gray-400 text-sm leading-relaxed max-w-4xl"
+        >
+          Nuestro marco para desarrollar nuestra manera de jugar a lo largo de la temporada.
+          Cada fase y cada sesión de entrenamiento están conectadas con problemas
+          que queremos reconocer y resolver en el partido, guiados por nuestro
+          Modelo de Juego. El plan nos da una dirección, mientras que cada sesión
+          se adapta a los jugadores y a lo que el juego nos va mostrando.
+        </p>
+
+      </div>
 
 
-      <p
-        class="text-gray-400 text-sm"
-      >
-        Resultados de la temporada, análisis de cada partido
-        y evolución del rendimiento del equipo.
-      </p>
+      <!-- Full Game Model -->
+      <div>
+
+        <a
+          href="altafulla-s15-game-model.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+          style="color: var(--altafulla-blue);"
+        >
+          📘 Ver Modelo de Juego Completo →
+        </a>
+
+      </div>
 
     </header>
 
 
 
     <!-- =======================================================
-         SEASON KPI CARDS
+         PRIMARY CURRICULUM NAVIGATION
     ======================================================== -->
 
-    <div
-      class="grid grid-cols-2 md:grid-cols-4 gap-4"
-    >
+    <section class="space-y-6">
 
 
-      <!-- Record -->
-      <div
-        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-      >
+      <!-- Main Tabs -->
+      <div class="border-b border-gray-700">
 
-        <span
-          class="text-gray-400 text-xs font-bold uppercase"
-        >
-          Balance
-        </span>
+        <div class="flex gap-6 overflow-x-auto">
 
 
-        <p
-          id="season-record"
-          class="text-2xl font-extrabold text-white mt-1"
-        >
-          0G - 0E - 0P
-        </p>
-
-      </div>
-
-
-
-      <!-- Goals Scored -->
-      <div
-        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-      >
-
-        <span
-          class="text-gray-400 text-xs font-bold uppercase"
-        >
-          Goles a Favor
-        </span>
+          <button
+            onclick="switchMainTab('weekly')"
+            id="main-tab-btn-weekly"
+            class="main-tab-btn pb-3 font-semibold text-white border-b-2 whitespace-nowrap"
+            style="border-color: var(--altafulla-yellow);"
+          >
+            Plan Semanal
+          </button>
 
 
-        <p
-          id="season-goals-for"
-          class="text-2xl font-extrabold mt-1"
-          style="color: var(--altafulla-yellow);"
-        >
-          0
-        </p>
+          <button
+            onclick="switchMainTab('roadmap')"
+            id="main-tab-btn-roadmap"
+            class="main-tab-btn pb-3 font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
+          >
+            Hoja de Ruta de la Temporada
+          </button>
+
+
+        </div>
 
       </div>
 
 
 
-      <!-- Goals Conceded -->
-      <div
-        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-      >
-
-        <span
-          class="text-gray-400 text-xs font-bold uppercase"
-        >
-          Goles en Contra
-        </span>
-
-
-        <p
-          id="season-goals-against"
-          class="text-2xl font-extrabold mt-1"
-          style="color: var(--altafulla-blue);"
-        >
-          0
-        </p>
-
-      </div>
-
-
-
-      <!-- Clean Sheets -->
-      <div
-        class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-      >
-
-        <span
-          class="text-gray-400 text-xs font-bold uppercase"
-        >
-          Porterías a Cero
-        </span>
-
-
-        <p
-          id="season-clean-sheets"
-          class="text-2xl font-extrabold text-green-400 mt-1"
-        >
-          0
-        </p>
-
-      </div>
-
-
-    </div>
-
-
-
-    <!-- =======================================================
-         MATCH NAVIGATION
-    ======================================================== -->
-
-    <section
-      class="space-y-6"
-    >
-
+      <!-- =====================================================
+           WEEKLY PLAN
+      ====================================================== -->
 
       <div
-        id="game-navigation"
-        class="flex gap-2 border-b border-gray-700 pb-3 overflow-x-auto"
+        id="main-tab-weekly"
+        class="main-tab-content space-y-6"
       >
 
 
-        <button
-          onclick="showSeasonOverview()"
-          id="game-btn-overview"
-          class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 whitespace-nowrap"
-          style="color: var(--altafulla-yellow);"
+        <!-- Phase Navigation -->
+        <section
+          class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
         >
-          📊 Resumen de la Temporada
-        </button>
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+          >
+
+
+            <!-- Previous Phase -->
+            <button
+              id="previous-phase-btn"
+              onclick="changePhase(-1)"
+              class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-left"
+            >
+              ← Fase Anterior
+            </button>
+
+
+
+            <!-- Current Phase -->
+            <div class="text-center flex-1">
+
+              <span
+                id="weekly-phase-weeks"
+                class="text-xs uppercase tracking-[0.2em] font-bold"
+                style="color: var(--altafulla-yellow);"
+              >
+                Semanas 1–4
+              </span>
+
+
+              <h3
+                id="weekly-phase-name"
+                class="text-2xl md:text-3xl font-extrabold text-white mt-1"
+              >
+                Fundamentos
+              </h3>
+
+
+              <p
+                id="weekly-phase-detail"
+                class="text-sm text-gray-400 mt-1"
+              >
+                Introducción → Crear Hábitos
+              </p>
+
+            </div>
+
+
+
+            <!-- Next Phase -->
+            <button
+              id="next-phase-btn"
+              onclick="changePhase(1)"
+              class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-right"
+            >
+              Siguiente Fase →
+            </button>
+
+
+          </div>
+
+        </section>
+
+
+
+        <!-- Weekly Cards -->
+        <div
+          id="weekly-container"
+          class="space-y-8"
+        ></div>
 
 
       </div>
@@ -255,319 +238,39 @@
 
 
       <!-- =====================================================
-           CONTENT AREA
+           SEASON ROADMAP
       ====================================================== -->
 
       <div
-        id="game-content"
+        id="main-tab-roadmap"
+        class="main-tab-content hidden space-y-6"
       >
 
 
-        <!-- ===================================================
-             SEASON OVERVIEW
-        ==================================================== -->
-
-        <div
-          id="game-view-overview"
-          class="game-view space-y-6"
-        >
-
-
-          <!-- Team Summary -->
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-            <h3
-              class="text-xl font-bold mb-2"
-            >
-              Resumen de Estadísticas del Equipo
-            </h3>
-
-
-            <p
-              id="overview-message"
-              class="text-sm text-gray-300"
-            >
-              Todavía no se ha disputado ningún partido.
-              Las tendencias de la temporada y el análisis estadístico
-              aparecerán aquí a medida que se añadan los datos de los partidos.
-            </p>
-
-          </section>
-
-
-
-          <!-- =================================================
-               GAME MODEL INDICATORS
-          ================================================== -->
-
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-
-            <div class="mb-5">
-
-              <h3
-                class="text-xl font-bold"
-              >
-                Indicadores del Modelo de Juego
-              </h3>
-
-
-              <p
-                class="text-sm text-gray-400 mt-1"
-              >
-                Indicadores de toda la temporada relacionados
-                con nuestra manera de jugar.
-              </p>
-
-            </div>
-
-
-
-            <div
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4"
-            >
-
-
-              <!-- Our Throw-Ins -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Saques de Banda Propios Conservados
-                </span>
-
-
-                <p
-                  id="season-our-throwins"
-                  class="text-2xl font-extrabold mt-2"
-                  style="color: var(--altafulla-yellow);"
-                >
-                  —
-                </p>
-
-
-                <p
-                  id="season-our-throwins-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 / 0
-                </p>
-
-              </div>
-
-
-
-              <!-- Their Throw-Ins -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Saques de Banda Rivales Recuperados
-                </span>
-
-
-                <p
-                  id="season-their-throwins"
-                  class="text-2xl font-extrabold mt-2"
-                  style="color: var(--altafulla-blue);"
-                >
-                  —
-                </p>
-
-
-                <p
-                  id="season-their-throwins-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 / 0
-                </p>
-
-              </div>
-
-
-
-              <!-- Purposeless Turnovers / Match -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Pérdidas sin Intención / Partido
-                </span>
-
-
-                <p
-                  id="season-purposeless-average"
-                  class="text-2xl font-extrabold text-white mt-2"
-                >
-                  —
-                </p>
-
-
-                <p
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  Media de la temporada
-                </p>
-
-              </div>
-
-
-
-              <!-- Total Purposeless Turnovers -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Pérdidas sin Intención
-                </span>
-
-
-                <p
-                  id="season-purposeless-total"
-                  class="text-2xl font-extrabold text-white mt-2"
-                >
-                  0
-                </p>
-
-
-                <p
-                  id="season-purposeless-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 golpeos · 0 conducciones
-                </p>
-
-              </div>
-
-
-            </div>
-
-
-            <!-- Definition -->
-            <div
-              class="mt-5 pt-4 border-t border-gray-700"
-            >
-
-              <p
-                class="text-xs text-gray-500 leading-relaxed"
-              >
-                <strong class="text-gray-400">
-                  Pérdida sin intención:
-                </strong>
-
-                una pérdida evitable en la que el jugador tenía
-                una opción razonable para realizar una acción
-                controlada con el balón, pero cedió la posesión
-                mediante un golpeo o una conducción precipitada,
-                sin una intención clara o sin pensar.
-              </p>
-
-            </div>
-
-
-          </section>
-
-
-
-          <!-- =================================================
-               RESULTS
-          ================================================== -->
-
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-
-            <div
-              class="flex items-center justify-between gap-4 mb-4"
-            >
-
-              <h3
-                class="text-xl font-bold"
-              >
-                Resultados
-              </h3>
-
-
-              <span
-                id="matches-played"
-                class="text-xs text-gray-500 uppercase tracking-wide font-bold"
-              >
-                0 Partidos
-              </span>
-
-            </div>
-
-
-
-            <div
-              id="season-results"
-              class="space-y-3"
-            >
-
-              <p
-                class="text-sm text-gray-400"
-              >
-                Los resultados aparecerán aquí cuando se disputen los partidos.
-              </p>
-
-            </div>
-
-
-          </section>
-
-
-
-          <!-- =================================================
-               SEASON TRENDS
-          ================================================== -->
-
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-            <h3
-              class="text-xl font-bold mb-2"
-            >
-              Tendencias de la Temporada
-            </h3>
-
-
-            <p
-              class="text-sm text-gray-300"
-            >
-              A medida que aumente el número de partidos, aquí podremos
-              añadir tendencias del equipo, observaciones tácticas recurrentes
-              y estadísticas de la temporada.
-            </p>
-
-          </section>
-
+        <div>
+
+          <h3 class="text-xl font-bold text-white">
+            Hoja de Ruta de Desarrollo 2026/27
+          </h3>
+
+          <p class="text-sm text-gray-400 mt-1">
+            La temporada está organizada en grandes fases, y cada una
+            se construye sobre los hábitos y la comprensión desarrollados anteriormente.
+          </p>
 
         </div>
+
+
+        <div
+          id="roadmap-container"
+          class="space-y-4"
+        ></div>
 
 
       </div>
 
 
     </section>
-
 
   </main>
 
@@ -593,309 +296,485 @@
 
 
     /* ==========================================================
-       BASIC HELPERS
+       SEASON SETTINGS
     ========================================================== */
 
-    function percentage(part, total) {
+    const seasonStart =
+      new Date('2026-08-23T00:00:00');
 
-      if (!total) {
-        return null;
+
+    const MS_PER_WEEK =
+      7 * 24 * 60 * 60 * 1000;
+
+
+
+    /* ==========================================================
+       PHASE INFORMATION
+    ========================================================== */
+
+    const curriculumPhases = [
+
+      {
+        name: 'Fundamentos',
+        detail: 'Introducción → Crear Hábitos',
+        startWeek: 1,
+        endWeek: 4
+      },
+
+      {
+        name: 'Implementación del Estilo',
+        detail: 'Reducir el Caos → Crear Estructura',
+        startWeek: 5,
+        endWeek: 8
+      },
+
+      {
+        name: 'Estabilidad y Desarrollo',
+        detail: 'Hacer Consistente la Estructura Bajo Presión',
+        startWeek: 9,
+        endWeek: 12
+      },
+
+      {
+        name: 'Organización',
+        detail: 'Empezar a Controlar los Partidos',
+        startWeek: 13,
+        endWeek: 16
+      },
+
+      {
+        name: 'Consolidación',
+        detail: 'Revisar → Reforzar → Conectar',
+        startWeek: 17,
+        endWeek: 20
+      },
+
+      {
+        name: 'Aplicación',
+        detail: 'Adaptación → Leer los Partidos',
+        startWeek: 21,
+        endWeek: 24
+      },
+
+      {
+        name: 'Crecimiento Táctico',
+        detail: 'Añadir Complejidad y Flexibilidad',
+        startWeek: 25,
+        endWeek: 28
+      },
+
+      {
+        name: 'Control Total y Perfeccionamiento',
+        detail: 'Jugar el Partido en Nuestros Términos',
+        startWeek: 29,
+        endWeek: 32
+      },
+
+      {
+        name: 'Eficiencia',
+        detail: 'Claridad y Confianza',
+        startWeek: 33,
+        endWeek: 36
+      },
+
+      {
+        name: 'Fase Final',
+        detail: 'Perfeccionar → Adaptar → Competir',
+        startWeek: 37,
+        endWeek: 40
       }
 
-
-      return Math.round(
-        (part / total) * 100
-      );
-
-    }
+    ];
 
 
 
-    function getGameResult(game) {
+    /* ==========================================================
+       PLACEHOLDER PHASE HELPER
 
-      if (
-        game.goalsFor >
-        game.goalsAgainst
-      ) {
+       Used only for phases that have not yet been developed.
+    ========================================================== */
 
-        return 'W';
+    function createPlaceholderPhase(weekData) {
 
-      }
+      return weekData.map(item => ({
 
+        week: item.week,
 
-      if (
-        game.goalsFor <
-        game.goalsAgainst
-      ) {
+        focus: item.focus,
 
-        return 'L';
+        description: item.description
 
-      }
-
-
-      return 'D';
-
-    }
-
-
-
-    function getResultLabel(game) {
-
-      const result =
-        getGameResult(game);
-
-
-      if (result === 'W') {
-        return 'Victoria';
-      }
-
-
-      if (result === 'L') {
-        return 'Derrota';
-      }
-
-
-      return 'Empate';
-
-    }
-
-
-
-    function getResultDisplayLetter(game) {
-
-      const result =
-        getGameResult(game);
-
-
-      if (result === 'W') {
-        return 'G';
-      }
-
-
-      if (result === 'L') {
-        return 'P';
-      }
-
-
-      return 'E';
-
-    }
-
-
-
-    function getResultClasses(game) {
-
-      const result =
-        getGameResult(game);
-
-
-      if (result === 'W') {
-
-        return 'bg-green-500/10 text-green-400 border-green-500/30';
-
-      }
-
-
-      if (result === 'L') {
-
-        return 'bg-red-500/10 text-red-400 border-red-500/30';
-
-      }
-
-
-      return 'bg-gray-700 text-gray-300 border-gray-600';
+      }));
 
     }
 
 
 
     /* ==========================================================
-       SEASON STATISTICS
+       PHASE 4 PLACEHOLDER
+       Weeks 13–16
     ========================================================== */
 
-    function calculateSeasonStats() {
+    const phase4PlaceholderWeeks =
+      createPlaceholderPhase([
 
-      const games =
-        window.seasonGames || [];
+        {
+          week: 13,
+          focus: "Construir y Mantener Ataques en Campo Rival",
+          description:
+            'Mantener la presión sobre el rival mediante una posesión y un posicionamiento conectados.'
+        },
 
+        {
+          week: 14,
+          focus: 'Defender Nuestro Campo: Proteger el Centro y Orientar Hacia Fuera',
+          description:
+            'Mantenernos compactos, proteger los espacios peligrosos y orientar el juego lejos de nuestra portería.'
+        },
 
-      let wins = 0;
+        {
+          week: 15,
+          focus: 'Mantener al Rival Encerrado Después de Perder Nuestro Ataque',
+          description:
+            'Comprimir el espacio y recuperar segundas jugadas para mantener la presión ofensiva.'
+        },
 
-      let draws = 0;
-
-      let losses = 0;
-
-
-      let goalsFor = 0;
-
-      let goalsAgainst = 0;
-
-      let cleanSheets = 0;
-
-
-      let ourThrowInsTotal = 0;
-
-      let ourThrowInsRetained = 0;
-
-
-      let theirThrowInsTotal = 0;
-
-      let theirThrowInsWon = 0;
-
-
-      let purposelessTotal = 0;
-
-      let purposelessKicks = 0;
-
-      let purposelessCarries = 0;
-
-
-
-      games.forEach(game => {
-
-
-        goalsFor +=
-          Number(
-            game.goalsFor || 0
-          );
-
-
-        goalsAgainst +=
-          Number(
-            game.goalsAgainst || 0
-          );
-
-
-
-        if (
-          game.goalsFor >
-          game.goalsAgainst
-        ) {
-
-          wins++;
-
+        {
+          week: 16,
+          focus: 'Recuperar Nuestra Estructura Cuando Superan la Presión',
+          description:
+            'Retrasar el ataque y volver a conectarnos rápidamente cuando el rival supera nuestra presión.'
         }
 
-        else if (
-          game.goalsFor <
-          game.goalsAgainst
-        ) {
+      ]);
 
-          losses++;
 
+
+    /* ==========================================================
+       PHASE 5 PLACEHOLDER
+       Weeks 17–20
+    ========================================================== */
+
+    const phase5PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 17,
+          focus: 'Jugar a Través de la Presión desde el Portero hasta el Medio Campo',
+          description:
+            'Revisar y conectar nuestros principios de salida de balón bajo una presión realista.'
+        },
+
+        {
+          week: 18,
+          focus: "Crear y Aprovechar Espacios Alrededor del Área Rival",
+          description:
+            'Reconocer combinaciones, movimientos y espacios que generan oportunidades de finalización.'
+        },
+
+        {
+          week: 19,
+          focus: 'Recuperar la Posesión Mediante la Presión Colectiva',
+          description:
+            'Conectar los desencadenantes de presión, las ayudas, las coberturas y la compactación.'
+        },
+
+        {
+          week: 20,
+          focus: 'Gestionar los Momentos Justo Antes y Después de las Pérdidas y Recuperaciones',
+          description:
+            'Mejorar el posicionamiento y la toma de decisiones alrededor de los cambios de posesión.'
         }
 
-        else {
+      ]);
 
-          draws++;
 
+
+    /* ==========================================================
+       PHASE 6 PLACEHOLDER
+       Weeks 21–24
+    ========================================================== */
+
+    const phase6PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 21,
+          focus: 'Elegir entre Salida Corta o Juego Directo Ante Diferentes Presiones',
+          description:
+            'Leer al rival y elegir la solución que mejor aproveche el espacio disponible.'
+        },
+
+        {
+          week: 22,
+          focus: 'Atacar a un Rival que Defiende Bajo y Compacto',
+          description:
+            'Crear y aprovechar espacios contra rivales que protegen la zona alrededor de su portería.'
+        },
+
+        {
+          week: 23,
+          focus: 'Defender Contra un Rival que Juega Directo',
+          description:
+            'Controlar la profundidad, los primeros contactos, las segundas jugadas y los espacios a su alrededor.'
+        },
+
+        {
+          week: 24,
+          focus: 'Reconocer Cuándo Presionar Alto y Cuándo Defender en Bloque Medio',
+          description:
+            'Leer la organización del equipo y elegir la altura defensiva adecuada.'
         }
 
+      ]);
 
 
-        if (
-          Number(
-            game.goalsAgainst
-          ) === 0
-        ) {
 
-          cleanSheets++;
+    /* ==========================================================
+       PHASE 7 PLACEHOLDER
+       Weeks 25–28
+    ========================================================== */
 
+    const phase7PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 25,
+          focus: 'Crear un Jugador Libre Ante Diferentes Primeras Líneas de Presión',
+          description:
+            'Manipular la presión rival mediante el posicionamiento, las rotaciones y la superioridad numérica.'
+        },
+
+        {
+          week: 26,
+          focus: 'Crear Superioridades en Banda con Extremo, Lateral y Centrocampista',
+          description:
+            'Crear múltiples soluciones alrededor del balón para aislar o combinar en zonas exteriores.'
+        },
+
+        {
+          week: 27,
+          focus: 'Crear Espacio Mediante Rotaciones del 9, el 10 y los Centrocampistas',
+          description:
+            'Utilizar movimientos coordinados para alterar las referencias defensivas y crear espacios centrales.'
+        },
+
+        {
+          week: 28,
+          focus: 'Cambiar el Punto de Ataque Cuando un Lado Está Saturado',
+          description:
+            'Reconocer las acumulaciones, mover al rival y aprovechar después el lado opuesto.'
         }
 
+      ]);
 
 
-        /* Throw-Ins */
 
-        if (game.throwIns) {
+    /* ==========================================================
+       PHASE 8 PLACEHOLDER
+       Weeks 29–32
+    ========================================================== */
 
-          ourThrowInsTotal +=
-            Number(
-              game.throwIns.oursTotal || 0
-            );
+    const phase8PlaceholderWeeks =
+      createPlaceholderPhase([
 
+        {
+          week: 29,
+          focus: 'Controlar el Territorio Mediante una Posesión Sostenida',
+          description:
+            'Utilizar el balón y el posicionamiento del equipo para mantener el partido en zonas favorables.'
+        },
 
-          ourThrowInsRetained +=
-            Number(
-              game.throwIns.oursRetained || 0
-            );
+        {
+          week: 30,
+          focus: 'Atacar Repetidamente sin Quedar Expuestos al Contraataque',
+          description:
+            'Equilibrar los jugadores que atacan con un posicionamiento que proteja la siguiente transición.'
+        },
 
+        {
+          week: 31,
+          focus: 'Cambiar el Ritmo',
+          description:
+            'Tener paciencia hasta que aparezca la oportunidad y entonces atacar con rapidez y decisión.'
+        },
 
-          theirThrowInsTotal +=
-            Number(
-              game.throwIns.theirsTotal || 0
-            );
-
-
-          theirThrowInsWon +=
-            Number(
-              game.throwIns.theirsWonByUs || 0
-            );
-
+        {
+          week: 32,
+          focus: 'Controlar el Momento del Partido Cuando se Vuelve Caótico',
+          description:
+            'Recuperar la estructura, calmar el partido y volver a controlarlo mediante decisiones colectivas.'
         }
 
+      ]);
 
 
-        /* Purposeless Turnovers */
 
-        if (
-          game.purposelessTurnovers
-        ) {
+    /* ==========================================================
+       PHASE 9 PLACEHOLDER
+       Weeks 33–36
+    ========================================================== */
 
-          purposelessTotal +=
-            Number(
-              game.purposelessTurnovers.total || 0
-            );
+    const phase9PlaceholderWeeks =
+      createPlaceholderPhase([
 
+        {
+          week: 33,
+          focus: 'Reconocer y Aprovechar el Espacio a la Espalda de la Línea Defensiva',
+          description:
+            'Identificar los momentos para amenazar la profundidad y atacar el espacio a la espalda.'
+        },
 
-          purposelessKicks +=
-            Number(
-              game.purposelessTurnovers.kicks || 0
-            );
+        {
+          week: 34,
+          focus: 'Reconocer y Aprovechar el Espacio Entre Líneas',
+          description:
+            'Encontrar jugadores entre líneas y conectar acciones hacia delante desde zonas centrales.'
+        },
 
+        {
+          week: 35,
+          focus: 'Convertir las Llegadas por Banda en Ocasiones de Calidad',
+          description:
+            'Mejorar los movimientos finales, los apoyos, los envíos y la ocupación de las zonas de remate.'
+        },
 
-          purposelessCarries +=
-            Number(
-              game.purposelessTurnovers.carries || 0
-            );
-
+        {
+          week: 36,
+          focus: 'Convertir Recuperaciones en Ocasiones Antes de que el Rival se Reorganice',
+          description:
+            'Atacar las transiciones con intención inmediata hacia delante y apoyos coordinados.'
         }
 
+      ]);
 
-      });
 
+
+    /* ==========================================================
+       PHASE 10 PLACEHOLDER
+       Weeks 37–40
+    ========================================================== */
+
+    const phase10PlaceholderWeeks =
+      createPlaceholderPhase([
+
+        {
+          week: 37,
+          focus: 'Proteger una Ventaja sin Perder Nuestra Identidad',
+          description:
+            'Controlar el riesgo mientras seguimos jugando con intención y confianza.'
+        },
+
+        {
+          week: 38,
+          focus: 'Superar a un Rival Cuando Necesitamos Remontar',
+          description:
+            'Aumentar la presión ofensiva manteniendo la claridad y la estructura colectiva.'
+        },
+
+        {
+          week: 39,
+          focus: 'Cambiar Nuestra Estructura sin Cambiar Nuestro Estilo',
+          description:
+            'Adaptar el posicionamiento y los roles manteniendo nuestros principios fundamentales de juego.'
+        },
+
+        {
+          week: 40,
+          focus: 'Leer y Resolver el Partido',
+          description:
+            'Integrar todo el modelo de juego y resolver los problemas que presenta el partido.'
+        }
+
+      ]);
+
+
+
+    /* ==========================================================
+       COMPLETE SEASON CURRICULUM
+
+       Phases 1–3 come from external files.
+
+       Phases 4–10 currently use lightweight placeholders.
+
+       As each phase is developed, replace its placeholder with:
+       ...phase4Weeks
+       ...phase5Weeks
+       etc.
+    ========================================================== */
+
+    const weeks = [
+
+      ...phase1Weeks,
+
+      ...phase2Weeks,
+
+      ...phase3Weeks,
+
+      ...phase4PlaceholderWeeks,
+
+      ...phase5PlaceholderWeeks,
+
+      ...phase6PlaceholderWeeks,
+
+      ...phase7PlaceholderWeeks,
+
+      ...phase8PlaceholderWeeks,
+
+      ...phase9PlaceholderWeeks,
+
+      ...phase10PlaceholderWeeks
+
+    ];
+
+
+
+    /* ==========================================================
+       CURRENT SEASON STATUS
+    ========================================================== */
+
+    function getSeasonStatus() {
+
+      const now = new Date();
+
+
+      let currentWeek = 1;
+
+
+      if (now >= seasonStart) {
+
+        currentWeek =
+          Math.floor(
+            (now - seasonStart) / MS_PER_WEEK
+          ) + 1;
+
+      }
+
+
+      currentWeek =
+        Math.max(
+          1,
+          Math.min(40, currentWeek)
+        );
+
+
+      const phaseIndex =
+        Math.min(
+          curriculumPhases.length - 1,
+          Math.floor(
+            (currentWeek - 1) / 4
+          )
+        );
 
 
       return {
 
-        wins,
+        week: currentWeek,
 
-        draws,
+        phaseIndex: phaseIndex,
 
-        losses,
-
-        goalsFor,
-
-        goalsAgainst,
-
-        cleanSheets,
-
-        matches:
-          games.length,
-
-        ourThrowInsTotal,
-
-        ourThrowInsRetained,
-
-        theirThrowInsTotal,
-
-        theirThrowInsWon,
-
-        purposelessTotal,
-
-        purposelessKicks,
-
-        purposelessCarries
+        phase:
+          curriculumPhases[phaseIndex]
 
       };
 
@@ -903,149 +782,82 @@
 
 
 
+    const seasonStatus =
+      getSeasonStatus();
+
+
+    let selectedPhaseIndex =
+      seasonStatus.phaseIndex;
+
+
+
     /* ==========================================================
-       RENDER SEASON KPIs
+       PRIMARY TAB NAVIGATION
     ========================================================== */
 
-    function renderSeasonKPIs() {
-
-      const stats =
-        calculateSeasonStats();
+    function switchMainTab(tabName) {
 
 
+      document
+        .querySelectorAll('.main-tab-content')
+        .forEach(tab => {
 
-      /* Record */
+          tab.classList.add('hidden');
 
-      document.getElementById(
-        'season-record'
-      ).textContent =
-        `${stats.wins}G - ${stats.draws}E - ${stats.losses}P`;
+        });
 
 
 
-      /* Goals */
+      document
+        .querySelectorAll('.main-tab-btn')
+        .forEach(btn => {
 
-      document.getElementById(
-        'season-goals-for'
-      ).textContent =
-        stats.goalsFor;
+          btn.classList.remove('text-white');
 
+          btn.classList.add('text-gray-400');
 
-      document.getElementById(
-        'season-goals-against'
-      ).textContent =
-        stats.goalsAgainst;
+          btn.style.borderColor =
+            'transparent';
 
-
-      document.getElementById(
-        'season-clean-sheets'
-      ).textContent =
-        stats.cleanSheets;
+        });
 
 
 
-      /* Matches */
-
-      document.getElementById(
-        'matches-played'
-      ).textContent =
-        `${stats.matches} ${
-          stats.matches === 1
-            ? 'Partido'
-            : 'Partidos'
-        }`;
-
-
-
-      /* Our Throw-Ins */
-
-      const ourThrowInPercentage =
-        percentage(
-          stats.ourThrowInsRetained,
-          stats.ourThrowInsTotal
-        );
-
-
-      document.getElementById(
-        'season-our-throwins'
-      ).textContent =
-        ourThrowInPercentage !== null
-          ? `${ourThrowInPercentage}%`
-          : '—';
-
-
-      document.getElementById(
-        'season-our-throwins-detail'
-      ).textContent =
-        `${stats.ourThrowInsRetained} / ${stats.ourThrowInsTotal}`;
-
-
-
-      /* Opponent Throw-Ins */
-
-      const theirThrowInPercentage =
-        percentage(
-          stats.theirThrowInsWon,
-          stats.theirThrowInsTotal
-        );
-
-
-      document.getElementById(
-        'season-their-throwins'
-      ).textContent =
-        theirThrowInPercentage !== null
-          ? `${theirThrowInPercentage}%`
-          : '—';
-
-
-      document.getElementById(
-        'season-their-throwins-detail'
-      ).textContent =
-        `${stats.theirThrowInsWon} / ${stats.theirThrowInsTotal}`;
-
-
-
-      /* Purposeless Turnovers */
-
-      document.getElementById(
-        'season-purposeless-total'
-      ).textContent =
-        stats.purposelessTotal;
-
-
-      document.getElementById(
-        'season-purposeless-detail'
-      ).textContent =
-        `${stats.purposelessKicks} golpeos · ${stats.purposelessCarries} conducciones`;
-
-
-
-      const turnoverAverage =
-        stats.matches > 0
-          ? (
-              stats.purposelessTotal /
-              stats.matches
-            ).toFixed(1)
-          : null;
-
-
-      document.getElementById(
-        'season-purposeless-average'
-      ).textContent =
-        turnoverAverage !== null
-          ? turnoverAverage
-          : '—';
-
-
-
-      if (
-        stats.matches > 0
-      ) {
-
+      const selectedTab =
         document.getElementById(
-          'overview-message'
-        ).textContent =
-          'Los totales de la temporada y los indicadores del modelo de juego se actualizan automáticamente a medida que se añade el informe de cada partido.';
+          `main-tab-${tabName}`
+        );
+
+
+      const selectedButton =
+        document.getElementById(
+          `main-tab-btn-${tabName}`
+        );
+
+
+
+      if (selectedTab) {
+
+        selectedTab.classList.remove('hidden');
+
+      }
+
+
+
+      if (selectedButton) {
+
+        selectedButton
+          .classList
+          .remove('text-gray-400');
+
+
+        selectedButton
+          .classList
+          .add('text-white');
+
+
+        selectedButton.style.borderColor =
+          'var(--altafulla-yellow)';
 
       }
 
@@ -1054,1092 +866,202 @@
 
 
     /* ==========================================================
-       MATCH NAVIGATION
+       ROADMAP
     ========================================================== */
 
-    function renderGameNavigation() {
+    function renderRoadmap() {
 
-      const navigation =
-        document.getElementById(
-          'game-navigation'
-        );
-
-
-      const games =
-        [...(window.seasonGames || [])]
-          .sort(
-            (a, b) =>
-              a.gameNumber -
-              b.gameNumber
-          );
-
-
-
-      games.forEach(game => {
-
-        const button =
-          document.createElement(
-            'button'
-          );
-
-
-        button.id =
-          `game-btn-${game.id}`;
-
-
-        button.className =
-          'game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap';
-
-
-        button.textContent =
-          `Partido ${game.gameNumber}: ${
-            game.homeAway === 'away'
-              ? '@'
-              : 'vs.'
-          } ${game.opponent}`;
-
-
-        button.onclick =
-          () =>
-            showGame(
-              game.id
-            );
-
-
-        navigation.appendChild(
-          button
-        );
-
-      });
-
-    }
-
-
-
-    /* ==========================================================
-       SEASON RESULTS
-    ========================================================== */
-
-    function renderSeasonResults() {
 
       const container =
         document.getElementById(
-          'season-results'
+          'roadmap-container'
         );
-
-
-      const games =
-        [...(window.seasonGames || [])]
-          .sort(
-            (a, b) =>
-              a.gameNumber -
-              b.gameNumber
-          );
-
-
-
-      if (
-        games.length === 0
-      ) {
-
-        return;
-
-      }
-
 
 
       container.innerHTML = '';
 
 
 
-      games.forEach(game => {
-
-        const row =
-          document.createElement(
-            'button'
-          );
+      curriculumPhases.forEach(
+        (phase, index) => {
 
 
-        row.type =
-          'button';
-
-
-        row.onclick =
-          () =>
-            showGame(
-              game.id
-            );
-
-
-        row.className =
-          'w-full text-left bg-gray-900/60 border border-gray-700 rounded-lg p-4 hover:border-gray-500 transition-colors';
+          const isCurrentPhase =
+            index ===
+            seasonStatus.phaseIndex;
 
 
 
-        row.innerHTML = `
+          const phaseCard =
+            document.createElement('div');
 
-          <div
-            class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
-          >
 
-            <div>
 
-              <div
-                class="flex items-center flex-wrap gap-2"
+          phaseCard.className =
+            `phase-card bg-gray-800 p-5 rounded-xl border ${
+              isCurrentPhase
+                ? 'border-yellow-400/60 shadow-lg'
+                : 'border-gray-700'
+            }`;
+
+
+
+          let weekButtons = '';
+
+
+
+          for (
+            let weekNumber = phase.startWeek;
+            weekNumber <= phase.endWeek;
+            weekNumber++
+          ) {
+
+
+            const isCurrentWeek =
+              weekNumber ===
+              seasonStatus.week;
+
+
+
+            weekButtons += `
+
+              <button
+                onclick="openWeek(${weekNumber})"
+                class="
+                  text-xs
+                  px-3
+                  py-1.5
+                  rounded-full
+                  border
+                  transition-colors
+
+                  ${
+                    isCurrentWeek
+                      ? 'bg-yellow-400 text-black border-yellow-400 font-bold'
+                      : 'bg-gray-900/60 text-gray-300 border-gray-700 hover:border-gray-500 hover:text-white'
+                  }
+                "
               >
+                Semana ${weekNumber}
+              </button>
+
+            `;
+
+          }
+
+
+
+          phaseCard.innerHTML = `
+
+            <div
+              class="flex flex-col md:flex-row md:items-start md:justify-between gap-5"
+            >
+
+
+              <div class="flex-1">
+
 
                 <span
-                  class="text-xs text-gray-500 uppercase tracking-wide font-bold"
+                  class="text-xs uppercase tracking-wide text-gray-500"
                 >
-                  Partido ${game.gameNumber}
+                  Semanas ${phase.startWeek}–${phase.endWeek}
                 </span>
-
-
-                <span
-                  class="text-xs px-2 py-0.5 rounded-full border ${getResultClasses(game)}"
-                >
-                  ${getResultLabel(game)}
-                </span>
-
-              </div>
-
-
-              <h4
-                class="text-base font-bold text-white mt-1"
-              >
-                ${
-                  game.homeAway === 'away'
-                    ? `${game.opponent} vs. CE Altafulla`
-                    : `CE Altafulla vs. ${game.opponent}`
-                }
-              </h4>
-
-
-              ${
-                game.date
-                  ? `
-
-                    <p
-                      class="text-xs text-gray-500 mt-1"
-                    >
-                      ${game.date}
-                    </p>
-
-                  `
-                  : ''
-              }
-
-            </div>
-
-
-            <div
-              class="text-2xl font-black text-white"
-            >
-              ${game.goalsFor}–${game.goalsAgainst}
-            </div>
-
-          </div>
-
-        `;
-
-
-        container.appendChild(
-          row
-        );
-
-      });
-
-    }
-
-
-
-    /* ==========================================================
-       GENERAL GAME METRICS
-    ========================================================== */
-
-    function renderGameMetrics(metrics) {
-
-      const entries =
-        Object.entries(
-          metrics
-        );
-
-
-      if (
-        entries.length === 0
-      ) {
-
-        return '';
-
-      }
-
-
-
-      return `
-
-        <section>
-
-          <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-4"
-          >
-
-            ${entries
-              .map(
-                ([label, value]) => `
-
-                  <div
-                    class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
-                  >
-
-                    <span
-                      class="text-gray-400 text-xs font-bold uppercase"
-                    >
-                      ${label}
-                    </span>
-
-
-                    <p
-                      class="text-2xl font-extrabold text-white mt-1"
-                    >
-                      ${value}
-                    </p>
-
-                  </div>
-
-                `
-              )
-              .join('')}
-
-          </div>
-
-        </section>
-
-      `;
-
-    }
-
-
-
-    /* ==========================================================
-       GAME MODEL INDICATORS — INDIVIDUAL MATCH
-    ========================================================== */
-
-    function renderGameModelIndicators(game) {
-
-
-      const throwIns =
-        game.throwIns || {};
-
-
-      const turnovers =
-        game.purposelessTurnovers || {};
-
-
-
-      const ourTotal =
-        Number(
-          throwIns.oursTotal || 0
-        );
-
-
-      const ourRetained =
-        Number(
-          throwIns.oursRetained || 0
-        );
-
-
-      const theirTotal =
-        Number(
-          throwIns.theirsTotal || 0
-        );
-
-
-      const theirsWon =
-        Number(
-          throwIns.theirsWonByUs || 0
-        );
-
-
-
-      const ourPercentage =
-        percentage(
-          ourRetained,
-          ourTotal
-        );
-
-
-      const theirPercentage =
-        percentage(
-          theirsWon,
-          theirTotal
-        );
-
-
-
-      const turnoverTotal =
-        Number(
-          turnovers.total || 0
-        );
-
-
-      const turnoverKicks =
-        Number(
-          turnovers.kicks || 0
-        );
-
-
-      const turnoverCarries =
-        Number(
-          turnovers.carries || 0
-        );
-
-
-
-      return `
-
-        <section
-          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-        >
-
-
-          <div class="mb-5">
-
-            <h3
-              class="text-xl font-bold"
-            >
-              Indicadores del Modelo de Juego
-            </h3>
-
-
-            <p
-              class="text-sm text-gray-400 mt-1"
-            >
-              Indicadores específicos del partido relacionados
-              con nuestros hábitos de juego.
-            </p>
-
-          </div>
-
-
-
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-4"
-          >
-
-
-            <!-- Our Throw-Ins -->
-            <div
-              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-            >
-
-              <span
-                class="text-xs uppercase tracking-wide font-bold text-gray-500"
-              >
-                Saques de Banda Propios Conservados
-              </span>
-
-
-              <p
-                class="text-3xl font-extrabold mt-2"
-                style="color: var(--altafulla-yellow);"
-              >
-                ${
-                  ourPercentage !== null
-                    ? `${ourPercentage}%`
-                    : '—'
-                }
-              </p>
-
-
-              <p
-                class="text-xs text-gray-500 mt-1"
-              >
-                ${ourRetained} de ${ourTotal}
-              </p>
-
-            </div>
-
-
-
-            <!-- Opponent Throw-Ins -->
-            <div
-              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-            >
-
-              <span
-                class="text-xs uppercase tracking-wide font-bold text-gray-500"
-              >
-                Saques de Banda Rivales Recuperados
-              </span>
-
-
-              <p
-                class="text-3xl font-extrabold mt-2"
-                style="color: var(--altafulla-blue);"
-              >
-                ${
-                  theirPercentage !== null
-                    ? `${theirPercentage}%`
-                    : '—'
-                }
-              </p>
-
-
-              <p
-                class="text-xs text-gray-500 mt-1"
-              >
-                ${theirsWon} de ${theirTotal}
-              </p>
-
-            </div>
-
-
-
-            <!-- Purposeless Turnovers -->
-            <div
-              class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-            >
-
-              <span
-                class="text-xs uppercase tracking-wide font-bold text-gray-500"
-              >
-                Pérdidas sin Intención
-              </span>
-
-
-              <p
-                class="text-3xl font-extrabold text-white mt-2"
-              >
-                ${turnoverTotal}
-              </p>
-
-
-              <p
-                class="text-xs text-gray-500 mt-1"
-              >
-                ${turnoverKicks} golpeos ·
-                ${turnoverCarries} conducciones
-              </p>
-
-            </div>
-
-
-          </div>
-
-
-
-          <div
-            class="mt-5 pt-4 border-t border-gray-700"
-          >
-
-            <p
-              class="text-xs text-gray-500 leading-relaxed"
-            >
-
-              <strong
-                class="text-gray-400"
-              >
-                Pérdida sin intención:
-              </strong>
-
-              una pérdida evitable en la que el jugador tenía
-              una opción razonable para realizar una acción
-              controlada con el balón, pero cedió la posesión
-              mediante un golpeo o una conducción precipitada,
-              sin una intención clara o sin pensar.
-
-            </p>
-
-          </div>
-
-
-        </section>
-
-      `;
-
-    }
-
-
-
-    /* ==========================================================
-       MATCH VIEW
-    ========================================================== */
-
-    function createGameView(game) {
-
-
-      const result =
-        getGameResult(game);
-
-
-
-      const title =
-        game.homeAway === 'away'
-          ? `${game.opponent} vs. CE Altafulla`
-          : `CE Altafulla vs. ${game.opponent}`;
-
-
-
-      const clipsHTML =
-        Array.isArray(
-          game.clips
-        ) &&
-        game.clips.length > 0
-
-          ? `
-
-            <section
-              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-            >
-
-              <h3
-                class="text-xl font-bold mb-4"
-              >
-                Vídeos
-              </h3>
-
-
-              <div
-                class="grid grid-cols-1 lg:grid-cols-2 gap-5"
-              >
-
-                ${game.clips
-                  .map(
-                    clip => `
-
-                      <div
-                        class="bg-gray-900/60 rounded-lg border border-gray-700 overflow-hidden"
-                      >
-
-                        ${
-                          clip.embedUrl
-                            ? `
-
-                              <div
-                                class="aspect-video"
-                              >
-
-                                <iframe
-                                  src="${clip.embedUrl}"
-                                  class="w-full h-full"
-                                  loading="lazy"
-                                  allowfullscreen
-                                ></iframe>
-
-                              </div>
-
-                            `
-                            : ''
-                        }
-
-
-                        <div
-                          class="p-4"
-                        >
-
-                          <h4
-                            class="font-bold text-white"
-                          >
-                            ${clip.title}
-                          </h4>
-
-
-                          ${
-                            clip.description
-                              ? `
-
-                                <p
-                                  class="text-sm text-gray-400 mt-1"
-                                >
-                                  ${clip.description}
-                                </p>
-
-                              `
-                              : ''
-                          }
-
-                        </div>
-
-                      </div>
-
-                    `
-                  )
-                  .join('')}
-
-              </div>
-
-            </section>
-
-          `
-
-          : '';
-
-
-
-      return `
-
-        <div
-          id="game-view-${game.id}"
-          class="game-view space-y-6"
-        >
-
-
-          <!-- ===============================================
-               MATCH HEADER
-          ================================================ -->
-
-          <section
-            class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
-          >
-
-
-            <div
-              class="bg-gray-950 border-b border-gray-700 p-5 md:p-6"
-            >
-
-
-              <div
-                class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
-              >
-
-
-                <div>
-
-                  <span
-                    class="text-xs uppercase tracking-[0.18em] font-bold"
-                    style="color: var(--altafulla-yellow);"
-                  >
-                    Jornada ${game.gameNumber}
-                  </span>
-
-
-                  <h3
-                    class="text-2xl md:text-3xl font-extrabold text-white mt-1"
-                  >
-                    ${title}
-                  </h3>
-
-
-                  <div
-                    class="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-400 mt-2"
-                  >
-
-                    ${
-                      game.date
-                        ? `<span>${game.date}</span>`
-                        : ''
-                    }
-
-
-                    ${
-                      game.competition
-                        ? `<span>${game.competition}</span>`
-                        : ''
-                    }
-
-
-                    ${
-                      game.location
-                        ? `<span>${game.location}</span>`
-                        : ''
-                    }
-
-                  </div>
-
-                </div>
 
 
 
                 <div
-                  class="flex items-center gap-4"
+                  class="flex flex-wrap items-center gap-3 mt-1"
                 >
 
-                  <div
-                    class="text-4xl md:text-5xl font-black text-white"
+
+                  <h4
+                    class="text-xl font-bold text-white"
                   >
-
-                    ${game.goalsFor}
-
-                    <span
-                      class="text-gray-600"
-                    >
-                      –
-                    </span>
-
-                    ${game.goalsAgainst}
-
-                  </div>
+                    ${phase.name}
+                  </h4>
 
 
-                  <span
-                    class="text-xs px-3 py-1.5 rounded-full border font-bold ${getResultClasses(game)}"
-                  >
-                    ${getResultDisplayLetter(game)}
-                  </span>
+                  ${
+                    isCurrentPhase
+                      ? `
 
+                        <span
+                          class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full"
+                        >
+                          Fase Actual
+                        </span>
+
+                      `
+                      : ''
+                  }
+
+
+                </div>
+
+
+
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  ${phase.detail}
+                </p>
+
+
+
+                <div
+                  class="flex flex-wrap gap-2 mt-4"
+                >
+                  ${weekButtons}
                 </div>
 
 
               </div>
 
 
+
+              <button
+                onclick="openPhase(${index})"
+                class="self-start text-sm font-semibold whitespace-nowrap hover:underline"
+                style="color: var(--altafulla-blue);"
+              >
+                Ver Fase →
+              </button>
+
+
             </div>
 
-
-
-            ${
-              game.summary
-                ? `
-
-                  <div
-                    class="p-5 md:p-6"
-                  >
-
-                    <h4
-                      class="text-xs uppercase tracking-wide font-bold mb-2"
-                      style="color: var(--altafulla-blue);"
-                    >
-                      Resumen del Partido
-                    </h4>
-
-
-                    <p
-                      class="text-sm text-gray-300 leading-relaxed"
-                    >
-                      ${game.summary}
-                    </p>
-
-                  </div>
-
-                `
-                : ''
-            }
-
-
-          </section>
+          `;
 
 
 
-          <!-- ===============================================
-               GENERAL MATCH STATISTICS
-          ================================================ -->
+          container.appendChild(
+            phaseCard
+          );
 
-          ${
-            game.metrics
-              ? renderGameMetrics(
-                  game.metrics
-                )
-              : ''
-          }
-
-
-
-          <!-- ===============================================
-               GAME MODEL INDICATORS
-          ================================================ -->
-
-          ${renderGameModelIndicators(game)}
-
-
-
-          <!-- ===============================================
-               WHAT WE SAW
-          ================================================ -->
-
-          ${
-            game.analysis
-              ? `
-
-                <section
-                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-                >
-
-                  <h3
-                    class="text-xl font-bold mb-4"
-                  >
-                    Lo que Vimos
-                  </h3>
-
-
-                  <div
-                    class="text-sm text-gray-300 leading-relaxed space-y-3"
-                  >
-                    ${game.analysis}
-                  </div>
-
-                </section>
-
-              `
-              : ''
-          }
-
-
-
-          <!-- ===============================================
-               CONNECTION TO GAME MODEL
-          ================================================ -->
-
-          ${
-            game.gameModel
-              ? `
-
-                <section
-                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-                >
-
-                  <h3
-                    class="text-xl font-bold mb-4"
-                  >
-                    Conexión con Nuestro Modelo de Juego
-                  </h3>
-
-
-                  <div
-                    class="text-sm text-gray-300 leading-relaxed space-y-3"
-                  >
-                    ${game.gameModel}
-                  </div>
-
-                </section>
-
-              `
-              : ''
-          }
-
-
-
-          <!-- ===============================================
-               WHAT COMES NEXT
-          ================================================ -->
-
-          ${
-            game.nextSteps
-              ? `
-
-                <section
-                  class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-                >
-
-                  <h3
-                    class="text-xl font-bold mb-4"
-                  >
-                    Próximos Pasos
-                  </h3>
-
-
-                  <div
-                    class="text-sm text-gray-300 leading-relaxed space-y-3"
-                  >
-                    ${game.nextSteps}
-                  </div>
-
-                </section>
-
-              `
-              : ''
-          }
-
-
-
-          <!-- VIDEO -->
-          ${clipsHTML}
-
-
-        </div>
-
-      `;
+        }
+      );
 
     }
 
 
 
     /* ==========================================================
-       RENDER GAME VIEWS
+       OPEN PHASE
     ========================================================== */
 
-    function renderGameViews() {
+    function openPhase(index) {
 
-      const container =
-        document.getElementById(
-          'game-content'
-        );
 
+      selectedPhaseIndex =
+        index;
 
-      const games =
-        [...(window.seasonGames || [])]
-          .sort(
-            (a, b) =>
-              a.gameNumber -
-              b.gameNumber
-          );
 
+      switchMainTab(
+        'weekly'
+      );
 
 
-      games.forEach(game => {
-
-        container.insertAdjacentHTML(
-          'beforeend',
-
-          createGameView(
-            game
-          )
-        );
-
-      });
-
-    }
-
-
-
-    /* ==========================================================
-       VIEW SWITCHING
-    ========================================================== */
-
-    function resetGameButtons() {
-
-      document
-        .querySelectorAll(
-          '.game-btn'
-        )
-        .forEach(button => {
-
-          button.classList.remove(
-            'bg-gray-700',
-            'text-white'
-          );
-
-
-          button.classList.add(
-            'text-gray-400'
-          );
-
-
-          button.style.color = '';
-
-        });
-
-    }
-
-
-
-    function hideGameViews() {
-
-      document
-        .querySelectorAll(
-          '.game-view'
-        )
-        .forEach(view => {
-
-          view.classList.add(
-            'hidden'
-          );
-
-        });
-
-    }
-
-
-
-    function showSeasonOverview() {
-
-      hideGameViews();
-
-      resetGameButtons();
-
-
-      const overview =
-        document.getElementById(
-          'game-view-overview'
-        );
-
-
-      const button =
-        document.getElementById(
-          'game-btn-overview'
-        );
-
-
-
-      if (overview) {
-
-        overview.classList.remove(
-          'hidden'
-        );
-
-      }
-
-
-
-      if (button) {
-
-        button.classList.add(
-          'bg-gray-700',
-          'text-white'
-        );
-
-
-        button.classList.remove(
-          'text-gray-400'
-        );
-
-
-        button.style.color =
-          'var(--altafulla-yellow)';
-
-      }
-
-    }
-
-
-
-    function showGame(gameId) {
-
-      hideGameViews();
-
-      resetGameButtons();
-
-
-      const view =
-        document.getElementById(
-          `game-view-${gameId}`
-        );
-
-
-      const button =
-        document.getElementById(
-          `game-btn-${gameId}`
-        );
-
-
-
-      if (view) {
-
-        view.classList.remove(
-          'hidden'
-        );
-
-      }
-
-
-
-      if (button) {
-
-        button.classList.add(
-          'bg-gray-700',
-          'text-white'
-        );
-
-
-        button.classList.remove(
-          'text-gray-400'
-        );
-
-
-        button.style.color =
-          'var(--altafulla-yellow)';
-
-      }
-
+      renderWeeklyPhase();
 
 
       window.scrollTo({
@@ -2155,7 +1077,724 @@
 
 
     /* ==========================================================
-       INITIALIZE
+       OPEN SPECIFIC WEEK
+    ========================================================== */
+
+    function openWeek(weekNumber) {
+
+
+      selectedPhaseIndex =
+        Math.floor(
+          (weekNumber - 1) / 4
+        );
+
+
+      switchMainTab(
+        'weekly'
+      );
+
+
+      renderWeeklyPhase();
+
+
+
+      setTimeout(() => {
+
+
+        const weekCard =
+          document.getElementById(
+            `weekly-week-${weekNumber}`
+          );
+
+
+        if (weekCard) {
+
+          weekCard.scrollIntoView({
+
+            behavior: 'smooth',
+
+            block: 'start'
+
+          });
+
+        }
+
+
+      }, 100);
+
+    }
+
+
+
+    /* ==========================================================
+       PREVIOUS / NEXT PHASE
+    ========================================================== */
+
+    function changePhase(direction) {
+
+
+      const newIndex =
+        selectedPhaseIndex +
+        direction;
+
+
+      if (
+        newIndex < 0 ||
+        newIndex >= curriculumPhases.length
+      ) {
+
+        return;
+
+      }
+
+
+      selectedPhaseIndex =
+        newIndex;
+
+
+      renderWeeklyPhase();
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: 'smooth'
+
+      });
+
+    }
+
+
+
+    /* ==========================================================
+       SESSION CARD
+    ========================================================== */
+
+    function createSessionCard(session) {
+
+
+      const habits =
+        session.habits
+          .map(
+            habit => `
+
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-yellow);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${habit}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
+
+
+
+      const missed =
+        session.missed
+          .map(
+            point => `
+
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-blue);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${point}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
+
+
+
+      return `
+
+        <div
+          class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
+        >
+
+
+          <!-- Session Header -->
+          <div>
+
+
+            <span
+              class="text-xs uppercase tracking-[0.18em] font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Sesión ${session.number}
+            </span>
+
+
+
+            <h5
+              class="text-xl font-extrabold text-white mt-1"
+            >
+              ${session.title}
+            </h5>
+
+
+
+            <p
+              class="text-sm font-semibold text-gray-300 mt-2"
+            >
+              “${session.question}”
+            </p>
+
+
+          </div>
+
+
+
+          <!-- Purpose -->
+          <div>
+
+
+            <h6
+              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
+            >
+              Objetivo
+            </h6>
+
+
+            <p
+              class="text-sm text-gray-300 leading-relaxed"
+            >
+              ${session.purpose}
+            </p>
+
+
+          </div>
+
+
+
+          <!-- Habits -->
+          <div>
+
+
+            <h6
+              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
+            >
+              Hábitos que Queremos Desarrollar
+            </h6>
+
+
+            <ul
+              class="text-sm text-gray-300 space-y-1.5"
+            >
+              ${habits}
+            </ul>
+
+
+          </div>
+
+
+
+          <!-- Session Plan PDF -->
+          ${
+            session.sessionPlan
+              ? `
+
+                <div>
+
+                  <a
+                    href="${session.sessionPlan}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                    style="color: var(--altafulla-blue);"
+                  >
+                    📋 Ver Plan de la Sesión →
+                  </a>
+
+                </div>
+
+              `
+              : ''
+          }
+
+
+
+          <!-- If You Missed It -->
+          <div
+            class="border-t border-gray-700 pt-4"
+          >
+
+
+            <h6
+              class="text-xs uppercase tracking-wide font-bold mb-2"
+              style="color: var(--altafulla-blue);"
+            >
+              Si Te Lo Perdiste
+            </h6>
+
+
+            <ul
+              class="text-sm text-gray-400 space-y-1.5"
+            >
+              ${missed}
+            </ul>
+
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       PLACEHOLDER SESSION CARD
+    ========================================================== */
+
+    function createPlaceholderSessionCard(
+      number,
+      title
+    ) {
+
+
+      return `
+
+        <div
+          class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-4"
+        >
+
+
+          <div>
+
+
+            <span
+              class="text-xs uppercase tracking-[0.18em] font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Sesión ${number}
+            </span>
+
+
+            <h5
+              class="text-lg font-bold text-white mt-1"
+            >
+              ${title}
+            </h5>
+
+
+          </div>
+
+
+
+          <p
+            class="text-sm text-gray-400"
+          >
+            Detalles de la sesión pendientes de desarrollar.
+          </p>
+
+
+        </div>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       WEEKLY PHASE VIEW
+    ========================================================== */
+
+    function renderWeeklyPhase() {
+
+
+      const phase =
+        curriculumPhases[
+          selectedPhaseIndex
+        ];
+
+
+
+      document.getElementById(
+        'weekly-phase-weeks'
+      ).textContent =
+        `Semanas ${phase.startWeek}–${phase.endWeek}`;
+
+
+
+      document.getElementById(
+        'weekly-phase-name'
+      ).textContent =
+        phase.name;
+
+
+
+      document.getElementById(
+        'weekly-phase-detail'
+      ).textContent =
+        phase.detail;
+
+
+
+      const previousButton =
+        document.getElementById(
+          'previous-phase-btn'
+        );
+
+
+      const nextButton =
+        document.getElementById(
+          'next-phase-btn'
+        );
+
+
+
+      previousButton.disabled =
+        selectedPhaseIndex === 0;
+
+
+      nextButton.disabled =
+        selectedPhaseIndex ===
+        curriculumPhases.length - 1;
+
+
+
+      const container =
+        document.getElementById(
+          'weekly-container'
+        );
+
+
+      container.innerHTML = '';
+
+
+
+      const phaseWeeks =
+        weeks.filter(
+          week =>
+            week.week >= phase.startWeek &&
+            week.week <= phase.endWeek
+        );
+
+
+
+      phaseWeeks.forEach(
+        week => {
+
+
+          const isCurrentWeek =
+            week.week ===
+            seasonStatus.week;
+
+
+
+          const weekCard =
+            document.createElement(
+              'section'
+            );
+
+
+
+          weekCard.id =
+            `weekly-week-${week.week}`;
+
+
+
+          weekCard.className =
+            `scroll-mt-24 overflow-hidden rounded-2xl border transition-all duration-200 ${
+              isCurrentWeek
+                ? 'border-yellow-400/70 shadow-xl opacity-100'
+                : 'border-gray-700 opacity-50 hover:opacity-80'
+            }`;
+
+
+
+          const hasDetailedSessions =
+            Array.isArray(
+              week.sessions
+            );
+
+
+
+          let sessionsHTML = '';
+
+
+
+          if (hasDetailedSessions) {
+
+
+            sessionsHTML =
+              week.sessions
+                .map(
+                  session =>
+                    createSessionCard(
+                      session
+                    )
+                )
+                .join('');
+
+
+          } else {
+
+
+            sessionsHTML = `
+
+              ${createPlaceholderSessionCard(
+                1,
+                'Estilo de Juego'
+              )}
+
+              ${createPlaceholderSessionCard(
+                2,
+                'Estructura'
+              )}
+
+              ${createPlaceholderSessionCard(
+                3,
+                'Aplicación'
+              )}
+
+            `;
+
+          }
+
+
+
+          const objective =
+            week.objective ||
+            week.description;
+
+
+
+          weekCard.innerHTML = `
+
+
+            <!-- ================================================
+                 HIGH-VISIBILITY WEEK HEADER
+            ================================================= -->
+
+            <div
+              class="bg-gray-950 border-b border-gray-700"
+            >
+
+
+              <div
+                class="flex flex-col md:flex-row md:items-stretch"
+              >
+
+
+                <!-- Week Number -->
+                <div
+                  class="px-5 py-4 md:px-7 md:py-6 flex md:flex-col items-center md:items-start justify-center gap-2 md:gap-0 md:min-w-[165px] ${
+                    isCurrentWeek
+                      ? ''
+                      : 'bg-gray-700 text-gray-300'
+                  }"
+                  ${
+                    isCurrentWeek
+                      ? `
+                        style="
+                          background-color: var(--altafulla-yellow);
+                          color: #000000;
+                        "
+                      `
+                      : ''
+                  }
+                >
+
+
+                  <span
+                    class="text-xs uppercase tracking-[0.2em] font-black"
+                  >
+                    Semana
+                  </span>
+
+
+                  <span
+                    class="text-4xl md:text-5xl font-black leading-none"
+                  >
+                    ${week.week}
+                  </span>
+
+
+                </div>
+
+
+
+                <!-- Week Theme -->
+                <div
+                  class="flex-1 px-5 py-5 md:px-7 md:py-6"
+                >
+
+
+                  <div
+                    class="flex flex-col md:flex-row md:items-start md:justify-between gap-3"
+                  >
+
+
+                    <div>
+
+
+                      <h3
+                        class="text-2xl md:text-3xl font-extrabold text-white"
+                      >
+                        ${week.focus}
+                      </h3>
+
+
+                      <p
+                        class="text-sm text-gray-400 mt-2 max-w-3xl leading-relaxed"
+                      >
+                        ${week.description}
+                      </p>
+
+
+                    </div>
+
+
+
+                    ${
+                      isCurrentWeek
+                        ? `
+
+                          <span
+                            class="self-start text-xs px-3 py-1.5 font-black rounded-full whitespace-nowrap"
+                            style="
+                              background-color: var(--altafulla-yellow);
+                              color: #000000;
+                            "
+                          >
+                            Semana Actual
+                          </span>
+
+                        `
+                        : ''
+                    }
+
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+
+            <!-- ================================================
+                 WEEK CONTENT
+            ================================================= -->
+
+            <div
+              class="bg-gray-800 p-4 md:p-6 space-y-6"
+            >
+
+
+              <!-- Weekly Objective -->
+              <div
+                class="bg-gray-900/70 p-4 md:p-5 rounded-xl border border-gray-700"
+              >
+
+
+                <h4
+                  class="text-xs font-bold uppercase tracking-[0.16em] mb-2"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Objetivo Semanal
+                </h4>
+
+
+                <p
+                  class="text-sm text-gray-300 leading-relaxed"
+                >
+                  ${objective}
+                </p>
+
+
+              </div>
+
+
+
+              <!-- Sessions -->
+              <div>
+
+
+                <div
+                  class="flex items-center justify-between gap-3 mb-4"
+                >
+
+
+                  <h4
+                    class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500"
+                  >
+                    Sesiones de Entrenamiento
+                  </h4>
+
+
+                  <span
+                    class="text-xs text-gray-500"
+                  >
+                    3 Sesiones
+                  </span>
+
+
+                </div>
+
+
+
+                <div
+                  class="grid grid-cols-1 xl:grid-cols-3 gap-4"
+                >
+                  ${sessionsHTML}
+                </div>
+
+
+              </div>
+
+
+            </div>
+
+
+          `;
+
+
+
+          container.appendChild(
+            weekCard
+          );
+
+        }
+      );
+
+    }
+
+
+
+    /* ==========================================================
+       INITIALIZE PAGE
     ========================================================== */
 
     document.addEventListener(
@@ -2163,19 +1802,19 @@
       function() {
 
 
-        renderSeasonKPIs();
+        renderRoadmap();
 
 
-        renderGameNavigation();
+        renderWeeklyPhase();
 
 
-        renderSeasonResults();
+        /*
+          Weekly Plan remains the default tab.
+        */
 
-
-        renderGameViews();
-
-
-        showSeasonOverview();
+        switchMainTab(
+          'weekly'
+        );
 
 
       }
