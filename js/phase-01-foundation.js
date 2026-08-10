@@ -26,7 +26,6 @@ const phase1Weeks = [
             habits: [
             'When the ball moves → we move.',
             'Move to become free or make someone else free.',
-            'Be visible and available to the player on the ball.',
             'Receive facing forward when possible.',
             'If you cannot face forward → play the way you face.'
             ],
