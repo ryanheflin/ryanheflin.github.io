@@ -1,89 +1,89 @@
-const phase2Weeks = [
+const phase3Weeks = [
 
   /* ========================================================
-     WEEK 5
+     WEEK 9
   ======================================================== */
   {
-    week: 5,
-    focus: 'Salir desde Atrás Contra la Presión',
+    week: 9,
+    focus: 'Salir de una Presión Alta Agresiva',
 
     description:
-      'Usar la presión rival para crear un jugador libre y organizar nuestro ataque desde el portero y la defensa.',
+      'Mantener la calma bajo presión, reconocer el espacio que deja el rival y salir hacia él con intención.',
 
     objective:
-      'Encontrar soluciones con calma ante la presión. Jugar corto no es el objetivo: el objetivo es crear y aprovechar al jugador libre.',
+      'Hacer nuestra salida fiable bajo presión intensa. Mantener la calma, crear apoyos claros, reconocer el lado libre y convertir la salida en ataque.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Atraer la Presión',
-        question: '¿Puede su presión crear espacio para nosotros?',
+        title: 'Calma Bajo Presión',
+        question: '¿Podemos seguir viendo el juego cuando la presión aumenta?',
 
         purpose:
-          'Entender cómo atraer la presión puede liberar a un compañero en otra zona y empezar a crear conexiones desde el portero y la defensa.',
+          'Mantener la calma, mirar y crear apoyos cuando el rival presiona fuerte y reduce nuestro tiempo y espacio.',
 
         habits: [
-          'El portero participa con balón.',
-          'Crea superioridad ante su primera línea.',
-          'No te escondas detrás de rivales.',
-          'Atrae la presión antes de soltar el balón.',
-          'Si no presionan → avanza.'
+          'Mira antes de recibir.',
+          'El primer toque prepara la siguiente acción.',
+          'Da más de una solución al jugador con balón.',
+          'No te escondas detrás de la presión.',
+          'Si vienen demasiados → ataca el espacio que dejan.'
         ],
 
         missed: [
-          'No jugamos corto solo para dar pases cortos: buscamos crear un jugador libre.',
-          'Cada rival que viene a presionar deja espacio en otro sitio.',
-          'Muéstrate y crea buenos ángulos de pase. No te escondas detrás de defensores.',
-          'Si nadie te presiona, avanza con el balón. Si te presionan, encuentra al jugador que han liberado.'
+          'La presión debe acelerar tu pensamiento, no hacerte entrar en pánico.',
+          'Cuando puedas, conoce tu siguiente opción antes de recibir.',
+          'Los compañeros ayudan creando ángulos claros.',
+          'Una presión agresiva suele dejar espacio en otro sitio: debemos encontrarlo.'
         ]
       },
 
       {
         number: 2,
-        title: 'Por Dentro, por Fuera o por Encima',
-        question: '¿Dónde ha dejado espacio su presión?',
+        title: 'Encontrar el Lado Libre',
+        question: 'Si cargan un lado con presión, ¿dónde está el espacio libre?',
 
         purpose:
-          'Reconocer diferentes soluciones contra la presión en vez de forzar siempre la misma salida.',
+          'Reconocer cuándo el rival concentra la presión en un lado y cambiar hacia el lado libre.',
 
         habits: [
-          'Por dentro si el medio está libre.',
-          'Por fuera si el centro está cerrado.',
-          'Por encima si hay espacio detrás de la presión.',
-          'Balón atrás → crea amplitud.',
-          'Prepárate para las segundas jugadas después del juego directo.'
+          'Reconoce cuándo un lado está saturado.',
+          'Usa al portero cuando sea necesario.',
+          'Apoya por detrás y al otro lado del balón.',
+          'Cambia antes de quedar atrapado.',
+          'Cuando salimos → mira hacia delante.'
         ],
 
         missed: [
-          'Contra la presión, busca el espacio que dejan: por dentro, por fuera o por encima.',
-          'Jugar directo no es un error si el mejor espacio está detrás de su presión.',
-          'No fuerces un pase que el rival ya ha cerrado.',
-          'Si jugamos por encima de la presión, debemos estar preparados para el primer y segundo balón.'
+          'Si el rival lleva muchos jugadores a un lado, probablemente el otro está libre.',
+          'No te quedes atrapado porque el balón empezó en un lado.',
+          'El portero puede ayudarnos a cambiar el ataque.',
+          'Cuando salimos de la presión, atacamos el espacio antes de que se recuperen.'
         ]
       },
 
       {
         number: 3,
-        title: 'Salir para Atacar',
-        question: 'Cuando rompemos la presión, ¿podemos hacer daño?',
+        title: 'Romper la Presión y Seguir',
+        question: '¿Podemos convertir la salida en ataque?',
 
         purpose:
-          'Conectar la salida de balón con el ataque. Superar la presión debe crear una ventaja para avanzar.',
+          'Conectar la salida de la presión con el avance para crear una verdadera ventaja ofensiva.',
 
         habits: [
           'El primero que supera la presión mira hacia delante.',
-          'Balón hacia delante → el equipo avanza.',
-          'Los extremos reconocen el espacio a la espalda.',
-          'El 10 busca espacio detrás del medio campo.',
+          'Apoya por delante y por detrás.',
+          'Ataca el espacio detrás del medio campo.',
+          'Todo el equipo avanza.',
           'Si desaparece la ventaja → asegura el balón.'
         ],
 
         missed: [
-          'Superar la presión no es el objetivo: queremos atacar el espacio que crea.',
-          'Cuando rompemos su presión, miramos hacia delante inmediatamente.',
-          'Todo el equipo avanza detrás del balón para mantenernos conectados.',
-          'Si desaparece la ventaja, mantenemos la posesión y organizamos el ataque.'
+          'Salir de la presión solo sirve si aprovechamos lo que ha creado.',
+          'Cuando rompemos su primera línea, miramos hacia delante.',
+          'El equipo se mueve con el balón para que nadie quede aislado.',
+          'Si ya no hay ventaja, mantenemos el balón y volvemos a empezar.'
         ]
       }
 
@@ -92,89 +92,89 @@ const phase2Weeks = [
 
 
   /* ========================================================
-     WEEK 6
+     WEEK 10
   ======================================================== */
   {
-    week: 6,
-    focus: 'Avanzar de la Defensa al Medio Campo',
+    week: 10,
+    focus: 'Llevar al Rival Hacia Donde Queremos',
 
     description:
-      'Conectar la defensa y el medio campo para recibir detrás de la presión y seguir avanzando.',
+      'Usar la presión y el movimiento del equipo para influir en dónde juega el rival.',
 
     objective:
-      'Avanzar por el medio campo con intención. Encontrar jugadores en espacios útiles, mover al rival y combinar para superar la presión.',
+      'Hacer nuestra presión más intencionada. Llevar al rival hacia zonas que queremos, anticipar el siguiente pase y reconocer cuándo podemos presionar fuerte.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Encontrar al Jugador Entre Líneas',
-        question: '¿Quién puede recibir detrás de su primera línea de presión?',
+        title: 'Darles un Camino',
+        question: '¿Qué pase queremos dejarles?',
 
         purpose:
-          'Crear y reconocer líneas de pase hacia el medio campo para poder continuar el ataque.',
+          'Entender que el primer defensor no solo presiona el balón: protege las opciones peligrosas y orienta al rival hacia donde queremos.',
 
         habits: [
-          'Mira antes de recibir.',
-          'No te quedes detrás de un defensor.',
-          'Crea líneas de pase diagonales.',
-          'Recibe pensando en la siguiente acción.',
-          'Apoya por detrás del receptor.'
+          'Protege primero la opción más peligrosa.',
+          'Presiona con una carrera curva.',
+          'Lleva el juego hacia nuestro lado preferido.',
+          'Los compañeros cierran opciones detrás.',
+          'Mantente cerca para apoyar la siguiente acción.'
         ],
 
         missed: [
-          'Queremos encontrar jugadores detrás de la presión, no pasar al medio campo porque sí.',
-          'Antes de recibir, mira dónde están el espacio y la presión.',
-          'Sal de la sombra del defensor y hazte visible.',
-          'Intenta recibir preparado para seguir avanzando.'
+          'Una buena presión no intenta cerrar todas las opciones.',
+          'Podemos dejar un pase para que el rival juegue donde esperamos.',
+          'El primer defensor orienta el juego.',
+          'Los demás deben saber qué opciones tienen que cerrar.'
         ]
       },
 
       {
         number: 2,
-        title: 'Moverlos para Jugar por Dentro',
-        question: 'Si ahora no podemos jugar hacia delante, ¿cómo creamos el pase?',
+        title: 'Atrapar el Siguiente Pase',
+        question: 'Cuando juegan donde queremos, ¿estamos preparados para recuperar?',
 
         purpose:
-          'Mover el balón y a los jugadores hasta crear una línea de pase hacia delante.',
+          'Conectar la primera presión con los movimientos necesarios para recuperar el balón.',
 
         habits: [
-          'No fuerces pases hacia delante cerrados.',
-          'Mueve el balón para mover al rival.',
-          'Balón atrás → abre el campo.',
-          'Cambia el ángulo del ataque.',
-          'Ataca el centro cuando se abra.'
+          'Anticipa el pase que estamos invitando.',
+          'Muévete antes de que llegue el balón.',
+          'El segundo defensor llega con control.',
+          'Los jugadores del lado contrario cierran hacia dentro.',
+          'Pase atrás → avanzamos juntos.'
         ],
 
         missed: [
-          'Si ahora no podemos avanzar, mantenemos el balón y creamos otra oportunidad.',
-          'Mover el balón debe mover al rival.',
-          'Los pases atrás y laterales pueden crear el siguiente pase hacia delante.',
-          'Cuando se abra el centro, reconócelo y ataca rápido.'
+          'La presión funciona cuando todo el equipo anticipa la siguiente acción.',
+          'No esperes al pase para reaccionar.',
+          'Si llevamos al rival hacia nuestra trampa, los jugadores cercanos ya deben cerrar el espacio.',
+          'Si el balón va atrás, avanzamos juntos.'
         ]
       },
 
       {
         number: 3,
-        title: 'Conectar y Seguir',
-        question: '¿Podemos superar el medio campo sin frenar el ataque?',
+        title: '¿Presionar o Esperar?',
+        question: '¿Es buen momento para presionar?',
 
         purpose:
-          'Usar paredes, tercer jugador y combinaciones rápidas para superar la presión manteniendo el avance.',
+          'Mejorar nuestra decisión entre presionar fuerte o mantenernos compactos cuando no podemos apoyar la presión.',
 
         habits: [
-          'El receptor no siempre tiene que girarse.',
-          'Usa paredes para superar la presión.',
-          'El tercer jugador anticipa la combinación.',
-          'Uno conecta y otro amenaza hacia delante.',
-          'Rompemos una línea → avanzamos.'
+          'Organizados → presionamos.',
+          'Separados → frenamos.',
+          'Sin apoyo detrás → esperamos.',
+          'Buena señal y apoyo → vamos juntos.',
+          'Si rompen la presión → replegamos ya.'
         ],
 
         missed: [
-          'Recibir entre líneas no significa que siempre tengas que girarte: a veces una pared es más rápida.',
-          'El tercer jugador debe anticipar la combinación.',
-          'Si uno viene a apoyar, otro amenaza el espacio hacia delante.',
-          'Cuando rompemos una línea, seguimos avanzando.'
+          'No presionamos solo porque el balón está cerca.',
+          'Presionamos cuando el equipo está conectado y puede apoyar.',
+          'Si no tenemos buenas condiciones, frenamos y seguimos compactos.',
+          'Si rompen la presión, replegamos rápido en vez de seguir persiguiendo.'
         ]
       }
 
@@ -183,89 +183,89 @@ const phase2Weeks = [
 
 
   /* ========================================================
-     WEEK 7
+     WEEK 11
   ======================================================== */
   {
-    week: 7,
-    focus: 'Crear Ocasiones desde las Bandas',
+    week: 11,
+    focus: 'Ganar Primeros y Segundos Balones',
 
     description:
-      'Usar amplitud, 1v1, combinaciones y movimientos coordinados para crear peligro desde las bandas.',
+      'Controlar el juego directo compitiendo por el primer balón y organizándonos para ganar el segundo.',
 
     objective:
-      'Crear situaciones de 1v1, combinar alrededor del defensor y ocupar bien el área.',
+      'Sentirnos cómodos cuando el partido se vuelve directo y físico. Saber quién va al primer balón, dónde colocarnos para el segundo y cómo atacar después de recuperarlo.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Aislar y Atacar',
-        question: '¿Podemos dejar a nuestro extremo 1v1?',
+        title: 'Ganar el Primer Balón',
+        question: '¿Quién va al primer balón?',
 
         purpose:
-          'Crear situaciones donde el extremo recibe con espacio y puede atacar al defensor en 1v1.',
+          'Defender el juego directo con decisión, dejando claro quién disputa el primer balón y cómo se preparan los compañeros.',
 
         habits: [
-          'Lleva el balón a banda con espacio.',
-          'Recibe mirando al defensor cuando puedas.',
-          'Ataca al defensor con decisión.',
-          'Cambia de velocidad.',
-          'No llenes el espacio del 1v1.'
+          'Identifica pronto quién va al primer balón.',
+          'Ataca el balón con decisión.',
+          'Los compañeros protegen alrededor del duelo.',
+          'Habla pronto.',
+          'No vayáis todos al mismo balón.'
         ],
 
         missed: [
-          'Balón a banda → primero pensamos en atacar al defensor.',
-          'Queremos un 1v1 real: no llevemos más defensores hacia el extremo.',
-          'Recibe preparado para avanzar y ataca con confianza y cambio de ritmo.',
-          'Si viene un segundo defensor, ha dejado libre a un compañero.'
+          'El juego directo necesita responsabilidades claras.',
+          'Uno va al primer balón y los demás se preparan para lo que viene después.',
+          'Habla pronto para evitar dudas.',
+          'Ganar el duelo importa, pero también nuestra posición alrededor.'
         ]
       },
 
       {
         number: 2,
-        title: 'Combinar para Liberar al Extremo',
-        question: 'Si el extremo no puede superar al defensor solo, ¿cómo ayudamos?',
+        title: 'Ganar el Segundo Balón',
+        question: '¿Dónde puede caer el balón?',
 
         purpose:
-          'Crear conexiones entre extremo, lateral y centrocampista para generar superioridad en banda.',
+          'Organizarnos alrededor del primer duelo para controlar el segundo balón.',
 
         habits: [
-          'El extremo puede quedarse abierto o entrar por dentro.',
-          'El lateral responde al movimiento del extremo.',
-          'El centrocampista crea un tercer ángulo.',
-          'Reconoce el desdoblamiento por fuera o por dentro.',
-          'Si cargan nuestra banda → piensa en cambiar de lado.'
+          'Anticipa dónde puede caer.',
+          'Acércate al duelo.',
+          'Protege la zona central del segundo balón.',
+          'Intenta llegar mirando hacia delante.',
+          'Reacciona inmediatamente al primer contacto.'
         ],
 
         missed: [
-          'Extremo, lateral y centrocampista trabajan juntos: no ocupéis el mismo espacio.',
-          'Si el extremo se queda abierto, otro puede pasar por fuera, por dentro o apoyar por detrás.',
-          'Combina si no podemos superar al defensor solos.',
-          'Si el rival carga demasiado nuestro lado, podemos cambiar el ataque.'
+          'El primer duelo es solo la mitad de la jugada.',
+          'Los jugadores alrededor deben anticipar dónde caerá el segundo balón.',
+          'Quédate cerca para competir, pero no vayáis todos al mismo sitio.',
+          'Ganar el segundo balón puede convertirse inmediatamente en un ataque.'
         ]
       },
 
       {
         number: 3,
-        title: 'Terminar el Ataque',
-        question: 'Cuando superamos por banda, ¿dónde van los demás?',
+        title: 'Del Juego Directo al Ataque',
+        question: '¿Podemos convertir el primer o segundo balón en nuestro ataque?',
 
         purpose:
-          'Convertir la ventaja en banda en buenas ocasiones ocupando correctamente las zonas de remate.',
+          'Conectar los duelos y las recuperaciones con nuestro juego hacia delante.',
 
         habits: [
-          'Ataca diferentes zonas de remate.',
-          'Llega al área, no esperes dentro.',
-          'El extremo contrario ataca el segundo palo.',
-          'Un centrocampista apoya el pase atrás.',
-          'Mantén equilibrio detrás del ataque.'
+          'Asegura la primera acción después de recuperar.',
+          'Mira hacia delante rápido.',
+          'Extremos y 9 anticipan la siguiente jugada.',
+          'El medio campo apoya por detrás.',
+          'Sin ventaja → mantenemos el balón.'
         ],
 
         missed: [
-          'Cuando superamos al defensor por banda, todos tienen una función.',
-          'No ataquéis todos el mismo espacio.',
-          'Llega a la zona de remate en el momento correcto, no te quedes esperando.',
-          'Los jugadores detrás del ataque siguen organizados por si perdemos el balón.'
+          'Ganar un balón directo debe llevarnos a nuestro fútbol, no a otro despeje.',
+          'Cuando recuperamos el segundo balón, miramos primero hacia delante.',
+          'Los jugadores por delante deben estar preparados para atacar el siguiente espacio.',
+          'Si no hay ventaja, mantenemos el balón y tomamos el control.'
         ]
       }
 
@@ -274,89 +274,89 @@ const phase2Weeks = [
 
 
   /* ========================================================
-     WEEK 8
+     WEEK 12
   ======================================================== */
   {
-    week: 8,
-    focus: 'Atacar Nada Más Recuperar',
+    week: 12,
+    focus: 'Protegernos del Contraataque Mientras Atacamos',
 
     description:
-      'Reconocer y aprovechar el espacio antes de que el rival pueda volver a organizarse.',
+      'Atacar con jugadores sin perder la estructura necesaria para controlar pérdidas, despejes y contraataques.',
 
     objective:
-      'Convertir recuperaciones en ataques coordinados. Mejorar la primera acción, los movimientos de apoyo y la decisión entre contraatacar o mantener el balón.',
+      'Crear buenos hábitos de equilibrio defensivo. Entender que defendemos incluso cuando tenemos el balón y que nuestra estructura ofensiva debe proteger la siguiente transición.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Primera Mirada Hacia Delante',
-        question: '¿Qué podemos aprovechar antes de que se organicen?',
+        title: 'Atacar con Equilibrio',
+        question: 'Mientras atacamos, ¿quién protege la siguiente jugada?',
 
         purpose:
-          'Mejorar la primera acción después de recuperar y reconocer los espacios mientras el rival está desorganizado.',
+          'Mantener equilibrio defensivo mientras atacamos para estar preparados si perdemos el balón.',
 
         habits: [
-          'Mira antes de recuperar cuando puedas.',
-          'Primera idea → hacia delante.',
-          'Reconoce rápido el espacio a la espalda.',
-          'El primer toque prepara el ataque.',
-          'Sin ventaja hacia delante → mantenemos el balón.'
+          'No mandes a todos por delante del balón.',
+          'Mantén cobertura detrás del ataque.',
+          'Los jugadores del lado contrario siguen conectados.',
+          'Centrales y pivote controlan el espacio.',
+          'Piensa en la siguiente transición antes de que ocurra.'
         ],
 
         missed: [
-          'Cuando recuperamos, miramos hacia delante antes de que el rival se organice.',
-          'Intenta mirar antes de recuperar para saber dónde está el espacio.',
-          'Tu primer toque debe preparar la siguiente acción.',
-          'Primero hacia delante no significa siempre hacia delante: si no hay ventaja, mantenemos el balón.'
+          'Defender empieza mientras todavía tenemos el balón.',
+          'No todos deben atacar el mismo espacio.',
+          'Los jugadores detrás del ataque protegen los espacios donde el rival puede contraatacar.',
+          'Una buena estructura ofensiva también nos prepara para defender la pérdida.'
         ]
       },
 
       {
         number: 2,
-        title: 'Correr con la Recuperación',
-        question: '¿Cómo convierte todo el equipo una recuperación en ataque?',
+        title: 'Parar el Primer Contraataque',
+        question: '¿Cuál es nuestro primer trabajo cuando perdemos el ataque?',
 
         purpose:
-          'Coordinar los movimientos alrededor del jugador que recupera para que el contraataque sea una acción de equipo.',
+          'Reaccionar inmediatamente después de perder el balón arriba, especialmente para parar el primer pase hacia delante.',
 
         habits: [
-          'El primer desmarque amenaza la espalda.',
-          'El segundo jugador apoya el balón.',
-          'El tercero crea otra línea de pase.',
-          'Crea amplitud rápido.',
-          'La defensa avanza detrás del ataque.'
+          'Los más cercanos reaccionan inmediatamente.',
+          'Para o frena el primer pase hacia delante.',
+          'Protege el espacio central.',
+          'Los jugadores detrás se acercan a la pérdida.',
+          'Si el balón escapa → replegamos.'
         ],
 
         missed: [
-          'El jugador que recupera no debe crear el contraataque solo.',
-          'Uno amenaza la espalda, otro apoya y los demás crean amplitud y opciones.',
-          'No corráis todos hacia el balón: atacad diferentes espacios.',
-          'El resto del equipo avanza detrás del contraataque para mantenernos conectados.'
+          'Cuando perdemos el balón atacando, los primeros segundos son clave.',
+          'Los más cercanos intentan parar la primera acción hacia delante.',
+          'Los demás cierran los espacios peligrosos detrás.',
+          'Si falla la presión tras pérdida, replegamos rápido.'
         ]
       },
 
       {
         number: 3,
-        title: '¿Contraatacar o Controlar?',
-        question: '¿Atacamos ahora o mantenemos el balón?',
+        title: 'Seguir Atacando con Seguridad',
+        question: '¿Podemos seguir atacando sin perder el control?',
 
         purpose:
-          'Decidir si una recuperación debe convertirse en contraataque o en una posesión organizada.',
+          'Juntar nuestra estructura ofensiva y defensiva para atacar varias veces sin quedar expuestos al contraataque.',
 
         habits: [
-          'Ventaja delante → ataca.',
-          'Espacio a la espalda → ataca.',
-          'Rival desorganizado → ataca.',
-          'Sin ventaja → asegura el balón.',
-          'Cuando tenemos control → organiza nuestra estructura.'
+          'Vuelve a empezar en vez de forzar.',
+          'Mantén buenas distancias detrás del balón.',
+          'Reacciona rápido a despejes y segundos balones.',
+          'Mantén la presión sin estirar al equipo.',
+          'Si el rival sale → nos reorganizamos juntos.'
         ],
 
         missed: [
-          'Recuperar no significa contraatacar siempre: lee la situación.',
-          'Ataca si tenemos espacio, superioridad o un rival desorganizado.',
-          'Si el rival ya está organizado o estamos separados, mantenemos el balón.',
-          'Si decidimos mantenerlo, organizamos rápido nuestro ataque.'
+          'Mantener el ataque no es solo tener el balón cerca de su portería.',
+          'Necesitamos estructura detrás para controlar despejes y contraataques.',
+          'Si no hay ocasión, volvemos a empezar y atacamos otra vez.',
+          'Queremos mantener al rival bajo presión sin perder nuestro equilibrio.'
         ]
       }
 
