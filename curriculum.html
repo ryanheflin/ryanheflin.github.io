@@ -1519,12 +1519,12 @@
 
 
 
-          weekCard.className =
-            `scroll-mt-24 overflow-hidden rounded-2xl border ${
-              isCurrentWeek
-                ? 'border-yellow-400/70 shadow-xl'
-                : 'border-gray-700'
-            }`;
+        weekCard.className =
+          `scroll-mt-24 overflow-hidden rounded-2xl border transition-all duration-200 ${
+            isCurrentWeek
+              ? 'border-yellow-400/70 shadow-xl opacity-100'
+              : 'border-gray-700 opacity-50 hover:opacity-80'
+          }`;
 
 
 
@@ -1603,12 +1603,22 @@
 
 
                 <!-- Week Number -->
-                <div
-                  class="px-5 py-4 md:px-7 md:py-6 flex md:flex-col items-center md:items-start justify-center gap-2 md:gap-0 md:min-w-[165px]"
-                  style="
-                    background-color: var(--altafulla-yellow);
-                    color: #000000;
-                  "
+                                <div
+                  class="px-5 py-4 md:px-7 md:py-6 flex md:flex-col items-center md:items-start justify-center gap-2 md:gap-0 md:min-w-[165px] ${
+                    isCurrentWeek
+                      ? ''
+                      : 'bg-gray-700 text-gray-300'
+                  }"
+                  ${
+                    isCurrentWeek
+                      ? `
+                        style="
+                          background-color: var(--altafulla-yellow);
+                          color: #000000;
+                        "
+                      `
+                      : ''
+                  }
                 >
 
 
