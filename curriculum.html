@@ -1174,208 +1174,229 @@
     function createSessionCard(session) {
 
 
-      const habits =
-        session.habits
-          .map(
-            habit => `
+  const habits =
+    session.habits
+      .map(
+        habit => `
 
-              <li class="flex gap-2">
-
-                <span
-                  class="font-black"
-                  style="color: var(--altafulla-yellow);"
-                >
-                  ›
-                </span>
-
-                <span>
-                  ${habit}
-                </span>
-
-              </li>
-
-            `
-          )
-          .join('');
-
-      ${session.positions ? `
-        <div class="bg-gray-800/70 p-3 rounded-lg border border-gray-700">
-          <p class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1">
-            Enfoque Posicional
-          </p>
-          <p class="text-sm font-semibold text-white">
-            ${session.positions.focus}
-          </p>
-          <p class="text-xs text-gray-400 mt-1 leading-relaxed">
-            ${session.positions.detail}
-          </p>
-        </div>
-      ` : ''}
-
-      const missed =
-        session.missed
-          .map(
-            point => `
-
-              <li class="flex gap-2">
-
-                <span
-                  class="font-black"
-                  style="color: var(--altafulla-blue);"
-                >
-                  ›
-                </span>
-
-                <span>
-                  ${point}
-                </span>
-
-              </li>
-
-            `
-          )
-          .join('');
-
-
-
-      return `
-
-        <div
-          class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
-        >
-
-
-          <!-- Session Header -->
-          <div>
-
+          <li class="flex gap-2">
 
             <span
-              class="text-xs uppercase tracking-[0.18em] font-bold"
-              style="color: var(--altafulla-blue);"
+              class="font-black"
+              style="color: var(--altafulla-yellow);"
             >
-              Sesión ${session.number}
+              ›
             </span>
 
+            <span>
+              ${habit}
+            </span>
+
+          </li>
+
+        `
+      )
+      .join('');
 
 
-            <h5
-              class="text-xl font-extrabold text-white mt-1"
-            >
-              ${session.title}
-            </h5>
+  const missed =
+    session.missed
+      .map(
+        point => `
 
+          <li class="flex gap-2">
 
-
-            <p
-              class="text-sm font-semibold text-gray-300 mt-2"
-            >
-              “${session.question}”
-            </p>
-
-
-          </div>
-
-
-
-          <!-- Purpose -->
-          <div>
-
-
-            <h6
-              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
-            >
-              Objetivo
-            </h6>
-
-
-            <p
-              class="text-sm text-gray-300 leading-relaxed"
-            >
-              ${session.purpose}
-            </p>
-
-
-          </div>
-
-
-
-          <!-- Habits -->
-          <div>
-
-
-            <h6
-              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
-            >
-              Hábitos que Queremos Desarrollar
-            </h6>
-
-
-            <ul
-              class="text-sm text-gray-300 space-y-1.5"
-            >
-              ${habits}
-            </ul>
-
-
-          </div>
-
-
-
-          <!-- Session Plan PDF -->
-          ${
-            session.sessionPlan
-              ? `
-
-                <div>
-
-                  <a
-                    href="${session.sessionPlan}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                    style="color: var(--altafulla-blue);"
-                  >
-                    📋 Ver Plan de la Sesión →
-                  </a>
-
-                </div>
-
-              `
-              : ''
-          }
-
-
-
-          <!-- If You Missed It -->
-          <div
-            class="border-t border-gray-700 pt-4"
-          >
-
-
-            <h6
-              class="text-xs uppercase tracking-wide font-bold mb-2"
+            <span
+              class="font-black"
               style="color: var(--altafulla-blue);"
             >
-              Si Te Lo Perdiste
-            </h6>
+              ›
+            </span>
+
+            <span>
+              ${point}
+            </span>
+
+          </li>
+
+        `
+      )
+      .join('');
 
 
-            <ul
-              class="text-sm text-gray-400 space-y-1.5"
+
+  return `
+
+    <div
+      class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
+    >
+
+
+      <!-- Session Header -->
+      <div>
+
+
+        <span
+          class="text-xs uppercase tracking-[0.18em] font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Sesión ${session.number}
+        </span>
+
+
+
+        <h5
+          class="text-xl font-extrabold text-white mt-1"
+        >
+          ${session.title}
+        </h5>
+
+
+
+        <p
+          class="text-sm font-semibold text-gray-300 mt-2"
+        >
+          “${session.question}”
+        </p>
+
+
+      </div>
+
+
+
+      <!-- Purpose -->
+      <div>
+
+
+        <h6
+          class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
+        >
+          Objetivo
+        </h6>
+
+
+        <p
+          class="text-sm text-gray-300 leading-relaxed"
+        >
+          ${session.purpose}
+        </p>
+
+
+      </div>
+
+
+
+      <!-- Positional Focus -->
+      ${
+        session.positions
+          ? `
+
+            <div
+              class="bg-gray-800/70 p-3 rounded-lg border border-gray-700"
             >
-              ${missed}
-            </ul>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1"
+              >
+                Enfoque Posicional
+              </p>
+
+              <p
+                class="text-sm font-semibold text-white"
+              >
+                ${session.positions.focus}
+              </p>
+
+              <p
+                class="text-xs text-gray-400 mt-1 leading-relaxed"
+              >
+                ${session.positions.detail}
+              </p>
+
+            </div>
+
+          `
+          : ''
+      }
 
 
-          </div>
+
+      <!-- Habits -->
+      <div>
 
 
-        </div>
+        <h6
+          class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
+        >
+          Hábitos que Queremos Desarrollar
+        </h6>
 
-      `;
 
-    }
+        <ul
+          class="text-sm text-gray-300 space-y-1.5"
+        >
+          ${habits}
+        </ul>
 
+
+      </div>
+
+
+
+      <!-- Session Plan PDF -->
+      ${
+        session.sessionPlan
+          ? `
+
+            <div>
+
+              <a
+                href="${session.sessionPlan}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                style="color: var(--altafulla-blue);"
+              >
+                📋 Ver Plan de la Sesión →
+              </a>
+
+            </div>
+
+          `
+          : ''
+      }
+
+
+
+      <!-- If You Missed It -->
+      <div
+        class="border-t border-gray-700 pt-4"
+      >
+
+
+        <h6
+          class="text-xs uppercase tracking-wide font-bold mb-2"
+          style="color: var(--altafulla-blue);"
+        >
+          Si Te Lo Perdiste
+        </h6>
+
+
+        <ul
+          class="text-sm text-gray-400 space-y-1.5"
+        >
+          ${missed}
+        </ul>
+
+
+      </div>
+
+
+    </div>
+
+  `;
+
+}
 
 
     /* ==========================================================
