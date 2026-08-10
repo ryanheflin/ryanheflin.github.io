@@ -47,7 +47,7 @@ const phase1Weeks = [
       {
         number: 2,
         title: 'Defend Together',
-        question: 'Where do we not want them to play?',
+        question: 'Where do we want them to play?',
 
         purpose:
           'Understand defending as a collective action rather than individual chasing. The first defender influences the ball while teammates protect important space.',
@@ -59,6 +59,9 @@ const phase1Weeks = [
           'Stay connected.',
           'Make the opponent predictable.'
         ],
+
+            sessionPlan:
+            'sessions/session-02-defend-together.pdf',
 
         missed: [
           'We defend together, not as individuals chasing the ball.',
