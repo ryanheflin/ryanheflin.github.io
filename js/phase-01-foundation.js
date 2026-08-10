@@ -16,29 +16,33 @@ const phase1Weeks = [
     sessions: [
 
       {
-        number: 1,
-        title: 'Find the Free Man',
-        question: 'Where is the space?',
-
-        purpose:
-          'Introduce our attacking mentality through real opposition. Learn to recognize when useful space is available ahead, behind, or around the opponent.',
-
-        habits: [
-          'Look forward first.',
-          'Space behind → threaten it.',
-          'Ball forward → lines move up.',
-          'Support the player on the ball.',
-          'If we cannot go forward → keep it.'
-        ],
-
-
-        missed: [
-          'Our first thought with the ball is forward.',
-          'If there is space behind the defense, someone should threaten it.',
-          'When the ball moves forward, the team moves forward with it.',
-          'If the forward option is not there, keep the ball and create another opportunity.'
-        ]
+      number: 1,
+      title: 'Find the Free Man',
+      question: 'How do we help the player on the ball?',
+      
+      purpose:
+      'Introduce our attacking identity through movement away from the ball. Learn to create, recognize, and find the free player — ideally in a position to receive facing forward.',
+      
+            habits: [
+            'When the ball moves → we move.',
+            'Move to become free or make someone else free.',
+            'Be visible and available to the player on the ball.',
+            'Receive facing forward when possible.',
+            'If you cannot face forward → play the way you face.'
+            ],
+      
+            sessionPlan:
+            'sessions/session-01-find-free-man.pdf',
+      
+            missed: [
+            'The player on the ball should never be solving the game alone.',
+            'When a teammate receives, our movement creates his next options.',
+            'Being free means being available and visible — not just unmarked.',
+            'Our movement can free ourselves or create space for a teammate.',
+            'When we find someone facing forward, we are ready to attack.'
+            ]
       },
+
 
       {
         number: 2,
