@@ -5,85 +5,85 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 5,
-    focus: 'Building from the Back Against Pressure',
+    focus: 'Salir desde Atrás Contra la Presión',
 
     description:
-      'Use opponent pressure to create the free player and begin organizing our attacking structure from the goalkeeper and back line.',
+      'Usar la presión rival para crear un jugador libre y organizar nuestro ataque desde el portero y la defensa.',
 
     objective:
-      'Develop calm, connected solutions against pressure. Players should understand that building short is not the objective — creating and exploiting the free player is.',
+      'Encontrar soluciones con calma ante la presión. Jugar corto no es el objetivo: el objetivo es crear y aprovechar al jugador libre.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Invite the Press',
-        question: 'Can their pressure create space for us?',
+        title: 'Atraer la Presión',
+        question: '¿Puede su presión crear espacio para nosotros?',
 
         purpose:
-          'Understand how attracting pressure can create a free player elsewhere and begin establishing our relationships from the goalkeeper and back line.',
+          'Entender cómo atraer la presión puede liberar a un compañero en otra zona y empezar a crear conexiones desde el portero y la defensa.',
 
         habits: [
-          'Goalkeeper participates in possession.',
-          'Create superiority around the first pressing line.',
-          'Do not hide behind opponents.',
-          'Attract pressure before releasing the ball.',
-          'If they do not press → take the space.'
+          'El portero participa con balón.',
+          'Crea superioridad ante su primera línea.',
+          'No te escondas detrás de rivales.',
+          'Atrae la presión antes de soltar el balón.',
+          'Si no presionan → avanza.'
         ],
 
         missed: [
-          'We do not play short just because the coach wants short passes — we are trying to create a free player.',
-          'Opponent pressure can help us because every player who comes to press leaves space somewhere else.',
-          'Show for the ball and create useful passing angles instead of hiding behind defenders.',
-          'If nobody presses you, carry the ball forward. If they press, find the player their pressure has freed.'
+          'No jugamos corto solo para dar pases cortos: buscamos crear un jugador libre.',
+          'Cada rival que viene a presionar deja espacio en otro sitio.',
+          'Muéstrate y crea buenos ángulos de pase. No te escondas detrás de defensores.',
+          'Si nadie te presiona, avanza con el balón. Si te presionan, encuentra al jugador que han liberado.'
         ]
       },
 
       {
         number: 2,
-        title: 'Through, Around or Over',
-        question: 'Where did their press leave the space?',
+        title: 'Por Dentro, por Fuera o por Encima',
+        question: '¿Dónde ha dejado espacio su presión?',
 
         purpose:
-          'Recognize different solutions against pressure instead of forcing one predetermined route out of the back.',
+          'Reconocer diferentes soluciones contra la presión en vez de forzar siempre la misma salida.',
 
         habits: [
-          'Through if midfield is free.',
-          'Around if the center is crowded.',
-          'Over if space exists behind the press.',
-          'Ball backward → create width.',
-          'Prepare to compete for second balls after direct play.'
+          'Por dentro si el medio está libre.',
+          'Por fuera si el centro está cerrado.',
+          'Por encima si hay espacio detrás de la presión.',
+          'Balón atrás → crea amplitud.',
+          'Prepárate para las segundas jugadas después del juego directo.'
         ],
 
         missed: [
-          'Against pressure, look for the space they have left — through, around, or over.',
-          'Playing directly is not a failure if the space behind their press is the best space to attack.',
-          'Do not force the pivot or another planned pass when the opponent has taken it away.',
-          'If we play over pressure, players higher up must anticipate and organize for the first and second ball.'
+          'Contra la presión, busca el espacio que dejan: por dentro, por fuera o por encima.',
+          'Jugar directo no es un error si el mejor espacio está detrás de su presión.',
+          'No fuerces un pase que el rival ya ha cerrado.',
+          'Si jugamos por encima de la presión, debemos estar preparados para el primer y segundo balón.'
         ]
       },
 
       {
         number: 3,
-        title: 'Build to Attack',
-        question: 'Once we break the press, can we hurt them?',
+        title: 'Salir para Atacar',
+        question: 'Cuando rompemos la presión, ¿podemos hacer daño?',
 
         purpose:
-          'Connect successful build-up to immediate progression. Escaping pressure should create an attacking advantage rather than become the end of the action.',
+          'Conectar la salida de balón con el ataque. Superar la presión debe crear una ventaja para avanzar.',
 
         habits: [
-          'First player beyond the press looks forward.',
-          'Ball forward → team moves forward.',
-          'Wingers recognize space behind.',
-          '10 finds space beyond midfield pressure.',
-          'If the advantage disappears → secure possession.'
+          'El primero que supera la presión mira hacia delante.',
+          'Balón hacia delante → el equipo avanza.',
+          'Los extremos reconocen el espacio a la espalda.',
+          'El 10 busca espacio detrás del medio campo.',
+          'Si desaparece la ventaja → asegura el balón.'
         ],
 
         missed: [
-          'Beating the press is not the objective — attacking the space created by beating it is.',
-          'Once we break their pressure, look forward immediately because the opponent may be disorganized.',
-          'The whole team moves up behind the ball so the attack stays connected.',
-          'If the immediate advantage disappears, keep possession and organize our attack.'
+          'Superar la presión no es el objetivo: queremos atacar el espacio que crea.',
+          'Cuando rompemos su presión, miramos hacia delante inmediatamente.',
+          'Todo el equipo avanza detrás del balón para mantenernos conectados.',
+          'Si desaparece la ventaja, mantenemos la posesión y organizamos el ataque.'
         ]
       }
 
@@ -96,85 +96,85 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 6,
-    focus: 'Progressing from the Back Line into Midfield',
+    focus: 'Avanzar de la Defensa al Medio Campo',
 
     description:
-      'Connect the defensive and midfield lines and create players who can receive beyond pressure with the ability to continue forward.',
+      'Conectar la defensa y el medio campo para recibir detrás de la presión y seguir avanzando.',
 
     objective:
-      'Progress through midfield with purpose. Find players in useful spaces, manipulate the opponent when forward lanes are closed, and use combinations to continue through pressure.',
+      'Avanzar por el medio campo con intención. Encontrar jugadores en espacios útiles, mover al rival y combinar para superar la presión.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Find the Player Between',
-        question: 'Who can receive beyond their first line of pressure?',
+        title: 'Encontrar al Jugador Entre Líneas',
+        question: '¿Quién puede recibir detrás de su primera línea de presión?',
 
         purpose:
-          'Create and recognize passing lanes into midfield, with receivers positioned to continue the attack rather than simply receive the ball.',
+          'Crear y reconocer líneas de pase hacia el medio campo para poder continuar el ataque.',
 
         habits: [
-          'Scan before receiving.',
-          'Do not stand directly behind defenders.',
-          'Create diagonal passing lanes.',
-          'Receive with the next action in mind.',
-          'Support underneath the receiver.'
+          'Mira antes de recibir.',
+          'No te quedes detrás de un defensor.',
+          'Crea líneas de pase diagonales.',
+          'Recibe pensando en la siguiente acción.',
+          'Apoya por detrás del receptor.'
         ],
 
         missed: [
-          'We want to find midfielders beyond pressure, not simply pass to midfield for the sake of it.',
-          'Before receiving, scan so you know where the next space and pressure are.',
-          'Move out of defenders’ shadows and create a visible passing lane.',
-          'Try to receive in a position that allows the attack to continue forward.'
+          'Queremos encontrar jugadores detrás de la presión, no pasar al medio campo porque sí.',
+          'Antes de recibir, mira dónde están el espacio y la presión.',
+          'Sal de la sombra del defensor y hazte visible.',
+          'Intenta recibir preparado para seguir avanzando.'
         ]
       },
 
       {
         number: 2,
-        title: 'Move Them to Play Through Them',
-        question: 'If the forward pass is not available now, how can we create it?',
+        title: 'Moverlos para Jugar por Dentro',
+        question: 'Si ahora no podemos jugar hacia delante, ¿cómo creamos el pase?',
 
         purpose:
-          'Use circulation and movement to manipulate defenders until a forward passing lane appears.',
+          'Mover el balón y a los jugadores hasta crear una línea de pase hacia delante.',
 
         habits: [
-          'Do not force closed forward passes.',
-          'Move the ball to move the opponent.',
-          'Ball backward → expand.',
-          'Change the angle of attack.',
-          'Attack the central lane when it opens.'
+          'No fuerces pases hacia delante cerrados.',
+          'Mueve el balón para mover al rival.',
+          'Balón atrás → abre el campo.',
+          'Cambia el ángulo del ataque.',
+          'Ataca el centro cuando se abra.'
         ],
 
         missed: [
-          'If we cannot go forward now, keep the ball and create a better opportunity.',
-          'Moving the ball should move the opponent — possession needs a purpose.',
-          'Backward and sideways passes can create the next forward pass.',
-          'When the opponent finally opens the central lane, recognize it and attack it quickly.'
+          'Si ahora no podemos avanzar, mantenemos el balón y creamos otra oportunidad.',
+          'Mover el balón debe mover al rival.',
+          'Los pases atrás y laterales pueden crear el siguiente pase hacia delante.',
+          'Cuando se abra el centro, reconócelo y ataca rápido.'
         ]
       },
 
       {
         number: 3,
-        title: 'Connect and Go',
-        question: 'Can we play through midfield without slowing the attack down?',
+        title: 'Conectar y Seguir',
+        question: '¿Podemos superar el medio campo sin frenar el ataque?',
 
         purpose:
-          'Use bounce passes, third-player movement, and quick combinations to progress through pressure while maintaining forward momentum.',
+          'Usar paredes, tercer jugador y combinaciones rápidas para superar la presión manteniendo el avance.',
 
         habits: [
-          'Receiver does not always need to turn.',
-          'Use bounce passes to eliminate pressure.',
-          'Third player anticipates the combination.',
-          'One player connects while another threatens depth.',
-          'Once a line is broken → move forward.'
+          'El receptor no siempre tiene que girarse.',
+          'Usa paredes para superar la presión.',
+          'El tercer jugador anticipa la combinación.',
+          'Uno conecta y otro amenaza hacia delante.',
+          'Rompemos una línea → avanzamos.'
         ],
 
         missed: [
-          'Receiving between the lines does not mean you always have to turn — sometimes the fastest way forward is a bounce pass.',
-          'The third player should anticipate the combination before the ball arrives.',
-          'When one player comes toward the ball to connect, another should threaten forward space.',
-          'Once we break a line, the team should continue forward rather than automatically playing backward.'
+          'Recibir entre líneas no significa que siempre tengas que girarte: a veces una pared es más rápida.',
+          'El tercer jugador debe anticipar la combinación.',
+          'Si uno viene a apoyar, otro amenaza el espacio hacia delante.',
+          'Cuando rompemos una línea, seguimos avanzando.'
         ]
       }
 
@@ -187,85 +187,85 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 7,
-    focus: 'Creating Scoring Opportunities from Wide Areas',
+    focus: 'Crear Ocasiones desde las Bandas',
 
     description:
-      'Use width, isolation, combinations, and coordinated movement to turn wide possession into dangerous chances.',
+      'Usar amplitud, 1v1, combinaciones y movimientos coordinados para crear peligro desde las bandas.',
 
     objective:
-      'Understand how central progression creates wide opportunities, then develop the ability to isolate defenders, combine around them, and occupy the box effectively.',
+      'Crear situaciones de 1v1, combinar alrededor del defensor y ocupar bien el área.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Isolate and Attack',
-        question: 'Can we get our winger 1v1?',
+        title: 'Aislar y Atacar',
+        question: '¿Podemos dejar a nuestro extremo 1v1?',
 
         purpose:
-          'Create situations where wide attackers receive with space and can attack an isolated defender decisively.',
+          'Crear situaciones donde el extremo recibe con espacio y puede atacar al defensor en 1v1.',
 
         habits: [
-          'Get the ball wide with space.',
-          'Receive facing the defender when possible.',
-          'Attack the defender decisively.',
-          'Change speed.',
-          'Teammates avoid crowding the 1v1.'
+          'Lleva el balón a banda con espacio.',
+          'Recibe mirando al defensor cuando puedas.',
+          'Ataca al defensor con decisión.',
+          'Cambia de velocidad.',
+          'No llenes el espacio del 1v1.'
         ],
 
         missed: [
-          'Ball wide → our first thought is to attack the defender.',
-          'We want to create a real 1v1, so teammates should avoid bringing extra defenders into the winger’s space.',
-          'Receive ready to go forward and attack with confidence and a change of speed.',
-          'If a second defender comes to help, recognize that his movement has freed one of our teammates.'
+          'Balón a banda → primero pensamos en atacar al defensor.',
+          'Queremos un 1v1 real: no llevemos más defensores hacia el extremo.',
+          'Recibe preparado para avanzar y ataca con confianza y cambio de ritmo.',
+          'Si viene un segundo defensor, ha dejado libre a un compañero.'
         ]
       },
 
       {
         number: 2,
-        title: 'Combine to Free the Winger',
-        question: 'If the winger cannot beat the defender alone, how can we help?',
+        title: 'Combinar para Liberar al Extremo',
+        question: 'Si el extremo no puede superar al defensor solo, ¿cómo ayudamos?',
 
         purpose:
-          'Develop winger, fullback, and midfielder relationships to create superiority and multiple solutions in wide areas.',
+          'Crear conexiones entre extremo, lateral y centrocampista para generar superioridad en banda.',
 
         habits: [
-          'Winger can stay wide or move inside.',
-          'Fullback responds to the winger.',
-          'Midfielder provides a third angle.',
-          'Recognize overlap and underlap.',
-          'If they overload our side → consider switching.'
+          'El extremo puede quedarse abierto o entrar por dentro.',
+          'El lateral responde al movimiento del extremo.',
+          'El centrocampista crea un tercer ángulo.',
+          'Reconoce el desdoblamiento por fuera o por dentro.',
+          'Si cargan nuestra banda → piensa en cambiar de lado.'
         ],
 
         missed: [
-          'The winger, fullback, and midfielder work as a relationship — do not all occupy the same space.',
-          'If the winger stays wide, another player may overlap, underlap, or support underneath depending on the defender.',
-          'Use combinations when the defender cannot be beaten alone.',
-          'If the opponent sends too many players to our side, the solution may be to switch the attack.'
+          'Extremo, lateral y centrocampista trabajan juntos: no ocupéis el mismo espacio.',
+          'Si el extremo se queda abierto, otro puede pasar por fuera, por dentro o apoyar por detrás.',
+          'Combina si no podemos superar al defensor solos.',
+          'Si el rival carga demasiado nuestro lado, podemos cambiar el ataque.'
         ]
       },
 
       {
         number: 3,
-        title: 'Finish the Attack',
-        question: 'When we beat them wide, where should everybody else go?',
+        title: 'Terminar el Ataque',
+        question: 'Cuando superamos por banda, ¿dónde van los demás?',
 
         purpose:
-          'Turn wide superiority into high-quality chances through coordinated occupation of finishing and supporting spaces.',
+          'Convertir la ventaja en banda en buenas ocasiones ocupando correctamente las zonas de remate.',
 
         habits: [
-          'Attack different finishing spaces.',
-          'Arrive rather than stand in the box.',
-          'Opposite winger attacks the far side.',
-          'Midfielder supports the cutback.',
-          'Maintain balance behind the attack.'
+          'Ataca diferentes zonas de remate.',
+          'Llega al área, no esperes dentro.',
+          'El extremo contrario ataca el segundo palo.',
+          'Un centrocampista apoya el pase atrás.',
+          'Mantén equilibrio detrás del ataque.'
         ],
 
         missed: [
-          'When the ball gets beyond the defender wide, everyone else has a job.',
-          'Do not all attack the same spot — occupy near, central, far, and cutback spaces.',
-          'Arrive into finishing space at the right moment instead of standing there waiting.',
-          'Players behind the attack stay organized because a clearance immediately creates the next transition.'
+          'Cuando superamos al defensor por banda, todos tienen una función.',
+          'No ataquéis todos el mismo espacio.',
+          'Llega a la zona de remate en el momento correcto, no te quedes esperando.',
+          'Los jugadores detrás del ataque siguen organizados por si perdemos el balón.'
         ]
       }
 
@@ -278,85 +278,85 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 8,
-    focus: 'Attacking Immediately After Regaining Possession',
+    focus: 'Atacar Nada Más Recuperar',
 
     description:
-      'Recognize and exploit the temporary space and disorder available before the opponent can recover its defensive organization.',
+      'Reconocer y aprovechar el espacio antes de que el rival pueda volver a organizarse.',
 
     objective:
-      'Turn regains into coordinated attacks. Improve the first action, the movements around the regain, and the decision between counterattacking immediately or securing possession.',
+      'Convertir recuperaciones en ataques coordinados. Mejorar la primera acción, los movimientos de apoyo y la decisión entre contraatacar o mantener el balón.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'First Look Forward',
-        question: 'What can we exploit before they reorganize?',
+        title: 'Primera Mirada Hacia Delante',
+        question: '¿Qué podemos aprovechar antes de que se organicen?',
 
         purpose:
-          'Develop the first action after a regain and recognize the spaces that exist while the opponent is still transitioning.',
+          'Mejorar la primera acción después de recuperar y reconocer los espacios mientras el rival está desorganizado.',
 
         habits: [
-          'Scan before the regain when possible.',
-          'First thought → forward.',
-          'Recognize space behind immediately.',
-          'First touch prepares the attack.',
-          'No forward advantage → keep it.'
+          'Mira antes de recuperar cuando puedas.',
+          'Primera idea → hacia delante.',
+          'Reconoce rápido el espacio a la espalda.',
+          'El primer toque prepara el ataque.',
+          'Sin ventaja hacia delante → mantenemos el balón.'
         ],
 
         missed: [
-          'When we win the ball, look forward before the opponent has time to recover.',
-          'Try to scan before the regain so you already know where the space is.',
-          'Your first touch should help the next attacking action.',
-          'Forward first does not mean forward always — if the advantage is not there, keep the ball.'
+          'Cuando recuperamos, miramos hacia delante antes de que el rival se organice.',
+          'Intenta mirar antes de recuperar para saber dónde está el espacio.',
+          'Tu primer toque debe preparar la siguiente acción.',
+          'Primero hacia delante no significa siempre hacia delante: si no hay ventaja, mantenemos el balón.'
         ]
       },
 
       {
         number: 2,
-        title: 'Run With the Regain',
-        question: 'How does the whole team turn a regain into an attack?',
+        title: 'Correr con la Recuperación',
+        question: '¿Cómo convierte todo el equipo una recuperación en ataque?',
 
         purpose:
-          'Coordinate the movements around the player who wins possession so attacking transition becomes a team action rather than an individual counterattack.',
+          'Coordinar los movimientos alrededor del jugador que recupera para que el contraataque sea una acción de equipo.',
 
         habits: [
-          'First runner threatens behind.',
-          'Second player supports the ball.',
-          'Third player creates another passing line.',
-          'Width appears quickly.',
-          'Defensive players move up behind the attack.'
+          'El primer desmarque amenaza la espalda.',
+          'El segundo jugador apoya el balón.',
+          'El tercero crea otra línea de pase.',
+          'Crea amplitud rápido.',
+          'La defensa avanza detrás del ataque.'
         ],
 
         missed: [
-          'The player who wins the ball should not have to create the counterattack alone.',
-          'One player threatens behind, another supports the ball, and others create width and passing options.',
-          'Do not all run toward the ball — attack different spaces.',
-          'The rest of the team moves forward behind the counter so we stay connected if the attack continues or the ball is lost.'
+          'El jugador que recupera no debe crear el contraataque solo.',
+          'Uno amenaza la espalda, otro apoya y los demás crean amplitud y opciones.',
+          'No corráis todos hacia el balón: atacad diferentes espacios.',
+          'El resto del equipo avanza detrás del contraataque para mantenernos conectados.'
         ]
       },
 
       {
         number: 3,
-        title: 'Counter or Control?',
-        question: 'Do we attack now, or do we keep it?',
+        title: '¿Contraatacar o Controlar?',
+        question: '¿Atacamos ahora o mantenemos el balón?',
 
         purpose:
-          'Develop the decision-making that determines whether a regain becomes an immediate counterattack or the beginning of an organized possession.',
+          'Decidir si una recuperación debe convertirse en contraataque o en una posesión organizada.',
 
         habits: [
-          'Advantage ahead → attack.',
-          'Space behind → attack.',
-          'Opponent disorganized → attack.',
-          'No forward advantage → secure possession.',
-          'As possession stabilizes → organize our structure.'
+          'Ventaja delante → ataca.',
+          'Espacio a la espalda → ataca.',
+          'Rival desorganizado → ataca.',
+          'Sin ventaja → asegura el balón.',
+          'Cuando tenemos control → organiza nuestra estructura.'
         ],
 
         missed: [
-          'A regain does not automatically mean counterattack — read the situation.',
-          'Attack immediately when we have space, numbers, or a disorganized opponent.',
-          'If the opponent is already organized or we are disconnected, keep the ball instead of forcing the counter.',
-          'Once we choose to keep possession, quickly establish our attacking structure and start creating the next advantage.'
+          'Recuperar no significa contraatacar siempre: lee la situación.',
+          'Ataca si tenemos espacio, superioridad o un rival desorganizado.',
+          'Si el rival ya está organizado o estamos separados, mantenemos el balón.',
+          'Si decidimos mantenerlo, organizamos rápido nuestro ataque.'
         ]
       }
 
