@@ -124,6 +124,12 @@ const phase1Weeks = [
         purpose:
           'Usar amplitud, profundidad, movimiento y circulación para estirar al rival y crear un jugador libre.',
 
+        positions: {
+          focus: 'Laterales, extremos y delantero',
+          detail:
+            'Crear amplitud y profundidad: reconocer quién abre el campo, quién amenaza a la espalda y cómo el movimiento de un jugador puede crear espacio para otro.'
+        },
+
         habits: [
           'Balón atrás → abre el campo.',
           'Crea amplitud y profundidad útiles.',
@@ -148,6 +154,12 @@ const phase1Weeks = [
         purpose:
           'Conectar presión, cobertura y distancias para influir en la siguiente acción del rival.',
 
+        positions: {
+          focus: 'Laterales, extremos y jugadores de banda',
+          detail:
+            'Defender juntos en banda: orientar al rival, proteger el interior y coordinar la presión, la cobertura y el apoyo alrededor del balón.'
+        },
+
         habits: [
           'Protege por dentro.',
           'Orienta la presión hacia donde queremos.',
@@ -171,6 +183,12 @@ const phase1Weeks = [
 
         purpose:
           'Decidir en transición: atacar inmediatamente si tenemos ventaja o asegurar el balón si no la tenemos.',
+
+        positions: {
+          focus: 'Extremos, delantero y jugadores cercanos al balón',
+          detail:
+            'Reconocer las funciones inmediatamente después de recuperar: amenazar la profundidad, abrir el campo y ofrecer apoyos por delante y por detrás del balón.'
+        },
 
         habits: [
           'La ganamos → primero hacia delante.',
@@ -215,6 +233,12 @@ const phase1Weeks = [
         purpose:
           'Aprender a avanzar juntos. Cada acción hacia delante debe provocar movimientos de apoyo en todas las líneas.',
 
+        positions: {
+          focus: 'Centrales y línea defensiva',
+          detail:
+            'Controlar la altura de la línea, avanzar detrás del balón y mantener al equipo corto y conectado mientras el ataque progresa.'
+        },
+
         habits: [
           'Balón hacia delante → las líneas avanzan.',
           'La línea defensiva sube.',
@@ -239,6 +263,12 @@ const phase1Weeks = [
         purpose:
           'Construir nuestra primera versión clara de la presión alta colectiva usando los hábitos ya aprendidos.',
 
+        positions: {
+          focus: 'Delantero, extremos, mediapuntas y pivotes',
+          detail:
+            'Coordinar la primera línea de presión mientras los pivotes protegen los espacios centrales, cierran las siguientes opciones y permiten que todo el bloque avance.'
+        },
+
         habits: [
           'Organizados → presionamos.',
           'El primer defensor manda.',
@@ -262,6 +292,12 @@ const phase1Weeks = [
 
         purpose:
           'Reconocer si una pérdida debe provocar presión inmediata o un repliegue para recuperar nuestra forma.',
+
+        positions: {
+          focus: 'Centrales y pivotes',
+          detail:
+            'Leer la transición desde detrás del balón: decidir cuándo apoyar la presión, cuándo proteger el espacio central y cuándo ordenar el repliegue del equipo.'
+        },
 
         habits: [
           'Buenos números cerca del balón → vamos a por él.',
@@ -306,6 +342,12 @@ const phase1Weeks = [
         purpose:
           'Juntar nuestros principios ofensivos entendiendo que cada problema defensivo necesita una solución diferente.',
 
+        positions: {
+          focus: 'Extremos, laterales, delantero y jugadores interiores',
+          detail:
+            'Reconocer cómo las distintas posiciones ofrecen soluciones diferentes: amplitud por fuera, conexiones por dentro y profundidad a la espalda.'
+        },
+
         habits: [
           'Línea alta → amenaza la espalda.',
           'Espacio central → juega por dentro.',
@@ -329,6 +371,12 @@ const phase1Weeks = [
 
         purpose:
           'Juntar presión, temporización, repliegue y defensa compacta para elegir la respuesta correcta.',
+
+        positions: {
+          focus: 'Centrales, pivotes y jugadores detrás de la presión',
+          detail:
+            'Controlar el equipo desde detrás del balón: proteger el centro, mantener las distancias y reconocer cuándo avanzar, frenar o replegar.'
+        },
 
         habits: [
           'Reconoce si debes presionar o frenar.',
