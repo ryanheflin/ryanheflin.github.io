@@ -53,7 +53,7 @@ const phase1Weeks = [
 
         habits: [
           'El más cercano frena.',
-          'Protege por dentro.',
+          'Orienta al rival hacia donde queremos.',
           'Uno presiona → todos ayudan.',
           'Mantente conectado.',
           'Haz al rival predecible.'
@@ -154,19 +154,19 @@ const phase1Weeks = [
         purpose:
           'Conectar presión, cobertura y distancias para influir en la siguiente acción del rival.',
 
-        positions: {
-          focus: 'Laterales, extremos y jugadores de banda',
-          detail:
-            'Defender juntos en banda: orientar al rival, proteger el interior y coordinar la presión, la cobertura y el apoyo alrededor del balón.'
-        },
-
-        habits: [
-          'Protege por dentro.',
-          'Orienta la presión hacia donde queremos.',
-          'Cubre detrás de la presión.',
-          'Los jugadores lejanos cierran.',
-          'Pase atrás → el equipo avanza.'
-        ],
+      positions: {
+        focus: 'Laterales, extremos y jugadores de banda',
+        detail:
+          'Defender juntos en banda: orientar al rival hacia donde queremos que juegue y coordinar la presión, la cobertura y el apoyo alrededor del balón.'
+      },
+        
+      habits: [
+        'Orienta al rival hacia donde queremos.',
+        'En campo rival → fuerza hacia dentro.',
+        'En nuestro campo → protege dentro y fuerza hacia fuera.',
+        'Cubre detrás de la presión.',
+        'Pase atrás → el equipo avanza.'
+      ],
 
         missed: [
           'Presionar es controlar al rival, no solo correr hacia el balón.',
