@@ -1,57 +1,98 @@
-<header class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-  <div>
-    <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
-      Calendario y Resultados de la Temporada
-    </h2>
-    <p class="text-gray-400 text-sm">
-      Partidos, horarios y clasificación oficial directamente desde la FCF.
-    </p>
-  </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendario de la Temporada | CE Altafulla U15</title>
 
-  <a
-    id="fcf-direct-link"
-    href="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
-    style="background-color: var(--altafulla-yellow);"
-  >
-    🔗 Abrir en FCF.cat ↗
-  </a>
-</header>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/site.js" defer></script>
 
-<!-- Embedded FCF Page -->
-<section class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8">
-  <div class="relative w-full rounded-lg overflow-hidden bg-white h-[560px] md:h-[750px]">
-    <iframe
-      id="fcf-iframe"
-      src="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
-      class="w-full h-full border-0"
-      title="CE Altafulla FCF Schedule"
-      loading="lazy">
-    </iframe>
-  </div>
-</section>
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+  </style>
+</head>
 
-<!-- Match Day Logistics -->
-<section class="mb-8">
-  <h3 class="text-xl font-bold mb-4">Información para los Partidos</h3>
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <!-- Shared Sidebar -->
+  <div id="site-sidebar"></div>
 
-    <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-      <h4 class="text-lg font-bold mb-2 text-white">📍 Dirección del Campo</h4>
-      <p class="text-sm text-gray-300">Estadi Municipal Joan Pijuan</p>
-      <p class="text-xs text-gray-400 mt-1">
-        Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona
-      </p>
-    </div>
+  <!-- Main Content -->
+  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full">
 
-    <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
-      <h4 class="text-lg font-bold mb-2 text-white">⌚ Horarios de Llegada y Convocatoria</h4>
-      <p class="text-sm text-gray-300">Partidos en casa: 60 minutos antes del inicio.</p>
-      <p class="text-sm text-gray-300 mt-1">Partidos fuera de casa: 60 minutos antes del inicio.</p>
-    </div>
+    <header class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div>
+        <h2 class="text-3xl font-extrabold mb-1" style="color: var(--altafulla-yellow);">
+          Calendario y Resultados de la Temporada
+        </h2>
+        <p class="text-gray-400 text-sm">
+          Partidos, horarios y clasificación oficial directamente desde la FCF.
+        </p>
+      </div>
 
-  </div>
-</section>
+      <a
+        id="fcf-direct-link"
+        href="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
+        style="background-color: var(--altafulla-yellow);"
+      >
+        🔗 Abrir en FCF.cat ↗
+      </a>
+    </header>
+
+    <!-- Embedded FCF Page -->
+    <section class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8">
+      <div class="relative w-full rounded-lg overflow-hidden bg-white h-[560px] md:h-[750px]">
+        <iframe
+          id="fcf-iframe"
+          src="https://www.fcf.cat/ca/calendari-equip/2526/futbol-11/infantil-primera-divisio-s14/grup-15/altafulla-ce-a"
+          class="w-full h-full border-0"
+          title="CE Altafulla FCF Schedule"
+          loading="lazy">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Match Day Logistics -->
+    <section class="mb-8">
+      <h3 class="text-xl font-bold mb-4">Información para los Partidos</h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-2 text-white">📍 Dirección del Campo</h4>
+          <p class="text-sm text-gray-300">Estadi Municipal Joan Pijuan</p>
+          <p class="text-xs text-gray-400 mt-1">
+            Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona
+          </p>
+        </div>
+
+        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+          <h4 class="text-lg font-bold mb-2 text-white">⌚ Horarios de Llegada y Convocatoria</h4>
+          <p class="text-sm text-gray-300">
+            Partidos en casa: 60 minutos antes del inicio.
+          </p>
+          <p class="text-sm text-gray-300 mt-1">
+            Partidos fuera de casa: 60 minutos antes del inicio.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Responsive Footer -->
+  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+    &copy; 2026 Ex Profundo por Ryan Heflin — CE Altafulla S15
+  </footer>
+
+</body>
+</html>
