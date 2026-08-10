@@ -85,7 +85,9 @@ const phase1Weeks = [
           'Everyone else closes space.',
           'No advantage → secure the ball.'
         ],
-
+        
+        sessionPlan:
+            'sessions/session-03-react.pdf',
         missed: [
           'When we lose the ball, react immediately instead of stopping.',
           'The closest players hunt the ball while everyone else closes space.',
