@@ -355,7 +355,7 @@ const phase1Weeks = [
           'Bring together pressing, delaying, recovering, and compact defending to choose the correct response.',
 
         positions: {
-          focus: 'Center backs, and holding midfielders',
+          focus: 'Center backs and holding midfielders',
           detail:
             'Control the team from behind the ball: protect the center, maintain distances, and recognize when to step forward, slow the opponent down, or recover.'
         },
