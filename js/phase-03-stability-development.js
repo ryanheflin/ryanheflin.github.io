@@ -1,3 +1,4 @@
+```javascript
 const phase3Weeks = [
 
   /* ========================================================
@@ -5,7 +6,7 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 9,
-    focus: 'Escaping an Aggressive High Press',
+    focus: 'Escape an Aggressive High Press',
 
     description:
       'Stay calm under aggressive pressure, recognize where the opponent has overcommitted, and escape into the free space with purpose.',
@@ -96,7 +97,7 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 10,
-    focus: 'Pressing the Opponent into Predictable Areas',
+    focus: 'Press the Opponent into Predictable Areas',
 
     description:
       'Use the first defender, supporting pressure, and collective compactness to influence where the opponent plays next.',
@@ -112,7 +113,7 @@ const phase3Weeks = [
         question: 'Which pass do we want to give them?',
 
         purpose:
-          'Develop the idea that the first defender does not simply close the ball; he shapes the opponent’s next action by protecting dangerous options and showing play toward preferred areas.',
+          'Develop the idea that the first defender does not simply close the ball; they shape the opponent’s next action by protecting dangerous options and showing play toward preferred areas.',
 
         habits: [
           'Protect the most dangerous option first.',
@@ -126,7 +127,7 @@ const phase3Weeks = [
           'Good pressing is not about removing every option.',
           'We often want to leave one pass available so the opponent plays where we expect.',
           'The first defender influences the direction of play.',
-          'Everyone behind him must understand which options they are responsible for closing.'
+          'Everyone behind the pressure must understand which options they are responsible for closing.'
         ]
       },
 
@@ -165,7 +166,7 @@ const phase3Weeks = [
         habits: [
           'Organized → press.',
           'Disconnected → delay.',
-          'Poor support behind the press → hold.',
+          'Poor support behind the pressure → hold.',
           'Good trigger and support → go together.',
           'If the press is broken → recover immediately.'
         ],
@@ -187,7 +188,7 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 11,
-    focus: 'Winning First and Second Balls from Direct Play',
+    focus: 'Win First and Second Balls from Direct Play',
 
     description:
       'Control direct play by competing clearly for the first contact, organizing around the duel, and owning the second action.',
@@ -278,7 +279,7 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 12,
-    focus: 'Protecting Against Counters While We Attack',
+    focus: 'Protect Against Counters While We Attack',
 
     description:
       'Attack with numbers while maintaining enough structure behind the ball to control clearances, transitions, and counterattacks.',
@@ -364,3 +365,4 @@ const phase3Weeks = [
   }
 
 ];
+```
