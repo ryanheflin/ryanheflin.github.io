@@ -28,7 +28,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Después de dos años formando parte de este grupo como segundo entrenador, tengo muchas ganas de comenzar esta nueva etapa juntos. He tenido la oportunidad de conocer a muchos de los jugadores, aprender del fútbol y de la cultura de aquí y entender mejor qué necesita este grupo. Ahora empieza un nuevo reto para todos.
+      Después de dos años formando parte de este grupo como segundo entrenador, tengo muchas ganas de comenzar esta nueva etapa juntos. He tenido la oportunidad de conocer a muchos de los jugadores, aprender del fútbol y de la cultura de aquí y entender mejor qué necesita este grupo.
     </p>
 
     <p>
@@ -48,7 +48,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Nuestra manera de jugar irá evolucionando durante la temporada a medida que conozcamos mejor al equipo y descubramos juntos qué somos capaces de hacer.
+      Nuestra manera de jugar irá evolucionando durante la temporada a medida que conozcamos mejor al equipo.
     </p>
 
 
@@ -61,7 +61,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Sí espero compromiso, esfuerzo, respeto y ganas de aprender. Espero que sean buenos compañeros, que se comuniquen, que se ayuden y que entiendan que representar al CE Altafulla significa algo.
+      Espero compromiso, esfuerzo, respeto y ganas de aprender. Espero que estan a la altura de nuestros valores fundamentales
     </p>
 
     <p>
@@ -90,14 +90,6 @@ window.blogPosts.push({
     </p>
 
     <p>
-      No prometo que todo vaya a salir bien.
-    </p>
-
-    <p>
-      Habrá partidos difíciles, decisiones que no funcionen y momentos en los que tendremos que cambiar cosas. Eso también forma parte del fútbol.
-    </p>
-
-    <p>
       Lo que sí puedo prometer es que habrá trabajo, reflexión y compromiso por mi parte durante toda la temporada.
     </p>
 
@@ -107,7 +99,7 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      Las familias tienen un papel muy importante en el desarrollo de un joven futbolista.
+      Las familias tienen un papel muy importante en este equipo.
     </p>
 
     <p>
@@ -119,7 +111,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Eso no significa que tengan que hacerlo solos. Todo lo contrario. Necesitan el apoyo de sus familias. Pero a veces la mejor manera de ayudarles es darles el espacio necesario para que encuentren sus propias respuestas.
+     A veces la mejor manera de ayudarles es darles el espacio necesario para que encuentren sus propias respuestas.
     </p>
 
     <p>
@@ -139,39 +131,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Si mantenemos eso como punto de partida, será mucho más fácil afrontar juntos todo lo que trae una temporada.
-    </p>
-
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      Un equipo, dentro y fuera del campo
-    </h4>
-
-    <p>
-      Los jugadores serán los protagonistas, pero el entorno que construyamos alrededor de ellos también será importante.
-    </p>
-
-    <p>
-      Espero que jugadores, familias, entrenadores y club podamos avanzar en la misma dirección.
-    </p>
-
-    <p>
-      Habrá momentos de alegría y momentos de frustración durante una temporada larga. En ambos casos, quiero que intentemos mantener perspectiva, comunicarnos con respeto y pensar siempre en lo que ayuda a los chicos y al equipo a seguir creciendo.
-    </p>
-
-    <p>
       Tenemos mucho trabajo por delante y todavía mucho que descubrir sobre este grupo. Eso es precisamente lo que hace ilusionante el comienzo de una temporada.
-    </p>
-
-    <p>
-      No sé exactamente qué equipo seremos dentro de nueve meses.
-    </p>
-
-    <p
-      class="text-lg font-bold"
-      style="color: var(--altafulla-yellow);"
-    >
-      Lo construiremos juntos.
     </p>
 
     <p>
