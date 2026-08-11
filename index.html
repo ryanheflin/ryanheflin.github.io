@@ -1,13 +1,39 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Coach's Notes | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/site.js" defer></script>
+
+
+  <!-- =========================================================
+       BLOG POST STORAGE
+  ========================================================== -->
+
+  <script>
+    window.blogPosts = [];
+  </script>
+
+
+  <!-- =========================================================
+       BLOG POST FILES
+
+       Add each new post here.
+
+       Example:
+
+       <script src="posts/welcome-letter.js"></script>
+       <script src="posts/week-01-review.js"></script>
+       <script src="posts/match-01-report.js"></script>
+  ========================================================== -->
+
+  <script src="posts/welcome-letter.js"></script>
+
 
   <style>
     :root {
@@ -15,18 +41,40 @@
       --altafulla-black: #000000;
       --altafulla-blue: #62bed6;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
 
+
 <body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
 
-  <!-- Shared Sidebar -->
+
+  <!-- =========================================================
+       SHARED SIDEBAR
+  ========================================================== -->
+
   <div id="site-sidebar"></div>
 
-  <!-- Main Content Area -->
-  <main class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-5xl mx-auto w-full space-y-8">
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+
+  <main
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-5xl mx-auto w-full space-y-8"
+  >
+
+
+    <!-- =======================================================
+         PAGE HEADER
+    ======================================================== -->
 
     <header>
+
       <h2
         class="text-3xl font-extrabold mb-1"
         style="color: var(--altafulla-yellow);"
@@ -34,281 +82,713 @@
         Blog & Coach's Notes
       </h2>
 
+
       <p class="text-gray-400 text-sm">
         Post-match reflections, tactical video analysis,
         weekly reviews, and questions from families.
       </p>
+
     </header>
 
-    <!-- CATEGORY FILTER TABS -->
-    <div class="flex space-x-2 border-b border-gray-700 pb-3 overflow-x-auto">
+
+
+    <!-- =======================================================
+         CATEGORY FILTERS
+    ======================================================== -->
+
+    <div
+      class="flex space-x-2 border-b border-gray-700 pb-3 overflow-x-auto"
+    >
 
       <button
         onclick="filterPosts('all')"
         id="filter-all"
-        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-700 text-white"
+        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-bold bg-gray-700 text-white whitespace-nowrap"
         style="color: var(--altafulla-yellow);"
       >
         All Posts
       </button>
 
+
       <button
         onclick="filterPosts('match-report')"
         id="filter-match-report"
-        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800"
+        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800 whitespace-nowrap"
       >
         ⚽ Match Reports
       </button>
 
+
       <button
         onclick="filterPosts('video-analysis')"
         id="filter-video-analysis"
-        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800"
+        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800 whitespace-nowrap"
       >
         🎥 Videos
       </button>
 
+
       <button
         onclick="filterPosts('practice-review')"
         id="filter-practice-review"
-        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800"
+        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800 whitespace-nowrap"
       >
         📋 Weekly Training
       </button>
 
+
       <button
         onclick="filterPosts('qa')"
         id="filter-qa"
-        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800"
+        class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold text-gray-400 hover:text-white bg-gray-800 whitespace-nowrap"
       >
         💬 Questions & Notes
       </button>
 
     </div>
 
-    <!-- LATEST / FEATURED POST -->
-    <article class="post-card featured-post qa bg-gray-800 p-6 rounded-xl border border-gray-700 shadow-lg space-y-6">
 
-      <div class="flex items-center justify-between gap-4">
-        <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-green-400 border border-gray-600 uppercase">
-          Latest Post • Questions & Notes
-        </span>
 
-        <span class="text-xs text-gray-400">
-          August 8, 2026
-        </span>
-      </div>
+    <!-- =======================================================
+         FEATURED / SELECTED POST
+    ======================================================== -->
 
-      <div>
-        <h3 class="text-2xl font-bold text-white">
-          Welcome to the 2026/27 Season
-        </h3>
+    <section id="featured-post-container">
 
-        <p class="text-gray-400 text-sm mt-2">
-          A first look at the environment we want to build together this season.
-        </p>
-      </div>
-
-      <div class="space-y-5 text-gray-300 text-sm leading-relaxed">
-
-        <p>Hi all!</p>
-
-        <p>
-          I want to welcome the CE Altafulla Cadete players and families to the new season.
-        </p>
-
-        <p>
-          After two years as part of this group as an assistant coach, I am looking forward to beginning this new stage together. I have had the opportunity to get to know many of the players, learn from the football and culture here, and better understand what this group needs. Now a new challenge begins for all of us.
-        </p>
-
-        <p>
-          My goal this season is to create an environment where the boys can compete and enjoy football, and where every player has the opportunity to grow both individually and as part of the team.
-        </p>
-
-        <p>
-          I do not want us to become a team that simply follows instructions. I want the players to learn how to understand the game, communicate, make decisions, and find solutions together.
-        </p>
-
-        <p>
-          There will be moments when we get things right and others when we make mistakes. Both are part of learning. What matters will be our ability to learn and keep improving.
-        </p>
-
-        <p>
-          On my part, I will work to make sure every training session has a clear purpose and that what we work on during the week helps the players become better prepared for the problems they will face at the weekend. You can see each training session goal in the "Practice Plan" tab. 
-        </p>
-
-        <p>
-          The way we play will continue to evolve throughout the season as we get to know the team better and discover together what we are capable of doing.
-        </p>
-
-        <h4 class="text-lg font-bold text-white pt-2">
-          What I Expect From the Players
-        </h4>
-
-        <p>
-          I am going to ask a lot of the boys, but I do not expect perfection.
-        </p>
-
-        <p>
-          I do expect commitment, effort, respect, and a willingness to learn. I expect them to be good teammates, to communicate, to help each other, and to understand that representing CE Altafulla means something. I expect us to live up to our core values of Strength, Discipline, Teamwork, and Respect.
-        </p>
-
-        <p>
-          I also want them to learn to take increasing responsibility for their own football.
-        </p>
-
-        <p>
-          At this age, an important part of their development is beginning to think and act like footballers: arriving prepared, taking care of the small details, listening, asking questions, accepting mistakes, and responding well to difficult moments.
-        </p>
-
-        <p>
-          We want to compete. We want to win. But we also want to build something that goes beyond the result on a Saturday.
-        </p>
-
-        <h4 class="text-lg font-bold text-white pt-2">
-          What You Can Expect From Me
-        </h4>
-
-        <p>
-          If I am going to ask the players for commitment, I have to start by demanding the same from myself.
-        </p>
-
-        <p>
-          I am committed to working to give the boys a serious, positive, and demanding environment; to preparing each week with purpose; to being honest with them; to listening; to continuing to learn; and to making the decisions I believe are best for the development of the team and the players. I will continue to improve my Spanish and my ability to speak with the players so that I can be a more supportive and effective coach. 
-        </p>
-
-        <p>
-          I can't promise that everything will go well.
-        </p>
-
-        <p>
-          There will be difficult matches, decisions that do not work, and moments when we have to change things. That is also part of football.
-        </p>
-
-        <p>
-          What I can promise is that there will be work, reflection, and commitment from me throughout the entire season.
-        </p>
-
-        <h4 class="text-lg font-bold text-white pt-2">
-          The Role of Families
-        </h4>
-
-        <p>
-          Families have a very important role in this team. 
-        </p>
-
-        <p>
-          My request is simple: support their growth without trying to control every part of the process.
-        </p>
-
-        <p>
-          At this age, we want the players to begin taking more and more responsibility. We want them to learn to speak with their coaches, solve problems, manage moments of frustration, accept decisions, respond to mistakes, and think about their own game.
-        </p>
-
-        <p>
-          That does not mean they have to do it alone. Quite the opposite. They need the support of their families. But sometimes the best way to help them is to give them the space they need to find their own answers.
-        </p>
-
-        <p>
-          After a match, there will be days when they have played a lot and others when they have played less. There will be excellent performances and difficult matches. There will be wins, losses, mistakes, decisions we may not agree with, and moments of frustration.
-        </p>
-
-        <p>
-          In all of those moments, I hope we can help the boys keep things in perspective.
-        </p>
-
-        <p>
-          Encourage them. Listen to them. Help them enjoy it. Ask them what they learned and how they felt. And allow them to become increasingly responsible for their own path as footballers.
-        </p>
-
-        <p>
-          Coaches and families will have different perspectives and different responsibilities, but we share something much more important: we want these boys to have a positive and rewarding experience.
-        </p>
-
-        <p>
-          If we keep that as our starting point, it will be much easier to face everything a season brings together.
-        </p>
-
-        <p>
-          Welcome to the 2026/27 season.
-        </p>
-
-      </div>
-
-      <div class="pt-4 border-t border-gray-700 flex justify-between items-center text-xs text-gray-400">
-        <span>
-          By Coach Ryan Heflin
-        </span>
-
-        <span class="font-bold text-green-400">
-          Questions & Notes
-        </span>
-      </div>
-
-    </article>
-
-    <!-- PREVIOUS POSTS LIST SECTION
-         Intentionally left empty. Add future posts here as they are published. -->
-    <section class="space-y-4 pt-6">
-
-      <h3 class="text-xl font-bold text-gray-200 border-b border-gray-800 pb-2">
-        Previous Posts
-      </h3>
-
-      <ul class="divide-y divide-gray-800 border-t border-b border-gray-800">
-        <!-- Future posts go here. -->
-      </ul>
+      <!-- Selected post is inserted here automatically -->
 
     </section>
 
+
+
+    <!-- =======================================================
+         POST LIST
+    ======================================================== -->
+
+    <section class="space-y-4 pt-2">
+
+      <div
+        class="flex items-center justify-between gap-4 border-b border-gray-800 pb-2"
+      >
+
+        <h3
+          id="post-list-heading"
+          class="text-xl font-bold text-gray-200"
+        >
+          More Posts
+        </h3>
+
+
+        <span
+          id="post-count"
+          class="text-xs text-gray-500"
+        >
+        </span>
+
+      </div>
+
+
+      <div
+        id="post-list"
+        class="divide-y divide-gray-800 border-t border-b border-gray-800"
+      >
+
+        <!-- Post titles are inserted here automatically -->
+
+      </div>
+
+    </section>
+
+
   </main>
 
-  <footer class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10">
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer
+    class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
+  >
     &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
+
+
+  <!-- =========================================================
+       BLOG JAVASCRIPT
+  ========================================================== -->
+
   <script>
-    function filterPosts(category) {
 
-      // 1. Update Button Styles
-      document.querySelectorAll('.filter-btn').forEach(btn => {
-        btn.classList.remove('bg-gray-700', 'text-white');
-        btn.classList.add('bg-gray-800', 'text-gray-400');
-        btn.style.color = '';
-      });
 
-      const activeBtn = document.getElementById(`filter-${category}`);
+    /* ==========================================================
+       BLOG STATE
+    ========================================================== */
 
-      if (activeBtn) {
-        activeBtn.classList.add('bg-gray-700', 'text-white');
-        activeBtn.classList.remove('bg-gray-800', 'text-gray-400');
-        activeBtn.style.color = 'var(--altafulla-yellow)';
+    let activeCategory = 'all';
+
+    let selectedPostId = null;
+
+
+
+    /* ==========================================================
+       CATEGORY LABELS
+    ========================================================== */
+
+    const categoryLabels = {
+
+      'match-report': 'Match Report',
+
+      'video-analysis': 'Video Analysis',
+
+      'practice-review': 'Weekly Training',
+
+      'qa': 'Questions & Notes'
+
+    };
+
+
+
+    /* ==========================================================
+       DATE HELPERS
+    ========================================================== */
+
+    function formatPostDate(dateString) {
+
+      const date =
+        new Date(
+          `${dateString}T12:00:00`
+        );
+
+
+      return date.toLocaleDateString(
+        'en-US',
+        {
+          month: 'long',
+          day: 'numeric',
+          year: 'numeric'
+        }
+      );
+
+    }
+
+
+
+    /* ==========================================================
+       SORT POSTS
+    ========================================================== */
+
+    function getSortedPosts() {
+
+      return [
+        ...(window.blogPosts || [])
+      ].sort(
+        (a, b) =>
+          new Date(b.date) -
+          new Date(a.date)
+      );
+
+    }
+
+
+
+    /* ==========================================================
+       FILTERED POSTS
+    ========================================================== */
+
+    function getFilteredPosts() {
+
+      const posts =
+        getSortedPosts();
+
+
+      if (
+        activeCategory === 'all'
+      ) {
+
+        return posts;
+
       }
 
-      // 2. Filter Featured Cards
-      document.querySelectorAll('.post-card').forEach(card => {
-        if (category === 'all' || card.classList.contains(category)) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
 
-      // 3. Filter Previous Post List Items
-      document.querySelectorAll('.post-item').forEach(item => {
+      return posts.filter(
+        post =>
+          post.category ===
+          activeCategory
+      );
 
-        const itemCategory = item.getAttribute('data-category');
-
-        if (category === 'all' || itemCategory === category) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-
-      });
     }
+
+
+
+    /* ==========================================================
+       FEATURED POST
+    ========================================================== */
+
+    function renderFeaturedPost() {
+
+      const container =
+        document.getElementById(
+          'featured-post-container'
+        );
+
+
+      const posts =
+        getFilteredPosts();
+
+
+
+      if (
+        posts.length === 0
+      ) {
+
+        container.innerHTML = `
+
+          <div
+            class="bg-gray-800 p-6 rounded-xl border border-gray-700"
+          >
+
+            <p
+              class="text-sm text-gray-400"
+            >
+              No posts have been published in this category yet.
+            </p>
+
+          </div>
+
+        `;
+
+
+        selectedPostId = null;
+
+        return;
+
+      }
+
+
+
+      let selectedPost =
+        posts.find(
+          post =>
+            post.id ===
+            selectedPostId
+        );
+
+
+
+      if (!selectedPost) {
+
+        selectedPost =
+          posts[0];
+
+
+        selectedPostId =
+          selectedPost.id;
+
+      }
+
+
+
+      const isLatest =
+        selectedPost.id ===
+        posts[0].id;
+
+
+
+      container.innerHTML = `
+
+        <article
+          class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700 shadow-lg space-y-6"
+        >
+
+
+          <!-- Post Meta -->
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+          >
+
+
+            <span
+              class="self-start text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-green-400 border border-gray-600 uppercase"
+            >
+              ${
+                isLatest
+                  ? 'Latest Post • '
+                  : ''
+              }
+
+              ${
+                selectedPost.categoryLabel ||
+                categoryLabels[selectedPost.category] ||
+                'Coach’s Notes'
+              }
+            </span>
+
+
+
+            <span
+              class="text-xs text-gray-400"
+            >
+              ${formatPostDate(selectedPost.date)}
+            </span>
+
+
+          </div>
+
+
+
+          <!-- Post Header -->
+          <div>
+
+
+            <h3
+              class="text-2xl md:text-3xl font-bold text-white"
+            >
+              ${selectedPost.title}
+            </h3>
+
+
+            ${
+              selectedPost.excerpt
+                ? `
+
+                  <p
+                    class="text-gray-400 text-sm mt-2"
+                  >
+                    ${selectedPost.excerpt}
+                  </p>
+
+                `
+                : ''
+            }
+
+
+          </div>
+
+
+
+          <!-- Post Content -->
+          <div
+            class="space-y-5 text-gray-300 text-sm leading-relaxed"
+          >
+            ${selectedPost.content}
+          </div>
+
+
+
+          <!-- Post Footer -->
+          <div
+            class="pt-4 border-t border-gray-700 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-gray-400"
+          >
+
+            <span>
+              By ${
+                selectedPost.author ||
+                'Coach Ryan Heflin'
+              }
+            </span>
+
+
+            <span
+              class="font-bold text-green-400"
+            >
+              ${
+                selectedPost.categoryLabel ||
+                categoryLabels[selectedPost.category] ||
+                'Coach’s Notes'
+              }
+            </span>
+
+          </div>
+
+
+        </article>
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       POST LIST
+    ========================================================== */
+
+    function renderPostList() {
+
+      const container =
+        document.getElementById(
+          'post-list'
+        );
+
+
+      const count =
+        document.getElementById(
+          'post-count'
+        );
+
+
+      const posts =
+        getFilteredPosts();
+
+
+
+      count.textContent =
+        `${posts.length} ${
+          posts.length === 1
+            ? 'post'
+            : 'posts'
+        }`;
+
+
+
+      const otherPosts =
+        posts.filter(
+          post =>
+            post.id !==
+            selectedPostId
+        );
+
+
+
+      if (
+        otherPosts.length === 0
+      ) {
+
+        container.innerHTML = `
+
+          <div
+            class="py-5 text-sm text-gray-500"
+          >
+            No additional posts yet.
+          </div>
+
+        `;
+
+        return;
+
+      }
+
+
+
+      container.innerHTML =
+        otherPosts
+          .map(
+            post => `
+
+              <button
+                type="button"
+                onclick="selectPost('${post.id}')"
+                class="w-full text-left py-4 px-1 hover:px-3 hover:bg-gray-800/60 transition-all"
+              >
+
+
+                <div
+                  class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2"
+                >
+
+
+                  <div>
+
+
+                    <div
+                      class="flex flex-wrap items-center gap-2"
+                    >
+
+
+                      <span
+                        class="text-xs font-bold uppercase"
+                        style="color: var(--altafulla-blue);"
+                      >
+                        ${
+                          post.categoryLabel ||
+                          categoryLabels[post.category] ||
+                          'Coach’s Notes'
+                        }
+                      </span>
+
+
+                    </div>
+
+
+
+                    <h4
+                      class="text-base font-bold text-white mt-1"
+                    >
+                      ${post.title}
+                    </h4>
+
+
+
+                    ${
+                      post.excerpt
+                        ? `
+
+                          <p
+                            class="text-sm text-gray-400 mt-1"
+                          >
+                            ${post.excerpt}
+                          </p>
+
+                        `
+                        : ''
+                    }
+
+
+                  </div>
+
+
+
+                  <span
+                    class="text-xs text-gray-500 whitespace-nowrap"
+                  >
+                    ${formatPostDate(post.date)}
+                  </span>
+
+
+                </div>
+
+
+              </button>
+
+            `
+          )
+          .join('');
+
+    }
+
+
+
+    /* ==========================================================
+       SELECT POST
+    ========================================================== */
+
+    function selectPost(postId) {
+
+      selectedPostId =
+        postId;
+
+
+      renderFeaturedPost();
+
+
+      renderPostList();
+
+
+      document
+        .getElementById(
+          'featured-post-container'
+        )
+        .scrollIntoView({
+
+          behavior: 'smooth',
+
+          block: 'start'
+
+        });
+
+    }
+
+
+
+    /* ==========================================================
+       CATEGORY FILTER
+    ========================================================== */
+
+    function filterPosts(category) {
+
+      activeCategory =
+        category;
+
+
+      selectedPostId =
+        null;
+
+
+
+      document
+        .querySelectorAll(
+          '.filter-btn'
+        )
+        .forEach(btn => {
+
+          btn.classList.remove(
+            'bg-gray-700',
+            'text-white'
+          );
+
+
+          btn.classList.add(
+            'bg-gray-800',
+            'text-gray-400'
+          );
+
+
+          btn.style.color = '';
+
+        });
+
+
+
+      const activeButton =
+        document.getElementById(
+          `filter-${category}`
+        );
+
+
+
+      if (activeButton) {
+
+        activeButton.classList.add(
+          'bg-gray-700',
+          'text-white'
+        );
+
+
+        activeButton.classList.remove(
+          'bg-gray-800',
+          'text-gray-400'
+        );
+
+
+        activeButton.style.color =
+          'var(--altafulla-yellow)';
+
+      }
+
+
+
+      renderFeaturedPost();
+
+      renderPostList();
+
+    }
+
+
+
+    /* ==========================================================
+       INITIALIZE BLOG
+    ========================================================== */
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+
+
+        filterPosts(
+          'all'
+        );
+
+
+      }
+    );
+
+
   </script>
 
+
 </body>
+
 </html>
-```
