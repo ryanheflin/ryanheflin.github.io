@@ -1,11 +1,12 @@
+```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Plan de Entrenamiento | CE Altafulla U15</title>
+  <title>Practice Plan | CE Altafulla U15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -75,17 +76,17 @@
           class="text-3xl font-extrabold mb-1"
           style="color: var(--altafulla-yellow);"
         >
-          Plan de Entrenamiento
+          Practice Plan
         </h2>
 
         <p
           class="text-gray-400 text-sm leading-relaxed max-w-4xl"
         >
-          Nuestro marco para desarrollar nuestra manera de jugar a lo largo de la temporada.
-          Cada fase y cada sesión de entrenamiento están conectadas con problemas
-          que queremos reconocer y resolver en el partido, guiados por nuestro
-          Modelo de Juego. El plan nos da una dirección, mientras que cada sesión
-          se adapta a los jugadores y a lo que el juego nos va mostrando.
+          Our framework for developing the way we play throughout the season.
+          Every phase and every training session is connected to problems
+          we want to recognize and solve in the game, guided by our
+          Game Model. The plan gives us direction, while each session
+          adapts to the players and to what the game continues to show us.
         </p>
 
       </div>
@@ -101,7 +102,7 @@
           class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
           style="color: var(--altafulla-blue);"
         >
-          📘 Ver Modelo de Juego Completo →
+          📘 View Full Game Model →
         </a>
 
       </div>
@@ -129,7 +130,7 @@
             class="main-tab-btn pb-3 font-semibold text-white border-b-2 whitespace-nowrap"
             style="border-color: var(--altafulla-yellow);"
           >
-            Plan Semanal
+            Weekly Plan
           </button>
 
 
@@ -138,7 +139,7 @@
             id="main-tab-btn-roadmap"
             class="main-tab-btn pb-3 font-semibold text-gray-400 hover:text-white border-b-2 border-transparent whitespace-nowrap"
           >
-            Hoja de Ruta de la Temporada
+            Season Roadmap
           </button>
 
 
@@ -174,7 +175,7 @@
               onclick="changePhase(-1)"
               class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-left"
             >
-              ← Fase Anterior
+              ← Previous Phase
             </button>
 
 
@@ -187,7 +188,7 @@
                 class="text-xs uppercase tracking-[0.2em] font-bold"
                 style="color: var(--altafulla-yellow);"
               >
-                Semanas 1–4
+                Weeks 1–4
               </span>
 
 
@@ -195,7 +196,7 @@
                 id="weekly-phase-name"
                 class="text-2xl md:text-3xl font-extrabold text-white mt-1"
               >
-                Fundamentos
+                Foundation
               </h3>
 
 
@@ -203,7 +204,7 @@
                 id="weekly-phase-detail"
                 class="text-sm text-gray-400 mt-1"
               >
-                Introducción → Crear Hábitos
+                Introduction → Build Habits
               </p>
 
             </div>
@@ -216,7 +217,7 @@
               onclick="changePhase(1)"
               class="text-sm font-semibold text-gray-400 hover:text-white transition-colors disabled:opacity-30 disabled:cursor-not-allowed text-right"
             >
-              Siguiente Fase →
+              Next Phase →
             </button>
 
 
@@ -250,12 +251,12 @@
         <div>
 
           <h3 class="text-xl font-bold text-white">
-            Hoja de Ruta de Desarrollo 2026/27
+            2026/27 Development Roadmap
           </h3>
 
           <p class="text-sm text-gray-400 mt-1">
-            La temporada está organizada en grandes fases, y cada una
-            se construye sobre los hábitos y la comprensión desarrollados anteriormente.
+            The season is organized into major phases, with each one
+            building on the habits and understanding developed before it.
           </p>
 
         </div>
@@ -283,7 +284,7 @@
   <footer
     class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
   >
-    &copy; 2026 Ex Profundo por Ryan Heflin — CE Altafulla S15
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
   </footer>
 
 
@@ -315,71 +316,71 @@
     const curriculumPhases = [
 
       {
-        name: 'Fundamentos',
-        detail: 'Introducción → Crear Hábitos',
+        name: 'Foundation',
+        detail: 'Introduction → Build Habits',
         startWeek: 1,
         endWeek: 4
       },
 
       {
-        name: 'Implementación del Estilo',
-        detail: 'Reducir el Caos → Crear Estructura',
+        name: 'Style Implementation',
+        detail: 'Reduce Chaos → Create Structure',
         startWeek: 5,
         endWeek: 8
       },
 
       {
-        name: 'Estabilidad y Desarrollo',
-        detail: 'Hacer Consistente la Estructura Bajo Presión',
+        name: 'Stability & Development',
+        detail: 'Make the Structure Consistent Under Pressure',
         startWeek: 9,
         endWeek: 12
       },
 
       {
-        name: 'Organización',
-        detail: 'Empezar a Controlar los Partidos',
+        name: 'Organization',
+        detail: 'Begin to Control Games',
         startWeek: 13,
         endWeek: 16
       },
 
       {
-        name: 'Consolidación',
-        detail: 'Revisar → Reforzar → Conectar',
+        name: 'Consolidation',
+        detail: 'Review → Reinforce → Connect',
         startWeek: 17,
         endWeek: 20
       },
 
       {
-        name: 'Aplicación',
-        detail: 'Adaptación → Leer los Partidos',
+        name: 'Application',
+        detail: 'Adaptation → Read the Game',
         startWeek: 21,
         endWeek: 24
       },
 
       {
-        name: 'Crecimiento Táctico',
-        detail: 'Añadir Complejidad y Flexibilidad',
+        name: 'Tactical Growth',
+        detail: 'Add Complexity and Flexibility',
         startWeek: 25,
         endWeek: 28
       },
 
       {
-        name: 'Control Total y Perfeccionamiento',
-        detail: 'Jugar el Partido en Nuestros Términos',
+        name: 'Total Control & Refinement',
+        detail: 'Play the Game on Our Terms',
         startWeek: 29,
         endWeek: 32
       },
 
       {
-        name: 'Eficiencia',
-        detail: 'Claridad y Confianza',
+        name: 'Efficiency',
+        detail: 'Clarity and Confidence',
         startWeek: 33,
         endWeek: 36
       },
 
       {
-        name: 'Fase Final',
-        detail: 'Perfeccionar → Adaptar → Competir',
+        name: 'Final Phase',
+        detail: 'Refine → Adapt → Compete',
         startWeek: 37,
         endWeek: 40
       }
@@ -420,30 +421,30 @@
 
         {
           week: 13,
-          focus: "Construir y Mantener Ataques en Campo Rival",
+          focus: "Build and Sustain Attacks in the Opponent's Half",
           description:
-            'Mantener la presión sobre el rival mediante una posesión y un posicionamiento conectados.'
+            'Maintain pressure on the opponent through connected possession and positioning.'
         },
 
         {
           week: 14,
-          focus: 'Defender Nuestro Campo: Proteger el Centro y Orientar Hacia Fuera',
+          focus: 'Defend Our Half: Protect the Center and Force Outside',
           description:
-            'Mantenernos compactos, proteger los espacios peligrosos y orientar el juego lejos de nuestra portería.'
+            'Stay compact, protect dangerous spaces, and show play away from our goal.'
         },
 
         {
           week: 15,
-          focus: 'Mantener al Rival Encerrado Después de Perder Nuestro Ataque',
+          focus: 'Keep the Opponent Pinned In After Our Attack Breaks Down',
           description:
-            'Comprimir el espacio y recuperar segundas jugadas para mantener la presión ofensiva.'
+            'Compress space and regain second balls to maintain attacking pressure.'
         },
 
         {
           week: 16,
-          focus: 'Recuperar Nuestra Estructura Cuando Superan la Presión',
+          focus: 'Recover Our Structure When They Break the Press',
           description:
-            'Retrasar el ataque y volver a conectarnos rápidamente cuando el rival supera nuestra presión.'
+            'Delay the attack and reconnect quickly when the opponent breaks our pressure.'
         }
 
       ]);
@@ -460,30 +461,30 @@
 
         {
           week: 17,
-          focus: 'Jugar a Través de la Presión desde el Portero hasta el Medio Campo',
+          focus: 'Play Through Pressure from the Goalkeeper into Midfield',
           description:
-            'Revisar y conectar nuestros principios de salida de balón bajo una presión realista.'
+            'Review and connect our build-up principles under realistic pressure.'
         },
 
         {
           week: 18,
-          focus: "Crear y Aprovechar Espacios Alrededor del Área Rival",
+          focus: "Create and Exploit Space Around the Opponent's Box",
           description:
-            'Reconocer combinaciones, movimientos y espacios que generan oportunidades de finalización.'
+            'Recognize combinations, movements, and spaces that create finishing opportunities.'
         },
 
         {
           week: 19,
-          focus: 'Recuperar la Posesión Mediante la Presión Colectiva',
+          focus: 'Regain Possession Through Collective Pressing',
           description:
-            'Conectar los desencadenantes de presión, las ayudas, las coberturas y la compactación.'
+            'Connect pressing triggers, support, cover, and compactness.'
         },
 
         {
           week: 20,
-          focus: 'Gestionar los Momentos Justo Antes y Después de las Pérdidas y Recuperaciones',
+          focus: 'Manage the Moments Before and After Losses and Regains',
           description:
-            'Mejorar el posicionamiento y la toma de decisiones alrededor de los cambios de posesión.'
+            'Improve positioning and decision-making around changes of possession.'
         }
 
       ]);
@@ -500,30 +501,30 @@
 
         {
           week: 21,
-          focus: 'Elegir entre Salida Corta o Juego Directo Ante Diferentes Presiones',
+          focus: 'Choose Between Short Build-Up and Direct Play Against Different Presses',
           description:
-            'Leer al rival y elegir la solución que mejor aproveche el espacio disponible.'
+            'Read the opponent and choose the solution that best exploits the available space.'
         },
 
         {
           week: 22,
-          focus: 'Atacar a un Rival que Defiende Bajo y Compacto',
+          focus: 'Attack an Opponent Defending Low and Compact',
           description:
-            'Crear y aprovechar espacios contra rivales que protegen la zona alrededor de su portería.'
+            'Create and exploit spaces against opponents protecting the area around their goal.'
         },
 
         {
           week: 23,
-          focus: 'Defender Contra un Rival que Juega Directo',
+          focus: 'Defend Against a Direct Opponent',
           description:
-            'Controlar la profundidad, los primeros contactos, las segundas jugadas y los espacios a su alrededor.'
+            'Control depth, first contacts, second balls, and the spaces around them.'
         },
 
         {
           week: 24,
-          focus: 'Reconocer Cuándo Presionar Alto y Cuándo Defender en Bloque Medio',
+          focus: 'Recognize When to Press High and When to Defend in a Mid-Block',
           description:
-            'Leer la organización del equipo y elegir la altura defensiva adecuada.'
+            'Read the organization of the team and choose the appropriate defensive height.'
         }
 
       ]);
@@ -540,30 +541,30 @@
 
         {
           week: 25,
-          focus: 'Crear un Jugador Libre Ante Diferentes Primeras Líneas de Presión',
+          focus: 'Create a Free Player Against Different First Lines of Pressure',
           description:
-            'Manipular la presión rival mediante el posicionamiento, las rotaciones y la superioridad numérica.'
+            'Manipulate the opponent’s pressure through positioning, rotations, and numerical superiority.'
         },
 
         {
           week: 26,
-          focus: 'Crear Superioridades en Banda con Extremo, Lateral y Centrocampista',
+          focus: 'Create Wide-Area Overloads with Winger, Fullback, and Midfielder',
           description:
-            'Crear múltiples soluciones alrededor del balón para aislar o combinar en zonas exteriores.'
+            'Create multiple solutions around the ball to isolate or combine in wide areas.'
         },
 
         {
           week: 27,
-          focus: 'Crear Espacio Mediante Rotaciones del 9, el 10 y los Centrocampistas',
+          focus: 'Create Space Through Rotations of the 9, 10, and Midfielders',
           description:
-            'Utilizar movimientos coordinados para alterar las referencias defensivas y crear espacios centrales.'
+            'Use coordinated movement to disrupt defensive references and create central spaces.'
         },
 
         {
           week: 28,
-          focus: 'Cambiar el Punto de Ataque Cuando un Lado Está Saturado',
+          focus: 'Switch the Point of Attack When One Side Is Overloaded',
           description:
-            'Reconocer las acumulaciones, mover al rival y aprovechar después el lado opuesto.'
+            'Recognize overloads, move the opponent, and then exploit the opposite side.'
         }
 
       ]);
@@ -580,30 +581,30 @@
 
         {
           week: 29,
-          focus: 'Controlar el Territorio Mediante una Posesión Sostenida',
+          focus: 'Control Territory Through Sustained Possession',
           description:
-            'Utilizar el balón y el posicionamiento del equipo para mantener el partido en zonas favorables.'
+            'Use the ball and team positioning to keep the game in favorable areas.'
         },
 
         {
           week: 30,
-          focus: 'Atacar Repetidamente sin Quedar Expuestos al Contraataque',
+          focus: 'Attack Repeatedly Without Becoming Exposed to the Counterattack',
           description:
-            'Equilibrar los jugadores que atacan con un posicionamiento que proteja la siguiente transición.'
+            'Balance the players attacking with positioning that protects the next transition.'
         },
 
         {
           week: 31,
-          focus: 'Cambiar el Ritmo',
+          focus: 'Change the Tempo',
           description:
-            'Tener paciencia hasta que aparezca la oportunidad y entonces atacar con rapidez y decisión.'
+            'Be patient until the opportunity appears, then attack with speed and purpose.'
         },
 
         {
           week: 32,
-          focus: 'Controlar el Momento del Partido Cuando se Vuelve Caótico',
+          focus: 'Control the Game When It Becomes Chaotic',
           description:
-            'Recuperar la estructura, calmar el partido y volver a controlarlo mediante decisiones colectivas.'
+            'Recover our structure, calm the game, and regain control through collective decisions.'
         }
 
       ]);
@@ -620,30 +621,30 @@
 
         {
           week: 33,
-          focus: 'Reconocer y Aprovechar el Espacio a la Espalda de la Línea Defensiva',
+          focus: 'Recognize and Exploit Space Behind the Defensive Line',
           description:
-            'Identificar los momentos para amenazar la profundidad y atacar el espacio a la espalda.'
+            'Identify the moments to threaten depth and attack the space in behind.'
         },
 
         {
           week: 34,
-          focus: 'Reconocer y Aprovechar el Espacio Entre Líneas',
+          focus: 'Recognize and Exploit Space Between the Lines',
           description:
-            'Encontrar jugadores entre líneas y conectar acciones hacia delante desde zonas centrales.'
+            'Find players between the lines and connect forward actions from central areas.'
         },
 
         {
           week: 35,
-          focus: 'Convertir las Llegadas por Banda en Ocasiones de Calidad',
+          focus: 'Turn Wide-Area Entries into Quality Chances',
           description:
-            'Mejorar los movimientos finales, los apoyos, los envíos y la ocupación de las zonas de remate.'
+            'Improve final movements, support, delivery, and occupation of finishing zones.'
         },
 
         {
           week: 36,
-          focus: 'Convertir Recuperaciones en Ocasiones Antes de que el Rival se Reorganice',
+          focus: 'Turn Regains into Chances Before the Opponent Reorganizes',
           description:
-            'Atacar las transiciones con intención inmediata hacia delante y apoyos coordinados.'
+            'Attack transitions with immediate forward intent and coordinated support.'
         }
 
       ]);
@@ -660,30 +661,30 @@
 
         {
           week: 37,
-          focus: 'Proteger una Ventaja sin Perder Nuestra Identidad',
+          focus: 'Protect a Lead Without Losing Our Identity',
           description:
-            'Controlar el riesgo mientras seguimos jugando con intención y confianza.'
+            'Control risk while continuing to play with purpose and confidence.'
         },
 
         {
           week: 38,
-          focus: 'Superar a un Rival Cuando Necesitamos Remontar',
+          focus: 'Break Down an Opponent When We Need to Come Back',
           description:
-            'Aumentar la presión ofensiva manteniendo la claridad y la estructura colectiva.'
+            'Increase attacking pressure while maintaining clarity and collective structure.'
         },
 
         {
           week: 39,
-          focus: 'Cambiar Nuestra Estructura sin Cambiar Nuestro Estilo',
+          focus: 'Change Our Structure Without Changing Our Style',
           description:
-            'Adaptar el posicionamiento y los roles manteniendo nuestros principios fundamentales de juego.'
+            'Adapt positioning and roles while maintaining our fundamental playing principles.'
         },
 
         {
           week: 40,
-          focus: 'Leer y Resolver el Partido',
+          focus: 'Read and Solve the Game',
           description:
-            'Integrar todo el modelo de juego y resolver los problemas que presenta el partido.'
+            'Integrate the entire Game Model and solve the problems the game presents.'
         }
 
       ]);
@@ -942,7 +943,7 @@
                   }
                 "
               >
-                Semana ${weekNumber}
+                Week ${weekNumber}
               </button>
 
             `;
@@ -964,7 +965,7 @@
                 <span
                   class="text-xs uppercase tracking-wide text-gray-500"
                 >
-                  Semanas ${phase.startWeek}–${phase.endWeek}
+                  Weeks ${phase.startWeek}–${phase.endWeek}
                 </span>
 
 
@@ -988,7 +989,7 @@
                         <span
                           class="text-xs px-2.5 py-1 bg-yellow-400 text-black font-bold rounded-full"
                         >
-                          Fase Actual
+                          Current Phase
                         </span>
 
                       `
@@ -1024,7 +1025,7 @@
                 class="self-start text-sm font-semibold whitespace-nowrap hover:underline"
                 style="color: var(--altafulla-blue);"
               >
-                Ver Fase →
+                View Phase →
               </button>
 
 
@@ -1174,229 +1175,229 @@
     function createSessionCard(session) {
 
 
-  const habits =
-    session.habits
-      .map(
-        habit => `
+      const habits =
+        session.habits
+          .map(
+            habit => `
 
-          <li class="flex gap-2">
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-yellow);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${habit}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
+
+
+      const missed =
+        session.missed
+          .map(
+            point => `
+
+              <li class="flex gap-2">
+
+                <span
+                  class="font-black"
+                  style="color: var(--altafulla-blue);"
+                >
+                  ›
+                </span>
+
+                <span>
+                  ${point}
+                </span>
+
+              </li>
+
+            `
+          )
+          .join('');
+
+
+
+      return `
+
+        <div
+          class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
+        >
+
+
+          <!-- Session Header -->
+          <div>
+
 
             <span
-              class="font-black"
-              style="color: var(--altafulla-yellow);"
-            >
-              ›
-            </span>
-
-            <span>
-              ${habit}
-            </span>
-
-          </li>
-
-        `
-      )
-      .join('');
-
-
-  const missed =
-    session.missed
-      .map(
-        point => `
-
-          <li class="flex gap-2">
-
-            <span
-              class="font-black"
+              class="text-xs uppercase tracking-[0.18em] font-bold"
               style="color: var(--altafulla-blue);"
             >
-              ›
+              Session ${session.number}
             </span>
 
-            <span>
-              ${point}
-            </span>
-
-          </li>
-
-        `
-      )
-      .join('');
 
 
-
-  return `
-
-    <div
-      class="bg-gray-900/60 p-4 md:p-5 rounded-xl border border-gray-700 space-y-5"
-    >
-
-
-      <!-- Session Header -->
-      <div>
-
-
-        <span
-          class="text-xs uppercase tracking-[0.18em] font-bold"
-          style="color: var(--altafulla-blue);"
-        >
-          Sesión ${session.number}
-        </span>
-
-
-
-        <h5
-          class="text-xl font-extrabold text-white mt-1"
-        >
-          ${session.title}
-        </h5>
-
-
-
-        <p
-          class="text-sm font-semibold text-gray-300 mt-2"
-        >
-          “${session.question}”
-        </p>
-
-
-      </div>
-
-
-
-      <!-- Purpose -->
-      <div>
-
-
-        <h6
-          class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
-        >
-          Objetivo
-        </h6>
-
-
-        <p
-          class="text-sm text-gray-300 leading-relaxed"
-        >
-          ${session.purpose}
-        </p>
-
-
-      </div>
-
-
-
-      <!-- Positional Focus -->
-      ${
-        session.positions
-          ? `
-
-            <div
-              class="bg-gray-800/70 p-3 rounded-lg border border-gray-700"
+            <h5
+              class="text-xl font-extrabold text-white mt-1"
             >
-
-              <p
-                class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1"
-              >
-                Enfoque Posicional
-              </p>
-
-              <p
-                class="text-sm font-semibold text-white"
-              >
-                ${session.positions.focus}
-              </p>
-
-              <p
-                class="text-xs text-gray-400 mt-1 leading-relaxed"
-              >
-                ${session.positions.detail}
-              </p>
-
-            </div>
-
-          `
-          : ''
-      }
+              ${session.title}
+            </h5>
 
 
 
-      <!-- Habits -->
-      <div>
+            <p
+              class="text-sm font-semibold text-gray-300 mt-2"
+            >
+              “${session.question}”
+            </p>
 
 
-        <h6
-          class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
-        >
-          Hábitos que Queremos Desarrollar
-        </h6>
-
-
-        <ul
-          class="text-sm text-gray-300 space-y-1.5"
-        >
-          ${habits}
-        </ul>
-
-
-      </div>
+          </div>
 
 
 
-      <!-- Session Plan PDF -->
-      ${
-        session.sessionPlan
-          ? `
+          <!-- Purpose -->
+          <div>
 
-            <div>
 
-              <a
-                href="${session.sessionPlan}"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
-                style="color: var(--altafulla-blue);"
-              >
-                📋 Ver Plan de la Sesión →
-              </a>
+            <h6
+              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1.5"
+            >
+              Purpose
+            </h6>
 
-            </div>
 
-          `
-          : ''
-      }
+            <p
+              class="text-sm text-gray-300 leading-relaxed"
+            >
+              ${session.purpose}
+            </p>
+
+
+          </div>
 
 
 
-      <!-- If You Missed It -->
-      <div
-        class="border-t border-gray-700 pt-4"
-      >
+          <!-- Positional Focus -->
+          ${
+            session.positions
+              ? `
+
+                <div
+                  class="bg-gray-800/70 p-3 rounded-lg border border-gray-700"
+                >
+
+                  <p
+                    class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-1"
+                  >
+                    Positional Focus
+                  </p>
+
+                  <p
+                    class="text-sm font-semibold text-white"
+                  >
+                    ${session.positions.focus}
+                  </p>
+
+                  <p
+                    class="text-xs text-gray-400 mt-1 leading-relaxed"
+                  >
+                    ${session.positions.detail}
+                  </p>
+
+                </div>
+
+              `
+              : ''
+          }
 
 
-        <h6
-          class="text-xs uppercase tracking-wide font-bold mb-2"
-          style="color: var(--altafulla-blue);"
-        >
-          Si Te Lo Perdiste
-        </h6>
+
+          <!-- Habits -->
+          <div>
 
 
-        <ul
-          class="text-sm text-gray-400 space-y-1.5"
-        >
-          ${missed}
-        </ul>
+            <h6
+              class="text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
+            >
+              Habits We Want to Develop
+            </h6>
 
 
-      </div>
+            <ul
+              class="text-sm text-gray-300 space-y-1.5"
+            >
+              ${habits}
+            </ul>
 
 
-    </div>
+          </div>
 
-  `;
 
-}
+
+          <!-- Session Plan PDF -->
+          ${
+            session.sessionPlan
+              ? `
+
+                <div>
+
+                  <a
+                    href="${session.sessionPlan}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+                    style="color: var(--altafulla-blue);"
+                  >
+                    📋 View Session Plan →
+                  </a>
+
+                </div>
+
+              `
+              : ''
+          }
+
+
+
+          <!-- If You Missed It -->
+          <div
+            class="border-t border-gray-700 pt-4"
+          >
+
+
+            <h6
+              class="text-xs uppercase tracking-wide font-bold mb-2"
+              style="color: var(--altafulla-blue);"
+            >
+              If You Missed It
+            </h6>
+
+
+            <ul
+              class="text-sm text-gray-400 space-y-1.5"
+            >
+              ${missed}
+            </ul>
+
+
+          </div>
+
+
+        </div>
+
+      `;
+
+    }
 
 
     /* ==========================================================
@@ -1423,7 +1424,7 @@
               class="text-xs uppercase tracking-[0.18em] font-bold"
               style="color: var(--altafulla-blue);"
             >
-              Sesión ${number}
+              Session ${number}
             </span>
 
 
@@ -1441,7 +1442,7 @@
           <p
             class="text-sm text-gray-400"
           >
-            Detalles de la sesión pendientes de desarrollar.
+            Session details still to be developed.
           </p>
 
 
@@ -1470,7 +1471,7 @@
       document.getElementById(
         'weekly-phase-weeks'
       ).textContent =
-        `Semanas ${phase.startWeek}–${phase.endWeek}`;
+        `Weeks ${phase.startWeek}–${phase.endWeek}`;
 
 
 
@@ -1593,17 +1594,17 @@
 
               ${createPlaceholderSessionCard(
                 1,
-                'Estilo de Juego'
+                'Playing Style'
               )}
 
               ${createPlaceholderSessionCard(
                 2,
-                'Estructura'
+                'Structure'
               )}
 
               ${createPlaceholderSessionCard(
                 3,
-                'Aplicación'
+                'Application'
               )}
 
             `;
@@ -1658,7 +1659,7 @@
                   <span
                     class="text-xs uppercase tracking-[0.2em] font-black"
                   >
-                    Semana
+                    Week
                   </span>
 
 
@@ -1716,7 +1717,7 @@
                               color: #000000;
                             "
                           >
-                            Semana Actual
+                            Current Week
                           </span>
 
                         `
@@ -1756,7 +1757,7 @@
                   class="text-xs font-bold uppercase tracking-[0.16em] mb-2"
                   style="color: var(--altafulla-blue);"
                 >
-                  Objetivo Semanal
+                  Weekly Objective
                 </h4>
 
 
@@ -1783,14 +1784,14 @@
                   <h4
                     class="text-xs font-bold uppercase tracking-[0.16em] text-gray-500"
                   >
-                    Sesiones de Entrenamiento
+                    Training Sessions
                   </h4>
 
 
                   <span
                     class="text-xs text-gray-500"
                   >
-                    3 Sesiones
+                    3 Sessions
                   </span>
 
 
@@ -1860,3 +1861,4 @@
 </body>
 
 </html>
+```
