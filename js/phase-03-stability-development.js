@@ -364,4 +364,3 @@ const phase3Weeks = [
   }
 
 ];
-```
