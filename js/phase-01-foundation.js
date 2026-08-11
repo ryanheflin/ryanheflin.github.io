@@ -422,4 +422,3 @@ const phase1Weeks = [
   }
 
 ];
-```
