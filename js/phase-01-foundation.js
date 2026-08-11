@@ -155,7 +155,7 @@ const phase1Weeks = [
           'Connect pressure, cover, and distances to influence the opponent’s next action.',
 
         positions: {
-          focus: 'Fullbacks, wingers, and wide players',
+          focus: 'Fullbacks, wingers, and striker',
           detail:
             'Defend together in wide areas: show the opponent where we want them to play and coordinate pressure, cover, and support around the ball.'
         },
@@ -183,12 +183,6 @@ const phase1Weeks = [
 
         purpose:
           'Make decisions in transition: attack immediately if we have an advantage or secure the ball if we do not.',
-
-        positions: {
-          focus: 'Wingers, striker, and players near the ball',
-          detail:
-            'Recognize roles immediately after regaining possession: threaten in behind, open the field, and provide support ahead of and behind the ball.'
-        },
 
         habits: [
           'Win it → forward first.',
@@ -234,7 +228,7 @@ const phase1Weeks = [
           'Learn to advance together. Every forward action should trigger supporting movements across all lines.',
 
         positions: {
-          focus: 'Center backs and defensive line',
+          focus: 'Center backs',
           detail:
             'Control the height of the line, advance behind the ball, and keep the team short and connected as the attack progresses.'
         },
@@ -262,12 +256,6 @@ const phase1Weeks = [
 
         purpose:
           'Build our first clear version of collective high pressing using the habits we have already learned.',
-
-        positions: {
-          focus: 'Striker, wingers, attacking midfielders, and holding midfielders',
-          detail:
-            'Coordinate the first line of pressure while the holding midfielders protect central spaces, close the next options, and allow the entire block to move forward.'
-        },
 
         habits: [
           'Organized → we press.',
@@ -342,12 +330,6 @@ const phase1Weeks = [
         purpose:
           'Bring our attacking principles together by understanding that different defensive problems require different solutions.',
 
-        positions: {
-          focus: 'Wingers, fullbacks, striker, and central players',
-          detail:
-            'Recognize how different positions provide different solutions: width outside, connections inside, and depth in behind.'
-        },
-
         habits: [
           'High line → threaten in behind.',
           'Central space → play inside.',
@@ -373,7 +355,7 @@ const phase1Weeks = [
           'Bring together pressing, delaying, recovering, and compact defending to choose the correct response.',
 
         positions: {
-          focus: 'Center backs, holding midfielders, and players behind the pressure',
+          focus: 'Center backs, and holding midfielders',
           detail:
             'Control the team from behind the ball: protect the center, maintain distances, and recognize when to step forward, slow the opponent down, or recover.'
         },
