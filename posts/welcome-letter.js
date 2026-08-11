@@ -131,7 +131,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Tenemos mucho trabajo por delante y todavía mucho que descubrir sobre este grupo. Eso es precisamente lo que hace ilusionante el comienzo de una temporada.
+      Tenemos mucho trabajo por delante y todavía mucho que descubrir sobre este grupo. Estoy muy entusiasmado por comenzar como entrenador principal de este grupo. ¡Con ganas de tener una gran temporada!
     </p>
 
     <p>
