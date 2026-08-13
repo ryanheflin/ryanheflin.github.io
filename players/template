@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Individual Development Plan | CE Altafulla U15</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+
+<body class="bg-gray-900 text-white antialiased min-h-screen pb-16">
+
+<!-- =========================================================
+     MAIN CONTENT
+========================================================== -->
+
+<main
+  class="max-w-5xl mx-auto w-full p-4 pt-8 md:p-10 space-y-8"
+>
+
+
+  <!-- =======================================================
+       HOME BUTTON
+  ======================================================== -->
+
+  <div>
+    <a
+      href="../index.html"
+      class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 text-sm font-semibold text-gray-300 hover:text-white hover:bg-gray-700 transition-colors"
+    >
+      ← Home
+    </a>
+  </div>
+
+
+  <!-- =======================================================
+       PLAYER HEADER
+  ======================================================== -->
+
+  <header
+    class="bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden"
+  >
+
+    <!-- rest of player page -->
+
+      <div
+        class="h-2"
+        style="background-color: var(--altafulla-yellow);"
+      ></div>
+
+
+      <div class="p-5 md:p-7">
+
+
+        <div
+          class="flex flex-col md:flex-row md:items-start md:justify-between gap-5"
+        >
+
+
+          <div>
+
+            <span
+              class="text-xs uppercase tracking-[0.2em] font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              CE Altafulla S15
+            </span>
+
+
+            <h1
+              class="text-3xl md:text-4xl font-extrabold text-white mt-1"
+            >
+              Player Name
+            </h1>
+
+
+            <p
+              class="text-lg font-semibold mt-1"
+              style="color: var(--altafulla-yellow);"
+            >
+              Individual Development Plan
+            </p>
+
+          </div>
+
+
+          <div
+            class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm"
+          >
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-500 font-bold">
+                Primary Position
+              </p>
+
+              <p class="text-gray-200 mt-1">
+                Central Midfielder
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-500 font-bold">
+                Secondary Position
+              </p>
+
+              <p class="text-gray-200 mt-1">
+                Holding Midfielder
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-500 font-bold">
+                Review Period
+              </p>
+
+              <p class="text-gray-200 mt-1">
+                August–October 2026
+              </p>
+            </div>
+
+
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-500 font-bold">
+                Last Updated
+              </p>
+
+              <p class="text-gray-200 mt-1">
+                August 2026
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="mt-6 pt-5 border-t border-gray-800"
+        >
+
+          <p
+            class="text-sm text-gray-400 leading-relaxed max-w-4xl"
+          >
+            This page is a guide for your development, not a report card.
+            The goal is to identify what you already do well, what can improve,
+            and the specific habits and decisions that can help you become
+            a more complete and effective footballer.
+          </p>
+
+        </div>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =======================================================
+         CURRENT DEVELOPMENT PRIORITIES
+    ======================================================== -->
+
+    <section
+      class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+    >
+
+      <div class="mb-5">
+
+        <span
+          class="text-xs uppercase tracking-[0.18em] font-bold"
+          style="color: var(--altafulla-yellow);"
+        >
+          Current Priorities
+        </span>
+
+
+        <h2 class="text-2xl font-bold text-white mt-1">
+          What We Are Working Toward
+        </h2>
+
+
+        <p class="text-sm text-gray-400 mt-2">
+          The most important areas to focus on during this stage of the season.
+        </p>
+
+      </div>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+
+        <div
+          class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <p
+            class="text-xs uppercase tracking-wide font-bold"
+            style="color: var(--altafulla-blue);"
+          >
+            Priority 1
+          </p>
+
+
+          <h3 class="font-bold text-white mt-2">
+            Example Development Priority
+          </h3>
+
+
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Describe the specific behavior you want the player to recognize
+            and improve.
+          </p>
+
+        </div>
+
+
+        <div
+          class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <p
+            class="text-xs uppercase tracking-wide font-bold"
+            style="color: var(--altafulla-blue);"
+          >
+            Priority 2
+          </p>
+
+
+          <h3 class="font-bold text-white mt-2">
+            Example Development Priority
+          </h3>
+
+
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Keep this focused on something observable and actionable rather
+            than a general judgment.
+          </p>
+
+        </div>
+
+
+        <div
+          class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <p
+            class="text-xs uppercase tracking-wide font-bold"
+            style="color: var(--altafulla-blue);"
+          >
+            Priority 3
+          </p>
+
+
+          <h3 class="font-bold text-white mt-2">
+            Example Development Priority
+          </h3>
+
+
+          <p class="text-sm text-gray-400 mt-2 leading-relaxed">
+            Explain what improvement should begin to look like in training
+            and matches.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         GENERAL DEVELOPMENT
+    ======================================================== -->
+
+    <section class="space-y-5">
+
+
+      <div>
+
+        <span
+          class="text-xs uppercase tracking-[0.18em] font-bold"
+          style="color: var(--altafulla-yellow);"
+        >
+          Section 1
+        </span>
+
+        <h2 class="text-2xl font-bold text-white mt-1">
+          General Development
+        </h2>
+
+        <p class="text-sm text-gray-400 mt-2">
+          How the player is developing across the broader demands of the game.
+        </p>
+
+      </div>
+
+
+
+      <!-- Technical -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3
+          class="text-lg font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Technical Ability
+        </h3>
+
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4"
+        >
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Current Strengths
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe what the player currently does reliably with the ball.
+              Examples might include first touch, receiving under pressure,
+              passing range, dribbling, finishing, crossing, or ball protection.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Development Focus
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe the next technical behaviors to improve and the situations
+              in which they matter.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Tactical -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3
+          class="text-lg font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Tactical Understanding & Decision-Making
+        </h3>
+
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4"
+        >
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Current Strengths
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe what the player already recognizes well: space,
+              pressure, teammates, opponents, transitions, timing, or game
+              situations.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Development Focus
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe the decisions or game pictures the player needs to
+              recognize earlier or solve more consistently.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Physical -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3
+          class="text-lg font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Physical Application
+        </h3>
+
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4"
+        >
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Current Strengths
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe how the player currently uses speed, balance, strength,
+              coordination, endurance, or physical competitiveness within the game.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Development Focus
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Focus on how physical qualities can be applied more effectively
+              in football situations rather than grading athleticism in isolation.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Mental / Personal -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3
+          class="text-lg font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Competitive & Personal Habits
+        </h3>
+
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-5 mt-4"
+        >
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Current Strengths
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Describe habits such as communication, resilience, concentration,
+              coachability, competitiveness, preparation, teamwork, and response
+              to mistakes.
+            </p>
+
+          </div>
+
+
+          <div>
+
+            <h4 class="text-xs uppercase tracking-wide font-bold text-gray-500">
+              Development Focus
+            </h4>
+
+            <p class="text-sm text-gray-300 leading-relaxed mt-2">
+              Identify specific habits the player can take responsibility for
+              improving during training and matches.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =======================================================
+         POSITION-SPECIFIC DEVELOPMENT
+    ======================================================== -->
+
+    <section class="space-y-5">
+
+
+      <div>
+
+        <span
+          class="text-xs uppercase tracking-[0.18em] font-bold"
+          style="color: var(--altafulla-yellow);"
+        >
+          Section 2
+        </span>
+
+        <h2 class="text-2xl font-bold text-white mt-1">
+          Position-Specific Development
+        </h2>
+
+        <p class="text-sm text-gray-400 mt-2">
+          The specific responsibilities, decisions, and habits connected to
+          the player's role in our Game Model.
+        </p>
+
+      </div>
+
+
+
+      <!-- Position Identity -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3
+          class="text-lg font-bold"
+          style="color: var(--altafulla-blue);"
+        >
+          Role in the Team
+        </h3>
+
+
+        <p class="text-sm text-gray-300 leading-relaxed mt-3">
+          Explain what this position is responsible for within your team.
+          Keep this connected to your Game Model rather than giving a generic
+          description of the position.
+        </p>
+
+      </div>
+
+
+
+      <!-- With Ball -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3 class="text-lg font-bold text-white">
+          With the Ball
+        </h3>
+
+
+        <div class="space-y-4 mt-4">
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Receiving & Positioning
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe the player's current understanding and the next step
+              for this specific position.
+            </p>
+          </div>
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Progressing the Attack
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe how this player should help the team advance,
+              create advantages, or connect with teammates.
+            </p>
+          </div>
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Final Action
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              If relevant to the position, describe crossing, finishing,
+              combination play, through balls, switches, or other final actions.
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Without Ball -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3 class="text-lg font-bold text-white">
+          Without the Ball
+        </h3>
+
+
+        <div class="space-y-4 mt-4">
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Defensive Positioning
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe the spaces this player must protect and the references
+              they should recognize.
+            </p>
+          </div>
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Pressing & Support
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe when and how this position participates in pressure,
+              cover, support, compactness, and pressing triggers.
+            </p>
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Transitions -->
+      <div
+        class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+      >
+
+        <h3 class="text-lg font-bold text-white">
+          Transitions
+        </h3>
+
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4"
+        >
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              When We Win the Ball
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe the player's first responsibilities and the spaces or
+              options they should recognize after regaining possession.
+            </p>
+
+          </div>
+
+
+          <div
+            class="bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+          >
+
+            <h4
+              class="font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              When We Lose the Ball
+            </h4>
+
+            <p class="text-sm text-gray-300 mt-2 leading-relaxed">
+              Describe the player's immediate defensive-transition responsibility.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PLAYER ACTION PLAN
+    ======================================================== -->
+
+    <section
+      class="bg-gray-800 p-5 md:p-6 rounded-xl border border-gray-700"
+    >
+
+      <span
+        class="text-xs uppercase tracking-[0.18em] font-bold"
+        style="color: var(--altafulla-yellow);"
+      >
+        Action Plan
+      </span>
+
+
+      <h2 class="text-2xl font-bold text-white mt-1">
+        What You Can Work On
+      </h2>
+
+
+      <p class="text-sm text-gray-400 mt-2">
+        Simple actions the player can take ownership of during the next
+        development period.
+      </p>
+
+
+      <div class="space-y-4 mt-5">
+
+
+        <div
+          class="flex gap-4 bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <div
+            class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-black text-black"
+            style="background-color: var(--altafulla-yellow);"
+          >
+            1
+          </div>
+
+          <div>
+            <h3 class="font-bold text-white">
+              Training Focus
+            </h3>
+
+            <p class="text-sm text-gray-400 mt-1 leading-relaxed">
+              One clear behavior the player should deliberately practice
+              during team training.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div
+          class="flex gap-4 bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <div
+            class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-black text-black"
+            style="background-color: var(--altafulla-yellow);"
+          >
+            2
+          </div>
+
+          <div>
+            <h3 class="font-bold text-white">
+              Match Focus
+            </h3>
+
+            <p class="text-sm text-gray-400 mt-1 leading-relaxed">
+              One behavior or decision to consciously recognize during matches.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div
+          class="flex gap-4 bg-gray-900/60 p-4 rounded-lg border border-gray-700"
+        >
+
+          <div
+            class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center font-black text-black"
+            style="background-color: var(--altafulla-yellow);"
+          >
+            3
+          </div>
+
+          <div>
+            <h3 class="font-bold text-white">
+              Individual Work
+            </h3>
+
+            <p class="text-sm text-gray-400 mt-1 leading-relaxed">
+              A realistic area the player can work on independently outside
+              normal team training.
+            </p>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         COACH'S SUMMARY
+    ======================================================== -->
+
+    <section
+      class="bg-gray-950 p-5 md:p-6 rounded-xl border border-gray-800"
+    >
+
+      <h2
+        class="text-lg font-bold"
+        style="color: var(--altafulla-yellow);"
+      >
+        Coach's Summary
+      </h2>
+
+
+      <p class="text-sm text-gray-300 leading-relaxed mt-3">
+        Finish with a short, direct summary for the player. This is a good
+        place to explain what you believe their potential is, what you most
+        want them to understand, and what progress would look like over the
+        next several weeks.
+      </p>
+
+
+      <div class="mt-5 pt-4 border-t border-gray-800">
+
+        <p class="font-bold text-white">
+          Ryan Heflin
+        </p>
+
+        <p class="text-sm text-gray-500 mt-1">
+          Head Coach — CE Altafulla S15
+        </p>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer
+    class="fixed bottom-0 left-0 right-0 text-center text-gray-500 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
+  >
+    &copy; 2026 Ex Profundo — CE Altafulla S15
+  </footer>
+
+
+</body>
+
+</html>
