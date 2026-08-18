@@ -24,15 +24,10 @@
        BLOG POST FILES
 
        Add each new post here.
-
-       Example:
-
-       <script src="posts/welcome-letter.js"></script>
-       <script src="posts/week-01-review.js"></script>
-       <script src="posts/match-01-report.js"></script>
   ========================================================== -->
 
   <script src="posts/welcome-letter.js"></script>
+  <script src="posts/differences.js"></script>
 
 
   <style>
@@ -278,6 +273,9 @@
 
     /* ==========================================================
        SORT POSTS
+
+       Welcome letter always stays pinned first.
+       All other posts are sorted newest to oldest.
     ========================================================== */
 
     function getSortedPosts() {
@@ -285,9 +283,22 @@
       return [
         ...(window.blogPosts || [])
       ].sort(
-        (a, b) =>
-          new Date(b.date) -
-          new Date(a.date)
+        (a, b) => {
+
+          if (a.id === 'welcome-letter') {
+            return -1;
+          }
+
+          if (b.id === 'welcome-letter') {
+            return 1;
+          }
+
+          return (
+            new Date(b.date) -
+            new Date(a.date)
+          );
+
+        }
       );
 
     }
@@ -391,9 +402,9 @@
 
 
 
-      const isLatest =
+      const isPinned =
         selectedPost.id ===
-        posts[0].id;
+        'welcome-letter';
 
 
 
@@ -414,8 +425,8 @@
               class="self-start text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-green-400 border border-gray-600 uppercase"
             >
               ${
-                isLatest
-                  ? 'Latest Post • '
+                isPinned
+                  ? 'Pinned • '
                   : ''
               }
 
