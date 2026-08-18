@@ -8,9 +8,9 @@ window.blogPosts.push({
 
   date: '2026-08-18',
 
-  category: 'qa',
-
-  categoryLabel: 'Preguntas y Notas',
+  category: 'for-players',
+  
+  categoryLabel: 'For Players',
 
   author: 'Ryan Heflin',
 
