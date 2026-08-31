@@ -23,37 +23,42 @@
   ></script>
 
 
- <!-- =========================================================
-     GAME DATA STORAGE
-========================================================== -->
+  <!-- =========================================================
+       GAME DATA STORAGE
+  ========================================================== -->
 
-<script>
-  window.seasonGames = [];
-</script>
-
-
-<!-- =========================================================
-     GAME FILES
-
-     Add each game here as it is played.
-========================================================== -->
-
-<script src="js/games/game-01.js"></script>
+  <script>
+    window.seasonGames = [];
+  </script>
 
 
-<style>
+  <!-- =========================================================
+       GAME FILES
 
-  :root {
-    --altafulla-yellow: #f2e40a;
-    --altafulla-black: #000000;
-    --altafulla-blue: #62bed6;
-  }
+       Add each game here as it is played.
+  ========================================================== -->
 
-  html {
-    scroll-behavior: smooth;
-  }
+  <script src="js/games/game-01.js"></script>
 
-</style>
+  <!-- Future games:
+  <script src="js/games/game-02.js"></script>
+  <script src="js/games/game-03.js"></script>
+  -->
+
+
+  <style>
+
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
 
 </head>
 
@@ -445,6 +450,7 @@
             </div>
 
 
+
             <!-- Definition -->
             <div
               class="mt-5 pt-4 border-t border-gray-700"
@@ -453,7 +459,10 @@
               <p
                 class="text-xs text-gray-500 leading-relaxed"
               >
-                <strong class="text-gray-400">
+
+                <strong
+                  class="text-gray-400"
+                >
                   Purposeless turnover:
                 </strong>
 
@@ -462,6 +471,7 @@
                 with the ball, but gave possession away through
                 a rushed kick or carry without clear intent
                 or without considering the next action.
+
               </p>
 
             </div>
@@ -688,6 +698,83 @@
 
 
       return 'bg-gray-700 text-gray-300 border-gray-600';
+
+    }
+
+
+
+    /* ==========================================================
+       URL HELPERS
+
+       Each match can be opened directly with:
+
+       data.html?game=game-01
+       data.html?game=game-02
+       etc.
+    ========================================================== */
+
+    function updateGameUrl(gameId) {
+
+      const url =
+        new URL(
+          window.location.href
+        );
+
+
+      if (gameId) {
+
+        url.searchParams.set(
+          'game',
+          gameId
+        );
+
+      } else {
+
+        url.searchParams.delete(
+          'game'
+        );
+
+      }
+
+
+      window.history.pushState(
+        {},
+        '',
+        url
+      );
+
+    }
+
+
+
+    function getRequestedGame() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      const requestedGameId =
+        params.get(
+          'game'
+        );
+
+
+      if (!requestedGameId) {
+
+        return null;
+
+      }
+
+
+      return (
+        window.seasonGames || []
+      ).find(
+        game =>
+          game.id ===
+          requestedGameId
+      ) || null;
 
     }
 
@@ -1552,11 +1639,6 @@
     function createGameView(game) {
 
 
-      const result =
-        getGameResult(game);
-
-
-
       const title =
         game.homeAway === 'away'
           ? `${game.opponent} vs. CE Altafulla`
@@ -1607,6 +1689,9 @@
                                   src="${clip.embedUrl}"
                                   class="w-full h-full"
                                   loading="lazy"
+                                  title="${clip.title || 'Match video'}"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                  referrerpolicy="strict-origin-when-cross-origin"
                                   allowfullscreen
                                 ></iframe>
 
@@ -1633,7 +1718,7 @@
                               ? `
 
                                 <p
-                                  class="text-sm text-gray-400 mt-1"
+                                  class="text-sm text-gray-400 mt-1 leading-relaxed"
                                 >
                                   ${clip.description}
                                 </p>
@@ -1664,7 +1749,7 @@
 
         <div
           id="game-view-${game.id}"
-          class="game-view space-y-6"
+          class="game-view hidden space-y-6"
         >
 
 
@@ -1925,7 +2010,10 @@
 
 
 
-          <!-- VIDEO -->
+          <!-- ===============================================
+               VIDEO
+          ================================================ -->
+
           ${clipsHTML}
 
 
@@ -1976,7 +2064,7 @@
 
 
     /* ==========================================================
-       VIEW SWITCHING
+       VIEW SWITCHING HELPERS
     ========================================================== */
 
     function resetGameButtons() {
@@ -2024,7 +2112,17 @@
 
 
 
-    function showSeasonOverview() {
+    /* ==========================================================
+       SHOW SEASON OVERVIEW
+
+       updateUrl defaults to true when the visitor clicks.
+       It is false when responding to browser navigation
+       or opening an existing direct URL.
+    ========================================================== */
+
+    function showSeasonOverview(
+      updateUrl = true
+    ) {
 
       hideGameViews();
 
@@ -2072,11 +2170,48 @@
 
       }
 
+
+
+      if (updateUrl) {
+
+        updateGameUrl(
+          null
+        );
+
+      }
+
     }
 
 
 
-    function showGame(gameId) {
+    /* ==========================================================
+       SHOW INDIVIDUAL GAME
+    ========================================================== */
+
+    function showGame(
+      gameId,
+      updateUrl = true
+    ) {
+
+      const game =
+        (window.seasonGames || [])
+          .find(
+            item =>
+              item.id === gameId
+          );
+
+
+      if (!game) {
+
+        showSeasonOverview(
+          updateUrl
+        );
+
+        return;
+
+      }
+
+
 
       hideGameViews();
 
@@ -2126,6 +2261,16 @@
 
 
 
+      if (updateUrl) {
+
+        updateGameUrl(
+          gameId
+        );
+
+      }
+
+
+
       window.scrollTo({
 
         top: 0,
@@ -2139,7 +2284,51 @@
 
 
     /* ==========================================================
+       BROWSER BACK / FORWARD
+
+       Reopens the view represented by the URL without
+       creating another history entry.
+    ========================================================== */
+
+    window.addEventListener(
+      'popstate',
+      function() {
+
+        const requestedGame =
+          getRequestedGame();
+
+
+        if (requestedGame) {
+
+          showGame(
+            requestedGame.id,
+            false
+          );
+
+        } else {
+
+          showSeasonOverview(
+            false
+          );
+
+        }
+
+      }
+    );
+
+
+
+    /* ==========================================================
        INITIALIZE
+
+       If the page opens with:
+
+       data.html?game=game-01
+
+       Match 1 opens automatically.
+
+       If there is no valid game parameter, the Season
+       Overview opens normally.
     ========================================================== */
 
     document.addEventListener(
@@ -2159,7 +2348,26 @@
         renderGameViews();
 
 
-        showSeasonOverview();
+
+        const requestedGame =
+          getRequestedGame();
+
+
+
+        if (requestedGame) {
+
+          showGame(
+            requestedGame.id,
+            false
+          );
+
+        } else {
+
+          showSeasonOverview(
+            false
+          );
+
+        }
 
 
       }
@@ -2168,8 +2376,19 @@
 
   </script>
 
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "bc66404c9601462e9cf66f11e2d859a0"}'></script><!-- End Cloudflare Web Analytics -->
-  
+
+
+  <!-- Cloudflare Web Analytics -->
+
+  <script
+    type="module"
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "bc66404c9601462e9cf66f11e2d859a0"}'
+  ></script>
+
+  <!-- End Cloudflare Web Analytics -->
+
+
 </body>
 
 </html>
