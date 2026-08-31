@@ -150,7 +150,7 @@ clips: [
       'Ball starts with the goalkeeper playing short. Everyone in good shape. Joel finds Gio in space between the lines. He turns and drives at the defense, and we move forward. Gio sees all forward options run away from him and the defense collapse, so he turns and plays wide. Yael is in a good spot, and calmly drops the ball back. The opponent presses, and Gio is once again in a good spot and we have good shape. Gio receives another pass between the lines, turns, and drives forward again. This time, our winger drops back to help. Gio breaks the next line with a pass, and then we have 1v1 on the wing. Drive into the attacking third and play a dangerous ball central, and everyone stays high to press on defense. Perfect play.',
 
     embedUrl:
-      'https://www.youtube.com/embed/Azffxndlee0''
+      'https://www.youtube.com/embed/Azffxndlee0'
   }
 
 ]
