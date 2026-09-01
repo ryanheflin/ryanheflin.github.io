@@ -171,6 +171,9 @@ const phase1Weeks = [
           'Stay connected → pressure, cover, and support each other.',
           'As the ball moves, we move together.'
         ],
+
+        sessionPlan:
+          'sessions/session-05-defend-our-half.pdf',
       
         missed: [
           'Defending is not just about winning the ball — first protect the goal and control where the opponent can play.',
