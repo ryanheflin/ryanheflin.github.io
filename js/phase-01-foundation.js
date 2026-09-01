@@ -149,33 +149,35 @@ const phase1Weeks = [
         ]
       },
 
-      {
+           {
         number: 2,
-        title: 'Make Them Predictable',
-        question: 'Can we control where the opponent will play?',
-
+        title: 'Defend Our Half',
+        question: 'Can we protect the dangerous space and force them wide?',
+      
         purpose:
-          'Connect pressure, cover, and distances to influence the opponent’s next action.',
-
+          'Build the basic individual and small-group defending habits we need in our own half: control the space, make the opponent predictable, protect the inside, and defend together.',
+      
         positions: {
-          focus: 'Fullbacks, wingers, and striker',
+          focus: 'All players',
           detail:
-            'Defend together in wide areas: show the opponent where we want them to play and coordinate pressure, cover, and support around the ball.'
+            'Develop individual and small-group defending through 1v1, 2v2, and 2v3 situations before progressing into waves of attackers and the full game.'
         },
-
+      
         habits: [
-          'Show the opponent where we want them to go.',
-          'In their half → force inside.',
-          'In our half → protect inside and force outside.',
-          'Cover behind the pressure.',
-          'Backward pass → team steps forward.'
+          'Protect the inside and force the opponent outside.',
+          'Good body shape → see the ball, opponent, and dangerous space.',
+          'Control the space → do not dive in.',
+          'Make the opponent predictable before trying to win the ball.',
+          'Stay connected → pressure, cover, and support each other.',
+          'As the ball moves, we move together.'
         ],
-
+      
         missed: [
-          'Pressing is about controlling the opponent, not just running toward the ball.',
-          'Protect inside and show the opponent toward the pass we want.',
-          'Players behind the pressure close the other options.',
-          'When the opponent plays backward, we step forward together.'
+          'Defending is not just about winning the ball — first protect the goal and control where the opponent can play.',
+          'Slow down, get your body shape right, and make the attacker predictable.',
+          'The first defender pressures while the next defender provides cover.',
+          'Do not allow easy passes or dribbles through the middle.',
+          'If one defender moves, the players around them must move and stay connected.'
         ]
       },
 
