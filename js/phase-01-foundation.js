@@ -138,6 +138,9 @@ const phase1Weeks = [
           'Find the free player.'
         ],
 
+        sessionPlan:
+          'sessions/session-04-make-field-big.pdf',
+
         missed: [
           'If we need more space, we make the field bigger.',
           'A backward pass is a signal to open up and create new angles.',
