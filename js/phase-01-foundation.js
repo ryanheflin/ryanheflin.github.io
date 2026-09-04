@@ -158,9 +158,9 @@ const phase1Weeks = [
           'Build the basic individual and small-group defending habits we need in our own half: control the space, make the opponent predictable, protect the inside, and defend together.',
       
         positions: {
-          focus: 'All players',
+          focus: 'Central Defenders and Central Midfielders',
           detail:
-            'Develop individual and small-group defending through 1v1, 2v2, and 2v3 situations before progressing into waves of attackers and the full game.'
+            'Develop individual and small-group defending through 1v1, 2v2, and 2v3 situations in the midfield and penalty area'
         },
       
         habits: [
