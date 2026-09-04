@@ -202,6 +202,9 @@ const phase1Weeks = [
           'One decision together is better than several different decisions.'
         ],
 
+        sessionPlan:
+          'sessions/session-06-read-the-moment.pdf',
+
         missed: [
           'Every change of possession gives us a decision to make. We do not automatically attack when we win it or automatically press when we lose it.',
           'When we regain possession, look up immediately. If there is space and support to attack, use it. If there is not, keep the ball, reconnect and build again.',
