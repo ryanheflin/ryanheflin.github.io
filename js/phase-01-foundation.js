@@ -184,27 +184,30 @@ const phase1Weeks = [
         ]
       },
 
-      {
+         {
         number: 3,
-        title: 'Win It and Hurt Them',
-        question: 'Do we have an advantage now?',
+        title: 'Read the Moment',
+        question: 'What does the game need now?',
 
         purpose:
-          'Make decisions in transition: attack immediately if we have an advantage or secure the ball if we do not.',
+          'Recognize the moment together when possession changes: attack or reset when we win it, and press or recover when we lose it.',
 
         habits: [
-          'Win it → forward first.',
-          'Space in behind → attack it.',
-          'Wide players get out quickly.',
-          'Support behind and ahead.',
-          'No advantage → keep the ball.'
+          'Possession changes → look, communicate, decide.',
+          'Win it with an advantage → attack the space.',
+          'Win it without an advantage → secure the ball and reset.',
+          'Lose it and we can press together → step forward together.',
+          'Lose it and we cannot press together → recover into shape.',
+          'Look at teammates as well as the ball.',
+          'One decision together is better than several different decisions.'
         ],
 
         missed: [
-          'When we regain possession, we look forward immediately.',
-          'If the opponent is disorganized or there is space in behind, we attack before they can recover.',
-          'Nearby players provide options ahead of and behind the ball.',
-          'Playing quickly does not mean forcing it: if the advantage is gone, we keep the ball.'
+          'Every change of possession gives us a decision to make. We do not automatically attack when we win it or automatically press when we lose it.',
+          'When we regain possession, look up immediately. If there is space and support to attack, use it. If there is not, keep the ball, reconnect and build again.',
+          'When we lose possession, read the players around you. If we are close, connected and ready, step forward and press together. If we are stretched or cannot affect the ball, recover and rebuild our shape.',
+          'Communication matters most in these moments. Talk early, listen to teammates and recognize the same cues together.',
+          'The goal is not always to play faster. The goal is to recognize the situation faster and make the right decision together.'
         ]
       }
 
