@@ -256,6 +256,9 @@ const phase1Weeks = [
           'Progress with control.'
         ],
 
+        sessionPlan:
+          'sessions/session-07-playing-through-midfield.pdf',
+        
         missed: [
           'Breaking the first line is only the start.',
           'Pivots move early to create the next option.',
