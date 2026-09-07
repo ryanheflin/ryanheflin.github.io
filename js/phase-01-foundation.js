@@ -285,6 +285,9 @@ const phase1Weeks = [
           'Switch escapes our press → recover into mid-block.'
         ],
 
+        sessionPlan:
+           'sessions/session-08-lock-the-far-side.pdf',
+
         missed: [
           'When we force play to one side, the far-side winger moves inside and becomes a second attacking midfielder.',
           'Their priority is the far-side pivot, not the far-side fullback.',
