@@ -293,31 +293,27 @@ const phase1Weeks = [
 
       {
         number: 3,
-        title: 'Hunt or Recover',
-        question: 'Can we win the ball back now?',
+        title: 'Play at Speed',
+        question: 'Can we recognize it and act faster?',
 
         purpose:
-          'Recognize whether losing possession should trigger immediate pressure or a recovery run to regain our shape.',
-
-        positions: {
-          focus: 'Center backs and holding midfielders',
-          detail:
-            'Read the transition from behind the ball: decide when to support the press, when to protect central space, and when to organize the team’s recovery.'
-        },
+          'Put our buildout and press against each other at game speed. Recognize the cues, make decisions quickly, and execute together.',
 
         habits: [
-          'Good numbers near the ball → go get it.',
-          'Opponent escapes the press → recover.',
-          'Nearest players slow them down.',
-          'Recover central space first.',
-          'Reconnect quickly.'
+          'See the picture early.',
+          'Move before the ball arrives.',
+          'Buildout → find and use the free player.',
+          'Press → recognize the cue and move together.',
+          'Communicate early and clearly.',
+          'Play faster without forcing it.'
         ],
 
         missed: [
-          'After losing the ball, decide quickly: hunt or recover.',
-          'If we have players nearby and can win it back, we press together.',
-          'If the opponent escapes or has the advantage, stop chasing and recover.',
-          'When recovering, protect the center first and reconnect the team.'
+          'This session brings together the attacking and defending ideas we have learned so far.',
+          'The buildout tries to create space, find the free player, and break the press.',
+          'The press tries to stay connected, remove options, and force predictable decisions.',
+          'The challenge for both sides is to recognize the situation and act before the opponent can adjust.',
+          'Increasing our tempo means thinking, communicating, moving, and playing faster — not rushing.'
         ]
       }
 
