@@ -267,27 +267,27 @@ const phase1Weeks = [
         ]
       },
 
-      {
+          {
         number: 2,
-        title: 'Press Together',
-        question: 'If one player presses, what should everyone else do?',
+        title: 'Lock the Far Side',
+        question: 'What does the far-side winger do when we press?',
 
         purpose:
-          'Build our first clear version of collective high pressing using the habits we have already learned.',
+          'Learn our pressing shape when the opponent is forced to one side, with the far-side winger narrowing inside to protect the far-side pivot.',
 
         habits: [
-          'Organized → we press.',
-          'First defender leads.',
-          'Next players close options.',
-          'Protect central spaces.',
-          'Backward pass → we step forward together.'
+          'Ball goes wide → far-side winger pinches in.',
+          'Protect the far-side pivot.',
+          'Stay connected to the midfield.',
+          'Leave the far-side fullback as the low-risk option.',
+          'Switch escapes our press → recover into mid-block.'
         ],
 
         missed: [
-          'We press aggressively when the team is organized to do it.',
-          'The first defender decides where we want to show the opponent.',
-          'Everyone else closes options and protects the center.',
-          'One player pressing alone is not our press: the team moves together.'
+          'When we force play to one side, the far-side winger moves inside and becomes a second attacking midfielder.',
+          'Their priority is the far-side pivot, not the far-side fullback.',
+          'This keeps our press compact and removes the easiest central escape.',
+          'If the opponent successfully switches play, we recover together into our mid-block rather than chasing the ball across the field.'
         ]
       },
 
