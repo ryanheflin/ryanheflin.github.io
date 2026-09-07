@@ -221,49 +221,48 @@ const phase1Weeks = [
   /* ========================================================
      WEEK 3
   ======================================================== */
-   {
+  {
     week: 3,
     focus: 'Build Through Midfield',
 
     description:
-      'Connect our first phase of buildup to the next attacking layer by using the pivots and nearby players to progress through midfield.',
+      'Connect our buildup through midfield and progress into the final third.',
 
     objective:
-      'Move from our 2-4-4 base shape into a new attacking structure after breaking the first line. Use the pivots to connect play, create new angles, and progress with control into the final third.',
+      'Use the pivots to create angles, connect play, and progress after breaking the first line.',
 
     sessions: [
 
       {
         number: 1,
         title: 'Play Through Midfield',
-        question: 'Once we break the first line, how do we keep progressing?',
+        question: 'How do we keep progressing?',
 
         purpose:
-          'Build the next layer of our attacking structure. After playing into midfield or wide to a fullback, reorganize quickly around the ball and use the pivots to continue forward with control.',
+          'Reorganize around the ball after breaking the first line and find the next way forward.',
 
         positions: {
           focus: 'Pivots and central midfielders',
           detail:
-            'Create passing angles between and beyond the opponent’s lines, receive with awareness, connect the next action, and help the team move from buildup into dangerous attacking positions.'
+            'Create angles, receive with awareness, and connect our buildup to the attack.'
         },
 
         habits: [
-          'Break the first line → reorganize around the ball.',
-          'Pivots create angles before the pass arrives.',
+          'Break a line → reorganize.',
+          'Pivots create angles early.',
           'Receive facing forward when possible.',
-          'If you cannot turn → connect with the next player.',
-          'Fullbacks and attackers adjust to create the next passing lane.',
-          'Move the opponent before trying to play through them.',
-          'Progress with control, not just speed.'
+          'Cannot turn → connect.',
+          'Players ahead create the next passing lane.',
+          'Progress with control.'
         ],
 
         missed: [
-          'Our buildup does not finish when we find a midfielder or fullback. That is the start of the next attacking phase.',
-          'The pivots should constantly move to give the player on the ball a clear forward or supporting option.',
-          'Before receiving, check the space around you and know whether you can turn, combine, or play away from pressure.',
-          'If the central route is closed, use the fullback or another nearby player to move the opponent and reopen the middle.',
-          'Players ahead of the ball must move to create depth and new passing lanes as the midfield receives.',
-          'The goal is to arrive in the final third connected, facing forward, and with multiple options rather than forcing one difficult pass.'
+          'Breaking the first line is only the start.',
+          'Pivots move early to create the next option.',
+          'Check before receiving: turn, connect, or play away from pressure.',
+          'If the middle is closed, move the opponent and reopen it.',
+          'Players ahead provide depth and new passing lanes.',
+          'Arrive in the final third connected and facing forward.'
         ]
       },
 
