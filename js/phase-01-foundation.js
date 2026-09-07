@@ -221,45 +221,49 @@ const phase1Weeks = [
   /* ========================================================
      WEEK 3
   ======================================================== */
-  {
+   {
     week: 3,
-    focus: 'Move Together',
+    focus: 'Build Through Midfield',
 
     description:
-      'Turn individual reactions into coordinated whole-team movements around the ball.',
+      'Connect our first phase of buildup to the next attacking layer by using the pivots and nearby players to progress through midfield.',
 
     objective:
-      'Move together when advancing, pressing, and defending a transition. Begin to play as a connected team rather than separate players.',
+      'Move from our 2-4-4 base shape into a new attacking structure after breaking the first line. Use the pivots to connect play, create new angles, and progress with control into the final third.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Advance Together',
-        question: 'If the ball moves forward, what does the rest of the team do?',
+        title: 'Play Through Midfield',
+        question: 'Once we break the first line, how do we keep progressing?',
 
         purpose:
-          'Learn to advance together. Every forward action should trigger supporting movements across all lines.',
+          'Build the next layer of our attacking structure. After playing into midfield or wide to a fullback, reorganize quickly around the ball and use the pivots to continue forward with control.',
 
         positions: {
-          focus: 'Center backs',
+          focus: 'Pivots and central midfielders',
           detail:
-            'Control the height of the line, advance behind the ball, and keep the team short and connected as the attack progresses.'
+            'Create passing angles between and beyond the opponent’s lines, receive with awareness, connect the next action, and help the team move from buildup into dangerous attacking positions.'
         },
 
         habits: [
-          'Ball goes forward → lines move forward.',
-          'Defensive line steps up.',
-          'Midfield supports behind.',
-          'Far-side players move inside.',
-          'Maintain connections around the ball.'
+          'Break the first line → reorganize around the ball.',
+          'Pivots create angles before the pass arrives.',
+          'Receive facing forward when possible.',
+          'If you cannot turn → connect with the next player.',
+          'Fullbacks and attackers adjust to create the next passing lane.',
+          'Move the opponent before trying to play through them.',
+          'Progress with control, not just speed.'
         ],
 
         missed: [
-          'A forward pass is a signal for the whole team to advance.',
-          'The receiving player needs support behind and around them.',
-          'The defense must step up so the team does not become stretched.',
-          'Players away from the ball move with the play instead of standing and watching.'
+          'Our buildup does not finish when we find a midfielder or fullback. That is the start of the next attacking phase.',
+          'The pivots should constantly move to give the player on the ball a clear forward or supporting option.',
+          'Before receiving, check the space around you and know whether you can turn, combine, or play away from pressure.',
+          'If the central route is closed, use the fullback or another nearby player to move the opponent and reopen the middle.',
+          'Players ahead of the ball must move to create depth and new passing lanes as the midfield receives.',
+          'The goal is to arrive in the final third connected, facing forward, and with multiple options rather than forcing one difficult pass.'
         ]
       },
 
