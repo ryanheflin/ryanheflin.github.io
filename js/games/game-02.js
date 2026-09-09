@@ -4,7 +4,7 @@ window.seasonGames.push({
 
   gameNumber: 2,
 
-  opponent: 'Pallaresos S15',
+  opponent: 'Pallaresos S15 (Amistoso)',
 
   homeAway: 'home',
 
