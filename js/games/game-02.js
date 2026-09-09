@@ -117,126 +117,92 @@ window.seasonGames.push({
 
   analysis: `
 
-<h3>The Big Picture</h3>
+What We Saw
+We Can Play This Way
 
-<p>
-The most important thing from this half is simple:
-<strong>we proved that we CAN play this way.</strong>
-</p>
+The biggest takeaway from the first half is simple: we can play this way.
 
-<p>
-For the first 10 minutes, we were organized with the ball, patient enough to keep it, and willing to play backward or switch sides when forward was not available. We averaged about <strong>3.7 passes per possession</strong>, and almost half of our possessions reached at least five passes.
-</p>
+For the first 10 minutes, we were organized, calm, and patient with the ball. We built from the back, found players between the lines, switched the field, and didn’t panic when the forward pass wasn’t there.
 
-<p>
-That might not sound exciting, but it matters. Every second we have the ball is a second the opponent cannot attack us. Keeping possession also moves the opponent, creates space and gives us another chance to find the right moment to attack.
-</p>
+We averaged 3.7 passes every time we had the ball, and almost half of our possessions reached at least five passes.
 
+That matters. When we have the ball, they don’t. We make them run, we move them out of position, and we control where the game is played.
 
-<h3>First 10 Minutes: Control the Game</h3>
+We didn’t score directly from one of those long possessions. That’s fine. That is the next part we need to improve.
 
-<p>
-Our best football came early. We built from the goalkeeper and defenders, found players between the lines, switched the field and were willing to start again when the forward option was not there.
-</p>
+What Comes After the Buildup?
 
-<p>
-We did not score a goal directly from one of our long possessions during this period. That does <strong>not</strong> mean the possession was pointless.
-</p>
+We are starting to understand how to get out of the back. Now we need to understand what happens next.
 
-<p>
-The next step is learning how to turn that control into more chances. Once we break the first line and enter midfield, we need another layer: players underneath the ball, players ahead of it, width on both sides and the option to switch and attack again instead of forcing the next pass forward.
-</p>
+Once we break the first line, we cannot just keep forcing the ball forward.
 
-<p>
-One of our best possessions lasted <strong>49 seconds</strong>, included <strong>10 passes and 23 touches</strong>, used both sides of the field and ended with us trying to play in behind. That is much closer to the type of football we want to build.
-</p>
+We need players underneath the ball, players ahead of it, width on both sides, and someone available to switch the field. If the attack is closed, keep it, move them again, and find another way through.
 
+One of our best possessions lasted 49 seconds: 10 passes, 23 touches, both sides of the field.
 
-<h3>Our High Press Works</h3>
+It didn’t end in a goal. It was still very good football.
 
-<p>
-Our three goals are important because they show another part of our identity.
-</p>
+Now we have to learn how to turn more of those possessions into chances.
 
-<p>
-When we pressed together, Pallaresos struggled to play comfortably. We forced bad touches, rushed passes and long balls. Several of our best chances came immediately after winning the ball high.
-</p>
+Our Press Works
 
-<ul>
-  <li><strong>Goal 1:</strong> aggressive pressure creates a dangerous regain and we attack immediately.</li>
-  <li><strong>Goal 2:</strong> immediate pressure wins the ball inside their penalty area.</li>
-  <li><strong>Goal 3:</strong> our high press forces another turnover directly in front of goal.</li>
-</ul>
+We also proved that our high press works when we actually do it together.
 
-<p>
-The lesson is not simply "run harder." A press works when <strong>everyone moves together</strong>. The nearest player pressures the ball, teammates remove the easy passes, the far-side winger moves inside, and the players behind the press step forward and close the space.
-</p>
+All three goals came from aggressive defending and winning the ball high.
 
+We forced bad touches, rushed passes, and long balls. When everyone moved together, Pallaresos had trouble playing out.
 
-<h3>Then the Game Changed</h3>
+But pressing is not one player running at the ball.
 
-<p>
-Around the middle of the half, our football began to change.
-</p>
+The first player pressures. The players around him take away the easy passes. The far-side winger comes inside. The players behind the press step forward.
 
-<p>
-During the opening 10 minutes we averaged about <strong>3.7 passes per possession</strong>. During the next 10 minutes that dropped to about <strong>2.5</strong>.
-</p>
+If we press together, it works. If one or two players stop doing their jobs, they play through us.
 
-<p>
-At the same time, Pallaresos went from about <strong>3.1 passes per possession</strong> to about <strong>4.4</strong>.
-</p>
+We Stopped Playing Together
 
-<p>
-In other words, we stopped controlling the ball and they started controlling it.
-</p>
+After about 10 minutes, the game started to change.
 
-<p>
-The problem was usually not one bad touch or one player making a mistake. We stopped giving each other options. Players received the ball and teammates stood still. We stayed on one side instead of switching. We tried to play forward even when forward was closed. Eventually we began kicking into space or dribbling alone instead of solving the problem together.
-</p>
+Our passes per possession dropped from 3.7 to 2.5.
 
+Pallaresos went the opposite direction, from 3.1 to 4.4.
 
-<h3>A Good Response</h3>
+That tells us exactly what happened: we stopped controlling the game and they started controlling it.
 
-<p>
-After making a tactical adjustment, we improved again between roughly minutes 20 and 30.
-</p>
+It wasn’t mainly because of bad touches or technical mistakes. We stopped helping each other.
 
-<p>
-Diego moved into central defense and was asked to step forward aggressively into midfield when needed. That helped us close some of the space that Pallaresos had been finding.
-</p>
+Players received the ball and nobody moved. We stayed trapped on one side. We forced passes forward when forward wasn’t open. We started kicking into space and trying to dribble through the game by ourselves.
 
-<p>
-Our defensive structure improved, we began winning the ball higher again, and our third goal came directly from another successful high press.
-</p>
+That isn’t our football.
 
-<p>
-This is another important lesson: when something is not working, we do not panic. We recognize the problem, adjust and solve it.
-</p>
+We Fixed It — For a While
 
+Around 20 minutes, we made an adjustment.
 
-<h3>The Final 10 Minutes</h3>
+Diego moved into central defense and stepped forward into midfield when needed. That helped close some of the space Pallaresos had been finding.
 
-<p>
-The final part of the half was our biggest challenge.
-</p>
+For a while, our structure improved again. We started winning the ball higher, and our third goal came directly from another good high press.
 
-<p>
-We actually had the ball for a reasonable amount of time, but possession alone does not mean control. Our passing dropped to only about <strong>1.8 passes per possession</strong>.
-</p>
+That is part of playing football too. Something isn’t working, recognize it, adjust, and solve the problem.
 
-<p>
-Only about <strong>1 out of every 11 possessions</strong> reached five passes.
-</p>
+The Last 10 Minutes
 
-<p>
-Instead of moving the ball together, we increasingly saw one player dribble a long distance, somebody kick forward, or a player receive with nobody moving to help.
-</p>
+This was the biggest problem.
 
-<p>
-That is the difference between <strong>having the ball</strong> and <strong>playing together</strong>.
-</p>
+By the end of the half, we were down to only 1.8 passes per possession.
 
+Only 1 of our final 11 possessions reached five passes.
+
+We still had the ball sometimes, but we weren’t really playing together anymore.
+
+One player would dribble 50 yards. Someone would kick forward. A player would receive and everyone else would stand and watch.
+
+There is a big difference between having the ball and controlling the game.
+
+The challenge now is not proving that we can play our style.
+
+We already proved that.
+
+The challenge is having the strength, discipline, teamwork, and focus to keep doing it when we are tired.
 
 <h3>First-Half Trend</h3>
 
