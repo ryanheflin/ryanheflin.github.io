@@ -1,4 +1,3 @@
-```javascript
 window.blogPosts = window.blogPosts || [];
 
 window.blogPosts.push({
@@ -202,4 +201,3 @@ window.blogPosts.push({
   `
 
 });
-```
