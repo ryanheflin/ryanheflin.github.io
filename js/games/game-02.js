@@ -116,93 +116,207 @@ window.seasonGames.push({
   ========================================================== */
 
   analysis: `
+analysis: `
 
-What We Saw
-We Can Play This Way
+<h3>We Can Play This Way</h3>
 
-The biggest takeaway from the first half is simple: we can play this way.
+<p>
+The biggest takeaway from the first half is simple:
+<strong>we can play this way.</strong>
+</p>
 
-For the first 10 minutes, we were organized, calm, and patient with the ball. We built from the back, found players between the lines, switched the field, and didn’t panic when the forward pass wasn’t there.
+<p>
+For the first 10 minutes, we were organized, calm, and patient with the ball.
+We built from the back, found players between the lines, switched the field,
+and didn't panic when the forward pass wasn't there.
+</p>
 
-We averaged 3.7 passes every time we had the ball, and almost half of our possessions reached at least five passes.
+<p>
+We averaged <strong>3.7 passes every time we had the ball</strong>,
+and almost half of our possessions reached at least five passes.
+</p>
 
-That matters. When we have the ball, they don’t. We make them run, we move them out of position, and we control where the game is played.
+<p>
+That matters. When we have the ball, they don't.
+We make them run, we move them out of position,
+and we control where the game is played.
+</p>
 
-We didn’t score directly from one of those long possessions. That’s fine. That is the next part we need to improve.
+<p>
+We didn't score directly from one of those long possessions.
+That's fine. That is the next part we need to improve.
+</p>
 
-What Comes After the Buildup?
 
-We are starting to understand how to get out of the back. Now we need to understand what happens next.
+<h3>What Comes After the Buildup?</h3>
 
+<p>
+We are starting to understand how to get out of the back.
+Now we need to understand what happens next.
+</p>
+
+<p>
 Once we break the first line, we cannot just keep forcing the ball forward.
+</p>
 
-We need players underneath the ball, players ahead of it, width on both sides, and someone available to switch the field. If the attack is closed, keep it, move them again, and find another way through.
+<p>
+We need players underneath the ball, players ahead of it,
+width on both sides, and someone available to switch the field.
+If the attack is closed, keep it, move them again,
+and find another way through.
+</p>
 
-One of our best possessions lasted 49 seconds: 10 passes, 23 touches, both sides of the field.
+<p>
+One of our best possessions lasted
+<strong>49 seconds: 10 passes, 23 touches, both sides of the field.</strong>
+</p>
 
-It didn’t end in a goal. It was still very good football.
+<p>
+It didn't end in a goal. It was still very good football.
+</p>
 
+<p>
 Now we have to learn how to turn more of those possessions into chances.
+</p>
 
-Our Press Works
 
+<h3>Our Press Works</h3>
+
+<p>
 We also proved that our high press works when we actually do it together.
+</p>
 
+<p>
 All three goals came from aggressive defending and winning the ball high.
+</p>
 
-We forced bad touches, rushed passes, and long balls. When everyone moved together, Pallaresos had trouble playing out.
+<p>
+We forced bad touches, rushed passes, and long balls.
+When everyone moved together, Pallaresos had trouble playing out.
+</p>
 
+<p>
 But pressing is not one player running at the ball.
+</p>
 
-The first player pressures. The players around him take away the easy passes. The far-side winger comes inside. The players behind the press step forward.
+<p>
+The first player pressures.
+The players around him take away the easy passes.
+The far-side winger comes inside.
+The players behind the press step forward.
+</p>
 
-If we press together, it works. If one or two players stop doing their jobs, they play through us.
+<p>
+<strong>
+If we press together, it works.
+If one or two players stop doing their jobs, they play through us.
+</strong>
+</p>
 
-We Stopped Playing Together
 
+<h3>We Stopped Playing Together</h3>
+
+<p>
 After about 10 minutes, the game started to change.
+</p>
 
-Our passes per possession dropped from 3.7 to 2.5.
+<p>
+Our passes per possession dropped from <strong>3.7 to 2.5</strong>.
+Pallaresos went the opposite direction, from
+<strong>3.1 to 4.4</strong>.
+</p>
 
-Pallaresos went the opposite direction, from 3.1 to 4.4.
+<p>
+That tells us exactly what happened:
+<strong>we stopped controlling the game and they started controlling it.</strong>
+</p>
 
-That tells us exactly what happened: we stopped controlling the game and they started controlling it.
+<p>
+It wasn't mainly because of bad touches or technical mistakes.
+We stopped helping each other.
+</p>
 
-It wasn’t mainly because of bad touches or technical mistakes. We stopped helping each other.
+<p>
+Players received the ball and nobody moved.
+We stayed trapped on one side.
+We forced passes forward when forward wasn't open.
+We started kicking into space and trying to dribble through the game by ourselves.
+</p>
 
-Players received the ball and nobody moved. We stayed trapped on one side. We forced passes forward when forward wasn’t open. We started kicking into space and trying to dribble through the game by ourselves.
+<p>
+<strong>That isn't our football.</strong>
+</p>
 
-That isn’t our football.
 
-We Fixed It — For a While
+<h3>We Fixed It — For a While</h3>
 
+<p>
 Around 20 minutes, we made an adjustment.
+</p>
 
-Diego moved into central defense and stepped forward into midfield when needed. That helped close some of the space Pallaresos had been finding.
+<p>
+Diego moved into central defense and stepped forward into midfield when needed.
+That helped close some of the space Pallaresos had been finding.
+</p>
 
-For a while, our structure improved again. We started winning the ball higher, and our third goal came directly from another good high press.
+<p>
+For a while, our structure improved again.
+We started winning the ball higher,
+and our third goal came directly from another good high press.
+</p>
 
-That is part of playing football too. Something isn’t working, recognize it, adjust, and solve the problem.
+<p>
+That is part of playing football too.
+Something isn't working, recognize it, adjust, and solve the problem.
+</p>
 
-The Last 10 Minutes
 
+<h3>The Last 10 Minutes</h3>
+
+<p>
 This was the biggest problem.
+</p>
 
-By the end of the half, we were down to only 1.8 passes per possession.
+<p>
+By the end of the half, we were down to only
+<strong>1.8 passes per possession</strong>.
+</p>
 
-Only 1 of our final 11 possessions reached five passes.
+<p>
+Only <strong>1 of our final 11 possessions</strong>
+reached five passes.
+</p>
 
-We still had the ball sometimes, but we weren’t really playing together anymore.
+<p>
+We still had the ball sometimes,
+but we weren't really playing together anymore.
+</p>
 
-One player would dribble 50 yards. Someone would kick forward. A player would receive and everyone else would stand and watch.
+<p>
+One player would dribble 50 yards.
+Someone would kick forward.
+A player would receive and everyone else would stand and watch.
+</p>
 
-There is a big difference between having the ball and controlling the game.
+<p>
+There is a big difference between
+<strong>having the ball</strong>
+and
+<strong>controlling the game</strong>.
+</p>
 
+<p>
 The challenge now is not proving that we can play our style.
-
 We already proved that.
+</p>
 
-The challenge is having the strength, discipline, teamwork, and focus to keep doing it when we are tired.
+<p>
+The challenge is having the
+<strong>strength, discipline, teamwork, and focus</strong>
+to keep doing it when we are tired.
+</p>
+
+`,
 
 <h3>First-Half Trend</h3>
 
