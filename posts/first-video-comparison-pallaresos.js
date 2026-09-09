@@ -26,7 +26,7 @@ window.blogPosts.push({
     <div class="aspect-video mb-6 rounded-xl overflow-hidden border border-gray-700">
 
       <iframe
-        src="https://youtu.be/pyfDxE8cuWE"
+        src="https://www.youtube.com/embed/pyfDxE8cuWE"
         class="w-full h-full"
         loading="lazy"
         title="Primera comparación en vídeo - Pallaresos"
