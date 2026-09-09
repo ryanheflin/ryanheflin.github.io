@@ -4,7 +4,7 @@ window.seasonGames.push({
 
   gameNumber: 2,
 
-  opponent: 'Pallaresos (Amistoso)',
+  opponent: 'Pallaresos S15',
 
   homeAway: 'home',
 
@@ -21,30 +21,34 @@ window.seasonGames.push({
 
   /* ==========================================================
      MATCH SUMMARY
-
-     NOTE:
-     Current analysis covers the FIRST HALF only.
-     Update score/statistics after second-half analysis.
   ========================================================== */
 
   summary:
-    'The first half gave us our clearest look yet at the team we are trying to become. For the opening 10 minutes we played with patience, kept the ball, moved together and pressed aggressively. We showed that our game model works. The challenge came as the half continued: when we became tired, we stopped moving for each other, forced the ball forward and stopped defending together. The next step is not learning a completely different way to play — it is developing the discipline to keep playing our way for the entire match.',
+    'Our first real look at this S15 team showed both what we can become and what still needs work. For stretches we controlled the ball, built patiently, pressed aggressively and created goals by winning possession high. As the half continued, we became less connected and fell back into direct, individual play. The challenge now is learning to maintain our game model when we get tired or the match becomes difficult.',
 
 
   /* ==========================================================
      GENERAL MATCH STATISTICS
-     FIRST HALF ONLY
+
+     IMPORTANT:
+     Statistics below cover FIRST HALF ONLY.
+
+     First-half score:
+     CE Altafulla 3–0 Pallaresos
+
+     Final score:
+     CE Altafulla 5–4 Pallaresos
   ========================================================== */
 
   metrics: {
+
+    '1st Half Score': '3–0',
 
     'Possession': '48%',
 
     'Shots': 7,
 
     'Shots on Target': 6,
-
-    'Goals': 3,
 
     'Passes': 125,
 
@@ -66,7 +70,8 @@ window.seasonGames.push({
      They take the throw and we regain clear possession
      after the first action.
 
-     These numbers can be finalized after complete match review.
+     These are working totals until the complete match
+     analysis is finished.
   ========================================================== */
 
   throwIns: {
@@ -116,9 +121,33 @@ window.seasonGames.push({
   ========================================================== */
 
   analysis: `
-analysis: `
 
-<h3>We Can Play This Way</h3>
+<div
+  class="mb-6 p-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10"
+>
+
+  <p
+    class="text-sm leading-relaxed"
+  >
+    <strong style="color: var(--altafulla-yellow);">
+      First-Half Analysis:
+    </strong>
+
+    This report currently covers only the first half,
+    which we finished leading <strong>3–0</strong>.
+    The final score was <strong>5–4</strong>.
+    The second-half statistics and analysis will be added
+    after the complete match review.
+  </p>
+
+</div>
+
+
+<h3
+  class="text-lg font-bold text-white mt-6 mb-2"
+>
+  We Can Play This Way
+</h3>
 
 <p>
 The biggest takeaway from the first half is simple:
@@ -126,29 +155,36 @@ The biggest takeaway from the first half is simple:
 </p>
 
 <p>
-For the first 10 minutes, we were organized, calm, and patient with the ball.
+For the first 10 minutes, we were organized, calm and patient with the ball.
 We built from the back, found players between the lines, switched the field,
 and didn't panic when the forward pass wasn't there.
 </p>
 
 <p>
-We averaged <strong>3.7 passes every time we had the ball</strong>,
+We averaged
+<strong>3.7 passes every time we had the ball</strong>,
 and almost half of our possessions reached at least five passes.
 </p>
 
 <p>
-That matters. When we have the ball, they don't.
-We make them run, we move them out of position,
-and we control where the game is played.
+That matters.
+When we have the ball, they don't.
+We make them run, move them out of position,
+and control where the game is played.
 </p>
 
 <p>
-We didn't score directly from one of those long possessions.
-That's fine. That is the next part we need to improve.
+We didn't score directly from one of those longer possessions.
+That's fine.
+That is the next part we need to improve.
 </p>
 
 
-<h3>What Comes After the Buildup?</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  What Comes After the Buildup?
+</h3>
 
 <p>
 We are starting to understand how to get out of the back.
@@ -156,23 +192,34 @@ Now we need to understand what happens next.
 </p>
 
 <p>
-Once we break the first line, we cannot just keep forcing the ball forward.
+Once we break the first line,
+we cannot just keep forcing the ball forward.
 </p>
 
 <p>
-We need players underneath the ball, players ahead of it,
-width on both sides, and someone available to switch the field.
-If the attack is closed, keep it, move them again,
+We need players underneath the ball,
+players ahead of it,
+width on both sides,
+and someone available to switch the field.
+</p>
+
+<p>
+If the attack is closed,
+keep it, move them again,
 and find another way through.
 </p>
 
 <p>
 One of our best possessions lasted
-<strong>49 seconds: 10 passes, 23 touches, both sides of the field.</strong>
+<strong>49 seconds</strong>,
+included <strong>10 passes</strong> and
+<strong>23 touches</strong>,
+and used both sides of the field.
 </p>
 
 <p>
-It didn't end in a goal. It was still very good football.
+It didn't end in a goal.
+It was still very good football.
 </p>
 
 <p>
@@ -180,19 +227,28 @@ Now we have to learn how to turn more of those possessions into chances.
 </p>
 
 
-<h3>Our Press Works</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  Our Press Works
+</h3>
 
 <p>
-We also proved that our high press works when we actually do it together.
+We also proved that our high press works
+when we actually do it together.
 </p>
 
 <p>
-All three goals came from aggressive defending and winning the ball high.
+All three first-half goals came from
+aggressive defending and winning the ball high.
 </p>
 
 <p>
-We forced bad touches, rushed passes, and long balls.
-When everyone moved together, Pallaresos had trouble playing out.
+We forced bad touches,
+rushed passes,
+and long balls.
+When everyone moved together,
+Pallaresos had trouble playing out.
 </p>
 
 <p>
@@ -209,30 +265,44 @@ The players behind the press step forward.
 <p>
 <strong>
 If we press together, it works.
-If one or two players stop doing their jobs, they play through us.
+If one or two players stop doing their jobs,
+they play through us.
 </strong>
 </p>
 
 
-<h3>We Stopped Playing Together</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  We Stopped Playing Together
+</h3>
 
 <p>
-After about 10 minutes, the game started to change.
+After about 10 minutes,
+the game started to change.
 </p>
 
 <p>
-Our passes per possession dropped from <strong>3.7 to 2.5</strong>.
-Pallaresos went the opposite direction, from
-<strong>3.1 to 4.4</strong>.
+Our passes per possession dropped from
+<strong>3.7 to 2.5</strong>.
+</p>
+
+<p>
+Pallaresos went the opposite direction,
+from <strong>3.1 to 4.4</strong>.
 </p>
 
 <p>
 That tells us exactly what happened:
-<strong>we stopped controlling the game and they started controlling it.</strong>
+<strong>
+we stopped controlling the game
+and they started controlling it.
+</strong>
 </p>
 
 <p>
-It wasn't mainly because of bad touches or technical mistakes.
+It wasn't mainly because of bad touches
+or technical mistakes.
 We stopped helping each other.
 </p>
 
@@ -240,7 +310,8 @@ We stopped helping each other.
 Players received the ball and nobody moved.
 We stayed trapped on one side.
 We forced passes forward when forward wasn't open.
-We started kicking into space and trying to dribble through the game by ourselves.
+We started kicking into space
+and trying to dribble through the game by ourselves.
 </p>
 
 <p>
@@ -248,42 +319,58 @@ We started kicking into space and trying to dribble through the game by ourselve
 </p>
 
 
-<h3>We Fixed It — For a While</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  We Fixed It — For a While
+</h3>
 
 <p>
-Around 20 minutes, we made an adjustment.
+Around 20 minutes,
+we made an adjustment.
 </p>
 
 <p>
-Diego moved into central defense and stepped forward into midfield when needed.
-That helped close some of the space Pallaresos had been finding.
+Diego moved into central defense
+and stepped forward into midfield when needed.
+That helped close some of the space
+Pallaresos had been finding.
 </p>
 
 <p>
-For a while, our structure improved again.
+For a while,
+our structure improved again.
 We started winning the ball higher,
-and our third goal came directly from another good high press.
+and our third goal came directly
+from another good high press.
 </p>
 
 <p>
 That is part of playing football too.
-Something isn't working, recognize it, adjust, and solve the problem.
+Something isn't working:
+recognize it, adjust, and solve the problem.
 </p>
 
 
-<h3>The Last 10 Minutes</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  The Last 10 Minutes
+</h3>
 
 <p>
 This was the biggest problem.
 </p>
 
 <p>
-By the end of the half, we were down to only
+By the end of the half,
+we were down to only
 <strong>1.8 passes per possession</strong>.
 </p>
 
 <p>
-Only <strong>1 of our final 11 possessions</strong>
+Only
+<strong>1 of our final 11 possessions</strong>
 reached five passes.
 </p>
 
@@ -295,7 +382,8 @@ but we weren't really playing together anymore.
 <p>
 One player would dribble 50 yards.
 Someone would kick forward.
-A player would receive and everyone else would stand and watch.
+A player would receive
+and everyone else would stand and watch.
 </p>
 
 <p>
@@ -306,63 +394,203 @@ and
 </p>
 
 <p>
-The challenge now is not proving that we can play our style.
-We already proved that.
+The challenge now is not proving
+that we can play our style.
+</p>
+
+<p>
+<strong>We already proved that.</strong>
 </p>
 
 <p>
 The challenge is having the
-<strong>strength, discipline, teamwork, and focus</strong>
+<strong>
+strength, discipline, teamwork and focus
+</strong>
 to keep doing it when we are tired.
 </p>
 
-`,
 
-<h3>First-Half Trend</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-4"
+>
+  First-Half Trend
+</h3>
 
-<div class="overflow-x-auto my-6">
-  <table class="w-full text-sm border-collapse">
+
+<div
+  class="overflow-x-auto my-6"
+>
+
+  <table
+    class="w-full text-sm border-collapse"
+  >
+
     <thead>
-      <tr class="border-b">
-        <th class="text-left py-2 pr-4">Period</th>
-        <th class="text-left py-2 pr-4">Our Passes / Possession</th>
-        <th class="text-left py-2 pr-4">Their Passes / Possession</th>
-        <th class="text-left py-2">What It Looked Like</th>
+
+      <tr
+        class="border-b border-gray-700"
+      >
+
+        <th
+          class="text-left py-3 pr-4 text-gray-400"
+        >
+          Period
+        </th>
+
+        <th
+          class="text-left py-3 pr-4 text-gray-400"
+        >
+          Our Passes / Possession
+        </th>
+
+        <th
+          class="text-left py-3 pr-4 text-gray-400"
+        >
+          Their Passes / Possession
+        </th>
+
+        <th
+          class="text-left py-3 text-gray-400"
+        >
+          What It Looked Like
+        </th>
+
       </tr>
+
     </thead>
+
 
     <tbody>
 
-      <tr class="border-b">
-        <td class="py-2 pr-4"><strong>0–10</strong></td>
-        <td class="py-2 pr-4"><strong>3.7</strong></td>
-        <td class="py-2 pr-4">3.1</td>
-        <td class="py-2">Patient, connected, pressing together</td>
+
+      <tr
+        class="border-b border-gray-700"
+      >
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>0–10</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>3.7</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          3.1
+        </td>
+
+        <td
+          class="py-3"
+        >
+          Patient, connected, pressing together
+        </td>
+
       </tr>
 
-      <tr class="border-b">
-        <td class="py-2 pr-4"><strong>10–20</strong></td>
-        <td class="py-2 pr-4">2.5</td>
-        <td class="py-2 pr-4"><strong>4.4</strong></td>
-        <td class="py-2">Too direct, less movement, press becomes disconnected</td>
+
+      <tr
+        class="border-b border-gray-700"
+      >
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>10–20</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          2.5
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>4.4</strong>
+        </td>
+
+        <td
+          class="py-3"
+        >
+          Too direct, less movement,
+          press becomes disconnected
+        </td>
+
       </tr>
 
-      <tr class="border-b">
-        <td class="py-2 pr-4"><strong>20–30</strong></td>
-        <td class="py-2 pr-4"><strong>3.3</strong></td>
-        <td class="py-2 pr-4">3.0</td>
-        <td class="py-2">Adjustment helps us regain some control</td>
+
+      <tr
+        class="border-b border-gray-700"
+      >
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>20–30</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>3.3</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          3.0
+        </td>
+
+        <td
+          class="py-3"
+        >
+          Adjustment helps us regain some control
+        </td>
+
       </tr>
+
 
       <tr>
-        <td class="py-2 pr-4"><strong>30–40</strong></td>
-        <td class="py-2 pr-4"><strong>1.8</strong></td>
-        <td class="py-2 pr-4">1.7</td>
-        <td class="py-2">Game becomes individual and chaotic</td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>30–40</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          <strong>1.8</strong>
+        </td>
+
+        <td
+          class="py-3 pr-4"
+        >
+          1.7
+        </td>
+
+        <td
+          class="py-3"
+        >
+          Game becomes individual and chaotic
+        </td>
+
       </tr>
 
+
     </tbody>
+
   </table>
+
 </div>
 
 `,
@@ -374,64 +602,116 @@ to keep doing it when we are tired.
 
   gameModel: `
 
-<h3>What This Half Proved</h3>
+<h3
+  class="text-lg font-bold text-white mt-2 mb-2"
+>
+  What This Half Proved
+</h3>
 
 <p>
 We are not trying to play this way because it looks nice.
-We are trying to <strong>control the match</strong>.
+We are trying to
+<strong>control the match</strong>.
 </p>
 
 <p>
-When we keep the ball, the other team cannot attack.
-When we move it quickly, they have to move.
-When they move, spaces appear.
-When we lose it with everyone close together, we are in position to press and win it back.
+When we keep the ball,
+the other team cannot attack.
+When we move it quickly,
+they have to move.
+When they move,
+spaces appear.
 </p>
 
 <p>
-That is exactly what happened during our best periods against Pallaresos.
+When we lose it with everyone close together,
+we are also in position to press
+and win it back.
+</p>
+
+<p>
+That is exactly what happened
+during our best periods against Pallaresos.
 </p>
 
 
-<h3>Possession Has a Purpose</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  Possession Has a Purpose
+</h3>
 
 <p>
 Keeping the ball does not mean passing forever.
-The objective is always to attack when the opportunity is there.
+The objective is always to attack
+when the opportunity is there.
 </p>
 
 <p>
-But if the forward pass is not available, giving the ball away is not attacking.
-Sometimes the best attacking decision is to play backward, switch the field, move the opponent and attack again.
+But if the forward pass is not available,
+giving the ball away is not attacking.
 </p>
 
 <p>
-Our first phase of buildup is beginning to work. The next challenge is what happens <strong>after we break the first line</strong>.
+Sometimes the best attacking decision
+is to play backward,
+switch the field,
+move the opponent,
+and attack again.
 </p>
 
 <p>
-We need to reorganize around the ball, create new angles and continue the attack together.
+Our first phase of buildup is beginning to work.
+The next challenge is what happens
+<strong>after we break the first line</strong>.
+</p>
+
+<p>
+We need to reorganize around the ball,
+create new angles,
+and continue the attack together.
 </p>
 
 
-<h3>Press Together or Don't Press</h3>
+<h3
+  class="text-lg font-bold text-white mt-8 mb-2"
+>
+  Press Together or Don't Press
+</h3>
 
 <p>
 The same rule applies without the ball.
 </p>
 
 <p>
-One player running at the opponent is not a press.
-A press happens when the entire team removes space together.
+One player running at the opponent
+is not a press.
 </p>
 
 <p>
-When we did that, we created turnovers, chances and goals.
-When one or two players stopped doing their jobs, Pallaresos found the free player and played through us.
+A press happens when
+the entire team removes space together.
 </p>
 
 <p>
-Especially important is the player on the far side of the field. When the ball is on one side, the opposite winger must move inside and help us make the field small.
+When we did that,
+we created turnovers,
+chances,
+and goals.
+</p>
+
+<p>
+When one or two players stopped doing their jobs,
+Pallaresos found the free player
+and played through us.
+</p>
+
+<p>
+Especially important is the player
+on the far side of the field.
+When the ball is on one side,
+the opposite winger must move inside
+and help us make the field small.
 </p>
 
 `,
@@ -443,69 +723,206 @@ Especially important is the player on the far side of the field. When the ball i
 
   nextSteps: `
 
-<h3>The Challenge Now</h3>
+<h3
+  class="text-lg font-bold text-white mt-2 mb-2"
+>
+  The Challenge Now
+</h3>
 
 <p>
-We already showed that we know <strong>how</strong> to play our football.
-Now we have to prove that we can keep doing it when the match becomes difficult.
+We already showed that we know
+<strong>how</strong>
+to play our football.
+</p>
+
+<p>
+Now we have to prove
+that we can keep doing it
+when the match becomes difficult.
 </p>
 
 <p>
 That is where our four core values matter.
 </p>
 
-<ul>
+
+<div
+  class="grid grid-cols-1 md:grid-cols-2 gap-3 my-5"
+>
+
+
+  <div
+    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
+  >
+
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
+      STRENGTH
+    </strong>
+
+    <p
+      class="mt-1"
+    >
+      When we are tired,
+      frustrated or under pressure,
+      we do not fall back into old habits.
+      We keep solving problems.
+    </p>
+
+  </div>
+
+
+  <div
+    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
+  >
+
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
+      DISCIPLINE
+    </strong>
+
+    <p
+      class="mt-1"
+    >
+      Keep our shape.
+      Keep moving.
+      If forward is closed,
+      keep the ball and start again.
+      Do the job even when nobody is reminding you.
+    </p>
+
+  </div>
+
+
+  <div
+    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
+  >
+
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
+      TEAMWORK
+    </strong>
+
+    <p
+      class="mt-1"
+    >
+      Never leave the player with the ball alone.
+      Give him an option.
+      Press together.
+      Recover together.
+      Solve the game together.
+    </p>
+
+  </div>
+
+
+  <div
+    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
+  >
+
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
+      RESPECT
+    </strong>
+
+    <p
+      class="mt-1"
+    >
+      Respect your teammates by doing your job.
+      Respect the work we have done in training
+      by trusting it during the match.
+    </p>
+
+  </div>
+
+
+</div>
+
+
+<h3
+  class="text-lg font-bold text-white mt-8 mb-3"
+>
+  Three Things to Improve
+</h3>
+
+
+<ol
+  class="space-y-4 pl-5 list-decimal"
+>
 
   <li>
-    <strong>STRENGTH:</strong>
-    When we are tired, frustrated or under pressure, we do not fall back into old habits. We keep solving problems.
+
+    <strong>
+      After we break the first line, don't rush.
+    </strong>
+
+    Build the next attacking shape,
+    support the ball,
+    and recognize when we should continue forward
+    or switch and attack again.
+
   </li>
 
+
   <li>
-    <strong>DISCIPLINE:</strong>
-    Keep our shape. Keep moving. If forward is closed, keep the ball and start again. Do the job even when nobody is reminding you.
+
+    <strong>
+      Press as one team.
+    </strong>
+
+    Pressure on the ball,
+    cover behind it,
+    far-side winger inside,
+    defensive line stepping forward.
+
   </li>
 
-  <li>
-    <strong>TEAMWORK:</strong>
-    Never leave the player with the ball alone. Give him an option. Press together. Recover together. Solve the game together.
-  </li>
 
   <li>
-    <strong>RESPECT:</strong>
-    Respect your teammates by doing your job. Respect the work we have done in training by trusting it during the match.
-  </li>
 
-</ul>
+    <strong>
+      Keep playing when we are tired.
+    </strong>
 
+    The game model cannot disappear
+    after 10, 20 or 30 minutes.
 
-<h3>Three Things to Improve</h3>
-
-<ol>
-
-  <li>
-    <strong>After we break the first line, don't rush.</strong>
-    Build the next attacking shape, support the ball and recognize when we should continue forward or switch and attack again.
-  </li>
-
-  <li>
-    <strong>Press as one team.</strong>
-    Pressure on the ball, cover behind it, far-side winger inside, defensive line stepping forward.
-  </li>
-
-  <li>
-    <strong>Keep playing when we are tired.</strong>
-    The game model cannot disappear after 10, 20 or 30 minutes. Our best teams will play the same way in difficult moments as they do when everything is easy.
   </li>
 
 </ol>
 
 
-<p>
-<strong>The biggest takeaway:</strong>
-the first 10 minutes showed what this team can become.
-The goal now is to make those 10 minutes become 20, then 40, and eventually an entire match.
-</p>
+<div
+  class="mt-6 p-4 rounded-xl border border-gray-700 bg-gray-900/60"
+>
+
+  <p>
+
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
+      The biggest takeaway:
+    </strong>
+
+    the first 10 minutes showed
+    what this team can become.
+
+  </p>
+
+  <p
+    class="mt-2"
+  >
+    The goal now is to make those 10 minutes
+    become 20,
+    then 40,
+    and eventually an entire match.
+  </p>
+
+</div>
 
 `,
 
@@ -513,7 +930,7 @@ The goal now is to make those 10 minutes become 20, then 40, and eventually an e
   /* ==========================================================
      VIDEO CLIPS
 
-     Replace placeholder embed URLs as clips are uploaded.
+     Add clips here as they are uploaded.
   ========================================================== */
 
   clips: [
@@ -529,6 +946,7 @@ The goal now is to make those 10 minutes become 20, then 40, and eventually an e
         'https://www.youtube.com/embed/VIDEO_ID'
     },
 
+
     {
       title: 'High Press Creates a Goal',
 
@@ -538,6 +956,7 @@ The goal now is to make those 10 minutes become 20, then 40, and eventually an e
       embedUrl:
         'https://www.youtube.com/embed/VIDEO_ID'
     },
+
 
     {
       title: 'What Happens When the Press Breaks',
@@ -549,21 +968,23 @@ The goal now is to make those 10 minutes become 20, then 40, and eventually an e
         'https://www.youtube.com/embed/VIDEO_ID'
     },
 
+
     {
       title: 'When We Stop Moving for Each Other',
 
       description:
-        'Compare this possession with our early buildup. The player with the ball has fewer useful options, teammates stop moving and we eventually try to solve the problem individually. Our game model depends on all 11 players helping the player with the ball.',
+        'Compare this possession with our early buildup. The player with the ball has fewer useful options, teammates stop moving and we eventually try to solve the problem individually.',
 
       embedUrl:
         'https://www.youtube.com/embed/VIDEO_ID'
     },
 
+
     {
       title: 'Reset, Switch, Attack Again',
 
       description:
-        'A reminder that going backward is not giving up an attack. When one side is closed, we can use the players underneath the ball, switch the field and create a new opportunity to go forward.',
+        'Going backward is not giving up an attack. When one side is closed, use the players underneath the ball, switch the field and create another opportunity to go forward.',
 
       embedUrl:
         'https://www.youtube.com/embed/VIDEO_ID'
