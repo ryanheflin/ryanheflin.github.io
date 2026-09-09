@@ -931,6 +931,16 @@ clips: [
       'https://www.youtube.com/embed/KhEJExFW9MI'
   }
 
+  {
+    title: 'Segunda Parte',
+
+    description:
+      'Proximos 20 minutos completos',
+
+    embedUrl:
+      'https://www.youtube.com/embed/okRPBdTLPCM'
+  }
+
 ]
 
 });
