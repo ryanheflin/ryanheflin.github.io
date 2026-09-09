@@ -917,6 +917,18 @@ Ahí es donde importan nuestros cuatro valores.
 
   clips: [
 
+  {
+    title: 'Primer Parte',
+
+    description:
+      'Primeros 20 Minutos Completo',
+
+    embedUrl:
+      'https://www.youtube.com/embed/KhEJExFW9MI'
+  }
+
+]
+
     /*
     {
       title: 'Control Through Possession',
