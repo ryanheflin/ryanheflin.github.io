@@ -24,7 +24,7 @@ window.seasonGames.push({
   ========================================================== */
 
   summary:
-    'Our first real look at this S15 team showed both what we can become and what still needs work. For stretches we controlled the ball, built patiently, pressed aggressively and created goals by winning possession high. As the half continued, we became less connected and fell back into direct, individual play. The challenge now is learning to maintain our game model when we get tired or the match becomes difficult.',
+    'Nuestro primer partido real con este equipo S15 mostró tanto lo que podemos llegar a ser como lo que todavía necesitamos mejorar. Durante algunos tramos controlamos el balón, construimos con paciencia, presionamos con agresividad y generamos goles recuperando arriba. A medida que avanzó la primera parte, nos desconectamos más y volvimos a un juego más directo e individual. El reto ahora es mantener nuestro modelo de juego cuando estamos cansados o cuando el partido se complica.',
 
 
   /* ==========================================================
@@ -42,36 +42,23 @@ window.seasonGames.push({
 
   metrics: {
 
-    '1st Half Score': '3–0',
+    'Resultado 1ª Parte': '3–0',
 
-    'Possession': '48%',
+    'Posesión': '48%',
 
-    'Shots': 7,
+    'Tiros': 7,
 
-    'Shots on Target': 6,
+    'Tiros a Puerta': 6,
 
-    'Passes': 125,
+    'Pases': 125,
 
-    'Touches': 426
+    'Toques': 426
 
   },
 
 
   /* ==========================================================
      THROW-INS
-
-     FIRST-HALF WORKING TOTALS
-
-     Our Throw-Ins Retained:
-     We take the throw and maintain clear possession after
-     the first action.
-
-     Opponent Throw-Ins Won:
-     They take the throw and we regain clear possession
-     after the first action.
-
-     These are working totals until the complete match
-     analysis is finished.
   ========================================================== */
 
   throwIns: {
@@ -89,20 +76,6 @@ window.seasonGames.push({
 
   /* ==========================================================
      PURPOSELESS TURNOVERS
-
-     A purposeless turnover is an avoidable loss where the
-     player had a reasonable opportunity to make a controlled
-     football action but instead gave the ball away through
-     a rushed, hopeful, or thoughtless action.
-
-     Do NOT count:
-     - Purposeful passes that are intercepted
-     - Bad touches after a good decision
-     - Crosses or through balls attempting to create
-     - Necessary clearances under genuine pressure
-     - Legitimate attempts to beat an opponent
-
-     FIRST-HALF WORKING TOTALS
   ========================================================== */
 
   purposelessTurnovers: {
@@ -130,14 +103,14 @@ window.seasonGames.push({
     class="text-sm leading-relaxed"
   >
     <strong style="color: var(--altafulla-yellow);">
-      First-Half Analysis:
+      Análisis de la Primera Parte:
     </strong>
 
-    This report currently covers only the first half,
-    which we finished leading <strong>3–0</strong>.
-    The final score was <strong>5–4</strong>.
-    The second-half statistics and analysis will be added
-    after the complete match review.
+    Este informe cubre por ahora solamente la primera parte,
+    que terminamos ganando <strong>3–0</strong>.
+    El resultado final fue <strong>5–4</strong>.
+    Las estadísticas y el análisis de la segunda parte
+    se añadirán después de revisar el partido completo.
   </p>
 
 </div>
@@ -146,127 +119,134 @@ window.seasonGames.push({
 <h3
   class="text-lg font-bold text-white mt-6 mb-2"
 >
-  We Can Play This Way
+  Podemos Jugar Así
 </h3>
 
 <p>
-The biggest takeaway from the first half is simple:
-<strong>we can play this way.</strong>
+La conclusión más importante de la primera parte es sencilla:
+<strong>podemos jugar así.</strong>
 </p>
 
 <p>
-For the first 10 minutes, we were organized, calm and patient with the ball.
-We built from the back, found players between the lines, switched the field,
-and didn't panic when the forward pass wasn't there.
+Durante los primeros 10 minutos estuvimos organizados,
+tranquilos y pacientes con el balón.
+Salimos jugando desde atrás,
+encontramos jugadores entre líneas,
+cambiamos el juego de lado
+y no entramos en pánico cuando el pase hacia delante no estaba disponible.
 </p>
 
 <p>
-We averaged
-<strong>3.7 passes every time we had the ball</strong>,
-and almost half of our possessions reached at least five passes.
+Hicimos una media de
+<strong>3,7 pases cada vez que tuvimos el balón</strong>,
+y casi la mitad de nuestras posesiones llegaron al menos a cinco pases.
 </p>
 
 <p>
-That matters.
-When we have the ball, they don't.
-We make them run, move them out of position,
-and control where the game is played.
+Eso importa.
+Cuando nosotros tenemos el balón, ellos no lo tienen.
+Les hacemos correr,
+les movemos de posición
+y controlamos dónde se juega el partido.
 </p>
 
 <p>
-We didn't score directly from one of those longer possessions.
-That's fine.
-That is the next part we need to improve.
+No marcamos directamente después de una de esas posesiones largas.
+No pasa nada.
+Eso es precisamente lo siguiente que tenemos que mejorar.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  What Comes After the Buildup?
+  ¿Qué Hacemos Después de Salir Jugando?
 </h3>
 
 <p>
-We are starting to understand how to get out of the back.
-Now we need to understand what happens next.
+Estamos empezando a entender cómo salir jugando desde atrás.
+Ahora tenemos que entender qué hacemos después.
 </p>
 
 <p>
-Once we break the first line,
-we cannot just keep forcing the ball forward.
+Una vez que rompemos la primera línea,
+no podemos seguir intentando jugar hacia delante a cualquier precio.
 </p>
 
 <p>
-We need players underneath the ball,
-players ahead of it,
-width on both sides,
-and someone available to switch the field.
+Necesitamos jugadores por debajo del balón,
+jugadores por delante,
+amplitud en los dos lados
+y alguien disponible para cambiar el juego.
 </p>
 
 <p>
-If the attack is closed,
-keep it, move them again,
-and find another way through.
+Si el ataque está cerrado,
+mantenemos el balón,
+les movemos otra vez
+y buscamos otra manera de avanzar.
 </p>
 
 <p>
-One of our best possessions lasted
-<strong>49 seconds</strong>,
-included <strong>10 passes</strong> and
-<strong>23 touches</strong>,
-and used both sides of the field.
+Una de nuestras mejores posesiones duró
+<strong>49 segundos</strong>,
+incluyó <strong>10 pases</strong> y
+<strong>23 toques</strong>,
+y utilizó los dos lados del campo.
 </p>
 
 <p>
-It didn't end in a goal.
-It was still very good football.
+No terminó en gol.
+Siguió siendo muy buen fútbol.
 </p>
 
 <p>
-Now we have to learn how to turn more of those possessions into chances.
+Ahora tenemos que aprender
+a convertir más de esas posesiones en ocasiones.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  Our Press Works
+  Nuestra Presión Alta Funciona
 </h3>
 
 <p>
-We also proved that our high press works
-when we actually do it together.
+También demostramos que nuestra presión alta funciona
+cuando realmente la hacemos juntos.
 </p>
 
 <p>
-All three first-half goals came from
-aggressive defending and winning the ball high.
+Los tres goles de la primera parte llegaron
+después de defender de forma agresiva
+y recuperar el balón arriba.
 </p>
 
 <p>
-We forced bad touches,
-rushed passes,
-and long balls.
-When everyone moved together,
-Pallaresos had trouble playing out.
+Provocamos malos controles,
+pases apresurados
+y balones largos.
+Cuando todos nos movimos juntos,
+a Pallaresos le costó mucho salir jugando.
 </p>
 
 <p>
-But pressing is not one player running at the ball.
+Pero presionar no es que un jugador corra hacia el balón.
 </p>
 
 <p>
-The first player pressures.
-The players around him take away the easy passes.
-The far-side winger comes inside.
-The players behind the press step forward.
+El primer jugador presiona.
+Los jugadores de alrededor eliminan los pases fáciles.
+El extremo del lado contrario se mete dentro.
+Los jugadores detrás de la presión avanzan.
 </p>
 
 <p>
 <strong>
-If we press together, it works.
-If one or two players stop doing their jobs,
-they play through us.
+Si presionamos juntos, funciona.
+Si uno o dos jugadores dejan de hacer su trabajo,
+nos superan.
 </strong>
 </p>
 
@@ -274,147 +254,149 @@ they play through us.
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  We Stopped Playing Together
+  Dejamos de Jugar Juntos
 </h3>
 
 <p>
-After about 10 minutes,
-the game started to change.
+Después de unos 10 minutos,
+el partido empezó a cambiar.
 </p>
 
 <p>
-Our passes per possession dropped from
-<strong>3.7 to 2.5</strong>.
+Nuestros pases por posesión bajaron de
+<strong>3,7 a 2,5</strong>.
 </p>
 
 <p>
-Pallaresos went the opposite direction,
-from <strong>3.1 to 4.4</strong>.
+Pallaresos hizo exactamente lo contrario:
+pasó de <strong>3,1 a 4,4</strong>.
 </p>
 
 <p>
-That tells us exactly what happened:
+Eso nos dice exactamente qué pasó:
 <strong>
-we stopped controlling the game
-and they started controlling it.
+dejamos de controlar el partido
+y ellos empezaron a controlarlo.
 </strong>
 </p>
 
 <p>
-It wasn't mainly because of bad touches
-or technical mistakes.
-We stopped helping each other.
+El problema no fueron principalmente
+malos controles o errores técnicos.
+Dejamos de ayudarnos.
 </p>
 
 <p>
-Players received the ball and nobody moved.
-We stayed trapped on one side.
-We forced passes forward when forward wasn't open.
-We started kicking into space
-and trying to dribble through the game by ourselves.
+Un jugador recibía el balón y nadie se movía.
+Nos quedábamos atrapados en un lado.
+Forzábamos pases hacia delante cuando no estaban disponibles.
+Empezamos a golpear balones al espacio
+y a intentar resolver el partido cada uno por su cuenta.
 </p>
 
 <p>
-<strong>That isn't our football.</strong>
+<strong>Ese no es nuestro fútbol.</strong>
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  We Fixed It — For a While
+  Lo Corregimos — Durante un Tiempo
 </h3>
 
 <p>
-Around 20 minutes,
-we made an adjustment.
+Alrededor del minuto 20,
+hicimos un ajuste.
 </p>
 
 <p>
-Diego moved into central defense
-and stepped forward into midfield when needed.
-That helped close some of the space
-Pallaresos had been finding.
+Diego pasó a jugar como central
+y le pedimos que avanzara hacia el centro del campo cuando fuera necesario.
+Eso nos ayudó a cerrar algunos de los espacios
+que Pallaresos estaba encontrando.
 </p>
 
 <p>
-For a while,
-our structure improved again.
-We started winning the ball higher,
-and our third goal came directly
-from another good high press.
+Durante un tiempo,
+nuestra estructura mejoró.
+Volvimos a recuperar el balón más arriba,
+y nuestro tercer gol llegó directamente
+de otra buena presión alta.
 </p>
 
 <p>
-That is part of playing football too.
-Something isn't working:
-recognize it, adjust, and solve the problem.
+Eso también forma parte de jugar al fútbol.
+Si algo no funciona:
+lo reconocemos,
+ajustamos
+y solucionamos el problema.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  The Last 10 Minutes
+  Los Últimos 10 Minutos
 </h3>
 
 <p>
-This was the biggest problem.
+Este fue nuestro mayor problema.
 </p>
 
 <p>
-By the end of the half,
-we were down to only
-<strong>1.8 passes per possession</strong>.
+Al final de la primera parte,
+habíamos bajado hasta solo
+<strong>1,8 pases por posesión</strong>.
 </p>
 
 <p>
-Only
-<strong>1 of our final 11 possessions</strong>
-reached five passes.
+Solo
+<strong>1 de nuestras últimas 11 posesiones</strong>
+llegó a cinco pases.
 </p>
 
 <p>
-We still had the ball sometimes,
-but we weren't really playing together anymore.
+A veces todavía teníamos el balón,
+pero ya no estábamos jugando realmente juntos.
 </p>
 
 <p>
-One player would dribble 50 yards.
-Someone would kick forward.
-A player would receive
-and everyone else would stand and watch.
+Un jugador conducía 50 metros.
+Otro golpeaba el balón hacia delante.
+Un jugador recibía
+y todos los demás se quedaban mirando.
 </p>
 
 <p>
-There is a big difference between
-<strong>having the ball</strong>
-and
-<strong>controlling the game</strong>.
+Hay una diferencia enorme entre
+<strong>tener el balón</strong>
+y
+<strong>controlar el partido</strong>.
 </p>
 
 <p>
-The challenge now is not proving
-that we can play our style.
+El reto ahora no es demostrar
+que podemos jugar con nuestro estilo.
 </p>
 
 <p>
-<strong>We already proved that.</strong>
+<strong>Eso ya lo demostramos.</strong>
 </p>
 
 <p>
-The challenge is having the
+El reto es tener la
 <strong>
-strength, discipline, teamwork and focus
+fuerza, disciplina, trabajo en equipo y concentración
 </strong>
-to keep doing it when we are tired.
+para seguir haciéndolo cuando estamos cansados.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-4"
 >
-  First-Half Trend
+  Evolución de la Primera Parte
 </h3>
 
 
@@ -435,25 +417,25 @@ to keep doing it when we are tired.
         <th
           class="text-left py-3 pr-4 text-gray-400"
         >
-          Period
+          Periodo
         </th>
 
         <th
           class="text-left py-3 pr-4 text-gray-400"
         >
-          Our Passes / Possession
+          Nuestros Pases / Posesión
         </th>
 
         <th
           class="text-left py-3 pr-4 text-gray-400"
         >
-          Their Passes / Possession
+          Sus Pases / Posesión
         </th>
 
         <th
           class="text-left py-3 text-gray-400"
         >
-          What It Looked Like
+          Cómo Se Veía
         </th>
 
       </tr>
@@ -477,19 +459,19 @@ to keep doing it when we are tired.
         <td
           class="py-3 pr-4"
         >
-          <strong>3.7</strong>
+          <strong>3,7</strong>
         </td>
 
         <td
           class="py-3 pr-4"
         >
-          3.1
+          3,1
         </td>
 
         <td
           class="py-3"
         >
-          Patient, connected, pressing together
+          Pacientes, conectados, presionando juntos
         </td>
 
       </tr>
@@ -508,20 +490,20 @@ to keep doing it when we are tired.
         <td
           class="py-3 pr-4"
         >
-          2.5
+          2,5
         </td>
 
         <td
           class="py-3 pr-4"
         >
-          <strong>4.4</strong>
+          <strong>4,4</strong>
         </td>
 
         <td
           class="py-3"
         >
-          Too direct, less movement,
-          press becomes disconnected
+          Demasiado directos, menos movimiento,
+          presión desconectada
         </td>
 
       </tr>
@@ -540,19 +522,19 @@ to keep doing it when we are tired.
         <td
           class="py-3 pr-4"
         >
-          <strong>3.3</strong>
+          <strong>3,3</strong>
         </td>
 
         <td
           class="py-3 pr-4"
         >
-          3.0
+          3,0
         </td>
 
         <td
           class="py-3"
         >
-          Adjustment helps us regain some control
+          El ajuste nos ayuda a recuperar algo de control
         </td>
 
       </tr>
@@ -569,19 +551,19 @@ to keep doing it when we are tired.
         <td
           class="py-3 pr-4"
         >
-          <strong>1.8</strong>
+          <strong>1,8</strong>
         </td>
 
         <td
           class="py-3 pr-4"
         >
-          1.7
+          1,7
         </td>
 
         <td
           class="py-3"
         >
-          Game becomes individual and chaotic
+          El partido se vuelve individual y caótico
         </td>
 
       </tr>
@@ -605,113 +587,115 @@ to keep doing it when we are tired.
 <h3
   class="text-lg font-bold text-white mt-2 mb-2"
 >
-  What This Half Proved
+  Lo Que Demostró Esta Primera Parte
 </h3>
 
 <p>
-We are not trying to play this way because it looks nice.
-We are trying to
-<strong>control the match</strong>.
+No intentamos jugar así porque quede bonito.
+Intentamos
+<strong>controlar el partido</strong>.
 </p>
 
 <p>
-When we keep the ball,
-the other team cannot attack.
-When we move it quickly,
-they have to move.
-When they move,
-spaces appear.
+Cuando mantenemos el balón,
+el otro equipo no puede atacar.
+Cuando lo movemos rápido,
+ellos tienen que moverse.
+Cuando se mueven,
+aparecen espacios.
 </p>
 
 <p>
-When we lose it with everyone close together,
-we are also in position to press
-and win it back.
+Cuando perdemos el balón
+con todos cerca unos de otros,
+también estamos en posición
+para presionar y recuperarlo.
 </p>
 
 <p>
-That is exactly what happened
-during our best periods against Pallaresos.
+Eso es exactamente lo que ocurrió
+durante nuestros mejores momentos contra Pallaresos.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  Possession Has a Purpose
+  La Posesión Tiene un Propósito
 </h3>
 
 <p>
-Keeping the ball does not mean passing forever.
-The objective is always to attack
-when the opportunity is there.
+Mantener el balón no significa pasar por pasar.
+El objetivo siempre es atacar
+cuando aparece la oportunidad.
 </p>
 
 <p>
-But if the forward pass is not available,
-giving the ball away is not attacking.
+Pero si el pase hacia delante no está disponible,
+regalar el balón no es atacar.
 </p>
 
 <p>
-Sometimes the best attacking decision
-is to play backward,
-switch the field,
-move the opponent,
-and attack again.
+A veces la mejor decisión ofensiva
+es jugar hacia atrás,
+cambiar el juego,
+mover al rival
+y volver a atacar.
 </p>
 
 <p>
-Our first phase of buildup is beginning to work.
-The next challenge is what happens
-<strong>after we break the first line</strong>.
+Nuestra primera fase de salida de balón
+está empezando a funcionar.
+El siguiente reto es lo que hacemos
+<strong>después de romper la primera línea</strong>.
 </p>
 
 <p>
-We need to reorganize around the ball,
-create new angles,
-and continue the attack together.
+Tenemos que reorganizarnos alrededor del balón,
+crear nuevos ángulos
+y continuar el ataque juntos.
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  Press Together or Don't Press
+  Presionamos Juntos o No Presionamos
 </h3>
 
 <p>
-The same rule applies without the ball.
+La misma regla vale sin balón.
 </p>
 
 <p>
-One player running at the opponent
-is not a press.
+Un jugador corriendo hacia el rival
+no es una presión.
 </p>
 
 <p>
-A press happens when
-the entire team removes space together.
+Hay presión cuando
+todo el equipo elimina espacio al mismo tiempo.
 </p>
 
 <p>
-When we did that,
-we created turnovers,
-chances,
-and goals.
+Cuando lo hicimos,
+creamos recuperaciones,
+ocasiones
+y goles.
 </p>
 
 <p>
-When one or two players stopped doing their jobs,
-Pallaresos found the free player
-and played through us.
+Cuando uno o dos jugadores dejaron de hacer su trabajo,
+Pallaresos encontró al jugador libre
+y jugó a través de nosotros.
 </p>
 
 <p>
-Especially important is the player
-on the far side of the field.
-When the ball is on one side,
-the opposite winger must move inside
-and help us make the field small.
+Es especialmente importante
+el jugador del lado contrario al balón.
+Cuando el balón está en un lado,
+el extremo contrario tiene que meterse dentro
+y ayudarnos a hacer el campo pequeño.
 </p>
 
 `,
@@ -726,23 +710,23 @@ and help us make the field small.
 <h3
   class="text-lg font-bold text-white mt-2 mb-2"
 >
-  The Challenge Now
+  El Reto Ahora
 </h3>
 
 <p>
-We already showed that we know
-<strong>how</strong>
-to play our football.
+Ya demostramos que sabemos
+<strong>cómo</strong>
+queremos jugar.
 </p>
 
 <p>
-Now we have to prove
-that we can keep doing it
-when the match becomes difficult.
+Ahora tenemos que demostrar
+que podemos seguir haciéndolo
+cuando el partido se complica.
 </p>
 
 <p>
-That is where our four core values matter.
+Ahí es donde importan nuestros cuatro valores.
 </p>
 
 
@@ -758,16 +742,16 @@ That is where our four core values matter.
     <strong
       style="color: var(--altafulla-yellow);"
     >
-      STRENGTH
+      FUERZA
     </strong>
 
     <p
       class="mt-1"
     >
-      When we are tired,
-      frustrated or under pressure,
-      we do not fall back into old habits.
-      We keep solving problems.
+      Cuando estamos cansados,
+      frustrados o bajo presión,
+      no volvemos a los viejos hábitos.
+      Seguimos buscando soluciones.
     </p>
 
   </div>
@@ -780,17 +764,17 @@ That is where our four core values matter.
     <strong
       style="color: var(--altafulla-yellow);"
     >
-      DISCIPLINE
+      DISCIPLINA
     </strong>
 
     <p
       class="mt-1"
     >
-      Keep our shape.
-      Keep moving.
-      If forward is closed,
-      keep the ball and start again.
-      Do the job even when nobody is reminding you.
+      Mantener nuestra estructura.
+      Seguir moviéndonos.
+      Si hacia delante está cerrado,
+      mantener el balón y empezar otra vez.
+      Hacer nuestro trabajo aunque nadie nos lo recuerde.
     </p>
 
   </div>
@@ -803,17 +787,17 @@ That is where our four core values matter.
     <strong
       style="color: var(--altafulla-yellow);"
     >
-      TEAMWORK
+      TRABAJO EN EQUIPO
     </strong>
 
     <p
       class="mt-1"
     >
-      Never leave the player with the ball alone.
-      Give him an option.
-      Press together.
-      Recover together.
-      Solve the game together.
+      Nunca dejar solo al jugador con el balón.
+      Darle una opción.
+      Presionar juntos.
+      Replegar juntos.
+      Resolver el partido juntos.
     </p>
 
   </div>
@@ -826,15 +810,15 @@ That is where our four core values matter.
     <strong
       style="color: var(--altafulla-yellow);"
     >
-      RESPECT
+      RESPETO
     </strong>
 
     <p
       class="mt-1"
     >
-      Respect your teammates by doing your job.
-      Respect the work we have done in training
-      by trusting it during the match.
+      Respetar a tus compañeros haciendo tu trabajo.
+      Respetar todo lo que hemos trabajado
+      confiando en ello durante el partido.
     </p>
 
   </div>
@@ -846,7 +830,7 @@ That is where our four core values matter.
 <h3
   class="text-lg font-bold text-white mt-8 mb-3"
 >
-  Three Things to Improve
+  Tres Cosas que Tenemos que Mejorar
 </h3>
 
 
@@ -857,13 +841,13 @@ That is where our four core values matter.
   <li>
 
     <strong>
-      After we break the first line, don't rush.
+      Después de romper la primera línea, no tener prisa.
     </strong>
 
-    Build the next attacking shape,
-    support the ball,
-    and recognize when we should continue forward
-    or switch and attack again.
+    Construir la siguiente estructura de ataque,
+    apoyar al jugador con balón
+    y reconocer cuándo podemos seguir hacia delante
+    o cuándo debemos cambiar el juego y volver a atacar.
 
   </li>
 
@@ -871,13 +855,13 @@ That is where our four core values matter.
   <li>
 
     <strong>
-      Press as one team.
+      Presionar como un equipo.
     </strong>
 
-    Pressure on the ball,
-    cover behind it,
-    far-side winger inside,
-    defensive line stepping forward.
+    Presión sobre el balón,
+    cobertura detrás,
+    extremo del lado contrario hacia dentro,
+    línea defensiva avanzando.
 
   </li>
 
@@ -885,11 +869,11 @@ That is where our four core values matter.
   <li>
 
     <strong>
-      Keep playing when we are tired.
+      Seguir jugando cuando estamos cansados.
     </strong>
 
-    The game model cannot disappear
-    after 10, 20 or 30 minutes.
+    Nuestro modelo de juego no puede desaparecer
+    después de 10, 20 o 30 minutos.
 
   </li>
 
@@ -905,21 +889,21 @@ That is where our four core values matter.
     <strong
       style="color: var(--altafulla-yellow);"
     >
-      The biggest takeaway:
+      La conclusión más importante:
     </strong>
 
-    the first 10 minutes showed
-    what this team can become.
+    los primeros 10 minutos mostraron
+    lo que este equipo puede llegar a ser.
 
   </p>
 
   <p
     class="mt-2"
   >
-    The goal now is to make those 10 minutes
-    become 20,
-    then 40,
-    and eventually an entire match.
+    Ahora el objetivo es convertir esos 10 minutos
+    en 20,
+    después en 40,
+    y finalmente en un partido completo.
   </p>
 
 </div>
@@ -929,8 +913,6 @@ That is where our four core values matter.
 
   /* ==========================================================
      VIDEO CLIPS
-
-     Add clips here as they are uploaded.
   ========================================================== */
 
   clips: [
