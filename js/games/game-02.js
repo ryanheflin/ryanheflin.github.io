@@ -14,9 +14,9 @@ window.seasonGames.push({
 
   location: 'Altafulla',
 
-  goalsFor: 3,
+  goalsFor: 5,
 
-  goalsAgainst: 0,
+  goalsAgainst: 4,
 
 
   /* ==========================================================
