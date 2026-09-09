@@ -915,76 +915,22 @@ Ahí es donde importan nuestros cuatro valores.
      VIDEO CLIPS
   ========================================================== */
 
-  clips: [
+/* ==========================================================
+   VIDEO CLIPS
+========================================================== */
+
+clips: [
 
   {
-    title: 'Primer Parte',
+    title: 'Primera Parte',
 
     description:
-      'Primeros 20 Minutos Completo',
+      'Primeros 20 minutos completos',
 
     embedUrl:
       'https://www.youtube.com/embed/KhEJExFW9MI'
   }
 
 ]
-
-    /*
-    {
-      title: 'Control Through Possession',
-
-      description:
-        'One of our best early possessions. Watch how we give the player on the ball several options, use both sides of the field and stay patient instead of forcing the next forward pass. This is how possession helps us control the game.',
-
-      embedUrl:
-        'https://www.youtube.com/embed/VIDEO_ID'
-    },
-
-
-    {
-      title: 'High Press Creates a Goal',
-
-      description:
-        'Watch the whole team, not only the player who wins the ball. Pressure on the ball removes time, teammates close the nearby options and we win possession close enough to goal to attack immediately.',
-
-      embedUrl:
-        'https://www.youtube.com/embed/VIDEO_ID'
-    },
-
-
-    {
-      title: 'What Happens When the Press Breaks',
-
-      description:
-        'The problem begins before the opponent reaches our defense. When the first pressure is passive and the far-side players stay too wide, Pallaresos can find the free player and move through the middle of our team.',
-
-      embedUrl:
-        'https://www.youtube.com/embed/VIDEO_ID'
-    },
-
-
-    {
-      title: 'When We Stop Moving for Each Other',
-
-      description:
-        'Compare this possession with our early buildup. The player with the ball has fewer useful options, teammates stop moving and we eventually try to solve the problem individually.',
-
-      embedUrl:
-        'https://www.youtube.com/embed/VIDEO_ID'
-    },
-
-
-    {
-      title: 'Reset, Switch, Attack Again',
-
-      description:
-        'Going backward is not giving up an attack. When one side is closed, use the players underneath the ball, switch the field and create another opportunity to go forward.',
-
-      embedUrl:
-        'https://www.youtube.com/embed/VIDEO_ID'
-    }
-    */
-
-  ]
 
 });
