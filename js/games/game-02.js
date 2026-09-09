@@ -929,7 +929,7 @@ clips: [
 
     embedUrl:
       'https://www.youtube.com/embed/KhEJExFW9MI'
-  }
+  },
 
   {
     title: 'Segunda Parte',
