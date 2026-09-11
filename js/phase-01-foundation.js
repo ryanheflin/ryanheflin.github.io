@@ -313,6 +313,9 @@ const phase1Weeks = [
           'Play faster without forcing it.'
         ],
 
+        sessionPlan:
+          'sessions/session-09-play-at-speed.pdf',
+
         missed: [
           'This session brings together the attacking and defending ideas we have learned so far.',
           'The buildout tries to create space, find the free player, and break the press.',
