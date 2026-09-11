@@ -939,7 +939,20 @@ clips: [
 
     embedUrl:
       'https://www.youtube.com/embed/okRPBdTLPCM'
+    
+   },
+
+  {
+    title: 'Tercera Parte',
+
+    description:
+      'Proximos 20 minutos completos',
+
+    embedUrl:
+      'https://www.youtube.com/embed/EvyZk_mYMT8'
+
   }
+
 
 ]
 
