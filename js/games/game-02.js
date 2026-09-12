@@ -24,52 +24,45 @@ window.seasonGames.push({
   ========================================================== */
 
   summary:
-    'Nuestro primer partido real con este equipo S15 mostró tanto lo que podemos llegar a ser como lo que todavía necesitamos mejorar. Durante algunos tramos controlamos el balón, construimos con paciencia, presionamos con agresividad y generamos goles recuperando arriba. A medida que avanzó la primera parte, nos desconectamos más y volvimos a un juego más directo e individual. El reto ahora es mantener nuestro modelo de juego cuando estamos cansados o cuando el partido se complica.',
+    'Un partido extraño, pero muy útil. Durante algunos momentos jugamos exactamente como queremos jugar: tranquilos con balón, conectados, agresivos al perderlo y capaces de controlar el partido. Después dejamos de hacerlo, permitimos que Pallaresos volviera de un 3–0 hasta el 3–3, y tuvimos que encontrar una manera de responder. Ganamos 5–4, pero el resultado importa menos que entender por qué el partido cambió tanto.',
 
 
   /* ==========================================================
-     GENERAL MATCH STATISTICS
-
-     IMPORTANT:
-     Statistics below cover FIRST HALF ONLY.
-
-     First-half score:
-     CE Altafulla 3–0 Pallaresos
-
-     Final score:
-     CE Altafulla 5–4 Pallaresos
+     FULL MATCH STATISTICS
   ========================================================== */
 
   metrics: {
 
-    'Resultado 1ª Parte': '3–0',
+    'Resultado': '5–4',
 
-    'Posesión': '48%',
+    'Posesión': '44%',
 
-    'Tiros': 7,
+    'Pases': 214,
 
-    'Tiros a Puerta': 6,
+    'Toques': 701,
 
-    'Pases': 125,
+    'Pases / Posesión': '2,7',
 
-    'Toques': 426
+    'Duración Media': '14,9s'
 
   },
 
 
   /* ==========================================================
      THROW-INS
+
+     Best-effort count from the match log.
   ========================================================== */
 
   throwIns: {
 
-    oursTotal: 10,
+    oursTotal: 19,
 
-    oursRetained: 3,
+    oursRetained: 6,
 
-    theirsTotal: 19,
+    theirsTotal: 37,
 
-    theirsWonByUs: 8
+    theirsWonByUs: 11
 
   },
 
@@ -95,308 +88,161 @@ window.seasonGames.push({
 
   analysis: `
 
-<div
-  class="mb-6 p-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10"
->
 
-  <p
-    class="text-sm leading-relaxed"
+<!-- ==========================================================
+     MATCH STAT GRAPHIC
+========================================================== -->
+
+<div class="my-6">
+
+  <img
+    src="images/game-02-stats.png"
+    alt="Estadísticas completas CE Altafulla vs Pallaresos"
+    class="w-full rounded-xl border border-gray-700 shadow-lg"
   >
-    <strong style="color: var(--altafulla-yellow);">
-      Análisis de la Primera Parte:
-    </strong>
-
-    Este informe cubre por ahora solamente la primera parte,
-    que terminamos ganando <strong>3–0</strong>.
-    El resultado final fue <strong>5–4</strong>.
-    Las estadísticas y el análisis de la segunda parte
-    se añadirán después de revisar el partido completo.
-  </p>
 
 </div>
+
 
 
 <h3
   class="text-lg font-bold text-white mt-6 mb-2"
 >
-  Podemos Jugar Así
+  Lo Más Importante
 </h3>
 
 <p>
-La conclusión más importante de la primera parte es sencilla:
-<strong>podemos jugar así.</strong>
+Este partido nos enseñó algo bastante sencillo:
+<strong>cuando jugamos juntos, podemos jugar muy bien.</strong>
 </p>
 
 <p>
-Durante los primeros 10 minutos estuvimos organizados,
-tranquilos y pacientes con el balón.
-Salimos jugando desde atrás,
-encontramos jugadores entre líneas,
-cambiamos el juego de lado
-y no entramos en pánico cuando el pase hacia delante no estaba disponible.
+Durante nuestros mejores momentos estuvimos tranquilos con el balón,
+salimos jugando desde atrás,
+usamos a los pivotes,
+cambiamos el juego
+y avanzamos juntos.
+Cuando perdíamos el balón,
+estábamos lo bastante cerca para presionar inmediatamente.
 </p>
 
 <p>
-Hicimos una media de
-<strong>3,7 pases cada vez que tuvimos el balón</strong>,
-y casi la mitad de nuestras posesiones llegaron al menos a cinco pases.
+Los primeros dos goles llegaron de esa presión.
+El tercero también llegó después de recuperar arriba.
+No fue casualidad.
 </p>
 
-<p>
-Eso importa.
-Cuando nosotros tenemos el balón, ellos no lo tienen.
-Les hacemos correr,
-les movemos de posición
-y controlamos dónde se juega el partido.
-</p>
-
-<p>
-No marcamos directamente después de una de esas posesiones largas.
-No pasa nada.
-Eso es precisamente lo siguiente que tenemos que mejorar.
-</p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  ¿Qué Hacemos Después de Salir Jugando?
+  Después Dejamos de Hacerlo
 </h3>
 
 <p>
-Estamos empezando a entender cómo salir jugando desde atrás.
-Ahora tenemos que entender qué hacemos después.
+El problema del partido no fue que Pallaresos hiciera algo extraordinario.
+El problema fue que poco a poco dejamos de hacer las cosas
+que habían funcionado.
 </p>
 
 <p>
-Una vez que rompemos la primera línea,
-no podemos seguir intentando jugar hacia delante a cualquier precio.
+Empezamos a mirar solamente hacia delante.
+Conducíamos demasiado.
+Forzábamos pases.
+Los jugadores alrededor del balón dejaron de dar opciones.
+Y cuando perdíamos la posesión,
+el equipo estaba demasiado separado para presionar juntos.
 </p>
 
 <p>
-Necesitamos jugadores por debajo del balón,
-jugadores por delante,
-amplitud en los dos lados
-y alguien disponible para cambiar el juego.
+El tercer periodo fue el ejemplo más claro.
+Nosotros hicimos solamente <strong>37 pases</strong>
+y Pallaresos hizo <strong>59</strong>.
+Nuestra posesión media duró unos <strong>13 segundos</strong>
+y la suya casi <strong>25</strong>.
 </p>
 
 <p>
-Si el ataque está cerrado,
-mantenemos el balón,
-les movemos otra vez
-y buscamos otra manera de avanzar.
+Ahí ya no estábamos controlando el partido.
+Estábamos reaccionando al partido.
 </p>
 
-<p>
-Una de nuestras mejores posesiones duró
-<strong>49 segundos</strong>,
-incluyó <strong>10 pases</strong> y
-<strong>23 toques</strong>,
-y utilizó los dos lados del campo.
-</p>
-
-<p>
-No terminó en gol.
-Siguió siendo muy buen fútbol.
-</p>
-
-<p>
-Ahora tenemos que aprender
-a convertir más de esas posesiones en ocasiones.
-</p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  Nuestra Presión Alta Funciona
+  Tener el Balón No Es lo Mismo que Controlar
 </h3>
 
 <p>
-También demostramos que nuestra presión alta funciona
-cuando realmente la hacemos juntos.
+Terminamos con aproximadamente un
+<strong>44% de la posesión</strong>,
+214 pases y 701 toques.
+Pallaresos tuvo alrededor del 56%,
+267 pases y 769 toques.
 </p>
 
 <p>
-Los tres goles de la primera parte llegaron
-después de defender de forma agresiva
-y recuperar el balón arriba.
+Pero para mí el número más interesante no es la posesión total.
+Es que nosotros hicimos solamente
+<strong>2,7 pases por posesión</strong>,
+mientras ellos hicieron <strong>3,3</strong>.
 </p>
 
 <p>
-Provocamos malos controles,
-pases apresurados
-y balones largos.
-Cuando todos nos movimos juntos,
-a Pallaresos le costó mucho salir jugando.
+Cuando estábamos bien,
+el jugador con balón tenía varias opciones.
+Cuando estábamos mal,
+un jugador recibía,
+miraba hacia delante
+e intentaba resolverlo solo.
 </p>
 
 <p>
-Pero presionar no es que un jugador corra hacia el balón.
+No necesitamos pasar por pasar.
+Si el espacio está abierto, lo atacamos.
+Pero si no está abierto,
+tenemos que ser capaces de jugar atrás,
+cambiar de lado
+y empezar otra vez.
 </p>
 
-<p>
-El primer jugador presiona.
-Los jugadores de alrededor eliminan los pases fáciles.
-El extremo del lado contrario se mete dentro.
-Los jugadores detrás de la presión avanzan.
-</p>
-
-<p>
-<strong>
-Si presionamos juntos, funciona.
-Si uno o dos jugadores dejan de hacer su trabajo,
-nos superan.
-</strong>
-</p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  Dejamos de Jugar Juntos
+  Los Saques de Banda Siguen Siendo un Problema
 </h3>
 
 <p>
-Después de unos 10 minutos,
-el partido empezó a cambiar.
+Los números no son perfectos porque hubo muchas jugadas caóticas,
+pero contamos aproximadamente
+<strong>19 saques de banda nuestros</strong>
+y mantuvimos la posesión en solo <strong>6</strong>.
 </p>
 
 <p>
-Nuestros pases por posesión bajaron de
-<strong>3,7 a 2,5</strong>.
+Eso es alrededor del <strong>32%</strong>.
+Pallaresos mantuvo aproximadamente el <strong>70%</strong> de los suyos.
 </p>
 
 <p>
-Pallaresos hizo exactamente lo contrario:
-pasó de <strong>3,1 a 4,4</strong>.
+Esto debería ser una de las partes más fáciles del partido.
+El árbitro nos da el balón,
+tenemos tiempo para organizarnos
+y sabemos exactamente dónde empieza la jugada.
+No podemos seguir regalando tantas posesiones.
 </p>
 
-<p>
-Eso nos dice exactamente qué pasó:
-<strong>
-dejamos de controlar el partido
-y ellos empezaron a controlarlo.
-</strong>
-</p>
-
-<p>
-El problema no fueron principalmente
-malos controles o errores técnicos.
-Dejamos de ayudarnos.
-</p>
-
-<p>
-Un jugador recibía el balón y nadie se movía.
-Nos quedábamos atrapados en un lado.
-Forzábamos pases hacia delante cuando no estaban disponibles.
-Empezamos a golpear balones al espacio
-y a intentar resolver el partido cada uno por su cuenta.
-</p>
-
-<p>
-<strong>Ese no es nuestro fútbol.</strong>
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Lo Corregimos — Durante un Tiempo
-</h3>
-
-<p>
-Alrededor del minuto 20,
-hicimos un ajuste.
-</p>
-
-<p>
-Diego pasó a jugar como central
-y le pedimos que avanzara hacia el centro del campo cuando fuera necesario.
-Eso nos ayudó a cerrar algunos de los espacios
-que Pallaresos estaba encontrando.
-</p>
-
-<p>
-Durante un tiempo,
-nuestra estructura mejoró.
-Volvimos a recuperar el balón más arriba,
-y nuestro tercer gol llegó directamente
-de otra buena presión alta.
-</p>
-
-<p>
-Eso también forma parte de jugar al fútbol.
-Si algo no funciona:
-lo reconocemos,
-ajustamos
-y solucionamos el problema.
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Los Últimos 10 Minutos
-</h3>
-
-<p>
-Este fue nuestro mayor problema.
-</p>
-
-<p>
-Al final de la primera parte,
-habíamos bajado hasta solo
-<strong>1,8 pases por posesión</strong>.
-</p>
-
-<p>
-Solo
-<strong>1 de nuestras últimas 11 posesiones</strong>
-llegó a cinco pases.
-</p>
-
-<p>
-A veces todavía teníamos el balón,
-pero ya no estábamos jugando realmente juntos.
-</p>
-
-<p>
-Un jugador conducía 50 metros.
-Otro golpeaba el balón hacia delante.
-Un jugador recibía
-y todos los demás se quedaban mirando.
-</p>
-
-<p>
-Hay una diferencia enorme entre
-<strong>tener el balón</strong>
-y
-<strong>controlar el partido</strong>.
-</p>
-
-<p>
-El reto ahora no es demostrar
-que podemos jugar con nuestro estilo.
-</p>
-
-<p>
-<strong>Eso ya lo demostramos.</strong>
-</p>
-
-<p>
-El reto es tener la
-<strong>
-fuerza, disciplina, trabajo en equipo y concentración
-</strong>
-para seguir haciéndolo cuando estamos cansados.
-</p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-4"
 >
-  Evolución de la Primera Parte
+  El Partido por Periodos
 </h3>
 
 
@@ -414,28 +260,20 @@ para seguir haciéndolo cuando estamos cansados.
         class="border-b border-gray-700"
       >
 
-        <th
-          class="text-left py-3 pr-4 text-gray-400"
-        >
+        <th class="text-left py-3 pr-4 text-gray-400">
           Periodo
         </th>
 
-        <th
-          class="text-left py-3 pr-4 text-gray-400"
-        >
-          Nuestros Pases / Posesión
+        <th class="text-left py-3 pr-4 text-gray-400">
+          Resultado
         </th>
 
-        <th
-          class="text-left py-3 pr-4 text-gray-400"
-        >
-          Sus Pases / Posesión
+        <th class="text-left py-3 pr-4 text-gray-400">
+          Pases
         </th>
 
-        <th
-          class="text-left py-3 text-gray-400"
-        >
-          Cómo Se Veía
+        <th class="text-left py-3 text-gray-400">
+          Lo Que Pasó
         </th>
 
       </tr>
@@ -446,95 +284,64 @@ para seguir haciéndolo cuando estamos cansados.
     <tbody>
 
 
-      <tr
-        class="border-b border-gray-700"
-      >
+      <tr class="border-b border-gray-700">
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>0–10</strong>
+        <td class="py-3 pr-4">
+          <strong>Q1</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>3,7</strong>
+        <td class="py-3 pr-4">
+          <strong>2–0</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          3,1
+        <td class="py-3 pr-4">
+          79–92
         </td>
 
-        <td
-          class="py-3"
-        >
-          Pacientes, conectados, presionando juntos
+        <td class="py-3">
+          Tranquilos, conectados y agresivos al perder el balón.
         </td>
 
       </tr>
 
 
-      <tr
-        class="border-b border-gray-700"
-      >
+      <tr class="border-b border-gray-700">
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>10–20</strong>
+        <td class="py-3 pr-4">
+          <strong>Q2</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          2,5
+        <td class="py-3 pr-4">
+          <strong>1–0</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>4,4</strong>
+        <td class="py-3 pr-4">
+          46–45
         </td>
 
-        <td
-          class="py-3"
-        >
-          Demasiado directos, menos movimiento,
-          presión desconectada
+        <td class="py-3">
+          Más directos e individuales. Empezamos a perder nuestra estructura.
         </td>
 
       </tr>
 
 
-      <tr
-        class="border-b border-gray-700"
-      >
+      <tr class="border-b border-gray-700">
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>20–30</strong>
+        <td class="py-3 pr-4">
+          <strong>Q3</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>3,3</strong>
+        <td class="py-3 pr-4">
+          <strong>0–2</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          3,0
+        <td class="py-3 pr-4">
+          37–59
         </td>
 
-        <td
-          class="py-3"
-        >
-          El ajuste nos ayuda a recuperar algo de control
+        <td class="py-3">
+          Pallaresos controla el partido. Defendemos demasiado atrás y demasiado separados.
         </td>
 
       </tr>
@@ -542,28 +349,20 @@ para seguir haciéndolo cuando estamos cansados.
 
       <tr>
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>30–40</strong>
+        <td class="py-3 pr-4">
+          <strong>Q4</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          <strong>1,8</strong>
+        <td class="py-3 pr-4">
+          <strong>2–2</strong>
         </td>
 
-        <td
-          class="py-3 pr-4"
-        >
-          1,7
+        <td class="py-3 pr-4">
+          52–71
         </td>
 
-        <td
-          class="py-3"
-        >
-          El partido se vuelve individual y caótico
+        <td class="py-3">
+          Empezamos mal, pero encontramos una respuesta y volvemos a jugar mejor juntos.
         </td>
 
       </tr>
@@ -587,250 +386,82 @@ para seguir haciéndolo cuando estamos cansados.
 <h3
   class="text-lg font-bold text-white mt-2 mb-2"
 >
-  Lo Que Demostró Esta Primera Parte
+  Lo Que Quiero que Entendamos
 </h3>
 
 <p>
-No intentamos jugar así porque quede bonito.
-Intentamos
-<strong>controlar el partido</strong>.
+No quiero que salgamos de este partido pensando:
+<strong>“tenemos que pasar más.”</strong>
 </p>
 
 <p>
-Cuando mantenemos el balón,
-el otro equipo no puede atacar.
-Cuando lo movemos rápido,
-ellos tienen que moverse.
-Cuando se mueven,
-aparecen espacios.
+Eso no es la lección.
 </p>
 
 <p>
-Cuando perdemos el balón
-con todos cerca unos de otros,
-también estamos en posición
-para presionar y recuperarlo.
+La lección es que tenemos que reconocer qué necesita el partido.
+A veces el espacio está detrás de la defensa y hay que atacarlo inmediatamente.
+Otras veces necesitamos mantener el balón,
+traer al resto del equipo hacia delante
+y crear otro espacio.
 </p>
 
 <p>
-Eso es exactamente lo que ocurrió
-durante nuestros mejores momentos contra Pallaresos.
+Cuando hacemos eso,
+todos avanzamos juntos.
+Y cuando todos avanzamos juntos,
+si perdemos el balón estamos preparados para presionar.
+</p>
+
+<p>
+Nuestra posesión y nuestra presión no son dos cosas diferentes.
+<strong>Una ayuda a la otra.</strong>
 </p>
 
 
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
-  La Posesión Tiene un Propósito
+  Sin Balón
 </h3>
 
 <p>
-Mantener el balón no significa pasar por pasar.
-El objetivo siempre es atacar
-cuando aparece la oportunidad.
+Nuestra presión funcionó muy bien cuando todos hicieron su trabajo.
+Pero hubo demasiados momentos en los que un jugador presionaba
+y los demás miraban.
 </p>
 
 <p>
-Pero si el pase hacia delante no está disponible,
-regalar el balón no es atacar.
-</p>
-
-<p>
-A veces la mejor decisión ofensiva
-es jugar hacia atrás,
-cambiar el juego,
-mover al rival
-y volver a atacar.
-</p>
-
-<p>
-Nuestra primera fase de salida de balón
-está empezando a funcionar.
-El siguiente reto es lo que hacemos
-<strong>después de romper la primera línea</strong>.
-</p>
-
-<p>
-Tenemos que reorganizarnos alrededor del balón,
-crear nuevos ángulos
-y continuar el ataque juntos.
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Presionamos Juntos o No Presionamos
-</h3>
-
-<p>
-La misma regla vale sin balón.
-</p>
-
-<p>
-Un jugador corriendo hacia el rival
-no es una presión.
-</p>
-
-<p>
-Hay presión cuando
-todo el equipo elimina espacio al mismo tiempo.
+Si uno va,
+vamos todos.
+El jugador más cercano presiona.
+Los jugadores alrededor quitan las opciones fáciles.
+El extremo contrario se mete dentro.
+Los jugadores detrás avanzan.
 </p>
 
 <p>
 Cuando lo hicimos,
-creamos recuperaciones,
-ocasiones
-y goles.
-</p>
-
-<p>
-Cuando uno o dos jugadores dejaron de hacer su trabajo,
-Pallaresos encontró al jugador libre
-y jugó a través de nosotros.
-</p>
-
-<p>
-Es especialmente importante
-el jugador del lado contrario al balón.
-Cuando el balón está en un lado,
-el extremo contrario tiene que meterse dentro
-y ayudarnos a hacer el campo pequeño.
+recuperamos el balón arriba
+y creamos goles.
+Cuando no lo hicimos,
+Pallaresos encontró jugadores libres
+y pasó directamente por nuestro centro del campo.
 </p>
 
 `,
 
 
   /* ==========================================================
-     CORE VALUES / PLAYER TAKEAWAYS
+     PLAYER TAKEAWAYS
   ========================================================== */
 
   nextSteps: `
 
 <h3
-  class="text-lg font-bold text-white mt-2 mb-2"
+  class="text-lg font-bold text-white mt-2 mb-3"
 >
-  El Reto Ahora
-</h3>
-
-<p>
-Ya demostramos que sabemos
-<strong>cómo</strong>
-queremos jugar.
-</p>
-
-<p>
-Ahora tenemos que demostrar
-que podemos seguir haciéndolo
-cuando el partido se complica.
-</p>
-
-<p>
-Ahí es donde importan nuestros cuatro valores.
-</p>
-
-
-<div
-  class="grid grid-cols-1 md:grid-cols-2 gap-3 my-5"
->
-
-
-  <div
-    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
-  >
-
-    <strong
-      style="color: var(--altafulla-yellow);"
-    >
-      FUERZA
-    </strong>
-
-    <p
-      class="mt-1"
-    >
-      Cuando estamos cansados,
-      frustrados o bajo presión,
-      no volvemos a los viejos hábitos.
-      Seguimos buscando soluciones.
-    </p>
-
-  </div>
-
-
-  <div
-    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
-  >
-
-    <strong
-      style="color: var(--altafulla-yellow);"
-    >
-      DISCIPLINA
-    </strong>
-
-    <p
-      class="mt-1"
-    >
-      Mantener nuestra estructura.
-      Seguir moviéndonos.
-      Si hacia delante está cerrado,
-      mantener el balón y empezar otra vez.
-      Hacer nuestro trabajo aunque nadie nos lo recuerde.
-    </p>
-
-  </div>
-
-
-  <div
-    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
-  >
-
-    <strong
-      style="color: var(--altafulla-yellow);"
-    >
-      TRABAJO EN EQUIPO
-    </strong>
-
-    <p
-      class="mt-1"
-    >
-      Nunca dejar solo al jugador con el balón.
-      Darle una opción.
-      Presionar juntos.
-      Replegar juntos.
-      Resolver el partido juntos.
-    </p>
-
-  </div>
-
-
-  <div
-    class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
-  >
-
-    <strong
-      style="color: var(--altafulla-yellow);"
-    >
-      RESPETO
-    </strong>
-
-    <p
-      class="mt-1"
-    >
-      Respetar a tus compañeros haciendo tu trabajo.
-      Respetar todo lo que hemos trabajado
-      confiando en ello durante el partido.
-    </p>
-
-  </div>
-
-
-</div>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-3"
->
-  Tres Cosas que Tenemos que Mejorar
+  Para el Próximo Partido
 </h3>
 
 
@@ -841,13 +472,14 @@ Ahí es donde importan nuestros cuatro valores.
   <li>
 
     <strong>
-      Después de romper la primera línea, no tener prisa.
+      Ayudar al jugador con balón.
     </strong>
 
-    Construir la siguiente estructura de ataque,
-    apoyar al jugador con balón
-    y reconocer cuándo podemos seguir hacia delante
-    o cuándo debemos cambiar el juego y volver a atacar.
+    No correr todos hacia delante.
+    Crear ángulos.
+    Dar una opción por debajo,
+    una por delante
+    y una opción para cambiar el juego.
 
   </li>
 
@@ -855,13 +487,12 @@ Ahí es donde importan nuestros cuatro valores.
   <li>
 
     <strong>
-      Presionar como un equipo.
+      Reconocer cuándo atacar y cuándo tener paciencia.
     </strong>
 
-    Presión sobre el balón,
-    cobertura detrás,
-    extremo del lado contrario hacia dentro,
-    línea defensiva avanzando.
+    Si el espacio está abierto, vamos.
+    Si no está abierto,
+    mantenemos el balón y buscamos otra solución.
 
   </li>
 
@@ -869,11 +500,24 @@ Ahí es donde importan nuestros cuatro valores.
   <li>
 
     <strong>
-      Seguir jugando cuando estamos cansados.
+      Defender juntos.
     </strong>
 
-    Nuestro modelo de juego no puede desaparecer
-    después de 10, 20 o 30 minutos.
+    No podemos tener un jugador presionando
+    mientras los demás caminan.
+    Nuestra presión funciona solamente si todos participan.
+
+  </li>
+
+
+  <li>
+
+    <strong>
+      Mejorar muchísimo nuestros saques de banda.
+    </strong>
+
+    Son posesiones nuestras.
+    Tenemos que empezar a tratarlas así.
 
   </li>
 
@@ -885,25 +529,16 @@ Ahí es donde importan nuestros cuatro valores.
 >
 
   <p>
-
-    <strong
-      style="color: var(--altafulla-yellow);"
-    >
-      La conclusión más importante:
-    </strong>
-
-    los primeros 10 minutos mostraron
-    lo que este equipo puede llegar a ser.
-
+    Los mejores momentos de este partido
+    demostraron que podemos jugar el fútbol que queremos jugar.
   </p>
 
-  <p
-    class="mt-2"
-  >
-    Ahora el objetivo es convertir esos 10 minutos
-    en 20,
-    después en 40,
-    y finalmente en un partido completo.
+  <p class="mt-2">
+    El siguiente paso es bastante sencillo de entender,
+    aunque no sea fácil de hacer:
+    <strong>
+      mantenerlo durante todo el partido.
+    </strong>
   </p>
 
 </div>
@@ -915,56 +550,48 @@ Ahí es donde importan nuestros cuatro valores.
      VIDEO CLIPS
   ========================================================== */
 
-/* ==========================================================
-   VIDEO CLIPS
-========================================================== */
-
-clips: [
-
-  {
-    title: 'Primera Parte',
-
-    description:
-      'Primeros 20 minutos completos',
-
-    embedUrl:
-      'https://www.youtube.com/embed/KhEJExFW9MI'
-  },
-
-  {
-    title: 'Segunda Parte',
-
-    description:
-      'Proximos 20 minutos completos',
-
-    embedUrl:
-      'https://www.youtube.com/embed/okRPBdTLPCM'
-    
-   },
-
-  {
-    title: 'Tercera Parte',
-
-    description:
-      'Proximos 20 minutos completos',
-
-    embedUrl:
-      'https://www.youtube.com/embed/EvyZk_mYMT8'
-
-  },
+  clips: [
 
     {
-    title: 'Final Parte',
+      title: 'Primera Parte',
 
-    description:
-      'Ultimos 20 minutos completos',
+      description:
+        'Primeros 20 minutos completos',
 
-    embedUrl:
-      'https://www.youtube.com/embed/MTLWsMQGG9E'
+      embedUrl:
+        'https://www.youtube.com/embed/KhEJExFW9MI'
+    },
 
-  }
+    {
+      title: 'Segunda Parte',
 
+      description:
+        'Próximos 20 minutos completos',
 
-]
+      embedUrl:
+        'https://www.youtube.com/embed/okRPBdTLPCM'
+    },
+
+    {
+      title: 'Tercera Parte',
+
+      description:
+        'Próximos 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/EvyZk_mYMT8'
+    },
+
+    {
+      title: 'Parte Final',
+
+      description:
+        'Últimos 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/MTLWsMQGG9E'
+    }
+
+  ]
 
 });
