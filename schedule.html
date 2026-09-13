@@ -1,4 +1,545 @@
-    <!-- Embedded FCF Page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Season Schedule | CE Altafulla U15</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="js/site.js" defer></script>
+
+  <style>
+    :root {
+      --altafulla-yellow: #f2e40a;
+      --altafulla-black: #000000;
+      --altafulla-blue: #62bed6;
+    }
+  </style>
+</head>
+
+
+<body class="bg-gray-900 text-white antialiased flex min-h-screen pb-16">
+
+
+  <!-- =========================================================
+       SHARED SIDEBAR
+  ========================================================== -->
+
+  <div id="site-sidebar"></div>
+
+
+
+  <!-- =========================================================
+       MAIN CONTENT
+  ========================================================== -->
+
+  <main
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full"
+  >
+
+
+    <!-- =======================================================
+         PAGE HEADER
+    ======================================================== -->
+
+    <header
+      class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+    >
+
+      <div>
+
+        <h2
+          class="text-3xl font-extrabold mb-1"
+          style="color: var(--altafulla-yellow);"
+        >
+          Season Schedule & Results
+        </h2>
+
+
+        <p class="text-gray-400 text-sm">
+          Matches, kickoff times, and official standings directly from the FCF.
+        </p>
+
+      </div>
+
+
+      <a
+        id="fcf-direct-link"
+        href="https://www.fcf.cat/ca/competicio?temporadaId=22&disciplinaId=19308233&competicioId=58780226&grupId=58816739"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
+        style="background-color: var(--altafulla-yellow);"
+      >
+        🔗 Open on FCF.cat ↗
+      </a>
+
+    </header>
+
+
+
+    <!-- =======================================================
+         PRACTICE SCHEDULE
+    ======================================================== -->
+
+    <section class="mb-8">
+
+
+      <div class="mb-4">
+
+        <h3 class="text-xl font-bold text-white">
+          Horario de Entrenamientos
+        </h3>
+
+
+        <p class="text-sm text-gray-400 mt-1">
+          Todos los entrenamientos se realizan en nuestro campo habitual.
+        </p>
+
+      </div>
+
+
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+
+        <!-- Tuesday -->
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
+
+          <span
+            class="text-xs uppercase tracking-wide font-bold"
+            style="color: var(--altafulla-blue);"
+          >
+            Martes
+          </span>
+
+
+          <p class="text-2xl font-extrabold text-white mt-2">
+            20:00–21:15
+          </p>
+
+
+          <p class="text-sm text-gray-400 mt-1">
+            Estadi Municipal Joan Pijuan
+          </p>
+
+        </div>
+
+
+
+        <!-- Thursday -->
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
+
+          <div class="flex items-center justify-between gap-3">
+
+            <span
+              class="text-xs uppercase tracking-wide font-bold"
+              style="color: var(--altafulla-blue);"
+            >
+              Jueves
+            </span>
+
+
+            <span
+              class="text-xs font-semibold px-2 py-1 rounded-full bg-gray-700 text-gray-300"
+            >
+              Opcional, pero recomendado
+            </span>
+
+          </div>
+
+
+          <p class="text-2xl font-extrabold text-white mt-2">
+            16:15–17:30
+          </p>
+
+
+          <p class="text-sm text-gray-400 mt-1">
+            Estadi Municipal Joan Pijuan
+          </p>
+
+        </div>
+
+
+
+        <!-- Friday -->
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
+
+          <span
+            class="text-xs uppercase tracking-wide font-bold"
+            style="color: var(--altafulla-blue);"
+          >
+            Viernes
+          </span>
+
+
+          <p class="text-2xl font-extrabold text-white mt-2">
+            20:15–21:30
+          </p>
+
+
+          <p class="text-sm text-gray-400 mt-1">
+            Estadi Municipal Joan Pijuan
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- Practice Arrival Reminder -->
+      <div
+        class="mt-4 px-4 py-3 rounded-lg border border-gray-700 bg-gray-800/60"
+      >
+
+        <p class="text-sm text-gray-300">
+
+          <span
+            class="font-bold"
+            style="color: var(--altafulla-yellow);"
+          >
+            Puntualidad:
+          </span>
+
+          Llegad 15 minutos antes con todo vuestro material y agua,
+          y estad preparados para empezar el entrenamiento exactamente
+          a la hora indicada.
+
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =======================================================
+         FRIENDLY MATCHES
+    ======================================================== -->
+
+    <section class="mb-8">
+
+      <div class="mb-4">
+
+        <h3 class="text-xl font-bold text-white">
+          Partidos Amistosos
+        </h3>
+
+        <p class="text-sm text-gray-400 mt-1">
+          Partidos fuera del calendario oficial de liga.
+        </p>
+
+      </div>
+
+
+      <div class="space-y-4">
+
+
+        <!-- =====================================================
+             FRIENDLY 1 — SANT PAU B
+        ====================================================== -->
+
+        <div
+          class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
+        >
+
+          <!-- Match Header -->
+          <div
+            class="px-5 py-4 md:px-6 md:py-5 border-b border-gray-700 bg-gray-950"
+          >
+
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+            >
+
+              <div>
+
+                <span
+                  class="text-xs uppercase tracking-[0.18em] font-bold"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Amistoso
+                </span>
+
+                <h4
+                  class="text-xl md:text-2xl font-extrabold text-white mt-1"
+                >
+                  Sant Pau B vs. CE Altafulla
+                </h4>
+
+              </div>
+
+              <span
+                class="self-start md:self-center text-xs font-bold px-3 py-1.5 rounded-full"
+                style="
+                  background-color: var(--altafulla-yellow);
+                  color: #000000;
+                "
+              >
+                Afuera
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Match Details -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-5 p-5 md:p-6"
+          >
+
+            <!-- Date -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Fecha
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Sábado 29 de agosto
+              </p>
+
+            </div>
+
+
+            <!-- Arrival -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Convocatoria
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                12:00
+              </p>
+
+            </div>
+
+
+            <!-- Kickoff -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Partido
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                13:00
+              </p>
+
+            </div>
+
+
+            <!-- Location -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Lugar
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Camp de Futbol Campclar: Carrer Riu Llobregat, 41, 43006 Tarragona
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             FRIENDLY 2 — PALLARESOS
+        ====================================================== -->
+
+        <div
+          class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
+        >
+
+          <!-- Match Header -->
+          <div
+            class="px-5 py-4 md:px-6 md:py-5 border-b border-gray-700 bg-gray-950"
+          >
+
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
+            >
+
+              <div>
+
+                <span
+                  class="text-xs uppercase tracking-[0.18em] font-bold"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Amistoso
+                </span>
+
+                <h4
+                  class="text-xl md:text-2xl font-extrabold text-white mt-1"
+                >
+                  CE Altafulla vs. Pallaresos
+                </h4>
+
+              </div>
+
+              <span
+                class="self-start md:self-center text-xs font-bold px-3 py-1.5 rounded-full"
+                style="
+                  background-color: var(--altafulla-yellow);
+                  color: #000000;
+                "
+              >
+                En Casa
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Match Details -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-5 p-5 md:p-6"
+          >
+
+            <!-- Date -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Fecha
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Domingo 6 de septiembre
+              </p>
+
+            </div>
+
+
+            <!-- Arrival -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Convocatoria
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                11:00
+              </p>
+
+            </div>
+
+
+            <!-- Kickoff -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Partido
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                12:00
+              </p>
+
+            </div>
+
+
+            <!-- Location -->
+            <div>
+
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Lugar
+              </p>
+
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Estadi Municipal Joan Pijuan
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         OFFICIAL FCF LEAGUE SCHEDULE
+    ======================================================== -->
+
+    <section class="mb-4">
+
+      <div>
+
+        <h3 class="text-xl font-bold text-white">
+          Calendario Oficial de Liga
+        </h3>
+
+
+        <p class="text-sm text-gray-400 mt-1">
+          Calendario, resultados y clasificación oficial de nuestro grupo en la FCF.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         EMBEDDED FCF PAGE
+    ======================================================== -->
+
     <section
       class="bg-gray-800 p-2 rounded-xl border border-gray-700 shadow-xl overflow-hidden mb-8"
     >
@@ -20,3 +561,102 @@
       </div>
 
     </section>
+
+
+
+    <!-- =======================================================
+         MATCH DAY LOGISTICS
+    ======================================================== -->
+
+    <section class="mb-8">
+
+
+      <h3 class="text-xl font-bold mb-4">
+        Match Day Information
+      </h3>
+
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+        <!-- Field Address -->
+        <div
+          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+        >
+
+          <h4 class="text-lg font-bold mb-2 text-white">
+            📍 Field Address
+          </h4>
+
+
+          <p class="text-sm text-gray-300">
+            Estadi Municipal Joan Pijuan
+          </p>
+
+
+          <p class="text-xs text-gray-400 mt-1">
+            Carrer de les Séquies, s/n, 43893 Altafulla, Tarragona
+          </p>
+
+        </div>
+
+
+
+        <!-- Arrival Times -->
+        <div
+          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+        >
+
+          <h4 class="text-lg font-bold mb-2 text-white">
+            ⌚ Arrival & Meeting Times
+          </h4>
+
+
+          <p class="text-sm text-gray-300">
+            Home matches: 60 minutes before kickoff.
+          </p>
+
+
+          <p class="text-sm text-gray-300 mt-1">
+            Away matches: 60 minutes before kickoff.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer
+    class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
+  >
+    &copy; 2026 Ex Profundo by Ryan Heflin — CE Altafulla S15
+  </footer>
+
+
+
+  <!-- =========================================================
+       CLOUDFLARE WEB ANALYTICS
+  ========================================================== -->
+
+  <script
+    type="module"
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "bc66404c9601462e9cf66f11e2d859a0"}'
+  ></script>
+
+
+</body>
+
+</html>
