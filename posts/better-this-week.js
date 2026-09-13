@@ -74,7 +74,7 @@ window.blogPosts.push({
       </p>
 
       <p class="mt-3">
-        Aquí tenemos un ejemplo de la semana pasada cuando no lo hicimos:
+        Aquí tenemos tres ejemplos de la semana pasada cuando no lo hicimos:
       </p>
 
 
