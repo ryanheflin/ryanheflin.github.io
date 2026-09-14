@@ -332,7 +332,7 @@ const phase1Weeks = [
   /* ========================================================
      WEEK 4
   ======================================================== */
-  {
+   {
     week: 4,
     focus: 'Put the Whole Game Together',
 
@@ -346,55 +346,57 @@ const phase1Weeks = [
 
       {
         number: 1,
-        title: 'Inside, Outside, or In Behind',
-        question: 'Where is the best space to attack?',
+        title: 'Keep the Attack Alive',
+        question: 'What does the ball need next?',
 
         purpose:
-          'Bring our attacking principles together by understanding that different defensive problems require different solutions.',
+          'Maintain our structure after progressing and create the next advantage instead of forcing the attack.',
 
         habits: [
-          'High line → threaten in behind.',
-          'Central space → play inside.',
-          'Center closed → use width.',
-          'One side overloaded → switch sides.',
-          'No advantage → start again.'
+          'Break a line → reorganize.',
+          'Support the player on the ball.',
+          'Forward if it is on.',
+          'Closed → connect and move them.',
+          'Crowded side → switch.',
+          'Keep the ball if there is no advantage.'
         ],
 
         missed: [
-          'There is not one correct way to attack: read where the space is.',
-          'If they leave space in behind, attack it.',
-          'If the center is open, play inside; if they close it, use width.',
-          'If one side is overloaded, switch the attack. If nothing is available, keep the ball.'
+          'Breaking one line is only the start.',
+          'Reorganize quickly around the ball and create the next option.',
+          'Do not force the next pass just because we moved forward.',
+          'If one route closes, keep the ball and find another.'
         ]
       },
 
       {
         number: 2,
-        title: 'Control the Opponent',
-        question: 'What defensive action gives us control of the next play?',
+        title: 'Stay Connected',
+        question: 'Are we all defending the same moment?',
 
         purpose:
-          'Bring together pressing, delaying, recovering, and compact defending to choose the correct response.',
+          'Keep the team connected when pressing, defending, and recovering.',
 
         positions: {
           focus: 'Center backs and holding midfielders',
           detail:
-            'Control the team from behind the ball: protect the center, maintain distances, and recognize when to step forward, slow the opponent down, or recover.'
+            'Organize the team from behind the pressure, keep distances compact, and help everyone make the same defensive decision.'
         },
 
         habits: [
-          'Recognize whether to press or delay.',
-          'Protect dangerous central space.',
-          'Make the opponent predictable.',
-          'Move together behind the pressure.',
-          'Recover quickly if they break the press.'
+          'One presses → everyone adjusts.',
+          'Far side comes inside.',
+          'Players behind the press step forward.',
+          'Protect the center.',
+          'Press broken → recover together.',
+          'Communicate early.'
         ],
 
         missed: [
-          'Defending is about controlling space and the opponent’s options.',
-          'Press if we are organized; delay if we are not.',
-          'Protect the center and try to make their next pass predictable.',
-          'If they break our pressure, recover and reconnect immediately.'
+          'One player pressing alone is not our press.',
+          'The whole team must move with the pressure.',
+          'If we cannot press together, recover and reconnect.',
+          'Communication helps everyone make the same decision.'
         ]
       },
 
