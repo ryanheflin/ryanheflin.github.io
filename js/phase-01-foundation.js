@@ -344,31 +344,34 @@ const phase1Weeks = [
 
     sessions: [
 
-      {
+           {
         number: 1,
-        title: 'Keep the Attack Alive',
-        question: 'What does the ball need next?',
-
+        title: 'Support the Attack',
+        question: 'How do we organize around the ball to create a chance?',
+      
         purpose:
-          'Maintain our structure after progressing and create the next advantage instead of forcing the attack.',
-
+          'Build our attacking structure around the front line. Create width, depth, and support while keeping balance underneath the attack.',
+      
         habits: [
-          'Break a line → reorganize.',
-          'Support the player on the ball.',
-          'Forward if it is on.',
-          'Closed → connect and move them.',
-          'Crowded side → switch.',
-          'Keep the ball if there is no advantage.'
+          'Wingers give us width.',
+          '9 gives us depth and connects the attack.',
+          'Ball wide → support inside.',
+          'Ball into 9 → threaten beyond.',
+          '6 and 8 balance each other underneath.',
+          'One fullback goes → the other protects.'
         ],
 
+        sessionPlan:
+          'sessions/session-10-attacking-structure.pdf',
+      
         missed: [
-          'Breaking one line is only the start.',
-          'Reorganize quickly around the ball and create the next option.',
-          'Do not force the next pass just because we moved forward.',
-          'If one route closes, keep the ball and find another.'
+          'Do not all move toward the ball.',
+          'Keep different heights and occupy different spaces.',
+          'Support the winger without taking away the 1v1.',
+          'When the 9 comes short, someone threatens the space behind.',
+          'Keep players underneath the attack so we can recycle or counterpress.'
         ]
       },
-
       {
         number: 2,
         title: 'Stay Connected',
