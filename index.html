@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -8,14 +8,14 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Coach's Notes | CE Altafulla U15</title>
+  <title>Notas del Entrenador | CE Altafulla S15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/site.js" defer></script>
 
 
   <!-- =========================================================
-       BLOG POST STORAGE
+       ALMACENAMIENTO DE PUBLICACIONES
   ========================================================== -->
 
   <script>
@@ -24,9 +24,9 @@
 
 
   <!-- =========================================================
-       BLOG POST FILES
+       ARCHIVOS DE PUBLICACIONES
 
-       Add each new post here.
+       Añade aquí cada nueva publicación.
   ========================================================== -->
 
   <script src="posts/welcome-letter.js"></script>
@@ -37,7 +37,6 @@
 
 
   <style>
-
     :root {
       --altafulla-yellow: #f2e40a;
       --altafulla-black: #000000;
@@ -47,7 +46,6 @@
     html {
       scroll-behavior: smooth;
     }
-
   </style>
 
 </head>
@@ -59,7 +57,7 @@
 
 
   <!-- =========================================================
-       SHARED SIDEBAR
+       MENÚ LATERAL COMPARTIDO
   ========================================================== -->
 
   <div id="site-sidebar"></div>
@@ -67,7 +65,7 @@
 
 
   <!-- =========================================================
-       MAIN CONTENT
+       CONTENIDO PRINCIPAL
   ========================================================== -->
 
   <main
@@ -76,7 +74,7 @@
 
 
     <!-- =======================================================
-         PAGE HEADER
+         CABECERA
     ======================================================== -->
 
     <header class="mb-7">
@@ -85,13 +83,13 @@
         class="text-3xl font-extrabold mb-1"
         style="color: var(--altafulla-yellow);"
       >
-        Blog & Coach's Notes
+        Blog y Notas del Entrenador
       </h2>
 
 
       <p class="text-gray-400 text-sm max-w-2xl">
-        Post-match reflections, tactical video analysis,
-        weekly reviews, and questions from families.
+        Reflexiones después de los partidos, análisis de vídeo,
+        repasos semanales y notas para jugadores y familias.
       </p>
 
     </header>
@@ -99,7 +97,7 @@
 
 
     <!-- =======================================================
-         MOBILE POST NAVIGATION
+         NAVEGACIÓN MÓVIL
     ======================================================== -->
 
     <div class="lg:hidden mb-6">
@@ -108,7 +106,7 @@
         for="mobile-post-select"
         class="block text-xs uppercase tracking-wide font-bold text-gray-500 mb-2"
       >
-        Choose a Post
+        Elegir una publicación
       </label>
 
 
@@ -124,7 +122,7 @@
 
 
     <!-- =======================================================
-         BLOG LAYOUT
+         ESTRUCTURA DEL BLOG
     ======================================================== -->
 
     <div
@@ -133,55 +131,46 @@
 
 
       <!-- =====================================================
-           SELECTED POST
+           PUBLICACIÓN SELECCIONADA
       ====================================================== -->
 
       <section
         id="featured-post-container"
         class="min-w-0"
       >
-
-        <!-- Selected post inserted automatically -->
-
       </section>
 
 
 
       <!-- =====================================================
-           DESKTOP POST ARCHIVE
+           ARCHIVO DE PUBLICACIONES
       ====================================================== -->
 
-      <aside
-        class="hidden lg:block"
-      >
+      <aside class="hidden lg:block">
 
         <div
           class="sticky top-8 bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
         >
 
 
-          <!-- Archive Header -->
+          <!-- Cabecera -->
           <div
             class="px-5 py-4 bg-gray-950 border-b border-gray-700"
           >
 
-            <h3
-              class="font-bold text-white text-lg"
-            >
-              Posts
+            <h3 class="font-bold text-white text-lg">
+              Publicaciones
             </h3>
 
-            <p
-              class="text-xs text-gray-500 mt-1"
-            >
-              Newest first
+            <p class="text-xs text-gray-500 mt-1">
+              Más recientes primero
             </p>
 
           </div>
 
 
 
-          <!-- Start Here -->
+          <!-- Empieza aquí -->
           <div
             id="start-here-nav"
             class="border-b border-gray-700"
@@ -190,10 +179,8 @@
 
 
 
-          <!-- Recent Posts -->
-          <div
-            id="desktop-post-nav"
-          >
+          <!-- Publicaciones -->
+          <div id="desktop-post-nav">
           </div>
 
 
@@ -210,7 +197,7 @@
 
 
   <!-- =========================================================
-       FOOTER
+       PIE DE PÁGINA
   ========================================================== -->
 
   <footer
@@ -222,14 +209,14 @@
 
 
   <!-- =========================================================
-       BLOG JAVASCRIPT
+       JAVASCRIPT DEL BLOG
   ========================================================== -->
 
   <script>
 
 
     /* ==========================================================
-       BLOG STATE
+       ESTADO DEL BLOG
     ========================================================== */
 
     let selectedPostId = null;
@@ -237,25 +224,29 @@
 
 
     /* ==========================================================
-       CATEGORY LABELS
+       CATEGORÍAS
     ========================================================== */
 
     const categoryLabels = {
 
-      'match-report': 'Match Report',
+      'match-report':
+        'Resumen del Partido',
 
-      'video-analysis': 'Video Analysis',
+      'video-analysis':
+        'Análisis de Vídeo',
 
-      'for-players': 'For Players',
+      'for-players':
+        'Para los Jugadores',
 
-      'qa': 'Questions & Notes'
+      'qa':
+        'Preguntas y Notas'
 
     };
 
 
 
     /* ==========================================================
-       DATE HELPERS
+       FECHAS
     ========================================================== */
 
     function formatPostDate(dateString) {
@@ -267,10 +258,10 @@
 
 
       return date.toLocaleDateString(
-        'en-US',
+        'es-ES',
         {
-          month: 'short',
           day: 'numeric',
+          month: 'short',
           year: 'numeric'
         }
       );
@@ -288,10 +279,10 @@
 
 
       return date.toLocaleDateString(
-        'en-US',
+        'es-ES',
         {
-          month: 'long',
           day: 'numeric',
+          month: 'long',
           year: 'numeric'
         }
       );
@@ -301,12 +292,12 @@
 
 
     /* ==========================================================
-       SORT POSTS
+       ORDENAR PUBLICACIONES
 
-       Welcome Letter is handled separately.
+       La carta de bienvenida se gestiona aparte.
 
-       All normal posts:
-       newest → oldest
+       El resto:
+       más reciente → más antigua
     ========================================================== */
 
     function getSortedPosts() {
@@ -342,13 +333,7 @@
 
 
     /* ==========================================================
-       UPDATE URL
-
-       Examples:
-
-       ?post=differences
-       ?post=3-ways
-       ?post=better-this-week
+       ACTUALIZAR URL
     ========================================================== */
 
     function updatePostUrl(postId) {
@@ -386,7 +371,7 @@
 
 
     /* ==========================================================
-       FEATURED POST
+       PUBLICACIÓN PRINCIPAL
     ========================================================== */
 
     function renderFeaturedPost() {
@@ -411,8 +396,8 @@
 
 
       /*
-        If no valid post is selected,
-        open the newest normal blog post.
+        Si no hay una publicación válida seleccionada,
+        mostramos la publicación normal más reciente.
       */
 
       if (!selectedPost) {
@@ -445,10 +430,8 @@
             class="bg-gray-800 p-6 rounded-xl border border-gray-700"
           >
 
-            <p
-              class="text-sm text-gray-400"
-            >
-              No posts have been published yet.
+            <p class="text-sm text-gray-400">
+              Todavía no hay publicaciones.
             </p>
 
           </div>
@@ -474,7 +457,7 @@
         >
 
 
-          <!-- Post Meta -->
+          <!-- Información de la publicación -->
           <div
             class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
           >
@@ -491,14 +474,14 @@
 
               ${
                 isWelcome
-                  ? 'Start Here • '
+                  ? 'Empieza Aquí • '
                   : ''
               }
 
               ${
                 selectedPost.categoryLabel ||
                 categoryLabels[selectedPost.category] ||
-                'Coach’s Notes'
+                'Notas del Entrenador'
               }
 
             </span>
@@ -516,9 +499,8 @@
 
 
 
-          <!-- Post Header -->
+          <!-- Título -->
           <div>
-
 
             <h3
               class="text-2xl md:text-3xl font-bold text-white leading-tight"
@@ -541,12 +523,11 @@
                 : ''
             }
 
-
           </div>
 
 
 
-          <!-- Post Content -->
+          <!-- Contenido -->
           <div
             class="space-y-5 text-gray-300 text-sm leading-relaxed"
           >
@@ -555,15 +536,15 @@
 
 
 
-          <!-- Post Footer -->
+          <!-- Pie de publicación -->
           <div
             class="pt-4 border-t border-gray-700 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-gray-400"
           >
 
             <span>
-              By ${
+              Por ${
                 selectedPost.author ||
-                'Coach Ryan Heflin'
+                'Ryan Heflin'
               }
             </span>
 
@@ -575,7 +556,7 @@
               ${
                 selectedPost.categoryLabel ||
                 categoryLabels[selectedPost.category] ||
-                'Coach’s Notes'
+                'Notas del Entrenador'
               }
             </span>
 
@@ -591,7 +572,7 @@
 
 
     /* ==========================================================
-       WELCOME / START HERE NAVIGATION
+       "EMPIEZA AQUÍ"
     ========================================================== */
 
     function renderStartHereNav() {
@@ -628,7 +609,11 @@
           type="button"
           onclick="selectPost('${welcome.id}')"
           class="
-            w-full text-left px-5 py-4 transition-colors
+            w-full
+            text-left
+            px-5
+            py-4
+            transition-colors
             ${
               isSelected
                 ? 'bg-gray-700'
@@ -641,13 +626,16 @@
             class="text-[10px] uppercase tracking-wider font-bold"
             style="color: var(--altafulla-yellow);"
           >
-            Start Here
+            Empieza aquí
           </span>
 
 
           <h4
             class="
-              text-sm font-bold mt-1 leading-snug
+              text-sm
+              font-bold
+              mt-1
+              leading-snug
               ${
                 isSelected
                   ? 'text-white'
@@ -667,7 +655,7 @@
 
 
     /* ==========================================================
-       DESKTOP POST NAVIGATION
+       NAVEGACIÓN DE ESCRITORIO
     ========================================================== */
 
     function renderDesktopPostNav() {
@@ -692,7 +680,7 @@
           <div
             class="px-5 py-5 text-sm text-gray-500"
           >
-            No posts yet.
+            Todavía no hay publicaciones.
           </div>
 
         `;
@@ -742,7 +730,7 @@
                   >
 
 
-                    <!-- Active Indicator -->
+                    <!-- Indicador de publicación activa -->
                     <div
                       class="
                         mt-1
@@ -769,7 +757,7 @@
                     >
 
 
-                      <!-- Date -->
+                      <!-- Fecha -->
                       <p
                         class="
                           text-[11px]
@@ -786,7 +774,7 @@
 
 
 
-                      <!-- Title -->
+                      <!-- Título -->
                       <h4
                         class="
                           text-sm
@@ -806,7 +794,7 @@
 
 
 
-                      <!-- Category -->
+                      <!-- Categoría -->
                       <p
                         class="text-[10px] uppercase tracking-wide font-bold mt-2"
                         style="color: var(--altafulla-blue);"
@@ -814,7 +802,7 @@
                         ${
                           post.categoryLabel ||
                           categoryLabels[post.category] ||
-                          'Coach’s Notes'
+                          'Notas del Entrenador'
                         }
                       </p>
 
@@ -838,7 +826,7 @@
 
 
     /* ==========================================================
-       MOBILE POST SELECT
+       SELECTOR MÓVIL
     ========================================================== */
 
     function renderMobilePostSelect() {
@@ -873,7 +861,7 @@
                 : ''
             }
           >
-            Start Here — ${welcome.title}
+            Empieza aquí — ${welcome.title}
           </option>
 
         `;
@@ -912,7 +900,7 @@
 
 
     /* ==========================================================
-       RENDER ALL NAVIGATION
+       ACTUALIZAR NAVEGACIÓN
     ========================================================== */
 
     function renderNavigation() {
@@ -928,7 +916,7 @@
 
 
     /* ==========================================================
-       SELECT POST
+       SELECCIONAR PUBLICACIÓN
     ========================================================== */
 
     function selectPost(postId) {
@@ -970,7 +958,7 @@
 
 
     /* ==========================================================
-       BROWSER BACK / FORWARD
+       BOTONES ATRÁS / ADELANTE DEL NAVEGADOR
     ========================================================== */
 
     window.addEventListener(
@@ -1027,15 +1015,15 @@
 
 
     /* ==========================================================
-       INITIALIZE BLOG
+       INICIAR BLOG
 
-       Direct URLs still work:
+       Los enlaces directos siguen funcionando:
 
        ?post=differences
        ?post=3-ways
        ?post=better-this-week
 
-       Without a direct URL, the newest post opens.
+       Sin enlace directo, se abre la publicación más reciente.
     ========================================================== */
 
     document.addEventListener(
