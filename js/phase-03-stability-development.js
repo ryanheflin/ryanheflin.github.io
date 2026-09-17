@@ -5,85 +5,85 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 9,
-    focus: 'Escape an Aggressive High Press',
+    focus: 'Defend as a Back Four',
 
     description:
-      'Stay calm under aggressive pressure, recognize where the opponent has overcommitted, and escape into the free space with purpose.',
+      'Defend space together as a back line by controlling depth, recognizing when to step or cover, and moving together as the ball moves.',
 
     objective:
-      'Make our build-up structure reliable under intense pressure. Players should remain composed, create clear support angles, recognize the free side, and turn successful escapes into forward attacks.',
+      'Build the basic relationships of our back four. Players should understand how the position of the ball changes their responsibility, when one defender can step forward, how the others cover, and how the whole line protects the space behind and between them.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Stay Calm Under Pressure',
-        question: 'Can we keep seeing the game when the press speeds up?',
+        title: 'Protect the Space Behind',
+        question: 'Where is the danger if they play forward?',
 
         purpose:
-          'Develop composure, scanning, and support relationships when the opponent presses aggressively and reduces time and space around the ball.',
+          'Develop awareness of depth and starting position so defenders can pressure the ball without leaving unnecessary space behind the line.',
 
         habits: [
-          'Scan before the ball arrives.',
-          'First touch prepares the next action.',
-          'Give the player on the ball more than one solution.',
-          'Do not hide behind pressure.',
-          'If they overcommit → attack the space they leave.'
+          'See the ball and the space behind.',
+          'Pressure on the ball → line can step.',
+          'No pressure on the ball → protect depth.',
+          'Stay connected across the back line.',
+          'Recover inside first when beaten.'
         ],
 
         missed: [
-          'Pressure should speed up your thinking, not make you panic.',
-          'Know where your next option is before receiving whenever possible.',
-          'Teammates must help the player on the ball by creating clear angles.',
-          'An aggressive press usually leaves space somewhere else — our job is to recognize it.'
+          'Our defensive line depends on the pressure on the ball.',
+          'If the opponent cannot play forward easily, we can move higher.',
+          'If the player on the ball has time and space, we must respect the space behind us.',
+          'Defenders should recover toward the dangerous central space before worrying about their original position.'
         ]
       },
 
       {
         number: 2,
-        title: 'Find the Free Side',
-        question: 'If one side is overloaded by pressure, where is the free space?',
+        title: 'Step or Cover?',
+        question: 'If one defender steps, what must everyone else do?',
 
         purpose:
-          'Recognize when the opponent has concentrated pressure on one side and use circulation, the goalkeeper, or a switch to escape toward the free side.',
+          'Develop clear relationships between the first defender and the players covering around them so one player can defend aggressively without breaking the line.',
 
         habits: [
-          'Recognize when one side is crowded.',
-          'Use the goalkeeper when necessary.',
-          'Support behind and across the ball.',
-          'Switch before the trap closes.',
-          'After escaping → look forward immediately.'
+          'Closest defender decides: step or delay.',
+          'If one steps → others cover.',
+          'Protect the space behind the defender who leaves the line.',
+          'Do not have two defenders attack the same player.',
+          'Communicate before the decision, not after it.'
         ],
 
         missed: [
-          'If the opponent sends too many players to one side, the other side is likely becoming free.',
-          'Do not stay trapped just because the ball started on one side.',
-          'The goalkeeper can help us change the point of attack.',
-          'Once we escape the press, attack the space before the opponent can recover.'
+          'A defender stepping forward changes everyone else’s job.',
+          'If the center back steps into midfield, another defender must protect the space behind.',
+          'If the fullback presses wide, the rest of the line shifts across.',
+          'Aggressive defending only works when the covering players move at the same time.'
         ]
       },
 
       {
         number: 3,
-        title: 'Break the Press and Continue',
-        question: 'Can we turn an escape into an attack?',
+        title: 'Move the Line Together',
+        question: 'Can the four defenders move as one unit?',
 
         purpose:
-          'Connect press resistance to progression so that escaping pressure creates a real attacking advantage rather than simply preserving possession.',
+          'Connect individual defending decisions into coordinated back-line movement as the ball moves forward, backward, and from side to side.',
 
         habits: [
-          'First player beyond the press looks forward.',
-          'Support both ahead and underneath.',
-          'Attack space behind midfield pressure.',
-          'Move the whole team forward.',
-          'If the advantage disappears → secure the ball.'
+          'Ball travels → line adjusts.',
+          'Ball backward → step together.',
+          'Ball wide → shift together.',
+          'Far-side defender tucks in.',
+          'Keep useful distances between defenders.'
         ],
 
         missed: [
-          'Escaping pressure is only useful if we recognize what it has created.',
-          'Once we break their first line, look forward before they recover.',
-          'The team must move with the ball so the next player is not isolated.',
-          'If the forward advantage is gone, keep possession and rebuild.'
+          'The back four should not defend as four separate players.',
+          'Every pass by the opponent should cause a small adjustment from the whole line.',
+          'When the ball moves wide, the far side must protect the middle.',
+          'When the opponent plays backward, use the opportunity to move the line forward together.'
         ]
       }
 
@@ -99,58 +99,58 @@ const phase3Weeks = [
     focus: 'Press the Opponent into Predictable Areas',
 
     description:
-      'Use the first defender, supporting pressure, and collective compactness to influence where the opponent plays next.',
+      'Use our pressure and positioning to influence where the opponent plays, then move together to close the space we have deliberately left available.',
 
     objective:
-      'Make our pressing more deliberate. Players should learn to show the opponent toward preferred areas, anticipate the next pass, and recognize when the conditions are right to press aggressively.',
+      'Make our high press more deliberate. Players should understand how the first defender shapes the opponent’s options, how teammates protect central spaces, and how the whole team anticipates the pass we want the opponent to make.',
 
     sessions: [
 
       {
         number: 1,
         title: 'Show Them One Way',
-        question: 'Which pass do we want to give them?',
+        question: 'Which pass do we want them to make?',
 
         purpose:
-          'Develop the idea that the first defender does not simply close the ball; they shape the opponent’s next action by protecting dangerous options and showing play toward preferred areas.',
+          'Develop the idea that pressing is not simply running toward the ball. The first defender should protect the most dangerous option and guide play toward an area we are prepared to defend.',
 
         habits: [
-          'Protect the most dangerous option first.',
+          'Protect the center first.',
           'Curve the press.',
-          'Show play toward our preferred side.',
-          'Teammates close the options behind the press.',
+          'Leave the pass we want them to see.',
+          'Players behind the press close dangerous options.',
           'Stay compact enough to support the next action.'
         ],
 
         missed: [
-          'Good pressing is not about removing every option.',
-          'We often want to leave one pass available so the opponent plays where we expect.',
-          'The first defender influences the direction of play.',
-          'Everyone behind the pressure must understand which options they are responsible for closing.'
+          'We do not need to remove every passing option.',
+          'Good pressure can make one option look easier than the others.',
+          'The first defender influences where the opponent plays next.',
+          'The rest of the team must understand which spaces the press is trying to protect.'
         ]
       },
 
       {
         number: 2,
-        title: 'Trap the Next Pass',
-        question: 'Once they play where we want, are we ready to win it?',
+        title: 'Close the Trap',
+        question: 'When they play where we want, are we already moving?',
 
         purpose:
-          'Connect the first pressure with the supporting movements required to turn predictable play into a regain.',
+          'Connect the first pressure with the movements behind it so the pass we invite becomes the trigger for the whole team to squeeze the opponent.',
 
         habits: [
           'Anticipate the pass we are inviting.',
-          'Move before the ball arrives.',
-          'Second defender arrives with control.',
-          'Far-side players squeeze in.',
+          'Move while the ball travels.',
+          'Near-side players close the receiver.',
+          'Far-side winger pinches into the center.',
           'Backward pass → step together.'
         ],
 
         missed: [
-          'The press is successful when the whole team anticipates the next action.',
-          'Do not wait for the pass to happen before reacting.',
-          'If we force the opponent toward our trap, nearby players must already be closing the space.',
-          'When the ball goes backward, we move forward together.'
+          'Do not wait until the opponent receives before reacting.',
+          'If we force the ball to one side, the rest of the team must move toward that side.',
+          'The far-side winger leaves the fullback and protects the far-side pivot or central space.',
+          'Once the opponent enters our trap, nearby players must remove the easy escape passes.'
         ]
       },
 
@@ -160,21 +160,21 @@ const phase3Weeks = [
         question: 'Are the conditions right to press now?',
 
         purpose:
-          'Improve the team’s judgment of when to press aggressively and when to stay compact instead of forcing pressure that cannot be supported.',
+          'Improve the team’s judgment of when to continue pressing aggressively and when to stay compact rather than forcing pressure that cannot be supported.',
 
         habits: [
-          'Organized → press.',
+          'Connected → press together.',
           'Disconnected → delay.',
-          'Poor support behind the pressure → hold.',
-          'Good trigger and support → go together.',
-          'If the press is broken → recover immediately.'
+          'Good trigger + good support → go.',
+          'No pressure on the ball → protect space.',
+          'Press broken → recover immediately.'
         ],
 
         missed: [
-          'We do not press just because the ball is near us.',
-          'Press when the team is connected and able to support the action.',
-          'If the conditions are bad, delay and stay compact instead.',
-          'If our press is broken, everyone must recover quickly rather than continuing to chase.'
+          'High pressing is our first option, but it is not automatic.',
+          'We press aggressively when the players behind the pressure can support it.',
+          'If our distances are too large, delay and reconnect instead.',
+          'If the opponent breaks the press, stop chasing individually and recover our structure.'
         ]
       }
 
@@ -187,85 +187,85 @@ const phase3Weeks = [
   ======================================================== */
   {
     week: 11,
-    focus: 'Win First and Second Balls from Direct Play',
+    focus: 'Win the Direct Game',
 
     description:
-      'Control direct play by competing clearly for the first contact, organizing around the duel, and owning the second action.',
+      'Control long and direct play by competing for the first ball, organizing around the duel, and reacting faster than the opponent to the second action.',
 
     objective:
-      'Make the team comfortable when the game becomes direct, physical, and less predictable. Players should understand first-ball responsibility, second-ball positioning, and how to turn regains into our next attack.',
+      'Make the team comfortable when the game becomes direct and physical. Players should understand who attacks the first ball, how teammates position around the duel, and how winning the second ball allows us to take control again.',
 
     sessions: [
 
       {
         number: 1,
         title: 'Win the First Contact',
-        question: 'Who is responsible for the first ball?',
+        question: 'Who attacks the first ball?',
 
         purpose:
-          'Develop aggressive, controlled defending of direct play with clear responsibility for challenging the first contact and teammates prepared for the next action.',
+          'Develop clear responsibility and aggressive technique when defending aerial and direct balls.',
 
         habits: [
           'Identify the first-ball defender early.',
           'Attack the ball decisively.',
-          'Teammates protect the space around the duel.',
-          'Communicate early.',
-          'Do not allow everyone to attack the same ball.'
+          'Get underneath the flight of the ball.',
+          'Teammates cover around the duel.',
+          'Communicate early.'
         ],
 
         missed: [
-          'Direct play needs clear responsibility.',
-          'One player attacks the first ball while teammates prepare for what happens next.',
-          'Communicate early so there is no hesitation.',
-          'Winning the duel matters, but the team’s positioning around it matters just as much.'
+          'Direct balls need one clear first defender.',
+          'Do not wait underneath the ball and allow the attacker to dictate the contact.',
+          'One player attacks the ball while teammates prepare for the next action.',
+          'Winning the first header is important, but where it goes matters too.'
         ]
       },
 
       {
         number: 2,
         title: 'Own the Second Ball',
-        question: 'Where is the ball likely to land next?',
+        question: 'Where will the next ball land?',
 
         purpose:
-          'Organize the team around first contacts so that second balls become controlled moments rather than random events.',
+          'Develop positioning and anticipation around aerial duels so second balls become predictable moments rather than random events.',
 
         habits: [
-          'Anticipate the likely drop zone.',
           'Compress around the duel.',
           'Protect central second-ball space.',
-          'Arrive facing forward when possible.',
-          'React immediately to the first contact.'
+          'Anticipate the likely landing area.',
+          'Do not all attack the first ball.',
+          'React immediately to the contact.'
         ],
 
         missed: [
-          'The first duel is only half the action.',
-          'Players around the duel should anticipate where the second ball is likely to fall.',
-          'Stay close enough to compete, but do not all collapse onto the same spot.',
-          'Winning the second ball can immediately become an attacking opportunity.'
+          'The first duel is only the beginning of the action.',
+          'Players around the duel should already be thinking about where the ball will drop.',
+          'Stay close enough to compete without everyone occupying the same space.',
+          'The team that reacts first to the second ball often controls the next phase.'
         ]
       },
 
       {
         number: 3,
-        title: 'Direct Play to Attack',
-        question: 'Can we turn a first or second ball into our next attack?',
+        title: 'Win It and Play',
+        question: 'What do we do after we win the direct ball?',
 
         purpose:
-          'Connect aerial duels and second-ball regains to forward play so direct moments still fit our attacking identity.',
+          'Connect first and second-ball regains to our normal attacking principles so winning a physical moment leads back into controlled football.',
 
         habits: [
-          'Secure the first action after the regain.',
-          'Look forward quickly.',
-          'Wingers and 9 anticipate the next phase.',
+          'Secure the first pass after the regain.',
+          'Look forward if the advantage is there.',
+          'Wingers and 9 anticipate the regain.',
           'Midfield supports underneath.',
-          'If no advantage exists → keep possession.'
+          'No advantage → keep the ball.'
         ],
 
         missed: [
-          'Winning a direct-ball battle should lead into our football, not just another clearance.',
-          'Once we regain the second ball, look forward first.',
-          'Players ahead of the ball should be ready to attack the next space.',
-          'If the moment is not on, keep the ball and establish control.'
+          'Winning the duel should not automatically lead to another clearance.',
+          'Once we regain the ball, return immediately to our football.',
+          'Players ahead of the ball should recognize when the regain creates space to attack.',
+          'If the forward action is not available, secure possession and establish our structure.'
         ]
       }
 
@@ -281,82 +281,82 @@ const phase3Weeks = [
     focus: 'Protect Against Counters While We Attack',
 
     description:
-      'Attack with numbers while maintaining enough structure behind the ball to control clearances, transitions, and counterattacks.',
+      'Attack with numbers while maintaining enough structure behind the ball to control clearances, second balls, and counterattacks.',
 
     objective:
-      'Build reliable rest-defense habits. Players should understand that defending begins while we still have possession and that good attacking structure must also protect the next transition.',
+      'Develop our rest defense so attacking aggressively does not leave us vulnerable. Players should understand where danger will appear if possession is lost and organize behind the attack before the transition happens.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Attack With Balance',
+        title: 'Protect the Attack',
         question: 'While we attack, who is protecting the next moment?',
 
         purpose:
-          'Develop awareness of defensive balance during possession so the team is ready if the attack breaks down.',
+          'Develop awareness of the players and spaces behind our attack so we are already prepared for a turnover while still in possession.',
 
         habits: [
-          'Do not send everyone ahead of the ball.',
-          'Maintain cover behind the attack.',
-          'Far-side players stay connected.',
-          'Center backs and holding midfielders control space.',
-          'Think about the next transition before it happens.'
+          'Protect the center and the space behind.',
+          'Players behind the ball stay connected.',
+          'Far-side players stay involved.',
+          'Center backs control depth.',
+          'Think about the transition before possession is lost.'
         ],
 
         missed: [
-          'Defending starts while we still have the ball.',
-          'Not every player should attack the same space.',
-          'Players behind the attack must protect the spaces the opponent could counter into.',
-          'Good attacking shape should also give us good defensive-transition shape.'
+          'Defensive transition starts before we lose the ball.',
+          'Our attacking shape must also protect the spaces the opponent wants to counter into.',
+          'Players behind the attack should not simply watch the attack develop.',
+          'Good rest defense allows the attacking players to be more aggressive.'
         ]
       },
 
       {
         number: 2,
         title: 'Stop the First Counter',
-        question: 'What is our first job when the attack breaks down?',
+        question: 'What must we stop immediately after losing the ball?',
 
         purpose:
-          'Develop the immediate reaction after losing possession in advanced areas, especially when the opponent tries to counter through the first forward pass.',
+          'Develop the immediate reaction to a turnover, especially preventing the opponent from finding an easy first forward pass through the center.',
 
         habits: [
-          'Closest players react immediately.',
-          'Stop or slow the first forward pass.',
-          'Protect central counterattacking space.',
+          'Closest player pressures immediately.',
+          'Second players protect forward options.',
+          'Protect the center first.',
           'Players behind the ball squeeze toward the loss.',
-          'If the ball escapes → recover.'
+          'If they escape → recover together.'
         ],
 
         missed: [
-          'When we lose the ball while attacking, the first few seconds are critical.',
-          'The closest players try to stop the opponent’s first forward action.',
-          'Everyone else closes dangerous space behind them.',
-          'If the counterpress fails, recover quickly instead of chasing forever.'
+          'The first forward pass is usually the most dangerous part of the counterattack.',
+          'The closest player pressures the ball while teammates protect the space behind that pressure.',
+          'Do not have everyone chase the ball and leave the middle open.',
+          'If the opponent escapes the counterpress, the moment changes and we must recover.'
         ]
       },
 
       {
         number: 3,
-        title: 'Sustain the Attack Safely',
-        question: 'Can we keep attacking without losing control of the game?',
+        title: 'Keep Them There',
+        question: 'Can we keep attacking without allowing them to escape?',
 
         purpose:
-          'Bring attacking structure and rest defense together so repeated attacks do not leave the team vulnerable to transition.',
+          'Bring attacking structure, counterpressing, second balls, and rest defense together so we can sustain pressure around the opponent’s goal.',
 
         habits: [
-          'Recycle rather than force the final action.',
-          'Keep good distances behind the ball.',
-          'React quickly to clearances and second balls.',
-          'Maintain pressure without becoming stretched.',
-          'If the opponent escapes → reset together.'
+          'Recycle rather than force the final pass.',
+          'Stay connected behind the attack.',
+          'React first to clearances.',
+          'Win second balls and attack again.',
+          'If they escape → recover our shape.'
         ],
 
         missed: [
-          'Sustained attack is not just about keeping the ball near their goal.',
-          'We need enough structure behind the attack to control clearances and counters.',
-          'If the chance is not there, recycle and attack again instead of forcing it.',
-          'The goal is to keep the opponent under pressure without losing our balance.'
+          'Sustained pressure is not just about keeping the ball near their goal.',
+          'We need enough structure behind the attack to deal with clearances and transitions.',
+          'If the chance is not there, recycle and move the opponent again.',
+          'The goal is to keep attacking while still controlling what happens if we lose the ball.'
         ]
       }
 
