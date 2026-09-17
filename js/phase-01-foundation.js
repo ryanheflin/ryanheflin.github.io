@@ -394,6 +394,8 @@ const phase1Weeks = [
           'Press broken → recover together.',
           'Communicate early.'
         ],
+        sessionPlan:
+          'sessions/session-11-stay-connected.pdf',
 
         missed: [
           'One player pressing alone is not our press.',
