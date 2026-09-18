@@ -52,7 +52,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_2"
+          src="https://www.youtube.com/embed/Xl3Ty89sfg"
           title="San Pere - Buena idea con balón"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -63,7 +63,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Escribe aquí el punto principal del clip.
+        De nuevo, buena paciencia e idea. Me encanta el desmarque de Eban hacia la banda aquí. Desafortunadamente fue un mal control, pero la idea está ahí. Si él pudiera asociarse hacia adelante por la banda, estaríamos atacando con una buena estructura.
       </li>
     </ul>
 
