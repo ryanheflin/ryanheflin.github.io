@@ -153,7 +153,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_5"
+          src="https://www.youtube.com/embed/k3Dz7Ix1TaY"
           title="San Pere - Buena presión"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -164,8 +164,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Añadiré los clips aquí en cuanto se me reinicie el límite diario de subida.
-      </li>
+      Esto es justo desde el saque de centro: se puede ver cómo todos tiramos la línea juntos. Otman fuerza el pase atrás hacia el portero, Joel tapa perfectamente el cambio de orientación, Yeray presiona a su centrocampista para forzar otro pase atrás, el portero despeja y nos hacemos con el control. Ellos querían jugar por abajo, los obligamos a jugar por arriba y ganamos el balón. Perfecto.      </li>
     </ul>
 
 
