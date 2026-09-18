@@ -1018,6 +1018,29 @@
 
 
     /* ==========================================================
+       TREND ELIGIBILITY
+
+       A game participates in season trends unless its
+       individual game file explicitly contains:
+
+       includeInTrends: false
+
+       This allows matches such as Game 01 to remain visible
+       in results and match navigation without affecting the
+       developmental trend data.
+    ========================================================== */
+
+    function includeInSeasonTrends(game) {
+
+      return (
+        game.includeInTrends !== false
+      );
+
+    }
+
+
+
+    /* ==========================================================
        MATCH TYPE
     ========================================================== */
 
@@ -1150,6 +1173,12 @@
 
     /* ==========================================================
        SEASON STATISTICS
+
+       Important:
+       These are general season totals, so they include every
+       match — even matches excluded from trend analysis.
+
+       includeInTrends only affects the developmental charts.
     ========================================================== */
 
     function calculateSeasonStats() {
@@ -1274,8 +1303,8 @@
 
         /* Purposeless Turnovers
 
-           Only count matches where we actually
-           tracked the statistic.
+           Only count matches where this statistic was
+           actually tracked.
 
         */
 
@@ -2209,6 +2238,7 @@
         (window.seasonGames || [])
           .filter(
             game =>
+              includeInSeasonTrends(game) &&
               game.throwIns &&
               Number(
                 game.throwIns.oursTotal
@@ -2361,6 +2391,7 @@
         );
 
 
+
       if (
         games.length >= 2
       ) {
@@ -2375,6 +2406,7 @@
           values[
             values.length - 1
           ];
+
 
 
         if (
@@ -2429,6 +2461,25 @@
 
       }
 
+      else {
+
+        note.innerHTML = `
+
+          Our first tracked match was
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${values[0]}%
+          </strong>.
+
+          Our target is at least
+          <strong>50%</strong>.
+
+        `;
+
+      }
+
     }
 
 
@@ -2448,8 +2499,8 @@
        }
 
        "Effective" means the restart creates a dangerous
-       action OR we retain pressure and continue the attack.
-
+       action OR allows us to retain pressure and continue
+       the attack.
     ========================================================== */
 
     function renderSetPieceTrend() {
@@ -2458,6 +2509,7 @@
         (window.seasonGames || [])
           .filter(
             game =>
+              includeInSeasonTrends(game) &&
               game.trendStats &&
               game.trendStats.setPieces &&
               Number(
@@ -2584,12 +2636,6 @@
         );
 
 
-      const latestGame =
-        games[
-          games.length - 1
-        ];
-
-
       const latest =
         values[
           values.length - 1
@@ -2620,7 +2666,7 @@
     /* ==========================================================
        EFFECTIVE POSSESSION SOLUTIONS
 
-       Add this to game files:
+       Add to game files:
 
        trendStats: {
 
@@ -2634,11 +2680,10 @@
 
        }
 
-       Only list a solution if it actually worked
+       Only list a solution if it worked successfully
        during that match.
 
-       Maximum score = 5.
-
+       Maximum = 5.
     ========================================================== */
 
     function renderSolutionsTrend() {
@@ -2647,6 +2692,7 @@
         (window.seasonGames || [])
           .filter(
             game =>
+              includeInSeasonTrends(game) &&
               game.trendStats &&
               Array.isArray(
                 game.trendStats
@@ -2841,6 +2887,7 @@
         (window.seasonGames || [])
           .filter(
             game =>
+              includeInSeasonTrends(game) &&
               game.purposelessTurnovers &&
               Number.isFinite(
                 Number(
@@ -3044,7 +3091,7 @@
           </strong>
 
           purposeless turnovers
-          in this tracked match.
+          in our first tracked match.
 
           Lower is better.
 
@@ -3072,9 +3119,12 @@
         (window.seasonGames || [])
           .filter(
             game =>
-              game.throwIns ||
-              game.purposelessTurnovers ||
-              game.trendStats
+              includeInSeasonTrends(game) &&
+              (
+                game.throwIns ||
+                game.purposelessTurnovers ||
+                game.trendStats
+              )
           );
 
 
