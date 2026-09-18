@@ -56,43 +56,51 @@ window.seasonGames.push({
      corners.
   ========================================================== */
 
-  trendStats: {
+ trendStats: {
 
-    opponentPasses: 267,
+  opponentPasses: 267,
 
-    setPieces: {
+  effectiveSolutions: [
+    'inside',
+    'outside',
+    'behind',
+    'switch',
+    'carry'
+  ],
 
-      effective: 12,
+  setPieces: {
 
-      total: 30,
+    effective: 12,
 
-      breakdown: {
+    total: 30,
 
-        throwIns: {
-          effective: 6,
-          total: 19
-        },
+    breakdown: {
 
-        goalKicks: {
-          effective: 4,
-          total: 5
-        },
+      throwIns: {
+        effective: 6,
+        total: 19
+      },
 
-        freeKicks: {
-          effective: 1,
-          total: 3
-        },
+      goalKicks: {
+        effective: 4,
+        total: 5
+      },
 
-        corners: {
-          effective: 1,
-          total: 3
-        }
+      freeKicks: {
+        effective: 1,
+        total: 3
+      },
 
+      corners: {
+        effective: 1,
+        total: 3
       }
 
     }
 
-  },
+  }
+
+},
 
 
   /* ==========================================================
