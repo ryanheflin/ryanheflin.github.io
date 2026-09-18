@@ -4,6 +4,8 @@ window.seasonGames.push({
 
   gameNumber: 2,
 
+  matchType: 'friendly',
+
   opponent: 'Pallaresos S15 (Amistoso)',
 
   homeAway: 'home',
@@ -44,6 +46,59 @@ window.seasonGames.push({
     'Pases / Posesión': '2,7',
 
     'Duración Media': '14,9s'
+
+  },
+
+
+  /* ==========================================================
+     SEASON TREND DATA
+
+     Only include categories that were actually tracked
+     or clearly demonstrated in the match.
+
+     Effective possession solutions are binary:
+     did we successfully use this solution at least once?
+
+     Possible values:
+     inside
+     outside
+     behind
+     switch
+     carry
+  ========================================================== */
+
+  trendStats: {
+
+    effectiveSolutions: [
+
+      'inside',
+
+      'outside',
+
+      'behind',
+
+      'switch',
+
+      'carry'
+
+    ]
+
+    /*
+      Set-piece effectiveness is intentionally NOT included
+      for this match.
+
+      We did not originally code every attacking corner
+      and free kick using the same effective / ineffective
+      definition, so adding a number now would create
+      a false baseline.
+
+      Future example:
+
+      setPieces: {
+        effective: 4,
+        total: 9
+      }
+    */
 
   },
 
