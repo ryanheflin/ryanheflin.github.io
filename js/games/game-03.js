@@ -4,8 +4,6 @@ window.seasonGames.push({
 
   gameNumber: 3,
 
-  matchType: 'friendly',
-
   opponent: 'San Pere i San Pau S15 (Amistoso)',
 
   homeAway: 'home',
@@ -53,36 +51,46 @@ window.seasonGames.push({
   /* ==========================================================
      SEASON TREND DATA
 
-     Effective solutions are different ways we successfully
-     solved the opponent's defensive problem during the match.
-
-     Possible values:
-     inside
-     outside
-     behind
-     switch
-     carry
-
-     Set-piece effectiveness is not included yet because
-     we did not code this match using the same consistent
-     definition we will use going forward.
+     Set-piece effectiveness includes all four attacking
+     restart types: throw-ins, goal kicks, free kicks and
+     corners.
   ========================================================== */
 
   trendStats: {
 
-    effectiveSolutions: [
+    opponentPasses: 236,
 
-      'inside',
+    setPieces: {
 
-      'outside',
+      effective: 27,
 
-      'behind',
+      total: 46,
 
-      'switch',
+      breakdown: {
 
-      'carry'
+        throwIns: {
+          effective: 8,
+          total: 19
+        },
 
-    ]
+        goalKicks: {
+          effective: 8,
+          total: 8
+        },
+
+        freeKicks: {
+          effective: 7,
+          total: 12
+        },
+
+        corners: {
+          effective: 4,
+          total: 7
+        }
+
+      }
+
+    }
 
   },
 
@@ -107,12 +115,30 @@ window.seasonGames.push({
   /* ==========================================================
      PURPOSELESS TURNOVERS
 
-     Not included for this match because we did not make
-     a complete, consistent count.
+     Full-match retrospective count.
 
-     Leaving this field out prevents the season trend from
-     treating the match as having zero purposeless turnovers.
+     Count:
+     - unnecessary kicks / clearances when a controlled
+       option was available
+     - head-down carries that directly surrendered possession
+
+     Do NOT count:
+     - purposeful passes that were intercepted
+     - bad touches after a good decision
+     - crosses / through balls attempting to create
+     - necessary clearances under genuine pressure
+     - legitimate attempts to beat an opponent
   ========================================================== */
+
+  purposelessTurnovers: {
+
+    total: 9,
+
+    kicks: 8,
+
+    carries: 1
+
+  },
 
 
   /* ==========================================================
@@ -486,7 +512,9 @@ en la primera parte de nuestro modelo de juego.
   <div
     class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
   >
-    <strong style="color: var(--altafulla-yellow);">
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
       Podemos salir jugando desde atrás.
     </strong>
   </div>
@@ -495,7 +523,9 @@ en la primera parte de nuestro modelo de juego.
   <div
     class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
   >
-    <strong style="color: var(--altafulla-yellow);">
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
       Podemos mantener el balón.
     </strong>
   </div>
@@ -504,7 +534,9 @@ en la primera parte de nuestro modelo de juego.
   <div
     class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
   >
-    <strong style="color: var(--altafulla-yellow);">
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
       Podemos combinar.
     </strong>
   </div>
@@ -513,7 +545,9 @@ en la primera parte de nuestro modelo de juego.
   <div
     class="bg-gray-900/60 border border-gray-700 rounded-lg p-4"
   >
-    <strong style="color: var(--altafulla-yellow);">
+    <strong
+      style="color: var(--altafulla-yellow);"
+    >
       Podemos presionar con agresividad.
     </strong>
   </div>
@@ -588,8 +622,7 @@ Ahora tenemos que conectar todo.
 >
 
   <p>
-    Estamos empezando a ver
-    el equipo que queremos ser.
+    Estamos empezando a ver el equipo que queremos ser.
   </p>
 
   <p class="mt-2">
@@ -606,49 +639,33 @@ Ahora tenemos que conectar todo.
 
 
   /* ==========================================================
-     VIDEO CLIPS
+     MATCH VIDEOS
   ========================================================== */
 
   clips: [
 
     {
       title: 'Primera Parte',
-
-      description:
-        'Primeros 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/MYkE_AMBdpo'
+      description: 'Primeros 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/MYkE_AMBdpo'
     },
 
     {
       title: 'Segunda Parte',
-
-      description:
-        'Próximos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/SuXON_gI5y4'
+      description: 'Próximos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/SuXON_gI5y4'
     },
 
     {
       title: 'Tercera Parte',
-
-      description:
-        'Próximos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/RW9Hn4y2EdM'
+      description: 'Próximos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/RW9Hn4y2EdM'
     },
 
     {
       title: 'Parte Final',
-
-      description:
-        'Últimos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/CVH72UBiNUE'
+      description: 'Últimos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/CVH72UBiNUE'
     }
 
   ]
