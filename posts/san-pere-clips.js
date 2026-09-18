@@ -205,7 +205,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_7"
+          src="https://www.youtube.com/embed/ZGcnHQu4SOI"
           title="San Pere - Presión defensiva perdida"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -216,7 +216,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        ¿Dónde estaba la oportunidad de presionar y qué necesitábamos hacer juntos?
+        En este clip les dimos demasiado espacio a sus centrocampistas por el centro. Puedes ver a Eban, Joel, Lluc y Othmane presionando arriba para intentar forzarlos a jugar por dentro, lo cual funcionó. Desafortunadamente, superaron a nuestros pivotes con demasiada facilidad, cambiaron de banda y todos tuvimos que replegarnos. Solo necesitamos dar el paso adelante todos juntos y estar encima de las marcas para evitar que esto pase.
       </li>
     </ul>
 
