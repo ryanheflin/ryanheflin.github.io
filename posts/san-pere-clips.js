@@ -52,7 +52,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/Xl3Ty89sfg"
+          src="https://www.youtube.com/embed/_Xl3Ty89sfg"
           title="San Pere - Buena idea con balón"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
