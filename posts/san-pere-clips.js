@@ -241,6 +241,34 @@ window.blogPosts.push({
       </li>
     </ul>
 
+     <!-- =====================================================
+         5. My Favorite Pass
+    ====================================================== -->
+
+    <h3 class="text-2xl font-bold text-white mt-8 mb-5">
+      5. Excellent Pass
+    </h3>
+
+
+    <!-- CLIP -->
+    <div class="mt-4 rounded-xl overflow-hidden border border-gray-700 bg-black">
+      <div class="aspect-video">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/Ufs6VxOE50k"
+          title="San Pere - Buena salida"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
+      <li>
+      Esta fue mi jugada favorita del partido, aunque no funcionara. Soufian filtró un pase por abajo entre líneas para Otman, que había bajado a recibir en ese espacio. Ese pase dejó fuera de combate a 5 jugadores del equipo contrario con un solo movimiento sencillo. Desafortunadamente Otman no pudo controlar bien el balón, pero la idea fue excelente. En las posesiones anteriores habíamos jugado balones largos por arriba a la banda, así que este fue un gran intento de buscar una solución diferente.      </li>
+    </ul>
+
   `
 
 });
