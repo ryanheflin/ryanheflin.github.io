@@ -41,8 +41,6 @@
 
   <!-- =========================================================
        GAME FILES
-
-       Add each game here as it is played.
   ========================================================== -->
 
   <script src="js/games/game-01.js"></script>
@@ -50,7 +48,10 @@
   <script src="js/games/game-03.js"></script>
 
   <!-- Future games:
+
   <script src="js/games/game-04.js"></script>
+  <script src="js/games/game-05.js"></script>
+
   -->
 
 
@@ -77,7 +78,7 @@
 
 
   <!-- =========================================================
-       SHARED SIDEBAR
+       SHARED SITE SIDEBAR
   ========================================================== -->
 
   <div id="site-sidebar"></div>
@@ -89,7 +90,7 @@
   ========================================================== -->
 
   <main
-    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-6xl mx-auto w-full space-y-8"
+    class="flex-grow p-4 pt-20 md:p-10 md:ml-64 max-w-7xl mx-auto w-full space-y-8"
   >
 
 
@@ -111,7 +112,7 @@
         class="text-gray-400 text-sm"
       >
         Season results, individual match analysis,
-        and the development of the team's performance over time.
+        and the development of our game model over time.
       </p>
 
     </header>
@@ -128,6 +129,7 @@
 
 
       <!-- Record -->
+
       <div
         class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
       >
@@ -150,7 +152,8 @@
 
 
 
-      <!-- Goals Scored -->
+      <!-- Goals For -->
+
       <div
         class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
       >
@@ -174,7 +177,8 @@
 
 
 
-      <!-- Goals Conceded -->
+      <!-- Goals Against -->
+
       <div
         class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
       >
@@ -199,6 +203,7 @@
 
 
       <!-- Clean Sheets -->
+
       <div
         class="bg-gray-800 p-4 rounded-xl border border-gray-700 text-center"
       >
@@ -225,533 +230,630 @@
 
 
     <!-- =======================================================
-         MATCH NAVIGATION
+         MATCH ANALYSIS LAYOUT
     ======================================================== -->
 
-    <section
-      class="space-y-6"
+    <div
+      class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_270px] gap-6 items-start"
     >
 
 
-      <div
-        id="game-navigation"
-        class="flex gap-2 border-b border-gray-700 pb-3 overflow-x-auto"
-      >
-
-
-        <button
-          onclick="showSeasonOverview()"
-          id="game-btn-overview"
-          class="game-btn px-4 py-2 rounded-lg font-bold text-sm bg-gray-700 whitespace-nowrap"
-          style="color: var(--altafulla-yellow);"
-        >
-          📊 Season Overview
-        </button>
-
-
-      </div>
-
-
-
       <!-- =====================================================
-           CONTENT AREA
+           MAIN CONTENT
       ====================================================== -->
 
-      <div
-        id="game-content"
+      <section
+        class="order-2 xl:order-1 min-w-0"
       >
 
-
-        <!-- ===================================================
-             SEASON OVERVIEW
-        ==================================================== -->
-
         <div
-          id="game-view-overview"
-          class="game-view space-y-6"
+          id="game-content"
         >
 
 
-          <!-- Team Summary -->
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-            <h3
-              class="text-xl font-bold mb-2"
-            >
-              Team Statistics Overview
-            </h3>
-
-
-            <p
-              id="overview-message"
-              class="text-sm text-gray-300"
-            >
-              No matches have been played yet.
-              Season trends and statistical analysis
-              will appear here as match data is added.
-            </p>
-
-          </section>
-
-
-
           <!-- =================================================
-               GAME MODEL INDICATORS
+               SEASON OVERVIEW
           ================================================== -->
 
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+          <div
+            id="game-view-overview"
+            class="game-view space-y-6"
           >
 
 
-            <div class="mb-5">
+            <!-- ===============================================
+                 TEAM SUMMARY
+            ================================================ -->
+
+            <section
+              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+            >
 
               <h3
-                class="text-xl font-bold"
+                class="text-xl font-bold mb-2"
               >
-                Game Model Indicators
+                Team Statistics Overview
               </h3>
 
 
               <p
-                class="text-sm text-gray-400 mt-1"
+                id="overview-message"
+                class="text-sm text-gray-300"
               >
-                Season-wide indicators connected
-                to the way we want to play.
+                Season data will appear here as matches are added.
               </p>
 
-            </div>
+            </section>
 
 
 
-            <div
-              class="grid grid-cols-2 lg:grid-cols-4 gap-4"
+            <!-- ===============================================
+                 GAME MODEL INDICATORS
+            ================================================ -->
+
+            <section
+              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
             >
 
 
-              <!-- Our Throw-Ins -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
+              <div class="mb-5">
 
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                <h3
+                  class="text-xl font-bold"
                 >
-                  Our Throw-Ins Retained
-                </span>
+                  Game Model Indicators
+                </h3>
 
 
                 <p
-                  id="season-our-throwins"
-                  class="text-2xl font-extrabold mt-2"
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  Season-wide indicators connected
+                  to the way we want to play.
+                </p>
+
+              </div>
+
+
+
+              <div
+                class="grid grid-cols-2 lg:grid-cols-4 gap-4"
+              >
+
+
+                <!-- Our Throw-Ins -->
+
+                <div
+                  class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+                >
+
+                  <span
+                    class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                  >
+                    Throw-Ins Retained
+                  </span>
+
+
+                  <p
+                    id="season-our-throwins"
+                    class="text-2xl font-extrabold mt-2"
+                    style="color: var(--altafulla-yellow);"
+                  >
+                    —
+                  </p>
+
+
+                  <p
+                    id="season-our-throwins-detail"
+                    class="text-xs text-gray-500 mt-1"
+                  >
+                    0 / 0
+                  </p>
+
+                </div>
+
+
+
+                <!-- Opponent Throw-Ins Won -->
+
+                <div
+                  class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+                >
+
+                  <span
+                    class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                  >
+                    Opponent Throws Won
+                  </span>
+
+
+                  <p
+                    id="season-their-throwins"
+                    class="text-2xl font-extrabold mt-2"
+                    style="color: var(--altafulla-blue);"
+                  >
+                    —
+                  </p>
+
+
+                  <p
+                    id="season-their-throwins-detail"
+                    class="text-xs text-gray-500 mt-1"
+                  >
+                    0 / 0
+                  </p>
+
+                </div>
+
+
+
+                <!-- Purposeless Average -->
+
+                <div
+                  class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+                >
+
+                  <span
+                    class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                  >
+                    Purposeless Turnovers / Match
+                  </span>
+
+
+                  <p
+                    id="season-purposeless-average"
+                    class="text-2xl font-extrabold text-white mt-2"
+                  >
+                    —
+                  </p>
+
+
+                  <p
+                    id="season-purposeless-average-detail"
+                    class="text-xs text-gray-500 mt-1"
+                  >
+                    No tracked matches
+                  </p>
+
+                </div>
+
+
+
+                <!-- Purposeless Total -->
+
+                <div
+                  class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
+                >
+
+                  <span
+                    class="text-xs uppercase tracking-wide font-bold text-gray-500"
+                  >
+                    Purposeless Turnovers
+                  </span>
+
+
+                  <p
+                    id="season-purposeless-total"
+                    class="text-2xl font-extrabold text-white mt-2"
+                  >
+                    —
+                  </p>
+
+
+                  <p
+                    id="season-purposeless-detail"
+                    class="text-xs text-gray-500 mt-1"
+                  >
+                    No tracked matches
+                  </p>
+
+                </div>
+
+
+              </div>
+
+
+
+              <div
+                class="mt-5 pt-4 border-t border-gray-700"
+              >
+
+                <p
+                  class="text-xs text-gray-500 leading-relaxed"
+                >
+
+                  <strong
+                    class="text-gray-400"
+                  >
+                    Purposeless turnover:
+                  </strong>
+
+                  an avoidable loss of possession where
+                  a controlled option was available,
+                  but we gave the ball away through a rushed
+                  kick, carry or decision without a clear purpose.
+
+                </p>
+
+              </div>
+
+
+            </section>
+
+
+
+            <!-- ===============================================
+                 RESULTS
+            ================================================ -->
+
+            <section
+              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+            >
+
+
+              <div
+                class="flex items-center justify-between gap-4 mb-4"
+              >
+
+                <h3
+                  class="text-xl font-bold"
+                >
+                  Results
+                </h3>
+
+
+                <span
+                  id="matches-played"
+                  class="text-xs text-gray-500 uppercase tracking-wide font-bold"
+                >
+                  0 Matches
+                </span>
+
+              </div>
+
+
+
+              <div
+                id="season-results"
+                class="divide-y divide-gray-700"
+              >
+
+                <p
+                  class="text-sm text-gray-400 py-3"
+                >
+                  Results will appear here once matches have been played.
+                </p>
+
+              </div>
+
+
+            </section>
+
+
+
+            <!-- ===============================================
+                 SEASON TRENDS
+            ================================================ -->
+
+            <section
+              class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+            >
+
+
+              <div class="mb-6">
+
+                <h3
+                  class="text-xl font-bold"
+                >
+                  Season Trends
+                </h3>
+
+
+                <p
+                  class="text-sm text-gray-400 mt-1"
+                >
+                  Are the habits connected to our game model
+                  getting better from match to match?
+                </p>
+
+              </div>
+
+
+
+              <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-5"
+              >
+
+
+                <!-- ===========================================
+                     THROW-IN RETENTION
+                ============================================ -->
+
+                <div
+                  class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
+                >
+
+                  <div>
+
+                    <h4
+                      class="font-bold text-white"
+                    >
+                      Throw-In Retention
+                    </h4>
+
+
+                    <p
+                      class="text-xs text-gray-500 mt-1"
+                    >
+                      How often we keep possession from our own throw-ins.
+                    </p>
+
+                  </div>
+
+
+                  <div
+                    class="relative h-56 mt-4"
+                  >
+                    <canvas
+                      id="throwin-trend-chart"
+                    ></canvas>
+                  </div>
+
+
+                  <p
+                    id="throwin-trend-note"
+                    class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
+                  >
+                    Waiting for tracked match data.
+                  </p>
+
+                </div>
+
+
+
+                <!-- ===========================================
+                     SET PIECE EFFECTIVENESS
+                ============================================ -->
+
+                <div
+                  class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
+                >
+
+                  <div>
+
+                    <h4
+                      class="font-bold text-white"
+                    >
+                      Set-Piece Effectiveness
+                    </h4>
+
+
+                    <p
+                      class="text-xs text-gray-500 mt-1"
+                    >
+                      Attacking corners and free kicks that create
+                      danger or allow us to continue the attack.
+                    </p>
+
+                  </div>
+
+
+                  <div
+                    class="relative h-56 mt-4"
+                  >
+                    <canvas
+                      id="setpiece-trend-chart"
+                    ></canvas>
+                  </div>
+
+
+                  <p
+                    id="setpiece-trend-note"
+                    class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
+                  >
+                    Add set-piece tracking to match files
+                    to begin this trend.
+                  </p>
+
+                </div>
+
+
+
+                <!-- ===========================================
+                     POSSESSION SOLUTIONS
+                ============================================ -->
+
+                <div
+                  class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
+                >
+
+                  <div>
+
+                    <h4
+                      class="font-bold text-white"
+                    >
+                      Effective Possession Solutions
+                    </h4>
+
+
+                    <p
+                      class="text-xs text-gray-500 mt-1"
+                    >
+                      Different ways we successfully solve
+                      the opponent's defensive problem.
+                    </p>
+
+                  </div>
+
+
+                  <div
+                    class="relative h-56 mt-4"
+                  >
+                    <canvas
+                      id="solutions-trend-chart"
+                    ></canvas>
+                  </div>
+
+
+                  <div
+                    class="text-[11px] text-gray-600 mt-2"
+                  >
+                    Inside · Outside · In Behind · Switch · Carry
+                  </div>
+
+
+                  <p
+                    id="solutions-trend-note"
+                    class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
+                  >
+                    Add effective solutions to match files
+                    to begin this trend.
+                  </p>
+
+                </div>
+
+
+
+                <!-- ===========================================
+                     PURPOSELESS TURNOVERS
+                ============================================ -->
+
+                <div
+                  class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
+                >
+
+                  <div>
+
+                    <h4
+                      class="font-bold text-white"
+                    >
+                      Purposeless Turnovers
+                    </h4>
+
+
+                    <p
+                      class="text-xs text-gray-500 mt-1"
+                    >
+                      Avoidable possessions we simply give away.
+                      Lower is better.
+                    </p>
+
+                  </div>
+
+
+                  <div
+                    class="relative h-56 mt-4"
+                  >
+                    <canvas
+                      id="turnover-trend-chart"
+                    ></canvas>
+                  </div>
+
+
+                  <p
+                    id="turnover-trend-note"
+                    class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
+                  >
+                    Waiting for tracked match data.
+                  </p>
+
+                </div>
+
+
+              </div>
+
+
+
+              <!-- =============================================
+                   OVERALL TREND SUMMARY
+              ============================================== -->
+
+              <div
+                class="mt-5 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5"
+              >
+
+                <span
+                  class="text-xs uppercase tracking-wide font-bold"
                   style="color: var(--altafulla-yellow);"
                 >
-                  —
-                </p>
-
-
-                <p
-                  id="season-our-throwins-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 / 0
-                </p>
-
-              </div>
-
-
-
-              <!-- Their Throw-Ins -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Opponent Throw-Ins Won
+                  What the Trend Says
                 </span>
 
 
                 <p
-                  id="season-their-throwins"
-                  class="text-2xl font-extrabold mt-2"
-                  style="color: var(--altafulla-blue);"
+                  id="season-trend-summary"
+                  class="text-sm text-gray-300 leading-relaxed mt-2"
                 >
-                  —
-                </p>
-
-
-                <p
-                  id="season-their-throwins-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 / 0
+                  As more matches are tracked,
+                  this section will show whether the habits
+                  in our game model are actually improving.
                 </p>
 
               </div>
 
 
+            </section>
 
-              <!-- Purposeless Turnovers / Match -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
 
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Purposeless Turnovers / Match
-                </span>
-
-
-                <p
-                  id="season-purposeless-average"
-                  class="text-2xl font-extrabold text-white mt-2"
-                >
-                  —
-                </p>
-
-
-                <p
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  Season average
-                </p>
-
-              </div>
-
-
-
-              <!-- Total Purposeless Turnovers -->
-              <div
-                class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
-              >
-
-                <span
-                  class="text-xs uppercase tracking-wide font-bold text-gray-500"
-                >
-                  Purposeless Turnovers
-                </span>
-
-
-                <p
-                  id="season-purposeless-total"
-                  class="text-2xl font-extrabold text-white mt-2"
-                >
-                  0
-                </p>
-
-
-                <p
-                  id="season-purposeless-detail"
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  0 kicks · 0 carries
-                </p>
-
-              </div>
-
-
-            </div>
-
-
-
-            <!-- Definition -->
-            <div
-              class="mt-5 pt-4 border-t border-gray-700"
-            >
-
-              <p
-                class="text-xs text-gray-500 leading-relaxed"
-              >
-
-                <strong
-                  class="text-gray-400"
-                >
-                  Purposeless turnover:
-                </strong>
-
-                an avoidable loss of possession in which the player had
-                a reasonable option to make a controlled action
-                with the ball, but gave possession away through
-                a rushed kick or carry without clear intent
-                or without considering the next action.
-
-              </p>
-
-            </div>
-
-
-          </section>
-
-
-
-          <!-- =================================================
-               RESULTS
-          ================================================== -->
-
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-
-            <div
-              class="flex items-center justify-between gap-4 mb-4"
-            >
-
-              <h3
-                class="text-xl font-bold"
-              >
-                Results
-              </h3>
-
-
-              <span
-                id="matches-played"
-                class="text-xs text-gray-500 uppercase tracking-wide font-bold"
-              >
-                0 Matches
-              </span>
-
-            </div>
-
-
-
-            <div
-              id="season-results"
-              class="space-y-3"
-            >
-
-              <p
-                class="text-sm text-gray-400"
-              >
-                Results will appear here once matches have been played.
-              </p>
-
-            </div>
-
-
-          </section>
-
-
-
-          <!-- =================================================
-               SEASON TRENDS
-          ================================================== -->
-
-          <section
-            class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
-          >
-
-
-            <div class="mb-6">
-
-              <h3
-                class="text-xl font-bold"
-              >
-                Season Trends
-              </h3>
-
-
-              <p
-                class="text-sm text-gray-400 mt-1"
-              >
-                How the parts of our game model are changing
-                from one tracked match to the next.
-              </p>
-
-            </div>
-
-
-
-            <!-- ===============================================
-                 POSSESSION TREND
-            ================================================ -->
-
-            <div
-              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5 mb-5"
-            >
-
-              <div class="mb-4">
-
-                <h4
-                  class="font-bold text-white"
-                >
-                  Possession Control
-                </h4>
-
-                <p
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  Our share of the logged possession time.
-                </p>
-
-              </div>
-
-
-              <div
-                class="relative h-64"
-              >
-                <canvas id="possession-trend-chart"></canvas>
-              </div>
-
-
-              <div
-                class="mt-4 pt-4 border-t border-gray-700"
-              >
-
-                <p
-                  id="possession-trend-note"
-                  class="text-sm text-gray-300 leading-relaxed"
-                >
-                  Waiting for enough tracked matches.
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <!-- ===============================================
-                 PASSING TREND
-            ================================================ -->
-
-            <div
-              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5 mb-5"
-            >
-
-              <div class="mb-4">
-
-                <h4
-                  class="font-bold text-white"
-                >
-                  Passing Control
-                </h4>
-
-                <p
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  Total passes by Altafulla and the opponent.
-                </p>
-
-              </div>
-
-
-              <div
-                class="relative h-64"
-              >
-                <canvas id="passing-trend-chart"></canvas>
-              </div>
-
-
-              <div
-                class="mt-4 pt-4 border-t border-gray-700"
-              >
-
-                <p
-                  id="passing-trend-note"
-                  class="text-sm text-gray-300 leading-relaxed"
-                >
-                  Waiting for enough tracked matches.
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <!-- ===============================================
-                 THROW-IN TREND
-            ================================================ -->
-
-            <div
-              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
-            >
-
-              <div class="mb-4">
-
-                <h4
-                  class="font-bold text-white"
-                >
-                  Throw-In Retention
-                </h4>
-
-                <p
-                  class="text-xs text-gray-500 mt-1"
-                >
-                  Percentage of our own throw-ins where
-                  we keep possession.
-                </p>
-
-              </div>
-
-
-              <div
-                class="relative h-64"
-              >
-                <canvas id="throwin-trend-chart"></canvas>
-              </div>
-
-
-              <div
-                class="mt-4 pt-4 border-t border-gray-700"
-              >
-
-                <p
-                  id="throwin-trend-note"
-                  class="text-sm text-gray-300 leading-relaxed"
-                >
-                  Waiting for enough tracked matches.
-                </p>
-
-              </div>
-
-            </div>
-
-
-
-            <!-- ===============================================
-                 TREND SUMMARY
-            ================================================ -->
-
-            <div
-              class="mt-5 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5"
-            >
-
-              <span
-                class="text-xs uppercase tracking-wide font-bold"
-                style="color: var(--altafulla-yellow);"
-              >
-                What the Trend Says
-              </span>
-
-
-              <p
-                id="season-trend-summary"
-                class="text-sm text-gray-300 leading-relaxed mt-2"
-              >
-                More detailed match data is needed before
-                a meaningful trend can be identified.
-              </p>
-
-            </div>
-
-
-          </section>
+          </div>
 
 
         </div>
 
+      </section>
 
-      </div>
 
 
-    </section>
+      <!-- =====================================================
+           RIGHT MATCH MENU
+      ====================================================== -->
+
+      <aside
+        class="order-1 xl:order-2 xl:sticky xl:top-24"
+      >
+
+        <div
+          class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden"
+        >
+
+
+          <div
+            class="px-4 py-4 bg-gray-950 border-b border-gray-700"
+          >
+
+            <h3
+              class="font-bold text-white"
+            >
+              Matches
+            </h3>
+
+
+            <p
+              class="text-xs text-gray-500 mt-1"
+            >
+              Season analysis
+            </p>
+
+          </div>
+
+
+
+          <div
+            id="game-navigation"
+            class="p-3 space-y-5"
+          >
+
+            <!-- Generated automatically -->
+
+          </div>
+
+
+        </div>
+
+      </aside>
+
+
+    </div>
 
 
   </main>
@@ -771,7 +873,7 @@
 
 
   <!-- =========================================================
-       PAGE JAVASCRIPT
+       JAVASCRIPT
   ========================================================== -->
 
   <script>
@@ -781,15 +883,35 @@
        BASIC HELPERS
     ========================================================== */
 
-    function percentage(part, total) {
+    function percentage(
+      part,
+      total
+    ) {
 
-      if (!total) {
+      const partNumber =
+        Number(part);
+
+
+      const totalNumber =
+        Number(total);
+
+
+      if (
+        !Number.isFinite(partNumber) ||
+        !Number.isFinite(totalNumber) ||
+        totalNumber <= 0
+      ) {
+
         return null;
+
       }
 
 
       return Math.round(
-        (part / total) * 100
+        (
+          partNumber /
+          totalNumber
+        ) * 100
       );
 
     }
@@ -799,8 +921,8 @@
     function getGameResult(game) {
 
       if (
-        game.goalsFor >
-        game.goalsAgainst
+        Number(game.goalsFor) >
+        Number(game.goalsAgainst)
       ) {
 
         return 'W';
@@ -809,8 +931,8 @@
 
 
       if (
-        game.goalsFor <
-        game.goalsAgainst
+        Number(game.goalsFor) <
+        Number(game.goalsAgainst)
       ) {
 
         return 'L';
@@ -846,28 +968,6 @@
 
 
 
-    function getResultDisplayLetter(game) {
-
-      const result =
-        getGameResult(game);
-
-
-      if (result === 'W') {
-        return 'W';
-      }
-
-
-      if (result === 'L') {
-        return 'L';
-      }
-
-
-      return 'D';
-
-    }
-
-
-
     function getResultClasses(game) {
 
       const result =
@@ -894,145 +994,83 @@
 
 
 
-    /* ==========================================================
-       NUMBER / METRIC HELPERS
-    ========================================================== */
+    function getShortOpponentName(game) {
 
-    function parseMetricNumber(value) {
+      if (!game.opponent) {
 
-      if (
-        value === null ||
-        value === undefined
-      ) {
-
-        return null;
+        return `Match ${game.gameNumber}`;
 
       }
 
 
-      if (
-        typeof value === 'number'
-      ) {
+      return String(
+        game.opponent
+      )
 
-        return value;
+        .replace(' (Amistoso)', '')
 
-      }
+        .replace(' S15', '')
 
-
-      const cleaned =
-        String(value)
-
-          .replace('%', '')
-
-          .replace('s', '')
-
-          .replace(',', '.')
-
-          .trim();
-
-
-      const number =
-        Number(cleaned);
-
-
-      return Number.isFinite(number)
-        ? number
-        : null;
-
-    }
-
-
-
-    function getMetric(
-      game,
-      label
-    ) {
-
-      if (
-        !game ||
-        !game.metrics ||
-        game.metrics[label] === undefined
-      ) {
-
-        return null;
-
-      }
-
-
-      return parseMetricNumber(
-        game.metrics[label]
-      );
+        .replace(' S16', '');
 
     }
 
 
 
     /* ==========================================================
-       TREND FALLBACK DATA
-
-       Game 02 and Game 03 already have opponent totals from
-       the detailed analysis.
-
-       For future matches, instead of editing this page,
-       add this to the individual game JS file:
-
-       trendStats: {
-         opponentPasses: 236
-       },
-
-       The chart will automatically use trendStats first.
+       MATCH TYPE
     ========================================================== */
 
-    const trendFallbacks = {
+    function getMatchType(game) {
 
-      'game-02': {
+      if (
+        game.matchType === 'friendly'
+      ) {
 
-        opponentPasses: 267
-
-      },
-
-      'game-03': {
-
-        opponentPasses: 236
+        return 'friendly';
 
       }
 
-    };
-
-
-
-    function getOpponentPasses(game) {
 
       if (
-        game.trendStats &&
-        Number.isFinite(
-          Number(
-            game.trendStats.opponentPasses
-          )
+        game.matchType === 'league'
+      ) {
+
+        return 'league';
+
+      }
+
+
+      const competition =
+        String(
+          game.competition || ''
+        ).toLowerCase();
+
+
+      const opponent =
+        String(
+          game.opponent || ''
+        ).toLowerCase();
+
+
+      if (
+        competition.includes(
+          'pretemporada'
+        ) ||
+        competition.includes(
+          'amistoso'
+        ) ||
+        opponent.includes(
+          'amistoso'
         )
       ) {
 
-        return Number(
-          game.trendStats.opponentPasses
-        );
+        return 'friendly';
 
       }
 
 
-      if (
-        trendFallbacks[game.id]
-      ) {
-
-        return Number(
-          trendFallbacks[
-            game.id
-          ].opponentPasses
-        );
-
-      }
-
-
-      return null;
+      return 'league';
 
     }
 
@@ -1057,7 +1095,9 @@
           gameId
         );
 
-      } else {
+      }
+
+      else {
 
         url.searchParams.delete(
           'game'
@@ -1084,13 +1124,13 @@
         );
 
 
-      const requestedGameId =
+      const gameId =
         params.get(
           'game'
         );
 
 
-      if (!requestedGameId) {
+      if (!gameId) {
 
         return null;
 
@@ -1101,8 +1141,7 @@
         window.seasonGames || []
       ).find(
         game =>
-          game.id ===
-          requestedGameId
+          game.id === gameId
       ) || null;
 
     }
@@ -1149,37 +1188,38 @@
 
       let purposelessCarries = 0;
 
+      let purposelessMatches = 0;
+
 
 
       games.forEach(game => {
 
 
-        goalsFor +=
+        const gf =
           Number(
             game.goalsFor || 0
           );
 
 
-        goalsAgainst +=
+        const ga =
           Number(
             game.goalsAgainst || 0
           );
 
 
+        goalsFor += gf;
 
-        if (
-          game.goalsFor >
-          game.goalsAgainst
-        ) {
+        goalsAgainst += ga;
+
+
+
+        if (gf > ga) {
 
           wins++;
 
         }
 
-        else if (
-          game.goalsFor <
-          game.goalsAgainst
-        ) {
+        else if (gf < ga) {
 
           losses++;
 
@@ -1193,11 +1233,7 @@
 
 
 
-        if (
-          Number(
-            game.goalsAgainst
-          ) === 0
-        ) {
+        if (ga === 0) {
 
           cleanSheets++;
 
@@ -1205,7 +1241,7 @@
 
 
 
-        /* Throw-Ins */
+        /* Throw-ins */
 
         if (game.throwIns) {
 
@@ -1236,15 +1272,28 @@
 
 
 
-        /* Purposeless Turnovers */
+        /* Purposeless Turnovers
+
+           Only count matches where we actually
+           tracked the statistic.
+
+        */
 
         if (
-          game.purposelessTurnovers
+          game.purposelessTurnovers &&
+          Number.isFinite(
+            Number(
+              game.purposelessTurnovers.total
+            )
+          )
         ) {
+
+          purposelessMatches++;
+
 
           purposelessTotal +=
             Number(
-              game.purposelessTurnovers.total || 0
+              game.purposelessTurnovers.total
             );
 
 
@@ -1295,7 +1344,9 @@
 
         purposelessKicks,
 
-        purposelessCarries
+        purposelessCarries,
+
+        purposelessMatches
 
       };
 
@@ -1304,7 +1355,7 @@
 
 
     /* ==========================================================
-       RENDER SEASON KPIs
+       RENDER SEASON KPI CARDS
     ========================================================== */
 
     function renderSeasonKPIs() {
@@ -1327,10 +1378,12 @@
         stats.goalsFor;
 
 
+
       document.getElementById(
         'season-goals-against'
       ).textContent =
         stats.goalsAgainst;
+
 
 
       document.getElementById(
@@ -1351,9 +1404,9 @@
 
 
 
-      /* Our Throw-Ins */
+      /* Our throw-ins */
 
-      const ourThrowInPercentage =
+      const ourThrowPercentage =
         percentage(
           stats.ourThrowInsRetained,
           stats.ourThrowInsTotal
@@ -1363,8 +1416,8 @@
       document.getElementById(
         'season-our-throwins'
       ).textContent =
-        ourThrowInPercentage !== null
-          ? `${ourThrowInPercentage}%`
+        ourThrowPercentage !== null
+          ? `${ourThrowPercentage}%`
           : '—';
 
 
@@ -1375,9 +1428,9 @@
 
 
 
-      /* Opponent Throw-Ins */
+      /* Opponent throws won */
 
-      const theirThrowInPercentage =
+      const opponentThrowPercentage =
         percentage(
           stats.theirThrowInsWon,
           stats.theirThrowInsTotal
@@ -1387,8 +1440,8 @@
       document.getElementById(
         'season-their-throwins'
       ).textContent =
-        theirThrowInPercentage !== null
-          ? `${theirThrowInPercentage}%`
+        opponentThrowPercentage !== null
+          ? `${opponentThrowPercentage}%`
           : '—';
 
 
@@ -1399,36 +1452,74 @@
 
 
 
-      /* Purposeless Turnovers */
+      /* Purposeless turnovers */
 
-      document.getElementById(
-        'season-purposeless-total'
-      ).textContent =
-        stats.purposelessTotal;
+      if (
+        stats.purposelessMatches > 0
+      ) {
 
-
-      document.getElementById(
-        'season-purposeless-detail'
-      ).textContent =
-        `${stats.purposelessKicks} kicks · ${stats.purposelessCarries} carries`;
+        document.getElementById(
+          'season-purposeless-total'
+        ).textContent =
+          stats.purposelessTotal;
 
 
-
-      const turnoverAverage =
-        stats.matches > 0
-          ? (
-              stats.purposelessTotal /
-              stats.matches
-            ).toFixed(1)
-          : null;
+        document.getElementById(
+          'season-purposeless-detail'
+        ).textContent =
+          `${stats.purposelessKicks} kicks · ${stats.purposelessCarries} carries`;
 
 
-      document.getElementById(
-        'season-purposeless-average'
-      ).textContent =
-        turnoverAverage !== null
-          ? turnoverAverage
-          : '—';
+        const average =
+          (
+            stats.purposelessTotal /
+            stats.purposelessMatches
+          ).toFixed(1);
+
+
+        document.getElementById(
+          'season-purposeless-average'
+        ).textContent =
+          average;
+
+
+        document.getElementById(
+          'season-purposeless-average-detail'
+        ).textContent =
+          `${stats.purposelessMatches} tracked ${
+            stats.purposelessMatches === 1
+              ? 'match'
+              : 'matches'
+          }`;
+
+      }
+
+      else {
+
+        document.getElementById(
+          'season-purposeless-total'
+        ).textContent =
+          '—';
+
+
+        document.getElementById(
+          'season-purposeless-detail'
+        ).textContent =
+          'No tracked matches';
+
+
+        document.getElementById(
+          'season-purposeless-average'
+        ).textContent =
+          '—';
+
+
+        document.getElementById(
+          'season-purposeless-average-detail'
+        ).textContent =
+          'No tracked matches';
+
+      }
 
 
 
@@ -1439,1027 +1530,9 @@
         document.getElementById(
           'overview-message'
         ).textContent =
-          'Season totals and Game Model indicators update automatically as each match report is added.';
+          'Results and Game Model indicators update automatically as each match report is added.';
 
       }
-
-    }
-
-
-
-    /* ==========================================================
-       SEASON TREND DATA
-    ========================================================== */
-
-    function getSeasonTrendGames() {
-
-      return [
-        ...(window.seasonGames || [])
-      ]
-
-        .filter(game => {
-
-          const possession =
-            getMetric(
-              game,
-              'Posesión'
-            );
-
-
-          const passes =
-            getMetric(
-              game,
-              'Pases'
-            );
-
-
-          return (
-            possession !== null &&
-            passes !== null
-          );
-
-        })
-
-        .sort(
-          (a, b) =>
-            a.gameNumber -
-            b.gameNumber
-        );
-
-    }
-
-
-
-    function getShortOpponentName(game) {
-
-      if (!game.opponent) {
-        return `Match ${game.gameNumber}`;
-      }
-
-
-      return game.opponent
-
-        .replace(' (Amistoso)', '')
-
-        .replace(' S15', '')
-
-        .replace(' S16', '');
-
-    }
-
-
-
-    /* ==========================================================
-       CHART SETTINGS
-    ========================================================== */
-
-    const chartYellow =
-      '#f2e40a';
-
-
-    const chartBlue =
-      '#62bed6';
-
-
-    const chartGray =
-      '#9ca3af';
-
-
-    const chartGrid =
-      'rgba(156, 163, 175, 0.12)';
-
-
-    const chartText =
-      '#9ca3af';
-
-
-
-    let possessionTrendChart = null;
-
-    let passingTrendChart = null;
-
-    let throwInTrendChart = null;
-
-
-
-    function basicChartOptions(
-      suffix = ''
-    ) {
-
-      return {
-
-        responsive: true,
-
-        maintainAspectRatio: false,
-
-
-        interaction: {
-
-          mode: 'index',
-
-          intersect: false
-
-        },
-
-
-        plugins: {
-
-          legend: {
-
-            labels: {
-
-              color: chartText,
-
-              usePointStyle: true,
-
-              pointStyle: 'circle',
-
-              boxWidth: 8
-
-            }
-
-          },
-
-
-          tooltip: {
-
-            callbacks: {
-
-              label: function(context) {
-
-                return `${
-                  context.dataset.label
-                }: ${
-                  context.parsed.y
-                }${suffix}`;
-
-              }
-
-            }
-
-          }
-
-        },
-
-
-        scales: {
-
-          x: {
-
-            ticks: {
-
-              color: chartText
-
-            },
-
-            grid: {
-
-              color: chartGrid
-
-            }
-
-          },
-
-
-          y: {
-
-            beginAtZero: false,
-
-            ticks: {
-
-              color: chartText,
-
-              callback: function(value) {
-
-                return `${value}${suffix}`;
-
-              }
-
-            },
-
-            grid: {
-
-              color: chartGrid
-
-            }
-
-          }
-
-        }
-
-      };
-
-    }
-
-
-
-    /* ==========================================================
-       POSSESSION TREND CHART
-    ========================================================== */
-
-    function renderPossessionTrend(
-      games
-    ) {
-
-      const canvas =
-        document.getElementById(
-          'possession-trend-chart'
-        );
-
-
-      if (
-        !canvas ||
-        games.length === 0
-      ) {
-
-        return;
-
-      }
-
-
-      const labels =
-        games.map(
-          game =>
-            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
-        );
-
-
-      const possession =
-        games.map(
-          game =>
-            getMetric(
-              game,
-              'Posesión'
-            )
-        );
-
-
-      if (possessionTrendChart) {
-
-        possessionTrendChart.destroy();
-
-      }
-
-
-      const options =
-        basicChartOptions('%');
-
-
-      options.scales.y.min = 30;
-
-      options.scales.y.max = 70;
-
-
-      possessionTrendChart =
-        new Chart(
-          canvas,
-          {
-
-            type: 'line',
-
-            data: {
-
-              labels,
-
-              datasets: [
-
-                {
-
-                  label:
-                    'Altafulla Possession',
-
-                  data:
-                    possession,
-
-                  borderColor:
-                    chartYellow,
-
-                  backgroundColor:
-                    chartYellow,
-
-                  pointBackgroundColor:
-                    chartYellow,
-
-                  pointBorderColor:
-                    '#ffffff',
-
-                  pointBorderWidth: 2,
-
-                  pointRadius: 5,
-
-                  pointHoverRadius: 7,
-
-                  borderWidth: 3,
-
-                  tension: 0.25
-
-                }
-
-              ]
-
-            },
-
-            options
-
-          }
-        );
-
-    }
-
-
-
-    /* ==========================================================
-       PASSING TREND CHART
-    ========================================================== */
-
-    function renderPassingTrend(
-      games
-    ) {
-
-      const canvas =
-        document.getElementById(
-          'passing-trend-chart'
-        );
-
-
-      if (
-        !canvas ||
-        games.length === 0
-      ) {
-
-        return;
-
-      }
-
-
-      const labels =
-        games.map(
-          game =>
-            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
-        );
-
-
-      const ourPasses =
-        games.map(
-          game =>
-            getMetric(
-              game,
-              'Pases'
-            )
-        );
-
-
-      const opponentPasses =
-        games.map(
-          game =>
-            getOpponentPasses(
-              game
-            )
-        );
-
-
-      if (passingTrendChart) {
-
-        passingTrendChart.destroy();
-
-      }
-
-
-      passingTrendChart =
-        new Chart(
-          canvas,
-          {
-
-            type: 'line',
-
-            data: {
-
-              labels,
-
-              datasets: [
-
-                {
-
-                  label:
-                    'Altafulla',
-
-                  data:
-                    ourPasses,
-
-                  borderColor:
-                    chartYellow,
-
-                  backgroundColor:
-                    chartYellow,
-
-                  pointBackgroundColor:
-                    chartYellow,
-
-                  pointBorderColor:
-                    '#ffffff',
-
-                  pointBorderWidth: 2,
-
-                  pointRadius: 5,
-
-                  pointHoverRadius: 7,
-
-                  borderWidth: 3,
-
-                  tension: 0.25
-
-                },
-
-
-                {
-
-                  label:
-                    'Opponent',
-
-                  data:
-                    opponentPasses,
-
-                  borderColor:
-                    chartBlue,
-
-                  backgroundColor:
-                    chartBlue,
-
-                  pointBackgroundColor:
-                    chartBlue,
-
-                  pointBorderColor:
-                    '#ffffff',
-
-                  pointBorderWidth: 2,
-
-                  pointRadius: 5,
-
-                  pointHoverRadius: 7,
-
-                  borderWidth: 3,
-
-                  tension: 0.25,
-
-                  spanGaps: true
-
-                }
-
-              ]
-
-            },
-
-            options:
-              basicChartOptions()
-
-          }
-        );
-
-    }
-
-
-
-    /* ==========================================================
-       THROW-IN TREND CHART
-    ========================================================== */
-
-    function renderThrowInTrend(
-      games
-    ) {
-
-      const canvas =
-        document.getElementById(
-          'throwin-trend-chart'
-        );
-
-
-      if (
-        !canvas ||
-        games.length === 0
-      ) {
-
-        return;
-
-      }
-
-
-      const throwInGames =
-        games.filter(
-          game =>
-            game.throwIns &&
-            Number(
-              game.throwIns.oursTotal || 0
-            ) > 0
-        );
-
-
-      if (
-        throwInGames.length === 0
-      ) {
-
-        return;
-
-      }
-
-
-      const labels =
-        throwInGames.map(
-          game =>
-            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
-        );
-
-
-      const retention =
-        throwInGames.map(
-          game => {
-
-            return percentage(
-
-              Number(
-                game.throwIns.oursRetained || 0
-              ),
-
-              Number(
-                game.throwIns.oursTotal || 0
-              )
-
-            );
-
-          }
-        );
-
-
-      /* 50% Target Line */
-
-      const target =
-        throwInGames.map(
-          () => 50
-        );
-
-
-      if (throwInTrendChart) {
-
-        throwInTrendChart.destroy();
-
-      }
-
-
-      const options =
-        basicChartOptions('%');
-
-
-      options.scales.y.min = 0;
-
-      options.scales.y.max = 100;
-
-
-      throwInTrendChart =
-        new Chart(
-          canvas,
-          {
-
-            type: 'line',
-
-            data: {
-
-              labels,
-
-              datasets: [
-
-                {
-
-                  label:
-                    'Throw-Ins Retained',
-
-                  data:
-                    retention,
-
-                  borderColor:
-                    chartYellow,
-
-                  backgroundColor:
-                    chartYellow,
-
-                  pointBackgroundColor:
-                    chartYellow,
-
-                  pointBorderColor:
-                    '#ffffff',
-
-                  pointBorderWidth: 2,
-
-                  pointRadius: 5,
-
-                  pointHoverRadius: 7,
-
-                  borderWidth: 3,
-
-                  tension: 0.25
-
-                },
-
-
-                {
-
-                  label:
-                    '50% Target',
-
-                  data:
-                    target,
-
-                  borderColor:
-                    chartGray,
-
-                  backgroundColor:
-                    chartGray,
-
-                  pointRadius: 0,
-
-                  borderWidth: 1,
-
-                  borderDash:
-                    [6, 6],
-
-                  tension: 0
-
-                }
-
-              ]
-
-            },
-
-            options
-
-          }
-        );
-
-    }
-
-
-
-    /* ==========================================================
-       TREND NOTES
-    ========================================================== */
-
-    function renderTrendNotes(
-      games
-    ) {
-
-      if (
-        games.length < 2
-      ) {
-
-        return;
-
-      }
-
-
-      const previous =
-        games[
-          games.length - 2
-        ];
-
-
-      const latest =
-        games[
-          games.length - 1
-        ];
-
-
-
-      /* Possession */
-
-      const previousPossession =
-        getMetric(
-          previous,
-          'Posesión'
-        );
-
-
-      const latestPossession =
-        getMetric(
-          latest,
-          'Posesión'
-        );
-
-
-      const possessionChange =
-        latestPossession -
-        previousPossession;
-
-
-
-      const possessionNote =
-        document.getElementById(
-          'possession-trend-note'
-        );
-
-
-      if (possessionNote) {
-
-        if (
-          possessionChange > 0
-        ) {
-
-          possessionNote.innerHTML = `
-
-            Possession increased from
-
-            <strong
-              style="color: var(--altafulla-yellow);"
-            >
-              ${previousPossession}%
-            </strong>
-
-            to
-
-            <strong
-              style="color: var(--altafulla-yellow);"
-            >
-              ${latestPossession}%
-            </strong>.
-
-            We kept the ball for longer stretches
-            and spent more of the match playing on our terms.
-
-          `;
-
-        }
-
-        else {
-
-          possessionNote.innerHTML = `
-
-            Possession changed from
-
-            <strong>
-              ${previousPossession}%
-            </strong>
-
-            to
-
-            <strong>
-              ${latestPossession}%
-            </strong>.
-
-            The important question is not possession by itself,
-            but whether we are using the ball
-            to move the opponent and create advantages.
-
-          `;
-
-        }
-
-      }
-
-
-
-      /* Passing */
-
-      const previousPasses =
-        getMetric(
-          previous,
-          'Pases'
-        );
-
-
-      const latestPasses =
-        getMetric(
-          latest,
-          'Pases'
-        );
-
-
-      const previousOpponentPasses =
-        getOpponentPasses(
-          previous
-        );
-
-
-      const latestOpponentPasses =
-        getOpponentPasses(
-          latest
-        );
-
-
-      const passingNote =
-        document.getElementById(
-          'passing-trend-note'
-        );
-
-
-      if (passingNote) {
-
-        const ourDifference =
-          latestPasses -
-          previousPasses;
-
-
-        let opponentText = '';
-
-
-        if (
-          previousOpponentPasses !== null &&
-          latestOpponentPasses !== null
-        ) {
-
-          const opponentDifference =
-            latestOpponentPasses -
-            previousOpponentPasses;
-
-
-          opponentText = `
-
-            Opponent passing moved from
-
-            <strong>
-              ${previousOpponentPasses}
-            </strong>
-
-            to
-
-            <strong>
-              ${latestOpponentPasses}
-            </strong>
-
-            ${
-              opponentDifference < 0
-                ? ', another good sign that our pressure is making sustained possession more difficult.'
-                : '.'
-            }
-
-          `;
-
-        }
-
-
-        passingNote.innerHTML = `
-
-          We completed
-
-          <strong
-            style="color: var(--altafulla-yellow);"
-          >
-            ${Math.abs(ourDifference)}
-            ${
-              ourDifference >= 0
-                ? 'more'
-                : 'fewer'
-            }
-            passes
-          </strong>
-
-          than in the previous tracked match.
-
-          ${opponentText}
-
-        `;
-
-      }
-
-
-
-      /* Throw-Ins */
-
-      const previousThrowPercentage =
-        previous.throwIns
-          ? percentage(
-              previous.throwIns.oursRetained,
-              previous.throwIns.oursTotal
-            )
-          : null;
-
-
-      const latestThrowPercentage =
-        latest.throwIns
-          ? percentage(
-              latest.throwIns.oursRetained,
-              latest.throwIns.oursTotal
-            )
-          : null;
-
-
-      const throwInNote =
-        document.getElementById(
-          'throwin-trend-note'
-        );
-
-
-      if (
-        throwInNote &&
-        previousThrowPercentage !== null &&
-        latestThrowPercentage !== null
-      ) {
-
-        throwInNote.innerHTML = `
-
-          Throw-in retention improved from
-
-          <strong
-            style="color: var(--altafulla-yellow);"
-          >
-            ${previousThrowPercentage}%
-          </strong>
-
-          to
-
-          <strong
-            style="color: var(--altafulla-yellow);"
-          >
-            ${latestThrowPercentage}%
-          </strong>.
-
-          That is progress,
-          but we are still below our
-
-          <strong>
-            50% target.
-          </strong>
-
-        `;
-
-      }
-
-
-
-      /* Overall Summary */
-
-      const summary =
-        document.getElementById(
-          'season-trend-summary'
-        );
-
-
-      if (summary) {
-
-        summary.innerHTML = `
-
-          After two fully tracked matches,
-          we are
-
-          <strong>
-            keeping more possession
-          </strong>,
-
-          <strong>
-            completing more passes
-          </strong>
-
-          and allowing the opponent
-          fewer sustained passing sequences.
-
-          Our throw-ins are improving as well.
-
-          The biggest areas still behind our game model are
-          protecting the team when we lose the ball,
-          keeping the lines connected when we press,
-          and turning good buildup into more dangerous attacks.
-
-        `;
-
-      }
-
-    }
-
-
-
-    /* ==========================================================
-       RENDER SEASON TRENDS
-    ========================================================== */
-
-    function renderSeasonTrends() {
-
-      const games =
-        getSeasonTrendGames();
-
-
-      if (
-        games.length === 0
-      ) {
-
-        return;
-
-      }
-
-
-      renderPossessionTrend(
-        games
-      );
-
-
-      renderPassingTrend(
-        games
-      );
-
-
-      renderThrowInTrend(
-        games
-      );
-
-
-      renderTrendNotes(
-        games
-      );
 
     }
 
@@ -2477,6 +1550,14 @@
         );
 
 
+      if (!navigation) {
+
+        return;
+
+      }
+
+
+
       const games =
         [...(window.seasonGames || [])]
           .sort(
@@ -2487,42 +1568,318 @@
 
 
 
-      games.forEach(game => {
+      const friendlies =
+        games.filter(
+          game =>
+            getMatchType(game) ===
+            'friendly'
+        );
 
-        const button =
+
+      const leagueGames =
+        games.filter(
+          game =>
+            getMatchType(game) ===
+            'league'
+        );
+
+
+
+      navigation.innerHTML = '';
+
+
+
+      /* ======================================================
+         SEASON OVERVIEW BUTTON
+      ====================================================== */
+
+      const overviewButton =
+        document.createElement(
+          'button'
+        );
+
+
+      overviewButton.type =
+        'button';
+
+
+      overviewButton.id =
+        'game-btn-overview';
+
+
+      overviewButton.onclick =
+        () =>
+          showSeasonOverview();
+
+
+      overviewButton.className =
+        'game-btn w-full text-left px-3 py-3 rounded-lg bg-gray-700 transition-colors';
+
+
+      overviewButton.innerHTML = `
+
+        <div
+          class="flex items-center gap-3"
+        >
+
+          <div
+            class="w-8 h-8 rounded-lg bg-gray-900 flex items-center justify-center text-sm"
+          >
+            📊
+          </div>
+
+
+          <div>
+
+            <div
+              class="text-sm font-bold"
+              style="color: var(--altafulla-yellow);"
+            >
+              Season Overview
+            </div>
+
+
+            <div
+              class="text-xs text-gray-500 mt-0.5"
+            >
+              Results & trends
+            </div>
+
+          </div>
+
+        </div>
+
+      `;
+
+
+      navigation.appendChild(
+        overviewButton
+      );
+
+
+
+      /* ======================================================
+         GAME GROUP HELPER
+      ====================================================== */
+
+      function createGameGroup(
+        title,
+        groupGames
+      ) {
+
+        if (
+          groupGames.length === 0
+        ) {
+
+          return;
+
+        }
+
+
+
+        const section =
           document.createElement(
-            'button'
+            'div'
           );
 
 
-        button.id =
-          `game-btn-${game.id}`;
+        const label =
+          document.createElement(
+            'div'
+          );
 
 
-        button.className =
-          'game-btn px-4 py-2 rounded-lg text-gray-400 hover:text-white font-semibold text-sm whitespace-nowrap';
+        label.className =
+          'px-2 mb-2 text-[11px] uppercase tracking-[0.18em] font-bold text-gray-500';
 
 
-        button.textContent =
-          `Match ${game.gameNumber}: ${
-            game.homeAway === 'away'
-              ? '@'
-              : 'vs.'
-          } ${game.opponent}`;
+        label.textContent =
+          title;
 
 
-        button.onclick =
-          () =>
-            showGame(
-              game.id
+        section.appendChild(
+          label
+        );
+
+
+
+        const list =
+          document.createElement(
+            'div'
+          );
+
+
+        list.className =
+          'space-y-1';
+
+
+
+        groupGames.forEach(
+          game => {
+
+
+            const button =
+              document.createElement(
+                'button'
+              );
+
+
+            button.type =
+              'button';
+
+
+            button.id =
+              `game-btn-${game.id}`;
+
+
+            button.onclick =
+              () =>
+                showGame(
+                  game.id
+                );
+
+
+            button.className =
+              'game-btn w-full text-left px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-700/60 hover:text-white transition-colors';
+
+
+
+            const homeAway =
+              game.homeAway === 'away'
+                ? '@'
+                : 'vs.';
+
+
+
+            const result =
+              getGameResult(
+                game
+              );
+
+
+
+            let resultClass =
+              'text-gray-400';
+
+
+            if (
+              result === 'W'
+            ) {
+
+              resultClass =
+                'text-green-400';
+
+            }
+
+            else if (
+              result === 'L'
+            ) {
+
+              resultClass =
+                'text-red-400';
+
+            }
+
+
+
+            button.innerHTML = `
+
+              <div
+                class="flex items-start justify-between gap-3"
+              >
+
+                <div
+                  class="min-w-0"
+                >
+
+                  <div
+                    class="text-xs text-gray-500"
+                  >
+                    Match ${game.gameNumber}
+                  </div>
+
+
+                  <div
+                    class="text-sm font-semibold truncate mt-0.5"
+                  >
+                    ${homeAway}
+                    ${getShortOpponentName(game)}
+                  </div>
+
+
+                  ${
+                    game.date
+                      ? `
+
+                        <div
+                          class="text-[11px] text-gray-600 mt-1"
+                        >
+                          ${game.date}
+                        </div>
+
+                      `
+                      : ''
+                  }
+
+                </div>
+
+
+                <div
+                  class="text-right flex-shrink-0"
+                >
+
+                  <div
+                    class="font-bold text-white"
+                  >
+                    ${game.goalsFor}–${game.goalsAgainst}
+                  </div>
+
+
+                  <div
+                    class="text-[10px] font-bold ${resultClass}"
+                  >
+                    ${result}
+                  </div>
+
+                </div>
+
+              </div>
+
+            `;
+
+
+            list.appendChild(
+              button
             );
+
+          }
+        );
+
+
+
+        section.appendChild(
+          list
+        );
 
 
         navigation.appendChild(
-          button
+          section
         );
 
-      });
+      }
+
+
+
+      createGameGroup(
+        'Friendlies',
+        friendlies
+      );
+
+
+      createGameGroup(
+        'League Matches',
+        leagueGames
+      );
 
     }
 
@@ -2564,102 +1921,1206 @@
 
 
 
-      games.forEach(game => {
-
-        const row =
-          document.createElement(
-            'button'
-          );
+      games.forEach(
+        game => {
 
 
-        row.type =
-          'button';
-
-
-        row.onclick =
-          () =>
-            showGame(
-              game.id
+          const row =
+            document.createElement(
+              'button'
             );
 
 
-        row.className =
-          'w-full text-left bg-gray-900/60 border border-gray-700 rounded-lg p-4 hover:border-gray-500 transition-colors';
+          row.type =
+            'button';
+
+
+          row.onclick =
+            () =>
+              showGame(
+                game.id
+              );
+
+
+          row.className =
+            'w-full text-left py-3 hover:bg-gray-700/30 transition-colors';
 
 
 
-        row.innerHTML = `
+          row.innerHTML = `
 
-          <div
-            class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
-          >
-
-            <div>
+            <div
+              class="grid grid-cols-[80px_minmax(0,1fr)_auto] gap-3 items-center"
+            >
 
               <div
-                class="flex items-center flex-wrap gap-2"
+                class="text-xs text-gray-500"
+              >
+                ${game.date || ''}
+              </div>
+
+
+              <div
+                class="min-w-0"
               >
 
-                <span
-                  class="text-xs text-gray-500 uppercase tracking-wide font-bold"
+                <div
+                  class="text-sm font-semibold text-white truncate"
                 >
-                  Match ${game.gameNumber}
-                </span>
+
+                  ${
+                    game.homeAway === 'away'
+                      ? `@ ${getShortOpponentName(game)}`
+                      : `vs. ${getShortOpponentName(game)}`
+                  }
+
+                </div>
 
 
-                <span
-                  class="text-xs px-2 py-0.5 rounded-full border ${getResultClasses(game)}"
+                <div
+                  class="text-[11px] text-gray-500 mt-0.5"
                 >
-                  ${getResultLabel(game)}
-                </span>
+                  ${
+                    getMatchType(game) ===
+                    'friendly'
+                      ? 'Friendly'
+                      : 'League'
+                  }
+                </div>
 
               </div>
 
 
-              <h4
-                class="text-base font-bold text-white mt-1"
+              <div
+                class="text-lg font-bold text-white"
               >
-                ${
-                  game.homeAway === 'away'
-                    ? `${game.opponent} vs. CE Altafulla`
-                    : `CE Altafulla vs. ${game.opponent}`
-                }
-              </h4>
+                ${game.goalsFor}–${game.goalsAgainst}
+              </div>
+
+            </div>
+
+          `;
 
 
-              ${
-                game.date
-                  ? `
+          container.appendChild(
+            row
+          );
 
-                    <p
-                      class="text-xs text-gray-500 mt-1"
-                    >
-                      ${game.date}
-                    </p>
+        }
+      );
 
-                  `
-                  : ''
+    }
+
+
+
+    /* ==========================================================
+       CHART SETTINGS
+    ========================================================== */
+
+    const chartYellow =
+      '#f2e40a';
+
+
+    const chartBlue =
+      '#62bed6';
+
+
+    const chartGray =
+      '#9ca3af';
+
+
+    const chartGrid =
+      'rgba(156, 163, 175, 0.12)';
+
+
+    const chartText =
+      '#9ca3af';
+
+
+
+    let throwInTrendChart = null;
+
+    let setPieceTrendChart = null;
+
+    let solutionsTrendChart = null;
+
+    let turnoverTrendChart = null;
+
+
+
+    function createTrendChartOptions(
+      suffix = '',
+      min = null,
+      max = null
+    ) {
+
+      const options = {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+
+        interaction: {
+
+          mode: 'index',
+
+          intersect: false
+
+        },
+
+
+        plugins: {
+
+          legend: {
+
+            display: false
+
+          },
+
+
+          tooltip: {
+
+            callbacks: {
+
+              label: function(context) {
+
+                return `${
+                  context.parsed.y
+                }${suffix}`;
+
               }
 
-            </div>
+            }
+
+          }
+
+        },
 
 
-            <div
-              class="text-2xl font-black text-white"
+        scales: {
+
+          x: {
+
+            ticks: {
+
+              color:
+                chartText,
+
+              font: {
+
+                size: 10
+
+              }
+
+            },
+
+
+            grid: {
+
+              color:
+                chartGrid
+
+            }
+
+          },
+
+
+          y: {
+
+            beginAtZero:
+              min === 0,
+
+            ticks: {
+
+              color:
+                chartText,
+
+              callback:
+                function(value) {
+
+                  return `${
+                    value
+                  }${suffix}`;
+
+                }
+
+            },
+
+
+            grid: {
+
+              color:
+                chartGrid
+
+            }
+
+          }
+
+        }
+
+      };
+
+
+
+      if (
+        min !== null
+      ) {
+
+        options.scales.y.min =
+          min;
+
+      }
+
+
+
+      if (
+        max !== null
+      ) {
+
+        options.scales.y.max =
+          max;
+
+      }
+
+
+
+      return options;
+
+    }
+
+
+
+    function gameTrendLabel(game) {
+
+      return `M${game.gameNumber}`;
+
+    }
+
+
+
+    /* ==========================================================
+       THROW-IN TREND
+    ========================================================== */
+
+    function renderThrowInTrend() {
+
+      const games =
+        (window.seasonGames || [])
+          .filter(
+            game =>
+              game.throwIns &&
+              Number(
+                game.throwIns.oursTotal
+              ) > 0
+          )
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+
+      if (
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+
+      const values =
+        games.map(
+          game =>
+            percentage(
+              game.throwIns.oursRetained,
+              game.throwIns.oursTotal
+            )
+        );
+
+
+
+      const target =
+        games.map(
+          () => 50
+        );
+
+
+
+      if (
+        throwInTrendChart
+      ) {
+
+        throwInTrendChart.destroy();
+
+      }
+
+
+
+      throwInTrendChart =
+        new Chart(
+
+          document.getElementById(
+            'throwin-trend-chart'
+          ),
+
+          {
+
+            type:
+              'line',
+
+
+            data: {
+
+              labels:
+                games.map(
+                  gameTrendLabel
+                ),
+
+
+              datasets: [
+
+                {
+
+                  label:
+                    'Retention',
+
+                  data:
+                    values,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                },
+
+
+                {
+
+                  label:
+                    '50% Target',
+
+                  data:
+                    target,
+
+                  borderColor:
+                    chartGray,
+
+                  backgroundColor:
+                    chartGray,
+
+                  borderDash:
+                    [5, 5],
+
+                  pointRadius: 0,
+
+                  borderWidth: 1
+
+                }
+
+              ]
+
+            },
+
+
+            options:
+              createTrendChartOptions(
+                '%',
+                0,
+                100
+              )
+
+          }
+
+        );
+
+
+
+      const note =
+        document.getElementById(
+          'throwin-trend-note'
+        );
+
+
+      if (
+        games.length >= 2
+      ) {
+
+        const previous =
+          values[
+            values.length - 2
+          ];
+
+
+        const latest =
+          values[
+            values.length - 1
+          ];
+
+
+        if (
+          latest > previous
+        ) {
+
+          note.innerHTML = `
+
+            Retention improved from
+
+            <strong
+              style="color: var(--altafulla-yellow);"
             >
-              ${game.goalsFor}–${game.goalsAgainst}
-            </div>
+              ${previous}%
+            </strong>
 
-          </div>
+            to
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${latest}%
+            </strong>.
+
+            Better, but our target is still
+            at least <strong>50%</strong>.
+
+          `;
+
+        }
+
+        else {
+
+          note.innerHTML = `
+
+            Our latest retention was
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${latest}%
+            </strong>.
+
+            These are possessions that start
+            with the ball already in our hands.
+            Our target remains at least
+            <strong>50%</strong>.
+
+          `;
+
+        }
+
+      }
+
+    }
+
+
+
+    /* ==========================================================
+       SET-PIECE EFFECTIVENESS TREND
+
+       Add to game files:
+
+       trendStats: {
+
+         setPieces: {
+           effective: 3,
+           total: 8
+         }
+
+       }
+
+       "Effective" means the restart creates a dangerous
+       action OR we retain pressure and continue the attack.
+
+    ========================================================== */
+
+    function renderSetPieceTrend() {
+
+      const games =
+        (window.seasonGames || [])
+          .filter(
+            game =>
+              game.trendStats &&
+              game.trendStats.setPieces &&
+              Number(
+                game.trendStats.setPieces.total
+              ) > 0
+          )
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+
+      if (
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+
+      const values =
+        games.map(
+          game =>
+            percentage(
+
+              game.trendStats
+                .setPieces
+                .effective,
+
+              game.trendStats
+                .setPieces
+                .total
+
+            )
+        );
+
+
+
+      if (
+        setPieceTrendChart
+      ) {
+
+        setPieceTrendChart.destroy();
+
+      }
+
+
+
+      setPieceTrendChart =
+        new Chart(
+
+          document.getElementById(
+            'setpiece-trend-chart'
+          ),
+
+          {
+
+            type:
+              'line',
+
+
+            data: {
+
+              labels:
+                games.map(
+                  gameTrendLabel
+                ),
+
+
+              datasets: [
+
+                {
+
+                  data:
+                    values,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                }
+
+              ]
+
+            },
+
+
+            options:
+              createTrendChartOptions(
+                '%',
+                0,
+                100
+              )
+
+          }
+
+        );
+
+
+
+      const note =
+        document.getElementById(
+          'setpiece-trend-note'
+        );
+
+
+      const latestGame =
+        games[
+          games.length - 1
+        ];
+
+
+      const latest =
+        values[
+          values.length - 1
+        ];
+
+
+
+      note.innerHTML = `
+
+        In the latest tracked match,
+
+        <strong
+          style="color: var(--altafulla-yellow);"
+        >
+          ${latest}%
+        </strong>
+
+        of our attacking corners and free kicks
+        produced a dangerous action
+        or allowed us to continue the attack.
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       EFFECTIVE POSSESSION SOLUTIONS
+
+       Add this to game files:
+
+       trendStats: {
+
+         effectiveSolutions: [
+           'inside',
+           'outside',
+           'behind',
+           'switch',
+           'carry'
+         ]
+
+       }
+
+       Only list a solution if it actually worked
+       during that match.
+
+       Maximum score = 5.
+
+    ========================================================== */
+
+    function renderSolutionsTrend() {
+
+      const games =
+        (window.seasonGames || [])
+          .filter(
+            game =>
+              game.trendStats &&
+              Array.isArray(
+                game.trendStats
+                  .effectiveSolutions
+              )
+          )
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+
+      if (
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+
+      const values =
+        games.map(
+          game =>
+            new Set(
+              game.trendStats
+                .effectiveSolutions
+            ).size
+        );
+
+
+
+      if (
+        solutionsTrendChart
+      ) {
+
+        solutionsTrendChart.destroy();
+
+      }
+
+
+
+      solutionsTrendChart =
+        new Chart(
+
+          document.getElementById(
+            'solutions-trend-chart'
+          ),
+
+          {
+
+            type:
+              'line',
+
+
+            data: {
+
+              labels:
+                games.map(
+                  gameTrendLabel
+                ),
+
+
+              datasets: [
+
+                {
+
+                  data:
+                    values,
+
+                  borderColor:
+                    chartBlue,
+
+                  backgroundColor:
+                    chartBlue,
+
+                  pointBackgroundColor:
+                    chartBlue,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                }
+
+              ]
+
+            },
+
+
+            options:
+              createTrendChartOptions(
+                '',
+                0,
+                5
+              )
+
+          }
+
+        );
+
+
+
+      const latestGame =
+        games[
+          games.length - 1
+        ];
+
+
+      const solutions =
+        latestGame
+          .trendStats
+          .effectiveSolutions;
+
+
+
+      const friendlyNames = {
+
+        inside:
+          'through the middle',
+
+        outside:
+          'outside',
+
+        behind:
+          'in behind',
+
+        switch:
+          'switching the field',
+
+        carry:
+          'carrying into space'
+
+      };
+
+
+
+      const readable =
+        solutions.map(
+          solution =>
+            friendlyNames[solution] ||
+            solution
+        );
+
+
+
+      document.getElementById(
+        'solutions-trend-note'
+      ).innerHTML = `
+
+        In the latest tracked match,
+        we successfully used
+
+        <strong
+          style="color: var(--altafulla-blue);"
+        >
+          ${readable.length}
+        </strong>
+
+        different solutions:
+
+        <strong>
+          ${readable.join(', ')}
+        </strong>.
+
+        The goal is not one favorite answer.
+        It is recognizing what the opponent gives us.
+
+      `;
+
+    }
+
+
+
+    /* ==========================================================
+       PURPOSELESS TURNOVER TREND
+    ========================================================== */
+
+    function renderTurnoverTrend() {
+
+      const games =
+        (window.seasonGames || [])
+          .filter(
+            game =>
+              game.purposelessTurnovers &&
+              Number.isFinite(
+                Number(
+                  game.purposelessTurnovers
+                    .total
+                )
+              )
+          )
+          .sort(
+            (a, b) =>
+              a.gameNumber -
+              b.gameNumber
+          );
+
+
+
+      if (
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+
+      const values =
+        games.map(
+          game =>
+            Number(
+              game.purposelessTurnovers
+                .total
+            )
+        );
+
+
+
+      if (
+        turnoverTrendChart
+      ) {
+
+        turnoverTrendChart.destroy();
+
+      }
+
+
+
+      turnoverTrendChart =
+        new Chart(
+
+          document.getElementById(
+            'turnover-trend-chart'
+          ),
+
+          {
+
+            type:
+              'line',
+
+
+            data: {
+
+              labels:
+                games.map(
+                  gameTrendLabel
+                ),
+
+
+              datasets: [
+
+                {
+
+                  data:
+                    values,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                }
+
+              ]
+
+            },
+
+
+            options:
+              createTrendChartOptions(
+                '',
+                0,
+                null
+              )
+
+          }
+
+        );
+
+
+
+      const note =
+        document.getElementById(
+          'turnover-trend-note'
+        );
+
+
+
+      if (
+        games.length >= 2
+      ) {
+
+        const previous =
+          values[
+            values.length - 2
+          ];
+
+
+        const latest =
+          values[
+            values.length - 1
+          ];
+
+
+
+        if (
+          latest < previous
+        ) {
+
+          note.innerHTML = `
+
+            Avoidable turnovers fell from
+
+            <strong>
+              ${previous}
+            </strong>
+
+            to
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${latest}
+            </strong>.
+
+            That is exactly the direction
+            we want this number to move.
+
+          `;
+
+        }
+
+        else {
+
+          note.innerHTML = `
+
+            We had
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${latest}
+            </strong>
+
+            purposeless turnovers
+            in the latest tracked match.
+
+            This number should go down
+            as our decisions with the ball improve.
+
+          `;
+
+        }
+
+      }
+
+      else {
+
+        note.innerHTML = `
+
+          We recorded
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${values[0]}
+          </strong>
+
+          purposeless turnovers
+          in this tracked match.
+
+          Lower is better.
 
         `;
 
+      }
 
-        container.appendChild(
-          row
+    }
+
+
+
+    /* ==========================================================
+       OVERALL TREND SUMMARY
+    ========================================================== */
+
+    function renderTrendSummary() {
+
+      const summary =
+        document.getElementById(
+          'season-trend-summary'
         );
 
-      });
+
+      const trackedGames =
+        (window.seasonGames || [])
+          .filter(
+            game =>
+              game.throwIns ||
+              game.purposelessTurnovers ||
+              game.trendStats
+          );
+
+
+
+      if (
+        trackedGames.length < 2
+      ) {
+
+        return;
+
+      }
+
+
+
+      summary.innerHTML = `
+
+        We are not trying to make every statistical line
+        go up.
+
+        The goal is to see whether the habits
+        in our game model are improving:
+
+        <strong>
+          keep more of the possessions that should be ours,
+          make our restarts useful,
+          find different solutions when the opponent changes,
+          and give the ball away unnecessarily less often.
+        </strong>
+
+      `;
+
+    }
+
+
+
+    function renderSeasonTrends() {
+
+      renderThrowInTrend();
+
+      renderSetPieceTrend();
+
+      renderSolutionsTrend();
+
+      renderTurnoverTrend();
+
+      renderTrendSummary();
 
     }
 
@@ -2673,7 +3134,7 @@
 
       const entries =
         Object.entries(
-          metrics
+          metrics || {}
         );
 
 
@@ -2692,7 +3153,7 @@
         <section>
 
           <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-4"
+            class="grid grid-cols-2 md:grid-cols-3 gap-4"
           >
 
             ${entries
@@ -2733,76 +3194,31 @@
 
 
     /* ==========================================================
-       GAME MODEL INDICATORS — INDIVIDUAL MATCH
+       GAME MODEL INDICATORS — MATCH
     ========================================================== */
 
     function renderGameModelIndicators(game) {
-
 
       const throwIns =
         game.throwIns || {};
 
 
       const turnovers =
-        game.purposelessTurnovers || {};
-
-
-
-      const ourTotal =
-        Number(
-          throwIns.oursTotal || 0
-        );
-
-
-      const ourRetained =
-        Number(
-          throwIns.oursRetained || 0
-        );
-
-
-      const theirTotal =
-        Number(
-          throwIns.theirsTotal || 0
-        );
-
-
-      const theirsWon =
-        Number(
-          throwIns.theirsWonByUs || 0
-        );
+        game.purposelessTurnovers;
 
 
 
       const ourPercentage =
         percentage(
-          ourRetained,
-          ourTotal
+          throwIns.oursRetained,
+          throwIns.oursTotal
         );
 
 
-      const theirPercentage =
+      const opponentPercentage =
         percentage(
-          theirsWon,
-          theirTotal
-        );
-
-
-
-      const turnoverTotal =
-        Number(
-          turnovers.total || 0
-        );
-
-
-      const turnoverKicks =
-        Number(
-          turnovers.kicks || 0
-        );
-
-
-      const turnoverCarries =
-        Number(
-          turnovers.carries || 0
+          throwIns.theirsWonByUs,
+          throwIns.theirsTotal
         );
 
 
@@ -2846,7 +3262,7 @@
               <span
                 class="text-xs uppercase tracking-wide font-bold text-gray-500"
               >
-                Our Throw-Ins Retained
+                Throw-Ins Retained
               </span>
 
 
@@ -2865,7 +3281,11 @@
               <p
                 class="text-xs text-gray-500 mt-1"
               >
-                ${ourRetained} of ${ourTotal}
+                ${
+                  throwIns.oursTotal
+                    ? `${throwIns.oursRetained} of ${throwIns.oursTotal}`
+                    : 'Not tracked'
+                }
               </p>
 
             </div>
@@ -2879,7 +3299,7 @@
               <span
                 class="text-xs uppercase tracking-wide font-bold text-gray-500"
               >
-                Opponent Throw-Ins Won
+                Opponent Throws Won
               </span>
 
 
@@ -2888,8 +3308,8 @@
                 style="color: var(--altafulla-blue);"
               >
                 ${
-                  theirPercentage !== null
-                    ? `${theirPercentage}%`
+                  opponentPercentage !== null
+                    ? `${opponentPercentage}%`
                     : '—'
                 }
               </p>
@@ -2898,7 +3318,11 @@
               <p
                 class="text-xs text-gray-500 mt-1"
               >
-                ${theirsWon} of ${theirTotal}
+                ${
+                  throwIns.theirsTotal
+                    ? `${throwIns.theirsWonByUs} of ${throwIns.theirsTotal}`
+                    : 'Not tracked'
+                }
               </p>
 
             </div>
@@ -2919,45 +3343,31 @@
               <p
                 class="text-3xl font-extrabold text-white mt-2"
               >
-                ${turnoverTotal}
+                ${
+                  turnovers &&
+                  Number.isFinite(
+                    Number(
+                      turnovers.total
+                    )
+                  )
+                    ? turnovers.total
+                    : '—'
+                }
               </p>
 
 
               <p
                 class="text-xs text-gray-500 mt-1"
               >
-                ${turnoverKicks} kicks ·
-                ${turnoverCarries} carries
+                ${
+                  turnovers
+                    ? `${turnovers.kicks || 0} kicks · ${turnovers.carries || 0} carries`
+                    : 'Not tracked'
+                }
               </p>
 
             </div>
 
-
-          </div>
-
-
-
-          <div
-            class="mt-5 pt-4 border-t border-gray-700"
-          >
-
-            <p
-              class="text-xs text-gray-500 leading-relaxed"
-            >
-
-              <strong
-                class="text-gray-400"
-              >
-                Purposeless turnover:
-              </strong>
-
-              an avoidable loss of possession in which the player had
-              a reasonable option to make a controlled action
-              with the ball, but gave possession away through
-              a rushed kick or carry without clear intent
-              or without considering the next action.
-
-            </p>
 
           </div>
 
@@ -2975,7 +3385,6 @@
     ========================================================== */
 
     function createGameView(game) {
-
 
       const title =
         game.homeAway === 'away'
@@ -3091,6 +3500,8 @@
         >
 
 
+          <!-- MATCH HEADER -->
+
           <section
             class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
           >
@@ -3177,7 +3588,7 @@
                   <span
                     class="text-xs px-3 py-1.5 rounded-full border font-bold ${getResultClasses(game)}"
                   >
-                    ${getResultDisplayLetter(game)}
+                    ${getGameResult(game)}
                   </span>
 
                 </div>
@@ -3336,7 +3747,7 @@
 
 
     /* ==========================================================
-       RENDER GAME VIEWS
+       RENDER MATCH VIEWS
     ========================================================== */
 
     function renderGameViews() {
@@ -3357,24 +3768,28 @@
 
 
 
-      games.forEach(game => {
+      games.forEach(
+        game => {
 
-        container.insertAdjacentHTML(
-          'beforeend',
+          container.insertAdjacentHTML(
 
-          createGameView(
-            game
-          )
-        );
+            'beforeend',
 
-      });
+            createGameView(
+              game
+            )
+
+          );
+
+        }
+      );
 
     }
 
 
 
     /* ==========================================================
-       VIEW SWITCHING HELPERS
+       VIEW SWITCHING
     ========================================================== */
 
     function resetGameButtons() {
@@ -3383,22 +3798,27 @@
         .querySelectorAll(
           '.game-btn'
         )
-        .forEach(button => {
+        .forEach(
+          button => {
 
-          button.classList.remove(
-            'bg-gray-700',
-            'text-white'
-          );
-
-
-          button.classList.add(
-            'text-gray-400'
-          );
+            button.classList.remove(
+              'bg-gray-700',
+              'text-white',
+              'border',
+              'border-yellow-500/30'
+            );
 
 
-          button.style.color = '';
+            button.classList.add(
+              'text-gray-400'
+            );
 
-        });
+
+            button.style.color =
+              '';
+
+          }
+        );
 
     }
 
@@ -3410,21 +3830,19 @@
         .querySelectorAll(
           '.game-view'
         )
-        .forEach(view => {
+        .forEach(
+          view => {
 
-          view.classList.add(
-            'hidden'
-          );
+            view.classList.add(
+              'hidden'
+            );
 
-        });
+          }
+        );
 
     }
 
 
-
-    /* ==========================================================
-       SHOW SEASON OVERVIEW
-    ========================================================== */
 
     function showSeasonOverview(
       updateUrl = true
@@ -3433,6 +3851,7 @@
       hideGameViews();
 
       resetGameButtons();
+
 
 
       const overview =
@@ -3490,21 +3909,20 @@
 
 
 
-    /* ==========================================================
-       SHOW INDIVIDUAL GAME
-    ========================================================== */
-
     function showGame(
       gameId,
       updateUrl = true
     ) {
 
       const game =
-        (window.seasonGames || [])
-          .find(
-            item =>
-              item.id === gameId
-          );
+        (
+          window.seasonGames || []
+        ).find(
+          item =>
+            item.id ===
+            gameId
+        );
+
 
 
       if (!game) {
@@ -3522,6 +3940,7 @@
       hideGameViews();
 
       resetGameButtons();
+
 
 
       const view =
@@ -3551,7 +3970,9 @@
 
         button.classList.add(
           'bg-gray-700',
-          'text-white'
+          'text-white',
+          'border',
+          'border-yellow-500/30'
         );
 
 
@@ -3581,7 +4002,8 @@
 
         top: 0,
 
-        behavior: 'smooth'
+        behavior:
+          'smooth'
 
       });
 
@@ -3608,7 +4030,9 @@
             false
           );
 
-        } else {
+        }
+
+        else {
 
           showSeasonOverview(
             false
@@ -3642,7 +4066,6 @@
         renderGameViews();
 
 
-        /* New */
         renderSeasonTrends();
 
 
@@ -3659,7 +4082,9 @@
             false
           );
 
-        } else {
+        }
+
+        else {
 
           showSeasonOverview(
             false
