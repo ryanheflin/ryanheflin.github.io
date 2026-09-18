@@ -4,7 +4,7 @@ window.blogPosts.push({
 
   title: 'San Pere: Lo que vimos en el partido',
 
-  date: '18 septiembre 2026',
+  date: '2026-09-18',
 
   category: 'for-players',
 
