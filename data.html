@@ -238,9 +238,7 @@
     >
 
 
-      <!-- =====================================================
-           MAIN CONTENT
-      ====================================================== -->
+      <!-- MAIN CONTENT -->
 
       <section
         class="order-2 xl:order-1 min-w-0"
@@ -251,9 +249,7 @@
         >
 
 
-          <!-- =================================================
-               SEASON OVERVIEW
-          ================================================== -->
+          <!-- SEASON OVERVIEW -->
 
           <div
             id="game-view-overview"
@@ -261,9 +257,7 @@
           >
 
 
-            <!-- ===============================================
-                 TEAM SUMMARY
-            ================================================ -->
+            <!-- TEAM SUMMARY -->
 
             <section
               class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
@@ -287,9 +281,7 @@
 
 
 
-            <!-- ===============================================
-                 GAME MODEL INDICATORS
-            ================================================ -->
+            <!-- GAME MODEL INDICATORS -->
 
             <section
               class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
@@ -482,9 +474,7 @@
 
 
 
-            <!-- ===============================================
-                 RESULTS
-            ================================================ -->
+            <!-- RESULTS -->
 
             <section
               class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
@@ -531,9 +521,7 @@
 
 
 
-            <!-- ===============================================
-                 SEASON TRENDS
-            ================================================ -->
+            <!-- SEASON TRENDS -->
 
             <section
               class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
@@ -565,9 +553,7 @@
               >
 
 
-                <!-- ===========================================
-                     THROW-IN RETENTION
-                ============================================ -->
+                <!-- THROW-IN RETENTION -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -611,9 +597,7 @@
 
 
 
-                <!-- ===========================================
-                     SET PIECE EFFECTIVENESS
-                ============================================ -->
+                <!-- SET-PIECE EFFECTIVENESS -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -631,8 +615,8 @@
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
-                      Attacking corners and free kicks that create
-                      danger or allow us to continue the attack.
+                      How often our attacking restarts retain possession,
+                      continue the attack or create danger.
                     </p>
 
                   </div>
@@ -647,21 +631,19 @@
                   </div>
 
 
-                  <p
+                  <div
                     id="setpiece-trend-note"
                     class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
                   >
                     Add set-piece tracking to match files
                     to begin this trend.
-                  </p>
+                  </div>
 
                 </div>
 
 
 
-                <!-- ===========================================
-                     POSSESSION SOLUTIONS
-                ============================================ -->
+                <!-- POSSESSION SOLUTIONS -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -672,15 +654,15 @@
                     <h4
                       class="font-bold text-white"
                     >
-                      Effective Possession Solutions
+                      Possession Solution Variety
                     </h4>
 
 
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
-                      Different ways we successfully solve
-                      the opponent's defensive problem.
+                      How many different ways we successfully
+                      progressed against the opponent.
                     </p>
 
                   </div>
@@ -714,9 +696,7 @@
 
 
 
-                <!-- ===========================================
-                     PURPOSELESS TURNOVERS
-                ============================================ -->
+                <!-- PURPOSELESS TURNOVERS -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -764,9 +744,7 @@
 
 
 
-              <!-- =============================================
-                   OVERALL TREND SUMMARY
-              ============================================== -->
+              <!-- OVERALL TREND SUMMARY -->
 
               <div
                 class="mt-5 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5"
@@ -804,9 +782,7 @@
 
 
 
-      <!-- =====================================================
-           RIGHT MATCH MENU
-      ====================================================== -->
+      <!-- RIGHT MATCH MENU -->
 
       <aside
         class="order-1 xl:order-2 xl:sticky xl:top-24"
@@ -841,11 +817,7 @@
           <div
             id="game-navigation"
             class="p-3 space-y-5"
-          >
-
-            <!-- Generated automatically -->
-
-          </div>
+          ></div>
 
 
         </div>
@@ -860,9 +832,7 @@
 
 
 
-  <!-- =========================================================
-       FOOTER
-  ========================================================== -->
+  <!-- FOOTER -->
 
   <footer
     class="fixed bottom-0 left-0 md:left-64 right-0 text-center text-gray-400 text-xs py-3 bg-gray-950 border-t border-gray-800 z-10"
@@ -872,10 +842,6 @@
 
 
 
-  <!-- =========================================================
-       JAVASCRIPT
-  ========================================================== -->
-
   <script>
 
 
@@ -883,14 +849,10 @@
        BASIC HELPERS
     ========================================================== */
 
-    function percentage(
-      part,
-      total
-    ) {
+    function percentage(part, total) {
 
       const partNumber =
         Number(part);
-
 
       const totalNumber =
         Number(total);
@@ -1003,9 +965,7 @@
       }
 
 
-      return String(
-        game.opponent
-      )
+      return String(game.opponent)
 
         .replace(' (Amistoso)', '')
 
@@ -1019,15 +979,6 @@
 
     /* ==========================================================
        TREND ELIGIBILITY
-
-       A game participates in season trends unless its
-       individual game file explicitly contains:
-
-       includeInTrends: false
-
-       This allows matches such as Game 01 to remain visible
-       in results and match navigation without affecting the
-       developmental trend data.
     ========================================================== */
 
     function includeInSeasonTrends(game) {
@@ -1077,15 +1028,9 @@
 
 
       if (
-        competition.includes(
-          'pretemporada'
-        ) ||
-        competition.includes(
-          'amistoso'
-        ) ||
-        opponent.includes(
-          'amistoso'
-        )
+        competition.includes('pretemporada') ||
+        competition.includes('amistoso') ||
+        opponent.includes('amistoso')
       ) {
 
         return 'friendly';
@@ -1148,9 +1093,7 @@
 
 
       const gameId =
-        params.get(
-          'game'
-        );
+        params.get('game');
 
 
       if (!gameId) {
@@ -1173,12 +1116,6 @@
 
     /* ==========================================================
        SEASON STATISTICS
-
-       Important:
-       These are general season totals, so they include every
-       match — even matches excluded from trend analysis.
-
-       includeInTrends only affects the developmental charts.
     ========================================================== */
 
     function calculateSeasonStats() {
@@ -1188,35 +1125,22 @@
 
 
       let wins = 0;
-
       let draws = 0;
-
       let losses = 0;
 
-
       let goalsFor = 0;
-
       let goalsAgainst = 0;
-
       let cleanSheets = 0;
 
-
       let ourThrowInsTotal = 0;
-
       let ourThrowInsRetained = 0;
 
-
       let theirThrowInsTotal = 0;
-
       let theirThrowInsWon = 0;
 
-
       let purposelessTotal = 0;
-
       let purposelessKicks = 0;
-
       let purposelessCarries = 0;
-
       let purposelessMatches = 0;
 
 
@@ -1237,7 +1161,6 @@
 
 
         goalsFor += gf;
-
         goalsAgainst += ga;
 
 
@@ -1270,8 +1193,6 @@
 
 
 
-        /* Throw-ins */
-
         if (game.throwIns) {
 
           ourThrowInsTotal +=
@@ -1300,13 +1221,6 @@
         }
 
 
-
-        /* Purposeless Turnovers
-
-           Only count matches where this statistic was
-           actually tracked.
-
-        */
 
         if (
           game.purposelessTurnovers &&
@@ -1347,34 +1261,25 @@
       return {
 
         wins,
-
         draws,
-
         losses,
 
         goalsFor,
-
         goalsAgainst,
-
         cleanSheets,
 
         matches:
           games.length,
 
         ourThrowInsTotal,
-
         ourThrowInsRetained,
 
         theirThrowInsTotal,
-
         theirThrowInsWon,
 
         purposelessTotal,
-
         purposelessKicks,
-
         purposelessCarries,
-
         purposelessMatches
 
       };
@@ -1433,8 +1338,6 @@
 
 
 
-      /* Our throw-ins */
-
       const ourThrowPercentage =
         percentage(
           stats.ourThrowInsRetained,
@@ -1457,8 +1360,6 @@
 
 
 
-      /* Opponent throws won */
-
       const opponentThrowPercentage =
         percentage(
           stats.theirThrowInsWon,
@@ -1480,8 +1381,6 @@
         `${stats.theirThrowInsWon} / ${stats.theirThrowInsTotal}`;
 
 
-
-      /* Purposeless turnovers */
 
       if (
         stats.purposelessMatches > 0
@@ -1618,10 +1517,6 @@
 
 
 
-      /* ======================================================
-         SEASON OVERVIEW BUTTON
-      ====================================================== */
-
       const overviewButton =
         document.createElement(
           'button'
@@ -1686,10 +1581,6 @@
       );
 
 
-
-      /* ======================================================
-         GAME GROUP HELPER
-      ====================================================== */
 
       function createGameGroup(
         title,
@@ -2068,11 +1959,8 @@
 
 
     let throwInTrendChart = null;
-
     let setPieceTrendChart = null;
-
     let solutionsTrendChart = null;
-
     let turnoverTrendChart = null;
 
 
@@ -2485,22 +2373,18 @@
 
 
     /* ==========================================================
-       SET-PIECE EFFECTIVENESS TREND
+       SET-PIECE EFFECTIVENESS
 
-       Add to game files:
+       Includes:
+       - Throw-ins
+       - Goal kicks
+       - Free kicks
+       - Corners
 
-       trendStats: {
-
-         setPieces: {
-           effective: 3,
-           total: 8
-         }
-
-       }
-
-       "Effective" means the restart creates a dangerous
-       action OR allows us to retain pressure and continue
-       the attack.
+       Effective means the restart:
+       - retains controlled possession,
+       - continues the attack,
+       - or creates a dangerous action.
     ========================================================== */
 
     function renderSetPieceTrend() {
@@ -2636,26 +2520,113 @@
         );
 
 
+      const latestGame =
+        games[
+          games.length - 1
+        ];
+
+
       const latest =
         values[
           values.length - 1
         ];
 
 
+      const breakdown =
+        latestGame
+          .trendStats
+          .setPieces
+          .breakdown || {};
+
+
+
+      function setPieceLine(
+        label,
+        data
+      ) {
+
+        if (
+          !data ||
+          Number(data.total) <= 0
+        ) {
+
+          return '';
+
+        }
+
+
+        const pct =
+          percentage(
+            data.effective,
+            data.total
+          );
+
+
+        return `
+
+          <div
+            class="flex justify-between gap-4 py-1"
+          >
+
+            <span>
+              ${label}
+            </span>
+
+            <strong class="text-white">
+              ${data.effective}/${data.total}
+              · ${pct}%
+            </strong>
+
+          </div>
+
+        `;
+
+      }
+
+
 
       note.innerHTML = `
 
-        In the latest tracked match,
+        <div class="mb-3">
 
-        <strong
-          style="color: var(--altafulla-yellow);"
+          Latest match:
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${latest}%
+          </strong>
+
+          overall set-piece effectiveness.
+
+        </div>
+
+
+        <div
+          class="text-xs text-gray-400 border-t border-gray-700 pt-2"
         >
-          ${latest}%
-        </strong>
 
-        of our attacking corners and free kicks
-        produced a dangerous action
-        or allowed us to continue the attack.
+          ${setPieceLine(
+            'Throw-ins',
+            breakdown.throwIns
+          )}
+
+          ${setPieceLine(
+            'Goal kicks',
+            breakdown.goalKicks
+          )}
+
+          ${setPieceLine(
+            'Free kicks',
+            breakdown.freeKicks
+          )}
+
+          ${setPieceLine(
+            'Corners',
+            breakdown.corners
+          )}
+
+        </div>
 
       `;
 
@@ -2664,7 +2635,7 @@
 
 
     /* ==========================================================
-       EFFECTIVE POSSESSION SOLUTIONS
+       POSSESSION SOLUTION VARIETY
 
        Add to game files:
 
@@ -2859,17 +2830,18 @@
         <strong
           style="color: var(--altafulla-blue);"
         >
-          ${readable.length}
+          ${readable.length} of 5
         </strong>
 
-        different solutions:
+        different ways to progress:
 
         <strong>
           ${readable.join(', ')}
         </strong>.
 
-        The goal is not one favorite answer.
-        It is recognizing what the opponent gives us.
+        This measures variety rather than volume:
+        can we recognize and use different solutions
+        instead of forcing the same answer repeatedly?
 
       `;
 
@@ -2891,8 +2863,7 @@
               game.purposelessTurnovers &&
               Number.isFinite(
                 Number(
-                  game.purposelessTurnovers
-                    .total
+                  game.purposelessTurnovers.total
                 )
               )
           )
@@ -2918,8 +2889,7 @@
         games.map(
           game =>
             Number(
-              game.purposelessTurnovers
-                .total
+              game.purposelessTurnovers.total
             )
         );
 
@@ -3150,7 +3120,7 @@
         <strong>
           keep more of the possessions that should be ours,
           make our restarts useful,
-          find different solutions when the opponent changes,
+          recognize different solutions when the opponent changes,
           and give the ball away unnecessarily less often.
         </strong>
 
