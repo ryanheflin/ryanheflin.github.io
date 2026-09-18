@@ -14,7 +14,14 @@
     Match Analysis | CE Altafulla U15
   </title>
 
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 
   <!-- Shared Site JavaScript -->
   <script
@@ -43,7 +50,7 @@
   <script src="js/games/game-03.js"></script>
 
   <!-- Future games:
-  <script src="js/games/game-03.js"></script>
+  <script src="js/games/game-04.js"></script>
   -->
 
 
@@ -539,18 +546,201 @@
             class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
           >
 
-            <h3
-              class="text-xl font-bold mb-2"
-            >
-              Season Trends
-            </h3>
+
+            <div class="mb-6">
+
+              <h3
+                class="text-xl font-bold"
+              >
+                Season Trends
+              </h3>
 
 
-            <p
-              class="text-sm text-gray-300"
+              <p
+                class="text-sm text-gray-400 mt-1"
+              >
+                How the parts of our game model are changing
+                from one tracked match to the next.
+              </p>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 POSSESSION TREND
+            ================================================ -->
+
+            <div
+              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5 mb-5"
             >
-              Waiting for league play to begin
-            </p>
+
+              <div class="mb-4">
+
+                <h4
+                  class="font-bold text-white"
+                >
+                  Possession Control
+                </h4>
+
+                <p
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  Our share of the logged possession time.
+                </p>
+
+              </div>
+
+
+              <div
+                class="relative h-64"
+              >
+                <canvas id="possession-trend-chart"></canvas>
+              </div>
+
+
+              <div
+                class="mt-4 pt-4 border-t border-gray-700"
+              >
+
+                <p
+                  id="possession-trend-note"
+                  class="text-sm text-gray-300 leading-relaxed"
+                >
+                  Waiting for enough tracked matches.
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 PASSING TREND
+            ================================================ -->
+
+            <div
+              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5 mb-5"
+            >
+
+              <div class="mb-4">
+
+                <h4
+                  class="font-bold text-white"
+                >
+                  Passing Control
+                </h4>
+
+                <p
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  Total passes by Altafulla and the opponent.
+                </p>
+
+              </div>
+
+
+              <div
+                class="relative h-64"
+              >
+                <canvas id="passing-trend-chart"></canvas>
+              </div>
+
+
+              <div
+                class="mt-4 pt-4 border-t border-gray-700"
+              >
+
+                <p
+                  id="passing-trend-note"
+                  class="text-sm text-gray-300 leading-relaxed"
+                >
+                  Waiting for enough tracked matches.
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 THROW-IN TREND
+            ================================================ -->
+
+            <div
+              class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
+            >
+
+              <div class="mb-4">
+
+                <h4
+                  class="font-bold text-white"
+                >
+                  Throw-In Retention
+                </h4>
+
+                <p
+                  class="text-xs text-gray-500 mt-1"
+                >
+                  Percentage of our own throw-ins where
+                  we keep possession.
+                </p>
+
+              </div>
+
+
+              <div
+                class="relative h-64"
+              >
+                <canvas id="throwin-trend-chart"></canvas>
+              </div>
+
+
+              <div
+                class="mt-4 pt-4 border-t border-gray-700"
+              >
+
+                <p
+                  id="throwin-trend-note"
+                  class="text-sm text-gray-300 leading-relaxed"
+                >
+                  Waiting for enough tracked matches.
+                </p>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- ===============================================
+                 TREND SUMMARY
+            ================================================ -->
+
+            <div
+              class="mt-5 p-4 rounded-xl border border-yellow-500/20 bg-yellow-500/5"
+            >
+
+              <span
+                class="text-xs uppercase tracking-wide font-bold"
+                style="color: var(--altafulla-yellow);"
+              >
+                What the Trend Says
+              </span>
+
+
+              <p
+                id="season-trend-summary"
+                class="text-sm text-gray-300 leading-relaxed mt-2"
+              >
+                More detailed match data is needed before
+                a meaningful trend can be identified.
+              </p>
+
+            </div>
+
 
           </section>
 
@@ -705,13 +895,151 @@
 
 
     /* ==========================================================
+       NUMBER / METRIC HELPERS
+    ========================================================== */
+
+    function parseMetricNumber(value) {
+
+      if (
+        value === null ||
+        value === undefined
+      ) {
+
+        return null;
+
+      }
+
+
+      if (
+        typeof value === 'number'
+      ) {
+
+        return value;
+
+      }
+
+
+      const cleaned =
+        String(value)
+
+          .replace('%', '')
+
+          .replace('s', '')
+
+          .replace(',', '.')
+
+          .trim();
+
+
+      const number =
+        Number(cleaned);
+
+
+      return Number.isFinite(number)
+        ? number
+        : null;
+
+    }
+
+
+
+    function getMetric(
+      game,
+      label
+    ) {
+
+      if (
+        !game ||
+        !game.metrics ||
+        game.metrics[label] === undefined
+      ) {
+
+        return null;
+
+      }
+
+
+      return parseMetricNumber(
+        game.metrics[label]
+      );
+
+    }
+
+
+
+    /* ==========================================================
+       TREND FALLBACK DATA
+
+       Game 02 and Game 03 already have opponent totals from
+       the detailed analysis.
+
+       For future matches, instead of editing this page,
+       add this to the individual game JS file:
+
+       trendStats: {
+         opponentPasses: 236
+       },
+
+       The chart will automatically use trendStats first.
+    ========================================================== */
+
+    const trendFallbacks = {
+
+      'game-02': {
+
+        opponentPasses: 267
+
+      },
+
+      'game-03': {
+
+        opponentPasses: 236
+
+      }
+
+    };
+
+
+
+    function getOpponentPasses(game) {
+
+      if (
+        game.trendStats &&
+        Number.isFinite(
+          Number(
+            game.trendStats.opponentPasses
+          )
+        )
+      ) {
+
+        return Number(
+          game.trendStats.opponentPasses
+        );
+
+      }
+
+
+      if (
+        trendFallbacks[game.id]
+      ) {
+
+        return Number(
+          trendFallbacks[
+            game.id
+          ].opponentPasses
+        );
+
+      }
+
+
+      return null;
+
+    }
+
+
+
+    /* ==========================================================
        URL HELPERS
-
-       Each match can be opened directly with:
-
-       data.html?game=game-01
-       data.html?game=game-02
-       etc.
     ========================================================== */
 
     function updateGameUrl(gameId) {
@@ -986,16 +1314,12 @@
 
 
 
-      /* Record */
-
       document.getElementById(
         'season-record'
       ).textContent =
         `${stats.wins}W - ${stats.draws}D - ${stats.losses}L`;
 
 
-
-      /* Goals */
 
       document.getElementById(
         'season-goals-for'
@@ -1015,8 +1339,6 @@
         stats.cleanSheets;
 
 
-
-      /* Matches */
 
       document.getElementById(
         'matches-played'
@@ -1120,6 +1442,1024 @@
           'Season totals and Game Model indicators update automatically as each match report is added.';
 
       }
+
+    }
+
+
+
+    /* ==========================================================
+       SEASON TREND DATA
+    ========================================================== */
+
+    function getSeasonTrendGames() {
+
+      return [
+        ...(window.seasonGames || [])
+      ]
+
+        .filter(game => {
+
+          const possession =
+            getMetric(
+              game,
+              'Posesión'
+            );
+
+
+          const passes =
+            getMetric(
+              game,
+              'Pases'
+            );
+
+
+          return (
+            possession !== null &&
+            passes !== null
+          );
+
+        })
+
+        .sort(
+          (a, b) =>
+            a.gameNumber -
+            b.gameNumber
+        );
+
+    }
+
+
+
+    function getShortOpponentName(game) {
+
+      if (!game.opponent) {
+        return `Match ${game.gameNumber}`;
+      }
+
+
+      return game.opponent
+
+        .replace(' (Amistoso)', '')
+
+        .replace(' S15', '')
+
+        .replace(' S16', '');
+
+    }
+
+
+
+    /* ==========================================================
+       CHART SETTINGS
+    ========================================================== */
+
+    const chartYellow =
+      '#f2e40a';
+
+
+    const chartBlue =
+      '#62bed6';
+
+
+    const chartGray =
+      '#9ca3af';
+
+
+    const chartGrid =
+      'rgba(156, 163, 175, 0.12)';
+
+
+    const chartText =
+      '#9ca3af';
+
+
+
+    let possessionTrendChart = null;
+
+    let passingTrendChart = null;
+
+    let throwInTrendChart = null;
+
+
+
+    function basicChartOptions(
+      suffix = ''
+    ) {
+
+      return {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+
+        interaction: {
+
+          mode: 'index',
+
+          intersect: false
+
+        },
+
+
+        plugins: {
+
+          legend: {
+
+            labels: {
+
+              color: chartText,
+
+              usePointStyle: true,
+
+              pointStyle: 'circle',
+
+              boxWidth: 8
+
+            }
+
+          },
+
+
+          tooltip: {
+
+            callbacks: {
+
+              label: function(context) {
+
+                return `${
+                  context.dataset.label
+                }: ${
+                  context.parsed.y
+                }${suffix}`;
+
+              }
+
+            }
+
+          }
+
+        },
+
+
+        scales: {
+
+          x: {
+
+            ticks: {
+
+              color: chartText
+
+            },
+
+            grid: {
+
+              color: chartGrid
+
+            }
+
+          },
+
+
+          y: {
+
+            beginAtZero: false,
+
+            ticks: {
+
+              color: chartText,
+
+              callback: function(value) {
+
+                return `${value}${suffix}`;
+
+              }
+
+            },
+
+            grid: {
+
+              color: chartGrid
+
+            }
+
+          }
+
+        }
+
+      };
+
+    }
+
+
+
+    /* ==========================================================
+       POSSESSION TREND CHART
+    ========================================================== */
+
+    function renderPossessionTrend(
+      games
+    ) {
+
+      const canvas =
+        document.getElementById(
+          'possession-trend-chart'
+        );
+
+
+      if (
+        !canvas ||
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      const labels =
+        games.map(
+          game =>
+            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
+        );
+
+
+      const possession =
+        games.map(
+          game =>
+            getMetric(
+              game,
+              'Posesión'
+            )
+        );
+
+
+      if (possessionTrendChart) {
+
+        possessionTrendChart.destroy();
+
+      }
+
+
+      const options =
+        basicChartOptions('%');
+
+
+      options.scales.y.min = 30;
+
+      options.scales.y.max = 70;
+
+
+      possessionTrendChart =
+        new Chart(
+          canvas,
+          {
+
+            type: 'line',
+
+            data: {
+
+              labels,
+
+              datasets: [
+
+                {
+
+                  label:
+                    'Altafulla Possession',
+
+                  data:
+                    possession,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  pointHoverRadius: 7,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                }
+
+              ]
+
+            },
+
+            options
+
+          }
+        );
+
+    }
+
+
+
+    /* ==========================================================
+       PASSING TREND CHART
+    ========================================================== */
+
+    function renderPassingTrend(
+      games
+    ) {
+
+      const canvas =
+        document.getElementById(
+          'passing-trend-chart'
+        );
+
+
+      if (
+        !canvas ||
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      const labels =
+        games.map(
+          game =>
+            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
+        );
+
+
+      const ourPasses =
+        games.map(
+          game =>
+            getMetric(
+              game,
+              'Pases'
+            )
+        );
+
+
+      const opponentPasses =
+        games.map(
+          game =>
+            getOpponentPasses(
+              game
+            )
+        );
+
+
+      if (passingTrendChart) {
+
+        passingTrendChart.destroy();
+
+      }
+
+
+      passingTrendChart =
+        new Chart(
+          canvas,
+          {
+
+            type: 'line',
+
+            data: {
+
+              labels,
+
+              datasets: [
+
+                {
+
+                  label:
+                    'Altafulla',
+
+                  data:
+                    ourPasses,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  pointHoverRadius: 7,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                },
+
+
+                {
+
+                  label:
+                    'Opponent',
+
+                  data:
+                    opponentPasses,
+
+                  borderColor:
+                    chartBlue,
+
+                  backgroundColor:
+                    chartBlue,
+
+                  pointBackgroundColor:
+                    chartBlue,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  pointHoverRadius: 7,
+
+                  borderWidth: 3,
+
+                  tension: 0.25,
+
+                  spanGaps: true
+
+                }
+
+              ]
+
+            },
+
+            options:
+              basicChartOptions()
+
+          }
+        );
+
+    }
+
+
+
+    /* ==========================================================
+       THROW-IN TREND CHART
+    ========================================================== */
+
+    function renderThrowInTrend(
+      games
+    ) {
+
+      const canvas =
+        document.getElementById(
+          'throwin-trend-chart'
+        );
+
+
+      if (
+        !canvas ||
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      const throwInGames =
+        games.filter(
+          game =>
+            game.throwIns &&
+            Number(
+              game.throwIns.oursTotal || 0
+            ) > 0
+        );
+
+
+      if (
+        throwInGames.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      const labels =
+        throwInGames.map(
+          game =>
+            `M${game.gameNumber} vs ${getShortOpponentName(game)}`
+        );
+
+
+      const retention =
+        throwInGames.map(
+          game => {
+
+            return percentage(
+
+              Number(
+                game.throwIns.oursRetained || 0
+              ),
+
+              Number(
+                game.throwIns.oursTotal || 0
+              )
+
+            );
+
+          }
+        );
+
+
+      /* 50% Target Line */
+
+      const target =
+        throwInGames.map(
+          () => 50
+        );
+
+
+      if (throwInTrendChart) {
+
+        throwInTrendChart.destroy();
+
+      }
+
+
+      const options =
+        basicChartOptions('%');
+
+
+      options.scales.y.min = 0;
+
+      options.scales.y.max = 100;
+
+
+      throwInTrendChart =
+        new Chart(
+          canvas,
+          {
+
+            type: 'line',
+
+            data: {
+
+              labels,
+
+              datasets: [
+
+                {
+
+                  label:
+                    'Throw-Ins Retained',
+
+                  data:
+                    retention,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  pointHoverRadius: 7,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                },
+
+
+                {
+
+                  label:
+                    '50% Target',
+
+                  data:
+                    target,
+
+                  borderColor:
+                    chartGray,
+
+                  backgroundColor:
+                    chartGray,
+
+                  pointRadius: 0,
+
+                  borderWidth: 1,
+
+                  borderDash:
+                    [6, 6],
+
+                  tension: 0
+
+                }
+
+              ]
+
+            },
+
+            options
+
+          }
+        );
+
+    }
+
+
+
+    /* ==========================================================
+       TREND NOTES
+    ========================================================== */
+
+    function renderTrendNotes(
+      games
+    ) {
+
+      if (
+        games.length < 2
+      ) {
+
+        return;
+
+      }
+
+
+      const previous =
+        games[
+          games.length - 2
+        ];
+
+
+      const latest =
+        games[
+          games.length - 1
+        ];
+
+
+
+      /* Possession */
+
+      const previousPossession =
+        getMetric(
+          previous,
+          'Posesión'
+        );
+
+
+      const latestPossession =
+        getMetric(
+          latest,
+          'Posesión'
+        );
+
+
+      const possessionChange =
+        latestPossession -
+        previousPossession;
+
+
+
+      const possessionNote =
+        document.getElementById(
+          'possession-trend-note'
+        );
+
+
+      if (possessionNote) {
+
+        if (
+          possessionChange > 0
+        ) {
+
+          possessionNote.innerHTML = `
+
+            Possession increased from
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${previousPossession}%
+            </strong>
+
+            to
+
+            <strong
+              style="color: var(--altafulla-yellow);"
+            >
+              ${latestPossession}%
+            </strong>.
+
+            We kept the ball for longer stretches
+            and spent more of the match playing on our terms.
+
+          `;
+
+        }
+
+        else {
+
+          possessionNote.innerHTML = `
+
+            Possession changed from
+
+            <strong>
+              ${previousPossession}%
+            </strong>
+
+            to
+
+            <strong>
+              ${latestPossession}%
+            </strong>.
+
+            The important question is not possession by itself,
+            but whether we are using the ball
+            to move the opponent and create advantages.
+
+          `;
+
+        }
+
+      }
+
+
+
+      /* Passing */
+
+      const previousPasses =
+        getMetric(
+          previous,
+          'Pases'
+        );
+
+
+      const latestPasses =
+        getMetric(
+          latest,
+          'Pases'
+        );
+
+
+      const previousOpponentPasses =
+        getOpponentPasses(
+          previous
+        );
+
+
+      const latestOpponentPasses =
+        getOpponentPasses(
+          latest
+        );
+
+
+      const passingNote =
+        document.getElementById(
+          'passing-trend-note'
+        );
+
+
+      if (passingNote) {
+
+        const ourDifference =
+          latestPasses -
+          previousPasses;
+
+
+        let opponentText = '';
+
+
+        if (
+          previousOpponentPasses !== null &&
+          latestOpponentPasses !== null
+        ) {
+
+          const opponentDifference =
+            latestOpponentPasses -
+            previousOpponentPasses;
+
+
+          opponentText = `
+
+            Opponent passing moved from
+
+            <strong>
+              ${previousOpponentPasses}
+            </strong>
+
+            to
+
+            <strong>
+              ${latestOpponentPasses}
+            </strong>
+
+            ${
+              opponentDifference < 0
+                ? ', another good sign that our pressure is making sustained possession more difficult.'
+                : '.'
+            }
+
+          `;
+
+        }
+
+
+        passingNote.innerHTML = `
+
+          We completed
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${Math.abs(ourDifference)}
+            ${
+              ourDifference >= 0
+                ? 'more'
+                : 'fewer'
+            }
+            passes
+          </strong>
+
+          than in the previous tracked match.
+
+          ${opponentText}
+
+        `;
+
+      }
+
+
+
+      /* Throw-Ins */
+
+      const previousThrowPercentage =
+        previous.throwIns
+          ? percentage(
+              previous.throwIns.oursRetained,
+              previous.throwIns.oursTotal
+            )
+          : null;
+
+
+      const latestThrowPercentage =
+        latest.throwIns
+          ? percentage(
+              latest.throwIns.oursRetained,
+              latest.throwIns.oursTotal
+            )
+          : null;
+
+
+      const throwInNote =
+        document.getElementById(
+          'throwin-trend-note'
+        );
+
+
+      if (
+        throwInNote &&
+        previousThrowPercentage !== null &&
+        latestThrowPercentage !== null
+      ) {
+
+        throwInNote.innerHTML = `
+
+          Throw-in retention improved from
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${previousThrowPercentage}%
+          </strong>
+
+          to
+
+          <strong
+            style="color: var(--altafulla-yellow);"
+          >
+            ${latestThrowPercentage}%
+          </strong>.
+
+          That is progress,
+          but we are still below our
+
+          <strong>
+            50% target.
+          </strong>
+
+        `;
+
+      }
+
+
+
+      /* Overall Summary */
+
+      const summary =
+        document.getElementById(
+          'season-trend-summary'
+        );
+
+
+      if (summary) {
+
+        summary.innerHTML = `
+
+          After two fully tracked matches,
+          we are
+
+          <strong>
+            keeping more possession
+          </strong>,
+
+          <strong>
+            completing more passes
+          </strong>
+
+          and allowing the opponent
+          fewer sustained passing sequences.
+
+          Our throw-ins are improving as well.
+
+          The biggest areas still behind our game model are
+          protecting the team when we lose the ball,
+          keeping the lines connected when we press,
+          and turning good buildup into more dangerous attacks.
+
+        `;
+
+      }
+
+    }
+
+
+
+    /* ==========================================================
+       RENDER SEASON TRENDS
+    ========================================================== */
+
+    function renderSeasonTrends() {
+
+      const games =
+        getSeasonTrendGames();
+
+
+      if (
+        games.length === 0
+      ) {
+
+        return;
+
+      }
+
+
+      renderPossessionTrend(
+        games
+      );
+
+
+      renderPassingTrend(
+        games
+      );
+
+
+      renderThrowInTrend(
+        games
+      );
+
+
+      renderTrendNotes(
+        games
+      );
 
     }
 
@@ -1499,7 +2839,6 @@
           >
 
 
-            <!-- Our Throw-Ins -->
             <div
               class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
             >
@@ -1533,7 +2872,6 @@
 
 
 
-            <!-- Opponent Throw-Ins -->
             <div
               class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
             >
@@ -1567,7 +2905,6 @@
 
 
 
-            <!-- Purposeless Turnovers -->
             <div
               class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
             >
@@ -1754,10 +3091,6 @@
         >
 
 
-          <!-- ===============================================
-               MATCH HEADER
-          ================================================ -->
-
           <section
             class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden"
           >
@@ -1890,10 +3223,6 @@
 
 
 
-          <!-- ===============================================
-               GENERAL MATCH STATISTICS
-          ================================================ -->
-
           ${
             game.metrics
               ? renderGameMetrics(
@@ -1904,17 +3233,9 @@
 
 
 
-          <!-- ===============================================
-               GAME MODEL INDICATORS
-          ================================================ -->
-
           ${renderGameModelIndicators(game)}
 
 
-
-          <!-- ===============================================
-               WHAT WE SAW
-          ================================================ -->
 
           ${
             game.analysis
@@ -1945,10 +3266,6 @@
 
 
 
-          <!-- ===============================================
-               CONNECTION TO GAME MODEL
-          ================================================ -->
-
           ${
             game.gameModel
               ? `
@@ -1978,10 +3295,6 @@
 
 
 
-          <!-- ===============================================
-               WHAT COMES NEXT
-          ================================================ -->
-
           ${
             game.nextSteps
               ? `
@@ -2010,10 +3323,6 @@
           }
 
 
-
-          <!-- ===============================================
-               VIDEO
-          ================================================ -->
 
           ${clipsHTML}
 
@@ -2115,10 +3424,6 @@
 
     /* ==========================================================
        SHOW SEASON OVERVIEW
-
-       updateUrl defaults to true when the visitor clicks.
-       It is false when responding to browser navigation
-       or opening an existing direct URL.
     ========================================================== */
 
     function showSeasonOverview(
@@ -2286,9 +3591,6 @@
 
     /* ==========================================================
        BROWSER BACK / FORWARD
-
-       Reopens the view represented by the URL without
-       creating another history entry.
     ========================================================== */
 
     window.addEventListener(
@@ -2321,15 +3623,6 @@
 
     /* ==========================================================
        INITIALIZE
-
-       If the page opens with:
-
-       data.html?game=game-01
-
-       Match 1 opens automatically.
-
-       If there is no valid game parameter, the Season
-       Overview opens normally.
     ========================================================== */
 
     document.addEventListener(
@@ -2347,6 +3640,10 @@
 
 
         renderGameViews();
+
+
+        /* New */
+        renderSeasonTrends();
 
 
 
