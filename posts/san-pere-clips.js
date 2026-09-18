@@ -122,7 +122,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_4"
+          src="https://www.youtube.com/embed/5xpxIyGLh3s"
           title="San Pere - Oportunidad perdida"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -133,7 +133,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Escribe aquí la solución que querías que encontráramos.
+        Esto fue lo que trabajamos en el entrenamiento la semana pasada: del central al lateral, orientarse hacia la banda y jugar con el hombre libre. Es mucho más fácil hacer dos pases sencillos aquí. No siempre es la decisión correcta, pero ten presente que normalmente hay opciones más fáciles.
       </li>
     </ul>
 
