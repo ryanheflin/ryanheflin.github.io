@@ -561,19 +561,45 @@ Ahora tenemos que conectar todo.
 
   clips: [
 
-    // Add Game 03 clips here as you create them.
+    {
+      title: 'Primera Parte',
 
-    // Example:
-    //
-    // {
-    //   title: 'Salir de la presión',
-    //
-    //   description:
-    //     'Buena salida desde atrás y cambio de orientación',
-    //
-    //   embedUrl:
-    //     'https://www.youtube.com/embed/VIDEO_ID'
-    // }
+      description:
+        'Primeros 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/MYkE_AMBdpo'
+    },
+
+    {
+      title: 'Segunda Parte',
+
+      description:
+        'Próximos 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/SuXON_gI5y4'
+    },
+
+    {
+      title: 'Tercera Parte',
+
+      description:
+        'Próximos 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/RW9Hn4y2EdM'
+    },
+
+    {
+      title: 'Parte Final',
+
+      description:
+        'Últimos 20 minutos completos',
+
+      embedUrl:
+        'https://www.youtube.com/embed/CVH72UBiNUE'
+    }
 
   ]
 
