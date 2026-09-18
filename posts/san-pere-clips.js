@@ -42,7 +42,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Escribe aquí el punto principal que quieres que los jugadores vean.
+        Me encanta la paciencia de aquí, me encanta que encontramos a Gio en el medio e inmediatamente atacamos. Buena idea, lástima que el pase entre líneas al final fue un poco demasiado fuerte.
       </li>
     </ul>
 
