@@ -31,7 +31,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_1"
+          src="https://www.youtube.com/embed/Ufs6VxOE50k"
           title="San Pere - Buena salida"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
