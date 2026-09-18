@@ -168,7 +168,55 @@ window.seasonGames.push({
      MATCH ANALYSIS
   ========================================================== */
 
-  analysis: `
+analysis: `
+
+<div
+  class="mb-6 p-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10"
+>
+
+  <div
+    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+  >
+
+    <div>
+
+      <p
+        class="font-bold text-white"
+      >
+        Video Analysis: San Pere
+      </p>
+
+      <p
+        class="text-sm text-gray-400 mt-1"
+      >
+        Watch selected clips showing good decisions,
+        missed opportunities and our defensive pressure.
+      </p>
+
+    </div>
+
+
+    <a
+      href="index.html?post=san-pere-clips"
+      class="inline-flex items-center justify-center px-4 py-2 rounded-lg font-bold text-sm whitespace-nowrap"
+      style="
+        background-color: var(--altafulla-yellow);
+        color: #000000;
+      "
+    >
+      Watch Clips →
+    </a>
+
+  </div>
+
+</div>
+
+
+<!-- ==========================================================
+     MATCH STAT GRAPHIC
+========================================================== -->
+
+<div class="my-6">
 
 
 <!-- ==========================================================
