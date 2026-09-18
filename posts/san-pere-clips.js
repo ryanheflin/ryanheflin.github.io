@@ -67,6 +67,24 @@ window.blogPosts.push({
       </li>
     </ul>
 
+     <!-- CLIP -->
+    <div class="mt-4 rounded-xl overflow-hidden border border-gray-700 bg-black">
+      <div class="aspect-video">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/FhTriLk7Geg"
+          title="San Pere - Buena idea con balón"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
+      <li>
+       ¡Mira esa combinación por la banda! Ojalá podamos ser más peligrosos por aquí en el futuro, pero tenemos un buen posicionamiento y esto va muy bien.
+
 
 
     <!-- =====================================================
