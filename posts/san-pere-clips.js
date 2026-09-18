@@ -164,7 +164,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Escribe aquí qué hicimos bien: presión, cobertura, distancias, orientación o reacción.
+        Añadiré los clips aquí en cuanto se me reinicie el límite diario de subida.
       </li>
     </ul>
 
@@ -185,7 +185,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Escribe aquí el hábito defensivo que quieres reforzar.
+        Añadiré los clips aquí en cuanto se me reinicie el límite diario de subida.
       </li>
     </ul>
 
