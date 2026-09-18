@@ -4,6 +4,8 @@ window.seasonGames.push({
 
   gameNumber: 1,
 
+  includeInTrends: false,
+
   opponent: 'Sant Pau s16 (Amistoso)',
 
   homeAway: 'away',
