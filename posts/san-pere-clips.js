@@ -101,7 +101,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_3"
+          src="https://www.youtube.com/embed/uloythq07eU"
           title="San Pere - Oportunidad perdida"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -112,7 +112,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        ¿Qué opción teníamos aquí que no vimos o no aprovechamos?
+        No estoy diciendo que hayamos tomado la decisión equivocada aquí, solo quiero que seamos conscientes de que casi siempre Gio está disponible para un pase por el centro desde el lateral. Lo puedes ver aquí.
       </li>
     </ul>
 
