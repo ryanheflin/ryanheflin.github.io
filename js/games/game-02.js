@@ -4,8 +4,6 @@ window.seasonGames.push({
 
   gameNumber: 2,
 
-  matchType: 'friendly',
-
   opponent: 'Pallaresos S15 (Amistoso)',
 
   homeAway: 'home',
@@ -53,52 +51,46 @@ window.seasonGames.push({
   /* ==========================================================
      SEASON TREND DATA
 
-     Only include categories that were actually tracked
-     or clearly demonstrated in the match.
-
-     Effective possession solutions are binary:
-     did we successfully use this solution at least once?
-
-     Possible values:
-     inside
-     outside
-     behind
-     switch
-     carry
+     Set-piece effectiveness includes all four attacking
+     restart types: throw-ins, goal kicks, free kicks and
+     corners.
   ========================================================== */
 
   trendStats: {
 
-    effectiveSolutions: [
+    opponentPasses: 267,
 
-      'inside',
+    setPieces: {
 
-      'outside',
+      effective: 12,
 
-      'behind',
+      total: 30,
 
-      'switch',
+      breakdown: {
 
-      'carry'
+        throwIns: {
+          effective: 6,
+          total: 19
+        },
 
-    ]
+        goalKicks: {
+          effective: 4,
+          total: 5
+        },
 
-    /*
-      Set-piece effectiveness is intentionally NOT included
-      for this match.
+        freeKicks: {
+          effective: 1,
+          total: 3
+        },
 
-      We did not originally code every attacking corner
-      and free kick using the same effective / ineffective
-      definition, so adding a number now would create
-      a false baseline.
+        corners: {
+          effective: 1,
+          total: 3
+        }
 
-      Future example:
-
-      setPieces: {
-        effective: 4,
-        total: 9
       }
-    */
+
+    }
 
   },
 
@@ -106,7 +98,7 @@ window.seasonGames.push({
   /* ==========================================================
      THROW-INS
 
-     Best-effort count from the match log.
+     Best-effort count from the full match log.
   ========================================================== */
 
   throwIns: {
@@ -124,15 +116,29 @@ window.seasonGames.push({
 
   /* ==========================================================
      PURPOSELESS TURNOVERS
+
+     Full-match retrospective count.
+
+     Count:
+     - unnecessary kicks / clearances when a controlled
+       option was available
+     - head-down carries that directly surrendered possession
+
+     Do NOT count:
+     - purposeful passes that were intercepted
+     - bad touches after a good decision
+     - crosses / through balls attempting to create
+     - necessary clearances under genuine pressure
+     - legitimate attempts to beat an opponent
   ========================================================== */
 
   purposelessTurnovers: {
 
-    total: 10,
+    total: 16,
 
-    kicks: 7,
+    kicks: 11,
 
-    carries: 3
+    carries: 5
 
   },
 
@@ -300,20 +306,13 @@ No podemos seguir regalando tantas posesiones.
   El Partido por Periodos
 </h3>
 
+<div class="overflow-x-auto my-6">
 
-<div
-  class="overflow-x-auto my-6"
->
-
-  <table
-    class="w-full text-sm border-collapse"
-  >
+  <table class="w-full text-sm border-collapse">
 
     <thead>
 
-      <tr
-        class="border-b border-gray-700"
-      >
+      <tr class="border-b border-gray-700">
 
         <th class="text-left py-3 pr-4 text-gray-400">
           Periodo
@@ -337,7 +336,6 @@ No podemos seguir regalando tantas posesiones.
 
 
     <tbody>
-
 
       <tr class="border-b border-gray-700">
 
@@ -591,9 +589,7 @@ y pasó directamente por nuestro centro del campo.
   <p class="mt-2">
     El siguiente paso es bastante sencillo de entender,
     aunque no sea fácil de hacer:
-    <strong>
-      mantenerlo durante todo el partido.
-    </strong>
+    <strong>mantenerlo durante todo el partido.</strong>
   </p>
 
 </div>
@@ -602,49 +598,33 @@ y pasó directamente por nuestro centro del campo.
 
 
   /* ==========================================================
-     VIDEO CLIPS
+     MATCH VIDEOS
   ========================================================== */
 
   clips: [
 
     {
       title: 'Primera Parte',
-
-      description:
-        'Primeros 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/KhEJExFW9MI'
+      description: 'Primeros 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/KhEJExFW9MI'
     },
 
     {
       title: 'Segunda Parte',
-
-      description:
-        'Próximos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/okRPBdTLPCM'
+      description: 'Próximos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/okRPBdTLPCM'
     },
 
     {
       title: 'Tercera Parte',
-
-      description:
-        'Próximos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/EvyZk_mYMT8'
+      description: 'Próximos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/EvyZk_mYMT8'
     },
 
     {
       title: 'Parte Final',
-
-      description:
-        'Últimos 20 minutos completos',
-
-      embedUrl:
-        'https://www.youtube.com/embed/MTLWsMQGG9E'
+      description: 'Últimos 20 minutos completos',
+      embedUrl: 'https://www.youtube.com/embed/MTLWsMQGG9E'
     }
 
   ]
