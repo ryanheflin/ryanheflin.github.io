@@ -643,7 +643,7 @@
 
 
 
-                <!-- POSSESSION SOLUTIONS -->
+                <!-- POSSESSION EFFICIENCY -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -654,15 +654,15 @@
                     <h4
                       class="font-bold text-white"
                     >
-                      Possession Solution Variety
+                      Possession Efficiency
                     </h4>
 
 
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
-                      How many different ways we successfully
-                      progressed against the opponent.
+                      How often our possessions produce meaningful progress,
+                      solve pressure or create danger.
                     </p>
 
                   </div>
@@ -672,24 +672,16 @@
                     class="relative h-56 mt-4"
                   >
                     <canvas
-                      id="solutions-trend-chart"
+                      id="possession-efficiency-trend-chart"
                     ></canvas>
                   </div>
 
 
-                  <div
-                    class="text-[11px] text-gray-600 mt-2"
-                  >
-                    Inside · Outside · In Behind · Switch · Carry
-                  </div>
-
-
                   <p
-                    id="solutions-trend-note"
+                    id="possession-efficiency-trend-note"
                     class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
                   >
-                    Add effective solutions to match files
-                    to begin this trend.
+                    Waiting for tracked match data.
                   </p>
 
                 </div>
@@ -1960,7 +1952,7 @@
 
     let throwInTrendChart = null;
     let setPieceTrendChart = null;
-    let solutionsTrendChart = null;
+    let possessionEfficiencyTrendChart = null;
     let turnoverTrendChart = null;
 
 
@@ -2635,29 +2627,33 @@
 
 
     /* ==========================================================
-       POSSESSION SOLUTION VARIETY
+       POSSESSION EFFICIENCY
 
        Add to game files:
 
        trendStats: {
 
-         effectiveSolutions: [
-           'inside',
-           'outside',
-           'behind',
-           'switch',
-           'carry'
-         ]
+         possessionEfficiency: {
+           effective: 18,
+           total: 80
+         }
 
        }
 
-       Only list a solution if it worked successfully
-       during that match.
+       Efficient possession =
+       a possession rated 7/10 or higher
+       in the match possession log.
 
-       Maximum = 5.
+       This generally means the possession:
+       - produced meaningful controlled progression,
+       - successfully solved pressure,
+       - broke a defensive line,
+       - or created a dangerous attacking action.
+
+       Initial target = 40%.
     ========================================================== */
 
-    function renderSolutionsTrend() {
+    function renderPossessionEfficiencyTrend() {
 
       const games =
         (window.seasonGames || [])
@@ -2665,10 +2661,12 @@
             game =>
               includeInSeasonTrends(game) &&
               game.trendStats &&
-              Array.isArray(
+              game.trendStats.possessionEfficiency &&
+              Number(
                 game.trendStats
-                  .effectiveSolutions
-              )
+                  .possessionEfficiency
+                  .total
+              ) > 0
           )
           .sort(
             (a, b) =>
@@ -2691,29 +2689,43 @@
       const values =
         games.map(
           game =>
-            new Set(
+            percentage(
+
               game.trendStats
-                .effectiveSolutions
-            ).size
+                .possessionEfficiency
+                .effective,
+
+              game.trendStats
+                .possessionEfficiency
+                .total
+
+            )
+        );
+
+
+
+      const target =
+        games.map(
+          () => 40
         );
 
 
 
       if (
-        solutionsTrendChart
+        possessionEfficiencyTrendChart
       ) {
 
-        solutionsTrendChart.destroy();
+        possessionEfficiencyTrendChart.destroy();
 
       }
 
 
 
-      solutionsTrendChart =
+      possessionEfficiencyTrendChart =
         new Chart(
 
           document.getElementById(
-            'solutions-trend-chart'
+            'possession-efficiency-trend-chart'
           ),
 
           {
@@ -2733,6 +2745,9 @@
               datasets: [
 
                 {
+
+                  label:
+                    'Possession Efficiency',
 
                   data:
                     values,
@@ -2757,6 +2772,30 @@
 
                   tension: 0.25
 
+                },
+
+
+                {
+
+                  label:
+                    '40% Target',
+
+                  data:
+                    target,
+
+                  borderColor:
+                    chartGray,
+
+                  backgroundColor:
+                    chartGray,
+
+                  borderDash:
+                    [5, 5],
+
+                  pointRadius: 0,
+
+                  borderWidth: 1
+
                 }
 
               ]
@@ -2766,13 +2805,20 @@
 
             options:
               createTrendChartOptions(
-                '',
+                '%',
                 0,
-                5
+                100
               )
 
           }
 
+        );
+
+
+
+      const note =
+        document.getElementById(
+          'possession-efficiency-trend-note'
         );
 
 
@@ -2783,67 +2829,173 @@
         ];
 
 
-      const solutions =
-        latestGame
-          .trendStats
-          .effectiveSolutions;
+      const latest =
+        values[
+          values.length - 1
+        ];
 
 
-
-      const friendlyNames = {
-
-        inside:
-          'through the middle',
-
-        outside:
-          'outside',
-
-        behind:
-          'in behind',
-
-        switch:
-          'switching the field',
-
-        carry:
-          'carrying into space'
-
-      };
+      const latestEffective =
+        Number(
+          latestGame
+            .trendStats
+            .possessionEfficiency
+            .effective
+        );
 
 
-
-      const readable =
-        solutions.map(
-          solution =>
-            friendlyNames[solution] ||
-            solution
+      const latestTotal =
+        Number(
+          latestGame
+            .trendStats
+            .possessionEfficiency
+            .total
         );
 
 
 
-      document.getElementById(
-        'solutions-trend-note'
-      ).innerHTML = `
+      if (
+        games.length >= 2
+      ) {
 
-        In the latest tracked match,
-        we successfully used
+        const previousGame =
+          games[
+            games.length - 2
+          ];
 
-        <strong
-          style="color: var(--altafulla-blue);"
-        >
-          ${readable.length} of 5
-        </strong>
 
-        different ways to progress:
+        const previous =
+          values[
+            values.length - 2
+          ];
 
-        <strong>
-          ${readable.join(', ')}
-        </strong>.
 
-        This measures variety rather than volume:
-        can we recognize and use different solutions
-        instead of forcing the same answer repeatedly?
+        const previousEffective =
+          Number(
+            previousGame
+              .trendStats
+              .possessionEfficiency
+              .effective
+          );
 
-      `;
+
+        const previousTotal =
+          Number(
+            previousGame
+              .trendStats
+              .possessionEfficiency
+              .total
+          );
+
+
+
+        if (
+          latest > previous
+        ) {
+
+          note.innerHTML = `
+
+            Possession efficiency improved from
+
+            <strong>
+              ${previous}%
+            </strong>
+
+            (${previousEffective}/${previousTotal})
+
+            to
+
+            <strong
+              style="color: var(--altafulla-blue);"
+            >
+              ${latest}%
+            </strong>
+
+            (${latestEffective}/${latestTotal}).
+
+            Our initial target is
+            <strong>40%</strong>.
+
+          `;
+
+        }
+
+        else if (
+          latest < previous
+        ) {
+
+          note.innerHTML = `
+
+            Possession efficiency moved from
+
+            <strong>
+              ${previous}%
+            </strong>
+
+            (${previousEffective}/${previousTotal})
+
+            to
+
+            <strong
+              style="color: var(--altafulla-blue);"
+            >
+              ${latest}%
+            </strong>
+
+            (${latestEffective}/${latestTotal}).
+
+            Our target is
+            <strong>40%</strong>.
+
+          `;
+
+        }
+
+        else {
+
+          note.innerHTML = `
+
+            Possession efficiency remained at
+
+            <strong
+              style="color: var(--altafulla-blue);"
+            >
+              ${latest}%
+            </strong>
+
+            (${latestEffective}/${latestTotal}).
+
+            Our target is
+            <strong>40%</strong>.
+
+          `;
+
+        }
+
+      }
+
+      else {
+
+        note.innerHTML = `
+
+          Our first tracked match produced
+
+          <strong
+            style="color: var(--altafulla-blue);"
+          >
+            ${latest}%
+          </strong>
+
+          efficient possessions
+
+          (${latestEffective}/${latestTotal}).
+
+          Our initial target is
+          <strong>40%</strong>.
+
+        `;
+
+      }
 
     }
 
@@ -3120,7 +3272,7 @@
         <strong>
           keep more of the possessions that should be ours,
           make our restarts useful,
-          recognize different solutions when the opponent changes,
+          turn more possessions into meaningful progress or danger,
           and give the ball away unnecessarily less often.
         </strong>
 
@@ -3136,7 +3288,7 @@
 
       renderSetPieceTrend();
 
-      renderSolutionsTrend();
+      renderPossessionEfficiencyTrend();
 
       renderTurnoverTrend();
 
