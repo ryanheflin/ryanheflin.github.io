@@ -420,7 +420,10 @@ const phase1Weeks = [
           'Lose it → hunt or recover.',
           'Win it → look forward first.'
         ],
-
+        
+              sessionPlan:
+          'sessions/session-12-our-football.pdf',
+        
         missed: [
           'Our football should be recognizable regardless of the exercise or the result.',
           'With the ball: create space, look forward, help your teammates, and attack when the opportunity appears.',
