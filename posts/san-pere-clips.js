@@ -226,7 +226,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_8"
+          src="https://www.youtube.com/embed/H-OdheENcUQ"
           title="San Pere - Presión defensiva perdida"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -237,8 +237,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-4 text-gray-200">
       <li>
-        Escribe aquí qué deberíamos haber reconocido o hecho antes.
-      </li>
+Otman hace un gran desmarque a la espalda, pero no todos tiramos la línea hacia adelante con él, lo que deja varios espacios. Ellos juegan por detrás de él mientras se coloca las medias y su lateral encuentra a su delantero bajando a recibir al espacio entre nuestras líneas. Este vuelve a jugar de cara con su centrocampista, que se había metido a nuestra espalda, y casi consiguen una ocasión peligrosa. Desde su portero hasta nuestra área, necesitamos apretar más y cerrar espacios.      </li>
     </ul>
 
      <!-- =====================================================
