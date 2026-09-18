@@ -173,7 +173,7 @@ window.blogPosts.push({
       <div class="aspect-video">
         <iframe
           class="w-full h-full"
-          src="https://www.youtube.com/embed/VIDEO_ID_6"
+          src="https://www.youtube.com/embed/Pbw3gEgeads"
           title="San Pere - Buena presión"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -184,8 +184,7 @@ window.blogPosts.push({
 
     <ul class="list-disc pl-6 mt-3 mb-8 text-gray-200">
       <li>
-        Añadiré los clips aquí en cuanto se me reinicie el límite diario de subida.
-      </li>
+Este clip tiene tres partes. Primero, ellos juegan entre líneas porque nuestra estructura defensiva está un poco desorganizada. Su delantero baja a recibir entre líneas; Hamza o Yeray tienen que bascular rápido y todos los demás deben hacer las coberturas, pero llegamos tarde y por eso ellos avanzan. Después, Hamza intercepta e inicia una gran jugada entre líneas con Otman y Gio. La verdadera presión llega al final, cuando Joel fuerza la pérdida del portero. ¡Bien hecho!      </li>
     </ul>
 
 
