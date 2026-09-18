@@ -60,13 +60,28 @@ window.seasonGames.push({
 
   opponentPasses: 236,
 
-  effectiveSolutions: [
-    'inside',
-    'outside',
-    'behind',
-    'switch',
-    'carry'
-  ],
+
+  /* ========================================================
+     POSSESSION EFFICIENCY
+
+     Efficient possession = attacking possession
+     rated 7/10 or higher in the match log.
+
+     31 / 106 = 29.2%
+  ======================================================== */
+
+  possessionEfficiency: {
+
+    effective: 31,
+
+    total: 106
+
+  },
+
+
+  /* ========================================================
+     SET-PIECE EFFECTIVENESS
+  ======================================================== */
 
   setPieces: {
 
