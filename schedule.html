@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-  <title>Season Schedule | CE Altafulla U15</title>
+  <title>Calendario | CE Altafulla S15</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="js/site.js" defer></script>
@@ -44,18 +47,36 @@
          PAGE HEADER
     ======================================================== -->
 
-    <header class="mb-6">
+    <header
+      class="mb-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+    >
 
-      <h2
-        class="text-3xl font-extrabold mb-1"
-        style="color: var(--altafulla-yellow);"
+      <div>
+
+        <h2
+          class="text-3xl font-extrabold mb-1"
+          style="color: var(--altafulla-yellow);"
+        >
+          Calendario y Resultados
+        </h2>
+
+        <p class="text-gray-400 text-sm">
+          Entrenamientos, amistosos y calendario oficial de liga.
+        </p>
+
+      </div>
+
+
+      <a
+        id="fcf-direct-link"
+        href="https://www.fcf.cat/ca/clubs/3060/categories/54316839"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
+        style="background-color: var(--altafulla-yellow);"
       >
-        Season Schedule & Results
-      </h2>
-
-      <p class="text-gray-400 text-sm">
-        Entrenamientos, amistosos y acceso al calendario oficial de la FCF.
-      </p>
+        Ver en FCF.cat ↗
+      </a>
 
     </header>
 
@@ -65,7 +86,8 @@
          PRACTICE SCHEDULE
     ======================================================== -->
 
-    <section class="mb-8">
+    <section class="mb-10">
+
 
       <div class="mb-4">
 
@@ -80,11 +102,14 @@
       </div>
 
 
+
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
 
 
         <!-- Tuesday -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
 
           <span
             class="text-xs uppercase tracking-wide font-bold"
@@ -106,7 +131,9 @@
 
 
         <!-- Thursday -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
 
           <div class="flex items-center justify-between gap-3">
 
@@ -138,7 +165,9 @@
 
 
         <!-- Friday -->
-        <div class="bg-gray-800 p-5 rounded-xl border border-gray-700">
+        <div
+          class="bg-gray-800 p-5 rounded-xl border border-gray-700"
+        >
 
           <span
             class="text-xs uppercase tracking-wide font-bold"
@@ -163,6 +192,7 @@
 
 
       <!-- Practice Arrival Reminder -->
+
       <div
         class="mt-4 px-4 py-3 rounded-lg border border-gray-700 bg-gray-800/60"
       >
@@ -184,6 +214,7 @@
 
       </div>
 
+
     </section>
 
 
@@ -192,7 +223,8 @@
          FRIENDLY MATCHES
     ======================================================== -->
 
-    <section class="mb-8">
+    <section class="mb-10">
+
 
       <div class="mb-4">
 
@@ -207,184 +239,130 @@
       </div>
 
 
-      <div
-        class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
-      >
 
-        <!-- Header -->
+      <div class="space-y-4">
+
+
+        <!-- =====================================================
+             FRIENDLY 1
+        ====================================================== -->
+
         <div
-          class="hidden md:grid md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-4 px-5 py-3 bg-gray-950 border-b border-gray-700"
+          class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
         >
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Partido
-          </div>
+          <div
+            class="px-5 py-4 md:px-6 md:py-5 border-b border-gray-700 bg-gray-950"
+          >
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Fecha
-          </div>
-
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Convocatoria
-          </div>
-
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Partido
-          </div>
-
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Lugar
-          </div>
-
-        </div>
-
-
-
-        <!-- Friendly 1 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-3 md:gap-4 px-5 py-4 border-b border-gray-700"
-        >
-
-          <div>
-
-            <p class="font-semibold text-white">
-              Sant Pau B vs. CE Altafulla
-            </p>
-
-            <span
-              class="inline-block mt-1 text-xs font-bold"
-              style="color: var(--altafulla-blue);"
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
             >
-              Afuera
-            </span>
+
+              <div>
+
+                <span
+                  class="text-xs uppercase tracking-[0.18em] font-bold"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Amistoso
+                </span>
+
+                <h4
+                  class="text-xl md:text-2xl font-extrabold text-white mt-1"
+                >
+                  Sant Pau B vs. CE Altafulla
+                </h4>
+
+              </div>
+
+
+              <span
+                class="self-start md:self-center text-xs font-bold px-3 py-1.5 rounded-full"
+                style="
+                  background-color: var(--altafulla-yellow);
+                  color: #000000;
+                "
+              >
+                Fuera
+              </span>
+
+            </div>
 
           </div>
 
 
-          <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Fecha
-            </p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-5 p-5 md:p-6"
+          >
 
-            <p class="text-sm text-gray-300">
-              Sáb. 29 agosto
-            </p>
+            <div>
 
-          </div>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Fecha
+              </p>
 
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Sábado 29 de agosto
+              </p>
 
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Convocatoria
-            </p>
-
-            <p class="text-sm text-gray-300">
-              12:00
-            </p>
-
-          </div>
+            </div>
 
 
-          <div>
+            <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Partido
-            </p>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Convocatoria
+              </p>
 
-            <p class="text-sm text-gray-300">
-              13:00
-            </p>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                12:00
+              </p>
 
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Lugar
-            </p>
-
-            <p class="text-sm text-gray-300">
-              Camp de Futbol Campclar, Tarragona
-            </p>
-
-          </div>
-
-        </div>
+            </div>
 
 
+            <div>
 
-        <!-- Friendly 2 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-3 md:gap-4 px-5 py-4 border-b border-gray-700"
-        >
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Partido
+              </p>
 
-          <div>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                13:00
+              </p>
 
-            <p class="font-semibold text-white">
-              CE Altafulla vs. Pallaresos
-            </p>
-
-            <span
-              class="inline-block mt-1 text-xs font-bold"
-              style="color: var(--altafulla-yellow);"
-            >
-              En Casa
-            </span>
-
-          </div>
+            </div>
 
 
-          <div>
+            <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Fecha
-            </p>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Lugar
+              </p>
 
-            <p class="text-sm text-gray-300">
-              Dom. 6 septiembre
-            </p>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Camp de Futbol Campclar
+              </p>
 
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Convocatoria
-            </p>
-
-            <p class="text-sm text-gray-300">
-              11:00
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Partido
-            </p>
-
-            <p class="text-sm text-gray-300">
-              12:00
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Lugar
-            </p>
-
-            <p class="text-sm text-gray-300">
-              Estadi Municipal Joan Pijuan
-            </p>
+            </div>
 
           </div>
 
@@ -392,151 +370,126 @@
 
 
 
-        <!-- Friendly 3 -->
+        <!-- =====================================================
+             FRIENDLY 2
+        ====================================================== -->
+
         <div
-          class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-3 md:gap-4 px-5 py-4 border-b border-gray-700"
+          class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
         >
 
-          <div>
+          <div
+            class="px-5 py-4 md:px-6 md:py-5 border-b border-gray-700 bg-gray-950"
+          >
 
-            <p class="font-semibold text-white">
-              CE Altafulla vs. Sant Pere i Sant Pau
-            </p>
-
-            <span
-              class="inline-block mt-1 text-xs font-bold"
-              style="color: var(--altafulla-yellow);"
+            <div
+              class="flex flex-col md:flex-row md:items-center md:justify-between gap-3"
             >
-              En Casa
-            </span>
+
+              <div>
+
+                <span
+                  class="text-xs uppercase tracking-[0.18em] font-bold"
+                  style="color: var(--altafulla-blue);"
+                >
+                  Amistoso
+                </span>
+
+                <h4
+                  class="text-xl md:text-2xl font-extrabold text-white mt-1"
+                >
+                  CE Altafulla vs. Pallaresos
+                </h4>
+
+              </div>
+
+
+              <span
+                class="self-start md:self-center text-xs font-bold px-3 py-1.5 rounded-full"
+                style="
+                  background-color: var(--altafulla-yellow);
+                  color: #000000;
+                "
+              >
+                Casa
+              </span>
+
+            </div>
 
           </div>
 
 
-          <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Fecha
-            </p>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-5 p-5 md:p-6"
+          >
 
-            <p class="text-sm text-gray-300">
-              Dom. 13 septiembre
-            </p>
+            <div>
 
-          </div>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Fecha
+              </p>
 
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Domingo 6 de septiembre
+              </p>
 
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Convocatoria
-            </p>
-
-            <p class="text-sm text-gray-300">
-              15:00
-            </p>
-
-          </div>
+            </div>
 
 
-          <div>
+            <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Partido
-            </p>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Convocatoria
+              </p>
 
-            <p class="text-sm text-gray-300">
-              16:00
-            </p>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                11:00
+              </p>
 
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Lugar
-            </p>
-
-            <p class="text-sm text-gray-300">
-              Estadi Municipal Joan Pijuan
-            </p>
-
-          </div>
-
-        </div>
+            </div>
 
 
+            <div>
 
-        <!-- Friendly 4 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-3 md:gap-4 px-5 py-4"
-        >
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Partido
+              </p>
 
-          <div>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                12:00
+              </p>
 
-            <p class="font-semibold text-white">
-              CDC Torreforta vs. CE Altafulla
-            </p>
-
-            <span
-              class="inline-block mt-1 text-xs font-bold"
-              style="color: var(--altafulla-blue);"
-            >
-              Afuera
-            </span>
-
-          </div>
+            </div>
 
 
-          <div>
+            <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Fecha
-            </p>
+              <p
+                class="text-xs uppercase tracking-wide font-bold text-gray-500"
+              >
+                Lugar
+              </p>
 
-            <p class="text-sm text-gray-300">
-              Dom. 20 septiembre
-            </p>
+              <p
+                class="text-sm md:text-base font-semibold text-white mt-1"
+              >
+                Estadi Municipal Joan Pijuan
+              </p>
 
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Convocatoria
-            </p>
-
-            <p class="text-sm text-gray-300">
-              10:00
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Partido
-            </p>
-
-            <p class="text-sm text-gray-300">
-              11:00
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Lugar
-            </p>
-
-            <p class="text-sm text-gray-300">
-              CDC Torreforta
-            </p>
+            </div>
 
           </div>
 
@@ -550,192 +503,1290 @@
 
 
     <!-- =======================================================
-         OFFICIAL FCF LEAGUE
+         OFFICIAL LEAGUE SCHEDULE
     ======================================================== -->
 
-    <section class="mb-8">
+    <section class="mb-10">
 
-      <div class="mb-4">
 
-        <h3 class="text-xl font-bold text-white">
-          Liga Oficial FCF
-        </h3>
+      <div
+        class="mb-5 flex flex-col md:flex-row md:items-end md:justify-between gap-3"
+      >
 
-        <p class="text-sm text-gray-400 mt-1">
-          La FCF actualiza directamente los horarios, cambios de partidos,
-          resultados y clasificación.
-        </p>
+        <div>
+
+          <h3 class="text-xl font-bold text-white">
+            Calendario Oficial de Liga
+          </h3>
+
+          <p class="text-sm text-gray-400 mt-1">
+            Temporada 2026–27 · CE Altafulla "A"
+          </p>
+
+        </div>
+
+
+        <a
+          href="https://www.fcf.cat/ca/clubs/3060/categories/54316839"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-sm font-semibold hover:underline"
+          style="color: var(--altafulla-blue);"
+        >
+          Calendario oficial FCF ↗
+        </a>
 
       </div>
 
 
 
-      <!-- Official FCF Link -->
-      <div
-        class="bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
-      >
+      <div class="space-y-3">
 
-        <div class="p-6 md:p-8">
+
+        <!-- JORNADA 1 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167080"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
 
           <div
-            class="flex flex-col md:flex-row md:items-center md:justify-between gap-5"
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
           >
 
-            <div>
+            <div class="flex-grow">
 
-              <span
-                class="text-xs uppercase tracking-[0.18em] font-bold"
-                style="color: var(--altafulla-blue);"
-              >
-                Federació Catalana de Futbol
-              </span>
+              <div class="flex items-center gap-3 mb-2">
 
-              <h4 class="text-xl md:text-2xl font-extrabold text-white mt-1">
-                Calendario, resultados y clasificación
-              </h4>
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
 
-              <p class="text-sm text-gray-400 mt-2 max-w-2xl">
-                Utiliza el calendario oficial de la FCF para consultar
-                los horarios más recientes y cualquier cambio realizado
-                durante la temporada.
+                <span class="text-sm text-gray-400">
+                  Domingo 27 de septiembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Valls School Football Club
               </p>
 
             </div>
 
-
-            <a
-              href="https://www.fcf.cat/ca/competicio?temporadaId=22&disciplinaId=19308233&competicioId=58780226&grupId=58816739"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center px-5 py-3 text-sm font-bold text-black rounded-lg transition-transform hover:scale-105 shadow-md whitespace-nowrap"
-              style="background-color: var(--altafulla-yellow);"
+            <span
+              class="text-sm font-semibold"
+              style="color: var(--altafulla-blue);"
             >
-              Ver calendario oficial ↗
-            </a>
+              FCF ↗
+            </span>
 
           </div>
 
-        </div>
-
-      </div>
+        </a>
 
 
 
-      <!-- League Matches -->
-      <div
-        class="mt-5 bg-gray-800 rounded-xl border border-gray-700 overflow-hidden shadow-lg"
-      >
-
-        <!-- Header -->
-        <div
-          class="hidden md:grid md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-4 px-5 py-3 bg-gray-950 border-b border-gray-700"
+        <!-- JORNADA 2 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167089"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
         >
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Partido
-          </div>
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Fecha
-          </div>
+            <div class="flex-grow">
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Convocatoria
-          </div>
+              <div class="flex items-center gap-3 mb-2">
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Partido
-          </div>
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200"
+                >
+                  FUERA
+                </span>
 
-          <div class="text-xs uppercase tracking-wide font-bold text-gray-500">
-            Lugar
-          </div>
+                <span class="text-sm text-gray-400">
+                  Sábado 3 de octubre
+                </span>
 
-        </div>
+              </div>
 
-
-
-        <!-- League Match 1 -->
-        <div
-          class="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr_1fr_1.5fr] gap-3 md:gap-4 px-5 py-4"
-        >
-
-          <div>
-
-            <p class="font-semibold text-white">
-              CE Altafulla vs. Valls
-            </p>
-
-            <div class="flex items-center gap-2 mt-1">
-
-              <span
-                class="text-xs font-bold"
-                style="color: var(--altafulla-yellow);"
-              >
-                En Casa
-              </span>
-
-              <span class="text-xs text-gray-500">
-                Jornada 1
-              </span>
+              <p class="text-lg font-bold text-white">
+                El Catllar
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
 
             </div>
 
-          </div>
-
-
-          <div>
-
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Fecha
-            </p>
-
-            <p class="text-sm text-gray-300">
-              Sáb. 26 septiembre
-            </p>
+            <span
+              class="text-sm font-semibold"
+              style="color: var(--altafulla-blue);"
+            >
+              FCF ↗
+            </span>
 
           </div>
 
+        </a>
 
-          <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Convocatoria
-            </p>
 
-            <p class="text-sm text-gray-300">
-              14:00
-            </p>
+        <!-- JORNADA 3 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167097"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 10 de octubre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Sant Pere i Sant Pau
+              </p>
+
+            </div>
+
+            <span
+              class="text-sm font-semibold"
+              style="color: var(--altafulla-blue);"
+            >
+              FCF ↗
+            </span>
 
           </div>
 
+        </a>
 
-          <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Partido
-            </p>
 
-            <p class="text-sm text-gray-300">
-              15:00
-            </p>
+        <!-- JORNADA 4 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167106"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200"
+                >
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Domingo 18 de octubre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Calafell CF B
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span
+              class="text-sm font-semibold"
+              style="color: var(--altafulla-blue);"
+            >
+              FCF ↗
+            </span>
 
           </div>
 
+        </a>
 
-          <div>
 
-            <p class="md:hidden text-xs uppercase font-bold text-gray-500">
-              Lugar
-            </p>
 
-            <p class="text-sm text-gray-300">
-              Estadi Municipal Joan Pijuan
-            </p>
+        <!-- JORNADA 5 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167114"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div
+            class="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+          >
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 24 de octubre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                NSA Camp Joliu
+              </p>
+
+            </div>
+
+            <span
+              class="text-sm font-semibold"
+              style="color: var(--altafulla-blue);"
+            >
+              FCF ↗
+            </span>
 
           </div>
 
-        </div>
+        </a>
+
+
+
+        <!-- JORNADA 6 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167123"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 31 de octubre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Tarragona FC
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 7 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167131"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 7 de noviembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                La Floresta B
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 8 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167148"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 21 de noviembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Base Vilanova 2015
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 9 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167157"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 28 de noviembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Col·legi Sant Pau Apòstol
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 10 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167165"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 12 de diciembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Base 2012 Pallaresos
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 11 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167174"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 19 de diciembre
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Gimnàstic de Tarragona C
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 12 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167182"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 9 de enero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Torreforta
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 13 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167190"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 16 de enero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Vendrell CE B
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 14 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167197"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 23 de enero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Santes Creus
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 15 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167200"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 30 de enero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Valls School Football Club
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 16 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167209"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 13 de febrero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                El Catllar
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 17 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167217"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 20 de febrero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Sant Pere i Sant Pau
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 18 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167226"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 27 de febrero
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Calafell CF B
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 19 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167234"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Domingo 7 de marzo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                NSA Camp Joliu
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 20 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167243"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 13 de marzo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Tarragona FC
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 21 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167251"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 20 de marzo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                La Floresta B
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 22 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167268"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 10 de abril
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Base Vilanova 2015
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 23 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167277"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 17 de abril
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Col·legi Sant Pau Apòstol
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 24 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167285"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 24 de abril
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Base 2012 Pallaresos
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 25 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167294"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 1 de mayo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Gimnàstic de Tarragona C
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 26 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167302"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 8 de mayo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Torreforta
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 27 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167310"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span class="text-xs font-bold px-2.5 py-1 rounded-full bg-gray-700 text-gray-200">
+                  FUERA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Domingo 16 de mayo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                Vendrell CE B
+                <span class="text-gray-500 mx-2">vs.</span>
+                CE Altafulla
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
+
+
+
+        <!-- JORNADA 28 -->
+        <a
+          href="https://www.fcf.cat/ca/competicio/acta/4167317"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-gray-800 border border-gray-700 rounded-xl p-4 md:p-5 hover:border-gray-500 transition"
+        >
+
+          <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+
+            <div class="flex-grow">
+
+              <div class="flex items-center gap-3 mb-2">
+
+                <span
+                  class="text-xs font-bold px-2.5 py-1 rounded-full text-black"
+                  style="background-color: var(--altafulla-yellow);"
+                >
+                  CASA
+                </span>
+
+                <span class="text-sm text-gray-400">
+                  Sábado 22 de mayo
+                </span>
+
+              </div>
+
+              <p class="text-lg font-bold text-white">
+                CE Altafulla
+                <span class="text-gray-500 mx-2">vs.</span>
+                Santes Creus
+              </p>
+
+            </div>
+
+            <span class="text-sm font-semibold" style="color: var(--altafulla-blue);">
+              FCF ↗
+            </span>
+
+          </div>
+
+        </a>
 
 
       </div>
@@ -750,8 +1801,9 @@
 
     <section class="mb-8">
 
+
       <h3 class="text-xl font-bold mb-4">
-        Match Day Information
+        Información de Partido
       </h3>
 
 
@@ -759,10 +1811,12 @@
 
 
         <!-- Field Address -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+        <div
+          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+        >
 
           <h4 class="text-lg font-bold mb-2 text-white">
-            📍 Field Address
+            Campo
           </h4>
 
           <p class="text-sm text-gray-300">
@@ -778,24 +1832,27 @@
 
 
         <!-- Arrival Times -->
-        <div class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700">
+        <div
+          class="bg-gray-800 p-4 md:p-6 rounded-xl border border-gray-700"
+        >
 
           <h4 class="text-lg font-bold mb-2 text-white">
-            ⌚ Arrival & Meeting Times
+            Convocatoria
           </h4>
 
           <p class="text-sm text-gray-300">
-            Home matches: 60 minutes before kickoff.
+            Partidos en casa: 60 minutos antes del inicio.
           </p>
 
           <p class="text-sm text-gray-300 mt-1">
-            Away matches: 60 minutes before kickoff.
+            Partidos fuera: 60 minutos antes del inicio.
           </p>
 
         </div>
 
 
       </div>
+
 
     </section>
 
