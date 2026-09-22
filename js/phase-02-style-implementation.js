@@ -31,6 +31,9 @@ const phase2Weeks = [
           'If they do not press → advance.'
         ],
 
+        sessionPlan:
+          'sessions/session-13-build-against-pressure.pdf',
+
         missed: [
           'We do not play short just to make short passes: we are trying to create a free player.',
           'Every opponent who comes to press leaves space somewhere else.',
