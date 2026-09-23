@@ -167,14 +167,8 @@ window.seasonGames.push({
   /* ==========================================================
      MATCH ANALYSIS
   ========================================================== */
-</div>
-  
-<!-- ==========================================================
-     MATCH STAT GRAPHIC
-========================================================== -->
 
-<div class="my-6">
-
+  analysis: `
 
 <!-- ==========================================================
      MATCH STAT GRAPHIC
@@ -189,11 +183,10 @@ window.seasonGames.push({
   >
 
 </div>
-  
-  analysis: `
+
 
 <h3
-  class="text-lg font-bold text-white mt-2 mb-2"
+  class="text-lg font-bold text-white mt-6 mb-2"
 >
   Empezamos Como Nosotros
 </h3>
@@ -292,6 +285,7 @@ sin importar quién esté enfrente.
 
 </div>
 
+
 <p>
 Hay solamente dos detalles de este partido
 que merece la pena llevar con nosotros.
@@ -312,7 +306,10 @@ a veces nos quedamos demasiado quietos.
 
 <p>
 Si todos estamos marcados,
-<strong>tenemos que mover al rival para crear al jugador libre.</strong>
+<strong>
+tenemos que mover al rival
+para crear al jugador libre.
+</strong>
 </p>
 
 <p>
@@ -436,9 +433,6 @@ lo que hemos aprendido durante la pretemporada.
 
   /* ==========================================================
      MATCH VIDEOS
-
-     Replace the four YouTube IDs below with the Torreforta
-     match videos.
   ========================================================== */
 
   clips: [
