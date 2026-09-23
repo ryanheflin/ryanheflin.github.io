@@ -50,72 +50,90 @@ window.seasonGames.push({
 
   /* ==========================================================
      SEASON TREND DATA
-
-     Set-piece effectiveness includes all four attacking
-     restart types: throw-ins, goal kicks, free kicks and
-     corners.
   ========================================================== */
 
   trendStats: {
 
-  opponentPasses: 236,
+    opponentPasses: 236,
 
 
-  /* ========================================================
-     POSSESSION EFFICIENCY
+    /* ========================================================
+       POSSESSION EFFICIENCY - WITH BALL
 
-     Efficient possession = attacking possession
-     rated 7/10 or higher in the match log.
+       Successful possession =
+       the possession becomes dangerous OR establishes
+       our attack in the opponent's final third.
 
-     31 / 106 = 29.2%
-  ======================================================== */
+       44 / 106 = 41.5%
+    ======================================================== */
 
-  possessionEfficiency: {
+    possessionEfficiency: {
 
-    effective: 31,
+      effective: 44,
 
-    total: 106
+      total: 106
 
-  },
+    },
 
 
-  /* ========================================================
-     SET-PIECE EFFECTIVENESS
-  ======================================================== */
+    /* ========================================================
+       POSSESSION EFFICIENCY - WITHOUT BALL
 
-  setPieces: {
+       Successful defensive possession =
+       we stop the opponent before they create a dangerous
+       action or establish a dangerous attack in our final third.
 
-    effective: 27,
+       Only true opponent possessions are counted.
 
-    total: 46,
+       70 / 110 = 63.6%
+    ======================================================== */
 
-    breakdown: {
+    defensivePossessionEfficiency: {
 
-      throwIns: {
-        effective: 8,
-        total: 19
-      },
+      effective: 70,
 
-      goalKicks: {
-        effective: 8,
-        total: 8
-      },
+      total: 110
 
-      freeKicks: {
-        effective: 7,
-        total: 12
-      },
+    },
 
-      corners: {
-        effective: 4,
-        total: 7
+
+    /* ========================================================
+       SET-PIECE EFFECTIVENESS
+    ======================================================== */
+
+    setPieces: {
+
+      effective: 27,
+
+      total: 46,
+
+      breakdown: {
+
+        throwIns: {
+          effective: 8,
+          total: 19
+        },
+
+        goalKicks: {
+          effective: 8,
+          total: 8
+        },
+
+        freeKicks: {
+          effective: 7,
+          total: 12
+        },
+
+        corners: {
+          effective: 4,
+          total: 7
+        }
+
       }
 
     }
 
-  }
-
-},
+  },
 
 
   /* ==========================================================
@@ -136,30 +154,37 @@ window.seasonGames.push({
 
 
   /* ==========================================================
-     PURPOSELESS TURNOVERS
+     MISSED CONTROL OPPORTUNITIES
 
-     Full-match retrospective count.
+     Strict standard.
 
-     Count:
-     - unnecessary kicks / clearances when a controlled
-       option was available
-     - head-down carries that directly surrendered possession
+     Count when:
+     - we have a reasonable opportunity to settle or possess
+       an arriving or loose ball but kick it away instead
+     - we clear when there is time to control
+     - we launch a low-percentage ball without a real target
+       when controlled possession is available
+     - we turn a controllable situation into "tennis"
+     - we immediately force the ball away instead of making
+       it ours
+
+     IMPORTANT:
+     Count the missed opportunity even if another Altafulla
+     player immediately recovers the ball afterward.
 
      Do NOT count:
-     - purposeful passes that were intercepted
-     - bad touches after a good decision
-     - crosses / through balls attempting to create
      - necessary clearances under genuine pressure
-     - legitimate attempts to beat an opponent
+     - purposeful passes attempting to create a real advantage
+     - crosses / through balls in attacking situations
+     - genuine 50/50 balls where control is unrealistic
+     - technical mistakes after the correct decision
+
+     San Pere i San Pau: 23
   ========================================================== */
 
-  purposelessTurnovers: {
+  missedControlOpportunities: {
 
-    total: 9,
-
-    kicks: 8,
-
-    carries: 1
+    total: 23
 
   },
 
@@ -168,7 +193,7 @@ window.seasonGames.push({
      MATCH ANALYSIS
   ========================================================== */
 
-analysis: `
+  analysis: `
 
 <div
   class="mb-6 p-4 rounded-xl border border-yellow-500/30 bg-yellow-500/10"
@@ -218,13 +243,6 @@ analysis: `
 
 <div class="my-6">
 
-
-<!-- ==========================================================
-     MATCH STAT GRAPHIC
-========================================================== -->
-
-<div class="my-6">
-
   <img
     src="images/game-03-stats.png"
     alt="Estadísticas completas CE Altafulla vs San Pere i San Pau"
@@ -232,7 +250,6 @@ analysis: `
   >
 
 </div>
-
 
 
 <h3
@@ -271,7 +288,6 @@ No perdimos completamente nuestra estructura
 ni volvimos simplemente a jugar directo
 cuando el partido se complicó.
 </p>
-
 
 
 <h3
@@ -327,7 +343,6 @@ El tercer gol fue un buen ejemplo:
 </p>
 
 
-
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
@@ -371,7 +386,6 @@ que veo ahora mismo,
 teniendo en cuenta dónde estamos
 dentro de nuestro plan de entrenamiento de la temporada.
 </p>
-
 
 
 <h3
@@ -424,7 +438,6 @@ mientras estamos atacando.
 </p>
 
 
-
 <h3
   class="text-lg font-bold text-white mt-8 mb-2"
 >
@@ -460,7 +473,6 @@ que tenemos que mejorar.
 Si uno va,
 <strong>los demás tienen que moverse con él.</strong>
 </p>
-
 
 
 <h3
@@ -508,7 +520,6 @@ de una conducción,
 un balón largo
 o una jugada individual.
 </p>
-
 
 
 <h3
