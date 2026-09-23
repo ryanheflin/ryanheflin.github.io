@@ -167,7 +167,29 @@ window.seasonGames.push({
   /* ==========================================================
      MATCH ANALYSIS
   ========================================================== */
+</div>
+  
+<!-- ==========================================================
+     MATCH STAT GRAPHIC
+========================================================== -->
 
+<div class="my-6">
+
+
+<!-- ==========================================================
+     MATCH STAT GRAPHIC
+========================================================== -->
+
+<div class="my-6">
+
+  <img
+    src="images/game-04-stats.png"
+    alt="Estadísticas completas CE Altafulla vs Torreforta"
+    class="w-full rounded-xl border border-gray-700 shadow-lg"
+  >
+
+</div>
+  
   analysis: `
 
 <h3
