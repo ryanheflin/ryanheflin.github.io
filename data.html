@@ -50,8 +50,8 @@
 
   <!-- Future games:
 
-  <script src="js/games/game-04.js"></script>
   <script src="js/games/game-05.js"></script>
+  <script src="js/games/game-06.js"></script>
 
   -->
 
@@ -380,7 +380,7 @@
 
 
 
-                <!-- Purposeless Average -->
+                <!-- Missed Control Average -->
 
                 <div
                   class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
@@ -389,12 +389,12 @@
                   <span
                     class="text-xs uppercase tracking-wide font-bold text-gray-500"
                   >
-                    Purposeless Turnovers / Match
+                    Missed Control Opportunities / Match
                   </span>
 
 
                   <p
-                    id="season-purposeless-average"
+                    id="season-missed-control-average"
                     class="text-2xl font-extrabold text-white mt-2"
                   >
                     —
@@ -402,7 +402,7 @@
 
 
                   <p
-                    id="season-purposeless-average-detail"
+                    id="season-missed-control-average-detail"
                     class="text-xs text-gray-500 mt-1"
                   >
                     No tracked matches
@@ -412,7 +412,7 @@
 
 
 
-                <!-- Purposeless Total -->
+                <!-- Missed Control Total -->
 
                 <div
                   class="bg-gray-900/60 p-4 rounded-xl border border-gray-700"
@@ -421,12 +421,12 @@
                   <span
                     class="text-xs uppercase tracking-wide font-bold text-gray-500"
                   >
-                    Purposeless Turnovers
+                    Missed Control Opportunities
                   </span>
 
 
                   <p
-                    id="season-purposeless-total"
+                    id="season-missed-control-total"
                     class="text-2xl font-extrabold text-white mt-2"
                   >
                     —
@@ -434,7 +434,7 @@
 
 
                   <p
-                    id="season-purposeless-detail"
+                    id="season-missed-control-detail"
                     class="text-xs text-gray-500 mt-1"
                   >
                     No tracked matches
@@ -458,13 +458,12 @@
                   <strong
                     class="text-gray-400"
                   >
-                    Purposeless turnover:
+                    Missed control opportunity:
                   </strong>
 
-                  an avoidable loss of possession where
-                  a controlled option was available,
-                  but we gave the ball away through a rushed
-                  kick, carry or decision without a clear purpose.
+                  a moment when we could reasonably settle,
+                  control or possess the ball, but instead
+                  kick, clear or force it away.
 
                 </p>
 
@@ -662,8 +661,9 @@
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
-                      How often our possessions produce meaningful progress,
-                      solve pressure or create danger.
+                      With ball: how often we become dangerous or establish the attack
+                      in the final third. Without ball: how often we stop the opponent
+                      before they become dangerous.
                     </p>
 
                   </div>
@@ -689,7 +689,7 @@
 
 
 
-                <!-- PURPOSELESS TURNOVERS -->
+                <!-- MISSED CONTROL OPPORTUNITIES -->
 
                 <div
                   class="bg-gray-900/60 border border-gray-700 rounded-xl p-4 md:p-5"
@@ -700,15 +700,15 @@
                     <h4
                       class="font-bold text-white"
                     >
-                      Purposeless Turnovers
+                      Missed Control Opportunities
                     </h4>
 
 
                     <p
                       class="text-xs text-gray-500 mt-1"
                     >
-                      Avoidable possessions we simply give away.
-                      Lower is better.
+                      Times we could reasonably control or possess the ball,
+                      but choose to kick, clear or force it away. Lower is better.
                     </p>
 
                   </div>
@@ -718,13 +718,13 @@
                     class="relative h-56 mt-4"
                   >
                     <canvas
-                      id="turnover-trend-chart"
+                      id="missed-control-trend-chart"
                     ></canvas>
                   </div>
 
 
                   <p
-                    id="turnover-trend-note"
+                    id="missed-control-trend-note"
                     class="text-sm text-gray-300 leading-relaxed mt-4 pt-4 border-t border-gray-700"
                   >
                     Waiting for tracked match data.
@@ -1131,10 +1131,8 @@
       let theirThrowInsTotal = 0;
       let theirThrowInsWon = 0;
 
-      let purposelessTotal = 0;
-      let purposelessKicks = 0;
-      let purposelessCarries = 0;
-      let purposelessMatches = 0;
+      let missedControlTotal = 0;
+      let missedControlMatches = 0;
 
 
 
@@ -1216,32 +1214,20 @@
 
 
         if (
-          game.purposelessTurnovers &&
+          game.missedControlOpportunities &&
           Number.isFinite(
             Number(
-              game.purposelessTurnovers.total
+              game.missedControlOpportunities.total
             )
           )
         ) {
 
-          purposelessMatches++;
+          missedControlMatches++;
 
 
-          purposelessTotal +=
+          missedControlTotal +=
             Number(
-              game.purposelessTurnovers.total
-            );
-
-
-          purposelessKicks +=
-            Number(
-              game.purposelessTurnovers.kicks || 0
-            );
-
-
-          purposelessCarries +=
-            Number(
-              game.purposelessTurnovers.carries || 0
+              game.missedControlOpportunities.total
             );
 
         }
@@ -1270,10 +1256,8 @@
         theirThrowInsTotal,
         theirThrowInsWon,
 
-        purposelessTotal,
-        purposelessKicks,
-        purposelessCarries,
-        purposelessMatches
+        missedControlTotal,
+        missedControlMatches
 
       };
 
@@ -1376,39 +1360,43 @@
 
 
       if (
-        stats.purposelessMatches > 0
+        stats.missedControlMatches > 0
       ) {
 
         document.getElementById(
-          'season-purposeless-total'
+          'season-missed-control-total'
         ).textContent =
-          stats.purposelessTotal;
+          stats.missedControlTotal;
 
 
         document.getElementById(
-          'season-purposeless-detail'
+          'season-missed-control-detail'
         ).textContent =
-          `${stats.purposelessKicks} kicks · ${stats.purposelessCarries} carries`;
+          `${stats.missedControlMatches} tracked ${
+            stats.missedControlMatches === 1
+              ? 'match'
+              : 'matches'
+          }`;
 
 
         const average =
           (
-            stats.purposelessTotal /
-            stats.purposelessMatches
+            stats.missedControlTotal /
+            stats.missedControlMatches
           ).toFixed(1);
 
 
         document.getElementById(
-          'season-purposeless-average'
+          'season-missed-control-average'
         ).textContent =
           average;
 
 
         document.getElementById(
-          'season-purposeless-average-detail'
+          'season-missed-control-average-detail'
         ).textContent =
-          `${stats.purposelessMatches} tracked ${
-            stats.purposelessMatches === 1
+          `${stats.missedControlMatches} tracked ${
+            stats.missedControlMatches === 1
               ? 'match'
               : 'matches'
           }`;
@@ -1418,25 +1406,25 @@
       else {
 
         document.getElementById(
-          'season-purposeless-total'
+          'season-missed-control-total'
         ).textContent =
           '—';
 
 
         document.getElementById(
-          'season-purposeless-detail'
+          'season-missed-control-detail'
         ).textContent =
           'No tracked matches';
 
 
         document.getElementById(
-          'season-purposeless-average'
+          'season-missed-control-average'
         ).textContent =
           '—';
 
 
         document.getElementById(
-          'season-purposeless-average-detail'
+          'season-missed-control-average-detail'
         ).textContent =
           'No tracked matches';
 
@@ -1954,7 +1942,7 @@
     let throwInTrendChart = null;
     let setPieceTrendChart = null;
     let possessionEfficiencyTrendChart = null;
-    let turnoverTrendChart = null;
+    let missedControlTrendChart = null;
 
 
 
@@ -2628,30 +2616,31 @@
 
 
     /* ==========================================================
-       POSSESSION EFFICIENCY
+       POSSESSION EFFICIENCY — WITH & WITHOUT THE BALL
 
        Add to game files:
 
        trendStats: {
 
          possessionEfficiency: {
-           effective: 18,
+           effective: 35,
+           total: 80
+         },
+
+         defensivePossessionEfficiency: {
+           effective: 49,
            total: 80
          }
 
        }
 
-       Efficient possession =
-       a possession rated 7/10 or higher
-       in the match possession log.
+       WITH BALL:
+       effective = the possession becomes dangerous OR
+       establishes our attack in the opponent's final third.
 
-       This generally means the possession:
-       - produced meaningful controlled progression,
-       - successfully solved pressure,
-       - broke a defensive line,
-       - or created a dangerous attacking action.
-
-       Initial target = 40%.
+       WITHOUT BALL:
+       effective = the defensive possession ends before
+       the opponent becomes dangerous.
     ========================================================== */
 
     function renderPossessionEfficiencyTrend() {
@@ -2663,9 +2652,15 @@
               includeInSeasonTrends(game) &&
               game.trendStats &&
               game.trendStats.possessionEfficiency &&
+              game.trendStats.defensivePossessionEfficiency &&
               Number(
                 game.trendStats
                   .possessionEfficiency
+                  .total
+              ) > 0 &&
+              Number(
+                game.trendStats
+                  .defensivePossessionEfficiency
                   .total
               ) > 0
           )
@@ -2687,7 +2682,7 @@
 
 
 
-      const values =
+      const withBallValues =
         games.map(
           game =>
             percentage(
@@ -2705,9 +2700,20 @@
 
 
 
-      const target =
+      const withoutBallValues =
         games.map(
-          () => 40
+          game =>
+            percentage(
+
+              game.trendStats
+                .defensivePossessionEfficiency
+                .effective,
+
+              game.trendStats
+                .defensivePossessionEfficiency
+                .total
+
+            )
         );
 
 
@@ -2719,6 +2725,27 @@
         possessionEfficiencyTrendChart.destroy();
 
       }
+
+
+
+      const options =
+        createTrendChartOptions(
+          '%',
+          0,
+          100
+        );
+
+
+      options.plugins.legend = {
+        display: true,
+        labels: {
+          color: chartText,
+          boxWidth: 10,
+          boxHeight: 10,
+          usePointStyle: true,
+          pointStyle: 'circle'
+        }
+      };
 
 
 
@@ -2748,10 +2775,41 @@
                 {
 
                   label:
-                    'Possession Efficiency',
+                    'With Ball',
 
                   data:
-                    values,
+                    withBallValues,
+
+                  borderColor:
+                    chartYellow,
+
+                  backgroundColor:
+                    chartYellow,
+
+                  pointBackgroundColor:
+                    chartYellow,
+
+                  pointBorderColor:
+                    '#ffffff',
+
+                  pointBorderWidth: 2,
+
+                  pointRadius: 5,
+
+                  borderWidth: 3,
+
+                  tension: 0.25
+
+                },
+
+
+                {
+
+                  label:
+                    'Without Ball',
+
+                  data:
+                    withoutBallValues,
 
                   borderColor:
                     chartBlue,
@@ -2773,30 +2831,6 @@
 
                   tension: 0.25
 
-                },
-
-
-                {
-
-                  label:
-                    '40% Target',
-
-                  data:
-                    target,
-
-                  borderColor:
-                    chartGray,
-
-                  backgroundColor:
-                    chartGray,
-
-                  borderDash:
-                    [5, 5],
-
-                  pointRadius: 0,
-
-                  borderWidth: 1
-
                 }
 
               ]
@@ -2805,11 +2839,7 @@
 
 
             options:
-              createTrendChartOptions(
-                '%',
-                0,
-                100
-              )
+              options
 
           }
 
@@ -2830,193 +2860,118 @@
         ];
 
 
-      const latest =
-        values[
-          values.length - 1
+      const latestWithBall =
+        withBallValues[
+          withBallValues.length - 1
         ];
 
 
-      const latestEffective =
-        Number(
-          latestGame
-            .trendStats
-            .possessionEfficiency
-            .effective
-        );
+      const latestWithoutBall =
+        withoutBallValues[
+          withoutBallValues.length - 1
+        ];
 
 
-      const latestTotal =
-        Number(
-          latestGame
-            .trendStats
-            .possessionEfficiency
-            .total
-        );
+      const attacking =
+        latestGame
+          .trendStats
+          .possessionEfficiency;
 
 
-
-      if (
-        games.length >= 2
-      ) {
-
-        const previousGame =
-          games[
-            games.length - 2
-          ];
-
-
-        const previous =
-          values[
-            values.length - 2
-          ];
-
-
-        const previousEffective =
-          Number(
-            previousGame
-              .trendStats
-              .possessionEfficiency
-              .effective
-          );
-
-
-        const previousTotal =
-          Number(
-            previousGame
-              .trendStats
-              .possessionEfficiency
-              .total
-          );
+      const defending =
+        latestGame
+          .trendStats
+          .defensivePossessionEfficiency;
 
 
 
-        if (
-          latest > previous
-        ) {
+      note.innerHTML = `
 
-          note.innerHTML = `
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-3"
+        >
 
-            Possession efficiency improved from
+          <div>
 
-            <strong>
-              ${previous}%
-            </strong>
-
-            (${previousEffective}/${previousTotal})
-
-            to
-
-            <strong
-              style="color: var(--altafulla-blue);"
+            <span
+              class="text-xs uppercase tracking-wide font-bold text-gray-500"
             >
-              ${latest}%
-            </strong>
+              With Ball
+            </span>
 
-            (${latestEffective}/${latestTotal}).
+            <div class="mt-1">
+              <strong
+                style="color: var(--altafulla-yellow);"
+              >
+                ${latestWithBall}%
+              </strong>
+              (${attacking.effective}/${attacking.total})
+            </div>
 
-            Our initial target is
-            <strong>40%</strong>.
+            <div class="text-xs text-gray-500 mt-1">
+              Became dangerous or established the attack
+              in the final third.
+            </div>
 
-          `;
+          </div>
 
-        }
 
-        else if (
-          latest < previous
-        ) {
+          <div>
 
-          note.innerHTML = `
-
-            Possession efficiency moved from
-
-            <strong>
-              ${previous}%
-            </strong>
-
-            (${previousEffective}/${previousTotal})
-
-            to
-
-            <strong
-              style="color: var(--altafulla-blue);"
+            <span
+              class="text-xs uppercase tracking-wide font-bold text-gray-500"
             >
-              ${latest}%
-            </strong>
+              Without Ball
+            </span>
 
-            (${latestEffective}/${latestTotal}).
+            <div class="mt-1">
+              <strong
+                style="color: var(--altafulla-blue);"
+              >
+                ${latestWithoutBall}%
+              </strong>
+              (${defending.effective}/${defending.total})
+            </div>
 
-            Our target is
-            <strong>40%</strong>.
+            <div class="text-xs text-gray-500 mt-1">
+              Stopped the opponent before they became dangerous.
+            </div>
 
-          `;
+          </div>
 
-        }
+        </div>
 
-        else {
-
-          note.innerHTML = `
-
-            Possession efficiency remained at
-
-            <strong
-              style="color: var(--altafulla-blue);"
-            >
-              ${latest}%
-            </strong>
-
-            (${latestEffective}/${latestTotal}).
-
-            Our target is
-            <strong>40%</strong>.
-
-          `;
-
-        }
-
-      }
-
-      else {
-
-        note.innerHTML = `
-
-          Our first tracked match produced
-
-          <strong
-            style="color: var(--altafulla-blue);"
-          >
-            ${latest}%
-          </strong>
-
-          efficient possessions
-
-          (${latestEffective}/${latestTotal}).
-
-          Our initial target is
-          <strong>40%</strong>.
-
-        `;
-
-      }
+      `;
 
     }
 
 
 
     /* ==========================================================
-       PURPOSELESS TURNOVER TREND
+       MISSED CONTROL OPPORTUNITIES TREND
+
+       Add to game files:
+
+       missedControlOpportunities: {
+         total: 18
+       }
+
+       Count a missed control opportunity when we could
+       reasonably settle, control or possess the ball,
+       but instead kick, clear or force it away.
     ========================================================== */
 
-    function renderTurnoverTrend() {
+    function renderMissedControlTrend() {
 
       const games =
         (window.seasonGames || [])
           .filter(
             game =>
               includeInSeasonTrends(game) &&
-              game.purposelessTurnovers &&
+              game.missedControlOpportunities &&
               Number.isFinite(
                 Number(
-                  game.purposelessTurnovers.total
+                  game.missedControlOpportunities.total
                 )
               )
           )
@@ -3042,27 +2997,27 @@
         games.map(
           game =>
             Number(
-              game.purposelessTurnovers.total
+              game.missedControlOpportunities.total
             )
         );
 
 
 
       if (
-        turnoverTrendChart
+        missedControlTrendChart
       ) {
 
-        turnoverTrendChart.destroy();
+        missedControlTrendChart.destroy();
 
       }
 
 
 
-      turnoverTrendChart =
+      missedControlTrendChart =
         new Chart(
 
           document.getElementById(
-            'turnover-trend-chart'
+            'missed-control-trend-chart'
           ),
 
           {
@@ -3082,6 +3037,9 @@
               datasets: [
 
                 {
+
+                  label:
+                    'Missed Control Opportunities',
 
                   data:
                     values,
@@ -3128,7 +3086,7 @@
 
       const note =
         document.getElementById(
-          'turnover-trend-note'
+          'missed-control-trend-note'
         );
 
 
@@ -3156,7 +3114,7 @@
 
           note.innerHTML = `
 
-            Avoidable turnovers fell from
+            Missed control opportunities fell from
 
             <strong>
               ${previous}
@@ -3170,8 +3128,8 @@
               ${latest}
             </strong>.
 
-            That is exactly the direction
-            we want this number to move.
+            Better. We are turning more loose or arriving balls
+            into controlled possession.
 
           `;
 
@@ -3181,7 +3139,7 @@
 
           note.innerHTML = `
 
-            We had
+            We recorded
 
             <strong
               style="color: var(--altafulla-yellow);"
@@ -3189,11 +3147,10 @@
               ${latest}
             </strong>
 
-            purposeless turnovers
+            missed control opportunities
             in the latest tracked match.
 
-            This number should go down
-            as our decisions with the ball improve.
+            We want this number to go down.
 
           `;
 
@@ -3213,7 +3170,7 @@
             ${values[0]}
           </strong>
 
-          purposeless turnovers
+          missed control opportunities
           in our first tracked match.
 
           Lower is better.
@@ -3245,7 +3202,7 @@
               includeInSeasonTrends(game) &&
               (
                 game.throwIns ||
-                game.purposelessTurnovers ||
+                game.missedControlOpportunities ||
                 game.trendStats
               )
           );
@@ -3273,8 +3230,9 @@
         <strong>
           keep more of the possessions that should be ours,
           make our restarts useful,
-          turn more possessions into meaningful progress or danger,
-          and give the ball away unnecessarily less often.
+          turn more possessions into danger,
+          stop more opponent possessions before they become dangerous,
+          and turn more loose or arriving balls into controlled possession.
         </strong>
 
       `;
@@ -3291,7 +3249,7 @@
 
       renderPossessionEfficiencyTrend();
 
-      renderTurnoverTrend();
+      renderMissedControlTrend();
 
       renderTrendSummary();
 
@@ -3376,8 +3334,8 @@
         game.throwIns || {};
 
 
-      const turnovers =
-        game.purposelessTurnovers;
+      const missedControl =
+        game.missedControlOpportunities;
 
 
 
@@ -3509,7 +3467,7 @@
               <span
                 class="text-xs uppercase tracking-wide font-bold text-gray-500"
               >
-                Purposeless Turnovers
+                Missed Control Opportunities
               </span>
 
 
@@ -3517,13 +3475,13 @@
                 class="text-3xl font-extrabold text-white mt-2"
               >
                 ${
-                  turnovers &&
+                  missedControl &&
                   Number.isFinite(
                     Number(
-                      turnovers.total
+                      missedControl.total
                     )
                   )
-                    ? turnovers.total
+                    ? missedControl.total
                     : '—'
                 }
               </p>
@@ -3533,8 +3491,8 @@
                 class="text-xs text-gray-500 mt-1"
               >
                 ${
-                  turnovers
-                    ? `${turnovers.kicks || 0} kicks · ${turnovers.carries || 0} carries`
+                  missedControl
+                    ? 'Could control or possess instead'
                     : 'Not tracked'
                 }
               </p>
