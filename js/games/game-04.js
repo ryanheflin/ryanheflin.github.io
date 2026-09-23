@@ -50,10 +50,6 @@ window.seasonGames.push({
 
   /* ==========================================================
      SEASON TREND DATA
-
-     Set-piece effectiveness includes all four attacking
-     restart types: throw-ins, goal kicks, free kicks and
-     corners.
   ========================================================== */
 
   trendStats: {
@@ -62,19 +58,41 @@ window.seasonGames.push({
 
 
     /* ========================================================
-       POSSESSION EFFICIENCY
+       POSSESSION EFFICIENCY — WITH BALL
 
-       Efficient possession = attacking possession
-       rated 7/10 or higher in the match log.
+       Successful possession =
+       the possession becomes dangerous OR establishes
+       our attack in the opponent's final third.
 
-       27 / 95 = 28.4%
+       42 / 95 = 44.2%
     ======================================================== */
 
     possessionEfficiency: {
 
-      effective: 27,
+      effective: 42,
 
       total: 95
+
+    },
+
+
+    /* ========================================================
+       POSSESSION EFFICIENCY — WITHOUT BALL
+
+       Successful defensive possession =
+       we stop the opponent before they create a dangerous
+       action or establish a dangerous attack in our final third.
+
+       Only true opponent possessions are counted.
+
+       55 / 84 = 65.5%
+    ======================================================== */
+
+    defensivePossessionEfficiency: {
+
+      effective: 55,
+
+      total: 84
 
     },
 
@@ -138,28 +156,37 @@ window.seasonGames.push({
 
 
   /* ==========================================================
-     PURPOSELESS TURNOVERS
+     MISSED CONTROL OPPORTUNITIES
 
-     Count:
-     - unnecessary kicks / clearances when a controlled
-       option was available
-     - head-down carries that directly surrendered possession
+     Strict standard.
+
+     Count when:
+     - we have a reasonable opportunity to settle or possess
+       an arriving or loose ball but kick it away instead
+     - we clear when there is time to control
+     - we launch a low-percentage ball without a real target
+       when controlled possession is available
+     - we turn a controllable situation into "tennis"
+     - we immediately force the ball away instead of making
+       it ours
+
+     IMPORTANT:
+     Count the missed opportunity even if another Altafulla
+     player immediately recovers the ball afterward.
 
      Do NOT count:
-     - purposeful passes that were intercepted
-     - bad touches after a good decision
-     - crosses / through balls attempting to create
      - necessary clearances under genuine pressure
-     - legitimate attempts to beat an opponent
+     - purposeful passes attempting to create a real advantage
+     - crosses / through balls in attacking situations
+     - genuine 50/50 balls where control is unrealistic
+     - technical mistakes after the correct decision
+
+     Torreforta: 24
   ========================================================== */
 
-  purposelessTurnovers: {
+  missedControlOpportunities: {
 
-    total: 12,
-
-    kicks: 11,
-
-    carries: 1
+    total: 24
 
   },
 
