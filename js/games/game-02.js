@@ -50,72 +50,89 @@ window.seasonGames.push({
 
   /* ==========================================================
      SEASON TREND DATA
-
-     Set-piece effectiveness includes all four attacking
-     restart types: throw-ins, goal kicks, free kicks and
-     corners.
   ========================================================== */
 
- trendStats: {
+  trendStats: {
 
-  opponentPasses: 267,
-
-
-  /* ========================================================
-     POSSESSION EFFICIENCY
-
-     Efficient possession = attacking possession
-     rated 7/10 or higher in the match log.
-
-     18 / 80 = 22.5%
-  ======================================================== */
-
-  possessionEfficiency: {
-
-    effective: 18,
-
-    total: 80
-
-  },
+    opponentPasses: 267,
 
 
-  /* ========================================================
-     SET-PIECE EFFECTIVENESS
-  ======================================================== */
+    /* ========================================================
+       POSSESSION EFFICIENCY - WITH BALL
 
-  setPieces: {
+       Successful possession =
+       the possession becomes dangerous OR establishes
+       our attack in the opponent's final third.
 
-    effective: 12,
+       35 / 80 = 43.8%
+    ======================================================== */
 
-    total: 30,
+    possessionEfficiency: {
 
-    breakdown: {
+      effective: 35,
 
-      throwIns: {
-        effective: 6,
-        total: 19
-      },
+      total: 80
 
-      goalKicks: {
-        effective: 4,
-        total: 5
-      },
+    },
 
-      freeKicks: {
-        effective: 1,
-        total: 3
-      },
 
-      corners: {
-        effective: 1,
-        total: 3
+    /* ========================================================
+       POSSESSION EFFICIENCY - WITHOUT BALL
+
+       Successful defensive possession =
+       we stop the opponent before they create a dangerous
+       action or establish a dangerous attack in our final third.
+
+       49 / 80 = 61.3%
+    ======================================================== */
+
+    defensivePossessionEfficiency: {
+
+      effective: 49,
+
+      total: 80
+
+    },
+
+
+    /* ========================================================
+       SET-PIECE EFFECTIVENESS
+    ======================================================== */
+
+    setPieces: {
+
+      effective: 12,
+
+      total: 30,
+
+      breakdown: {
+
+        throwIns: {
+          effective: 6,
+          total: 19
+        },
+
+        goalKicks: {
+          effective: 4,
+          total: 5
+        },
+
+        freeKicks: {
+          effective: 1,
+          total: 3
+        },
+
+        corners: {
+          effective: 1,
+          total: 3
+        }
+
       }
 
     }
 
-  }
+  },
 
-},
 
   /* ==========================================================
      THROW-INS
@@ -137,30 +154,39 @@ window.seasonGames.push({
 
 
   /* ==========================================================
-     PURPOSELESS TURNOVERS
+     MISSED CONTROL OPPORTUNITIES
 
-     Full-match retrospective count.
+     Strict standard.
 
-     Count:
-     - unnecessary kicks / clearances when a controlled
-       option was available
-     - head-down carries that directly surrendered possession
+     Count when:
+     - we have a reasonable opportunity to settle or possess
+       an arriving or loose ball but kick it away instead
+     - we clear when there is time to control
+     - we launch a low-percentage ball without a real target
+       when controlled possession is available
+     - we turn a controllable situation into "tennis"
+     - we immediately force the ball away instead of making
+       it ours
+     - we repeatedly force the game forward instead of
+       controlling a situation we already own
+
+     IMPORTANT:
+     Count the missed opportunity even if another Altafulla
+     player immediately recovers the ball afterward.
 
      Do NOT count:
-     - purposeful passes that were intercepted
-     - bad touches after a good decision
-     - crosses / through balls attempting to create
      - necessary clearances under genuine pressure
-     - legitimate attempts to beat an opponent
+     - purposeful passes attempting to create a real advantage
+     - crosses / through balls in attacking situations
+     - genuine 50/50 balls where control is unrealistic
+     - technical mistakes after the correct decision
+
+     Pallaresos: 32
   ========================================================== */
 
-  purposelessTurnovers: {
+  missedControlOpportunities: {
 
-    total: 16,
-
-    kicks: 11,
-
-    carries: 5
+    total: 32
 
   },
 
