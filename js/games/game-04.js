@@ -424,7 +424,7 @@ lo que hemos aprendido durante la pretemporada.
     {
       title: 'Primera Parte',
       description: 'Primeros 20 minutos completos',
-      embedUrl: 'https://www.youtube.com/embed/REPLACE_GAME4_CLIP_1'
+      embedUrl: 'https://www.youtube.com/embed/hRcneMipg10'
     },
 
     {
