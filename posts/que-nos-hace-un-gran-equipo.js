@@ -2,7 +2,7 @@ window.blogPosts.push({
 
   id: 'que-nos-hace-un-gran-equipo',
 
-  title: '¿Qué Nos Puede Hacer Uno de los Mejores Equipos de Esta Liga?',
+  title: '¿Por qué podemos ser uno de los mejores equipos de esta liga?',
 
   date: '2026-09-23',
 
