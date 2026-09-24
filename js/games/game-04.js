@@ -473,19 +473,19 @@ lo que hemos aprendido durante la pretemporada.
     {
       title: 'Segunda Parte',
       description: 'Próximos 20 minutos completos',
-      embedUrl: 'https://www.youtube.com/embed/REPLACE_GAME4_CLIP_2'
+      embedUrl: 'https://www.youtube.com/embed/SAXcWby33fs'
     },
 
     {
       title: 'Tercera Parte',
       description: 'Próximos 20 minutos completos',
-      embedUrl: 'https://www.youtube.com/embed/REPLACE_GAME4_CLIP_3'
+      embedUrl: 'https://www.youtube.com/embed/qekxjZ_6P8o'
     },
 
     {
       title: 'Parte Final',
       description: 'Últimos 20 minutos completos',
-      embedUrl: 'https://www.youtube.com/embed/REPLACE_GAME4_CLIP_4'
+      embedUrl: 'https://www.youtube.com/embed/Igrwv__uQgA'
     }
 
   ]
