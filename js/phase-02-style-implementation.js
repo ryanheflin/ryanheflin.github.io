@@ -85,6 +85,9 @@ const phase2Weeks = [
           'If the advantage disappears → secure the ball.'
         ],
 
+        sessionPlan:
+          'sessions/session-15-beating-the-press.pdf',
+        
         missed: [
           'Breaking the pressure is not the objective: we want to attack the space it creates.',
           'When we break their pressure, we look forward immediately.',
