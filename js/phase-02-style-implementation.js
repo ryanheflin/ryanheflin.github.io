@@ -58,6 +58,9 @@ const phase2Weeks = [
           'Prepare for second balls after playing direct.'
         ],
 
+       sessionPlan:
+          'sessions/session-14-space-and-pressure.pdf',
+
         missed: [
           'Against pressure, find the space they leave: inside, outside, or over.',
           'Playing direct is not a mistake if the best space is behind their pressure.',
