@@ -19,6 +19,44 @@
       --altafulla-black: #000000;
       --altafulla-blue: #62bed6;
     }
+
+    /* Current league week */
+.current-game-week {
+  background: rgba(242, 228, 10, 0.10) !important;
+  box-shadow:
+    inset 4px 0 0 var(--altafulla-yellow),
+    inset 0 0 0 1px rgba(242, 228, 10, 0.35);
+}
+
+.current-game-week:hover {
+  background: rgba(242, 228, 10, 0.16) !important;
+}
+
+.current-week-badge {
+  display: inline-block;
+  margin-top: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  background: var(--altafulla-yellow);
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+/* Preseason accordion */
+.preseason-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.preseason-chevron {
+  transition: transform 0.2s ease;
+}
+
+details[open] .preseason-chevron {
+  transform: rotate(180deg);
+}
+    
   </style>
 </head>
 
@@ -221,324 +259,358 @@
          PRESEASON FRIENDLIES
     ======================================================== -->
 
-    <section class="mb-10">
+    <!-- =======================================================
+     PRESEASON FRIENDLIES
+======================================================== -->
 
+<section class="mb-10">
 
-      <div class="mb-4">
+  <details
+    class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg"
+  >
 
-        <h3 class="text-xl font-bold text-white">
-          Partidos de Pretemporada
-        </h3>
+    <summary
+      class="preseason-toggle cursor-pointer list-none px-5 py-4 hover:bg-gray-700/40 transition"
+    >
 
-        <p class="text-sm text-gray-400 mt-1">
-          Partidos amistosos antes del inicio de la liga.
-        </p>
+      <div class="flex items-center justify-between gap-4">
 
-      </div>
+        <div>
 
+          <div class="flex items-center gap-3">
 
+            <h3 class="text-xl font-bold text-white">
+              Partidos de Pretemporada
+            </h3>
 
-      <div
-        class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-lg"
-      >
+            <span
+              class="text-xs font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-400"
+            >
+              FINALIZADA
+            </span>
 
-        <div class="overflow-x-auto">
+          </div>
 
-          <table class="w-full text-left min-w-[760px]">
-
-
-            <thead class="bg-gray-950 border-b border-gray-700">
-
-              <tr>
-
-                <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
-                  Fecha
-                </th>
-
-                <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
-                  Hora
-                </th>
-
-                <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
-                  Partido
-                </th>
-
-                <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
-                  Campo
-                </th>
-
-                <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
-                  Resultado
-                </th>
-
-              </tr>
-
-            </thead>
-
-
-
-            <tbody class="divide-y divide-gray-700">
-
-
-              <!-- Friendly 1 -->
-              <tr class="hover:bg-gray-700/40 transition">
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div
-                    class="text-xl font-extrabold"
-                    style="color: var(--altafulla-yellow);"
-                  >
-                    29 AGO
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Sábado
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div class="text-2xl font-extrabold text-white">
-                    13:00
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Conv. 12:00
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <div class="font-bold text-white">
-                    Sant Pau S16 vs. CE Altafulla
-                  </div>
-
-                  <span
-                    class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-300"
-                  >
-                    FUERA
-                  </span>
-
-                </td>
-
-
-                <td class="px-4 py-4 text-sm text-gray-300">
-                  Campclar
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <span class="text-lg font-bold text-white">
-                    1–2
-                  </span>
-
-                </td>
-
-              </tr>
-
-
-
-              <!-- Friendly 2 -->
-              <tr class="hover:bg-gray-700/40 transition">
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div
-                    class="text-xl font-extrabold"
-                    style="color: var(--altafulla-yellow);"
-                  >
-                    6 SEP
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Domingo
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div class="text-2xl font-extrabold text-white">
-                    12:00
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Conv. 11:00
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <div class="font-bold text-white">
-                    CE Altafulla vs. Pallaresos
-                  </div>
-
-                  <span
-                    class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full text-black"
-                    style="background-color: var(--altafulla-yellow);"
-                  >
-                    CASA
-                  </span>
-
-                </td>
-
-
-                <td class="px-4 py-4 text-sm text-gray-300">
-                  Altafulla
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <span class="text-lg font-bold text-white">
-                    5–4
-                  </span>
-
-                </td>
-
-              </tr>
-
-
-
-              <!-- Friendly 3 -->
-              <tr class="hover:bg-gray-700/40 transition">
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div
-                    class="text-xl font-extrabold"
-                    style="color: var(--altafulla-yellow);"
-                  >
-                    13 SEP
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Domingo
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div class="text-2xl font-extrabold text-white">
-                    16:00
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <div class="font-bold text-white">
-                    CE Altafulla vs. San Pere i San Pau
-                  </div>
-
-                  <span
-                    class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full text-black"
-                    style="background-color: var(--altafulla-yellow);"
-                  >
-                    CASA
-                  </span>
-
-                </td>
-
-
-                <td class="px-4 py-4 text-sm text-gray-300">
-                  Altafulla
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <span class="text-lg font-bold text-white">
-                    3–3
-                  </span>
-
-                </td>
-
-              </tr>
-
-
-
-              <!-- Friendly 4 -->
-              <tr class="hover:bg-gray-700/40 transition">
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div
-                    class="text-xl font-extrabold"
-                    style="color: var(--altafulla-yellow);"
-                  >
-                    20 SEP
-                  </div>
-
-                  <div class="text-xs text-gray-400 mt-1">
-                    Domingo
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4 whitespace-nowrap">
-
-                  <div class="text-2xl font-extrabold text-white">
-                    11:00
-                  </div>
-
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <div class="font-bold text-white">
-                    Torreforta vs. CE Altafulla
-                  </div>
-
-                  <span
-                    class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-300"
-                  >
-                    FUERA
-                  </span>
-
-                </td>
-
-
-                <td class="px-4 py-4 text-sm text-gray-300">
-                  Torreforta
-                </td>
-
-
-                <td class="px-4 py-4">
-
-                  <span class="text-lg font-bold text-white">
-                    7–2
-                  </span>
-
-                </td>
-
-              </tr>
-
-
-            </tbody>
-
-          </table>
+          <p class="text-sm text-gray-400 mt-1">
+            4 amistosos · Haz clic para ver los resultados
+          </p>
 
         </div>
 
+
+        <svg
+          class="preseason-chevron w-5 h-5 text-gray-400 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+
       </div>
 
-    </section>
+    </summary>
 
+
+    <div class="border-t border-gray-700 overflow-x-auto">
+
+      <table class="w-full text-left min-w-[760px]">
+
+        <thead class="bg-gray-950 border-b border-gray-700">
+
+          <tr>
+
+            <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
+              Fecha
+            </th>
+
+            <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
+              Hora
+            </th>
+
+            <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
+              Partido
+            </th>
+
+            <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
+              Campo
+            </th>
+
+            <th class="px-4 py-3 text-xs uppercase tracking-wide font-bold text-gray-500">
+              Resultado
+            </th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody class="divide-y divide-gray-700">
+
+
+          <!-- Friendly 1 -->
+          <tr class="hover:bg-gray-700/40 transition">
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div
+                class="text-xl font-extrabold"
+                style="color: var(--altafulla-yellow);"
+              >
+                29 AGO
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Sábado
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div class="text-2xl font-extrabold text-white">
+                13:00
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Conv. 12:00
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <div class="font-bold text-white">
+                Sant Pau S16 vs. CE Altafulla
+              </div>
+
+              <span
+                class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-300"
+              >
+                FUERA
+              </span>
+
+            </td>
+
+
+            <td class="px-4 py-4 text-sm text-gray-300">
+              Campclar
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <span class="text-lg font-bold text-white">
+                1–2
+              </span>
+
+            </td>
+
+          </tr>
+
+
+
+          <!-- Friendly 2 -->
+          <tr class="hover:bg-gray-700/40 transition">
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div
+                class="text-xl font-extrabold"
+                style="color: var(--altafulla-yellow);"
+              >
+                6 SEP
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Domingo
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div class="text-2xl font-extrabold text-white">
+                12:00
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Conv. 11:00
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <div class="font-bold text-white">
+                CE Altafulla vs. Pallaresos
+              </div>
+
+              <span
+                class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full text-black"
+                style="background-color: var(--altafulla-yellow);"
+              >
+                CASA
+              </span>
+
+            </td>
+
+
+            <td class="px-4 py-4 text-sm text-gray-300">
+              Altafulla
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <span class="text-lg font-bold text-white">
+                5–4
+              </span>
+
+            </td>
+
+          </tr>
+
+
+
+          <!-- Friendly 3 -->
+          <tr class="hover:bg-gray-700/40 transition">
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div
+                class="text-xl font-extrabold"
+                style="color: var(--altafulla-yellow);"
+              >
+                13 SEP
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Domingo
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div class="text-2xl font-extrabold text-white">
+                16:00
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <div class="font-bold text-white">
+                CE Altafulla vs. San Pere i San Pau
+              </div>
+
+              <span
+                class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full text-black"
+                style="background-color: var(--altafulla-yellow);"
+              >
+                CASA
+              </span>
+
+            </td>
+
+
+            <td class="px-4 py-4 text-sm text-gray-300">
+              Altafulla
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <span class="text-lg font-bold text-white">
+                3–3
+              </span>
+
+            </td>
+
+          </tr>
+
+
+
+          <!-- Friendly 4 -->
+          <tr class="hover:bg-gray-700/40 transition">
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div
+                class="text-xl font-extrabold"
+                style="color: var(--altafulla-yellow);"
+              >
+                20 SEP
+              </div>
+
+              <div class="text-xs text-gray-400 mt-1">
+                Domingo
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4 whitespace-nowrap">
+
+              <div class="text-2xl font-extrabold text-white">
+                11:00
+              </div>
+
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <div class="font-bold text-white">
+                Torreforta vs. CE Altafulla
+              </div>
+
+              <span
+                class="inline-block mt-2 text-xs font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-300"
+              >
+                FUERA
+              </span>
+
+            </td>
+
+
+            <td class="px-4 py-4 text-sm text-gray-300">
+              Torreforta
+            </td>
+
+
+            <td class="px-4 py-4">
+
+              <span class="text-lg font-bold text-white">
+                7–2
+              </span>
+
+            </td>
+
+          </tr>
+
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </details>
+
+</section>
 
 
    <!-- =======================================================
@@ -616,10 +688,10 @@
 
         </thead>
 
-
-
-        <tbody class="divide-y divide-gray-700">
-
+                <tbody
+          id="league-schedule-body"
+          class="divide-y divide-gray-700"
+        >
 
           <!-- J1 -->
           <tr class="hover:bg-gray-700/40 transition">
@@ -1414,7 +1486,288 @@
     data-cf-beacon='{"token": "bc66404c9601462e9cf66f11e2d859a0"}'
   ></script>
 
+<script>
 
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const leagueBody =
+      document.getElementById('league-schedule-body');
+
+
+    if (!leagueBody) {
+      return;
+    }
+
+
+    const monthNumbers = {
+
+      ENE: 0,
+      FEB: 1,
+      MAR: 2,
+      ABR: 3,
+      MAY: 4,
+      JUN: 5,
+      JUL: 6,
+      AGO: 7,
+      SEP: 8,
+      OCT: 9,
+      NOV: 10,
+      DIC: 11
+
+    };
+
+
+    const today =
+      new Date();
+
+
+    today.setHours(
+      0,
+      0,
+      0,
+      0
+    );
+
+
+    /* Monday of current week */
+
+    const monday =
+      new Date(today);
+
+
+    const dayFromMonday =
+      (
+        today.getDay() + 6
+      ) % 7;
+
+
+    monday.setDate(
+      today.getDate() - dayFromMonday
+    );
+
+
+    /* Sunday of current week */
+
+    const sunday =
+      new Date(monday);
+
+
+    sunday.setDate(
+      monday.getDate() + 6
+    );
+
+
+
+    function getSeasonYear(monthNumber) {
+
+      /*
+        Aug-Dec = 2026
+        Jan-May = 2027
+      */
+
+      return monthNumber >= 7
+        ? 2026
+        : 2027;
+
+    }
+
+
+
+    function parseScheduleDate(text) {
+
+      if (!text) {
+        return null;
+      }
+
+
+      const cleaned =
+        text
+          .trim()
+          .toUpperCase()
+          .replace(/\s+/g, ' ');
+
+
+      /*
+        Handles:
+
+        27 SEP
+        14–15 NOV
+        26–27 DIC
+      */
+
+      const match =
+        cleaned.match(
+          /^(\d{1,2})(?:[–-](\d{1,2}))?\s+([A-ZÁÉÍÓÚ]+)/
+        );
+
+
+      if (!match) {
+        return null;
+      }
+
+
+      const startDay =
+        Number(match[1]);
+
+
+      const endDay =
+        match[2]
+          ? Number(match[2])
+          : startDay;
+
+
+      const month =
+        monthNumbers[
+          match[3]
+        ];
+
+
+      if (
+        month === undefined
+      ) {
+        return null;
+      }
+
+
+      const year =
+        getSeasonYear(month);
+
+
+      const start =
+        new Date(
+          year,
+          month,
+          startDay
+        );
+
+
+      const end =
+        new Date(
+          year,
+          month,
+          endDay
+        );
+
+
+      start.setHours(
+        0,
+        0,
+        0,
+        0
+      );
+
+
+      end.setHours(
+        23,
+        59,
+        59,
+        999
+      );
+
+
+      return {
+        start,
+        end
+      };
+
+    }
+
+
+
+    const rows =
+      leagueBody.querySelectorAll(
+        'tr'
+      );
+
+
+    rows.forEach(row => {
+
+      const firstCell =
+        row.querySelector('td');
+
+
+      if (!firstCell) {
+        return;
+      }
+
+
+      const dateElement =
+        firstCell.querySelector('div');
+
+
+      if (!dateElement) {
+        return;
+      }
+
+
+      const range =
+        parseScheduleDate(
+          dateElement.textContent
+        );
+
+
+      if (!range) {
+        return;
+      }
+
+
+      const fallsThisWeek =
+        range.start <= sunday &&
+        range.end >= monday;
+
+
+      if (!fallsThisWeek) {
+        return;
+      }
+
+
+      row.classList.add(
+        'current-game-week'
+      );
+
+
+      /*
+        Add ESTA SEMANA badge
+        under opponent / DESCANSO
+      */
+
+      const opponentCell =
+        row.children[2];
+
+
+      if (opponentCell) {
+
+        const badge =
+          document.createElement(
+            'span'
+          );
+
+
+        badge.className =
+          'current-week-badge';
+
+
+        badge.textContent =
+          'ESTA SEMANA';
+
+
+        opponentCell.appendChild(
+          document.createElement('br')
+        );
+
+
+        opponentCell.appendChild(
+          badge
+        );
+
+      }
+
+    });
+
+  });
+
+</script>
+  
 </body>
 
 </html>
