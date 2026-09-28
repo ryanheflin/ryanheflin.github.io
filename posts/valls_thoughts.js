@@ -66,23 +66,17 @@ window.blogPosts.push({
     </p>
 
     <p>
+    ---
       But the first category is different.
     </p>
 
     <p>
       It is my sincere belief that if we had not failed at the things in the first category, we could have prevented them from scoring half of their goals, and we could have scored twice as many as we did.
-    </p>
-
-    <p>
       For those who do the math, that’s still a 2–6 defeat. But it would at least have been respectable against a team that looks like one of the strongest teams in this league.
     </p>
 
     <p>
       So, let’s look at the first category and define the things we didn’t do that we could have.
-    </p>
-
-    <p>
-      After watching the video, I think there are seven things we can improve immediately simply by doing the things we know how to do.
     </p>
 
 
@@ -220,11 +214,18 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
     </p>
 
     <p>
-      We are not always in a hurry, especially when the momentum is against us. Sometimes it’s best to pass the ball around and have the opponent drop back into their shape to relieve the pressure from our half.
+      We are not always in a hurry, especially when the momentum is against us. Sometimes it’s best to pass the ball around and have the opponent drop back into their shape to relieve the pressure from our half. This clip is pretty self-explanatory. Otman has a chance to drop the ball to Victor, while Joel makes a great run into the space behind. This is essentially all we have been talking about in practice. And we fail to do it here, and it cost us a possession and eventually a goal.
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 6 — SECURE THE BALL BEFORE FORCING FORWARD -->
+    <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/MttyEsfArKw"
+        title="Move Off The Ball"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
 
@@ -237,7 +238,7 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
     </p>
 
     <p>
-      This is an important clip. Pedro plays it short to Soufian. Gio makes a supporting run back into space. I would love Yeray to drop back into the space vacated by Gio here. And we need Hamza to drop back farther and give Soufian an angle. But regardless, Soufian still has two options. He has Pedro and he has Gio. If he plays more quickly, he can play a wall pass with Gio. If he plays back to Pedro, Pedro can clear it, or even better, play it quickly to Gio who can touch it wide to Soufian, now in space.  
+      This is an important clip. Pedro plays it short to Soufian. Gio makes a supporting run back into space. I would love Yeray to drop back into the space vacated by Gio here. And we need Hamza to drop back farther and give Soufian an angle. But regardless, Soufian still has two options. He has Pedro and he has Gio. If he plays more quickly, he can play a wall pass with Gio. If he plays back to Pedro, Pedro can clear it, or even better, play it quickly to Gio who can touch it wide back to Soufian, now in space. And then, once you makea a mistake and don't play calm and quick, don't blame others and throw your hands in the air like it's everyone else's fault. 
     </p>
 
     <p>
