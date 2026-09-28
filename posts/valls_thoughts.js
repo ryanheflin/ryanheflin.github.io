@@ -95,7 +95,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Look at the difference here between the spacing in our press and the spacing in theirs. Their lines are closer together because their back line is up, their spacing is more balanced, and their marking is much tighter.
+      Look at the difference here between the spacing in our press and the spacing in theirs. Their lines are closer together because their back line is up, their spacing is more balanced, and their marking is much tighter. In the first part, look at the length of the lines between us and our marks. Their pivot receives the ball in acres of space, twice. In the second part, look how tight they are, and how much trouble we have trying to get out. 
     </p>
 
     <div class="aspect-video my-6">
@@ -161,7 +161,7 @@ window.blogPosts.push({
     </p>
 
     <p>
-      If your teammate has the ball — move for him! Get open and demand a pass. Combine into space!
+      In the first clip, look what the Valls player does immediately after passing the ball. His entire goal is to combine into dangerous space. He passes and moves without hesitation. In the second clip, look at what Joel does after he passes to Eban. He stands there. No movement, no combining into space. Does Joel know how to do this? Absolutely. In fact, there is another video on this page where he does an excellent job of moving into space. So why doesn't he do it here? For the same reason nobody else was doing it either - we were losing, we were frustrated, and we stopped doing the required things because of it. 
     </p>
 
     <div class="aspect-video my-6">
