@@ -99,91 +99,90 @@ const phase2Weeks = [
     ]
   },
 
-
   /* ========================================================
      WEEK 6
   ======================================================== */
   {
     week: 6,
-    focus: 'Advance from Defense into Midfield',
+    focus: 'Connect and Support',
 
     description:
-      'Connect the defense and midfield to receive behind the pressure and continue advancing.',
+      'Help the player on the ball with clear passing angles, movement, and simple combinations.',
 
     objective:
-      'Advance through midfield with purpose. Find players in useful spaces, move the opponent, and combine to break pressure.',
+      'Play together instead of relying on individual actions. Create support before, during, and after the pass.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Find the Player Between the Lines',
-        question: 'Who can receive behind their first line of pressure?',
+        title: 'Give Him an Option',
+        question: 'How do we help the player on the ball?',
 
         purpose:
-          'Create and recognize passing lines into midfield so we can continue the attack.',
+          'Create clear support around the ball so the player in possession is not isolated.',
 
         habits: [
-          'Scan before receiving.',
-          'Do not stay hidden behind a defender.',
-          'Create diagonal passing lines.',
-          'Receive thinking about the next action.',
-          'Support behind the receiver.'
+          'Do not hide behind defenders.',
+          'Create a clear passing angle.',
+          'Move after passing.',
+          'Support underneath the ball.',
+          'Do not crowd the same space.'
         ],
 
         missed: [
-          'We want to find players behind the pressure, not pass into midfield just for the sake of it.',
-          'Before receiving, scan for the space and the pressure.',
-          'Move out of the defender’s cover shadow and make yourself visible.',
-          'Try to receive ready to continue advancing.'
+          'The player on the ball should not be alone.',
+          'Move where he can see and reach you.',
+          'After you pass, move again.',
+          'Good spacing makes the next pass easier.'
         ]
       },
 
       {
         number: 2,
-        title: 'Move Them to Play Inside',
-        question: 'If we cannot play forward now, how do we create the pass?',
+        title: 'Play Together',
+        question: 'Can two or three players solve the problem together?',
 
         purpose:
-          'Move the ball and the players until we create a forward passing line.',
+          'Use simple combinations instead of trying to beat pressure alone.',
 
         habits: [
-          'Do not force closed forward passes.',
-          'Move the ball to move the opponent.',
-          'Ball goes back → open the field.',
-          'Change the angle of attack.',
-          'Attack the center when it opens.'
+          'Use wall passes.',
+          'Bounce the ball when you cannot turn.',
+          'Pass and move.',
+          'Third player anticipates.',
+          'One supports, one threatens forward.'
         ],
 
         missed: [
-          'If we cannot advance now, we keep the ball and create another opportunity.',
-          'Moving the ball should move the opponent.',
-          'Backward and sideways passes can create the next forward pass.',
-          'When the center opens, recognize it and attack quickly.'
+          'You do not always need to turn.',
+          'Use your teammate to escape pressure.',
+          'The third player should move before the pass arrives.',
+          'Do not try to solve every situation alone.'
         ]
       },
 
       {
         number: 3,
-        title: 'Connect and Continue',
-        question: 'Can we break through midfield without slowing the attack?',
+        title: 'Connect and Advance',
+        question: 'Can we move forward while staying connected?',
 
         purpose:
-          'Use wall passes, third-player combinations, and quick combinations to break pressure while continuing to advance.',
+          'Use support and combinations to advance without breaking the team apart.',
 
         habits: [
-          'The receiver does not always have to turn.',
-          'Use wall passes to break pressure.',
-          'The third player anticipates the combination.',
-          'One connects and another threatens forward.',
-          'Break a line → advance.'
+          'Forward if the option is clear.',
+          'Ball goes forward → team moves forward.',
+          'Support the next action.',
+          'Keep useful spacing.',
+          'No advantage → keep the ball.'
         ],
 
         missed: [
-          'Receiving between the lines does not mean you always have to turn: sometimes a wall pass is faster.',
-          'The third player must anticipate the combination.',
-          'If one player comes to support, another threatens the space ahead.',
-          'When we break a line, we continue advancing.'
+          'Moving forward does not mean rushing.',
+          'When the ball advances, the team advances with it.',
+          'Do not leave the receiver alone.',
+          'If the next action is closed, keep possession.'
         ]
       }
 
@@ -196,85 +195,85 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 7,
-    focus: 'Create Chances from Wide Areas',
+    focus: 'Spacing and Positions',
 
     description:
-      'Use width, 1v1s, combinations, and coordinated movement to create danger from wide areas.',
+      'Create good spacing so players can help each other without occupying the same space.',
 
     objective:
-      'Create 1v1 situations, combine around the defender, and occupy the box effectively.',
+      'Improve positional discipline. Give the ball width, depth, support, and clear passing lines.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Isolate and Attack',
-        question: 'Can we get our winger 1v1?',
+        title: 'Do Not Stand Together',
+        question: 'Where can I move to help the team?',
 
         purpose:
-          'Create situations where the winger receives with space and can attack the defender 1v1.',
+          'Recognize when to move toward the ball and when to move away to create space.',
 
         habits: [
-          'Get the ball wide with space.',
-          'Receive facing the defender when possible.',
-          'Attack the defender with purpose.',
-          'Change speed.',
-          'Do not crowd the 1v1 space.'
+          'Do not stand in the same line as a teammate.',
+          'Create width and depth.',
+          'Move away if the space is crowded.',
+          'Keep diagonal passing angles.',
+          'Stay connected to the ball.'
         ],
 
         missed: [
-          'Ball goes wide → first think about attacking the defender.',
-          'We want a true 1v1: do not bring more defenders toward the winger.',
-          'Receive ready to advance and attack with confidence and a change of pace.',
-          'If a second defender comes, they have left a teammate free.'
+          'More players near the ball does not always mean more help.',
+          'Spread out enough to create passing lanes.',
+          'If a teammate enters your space, adjust.',
+          'Good spacing gives the player on the ball more choices.'
         ]
       },
 
       {
         number: 2,
-        title: 'Combine to Free the Winger',
-        question: 'If the winger cannot beat the defender alone, how do we help?',
+        title: 'Three Players Work Together',
+        question: 'Can we create a triangle around the ball?',
 
         purpose:
-          'Create connections between the winger, fullback, and midfielder to create superiority in wide areas.',
+          'Use three-player relationships to create different passing options around pressure.',
 
         habits: [
-          'The winger can stay wide or move inside.',
-          'The fullback responds to the winger’s movement.',
-          'The midfielder creates a third angle.',
-          'Recognize the overlap or underlap.',
-          'If they overload our side → think about switching.'
+          'Create a triangle around the ball.',
+          'One supports behind.',
+          'One gives width or depth.',
+          'Move when your teammate moves.',
+          'Do not occupy the same space.'
         ],
 
         missed: [
-          'Winger, fullback, and midfielder work together: do not occupy the same space.',
-          'If the winger stays wide, another player can overlap, underlap, or support behind.',
-          'Combine if we cannot beat the defender alone.',
-          'If the opponent overloads our side, we can switch the attack.'
+          'Three players should create three different options.',
+          'React to your teammate’s movement.',
+          'If one player comes short, another can move away.',
+          'Keep the triangle alive as the ball moves.'
         ]
       },
 
       {
         number: 3,
-        title: 'Finish the Attack',
-        question: 'When we break through wide, where does everyone else go?',
+        title: 'Keep Our Shape',
+        question: 'Can we attack without losing our positions?',
 
         purpose:
-          'Turn the advantage in wide areas into good chances by occupying finishing zones correctly.',
+          'Maintain useful team spacing while still allowing movement and combinations.',
 
         habits: [
-          'Attack different finishing zones.',
-          'Arrive in the box, do not wait inside it.',
-          'Opposite winger attacks the far post.',
-          'A midfielder supports the cutback.',
-          'Maintain balance behind the attack.'
+          'Know your starting space.',
+          'Move without abandoning the structure.',
+          'Ball moves → adjust your position.',
+          'Keep width on both sides.',
+          'Stay connected behind the attack.'
         ],
 
         missed: [
-          'When we beat the defender out wide, everyone has a role.',
-          'Do not all attack the same space.',
-          'Arrive in the finishing zone at the right moment instead of standing and waiting.',
-          'Players behind the attack stay organized in case we lose the ball.'
+          'Movement does not mean everyone follows the ball.',
+          'Keep the team spread across the field.',
+          'Players behind the ball still have an important role.',
+          'Good structure makes combinations easier.'
         ]
       }
 
@@ -287,89 +286,87 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 8,
-    focus: 'Attack Immediately After Regaining',
+    focus: 'Win It and Play Together',
 
     description:
-      'Recognize and exploit space before the opponent can reorganize.',
+      'After regaining possession, make the first action calm and keep the team connected.',
 
     objective:
-      'Turn regains into coordinated attacks. Improve the first action, supporting movements, and the decision between counterattacking and keeping the ball.',
+      'Recognize when to attack quickly and when to secure the ball instead of forcing the next action.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'First Look Forward',
-        question: 'What can we exploit before they organize?',
+        title: 'Secure the First Pass',
+        question: 'What is the best first action after we win it?',
 
         purpose:
-          'Improve the first action after regaining possession and recognize spaces while the opponent is disorganized.',
+          'Improve the first decision after regaining possession and avoid giving the ball straight back.',
 
         habits: [
-          'Scan before regaining when possible.',
-          'First thought → forward.',
-          'Recognize space in behind quickly.',
-          'First touch prepares the attack.',
-          'No forward advantage → keep the ball.'
+          'Look forward first.',
+          'Simple pass if needed.',
+          'Support the player who wins it.',
+          'Do not force the first action.',
+          'No advantage → secure the ball.'
         ],
 
         missed: [
-          'When we regain possession, we look forward before the opponent can organize.',
-          'Try to scan before regaining so you already know where the space is.',
-          'Your first touch should prepare the next action.',
-          'Forward first does not mean always forward: if there is no advantage, we keep the ball.'
+          'Winning the ball is only useful if we keep it.',
+          'Forward is good only when the advantage is real.',
+          'Give the player who regains possession an easy option.',
+          'Do not turn every regain into a rushed attack.'
         ]
       },
 
       {
         number: 2,
-        title: 'Run with the Regain',
-        question: 'How does the whole team turn a regain into an attack?',
+        title: 'Move with the Ball',
+        question: 'How does the team react when we regain possession?',
 
         purpose:
-          'Coordinate movement around the player who regains possession so the counterattack becomes a team action.',
+          'Coordinate movement around the regain so the player on the ball has support and forward options.',
 
         habits: [
-          'First run threatens in behind.',
-          'Second player supports the ball.',
-          'Third player creates another passing line.',
+          'One player threatens forward.',
+          'One player supports the ball.',
           'Create width quickly.',
-          'Defense advances behind the attack.'
+          'Team moves forward together.',
+          'Stay connected behind the attack.'
         ],
 
         missed: [
-          'The player who regains possession should not have to create the counterattack alone.',
-          'One threatens in behind, another supports, and everyone else creates width and options.',
-          'Do not all run toward the ball: attack different spaces.',
-          'The rest of the team advances behind the counterattack to keep us connected.'
+          'The player who wins it should not attack alone.',
+          'Do not all run toward the ball.',
+          'Give both a forward option and a safe option.',
+          'The whole team reacts to the regain.'
         ]
       },
 
       {
         number: 3,
-        title: 'Counterattack or Control?',
+        title: 'Attack or Keep It?',
         question: 'Do we attack now or keep the ball?',
 
         purpose:
-          'Decide whether a regain should become a counterattack or organized possession.',
+          'Read the situation after regaining and choose between attacking quickly or keeping possession.',
 
         habits: [
-          'Advantage ahead → attack.',
+          'Clear advantage → attack.',
           'Space in behind → attack.',
           'Opponent disorganized → attack.',
-          'No advantage → secure the ball.',
-          'When we have control → organize our structure.'
+          'No advantage → keep the ball.',
+          'Keep possession → restore our shape.'
         ],
 
         missed: [
-          'Regaining possession does not mean we always counterattack: read the situation.',
-          'Attack if we have space, superiority, or a disorganized opponent.',
-          'If the opponent is already organized or we are disconnected, keep the ball.',
-          'If we decide to keep it, quickly organize our attack.'
+          'We do not counterattack just because we won the ball.',
+          'Attack when the situation gives us an advantage.',
+          'If the opponent is organized, keep possession.',
+          'Once we keep it, organize the team again.'
         ]
       }
 
     ]
-  }
-
-];
+  },
