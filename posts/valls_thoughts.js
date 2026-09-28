@@ -119,11 +119,18 @@ window.blogPosts.push({
     </p>
 
     <p>
-      Don’t dive in, just delay and force the attacker away from dangerous areas. This is especially important when we see that the attackers are so talented individually.
+      Don’t dive in, just delay and force the attacker away from dangerous areas. This is especially important when we see that the attackers are so talented individually. In this clip, the Valls player capitalizes on 4 players diving in. 3 of them he individually beats, and the one in the middle he combines with a teammate for a wall pass into space. 4 players, all dive in, and we give up a goal.  
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 2 — DELAY AND COVER -->
+    <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/hJLjEeVWzOs"
+        title="Press Together"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
 
