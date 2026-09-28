@@ -321,42 +321,4 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
     </p>
 
 
-    <h4 class="text-lg font-bold text-white pt-4">
-      Here Are Some More Clips
-    </h4>
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      1 —
-    </h4>
-
-    <div class="my-6">
-      <!-- EXTRA VIDEO CLIP 1 -->
-    </div>
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      2 —
-    </h4>
-
-    <div class="my-6">
-      <!-- EXTRA VIDEO CLIP 2 -->
-    </div>
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      3 —
-    </h4>
-
-    <div class="my-6">
-      <!-- EXTRA VIDEO CLIP 3 -->
-    </div>
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      4 —
-    </h4>
-
-    <div class="my-6">
-      <!-- EXTRA VIDEO CLIP 4 -->
-    </div>
-
-  `
-
 });
