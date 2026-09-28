@@ -4,7 +4,7 @@ window.blogPosts.push({
 
   id: 'what-we-can-control',
 
-  title: 'What We Can Control',
+  title: 'What We Can Control: Thoughts on the Match Against Valls',
 
   date: '2026-09-28',
 
@@ -28,27 +28,19 @@ window.blogPosts.push({
     </p>
 
     <p>
-      I spent my breaks from work rewatching the video from yesterday’s match.
+      I spent my breaks from work today rewatching the video of our match yesterday. Immediately after the match, I was disappointed and embarrassed. Not about the score — it was clear about 15 minutes into the match that we were overmatched. But about how we responded to being overmatched. Our emotions caused us to forget our game plan and our core values, including simple moments of respect after the match was over.
     </p>
 
     <p>
-      Immediately after the game, I was disappointed and embarrassed. Not because of the score. After about 15 minutes, it was obvious that Valls were simply at another level from us right now.
+      Now, more than a day later, my emotions about the match are gone. I am back to being a machine. I look at problems and try to figure out solutions, as you should all be able to do as well.
     </p>
 
     <p>
-      I was disappointed by how we responded to that.
+      So I watched the game again, and came away with a few important takeaways.
     </p>
 
     <p>
-      As the game became harder, we became frustrated and nervous. We stopped trusting our game plan, stopped doing simple things, and forgot some of the habits and values we have been working on since preseason — including simple moments of respect after the match was over.
-    </p>
-
-    <p>
-      A day later, the emotion is gone. Now I can look at the match simply as a problem to solve. I am once again a machine, as you should all be as well.
-    </p>
-
-    <p>
-      And after watching it again, I think there were two completely different kinds of problems.
+      There were two categories of failure.
     </p>
 
 
@@ -57,15 +49,7 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      These are things we already know.
-    </p>
-
-    <p>
-      We have talked about them. We have practiced them. And we are capable of doing them much better than we did yesterday.
-    </p>
-
-    <p>
-      Valls did many of these things extremely well. We often did not do them at all.
+      First, there were things we didn’t do that we could have. Things the opponent did very well, that we didn’t do at all. But we could have. We’ve talked about them, practiced them, and should know them. But we got panicked and frustrated and didn’t do our jobs.
     </p>
 
 
@@ -74,15 +58,11 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      Valls also had speed, strength, technical quality, and individual ability that we simply could not match right now.
+      Second, there were things that we were just never going to be able to do. Valls was just a level above us right now, and even at our best we would have struggled to contain some of the things they were doing. They had speed, strength, technical quality, and individual ability that we simply could not match right now.
     </p>
 
     <p>
-      That is okay.
-    </p>
-
-    <p>
-      We are not going to solve those differences in one training session.
+      That is okay. We are not going to solve those differences in one training session.
     </p>
 
     <p>
@@ -90,32 +70,32 @@ window.blogPosts.push({
     </p>
 
     <p>
-      If we had done the things we already know how to do, the game would still have been extremely difficult — but it would have looked very different.
+      It is my sincere belief that if we had not failed at the things in the first category, we could have prevented them from scoring half of their goals, and we could have scored twice as many as we did.
     </p>
 
     <p>
-      In my opinion, I believe we could have prevented half of their goals and doubled our own. While that is still a 2–6 defeat, it would have been a much more respectable performance against a team that looks capable of being one of the strongest in the league.
+      For those who do the math, that’s still a 2–6 defeat. But it would at least have been respectable against a team that looks like one of the strongest teams in this league.
     </p>
 
     <p>
-      After watching the video, I think there are seven things we can improve immediately simply by doing the things we already know how to do.
+      So, let’s look at the first category and define the things we didn’t do that we could have.
+    </p>
+
+    <p>
+      After watching the video, I think there are seven things we can improve immediately simply by doing the things we know how to do.
     </p>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
-      1 — Press Together — Or Don’t Press at All
+    <h4 class="text-lg font-bold text-white pt-4">
+      1 — Press Together, or Don’t Press at All
     </h4>
 
     <p>
-      If one player presses and everyone else stays back, the opponent can easily play around him.
+      If one player presses and everyone else stays back, the opponent can easily play around him. When we press, we move together so the opponent has nowhere easy to go.
     </p>
 
     <p>
-      When we press, we move together so the opponent has nowhere easy to go.
-    </p>
-
-    <p>
-      Look at the difference between the spacing in our press and the spacing in theirs. Their lines are closer together because their back line moves up. Their spacing is more balanced, and their marking is much tighter.
+      Look at the difference here between the spacing in our press and the spacing in theirs. Their lines are closer together because their back line is up, their spacing is more balanced, and their marking is much tighter.
     </p>
 
     <div class="aspect-video my-6">
@@ -130,24 +110,16 @@ window.blogPosts.push({
     </div>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       2 — Delay and Cover
     </h4>
 
     <p>
-      As we’ve talked about in training, you do not always have to win the ball immediately.
+      As we’ve talked about in training, you do not always have to win the ball immediately. The first defender slows the attacker down while the next defender gets into position to help and protect the space behind.
     </p>
 
     <p>
-      The first defender slows the attacker down while the next defender gets into position to help and protect the space behind.
-    </p>
-
-    <p>
-      Don’t dive in. Delay. Stay with the attacker. Force him away from dangerous areas.
-    </p>
-
-    <p>
-      This becomes even more important when we recognize that the opponent has players who are very talented individually.
+      Don’t dive in, just delay and force the attacker away from dangerous areas. This is especially important when we see that the attackers are so talented individually.
     </p>
 
     <div class="my-6">
@@ -155,32 +127,20 @@ window.blogPosts.push({
     </div>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       3 — Protect the Center
     </h4>
 
     <p>
-      The middle of the field is the most dangerous place for the opponent to attack.
+      The middle of the field is the most dangerous place for the opponent to attack. Our first job is to protect the center and make them play around us, not straight through us.
     </p>
 
     <p>
-      Our first job is to protect the center and make them play around us, not straight through us.
+      In the attacking half, I asked the fullbacks to push high against their wingers, letting the center backs deal with the space behind. But in our own half, we need the defensive line to pinch together and prevent any passes through the gaps, especially between the fullback and center back.
     </p>
 
     <p>
-      In the attacking half, I asked our fullbacks to push high against their wingers and trust our center backs to deal with the space behind.
-    </p>
-
-    <p>
-      But in our own half, that changes.
-    </p>
-
-    <p>
-      Our defensive line needs to pinch together and prevent passes through the gaps — especially the space between the fullback and center back.
-    </p>
-
-    <p>
-      When we are pinned into our half: <strong>pinch together and force them wide.</strong>
+      So when we are pinned into our half, <strong>pinch and force wide!</strong>
     </p>
 
     <div class="my-6">
@@ -188,35 +148,23 @@ window.blogPosts.push({
     </div>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       4 — Give the Player on the Ball Support
     </h4>
 
     <p>
-      Do not watch your teammate struggle with the ball.
+      Do not watch your teammate struggle with the ball. Move into a position where he can see you and give him an easy pass so he does not have to solve the problem alone.
     </p>
 
     <p>
-      Move into a position where he can see you. Give him an easy pass so he does not have to solve the problem alone.
+      This one is something we talk about all the time. This happened all the time yesterday. We were so unsure about what was going to happen, we didn’t try to make anything happen.
     </p>
 
     <p>
-      This is something we talk about all the time, and yesterday it happened again and again.
+      If your teammate has the ball — move for him! Get open and demand a pass. Combine into space!
     </p>
 
-    <p>
-      We became so unsure about what was going to happen that we stopped trying to make anything happen ourselves.
-    </p>
-
-    <p>
-      If your teammate has the ball: <strong>move for him. Get open. Demand the pass. Combine into space.</strong>
-    </p>
-
-    <p>
-      Nobody should have to play alone.
-    </p>
-
-      <div class="aspect-video my-6">
+    <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/gyprh5-Pqmk"
@@ -227,32 +175,21 @@ window.blogPosts.push({
       </iframe>
     </div>
 
-    <h4 class="text-lg font-bold text-white pt-2">
+
+    <h4 class="text-lg font-bold text-white pt-4">
       5 — Keep Good Spacing and Positions
     </h4>
 
     <p>
-      Do not all follow the ball or stand in the same space.
+      Do not all follow the ball or stand in the same space. Spread out enough to give each other options, but stay close enough that we can still play together.
     </p>
 
     <p>
-      Spread out enough to give each other options, but stay close enough that we can still play together.
+      Let your teammate do their job. Protect your zone. We need to trust each other and provide balance on offense and defense.
     </p>
 
     <p>
-      Let your teammate do his job. Protect your zone. Trust each other.
-    </p>
-
-    <p>
-      We need balance when we attack and when we defend.
-    </p>
-
-    <p>
-      We talk about this constantly in training: <strong>give your teammate space to operate.</strong>
-    </p>
-
-    <p>
-      Look at how Valls move compared to us. Watch what happens away from the ball, not just what the player with the ball is doing.
+      I can’t remember how many times we talk about this in training — give your teammate space to operate. Look at how Valls move compared to us.
     </p>
 
     <div class="my-6">
@@ -260,103 +197,59 @@ window.blogPosts.push({
     </div>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       6 — Secure the Ball Before Forcing Forward
     </h4>
 
     <p>
-      Winning the ball does not help us if we immediately give it back.
+      Winning the ball does not help us if we immediately give it back. Look forward first, but if the forward pass is not there, make the simple pass, keep the ball, and organize again.
     </p>
 
     <p>
-      Look forward first. If the forward pass is available, play it.
-    </p>
-
-    <p>
-      But if it isn’t there, make the simple pass, keep the ball, and organize again.
-    </p>
-
-    <p>
-      We are not always in a hurry — especially when the momentum of the game is against us.
-    </p>
-
-    <p>
-      Sometimes the best thing we can do is keep possession, make the opponent drop back into their shape, and relieve the pressure on our team.
+      We are not always in a hurry, especially when the momentum is against us. Sometimes it’s best to pass the ball around and have the opponent drop back into their shape to relieve the pressure from our half.
     </p>
 
     <div class="my-6">
-      <!-- VIDEO CLIP 6 — SECURE THE BALL -->
+      <!-- VIDEO CLIP 6 — SECURE THE BALL BEFORE FORCING FORWARD -->
     </div>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       7 — Decide Earlier and Play Simply
     </h4>
 
     <p>
-      Good players do not wait until pressure arrives before deciding what to do.
-    </p>
-
-    <p>
-      Look before you receive. Know where your teammates are. Know where the pressure is coming from.
-    </p>
-
-    <p>
-      And when the simple pass is available, <strong>play it quickly.</strong>
-    </p>
-
-    <p>
-      Simple does not mean bad. Sometimes the simple decision is the best decision on the field.
+      Good players do not wait until pressure arrives before deciding what to do. Look before you receive, know your options, and when the simple pass is available, play it quickly.
     </p>
 
     <div class="my-6">
-      <!-- VIDEO CLIP 7 — DECIDE EARLIER / PLAY SIMPLY -->
+      <!-- VIDEO CLIP 7 — DECIDE EARLIER AND PLAY SIMPLY -->
     </div>
 
 
     <p>
-      These are not complicated ideas.
+      These are not complicated ideas. They are things we already know how to do.
     </p>
 
     <p>
-      They are things we already know how to do.
+      Now we need to do them when the game becomes difficult. When we are losing and everything is going against us.
     </p>
 
     <p>
-      Now we need to do them <strong>when the game becomes difficult.</strong>
+      I wanted to see, losing 8–1 in the second half, the team collectively reset and do any of the things on this list. We could have, right? But we didn’t, and the game slipped away, and we lost any cohesion. The game was not fun.
     </p>
 
     <p>
-      When we are losing. When we are frustrated. When everything seems to be going against us.
-    </p>
-
-    <p>
-      When we were losing 8–1 in the second half, I wanted to see the team collectively reset and start doing the things on this list.
-    </p>
-
-    <p>
-      We could have done that, right?
-    </p>
-
-    <p>
-      But we didn’t.
-    </p>
-
-    <p>
-      Instead, the game continued to slip away, we lost our cohesion, and eventually the game was not fun for anyone.
-    </p>
-
-    <p>
-      This is what our commitment to our <strong>core values</strong> really means.
+      This is what the commitment to core values means.
     </p>
 
 
-    <h4 class="text-lg font-bold text-white pt-2">
+    <h4 class="text-lg font-bold text-white pt-4">
       Strength
     </h4>
 
     <p>
-      Be strong enough to make good decisions without allowing your emotions to negatively affect you.
+      Strong enough to make decisions without emotions negatively affecting you.
     </p>
 
 
@@ -365,7 +258,7 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      Do your job, regardless of the score or situation.
+      Do your job, regardless.
     </p>
 
 
@@ -374,11 +267,7 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      Nobody on this team can do everything alone.
-    </p>
-
-    <p>
-      Without all 11 players acting as one team, we cannot succeed.
+      Nobody on this team can do anything alone. Without all 11 acting as 1, we can’t succeed.
     </p>
 
 
@@ -387,96 +276,49 @@ window.blogPosts.push({
     </h4>
 
     <p>
-      Thank the fans.
+      Thank the fans. Shake the hand of the opponent. Thank the referee. Support upset teammates. Take the photo. Be mature.
     </p>
 
     <p>
-      Shake the opponent’s hand.
-    </p>
-
-    <p>
-      Thank the referee.
-    </p>
-
-    <p>
-      Support teammates who are upset.
-    </p>
-
-    <p>
-      Take the team photo.
-    </p>
-
-    <p>
-      Be mature.
-    </p>
-
-    <p>
-      These are not things we do only when we win.
-    </p>
-
-    <p>
-      <strong>When we play for this team, these are the basic requirements.</strong>
+      When we play, these are the basic, core requirements.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      More Examples From the Match
+      Here Are Some More Clips
     </h4>
 
-    <p>
-      There are other moments from the game that I want you to see as well.
-    </p>
-
     <h4 class="text-lg font-bold text-white pt-2">
-      1
+      1 —
     </h4>
 
     <div class="my-6">
       <!-- EXTRA VIDEO CLIP 1 -->
     </div>
 
-    <p>
-      <strong>What to watch:</strong>
-    </p>
-
-
     <h4 class="text-lg font-bold text-white pt-2">
-      2
+      2 —
     </h4>
 
     <div class="my-6">
       <!-- EXTRA VIDEO CLIP 2 -->
     </div>
 
-    <p>
-      <strong>What to watch:</strong>
-    </p>
-
-
     <h4 class="text-lg font-bold text-white pt-2">
-      3
+      3 —
     </h4>
 
     <div class="my-6">
       <!-- EXTRA VIDEO CLIP 3 -->
     </div>
 
-    <p>
-      <strong>What to watch:</strong>
-    </p>
-
-
     <h4 class="text-lg font-bold text-white pt-2">
-      4
+      4 —
     </h4>
 
     <div class="my-6">
       <!-- EXTRA VIDEO CLIP 4 -->
     </div>
-
-    <p>
-      <strong>What to watch:</strong>
-    </p>
 
   `
 
