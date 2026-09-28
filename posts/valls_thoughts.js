@@ -233,11 +233,26 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
     </h4>
 
     <p>
-      Good players do not wait until pressure arrives before deciding what to do. Look before you receive, know your options, and when the simple pass is available, play it quickly.
+      Good players do not wait until pressure arrives before deciding what to do. Look before you receive, know your options, and when the simple pass is available, play it quickly. 
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 7 — DECIDE EARLIER AND PLAY SIMPLY -->
+    <p>
+      This is an important clip. Pedro plays it short to Soufian. Gio makes a supporting run back into space. I would love Yeray to drop back into the space vacated by Gio here. And we need Hamza to drop back farther and give Soufian an angle. But regardless, Soufian still has two options. He has Pedro and he has Gio. If he plays more quickly, he can play a wall pass with Gio. If he plays back to Pedro, Pedro can clear it, or even better, play it quickly to Gio who can touch it wide to Soufian, now in space.  
+    </p>
+
+    <p>
+      What is the point of all those rondos before practice if you don't do it here? This is exactly what those are for. Play simple and quick when a defender is close! 
+    </p>
+
+    <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/LW-wQQBHoFM"
+        title="Move Off The Ball"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
 
