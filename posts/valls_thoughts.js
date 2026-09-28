@@ -219,7 +219,7 @@ window.blogPosts.push({
       <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
-        src="https://youtu.be/gyprh5-Pqmk"
+        src="https://www.youtube.com/embed/gyprh5-Pqmk"
         title="Move Off The Ball"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -481,4 +481,3 @@ window.blogPosts.push({
   `
 
 });
-```
