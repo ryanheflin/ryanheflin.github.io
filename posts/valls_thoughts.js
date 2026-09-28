@@ -141,11 +141,18 @@ window.blogPosts.push({
     </p>
 
     <p>
-      So when we are pinned into our half, <strong>pinch and force wide!</strong>
+      So when we are pinned into our half, <strong>pinch and force wide!</strong> In this clip, you can see Valls are attacking down our half space. Victor has a choice here - stay wide to prevent the pass to the winger, or slide centrally and force the pass out wide. He stays wide, dropping straight back, and instead of the opponent passing along the green arrow wide, he passes on the red arrow, breaking the gap and creating a dangerous chance. If you watch the full video, you can see this is a major issue with Hamza and Samuel as well. If you are playing fullback, make sure you pinch centrally and protect that gap when the opponent is in our defensive third!
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 3 — PROTECT THE CENTER -->
+    <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/57C4amm-pII"
+        title="Protect the Center"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
 
