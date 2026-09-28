@@ -4,99 +4,99 @@ window.blogPosts.push({
 
   id: 'what-we-can-control',
 
-  title: 'What We Can Control: Thoughts on the Match Against Valls',
+  title: 'Lo que podemos controlar: Reflexiones sobre el partido contra el Valls',
 
   date: '2026-09-28',
 
   category: 'for-players',
 
-  categoryLabel: 'For Players',
+  categoryLabel: 'Para los jugadores',
 
   author: 'Ryan Heflin',
 
   excerpt:
-    'Seven things we already know how to do that can immediately make us a better team when the game becomes difficult.',
+    'Siete cosas que ya sabemos hacer y que pueden convertirnos inmediatamente en un mejor equipo cuando el partido se pone difícil.',
 
   content: `
 
     <p>
-      Hello everyone,
+      Hola a todos,
     </p>
 
     <p>
-      I hope you’re all doing well today.
+      Espero que hoy estéis todos bien.
     </p>
 
     <p>
-      I spent my breaks from work today rewatching the video of our match yesterday. Immediately after the match, I was disappointed and embarrassed. Not about the score — it was clear about 15 minutes into the match that we were overmatched. But about how we responded to being overmatched. Our emotions caused us to forget our game plan and our core values, including simple moments of respect after the match was over.
+      Hoy he pasado mis descansos del trabajo volviendo a ver el vídeo de nuestro partido de ayer. Inmediatamente después del partido, estaba decepcionado y avergonzado. No por el resultado — después de unos 15 minutos estaba claro que el rival nos superaba. Sino por cómo respondimos al vernos superados. Nuestras emociones hicieron que olvidáramos nuestro plan de juego y nuestros valores fundamentales, incluso cosas tan simples como mostrar respeto después de que terminara el partido.
     </p>
 
     <p>
-      Now, more than a day later, my emotions about the match are gone. I am back to being a machine. I look at problems and try to figure out solutions, as you should all be able to do as well.
+      Ahora, más de un día después, mis emociones sobre el partido han desaparecido. He vuelto a ser una máquina. Miro los problemas e intento encontrar soluciones, igual que vosotros también deberíais ser capaces de hacer.
     </p>
 
     <p>
-      So I watched the game again, and came away with a few important takeaways.
+      Así que volví a ver el partido y saqué algunas conclusiones importantes.
     </p>
 
     <p>
-      There were two categories of failure.
-    </p>
-
-
-    <h4 class="text-lg font-bold text-white pt-2">
-      1 — Things we could have done
-    </h4>
-
-    <p>
-      First, there were things we didn’t do that we could have. Things the opponent did very well, that we didn’t do at all. But we could have. We’ve talked about them, practiced them, and should know them. But we got panicked and frustrated and didn’t do our jobs.
+      Hubo dos categorías de fallos.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-2">
-      2 — Things we could not really deal with yet
+      1 — Cosas que podríamos haber hecho
     </h4>
 
     <p>
-      Second, there were things that we were just never going to be able to do. Valls was just a level above us right now, and even at our best we would have struggled to contain some of the things they were doing. They had speed, strength, technical quality, and individual ability that we simply could not match right now.
+      Primero, hubo cosas que no hicimos y que sí podríamos haber hecho. Cosas que el rival hizo muy bien y que nosotros no hicimos en absoluto. Pero podríamos haberlas hecho. Hemos hablado de ellas, las hemos entrenado y deberíamos conocerlas. Pero entramos en pánico, nos frustramos y no hicimos nuestro trabajo.
+    </p>
+
+
+    <h4 class="text-lg font-bold text-white pt-2">
+      2 — Cosas con las que simplemente todavía no podíamos lidiar
+    </h4>
+
+    <p>
+      Segundo, hubo cosas que simplemente nunca íbamos a poder hacer. El Valls estaba a otro nivel respecto a nosotros ahora mismo y, incluso jugando nuestro mejor partido, nos habría costado muchísimo contener algunas de las cosas que estaban haciendo. Tenían velocidad, fuerza, calidad técnica y capacidad individual que ahora mismo simplemente no podíamos igualar.
     </p>
 
     <p>
-      That is okay. We are not going to solve those differences in one training session.
+      Eso está bien. No vamos a solucionar esas diferencias en un entrenamiento.
     </p>
 
     <p>
     ---
-      But the first category is different.
+      Pero la primera categoría es diferente.
     </p>
 
     <p>
-      It is my sincere belief that if we had not failed at the things in the first category, we could have prevented them from scoring half of their goals, and we could have scored twice as many as we did.
-      For those who do the math, that’s still a 2–6 defeat. But it would at least have been respectable against a team that looks like one of the strongest teams in this league.
+      Creo sinceramente que, si no hubiéramos fallado en las cosas de la primera categoría, podríamos haber evitado la mitad de sus goles y podríamos haber marcado el doble de los que marcamos.
+      Para los que hacéis las cuentas, eso sigue siendo una derrota por 2–6. Pero al menos habría sido un resultado respetable contra un equipo que parece ser uno de los más fuertes de esta liga.
     </p>
 
     <p>
-      So, let’s look at the first category and define the things we didn’t do that we could have.
+      Así que vamos a mirar la primera categoría y definir las cosas que no hicimos pero que sí podríamos haber hecho.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      1 — Press Together, or Don’t Press at All
+      1 — Presionamos juntos, o no presionamos
     </h4>
 
     <p>
-      If one player presses and everyone else stays back, the opponent can easily play around him. When we press, we move together so the opponent has nowhere easy to go.
+      Si un jugador presiona y todos los demás se quedan atrás, el rival puede jugar alrededor de él con facilidad. Cuando presionamos, nos movemos juntos para que el rival no tenga ninguna salida fácil.
     </p>
 
     <p>
-      Look at the difference here between the spacing in our press and the spacing in theirs. Their lines are closer together because their back line is up, their spacing is more balanced, and their marking is much tighter. In the first part, look at the length of the lines between us and our marks. Their pivot receives the ball in acres of space, twice. In the second part, look how tight they are, and how much trouble we have trying to get out. 
+      Mirad aquí la diferencia entre las distancias de nuestra presión y las de la suya. Sus líneas están mucho más juntas porque su línea defensiva está adelantada, sus distancias están mucho más equilibradas y sus marcas son mucho más agresivas. En la primera parte, fijaos en la distancia entre nosotros y los jugadores que estamos marcando. Su pivote recibe el balón con muchísimo espacio, dos veces. En la segunda parte, fijaos en lo cerca que están ellos de nosotros y en los problemas que tenemos para intentar salir.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/LWJZIvzsiRM"
-        title="Press Together"
+        title="Presionamos juntos"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -105,22 +105,22 @@ window.blogPosts.push({
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      2 — Delay and Cover
+      2 — Temporizar y dar cobertura
     </h4>
 
     <p>
-      As we’ve talked about in training, you do not always have to win the ball immediately. The first defender slows the attacker down while the next defender gets into position to help and protect the space behind.
+      Como hemos hablado en los entrenamientos, no siempre tienes que recuperar el balón inmediatamente. El primer defensor frena al atacante mientras el siguiente defensor se coloca para ayudar y proteger el espacio que queda detrás.
     </p>
 
     <p>
-      Don’t dive in, just delay and force the attacker away from dangerous areas. This is especially important when we see that the attackers are so talented individually. In this clip, the Valls player capitalizes on 4 players diving in. 3 of them he individually beats, and the one in the middle he combines with a teammate for a wall pass into space. 4 players, all dive in, and we give up a goal.  
+      No te lances. Simplemente temporiza y obliga al atacante a alejarse de las zonas peligrosas. Esto es todavía más importante cuando vemos que los atacantes tienen tanto talento individual. En este clip, el jugador del Valls aprovecha que 4 jugadores se lanzan a por él. A 3 de ellos los supera individualmente, y con el que está en medio combina con un compañero haciendo una pared hacia el espacio. 4 jugadores. Todos se lanzan. Y encajamos un gol.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/hJLjEeVWzOs"
-        title="Press Together"
+        title="Temporizar y dar cobertura"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -129,26 +129,26 @@ window.blogPosts.push({
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      3 — Protect the Center
+      3 — Proteger el centro
     </h4>
 
     <p>
-      The middle of the field is the most dangerous place for the opponent to attack. Our first job is to protect the center and make them play around us, not straight through us.
+      El centro del campo es la zona más peligrosa por la que puede atacar el rival. Nuestro primer trabajo es proteger el centro y obligarles a jugar alrededor de nosotros, no directamente a través de nosotros.
     </p>
 
     <p>
-      In the attacking half, I asked the fullbacks to push high against their wingers, letting the center backs deal with the space behind. But in our own half, we need the defensive line to pinch together and prevent any passes through the gaps, especially between the fullback and center back.
+      En campo contrario, pedí a los laterales que saltaran arriba contra sus extremos, dejando que los centrales se encargaran del espacio que quedaba detrás. Pero en nuestro propio campo, necesitamos que la línea defensiva se cierre hacia dentro y evite cualquier pase a través de los espacios, especialmente entre el lateral y el central.
     </p>
 
     <p>
-      So when we are pinned into our half, <strong>pinch and force wide!</strong> In this clip, you can see Valls are attacking down our half space. Victor has a choice here - stay wide to prevent the pass to the winger, or slide centrally and force the pass out wide. He stays wide, dropping straight back, and instead of the opponent passing along the green arrow wide, he passes on the red arrow, breaking the gap and creating a dangerous chance. If you watch the full video, you can see this is a major issue with Hamza and Samuel as well. If you are playing fullback, make sure you pinch centrally and protect that gap when the opponent is in our defensive third!
+      Así que cuando estamos metidos en nuestro propio campo, <strong>¡cerrad por dentro y obligadles a jugar por fuera!</strong> En este clip podéis ver que el Valls está atacando por nuestro medio espacio. Victor tiene que tomar una decisión aquí: quedarse abierto para impedir el pase al extremo, o cerrarse hacia el centro y obligarles a jugar por fuera. Se queda abierto y retrocede en línea recta, y en lugar de que el rival juegue por la flecha verde hacia fuera, juega por la flecha roja, rompe el espacio y crea una ocasión peligrosa. Si veis el vídeo completo, podéis ver que este también es un problema importante con Hamza y Samuel. Si estás jugando de lateral, asegúrate de cerrarte hacia dentro y proteger ese espacio cuando el rival está en nuestro tercio defensivo.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/57C4amm-pII"
-        title="Protect the Center"
+        title="Proteger el centro"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -157,26 +157,26 @@ window.blogPosts.push({
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      4 — Give the Player on the Ball Support
+      4 — Dar apoyo al jugador con balón
     </h4>
 
     <p>
-      Do not watch your teammate struggle with the ball. Move into a position where he can see you and give him an easy pass so he does not have to solve the problem alone.
+      No te quedes mirando cómo tu compañero tiene problemas con el balón. Muévete a una posición donde pueda verte y dale un pase fácil para que no tenga que resolver el problema él solo.
     </p>
 
     <p>
-      This one is something we talk about all the time. This happened all the time yesterday. We were so unsure about what was going to happen, we didn’t try to make anything happen.
+      Esta es una de las cosas de las que hablamos todo el tiempo. Ayer pasó constantemente. Estábamos tan inseguros sobre lo que iba a pasar que dejamos de intentar hacer que pasaran cosas.
     </p>
 
     <p>
-      In the first clip, look what the Valls player does immediately after passing the ball. His entire goal is to combine into dangerous space. He passes and moves without hesitation. In the second clip, look at what Joel does after he passes to Eban. He stands there. No movement, no combining into space. Does Joel know how to do this? Absolutely. In fact, there is another video on this page where he does an excellent job of moving into space. So why doesn't he do it here? For the same reason nobody else was doing it either - we were losing, we were frustrated, and we stopped doing the required things because of it. 
+      En el primer clip, mirad lo que hace el jugador del Valls inmediatamente después de pasar el balón. Todo su objetivo es combinar hacia un espacio peligroso. Pasa y se mueve sin dudar. En el segundo clip, mirad lo que hace Joel después de pasarle el balón a Eban. Se queda quieto. No hay movimiento, no hay combinación hacia el espacio. ¿Sabe Joel hacer esto? Absolutamente. De hecho, hay otro vídeo en esta página donde hace un trabajo excelente moviéndose hacia el espacio. Entonces, ¿por qué no lo hace aquí? Por la misma razón por la que nadie más lo estaba haciendo tampoco: estábamos perdiendo, estábamos frustrados y dejamos de hacer las cosas que teníamos que hacer por culpa de eso.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/gyprh5-Pqmk"
-        title="Move Off The Ball"
+        title="Moverse sin balón"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -185,26 +185,26 @@ window.blogPosts.push({
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      5 — Keep Good Spacing and Positions
+      5 — Mantener buenas distancias y posiciones
     </h4>
 
     <p>
-      Do not all follow the ball or stand in the same space. Spread out enough to give each other options, but stay close enough that we can still play together.
+      No sigáis todos el balón ni ocupéis todos el mismo espacio. Separaos lo suficiente para daros opciones, pero manteneos lo bastante cerca como para poder seguir jugando juntos.
     </p>
 
     <p>
-      Let your teammate do their job. Protect your zone. We need to trust each other and provide balance on offense and defense.
+      Deja que tu compañero haga su trabajo. Protege tu zona. Necesitamos confiar los unos en los otros y tener equilibrio tanto en ataque como en defensa.
     </p>
 
     <p>
-Here is a clip of a lack of balance and trust on defense. In this moment, Valls has great balance across the line. You can see their first midfielder stop running forwrad and drop back two steps to give his teammate an option. This central midfielder is Leo's responsibility. When one pivot goes to the side to press, the other pivot needs to cover the central zone. In this moment, Gio gets pulled out of position, leaving his responsiblity in the center open. Otman, even though he is a little late, does recover in time to block the shot.   
+      Aquí tenemos un ejemplo de falta de equilibrio y confianza en defensa. En este momento, el Valls tiene un equilibrio excelente a lo largo de toda la línea. Podéis ver cómo su primer centrocampista deja de correr hacia delante y da dos pasos hacia atrás para darle una opción a su compañero. Este centrocampista central es responsabilidad de Leo. Cuando uno de los pivotes sale hacia un lado para presionar, el otro pivote tiene que cubrir la zona central. En este momento, Gio sale de su posición y deja libre su responsabilidad en el centro. Otman, aunque llega un poco tarde, sí recupera a tiempo para bloquear el disparo.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/3KVBh-doz4Y"
-        title="Move Off The Ball"
+        title="Mantener buenas distancias y posiciones"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -213,22 +213,22 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      6 — Secure the Ball Before Forcing Forward
+      6 — Asegurar el balón antes de forzar hacia delante
     </h4>
 
     <p>
-      Winning the ball does not help us if we immediately give it back. Look forward first, but if the forward pass is not there, make the simple pass, keep the ball, and organize again.
+      Recuperar el balón no nos sirve de nada si inmediatamente se lo devolvemos al rival. Mira primero hacia delante, pero si el pase hacia delante no está disponible, haz el pase sencillo, conserva el balón y vuelve a organizarnos.
     </p>
 
     <p>
-      We are not always in a hurry, especially when the momentum is against us. Sometimes it’s best to pass the ball around and have the opponent drop back into their shape to relieve the pressure from our half. This clip is pretty self-explanatory. Otman has a chance to drop the ball to Victor, while Joel makes a great run into the space behind. This is essentially all we have been talking about in practice. And we fail to do it here, and it cost us a possession and eventually a goal.
+      No siempre tenemos prisa, especialmente cuando el momento del partido está en nuestra contra. A veces lo mejor es mover el balón y hacer que el rival vuelva a colocarse en su estructura para quitar presión de nuestro campo. Este clip se explica prácticamente solo. Otman tiene la opción de jugar atrás con Victor, mientras Joel hace una gran carrera hacia el espacio a la espalda. Esto es básicamente todo de lo que llevamos hablando en los entrenamientos. Y aquí no lo hacemos, nos cuesta una posesión y finalmente un gol.
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/MttyEsfArKw"
-        title="Move Off The Ball"
+        title="Asegurar el balón"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -237,26 +237,26 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      7 — Decide Earlier and Play Simply
+      7 — Decidir antes y jugar sencillo
     </h4>
 
     <p>
-      Good players do not wait until pressure arrives before deciding what to do. Look before you receive, know your options, and when the simple pass is available, play it quickly. 
+      Los buenos jugadores no esperan a que llegue la presión para decidir qué van a hacer. Mira antes de recibir, conoce tus opciones y, cuando el pase sencillo esté disponible, juégalo rápido.
     </p>
 
     <p>
-      This is an important clip. Pedro plays it short to Soufian. Gio makes a supporting run back into space. I would love Yeray to drop back into the space vacated by Gio here. And we need Hamza to drop back farther and give Soufian an angle. But regardless, Soufian still has two options. He has Pedro and he has Gio. If he plays more quickly, he can play a wall pass with Gio. If he plays back to Pedro, Pedro can clear it, or even better, play it quickly to Gio who can touch it wide back to Soufian, now in space. And then, once you makea a mistake and don't play calm and quick, don't blame others and throw your hands in the air like it's everyone else's fault. 
+      Este es un clip importante. Pedro juega corto con Soufian. Gio hace un movimiento de apoyo hacia atrás, entrando en el espacio. Me encantaría que Yeray bajara al espacio que Gio deja libre aquí. Y necesitamos que Hamza baje más y le dé un ángulo a Soufian. Pero, aun así, Soufian tiene dos opciones. Tiene a Pedro y tiene a Gio. Si juega más rápido, puede hacer una pared con Gio. Si juega atrás con Pedro, Pedro puede despejarla o, todavía mejor, jugar rápido con Gio, que puede abrirla de primeras otra vez hacia Soufian, ahora con espacio. Y después, cuando cometas un error y no juegues con calma y rapidez, no culpes a los demás ni levantes los brazos como si fuera culpa de todos menos tuya.
     </p>
 
     <p>
-      What is the point of all those rondos before practice if you don't do it here? This is exactly what those are for. Play simple and quick when a defender is close! 
+      ¿Para qué sirven todos esos rondos antes del entrenamiento si luego no lo haces aquí? Para esto exactamente hacemos esos rondos. ¡Juega sencillo y rápido cuando tienes un defensor cerca!
     </p>
 
     <div class="aspect-video my-6">
       <iframe
         class="w-full h-full rounded-xl"
         src="https://www.youtube.com/embed/LW-wQQBHoFM"
-        title="Move Off The Ball"
+        title="Decidir antes y jugar sencillo"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
@@ -265,60 +265,61 @@ Here is a clip of a lack of balance and trust on defense. In this moment, Valls 
 
 
     <p>
-      These are not complicated ideas. They are things we already know how to do.
+      Estas no son ideas complicadas. Son cosas que ya sabemos hacer.
     </p>
 
     <p>
-      Now we need to do them when the game becomes difficult. When we are losing and everything is going against us.
+      Ahora tenemos que hacerlas cuando el partido se pone difícil. Cuando estamos perdiendo y todo está saliendo en nuestra contra.
     </p>
 
     <p>
-      I wanted to see, losing 8–1 in the second half, the team collectively reset and do any of the things on this list. We could have, right? But we didn’t, and the game slipped away, and we lost any cohesion. The game was not fun.
+      Cuando íbamos perdiendo 8–1 en la segunda parte, quería ver al equipo hacer un reset colectivo y empezar a hacer cualquiera de las cosas de esta lista. Podríamos haberlo hecho, ¿verdad? Pero no lo hicimos, el partido se nos fue completamente y perdimos cualquier tipo de cohesión. El partido dejó de ser divertido.
     </p>
 
     <p>
-      This is what the commitment to core values means.
+      Esto es lo que significa el compromiso con nuestros valores fundamentales.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-4">
-      Strength
+      Fortaleza
     </h4>
 
     <p>
-      Strong enough to make decisions without emotions negatively affecting you.
+      Ser lo bastante fuerte como para tomar decisiones sin dejar que tus emociones te afecten negativamente.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-2">
-      Discipline
+      Disciplina
     </h4>
 
     <p>
-      Do your job, regardless.
+      Haz tu trabajo, pase lo que pase.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-2">
-      Teamwork
+      Trabajo en equipo
     </h4>
 
     <p>
-      Nobody on this team can do anything alone. Without all 11 acting as 1, we can’t succeed.
+      Nadie en este equipo puede hacer nada solo. Si los 11 no actuamos como 1, no podemos tener éxito.
     </p>
 
 
     <h4 class="text-lg font-bold text-white pt-2">
-      Respect
+      Respeto
     </h4>
 
     <p>
-      Thank the fans. Shake the hand of the opponent. Thank the referee. Support upset teammates. Take the photo. Be mature.
+      Da las gracias a la afición. Da la mano al rival. Da las gracias al árbitro. Apoya a los compañeros que estén disgustados. Hazte la foto. Sé maduro.
     </p>
 
     <p>
-      When we play, these are the basic, core requirements.
+      Cuando jugamos, estos son los requisitos básicos y fundamentales.
     </p>
 
+  `
 
 });
