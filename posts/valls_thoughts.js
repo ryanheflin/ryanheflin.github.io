@@ -196,11 +196,18 @@ window.blogPosts.push({
     </p>
 
     <p>
-      I can’t remember how many times we talk about this in training — give your teammate space to operate. Look at how Valls move compared to us.
+Here is a clip of a lack of balance and trust on defense. In this moment, Valls has great balance across the line. You can see their first midfielder stop running forwrad and drop back two steps to give his teammate an option. This central midfielder is Leo's responsibility. When one pivot goes to the side to press, the other pivot needs to cover the central zone. In this moment, Gio gets pulled out of position, leaving his responsiblity in the center open. Otman, even though he is a little late, does recover in time to block the shot.   
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 5 — SPACING AND POSITIONS -->
+    <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://www.youtube.com/embed/3KVBh-doz4Y"
+        title="Move Off The Ball"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
 
 
