@@ -55,7 +55,46 @@
 
   -->
 
+  <!-- =========================================================
+     RESULT-ONLY MATCHES
 
+     These appear in Results and season KPI cards,
+     but do not create a match-analysis page.
+
+     When game-05.js is added later with the same id,
+     the full match file automatically takes priority.
+========================================================== -->
+
+<script>
+
+  window.resultOnlyGames = [
+
+    {
+      id: 'game-05',
+
+      gameNumber: 5,
+
+      opponent: 'Valls School Football Club',
+
+      homeAway: 'home',
+
+      date: '27 September 2026',
+
+      competition: 'Liga',
+
+      matchType: 'league',
+
+      goalsFor: 1,
+
+      goalsAgainst: 12,
+
+      includeInTrends: false
+    }
+
+  ];
+
+</script>
+  
   <style>
 
     :root {
@@ -67,15 +106,28 @@
     html {
       scroll-behavior: smooth;
     }
-
-  </style>
-
-</head>
-
-
-<body
-  class="bg-gray-900 text-white antialiased flex min-h-screen pb-16"
->
+    /* Results accordion */
+    
+    .results-toggle::-webkit-details-marker {
+      display: none;
+    }
+    
+    .results-chevron {
+      transition: transform 0.2s ease;
+    }
+    
+    details[open] .results-chevron {
+      transform: rotate(180deg);
+    }
+        
+      </style>
+    
+    </head>
+    
+    
+    <body
+      class="bg-gray-900 text-white antialiased flex min-h-screen pb-16"
+    >
 
 
   <!-- =========================================================
@@ -1035,7 +1087,68 @@
 
     }
 
+/* ==========================================================
+   ALL PLAYED RESULTS
 
+   Full analysis files live in window.seasonGames.
+
+   Result-only matches can be added to
+   window.resultOnlyGames until a complete analysis
+   file exists.
+
+   Matching ids are de-duplicated, with the full
+   analysis file taking priority.
+========================================================== */
+
+function getAllResultGames() {
+
+  const analyzedGames =
+    [...(window.seasonGames || [])];
+
+
+  const resultOnlyGames =
+    [...(window.resultOnlyGames || [])];
+
+
+  const gamesById =
+    new Map();
+
+
+  analyzedGames.forEach(
+    game =>
+      gamesById.set(
+        game.id,
+        game
+      )
+  );
+
+
+  resultOnlyGames.forEach(
+    game => {
+
+      if (
+        !gamesById.has(game.id)
+      ) {
+
+        gamesById.set(
+          game.id,
+          game
+        );
+
+      }
+
+    }
+  );
+
+
+  return [...gamesById.values()]
+    .sort(
+      (a, b) =>
+        Number(a.gameNumber || 0) -
+        Number(b.gameNumber || 0)
+    );
+
+}
 
     /* ==========================================================
        URL HELPERS
@@ -1113,8 +1226,8 @@
 
     function calculateSeasonStats() {
 
-      const games =
-        window.seasonGames || [];
+    const games =
+      getAllResultGames();
 
 
       let wins = 0;
@@ -1790,130 +1903,471 @@
        SEASON RESULTS
     ========================================================== */
 
-    function renderSeasonResults() {
+function renderSeasonResults() {
 
-      const container =
-        document.getElementById(
-          'season-results'
-        );
-
-
-      const games =
-        [...(window.seasonGames || [])]
-          .sort(
-            (a, b) =>
-              a.gameNumber -
-              b.gameNumber
-          );
+  const container =
+    document.getElementById(
+      'season-results'
+    );
 
 
-
-      if (
-        games.length === 0
-      ) {
-
-        return;
-
-      }
+  const games =
+    getAllResultGames();
 
 
+  if (
+    games.length === 0
+  ) {
 
-      container.innerHTML = '';
+    return;
 
-
-
-      games.forEach(
-        game => {
-
-
-          const row =
-            document.createElement(
-              'button'
-            );
+  }
 
 
-          row.type =
-            'button';
+  /*
+    Games with full analysis files.
+
+    If a game is only in resultOnlyGames,
+    its result is displayed but it is not clickable.
+  */
+
+  const analyzedIds =
+    new Set(
+      (window.seasonGames || [])
+        .map(
+          game => game.id
+        )
+    );
 
 
-          row.onclick =
-            () =>
-              showGame(
-                game.id
-              );
+  /*
+    Separate preseason from league.
+  */
+
+  const friendlies =
+    games.filter(
+      game =>
+        getMatchType(game) ===
+        'friendly'
+    );
 
 
-          row.className =
-            'w-full text-left py-3 hover:bg-gray-700/30 transition-colors';
+  const leagueGames =
+    games.filter(
+      game =>
+        getMatchType(game) ===
+        'league'
+    );
+
+
+  container.innerHTML = '';
 
 
 
-          row.innerHTML = `
+  /* ========================================================
+     RESULT COLOR
+  ======================================================== */
 
-            <div
-              class="grid grid-cols-[80px_minmax(0,1fr)_auto] gap-3 items-center"
-            >
+  function resultColorClass(game) {
 
-              <div
-                class="text-xs text-gray-500"
-              >
-                ${game.date || ''}
-              </div>
+    const result =
+      getGameResult(game);
 
 
-              <div
-                class="min-w-0"
-              >
+    if (
+      result === 'W'
+    ) {
 
-                <div
-                  class="text-sm font-semibold text-white truncate"
-                >
-
-                  ${
-                    game.homeAway === 'away'
-                      ? `@ ${getShortOpponentName(game)}`
-                      : `vs. ${getShortOpponentName(game)}`
-                  }
-
-                </div>
-
-
-                <div
-                  class="text-[11px] text-gray-500 mt-0.5"
-                >
-                  ${
-                    getMatchType(game) ===
-                    'friendly'
-                      ? 'Friendly'
-                      : 'League'
-                  }
-                </div>
-
-              </div>
-
-
-              <div
-                class="text-lg font-bold text-white"
-              >
-                ${game.goalsFor}–${game.goalsAgainst}
-              </div>
-
-            </div>
-
-          `;
-
-
-          container.appendChild(
-            row
-          );
-
-        }
-      );
+      return 'text-green-400';
 
     }
 
 
+    if (
+      result === 'L'
+    ) {
 
+      return 'text-red-400';
+
+    }
+
+
+    return 'text-gray-300';
+
+  }
+
+
+
+  /* ========================================================
+     CREATE ONE RESULT ROW
+  ======================================================== */
+
+  function createResultRow(game) {
+
+    const hasAnalysis =
+      analyzedIds.has(
+        game.id
+      );
+
+
+    /*
+      Full analysis matches are buttons.
+
+      Result-only matches are normal divs,
+      because there is no analysis page yet.
+    */
+
+    const row =
+      document.createElement(
+        hasAnalysis
+          ? 'button'
+          : 'div'
+      );
+
+
+    if (
+      hasAnalysis
+    ) {
+
+      row.type =
+        'button';
+
+
+      row.onclick =
+        () =>
+          showGame(
+            game.id
+          );
+
+
+      row.className =
+        'w-full text-left px-4 py-3 hover:bg-gray-700/30 transition-colors';
+
+    }
+
+    else {
+
+      row.className =
+        'w-full text-left px-4 py-3';
+
+    }
+
+
+    row.innerHTML = `
+
+      <div
+        class="grid grid-cols-[110px_minmax(0,1fr)_auto] gap-3 items-center"
+      >
+
+        <div
+          class="text-xs text-gray-500"
+        >
+          ${game.date || ''}
+        </div>
+
+
+        <div
+          class="min-w-0"
+        >
+
+          <div
+            class="text-sm font-semibold text-white truncate"
+          >
+
+            ${
+              game.homeAway === 'away'
+                ? `@ ${getShortOpponentName(game)}`
+                : `vs. ${getShortOpponentName(game)}`
+            }
+
+          </div>
+
+
+          <div
+            class="text-[11px] text-gray-500 mt-0.5"
+          >
+
+            ${
+              getMatchType(game) ===
+              'friendly'
+                ? 'Friendly'
+                : 'League'
+            }
+
+            ${
+              hasAnalysis
+                ? ' · View analysis'
+                : ''
+            }
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="text-lg font-bold ${resultColorClass(game)}"
+        >
+          ${game.goalsFor}–${game.goalsAgainst}
+        </div>
+
+      </div>
+
+    `;
+
+
+    return row;
+
+  }
+
+
+
+  /* ========================================================
+     PRESEASON FRIENDLIES
+     COLLAPSED BY DEFAULT
+  ======================================================== */
+
+  if (
+    friendlies.length > 0
+  ) {
+
+    const details =
+      document.createElement(
+        'details'
+      );
+
+
+    details.className =
+      'bg-gray-900/60 border border-gray-700 rounded-xl overflow-hidden';
+
+
+    const summary =
+      document.createElement(
+        'summary'
+      );
+
+
+    summary.className =
+      'results-toggle cursor-pointer list-none px-4 py-4 hover:bg-gray-700/30 transition-colors';
+
+
+    summary.innerHTML = `
+
+      <div
+        class="flex items-center justify-between gap-4"
+      >
+
+        <div>
+
+          <div
+            class="flex flex-wrap items-center gap-2"
+          >
+
+            <h4
+              class="font-bold text-white"
+            >
+              Preseason Friendlies
+            </h4>
+
+
+            <span
+              class="text-[10px] font-bold px-2 py-1 rounded-full bg-gray-700 text-gray-400"
+            >
+              COMPLETE
+            </span>
+
+          </div>
+
+
+          <p
+            class="text-xs text-gray-500 mt-1"
+          >
+            ${friendlies.length} friendlies · Click to view results
+          </p>
+
+        </div>
+
+
+        <svg
+          class="results-chevron w-5 h-5 text-gray-500 flex-shrink-0"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          />
+
+        </svg>
+
+      </div>
+
+    `;
+
+
+    details.appendChild(
+      summary
+    );
+
+
+    const list =
+      document.createElement(
+        'div'
+      );
+
+
+    list.className =
+      'border-t border-gray-700 divide-y divide-gray-700';
+
+
+    friendlies.forEach(
+      game =>
+        list.appendChild(
+          createResultRow(
+            game
+          )
+        )
+    );
+
+
+    details.appendChild(
+      list
+    );
+
+
+    container.appendChild(
+      details
+    );
+
+  }
+
+
+
+  /* ========================================================
+     REGULAR SEASON
+     ALWAYS OPEN
+  ======================================================== */
+
+  const leagueSection =
+    document.createElement(
+      'div'
+    );
+
+
+  leagueSection.className =
+    'bg-gray-900/60 border border-gray-700 rounded-xl overflow-hidden mt-4';
+
+
+  leagueSection.innerHTML = `
+
+    <div
+      class="px-4 py-4 border-b border-gray-700"
+    >
+
+      <div
+        class="flex flex-wrap items-center justify-between gap-3"
+      >
+
+        <div>
+
+          <div
+            class="flex flex-wrap items-center gap-2"
+          >
+
+            <h4
+              class="font-bold text-white"
+            >
+              Regular Season
+            </h4>
+
+
+            <span
+              class="text-[10px] font-bold px-2 py-1 rounded-full text-black"
+              style="background-color: var(--altafulla-yellow);"
+            >
+              LEAGUE
+            </span>
+
+          </div>
+
+
+          <p
+            class="text-xs text-gray-500 mt-1"
+          >
+
+            ${leagueGames.length}
+
+            ${
+              leagueGames.length === 1
+                ? 'match played'
+                : 'matches played'
+            }
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  `;
+
+
+  const leagueList =
+    document.createElement(
+      'div'
+    );
+
+
+  if (
+    leagueGames.length > 0
+  ) {
+
+    leagueList.className =
+      'divide-y divide-gray-700';
+
+
+    leagueGames.forEach(
+      game =>
+        leagueList.appendChild(
+          createResultRow(
+            game
+          )
+        )
+    );
+
+  }
+
+  else {
+
+    leagueList.innerHTML = `
+
+      <p
+        class="text-sm text-gray-500 px-4 py-4"
+      >
+        League results will appear here as matches are played.
+      </p>
+
+    `;
+
+  }
+
+
+  leagueSection.appendChild(
+    leagueList
+  );
+
+
+  container.appendChild(
+    leagueSection
+  );
+
+}
     /* ==========================================================
        CHART SETTINGS
     ========================================================== */
