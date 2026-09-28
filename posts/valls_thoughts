@@ -217,10 +217,16 @@ window.blogPosts.push({
       Nobody should have to play alone.
     </p>
 
-    <div class="my-6">
-      <!-- VIDEO CLIP 4 — SUPPORT THE BALL -->
+      <div class="aspect-video my-6">
+      <iframe
+        class="w-full h-full rounded-xl"
+        src="https://youtu.be/gyprh5-Pqmk"
+        title="Move Off The Ball"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
-
 
     <h4 class="text-lg font-bold text-white pt-2">
       5 — Keep Good Spacing and Positions
