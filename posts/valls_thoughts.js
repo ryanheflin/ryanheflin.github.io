@@ -1,4 +1,3 @@
-```js
 window.blogPosts = window.blogPosts || [];
 
 window.blogPosts.push({
