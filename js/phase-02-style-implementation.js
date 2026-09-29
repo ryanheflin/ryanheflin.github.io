@@ -130,6 +130,9 @@ const phase2Weeks = [
           'Do not crowd the same space.'
         ],
 
+        sessionPlan:
+          'sessions/session-16-give-him-an-option.pdf',
+
         missed: [
           'The player on the ball should not be alone.',
           'Move where he can see and reach you.',
