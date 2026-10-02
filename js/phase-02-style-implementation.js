@@ -170,8 +170,8 @@ const phase2Weeks = [
 
       {
         number: 3,
-        title: 'Connect and Advance',
-        question: 'Can we move forward while staying connected?',
+        title: 'Wide Overloads',
+        question: 'Can we move forward while staying connected out wide?',
 
         purpose:
           'Use support and combinations to advance without breaking the team apart.',
@@ -183,6 +183,9 @@ const phase2Weeks = [
           'Keep useful spacing.',
           'No advantage → keep the ball.'
         ],
+
+        sessionPlan:
+          'sessions/session-18-wide-overloads.pdf',
 
         missed: [
           'Moving forward does not mean rushing.',
