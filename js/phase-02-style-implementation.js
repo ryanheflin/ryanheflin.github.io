@@ -157,6 +157,9 @@ const phase2Weeks = [
           'One supports, one threatens forward.'
         ],
 
+        sessionPlan:
+          'sessions/session-17-play-together.pdf',
+
         missed: [
           'You do not always need to turn.',
           'Use your teammate to escape pressure.',
