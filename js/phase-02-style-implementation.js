@@ -199,97 +199,108 @@ const phase2Weeks = [
   },
 
 
-  /* ========================================================
+   /* ========================================================
      WEEK 7
   ======================================================== */
   {
     week: 7,
-    focus: 'Spacing and Positions',
+    focus: 'Spacing, Solutions and Match Preparation',
 
     description:
-      'Create good spacing so players can help each other without occupying the same space.',
+      'Use our spacing and structure to solve the problems we expect against San Pere, while preparing to press together, defend wide overloads, and win aerial and second balls.',
 
     objective:
-      'Improve positional discipline. Give the ball width, depth, support, and clear passing lines.',
+      'Stay spread when we have the ball and stay connected when we do not. Take the space they give us, find the next solution, and be ready to win the ball after our press forces them long.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Do Not Stand Together',
-        question: 'Where can I move to help the team?',
+        title: 'Make Them Move',
+        question: 'Where is the space they are giving us?',
 
         purpose:
-          'Recognize when to move toward the ball and when to move away to create space.',
+          'Use our spacing to attack opponent’s 4-4-2 block, progress more quickly when space is available, and recognize when to play inside, switch the field, or attack behind.',
 
         habits: [
-          'Do not stand in the same line as a teammate.',
-          'Create width and depth.',
-          'Move away if the space is crowded.',
-          'Keep diagonal passing angles.',
-          'Stay connected to the ball.'
+          'Space in front → take it.',
+          'Look forward before automatically going back.',
+          'Their winger jumps our fullback → find the player they left.',
+          'Use the pivots to slide and create new passing lines.',
+          'Crowded side → reset and switch.',
+          'High back line → threaten the space behind.',
+          'If one player comes short, another player attacks the next space.'
         ],
 
         missed: [
-          'More players near the ball does not always mean more help.',
-          'Spread out enough to create passing lanes.',
-          'If a teammate enters your space, adjust.',
-          'Good spacing gives the player on the ball more choices.'
+          'We do not need to circulate slowly if nobody is pressing us.',
+          'Their pressure should help us identify the free player.',
+          'Do not force the ball through a crowded side.',
+          'Keep width on the far side so the big switch is available.',
+          'A forward run behind can create space even when we do not play the pass.'
         ]
       },
 
       {
         number: 2,
         title: 'Three Players Work Together',
-        question: 'Can we create a triangle around the ball?',
+        question: 'Can we keep the triangle alive as the pressure changes?',
 
         purpose:
-          'Use three-player relationships to create different passing options around pressure.',
+          'Use three-player relationships around the ball to create support, escape pressure, and keep different solutions available.',
 
         habits: [
           'Create a triangle around the ball.',
           'One supports behind.',
           'One gives width or depth.',
           'Move when your teammate moves.',
+          'If one player comes short, another can move away.',
+          'Keep diagonal passing angles.',
           'Do not occupy the same space.'
         ],
 
         missed: [
           'Three players should create three different options.',
           'React to your teammate’s movement.',
-          'If one player comes short, another can move away.',
+          'Do not all move toward the ball.',
+          'If pressure closes one option, create another.',
           'Keep the triangle alive as the ball moves.'
         ]
       },
 
       {
         number: 3,
-        title: 'Keep Our Shape',
-        question: 'Can we attack without losing our positions?',
+        title: 'Press, Force, Win',
+        question: 'Can we make them play the ball we want?',
 
         purpose:
-          'Maintain useful team spacing while still allowing movement and combinations.',
+          'Prepare our defensive game plan against opponent: press together, protect the middle, deal with inverted wingers and overlapping fullbacks, and win the first and second ball when we force them long.',
 
         habits: [
-          'Know your starting space.',
-          'Move without abandoning the structure.',
-          'Ball moves → adjust your position.',
-          'Keep width on both sides.',
-          'Stay connected behind the attack.'
+          'Press together, not one player at a time.',
+          'Joel sends the build one way.',
+          'Near winger jumps the fullback.',
+          'Protect the pivots and half-spaces inside.',
+          'Far-side winger pinches in and stays connected.',
+          'Their winger comes inside → our pivot protects the space.',
+          'Their fullback overlaps → our winger recovers.',
+          'When they kick long → attack the first ball and squeeze for the second.',
+          'After the regain → look forward immediately.'
         ],
 
         missed: [
-          'Movement does not mean everyone follows the ball.',
-          'Keep the team spread across the field.',
-          'Players behind the ball still have an important role.',
-          'Good structure makes combinations easier.'
+          'Forcing a long ball is a successful press.',
+          'The press is not finished when they kick it.',
+          'Center backs attack the first ball and midfielders prepare for the knockdown.',
+          'Do not let the first presser become isolated.',
+          'Fullbacks should not get dragged inside and leave the overlap free.',
+          'If their wide overloads repeatedly beat us, be ready to change to 3-5-2.',
+          'Stay connected behind the attack so we are ready if possession changes.'
         ]
       }
 
     ]
   },
-
-
   /* ========================================================
      WEEK 8
   ======================================================== */
