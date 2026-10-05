@@ -232,6 +232,9 @@ const phase2Weeks = [
           'If one player comes short, another player attacks the next space.'
         ],
 
+        sessionPlan:
+          'sessions/session-18-make-them-move.pdf',
+
         missed: [
           'We do not need to circulate slowly if nobody is pressing us.',
           'Their pressure should help us identify the free player.',
