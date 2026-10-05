@@ -233,7 +233,7 @@ const phase2Weeks = [
         ],
 
         sessionPlan:
-          'sessions/session-18-make-them-move.pdf',
+          'sessions/session-19-make-them-move.pdf',
 
         missed: [
           'We do not need to circulate slowly if nobody is pressing us.',
