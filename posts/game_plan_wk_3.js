@@ -59,8 +59,19 @@ window.blogPosts.push({
       <li>Hazles retroceder.</li>
     </ul>
 
-    <!-- VIDEO OPCIONAL:
-         Ejemplo de central avanzando porque San Pere no presiona -->
+    <!-- CLIP -->
+    <div class="mt-4 rounded-xl overflow-hidden border border-gray-700 bg-black">
+      <div class="aspect-video">
+        <iframe
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/Ufs6VxOE50k"
+          title="San Pere - Buena salida"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
 
 
     <h4
