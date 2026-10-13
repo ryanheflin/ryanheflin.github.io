@@ -309,90 +309,95 @@ const phase2Weeks = [
   ======================================================== */
   {
     week: 8,
-    focus: 'Win It and Play Together',
+    focus: 'Defend Together',
 
     description:
-      'After regaining possession, make the first action calm and keep the team connected.',
+      'Improve our basic defensive habits while continuing to develop our possession game through angles, timing, distance and support.',
 
     objective:
-      'Recognize when to attack quickly and when to secure the ball instead of forcing the next action.',
+      'Defend with patience, positioning, support and communication while continuing to improve how we connect and support the ball in possession.',
 
     sessions: [
 
       {
         number: 1,
-        title: 'Secure the First Pass',
-        question: 'What is the best first action after we win it?',
+        title: 'Defend the Player',
+        question: 'What is my first job when I defend?',
 
         purpose:
-          'Improve the first decision after regaining possession and avoid giving the ball straight back.',
+          'Build the basic habits of individual defending and introduce the relationship between pressure and cover. Defenders work separately on defensive technique while the rest of the team works on possession, support and movement.',
 
         habits: [
-          'Look forward first.',
-          'Simple pass if needed.',
-          'Support the player who wins it.',
-          'Do not force the first action.',
-          'No advantage → secure the ball.'
+          'Get goal-side.',
+          'Protect the inside.',
+          'Slow the attacker down.',
+          'Do not dive in.',
+          'Pressure → teammate covers.',
+          'Communicate.'
         ],
 
         missed: [
-          'Winning the ball is only useful if we keep it.',
-          'Forward is good only when the advantage is real.',
-          'Give the player who regains possession an easy option.',
-          'Do not turn every regain into a rushed attack.'
+          'You do not have to win the ball immediately.',
+          'Stay between the attacker and the dangerous space.',
+          'Force the attacker where we want him to go.',
+          'If your teammate pressures, get into a position to help.',
+          'With the ball: create good angles, timing and distance.'
         ]
       },
 
       {
         number: 2,
-        title: 'Move with the Ball',
-        question: 'How does the team react when we regain possession?',
+        title: 'Help the Defender',
+        question: 'If my teammate is defending the ball, what is my job?',
 
         purpose:
-          'Coordinate movement around the regain so the player on the ball has support and forward options.',
+          'Teach the whole team how to defend together using pressure, cover and protection of dangerous space.',
 
         habits: [
-          'One player threatens forward.',
-          'One player supports the ball.',
-          'Create width quickly.',
-          'Team moves forward together.',
-          'Stay connected behind the attack.'
+          'One player pressures.',
+          'Nearest player covers.',
+          'Protect the center first.',
+          'Do not all attack the ball.',
+          'Ball moves → we move.',
+          'Stay connected.'
         ],
 
         missed: [
-          'The player who wins it should not attack alone.',
-          'Do not all run toward the ball.',
-          'Give both a forward option and a safe option.',
-          'The whole team reacts to the regain.'
+          'The first defender does not defend alone.',
+          'Pressure without cover leaves space behind.',
+          'Do not leave the center open while chasing the ball.',
+          'Everyone has a defensive responsibility.',
+          'Move together when the ball moves.'
         ]
       },
 
       {
         number: 3,
-        title: 'Attack or Keep It?',
-        question: 'Do we attack now or keep the ball?',
+        title: 'Move as a Defensive Line',
+        question: 'Where should our defensive line move when the ball moves?',
 
         purpose:
-          'Read the situation after regaining and choose between attacking quickly or keeping possession.',
+          'Improve the positioning and movement of the back line while the rest of the team continues working on possession, combinations and support.',
 
         habits: [
-          'Clear advantage → attack.',
-          'Space in behind → attack.',
-          'Opponent disorganized → attack.',
-          'No advantage → keep the ball.',
-          'Keep possession → restore our shape.'
+          'Stay connected across the line.',
+          'Protect the gaps between defenders.',
+          'Ball wide → slide together.',
+          'Ball backward → step together.',
+          'One defender engages → others cover.',
+          'Protect the center before the touchline.'
         ],
 
         missed: [
-          'We do not counterattack just because we won the ball.',
-          'Attack when the situation gives us an advantage.',
-          'If the opponent is organized, keep possession.',
-          'Once we keep it, organize the team again.'
+          'Do not defend as four separate players.',
+          'Fullbacks pinch inside when we defend our own third.',
+          'If one defender moves, the rest of the line must react.',
+          'Communicate who pressures and who covers.',
+          'With the ball: give support through good angles, timing and distance.'
         ]
       }
 
     ]
   },
-
   
 ];
