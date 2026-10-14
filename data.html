@@ -1718,9 +1718,10 @@ function getAllResultGames() {
 
 
 
-      function createGameGroup(
+           function createGameGroup(
         title,
-        groupGames
+        groupGames,
+        collapsed = false
       ) {
 
         if (
@@ -1732,31 +1733,106 @@ function getAllResultGames() {
         }
 
 
-
         const section =
           document.createElement(
-            'div'
+            collapsed
+              ? 'details'
+              : 'div'
           );
 
 
-        const label =
-          document.createElement(
-            'div'
+        if (collapsed) {
+
+          section.className =
+            'border border-gray-700 rounded-lg overflow-hidden';
+
+
+          const summary =
+            document.createElement(
+              'summary'
+            );
+
+
+          summary.className =
+            'results-toggle cursor-pointer list-none px-3 py-3 hover:bg-gray-700/40 transition-colors';
+
+
+          summary.innerHTML = `
+
+            <div
+              class="flex items-center justify-between gap-3"
+            >
+
+              <div>
+
+                <div
+                  class="text-[11px] uppercase tracking-[0.18em] font-bold text-gray-400"
+                >
+                  ${title}
+                </div>
+
+                <div
+                  class="text-[11px] text-gray-600 mt-1"
+                >
+                  ${groupGames.length}
+                  ${
+                    groupGames.length === 1
+                      ? 'match'
+                      : 'matches'
+                  }
+                </div>
+
+              </div>
+
+
+              <svg
+                class="results-chevron w-4 h-4 text-gray-500 flex-shrink-0"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+
+              </svg>
+
+            </div>
+
+          `;
+
+
+          section.appendChild(
+            summary
           );
 
+        }
 
-        label.className =
-          'px-2 mb-2 text-[11px] uppercase tracking-[0.18em] font-bold text-gray-500';
+        else {
+
+          const label =
+            document.createElement(
+              'div'
+            );
 
 
-        label.textContent =
-          title;
+          label.className =
+            'px-2 mb-2 text-[11px] uppercase tracking-[0.18em] font-bold text-gray-500';
 
 
-        section.appendChild(
-          label
-        );
+          label.textContent =
+            title;
 
+
+          section.appendChild(
+            label
+          );
+
+        }
 
 
         const list =
@@ -1766,8 +1842,9 @@ function getAllResultGames() {
 
 
         list.className =
-          'space-y-1';
-
+          collapsed
+            ? 'space-y-1 p-2 border-t border-gray-700'
+            : 'space-y-1';
 
 
         groupGames.forEach(
@@ -1799,19 +1876,16 @@ function getAllResultGames() {
               'game-btn w-full text-left px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-700/60 hover:text-white transition-colors';
 
 
-
             const homeAway =
               game.homeAway === 'away'
                 ? '@'
                 : 'vs.';
 
 
-
             const result =
               getGameResult(
                 game
               );
-
 
 
             let resultClass =
@@ -1835,7 +1909,6 @@ function getAllResultGames() {
                 'text-red-400';
 
             }
-
 
 
             button.innerHTML = `
@@ -1912,7 +1985,6 @@ function getAllResultGames() {
         );
 
 
-
         section.appendChild(
           list
         );
@@ -1927,16 +1999,17 @@ function getAllResultGames() {
 
 
       createGameGroup(
-        'Friendlies',
-        friendlies
+        'Preseason',
+        friendlies,
+        true
       );
 
 
       createGameGroup(
         'League Matches',
-        leagueGames
+        leagueGames,
+        false
       );
-
     }
 
 
