@@ -14,20 +14,11 @@ window.blogPosts.push({
   content: `
 
 <p>
-Al principio de la temporada,
-gran parte de nuestro trabajo consistía en construir
-una manera común de jugar.
+Al principio de la temporada, gran parte de lo que estábamos haciendo consistía en construir una forma común de jugar.
 </p>
 
 <p>
-Queríamos que todos entendiéramos las mismas ideas básicas.
-Salir jugando desde atrás cuando podamos.
-Usar todo el campo.
-Ayudar al jugador que tiene el balón.
-Presionar juntos.
-Intentar jugar hacia delante, pero sin forzarlo.
-Mantener el balón cuando no hay ventaja.
-Y cuando lo perdemos, reaccionar juntos.
+Queríamos que todos entendieran las mismas ideas básicas. Salir jugando desde atrás cuando podamos. Usar todo el campo. Apoyar al jugador que tiene el balón. Presionar juntos. Intentar jugar hacia delante, pero sin forzarlo. Mantener el balón cuando no hay ventaja. Cuando lo perdemos, reaccionar juntos.
 </p>
 
 <p>
@@ -35,30 +26,12 @@ Creo que hemos avanzado mucho en eso.
 </p>
 
 <p>
-Ahora hay momentos en los partidos
-en los que se puede ver claramente lo que estamos intentando hacer.
-Nuestra presión alta ha creado problemas a los rivales.
-Les hemos obligado a jugar hacia atrás
-y después a jugar largo.
-</p>
-
-<p>
-También hemos tenido posesiones
-en las que movemos el balón con calma,
-combinamos por el centro,
-cambiamos de lado
-y creamos ocasiones.
-</p>
-
-<p>
-Entendemos mucho mejor la idea general
-que hace unos meses.
+Ahora hay momentos en los partidos en los que se puede ver claramente lo que estamos intentando hacer. Nuestra presión alta ha causado problemas a otros equipos. Hemos obligado a los rivales a jugar hacia atrás y a jugar largo. Hemos tenido posesiones en las que movemos el balón con calma, combinamos por el centro del campo, cambiamos de lado y creamos ocasiones. Los jugadores entienden mucho mejor la idea general que hace unos meses.
 </p>
 
 
 <!-- ==========================================================
-     VIDEOS 1
-     Ejemplos de lo que estamos haciendo bien
+     VIDEOS
 ========================================================== -->
 
 <div class="my-6">
@@ -68,41 +41,17 @@ que hace unos meses.
 </div>
 
 
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Todavía Hay Demasiado Caos
-</h3>
-
 <p>
-Eso no significa que todavía seamos capaces
-de hacerlo bien de forma constante.
+Eso no significa que todavía seamos capaces de hacerlo bien de manera constante.
 </p>
 
 <p>
-Nuestro mayor problema
-es que todavía convertimos demasiadas situaciones en caos.
-</p>
-
-<p>
-Ganamos el balón
-y lo devolvemos inmediatamente.
-Intentamos regatear cuando hay un pase sencillo.
-Golpeamos balones que podríamos controlar.
-Intentamos atacar antes de tener realmente la posesión asegurada.
-</p>
-
-<p>
-Demasiadas veces,
-un jugador intenta solucionar toda la jugada él solo
-en lugar de hacer más fácil
-la siguiente acción para un compañero.
+El mayor problema es que todavía convertimos demasiadas situaciones en caos. Ganamos el balón y lo devolvemos inmediatamente. Intentamos regatear cuando hay un pase sencillo. Golpeamos balones que podríamos controlar. Atacamos antes de haber asegurado realmente la posesión. Demasiadas veces, un jugador intenta solucionar toda la situación él solo en vez de hacer más fácil la siguiente acción para un compañero.
 </p>
 
 
 <!-- ==========================================================
-     VIDEOS 2
-     Control, apoyo, decisiones y posesiones perdidas
+     VIDEOS
 ========================================================== -->
 
 <div class="my-6">
@@ -112,35 +61,17 @@ la siguiente acción para un compañero.
 </div>
 
 
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Lo Mismo Pasa Cuando Defendemos
-</h3>
-
 <p>
-Entendemos que queremos presionar,
-pero a veces confundimos presionar
-con simplemente correr hacia el balón.
+Lo mismo ocurre defensivamente.
 </p>
 
 <p>
-Nos lanzamos demasiado.
-Los defensores abandonan su posición.
-Dos jugadores atacan al mismo rival
-y nadie cubre detrás.
-</p>
-
-<p>
-Nos concentramos en robar el balón
-antes de pensar en proteger la portería
-y evitar el tiro.
+Entendemos que queremos presionar, pero a veces confundimos presionar con simplemente correr hacia el balón. Los jugadores se lanzan. Los defensores abandonan sus posiciones. Dos jugadores atacan al mismo rival y nadie cubre detrás. Nos concentramos en robar el balón en vez de proteger primero la portería y evitar el tiro.
 </p>
 
 
 <!-- ==========================================================
-     VIDEOS 3
-     Presión, cobertura y organización defensiva
+     VIDEOS
 ========================================================== -->
 
 <div class="my-6">
@@ -150,193 +81,64 @@ y evitar el tiro.
 </div>
 
 
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  Hacer Mejor las Cosas Sencillas
-</h3>
-
 <p>
-Probablemente esta sea
-la lección más importante
-de los últimos partidos.
+Probablemente esa sea la lección más importante de los últimos partidos.
 </p>
 
 <p>
-No necesitamos convertirnos
-en un equipo más complicado.
+No necesitamos convertirnos en un equipo más complicado. Necesitamos hacer mejor las cosas sencillas.
 </p>
 
 <p>
-Necesitamos hacer mejor
-las cosas sencillas.
+Controlar el balón cuando tenemos tiempo. Dar una opción al jugador que tiene el balón. Saber cuándo jugar hacia delante y cuándo mantenerlo. Si tu compañero presiona, cúbrelo. Si estás recuperando, recupera primero hacia el espacio peligroso. Defiende la portería antes de pensar en robar el balón.
 </p>
 
 <p>
-Controlar el balón cuando tenemos tiempo.
-Dar una opción al jugador que tiene el balón.
-Saber cuándo jugar hacia delante
-y cuándo mantenerlo.
+También hay cosas que están funcionando.
 </p>
 
 <p>
-Si tu compañero presiona, cúbrelo.
-Si estás recuperando,
-primero recupera hacia el espacio peligroso.
-Defiende la portería
-antes de pensar en robar el balón.
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  También Hay Cosas Que Están Funcionando
-</h3>
-
-<p>
-Nuestra presión ha mejorado.
-Nuestro esfuerzo generalmente ha sido bueno,
-aparte del partido contra Valls.
+Nuestra presión ha mejorado. Nuestro esfuerzo generalmente ha sido bueno, aparte de nuestro partido contra Valls. Hemos demostrado que, a veces, podemos jugar y salir de la presión cuando mantenemos la calma. Hemos demostrado que podemos crear ocasiones mediante combinaciones en vez de depender solamente de acciones individuales. E incluso en partidos difíciles, normalmente hemos seguido luchando e intentando jugar.
 </p>
 
 <p>
-A veces hemos demostrado
-que podemos salir de la presión
-cuando mantenemos la calma.
+Ahora, la siguiente fase de nuestros entrenamientos va a ser un poco diferente.
 </p>
 
 <p>
-Hemos demostrado que podemos crear ocasiones
-con combinaciones
-y no solamente con acciones individuales.
+Hasta ahora, gran parte del trabajo ha consistido en enseñar a todos el estilo general y el plan de juego. Creo que ya entendemos eso lo suficientemente bien como para empezar a ser más específicos. Esta semana empezamos con el entrenamiento del martes, dividiendo el grupo para que yo pudiera trabajar solamente con los defensores.
 </p>
 
 <p>
-Y normalmente,
-incluso cuando los partidos han sido difíciles,
-hemos seguido luchando
-e intentando jugar.
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  El Siguiente Paso
-</h3>
-
-<p>
-Ahora la siguiente fase de nuestros entrenamientos
-va a ser un poco diferente.
+Los defensores tienen que convertirse en mejores defensores. Los centrocampistas tienen que convertirse en mejores centrocampistas. Los atacantes tienen que convertirse en mejores atacantes.
 </p>
 
 <p>
-Hasta ahora,
-gran parte del trabajo consistía en enseñar
-a todo el equipo nuestro estilo general
-y nuestro plan de juego.
+Eso significa que vamos a empezar a dedicar más tiempo a las responsabilidades de cada posición y a los hábitos individuales.
 </p>
 
 <p>
-Creo que ya entendemos suficientemente bien esa idea
-como para empezar a trabajar
-de una manera más específica.
+Los defensores trabajarán la posición del cuerpo, temporizar, presión y cobertura, los ángulos de recuperación y cómo moverse como una línea. Los centrocampistas trabajarán las posiciones para recibir, los ángulos de apoyo, mirar antes de recibir, jugar bajo presión y conectar al equipo. Los atacantes trabajarán el movimiento, las combinaciones, el momento de los desmarques y la finalización.
 </p>
 
 <p>
-Esta semana empezamos el martes,
-dividiendo el grupo
-para que yo pudiera trabajar solamente con los defensores.
+Este es el siguiente paso para poder jugar nuestro estilo.
 </p>
 
 <p>
-Los defensores tienen que convertirse
-en mejores defensores.
+El equipo ya tiene una idea general de cómo queremos jugar.
 </p>
 
 <p>
-Los centrocampistas tienen que convertirse
-en mejores centrocampistas.
+Ahora cada jugador tiene que entender cuál es su trabajo dentro de esa idea.
 </p>
 
 <p>
-Los atacantes tienen que convertirse
-en mejores atacantes.
+Si podemos mejorar los detalles individuales sin perder los principios de equipo que ya hemos construido, seremos mucho más consistentes.
 </p>
 
 <p>
-Eso significa que vamos a dedicar más tiempo
-a las responsabilidades de cada posición
-y a los hábitos individuales.
-</p>
-
-<p>
-Los defensores trabajarán
-la posición del cuerpo,
-temporizar,
-presión y cobertura,
-ángulos de recuperación
-y cómo moverse juntos como línea.
-</p>
-
-<p>
-Los centrocampistas trabajarán
-dónde recibir,
-los ángulos de apoyo,
-mirar antes de recibir,
-jugar bajo presión
-y conectar al equipo.
-</p>
-
-<p>
-Los atacantes trabajarán
-el movimiento,
-las combinaciones,
-el momento de los desmarques
-y la finalización.
-</p>
-
-
-<h3
-  class="text-lg font-bold text-white mt-8 mb-2"
->
-  El Mismo Estilo, Más Responsabilidad
-</h3>
-
-<p>
-Este es el siguiente paso
-para poder jugar nuestro estilo.
-</p>
-
-<p>
-El equipo ya tiene una idea general
-de cómo queremos jugar.
-</p>
-
-<p>
-Ahora cada jugador tiene que entender
-cuál es su trabajo dentro de esa idea.
-</p>
-
-<p>
-Si podemos mejorar los detalles individuales
-sin perder los principios de equipo
-que ya hemos construido,
-seremos mucho más consistentes.
-</p>
-
-<p>
-Ahí es donde estamos ahora.
-</p>
-
-<p>
-Y durante todo este proceso
-seguimos concentrados en las mismas cosas:
-jugar juntos como equipo,
-no rendirnos nunca,
-hacer nuestro trabajo
-y mostrar respeto.
+Ahí es donde estamos ahora. Y durante todo este proceso seguimos siempre concentrados en jugar juntos como equipo, no rendirnos nunca, hacer nuestro trabajo y mostrar respeto.
 </p>
 
   `
