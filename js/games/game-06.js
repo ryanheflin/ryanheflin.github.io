@@ -439,10 +439,9 @@ que permiten que nuestra manera de jugar funcione.
 
     {
       title: 'Partido',
-      description: 'Partido Completo,
+      description: 'Partido Completo',
       embedUrl: 'https://www.youtube.com/embed/uygDUd_ykGA'
-    },
-
+    }
 
   ]
 
