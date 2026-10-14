@@ -197,6 +197,20 @@ window.seasonGames.push({
 
   analysis: `
 
+<!-- ==========================================================
+     MATCH STAT GRAPHIC
+========================================================== -->
+
+<div class="my-6">
+
+  <img
+    src="images/game-06-stats.png"
+    alt="Estadísticas completas CE Altafulla vs San Pere i San Pau"
+    class="w-full rounded-xl border border-gray-700 shadow-lg"
+  >
+
+</div>
+
 <h3
   class="text-lg font-bold text-white mt-6 mb-2"
 >
