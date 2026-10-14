@@ -435,6 +435,15 @@ que permiten que nuestra manera de jugar funcione.
      MATCH VIDEOS
   ========================================================== */
 
-  clips: []
+  clips: [
+
+    {
+      title: 'Partido',
+      description: 'Partido Completo,
+      embedUrl: 'https://www.youtube.com/embed/uygDUd_ykGA'
+    },
+
+
+  ]
 
 });
