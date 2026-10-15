@@ -31,12 +31,57 @@ Ahora hay momentos en los partidos en los que se puede ver claramente lo que est
 
 
 <!-- ==========================================================
-     VIDEOS
+     VIDEOS — PRESSING + BUILDOUT
 ========================================================== -->
 
-<div class="my-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 my-6">
 
-  <!-- VIDEO -->
+  <!-- VIDEO 1 -->
+  <div>
+
+    <div
+      class="aspect-video rounded-lg overflow-hidden border border-gray-700 bg-gray-900"
+    >
+      <iframe
+        src="https://youtu.be/1MDF-nUQZMY"
+        class="w-full h-full"
+        title="Nuestra presión"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+      En los primeros 20 minutos, nuestra presión obligó a San Pere a jugar largo constantemente, dándonos una oportunidad de ganar el balón cada vez. El último clip muestra lo que pasa cuando no presionamos juntos.
+    </p>
+
+  </div>
+
+
+  <!-- VIDEO 2 -->
+  <div>
+
+    <div
+      class="aspect-video rounded-lg overflow-hidden border border-gray-700 bg-gray-900"
+    >
+      <iframe
+        src="https://youtu.be/nU4m0etVRCI"
+        class="w-full h-full"
+        title="Nuestra salida de balón"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+      Fijaos en estas salidas de balón: los espacios que ocupamos, las posiciones que tomamos y cómo trabajamos juntos.
+    </p>
+
+  </div>
+
+</div>
 
 </div>
 
