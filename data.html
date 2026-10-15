@@ -851,18 +851,15 @@
 
 
 
-    <!-- RIGHT MATCH MENU -->
+<!-- RIGHT MATCH MENU -->
 
 <aside
   class="
     order-1
     xl:order-2
-    xl:fixed
-    xl:top-24
-    xl:bottom-14
-    xl:right-6
-    xl:w-[270px]
-    xl:z-20
+    xl:sticky
+    xl:top-6
+    xl:self-start
   "
 >
 
@@ -872,10 +869,10 @@
       border border-gray-700
       rounded-xl
       overflow-hidden
-      xl:h-full
+      shadow-xl
+      xl:max-h-[calc(100vh-3rem)]
       xl:flex
       xl:flex-col
-      shadow-xl
     "
   >
 
@@ -883,19 +880,16 @@
       class="px-4 py-4 bg-gray-950 border-b border-gray-700 flex-shrink-0"
     >
 
-      <h3
-        class="font-bold text-white"
-      >
+      <h3 class="font-bold text-white">
         Matches
       </h3>
 
-      <p
-        class="text-xs text-gray-500 mt-1"
-      >
+      <p class="text-xs text-gray-500 mt-1">
         Season analysis
       </p>
 
     </div>
+
 
     <div
       id="game-navigation"
