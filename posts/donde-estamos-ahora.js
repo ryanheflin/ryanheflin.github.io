@@ -131,11 +131,27 @@ Entendemos que queremos presionar, pero a veces confundimos presionar con simple
      VIDEOS
 ========================================================== -->
 
-<div class="my-6">
+  <!-- VIDEO 1 -->
+  <div>
 
-  <!-- VIDEO -->
+    <div
+      class="aspect-video rounded-lg overflow-hidden border border-gray-700 bg-gray-900"
+    >
+      <iframe
+        src="https://www.youtube.com/embed/mLR6MeLyjSI"
+        class="w-full h-full"
+        title="Nuestra presión"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
 
-</div>
+    <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+      En los primeros 20 minutos, nuestra presión obligó a San Pere a jugar largo constantemente, dándonos una oportunidad de ganar el balón cada vez. El último clip muestra lo que pasa cuando no presionamos juntos.
+    </p>
+
+  </div>
 
 
 <p>
