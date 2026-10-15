@@ -43,7 +43,7 @@ Ahora hay momentos en los partidos en los que se puede ver claramente lo que est
       class="aspect-video rounded-lg overflow-hidden border border-gray-700 bg-gray-900"
     >
       <iframe
-        src="https://youtu.be/1MDF-nUQZMY"
+        src="https://www.youtube.com/embed/1MDF-nUQZMY"
         class="w-full h-full"
         title="Nuestra presión"
         loading="lazy"
@@ -66,7 +66,7 @@ Ahora hay momentos en los partidos en los que se puede ver claramente lo que est
       class="aspect-video rounded-lg overflow-hidden border border-gray-700 bg-gray-900"
     >
       <iframe
-        src="https://youtu.be/nU4m0etVRCI"
+        src="https://www.youtube.com/embed/nU4m0etVRCI"
         class="w-full h-full"
         title="Nuestra salida de balón"
         loading="lazy"
