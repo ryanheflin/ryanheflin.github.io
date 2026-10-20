@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>Yael | Individual Development Plan | CE Altafulla U15</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    :root { --yellow:#f2e40a; --blue:#62bed6; }
+    body { background:#111827; }
+    .clip iframe { width:100%; height:100%; }
+    @media print {
+      @page { size: A4; margin: 13mm; }
+      body { background: white !important; color:#111827 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+      main { max-width:none !important; padding:0 !important; }
+      .sheet { background:white !important; color:#111827 !important; border:1px solid #ddd !important; box-shadow:none !important; }
+      .print-dark { color:#111827 !important; }
+      .print-muted { color:#374151 !important; }
+      .print-panel { background:#f3f4f6 !important; border:1px solid #e5e7eb !important; }
+      .print-header { background:#f2e40a !important; }
+      .video-slot, .no-print { display:none !important; }
+      .objective { break-inside:avoid; }
+      .print-tight { padding:12px !important; }
+    }
+  </style>
+</head>
+<body class="text-white antialiased min-h-screen">
+<main class="max-w-3xl mx-auto px-4 py-7 sm:py-10">
+<nav class="no-print mb-5 flex items-center justify-between gap-3">
+<a class="text-sm text-gray-400 hover:text-white" href="../index.html">← Home</a>
+<button class="rounded-lg border border-gray-600 px-3 py-2 text-sm hover:bg-gray-800" onclick="window.print()">Print / Save PDF</button>
+</nav>
+<article class="sheet overflow-hidden rounded-2xl bg-gray-950 border border-gray-800 shadow-xl">
+<div class="print-header h-2" style="background:var(--yellow)"></div>
+<div class="p-5 sm:p-8 print-tight">
+<header class="flex items-start justify-between gap-4 pb-5 border-b border-gray-700">
+<div>
+<p class="text-xs font-bold uppercase tracking-[.18em]" style="color:var(--blue)">CE Altafulla · U15</p>
+<h1 class="print-dark text-4xl sm:text-5xl font-extrabold mt-2">Yael</h1>
+<p class="print-muted text-sm text-gray-400 mt-1">Fullback / Center back · My development plan</p>
+</div>
+<div class="no-print rounded-xl bg-gray-800 px-3 py-2 text-center">
+<span class="block text-xs text-gray-400">Temporada</span>
+<span class="font-bold" style="color:var(--yellow)">2026/27</span>
+</div>
+</header>
+<section class="py-5 border-b border-gray-800">
+<p class="uppercase text-xs font-extrabold tracking-widest" style="color:var(--yellow)">WHAT YOU ALREADY DO WELL</p>
+<h2 class="print-dark text-xl font-bold mt-2">Defensive versatility; option in stay-home back three.</h2>
+
+</section>
+<section class="pt-5">
+<h2 class="text-xs font-extrabold uppercase tracking-widest mb-4" style="color:var(--yellow)">YOUR 2 PRIORITIES</h2>
+<div class="grid grid-cols-1 gap-4">
+<div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4">
+<div class="flex items-start gap-3">
+<span class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950" style="background:var(--yellow)">1</span>
+<div>
+<h3 class="print-dark text-lg font-extrabold">GIVE A CLEAR PASSING OPTION</h3>
+<p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed">Provide a clear buildout angle and make simple decisions.</p>
+</div>
+</div>
+<div class="video-slot mt-4" data-clip="0"></div>
+</div>
+<div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4">
+<div class="flex items-start gap-3">
+<span class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950" style="background:var(--yellow)">2</span>
+<div>
+<h3 class="print-dark text-lg font-extrabold">PROTECT THE MIDDLE</h3>
+<p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed">Protect central space and cover behind advancing teammate.</p>
+</div>
+</div>
+<div class="video-slot mt-4" data-clip="1"></div>
+</div>
+</div>
+</section>
+<section class="print-panel rounded-xl border border-sky-900 bg-slate-900 p-4 mt-5">
+<h2 class="text-xs font-extrabold uppercase tracking-widest" style="color:var(--blue)">YOUR MATCH CHALLENGE</h2>
+<div class="mt-3 space-y-2 text-sm">
+<p class="print-dark"><span class="font-bold" style="color:var(--blue)">✓ </span>Did I give my teammate a clear, simple passing option?</p>
+<p class="print-dark"><span class="font-bold" style="color:var(--blue)">✓ </span>Did I cover central space when someone advanced?</p>
+</div>
+</section>
+</div>
+</article>
+<p class="no-print text-center text-xs text-gray-500 mt-5">CE Altafulla · Season 2026/27</p>
+</main>
+<script>
+    // EDIT HERE: paste a YouTube video ID and start/end times (in seconds).
+    // Leave videoId empty to hide the video area completely.
+    const playerClips = [
+  {
+    "videoId": "",
+    "start": 0,
+    "end": null,
+    "title": "Give A Clear Passing Option",
+    "note": "Did I give my teammate a clear, simple passing option?"
+  },
+  {
+    "videoId": "",
+    "start": 0,
+    "end": null,
+    "title": "Protect The Middle",
+    "note": "Did I cover central space when someone advanced?"
+  }
+];
+
+    document.querySelectorAll("[data-clip]").forEach(slot => {
+      const clip = playerClips[Number(slot.dataset.clip)];
+      if (!clip || !/^[\w-]{11}$/.test(clip.videoId)) return;
+      const query = new URLSearchParams({ start: String(clip.start || 0), rel: "0" });
+      if (Number.isFinite(clip.end) && clip.end > (clip.start || 0)) query.set("end", String(clip.end));
+      const card = document.createElement("div");
+      card.className = "clip overflow-hidden rounded-lg border border-gray-700 bg-gray-950";
+      const player = document.createElement("div");
+      player.className = "aspect-video";
+      const iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube-nocookie.com/embed/${clip.videoId}?${query}`;
+      iframe.title = clip.title;
+      iframe.loading = "lazy";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      player.appendChild(iframe);
+      card.appendChild(player);
+      if (clip.note) {
+        const note = document.createElement("p");
+        note.className = "p-3 text-xs text-gray-300";
+        note.textContent = clip.note;
+        card.appendChild(note);
+      }
+      slot.appendChild(card);
+    });
+  </script>
+</body>
+</html>
