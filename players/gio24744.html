@@ -5,9 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="robots" content="noindex, nofollow"/>
-
   <title>Gio | Individual Development Plan | CE Altafulla U15</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -28,7 +26,7 @@
     @media print {
       @page {
         size: A4;
-        margin: 13mm;
+        margin: 11mm;
       }
 
       body {
@@ -64,7 +62,7 @@
       }
 
       .print-header {
-        background: #f2e40a !important;
+        background: var(--yellow) !important;
       }
 
       .video-slot,
@@ -72,12 +70,36 @@
         display: none !important;
       }
 
-      .objective {
+      .objective,
+      .tracker-row,
+      .print-keep {
         break-inside: avoid;
       }
 
       .print-tight {
-        padding: 12px !important;
+        padding: 11px !important;
+      }
+
+      .print-compact {
+        padding: 9px !important;
+      }
+
+      .print-small {
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+      }
+
+      .print-gap {
+        gap: 7px !important;
+      }
+
+      .print-mt {
+        margin-top: 9px !important;
+      }
+
+      .print-py {
+        padding-top: 9px !important;
+        padding-bottom: 9px !important;
       }
     }
   </style>
@@ -89,176 +111,168 @@
 
   <!-- NAVIGATION -->
 
-  <nav class="no-print mb-5 flex items-center justify-between gap-3">
-
-    <a
-      class="text-sm text-gray-400 hover:text-white"
-      href="../index.html"
-    >
-      ← Home
+  <nav class="no-print mb-5 flex justify-between items-center gap-3">
+    <a href="../index.html"
+       class="text-sm text-gray-400 hover:text-white">
+      &larr; Home
     </a>
 
     <button
-      class="rounded-lg border border-gray-600 px-3 py-2 text-sm hover:bg-gray-800"
+      type="button"
       onclick="window.print()"
-    >
+      class="rounded-lg border border-gray-600 px-3 py-2 text-sm hover:bg-gray-800">
       Print / Save PDF
     </button>
-
   </nav>
 
 
   <!-- PLAYER DEVELOPMENT PAGE -->
 
-  <article
-    class="sheet overflow-hidden rounded-2xl bg-gray-950 border border-gray-800 shadow-xl"
-  >
+  <article class="sheet overflow-hidden rounded-2xl bg-gray-950 border border-gray-800 shadow-xl">
 
-    <div
-      class="print-header h-2"
-      style="background:var(--yellow)"
-    ></div>
+    <div class="print-header h-2"
+         style="background:var(--yellow)"></div>
 
     <div class="p-5 sm:p-8 print-tight">
 
 
       <!-- PLAYER HEADER -->
 
-      <header
-        class="flex items-start justify-between gap-4 pb-5 border-b border-gray-700"
-      >
+      <header class="flex justify-between items-start gap-3 pb-4 border-b border-gray-700 print-py">
 
         <div>
-
-          <p
-            class="text-xs font-bold uppercase tracking-[.18em]"
-            style="color:var(--blue)"
-          >
-            CE Altafulla · U15
+          <p class="text-xs font-extrabold uppercase tracking-widest"
+             style="color:var(--blue)">
+            CE Altafulla &middot; U15
           </p>
 
-          <h1
-            class="print-dark text-4xl sm:text-5xl font-extrabold mt-2"
-          >
+          <h1 class="print-dark text-4xl sm:text-5xl font-extrabold mt-1">
             Gio
           </h1>
 
           <p class="print-muted text-sm text-gray-400 mt-1">
-            Central midfielder / Pivot · My development plan
+            Central Midfielder / Pivot &middot; Individual Development Plan
           </p>
-
         </div>
 
-
-        <div
-          class="no-print rounded-xl bg-gray-800 px-3 py-2 text-center"
-        >
-
-          <span class="block text-xs text-gray-400">
-            Season
-          </span>
-
-          <span
-            class="font-bold"
-            style="color:var(--yellow)"
-          >
+        <div class="no-print text-right text-xs text-gray-400">
+          Season
+          <strong class="block text-base"
+                  style="color:var(--yellow)">
             2026/27
-          </span>
-
+          </strong>
         </div>
 
       </header>
 
 
 
-      <!-- WHAT YOU DO WELL -->
+      <!-- WHAT I SEE IN YOU -->
 
-      <section class="py-5 border-b border-gray-800">
+      <section class="py-4 border-b border-gray-800 print-py">
 
-        <p
-          class="uppercase text-xs font-extrabold tracking-widest"
-          style="color:var(--yellow)"
-        >
-          WHAT YOU ALREADY DO WELL
+        <p class="text-xs font-extrabold uppercase tracking-widest"
+           style="color:var(--yellow)">
+          WHAT I SEE IN YOU
         </p>
 
-        <h2 class="print-dark text-xl font-bold mt-2">
-          You understand the game and help us play good football.
+        <h2 class="print-dark text-lg sm:text-xl font-bold mt-1">
+          You can become the player who helps control our game.
         </h2>
 
-        <p
-          class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-        >
-          You have excellent vision, good control and the ability
-          to find passes that connect our team. You understand
-          where to position yourself, especially when we build
-          from the back, and you help us play with clarity
-          instead of rushing. These are important qualities
-          in a central midfielder, and one of the reasons
-          I chose you as a captain.
+        <p class="print-muted text-sm text-gray-300 leading-relaxed mt-2 print-small">
+          Gio, you understand football. You see passes, control the
+          ball well and know how to connect your teammates. When we
+          build from the back, you often find exactly the right
+          position and help us play with clarity. That's one of
+          the reasons I chose you as a captain. You show others
+          how I want our team to play with the ball.
+        </p>
+
+        <p class="print-muted text-sm text-gray-300 leading-relaxed mt-2 print-small">
+          Now I want you to become that player throughout the
+          entire match, not just when the game is organized.
+          When things get fast or unpredictable, you sometimes
+          arrive late, drift out of the action or avoid
+          physical challenges. You have the ability and the
+          physical tools to improve these things.
+        </p>
+
+        <p class="print-muted text-sm text-gray-300 leading-relaxed mt-2 print-small">
+          Your next step is to anticipate instead of react,
+          compete more confidently, and use your understanding
+          to help organize the players around you.
+          You don't need to be the fastest player on the field.
+          You need to see things early and make your presence felt.
         </p>
 
       </section>
 
 
 
-      <!-- YOUR TWO PRIORITIES -->
+      <!-- MIDFIELD MINDSET -->
 
-      <section class="pt-5">
+      <div class="print-panel print-keep bg-slate-900 border border-gray-700 rounded-xl p-3 mt-4 print-compact print-mt">
 
-        <h2
-          class="text-xs font-extrabold uppercase tracking-widest mb-4"
-          style="color:var(--yellow)"
-        >
-          YOUR 2 PRIORITIES
+        <p class="text-xs uppercase font-extrabold tracking-widest"
+           style="color:var(--blue)">
+          YOUR MIDFIELD MINDSET
+        </p>
+
+        <p class="print-dark text-center font-extrabold text-sm sm:text-base mt-2">
+          SEE EARLY
+          <span style="color:var(--yellow)">&rarr;</span>
+          MOVE EARLY
+          <span style="color:var(--yellow)">&rarr;</span>
+          CONTROL THE GAME
+        </p>
+
+      </div>
+
+
+
+      <!-- FOUR DEVELOPMENT PRIORITIES -->
+
+      <section class="mt-5 print-mt">
+
+        <h2 class="text-xs font-extrabold uppercase tracking-widest mb-3"
+            style="color:var(--yellow)">
+          YOUR 4 DEVELOPMENT PRIORITIES
         </h2>
 
-        <div class="grid grid-cols-1 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 print-gap">
 
 
           <!-- PRIORITY 1 -->
 
-          <div
-            class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4"
-          >
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
 
-            <div class="flex items-start gap-3">
+            <div class="flex gap-3 items-start">
 
-              <span
-                class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950"
-                style="background:var(--yellow)"
-              >
+              <span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950"
+                    style="background:var(--yellow)">
                 1
               </span>
 
               <div>
 
-                <h3 class="print-dark text-lg font-extrabold">
-                  BE FIRST, NOT FAST
+                <h3 class="print-dark text-base font-extrabold">
+                  READ THE NEXT PLAY EARLY
                 </h3>
 
-                <p
-                  class="print-muted text-sm text-gray-300 mt-1 leading-relaxed"
-                >
-                  Don't wait to see what happens before you move.
-                  Think about where the ball will go next and
-                  get into position early. When we're attacking,
-                  find the next passing angle instead of following
-                  the ball. When we're defending, recognize the
-                  danger and protect the space before the
-                  opponent attacks it.
+                <p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">
+                  Don't wait until the opponent attacks before
+                  you react. Watch where the ball might go next.
+                  When we lose possession, recognize the danger
+                  and move early to protect the center.
+                  Be in position before you need to chase.
                 </p>
 
               </div>
 
             </div>
 
-            <!-- VIDEO FOR PRIORITY 1 -->
-
-            <div
-              class="video-slot mt-4"
-              data-clip="0"
-            ></div>
+            <div class="video-slot mt-3" data-clip="0"></div>
 
           </div>
 
@@ -266,150 +280,295 @@
 
           <!-- PRIORITY 2 -->
 
-          <div
-            class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4"
-          >
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
 
-            <div class="flex items-start gap-3">
+            <div class="flex gap-3 items-start">
 
-              <span
-                class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950"
-                style="background:var(--yellow)"
-              >
+              <span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950"
+                    style="background:var(--yellow)">
                 2
               </span>
 
               <div>
 
-                <h3 class="print-dark text-lg font-extrabold">
-                  BE STRONGER IN THE GAME
+                <h3 class="print-dark text-base font-extrabold">
+                  FIND YOUR NEXT POSITION
                 </h3>
 
-                <p
-                  class="print-muted text-sm text-gray-300 mt-1 leading-relaxed"
-                >
-                  Don't avoid pressure or physical contact.
-                  Use your body to protect the ball, stay balanced
-                  and compete for your space. You have the size
-                  and ability to be stronger in challenges.
-                  Learn to keep possession even when a defender
-                  is close, instead of always trying to pass
-                  before contact arrives.
+                <p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">
+                  During open play, don't just drift toward
+                  the ball. Think about where your teammates
+                  will need you next. After every pass,
+                  move to offer a useful angle. Stay connected
+                  to the play, even when you aren't receiving.
                 </p>
 
               </div>
 
             </div>
 
-            <!-- VIDEO FOR PRIORITY 2 -->
-
-            <div
-              class="video-slot mt-4"
-              data-clip="1"
-            ></div>
+            <div class="video-slot mt-3" data-clip="1"></div>
 
           </div>
 
 
+
+          <!-- PRIORITY 3 -->
+
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+
+            <div class="flex gap-3 items-start">
+
+              <span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950"
+                    style="background:var(--yellow)">
+                3
+              </span>
+
+              <div>
+
+                <h3 class="print-dark text-base font-extrabold">
+                  COMPETE UNDER PRESSURE
+                </h3>
+
+                <p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">
+                  Don't always rush to pass before a defender
+                  reaches you. Get balanced, use your body
+                  to protect the ball and be willing to play
+                  through contact. When defending, get close
+                  enough to compete and make challenges
+                  rather than letting opponents run past.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="video-slot mt-3" data-clip="2"></div>
+
+          </div>
+
+
+
+          <!-- PRIORITY 4 -->
+
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+
+            <div class="flex gap-3 items-start">
+
+              <span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950"
+                    style="background:var(--yellow)">
+                4
+              </span>
+
+              <div>
+
+                <h3 class="print-dark text-base font-extrabold">
+                  LEAD WITH YOUR VOICE
+                </h3>
+
+                <p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">
+                  You understand how we want to play.
+                  Now help your teammates understand it too.
+                  Call for the ball, warn teammates about
+                  pressure and help organize our midfield.
+                  Don't wait for someone else to take charge.
+                </p>
+
+              </div>
+
+            </div>
+
+            <div class="video-slot mt-3" data-clip="3"></div>
+
+          </div>
+
         </div>
 
       </section>
 
 
 
-      <!-- CAPTAIN'S CHALLENGE -->
+      <!-- WHAT THIS LOOKS LIKE -->
 
-      <section
-        class="print-panel rounded-xl border border-gray-700 bg-gray-900 p-4 mt-5"
-      >
+      <section class="mt-5 print-mt">
 
-        <h2
-          class="text-xs font-extrabold uppercase tracking-widest"
-          style="color:var(--yellow)"
-        >
-          YOUR CAPTAIN'S CHALLENGE
+        <h2 class="text-xs font-extrabold uppercase tracking-widest mb-3"
+            style="color:var(--yellow)">
+          WHAT THIS LOOKS LIKE
         </h2>
 
-        <h3 class="print-dark font-bold mt-2">
-          Help the players around you.
-        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 print-gap">
 
-        <p
-          class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-        >
-          You understand how we want to play. Now help your
-          teammates understand it too. Talk to them, warn them
-          about pressure, and help organize our midfield.
-          You don't have to be the loudest player, but your
-          teammates should hear you when they need you.
+
+          <!-- IN TRAINING -->
+
+          <div class="print-panel bg-gray-900 border border-gray-700 rounded-xl p-4 print-compact">
+
+            <h3 class="print-dark font-extrabold text-sm"
+                style="color:var(--blue)">
+              IN TRAINING
+            </h3>
+
+            <ul class="print-muted text-sm text-gray-300 mt-2 space-y-1.5 list-disc pl-5 print-small">
+
+              <li>
+                In possession games, don't follow the ball.
+                Move early to create the next passing angle.
+              </li>
+
+              <li>
+                Every time your team loses possession,
+                immediately identify and protect the most
+                dangerous central space.
+              </li>
+
+              <li>
+                When receiving with a defender close,
+                use your body and first touch to keep the
+                ball instead of rushing to get rid of it.
+              </li>
+
+              <li>
+                During every exercise, communicate.
+                Tell teammates when to turn, where the
+                pressure is, or when they need to move.
+              </li>
+
+            </ul>
+
+          </div>
+
+
+
+          <!-- IN MATCHES -->
+
+          <div class="print-panel bg-gray-900 border border-gray-700 rounded-xl p-4 print-compact">
+
+            <h3 class="print-dark font-extrabold text-sm"
+                style="color:var(--blue)">
+              IN MATCHES
+            </h3>
+
+            <ul class="print-muted text-sm text-gray-300 mt-2 space-y-1.5 list-disc pl-5 print-small">
+
+              <li>
+                When our attack moves forward, don't just
+                follow it. Find the space where you can
+                support the next pass.
+              </li>
+
+              <li>
+                When an opponent is about to receive
+                between our midfield and defense,
+                move to block the pass or close the space
+                before the ball arrives.
+              </li>
+
+              <li>
+                When you're pressed, stay balanced and
+                protect possession. Don't give the ball
+                away just to avoid contact.
+              </li>
+
+              <li>
+                When the team loses its shape,
+                communicate with the other pivot,
+                defenders and nearby teammates.
+                Help them get organized.
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      <!-- MATCH REVIEW -->
+
+      <section class="print-panel bg-slate-900 border border-sky-900 rounded-xl p-4 mt-5 print-compact print-mt">
+
+        <div class="flex justify-between items-center gap-3 flex-wrap">
+
+          <h2 class="text-xs font-extrabold uppercase tracking-widest"
+              style="color:var(--blue)">
+            YOUR MATCH REVIEW
+          </h2>
+
+          <p class="print-muted text-xs text-gray-400">
+            After the match:
+            <strong>Yes / Sometimes / Not yet</strong>
+          </p>
+
+        </div>
+
+
+        <div class="mt-2 space-y-2 text-sm print-small">
+
+          <div class="tracker-row flex justify-between items-start gap-3">
+            <span class="print-dark">
+              Did I recognize danger and move before
+              the opponent attacked?
+            </span>
+
+            <span class="text-gray-400 shrink-0">
+              &#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N
+            </span>
+          </div>
+
+
+          <div class="tracker-row flex justify-between items-start gap-3">
+            <span class="print-dark">
+              Did I keep finding useful positions
+              during open play?
+            </span>
+
+            <span class="text-gray-400 shrink-0">
+              &#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N
+            </span>
+          </div>
+
+
+          <div class="tracker-row flex justify-between items-start gap-3">
+            <span class="print-dark">
+              Did I use my body and compete
+              when the game became physical?
+            </span>
+
+            <span class="text-gray-400 shrink-0">
+              &#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N
+            </span>
+          </div>
+
+
+          <div class="tracker-row flex justify-between items-start gap-3">
+            <span class="print-dark">
+              Did I communicate and help
+              organize my teammates?
+            </span>
+
+            <span class="text-gray-400 shrink-0">
+              &#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N
+            </span>
+          </div>
+
+        </div>
+
+
+        <p class="print-muted text-xs text-gray-400 mt-3">
+          One moment I did well:
+          ____________________________________
+        </p>
+
+        <p class="print-muted text-xs text-gray-400 mt-2">
+          One moment I'll do differently:
+          _______________________________
         </p>
 
       </section>
-
-
-
-      <!-- MATCH CHALLENGE -->
-
-      <section
-        class="print-panel rounded-xl border border-sky-900 bg-slate-900 p-4 mt-5"
-      >
-
-        <h2
-          class="text-xs font-extrabold uppercase tracking-widest"
-          style="color:var(--blue)"
-        >
-          YOUR MATCH CHALLENGE
-        </h2>
-
-        <div class="mt-3 space-y-2 text-sm">
-
-          <p class="print-dark">
-
-            <span
-              class="font-bold"
-              style="color:var(--blue)"
-            >
-              ✓
-            </span>
-
-            Did I recognize where the ball or danger
-            was going and move before it happened?
-
-          </p>
-
-
-          <p class="print-dark">
-
-            <span
-              class="font-bold"
-              style="color:var(--blue)"
-            >
-              ✓
-            </span>
-
-            Did I use my body and compete for the ball
-            instead of avoiding contact?
-
-          </p>
-
-
-          <p class="print-dark">
-
-            <span
-              class="font-bold"
-              style="color:var(--blue)"
-            >
-              ✓
-            </span>
-
-            Did I communicate and help organize my teammates?
-
-          </p>
-
-        </div>
-
-      </section>
-
 
     </div>
 
@@ -417,7 +576,7 @@
 
 
   <p class="no-print text-center text-xs text-gray-500 mt-5">
-    CE Altafulla · Season 2026/27
+    CE Altafulla &middot; Season 2026/27
   </p>
 
 </main>
@@ -427,7 +586,7 @@
 <!-- =========================================================
      VIDEO CLIPS
 
-     Add a YouTube video ID and start/end times.
+     Add YouTube video IDs and start/end times.
 
      Example:
      https://www.youtube.com/watch?v=KhEJExFW9MI
@@ -436,7 +595,7 @@
 
      Times are in seconds.
 
-     Leave videoId empty to hide the video.
+     Leave videoId empty to hide that video.
 ========================================================= -->
 
 <script>
@@ -448,22 +607,43 @@
       start: 0,
       end: null,
 
-      title: "Be First, Not Fast",
+      title: "Read the Next Play Early",
 
       note:
-        "Watch where you move before the ball arrives. Did you anticipate the next action, or wait until it happened and then react?"
+        "Watch the moment before the opponent attacks. Could you recognize the danger and move earlier instead of reacting after the pass?"
     },
-
 
     {
       videoId: "",
       start: 0,
       end: null,
 
-      title: "Be Stronger in the Game",
+      title: "Find Your Next Position",
 
       note:
-        "Watch your body position as pressure arrives. Could you protect the ball, keep your balance and compete instead of releasing it early?"
+        "Follow Gio for the whole possession, not just when he touches the ball. Is he following the play or moving to create the next useful passing option?"
+    },
+
+    {
+      videoId: "",
+      start: 0,
+      end: null,
+
+      title: "Compete Under Pressure",
+
+      note:
+        "Watch your balance, first touch and body position. Could you protect the ball and continue playing instead of avoiding the defender?"
+    },
+
+    {
+      videoId: "",
+      start: 0,
+      end: null,
+
+      title: "Lead With Your Voice",
+
+      note:
+        "Look at how our midfield is organized. What could you communicate to help the players around you? Video may show positioning, but we also need to observe your communication during matches."
     }
 
   ];
@@ -476,22 +656,16 @@
 
   document.querySelectorAll("[data-clip]").forEach(slot => {
 
-    const clip =
-      playerClips[Number(slot.dataset.clip)];
+    const clip = playerClips[Number(slot.dataset.clip)];
 
-    if (
-      !clip ||
-      !/^[\w-]{11}$/.test(clip.videoId)
-    ) {
+    if (!clip || !/^[\w-]{11}$/.test(clip.videoId)) {
       return;
     }
-
 
     const query = new URLSearchParams({
       start: String(clip.start || 0),
       rel: "0"
     });
-
 
     if (
       Number.isFinite(clip.end) &&
@@ -500,17 +674,14 @@
       query.set("end", String(clip.end));
     }
 
-
     const card = document.createElement("div");
 
     card.className =
       "clip overflow-hidden rounded-lg border border-gray-700 bg-gray-950";
 
-
     const player = document.createElement("div");
 
     player.className = "aspect-video";
-
 
     const iframe = document.createElement("iframe");
 
@@ -526,25 +697,20 @@
 
     iframe.allowFullscreen = true;
 
-
     player.appendChild(iframe);
-
     card.appendChild(player);
-
 
     if (clip.note) {
 
       const note = document.createElement("p");
 
-      note.className =
-        "p-3 text-xs text-gray-300";
+      note.className = "p-3 text-xs text-gray-300";
 
       note.textContent = clip.note;
 
       card.appendChild(note);
 
     }
-
 
     slot.appendChild(card);
 
