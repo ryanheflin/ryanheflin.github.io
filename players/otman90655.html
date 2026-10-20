@@ -1,609 +1,178 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="robots" content="noindex, nofollow"/>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
   <title>Otman | Individual Development Plan | CE Altafulla U15</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
-
   <style>
-    :root {
-      --yellow: #f2e40a;
-      --blue: #62bed6;
-    }
-
-    body {
-      background: #111827;
-    }
-
-    .clip iframe {
-      width: 100%;
-      height: 100%;
-    }
-
+    :root { --yellow:#f2e40a; --blue:#62bed6; }
+    body { background:#111827; }
+    .clip iframe { width:100%; height:100%; }
     @media print {
-      @page {
-        size: A4;
-        margin: 13mm;
-      }
-
-      body {
-        background: white !important;
-        color: #111827 !important;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      main {
-        max-width: none !important;
-        padding: 0 !important;
-      }
-
-      .sheet {
-        background: white !important;
-        color: #111827 !important;
-        border: 1px solid #ddd !important;
-        box-shadow: none !important;
-      }
-
-      .print-dark {
-        color: #111827 !important;
-      }
-
-      .print-muted {
-        color: #374151 !important;
-      }
-
-      .print-panel {
-        background: #f3f4f6 !important;
-        border: 1px solid #e5e7eb !important;
-      }
-
-      .print-header {
-        background: #f2e40a !important;
-      }
-
-      .video-slot,
-      .no-print {
-        display: none !important;
-      }
-
-      .objective {
-        break-inside: avoid;
-      }
-
-      .print-tight {
-        padding: 12px !important;
-      }
-
-      .print-keep {
-        break-inside: avoid;
-      }
+      @page { size:A4; margin:11mm; }
+      body { background:white !important; color:#111827 !important; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+      main { max-width:none !important; padding:0 !important; }
+      .sheet { background:white !important; color:#111827 !important; border:1px solid #ddd !important; box-shadow:none !important; }
+      .print-dark { color:#111827 !important; }
+      .print-muted { color:#374151 !important; }
+      .print-panel { background:#f3f4f6 !important; border:1px solid #e5e7eb !important; }
+      .print-header { background:var(--yellow) !important; }
+      .video-slot, .no-print { display:none !important; }
+      .objective, .tracker-row, .print-keep { break-inside:avoid; }
+      .print-tight { padding:11px !important; }
+      .print-compact { padding:9px !important; }
+      .print-small { font-size:11px !important; line-height:1.35 !important; }
+      .print-gap { gap:7px !important; }
+      .print-mt { margin-top:9px !important; }
+      .print-py { padding-top:9px !important; padding-bottom:9px !important; }
     }
   </style>
 </head>
-
 <body class="text-white antialiased min-h-screen">
-
 <main class="max-w-3xl mx-auto px-4 py-7 sm:py-10">
-
-  <!-- NAVIGATION -->
-
-  <nav class="no-print mb-5 flex items-center justify-between gap-3">
-
-    <a
-      class="text-sm text-gray-400 hover:text-white"
-      href="../index.html"
-    >
-      ← Home
-    </a>
-
-    <button
-      class="rounded-lg border border-gray-600 px-3 py-2 text-sm hover:bg-gray-800"
-      onclick="window.print()"
-    >
-      Print / Save PDF
-    </button>
-
+  <nav class="no-print mb-5 flex justify-between items-center gap-3">
+    <a href="../index.html" class="text-sm text-gray-400 hover:text-white">&larr; Home</a>
+    <button type="button" onclick="window.print()" class="rounded-lg border border-gray-600 px-3 py-2 text-sm hover:bg-gray-800">Print / Save PDF</button>
   </nav>
 
-
-  <!-- PLAYER DEVELOPMENT PAGE -->
-
-  <article
-    class="sheet overflow-hidden rounded-2xl bg-gray-950 border border-gray-800 shadow-xl"
-  >
-
-    <div
-      class="print-header h-2"
-      style="background:var(--yellow)"
-    ></div>
-
+  <article class="sheet overflow-hidden rounded-2xl bg-gray-950 border border-gray-800 shadow-xl">
+    <div class="print-header h-2" style="background:var(--yellow)"></div>
     <div class="p-5 sm:p-8 print-tight">
-
-
-      <!-- PLAYER HEADER -->
-
-      <header
-        class="flex items-start justify-between gap-4 pb-5 border-b border-gray-700"
-      >
-
+      <header class="flex justify-between items-start gap-3 pb-4 border-b border-gray-700 print-py">
         <div>
-
-          <p
-            class="text-xs font-bold uppercase tracking-[.18em]"
-            style="color:var(--blue)"
-          >
-            CE Altafulla · U15
-          </p>
-
-          <h1
-            class="print-dark text-4xl sm:text-5xl font-extrabold mt-2"
-          >
-            Otman
-          </h1>
-
-          <p class="print-muted text-sm text-gray-400 mt-1">
-            Attacker · My development plan
-          </p>
-
+          <p class="text-xs font-extrabold uppercase tracking-widest" style="color:var(--blue)">CE Altafulla &middot; U15</p>
+          <h1 class="print-dark text-4xl sm:text-5xl font-extrabold mt-1">Otman</h1>
+          <p class="print-muted text-sm text-gray-400 mt-1">Attacker &middot; Individual Development Plan</p>
         </div>
-
-        <div
-          class="no-print rounded-xl bg-gray-800 px-3 py-2 text-center"
-        >
-
-          <span class="block text-xs text-gray-400">
-            Season
-          </span>
-
-          <span
-            class="font-bold"
-            style="color:var(--yellow)"
-          >
-            2026/27
-          </span>
-
-        </div>
-
+        <div class="no-print text-right text-xs text-gray-400">Season <strong class="block text-base" style="color:var(--yellow)">2026/27</strong></div>
       </header>
 
-
-
-      <!-- WHAT YOU DO WELL / COACH'S MESSAGE -->
-
-      <section class="py-5 border-b border-gray-800">
-
-        <p
-          class="uppercase text-xs font-extrabold tracking-widest"
-          style="color:var(--yellow)"
-        >
-          WHAT I SEE IN YOU
-        </p>
-
-        <h2 class="print-dark text-xl font-bold mt-2">
-          You can become the player our attack revolves around.
-        </h2>
-
-        <p
-          class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-        >
-          Otman, I believe you have the potential to become an
-          outstanding attacking player. You have speed, skill,
-          vision and the ability to create chances that other
-          players can't. You recognize space, score goals and
-          make defenders uncomfortable.
-        </p>
-
-        <p
-          class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-        >
-          I want us to build our attack around you. Your teammates
-          will look for you, make runs to support you and trust
-          you to create danger. I want opponents to worry every
-          time you get the ball.
-        </p>
-
-        <p
-          class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-        >
-          But that comes with responsibility. You need to find
-          dangerous positions, control and protect the ball,
-          and make the right decision once you have it.
-          You don't need to do everything yourself.
-          Your job is to make our whole attack more dangerous.
-        </p>
-
+      <section class="py-4 border-b border-gray-800 print-py">
+        <p class="text-xs font-extrabold uppercase tracking-widest" style="color:var(--yellow)">WHAT I SEE IN YOU</p>
+        <h2 class="print-dark text-lg sm:text-xl font-bold mt-1">You can become the player opponents plan to stop.</h2>
+        <p class="print-muted text-sm text-gray-300 leading-relaxed mt-2 print-small">You have speed, skill, vision and the instinct to find dangerous space. I believe you have the highest attacking potential on our team. We're going to look for you and make runs to help you. Your job is to be available in dangerous areas, secure the ball even when you're challenged, and create chances &mdash; by beating a defender or combining with teammates. The next step isn't doing everything yourself. It's making our whole attack better whenever you're involved.</p>
       </section>
 
+      <div class="print-panel print-keep bg-slate-900 border border-gray-700 rounded-xl p-3 mt-4 print-compact print-mt">
+        <p class="text-xs uppercase font-extrabold tracking-widest" style="color:var(--blue)">YOUR ATTACKING MINDSET</p>
+        <p class="print-dark text-center font-extrabold text-sm sm:text-base mt-2">GET DANGEROUS <span style="color:var(--yellow)">&rarr;</span> OWN THE BALL <span style="color:var(--yellow)">&rarr;</span> CREATE AN ADVANTAGE</p>
+      </div>
 
-
-      <!-- THE ATTACKING MENTALITY -->
-
-      <section class="pt-5 print-keep">
-
-        <div
-          class="print-panel rounded-xl border border-gray-700 bg-gray-900 p-4"
-        >
-
-          <p
-            class="text-xs font-extrabold uppercase tracking-widest"
-            style="color:var(--blue)"
-          >
-            YOUR ATTACKING MENTALITY
-          </p>
-
-          <div class="grid grid-cols-3 gap-2 mt-4 text-center">
-
-            <div>
-              <div
-                class="rounded-lg bg-gray-800 py-3 px-2 print-panel"
-              >
-                <span
-                  class="block text-lg font-extrabold"
-                  style="color:var(--yellow)"
-                >
-                  1
-                </span>
-
-                <span class="print-dark block text-xs font-bold mt-1">
-                  GET DANGEROUS
-                </span>
-              </div>
-            </div>
-
-            <div>
-              <div
-                class="rounded-lg bg-gray-800 py-3 px-2 print-panel"
-              >
-                <span
-                  class="block text-lg font-extrabold"
-                  style="color:var(--yellow)"
-                >
-                  2
-                </span>
-
-                <span class="print-dark block text-xs font-bold mt-1">
-                  OWN THE BALL
-                </span>
-              </div>
-            </div>
-
-            <div>
-              <div
-                class="rounded-lg bg-gray-800 py-3 px-2 print-panel"
-              >
-                <span
-                  class="block text-lg font-extrabold"
-                  style="color:var(--yellow)"
-                >
-                  3
-                </span>
-
-                <span class="print-dark block text-xs font-bold mt-1">
-                  CREATE DANGER
-                </span>
-              </div>
-            </div>
-
+      <section class="mt-5 print-mt">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest mb-3" style="color:var(--yellow)">YOUR 4 DEVELOPMENT PRIORITIES</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 print-gap">
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+            <div class="flex gap-3 items-start"><span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950" style="background:var(--yellow)">1</span><div><h3 class="print-dark text-base font-extrabold">GET DANGEROUS EARLY</h3><p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">As we win the ball, find space to receive forward or run behind. Don't automatically drop into midfield to rescue the play. Give us a dangerous target.</p></div></div>
+            <div class="video-slot mt-3" data-clip="0"></div>
           </div>
-
-        </div>
-
-      </section>
-
-
-
-      <!-- TWO PRIORITIES -->
-
-      <section class="pt-5">
-
-        <h2
-          class="text-xs font-extrabold uppercase tracking-widest mb-4"
-          style="color:var(--yellow)"
-        >
-          YOUR 2 PRIORITIES
-        </h2>
-
-        <div class="grid grid-cols-1 gap-4">
-
-
-          <!-- PRIORITY 1 -->
-
-          <div
-            class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4"
-          >
-
-            <div class="flex items-start gap-3">
-
-              <span
-                class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950"
-                style="background:var(--yellow)"
-              >
-                1
-              </span>
-
-              <div>
-
-                <h3 class="print-dark text-lg font-extrabold">
-                  ALWAYS BE DANGEROUS
-                </h3>
-
-                <p
-                  class="print-muted text-sm text-gray-300 mt-1 leading-relaxed"
-                >
-                  Every time our team wins the ball, your first
-                  job is to get into a position where you can
-                  hurt the opponent. Find space, make runs and
-                  demand the ball.
-                </p>
-
-                <p
-                  class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-                >
-                  Don't always come back toward the ball when
-                  your teammates are struggling. Stay dangerous,
-                  give them a target and trust them to find you.
-                  When defenders focus on you, use your movement
-                  to create space for your teammates.
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- VIDEO FOR PRIORITY 1 -->
-
-            <div
-              class="video-slot mt-4"
-              data-clip="0"
-            ></div>
-
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+            <div class="flex gap-3 items-start"><span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950" style="background:var(--yellow)">2</span><div><h3 class="print-dark text-base font-extrabold">WIN THE SPACE &amp; FIRST TOUCH</h3><p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">Move your feet early, get your body between defender and ball, and control bouncing passes &mdash; especially on your right. Don't turn every duel into a footrace.</p></div></div>
+            <div class="video-slot mt-3" data-clip="1"></div>
           </div>
-
-
-
-          <!-- PRIORITY 2 -->
-
-          <div
-            class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4"
-          >
-
-            <div class="flex items-start gap-3">
-
-              <span
-                class="flex-none h-9 w-9 flex items-center justify-center rounded-lg font-extrabold text-gray-950"
-                style="background:var(--yellow)"
-              >
-                2
-              </span>
-
-              <div>
-
-                <h3 class="print-dark text-lg font-extrabold">
-                  OWN THE BALL. MAKE SOMETHING HAPPEN.
-                </h3>
-
-                <p
-                  class="print-muted text-sm text-gray-300 mt-1 leading-relaxed"
-                >
-                  When the ball comes to you, take control.
-                  Don't rely only on your speed. Get your body
-                  between the defender and the ball, prepare
-                  your first touch and make it difficult for
-                  anyone to take possession from you.
-                </p>
-
-                <p
-                  class="print-muted text-sm text-gray-300 mt-2 leading-relaxed"
-                >
-                  Then be dangerous. Attack the defender when
-                  you have an advantage, combine with a teammate
-                  or create the next opportunity. You don't
-                  have to beat everyone yourself. Make the
-                  opponent worry about what you'll do next.
-                </p>
-
-              </div>
-
-            </div>
-
-            <!-- VIDEO FOR PRIORITY 2 -->
-
-            <div
-              class="video-slot mt-4"
-              data-clip="1"
-            ></div>
-
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+            <div class="flex gap-3 items-start"><span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950" style="background:var(--yellow)">3</span><div><h3 class="print-dark text-base font-extrabold">PICK THE RIGHT WEAPON</h3><p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">Once you control it, look up. If you can beat your defender, go. If a teammate has the better route, combine and move again. Keep the ball if neither is on.</p></div></div>
+            <div class="video-slot mt-3" data-clip="2"></div>
           </div>
-
+          <div class="objective print-panel rounded-xl bg-gray-900 border border-gray-700 p-4 print-compact">
+            <div class="flex gap-3 items-start"><span class="flex-none rounded-lg h-8 w-8 flex items-center justify-center font-extrabold text-gray-950" style="background:var(--yellow)">4</span><div><h3 class="print-dark text-base font-extrabold">STAY CLEAR IN CHAOS</h3><p class="print-muted text-sm text-gray-300 mt-1 leading-relaxed print-small">Especially just after a regain or under pressure: see your options before you rush. One calm first touch or simple pass can set up the dangerous next action.</p></div></div>
+            <div class="video-slot mt-3" data-clip="3"></div>
+          </div>
         </div>
-
       </section>
 
-
-
-      <!-- MATCH CHALLENGE -->
-
-      <section
-        class="print-panel print-keep rounded-xl border border-sky-900 bg-slate-900 p-4 mt-5"
-      >
-
-        <h2
-          class="text-xs font-extrabold uppercase tracking-widest"
-          style="color:var(--blue)"
-        >
-          YOUR MATCH CHALLENGE
-        </h2>
-
-        <div class="mt-3 space-y-2 text-sm">
-
-          <p class="print-dark">
-
-            <span
-              class="font-bold"
-              style="color:var(--blue)"
-            >
-              ✓
-            </span>
-
-            When we won the ball, did I immediately look
-            to get into a dangerous position?
-
-          </p>
-
-          <p class="print-dark">
-
-            <span
-              class="font-bold"
-              style="color:var(--blue)"
-            >
-              ✓
-            </span>
-
-            When I received it, did I protect the ball
-            and create an advantage for our team?
-
-          </p>
-
+      <section class="mt-5 print-mt">
+        <h2 class="text-xs font-extrabold uppercase tracking-widest mb-3" style="color:var(--yellow)">WHAT THIS LOOKS LIKE</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 print-gap">
+          <div class="print-panel bg-gray-900 border border-gray-700 rounded-xl p-4 print-compact">
+            <h3 class="print-dark font-extrabold text-sm" style="color:var(--blue)">IN TRAINING</h3>
+            <ul class="print-muted text-sm text-gray-300 mt-2 space-y-1.5 list-disc pl-5 print-small">
+              <li>On every turnover in a small-sided game, move to a dangerous receiving spot before calling for the ball.</li>
+              <li>In 1v1s, get across the defender's line while staying within playing distance of the ball; keep control rather than just knocking it past.</li>
+              <li>On bouncing passes, move your feet and cushion the first touch with either foot.</li>
+              <li>In 3v2 or 4v3 attacks, decide: beat your man, combine, or keep it.</li>
+            </ul>
+          </div>
+          <div class="print-panel bg-gray-900 border border-gray-700 rounded-xl p-4 print-compact">
+            <h3 class="print-dark font-extrabold text-sm" style="color:var(--blue)">IN MATCHES</h3>
+            <ul class="print-muted text-sm text-gray-300 mt-2 space-y-1.5 list-disc pl-5 print-small">
+              <li>When we regain it, check if you can stay high, get between defenders, or run into space behind.</li>
+              <li>With a defender alongside, get your body in position and secure the ball before accelerating.</li>
+              <li>If two defenders converge, find the free teammate, then move to receive again.</li>
+              <li>When the game gets frantic, don't force the first action. Control it, look, then attack the advantage.</li>
+            </ul>
+          </div>
         </div>
-
       </section>
 
+      <section class="print-panel bg-slate-900 border border-sky-900 rounded-xl p-4 mt-5 print-compact print-mt">
+        <div class="flex justify-between items-center gap-3 flex-wrap">
+          <h2 class="text-xs font-extrabold uppercase tracking-widest" style="color:var(--blue)">YOUR MATCH REVIEW</h2>
+          <p class="print-muted text-xs text-gray-400">After the match: <strong>Yes / Sometimes / Not yet</strong></p>
+        </div>
+        <div class="mt-2 space-y-2 text-sm print-small">
+          <div class="tracker-row flex justify-between items-start gap-3"><span class="print-dark">Did I find a dangerous position when we won the ball?</span><span class="text-gray-400 shrink-0">&#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N</span></div>
+          <div class="tracker-row flex justify-between items-start gap-3"><span class="print-dark">Did I protect and control the ball under contact?</span><span class="text-gray-400 shrink-0">&#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N</span></div>
+          <div class="tracker-row flex justify-between items-start gap-3"><span class="print-dark">Did I choose to dribble, combine, or keep it at the right time?</span><span class="text-gray-400 shrink-0">&#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N</span></div>
+          <div class="tracker-row flex justify-between items-start gap-3"><span class="print-dark">Did I keep my head when the game got fast?</span><span class="text-gray-400 shrink-0">&#9633; Y &nbsp; &#9633; S &nbsp; &#9633; N</span></div>
+        </div>
+        <p class="print-muted text-xs text-gray-400 mt-3">One moment I did well: ____________________________________</p>
+        <p class="print-muted text-xs text-gray-400 mt-2">One moment I'll do differently: _______________________________</p>
+      </section>
     </div>
-
   </article>
-
-
-  <p class="no-print text-center text-xs text-gray-500 mt-5">
-    CE Altafulla · Season 2026/27
-  </p>
-
+  <p class="no-print text-center text-xs text-gray-500 mt-5">CE Altafulla &middot; Season 2026/27</p>
 </main>
 
-
-
-<!-- =========================================================
-     VIDEO CLIPS
-
-     Add the YouTube video ID and start/end times.
-
-     Example:
-     https://www.youtube.com/watch?v=KhEJExFW9MI
-
-     videoId: "KhEJExFW9MI"
-
-     Times are in seconds.
-
-     Leave videoId empty to hide the video.
-========================================================= -->
-
+<!-- Add YouTube IDs and clip times in seconds. Empty videoId = no video shown. -->
 <script>
-
   const playerClips = [
-
-    {
-      videoId: "",
-      start: 0,
-      end: null,
-
-      title: "Always Be Dangerous",
-
-      note:
-        "Watch your movement before we win the ball or as possession changes. Could you find a more dangerous position, stretch the defense or create space for a teammate?"
-    },
-
-    {
-      videoId: "",
-      start: 0,
-      end: null,
-
-      title: "Own the Ball. Make Something Happen.",
-
-      note:
-        "Watch your first touch and body position. Did you protect possession? Once you had control, did you attack, combine or choose the best next action?"
-    }
-
+    { videoId:"", start:0, end:null, title:"Get Dangerous Early", note:"At the moment we regain possession, where could Otman move to be a dangerous option?" },
+    { videoId:"", start:0, end:null, title:"Win the Space and First Touch", note:"Watch the approach, body position and first touch. Could he protect the ball before speeding up?" },
+    { videoId:"", start:0, end:null, title:"Pick the Right Weapon", note:"Freeze before the decision. Is the advantage in the dribble, the pass, or keeping the ball?" },
+    { videoId:"", start:0, end:null, title:"Stay Clear in Chaos", note:"Immediately after a regain, does he look and choose, or rush the first action?" }
   ];
 
-
-
-  // =========================================================
-  // VIDEO RENDERING
-  // =========================================================
-
   document.querySelectorAll("[data-clip]").forEach(slot => {
-
-    const clip =
-      playerClips[Number(slot.dataset.clip)];
-
-    if (
-      !clip ||
-      !/^[\w-]{11}$/.test(clip.videoId)
-    ) {
-      return;
-    }
+    const clip = playerClips[Number(slot.dataset.clip)];
+    if (!clip || !/^[\w-]{11}$/.test(clip.videoId)) return;
 
     const query = new URLSearchParams({
       start: String(clip.start || 0),
       rel: "0"
     });
 
-    if (
-      Number.isFinite(clip.end) &&
-      clip.end > (clip.start || 0)
-    ) {
+    if (Number.isFinite(clip.end) && clip.end > (clip.start || 0)) {
       query.set("end", String(clip.end));
     }
 
     const card = document.createElement("div");
-
-    card.className =
-      "clip overflow-hidden rounded-lg border border-gray-700 bg-gray-950";
+    card.className = "clip overflow-hidden rounded-lg border border-gray-700 bg-gray-950";
 
     const player = document.createElement("div");
-
     player.className = "aspect-video";
 
     const iframe = document.createElement("iframe");
-
-    iframe.src =
-      `https://www.youtube-nocookie.com/embed/${clip.videoId}?${query}`;
-
+    iframe.src = `https://www.youtube-nocookie.com/embed/${clip.videoId}?${query}`;
     iframe.title = clip.title;
-
     iframe.loading = "lazy";
-
-    iframe.allow =
-      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
 
     player.appendChild(iframe);
     card.appendChild(player);
 
     if (clip.note) {
-
       const note = document.createElement("p");
-
       note.className = "p-3 text-xs text-gray-300";
-
       note.textContent = clip.note;
-
       card.appendChild(note);
-
     }
 
     slot.appendChild(card);
-
   });
-
 </script>
-
 </body>
 </html>
