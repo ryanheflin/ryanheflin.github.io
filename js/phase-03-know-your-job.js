@@ -32,6 +32,9 @@ const phase3Weeks = [
           'Force the attacker away from danger.'
         ],
 
+          sessionPlan:
+          'sessions/session-25-control-your-space.pdf',
+
         missed: [
           'We do not need to win the ball immediately.',
           'Stay between the attacker and the goal.',
