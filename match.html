@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Match Review | CE Altafulla U15</title><script src="https://cdn.tailwindcss.com"></script><script src="js/site.js" defer></script><style>
+:root{--yellow:#f2e40a;--blue:#62bed6}
+body{background:#111827;color:white}
+.match-card{background:#1f2937;border:1px solid #374151;border-radius:14px;padding:20px;transition:background .2s}
+.match-card:hover{background:#273449;border-color:#62bed6}
+.prose p{margin:0 0 1rem;line-height:1.75;color:#d1d5db}
+.prose h3{font-size:1.2rem;font-weight:700;color:white;margin:1.5rem 0 .75rem}
+.prose ul{list-style:disc;padding-left:1.5rem;margin:1rem 0}
+@media print{.no-print,#site-sidebar{display:none!important}main{margin:0!important;padding:0!important}body{background:white;color:black}.match-card{break-inside:avoid}}
+</style><script>window.seasonGames=[];</script>
+<script src="js/games/game-01.js"></script><script src="js/games/game-02.js"></script><script src="js/games/game-03.js"></script><script src="js/games/game-04.js"></script><script src="js/games/game-05.js"></script><script src="js/games/game-06.js"></script><script src="js/games/game-07.js"></script>
+<script src="js/match-posts.js"></script></head><body class="antialiased min-h-screen pb-16"><div id="site-sidebar"></div><main class="md:ml-64 mx-auto max-w-6xl p-4 pt-20 md:p-10">
+<nav class="mb-5 no-print"><a href="data.html" class="text-gray-400 hover:text-white text-sm">← All matches</a></nav>
+<div id="content"></div></main>
+<script>
+const id=new URLSearchParams(location.search).get("id");
+const g=(window.seasonGames||[]).find(x=>x.id===id)||(id==="game-08"?{id:"game-08",opponent:"NSA Camp Joliu",date:"25 October 2026",competition:"Liga",goalsFor:2,goalsAgainst:2}:null);
+const post=(window.matchPosts||{})[id]||{};
+const el=document.getElementById("content");
+function make(tag,cls,txt){const node=document.createElement(tag);if(cls)node.className=cls;if(txt!==undefined)node.textContent=txt;return node}
+function section(title){const s=make("section","mt-9");s.append(make("h2","text-xl font-bold mb-4",title));el.append(s);return s}
+function videoCard(clip){
+const item=make("article","rounded-xl overflow-hidden border border-gray-700 bg-gray-800");
+const link=clip.embedUrl||clip.url||"";
+if(!/^https:\/\/(www\.)?(youtube\.com|youtube-nocookie\.com|youtu\.be)\//i.test(link))return null;
+let src=link.replace("youtu.be/","www.youtube.com/embed/").replace("www.youtube.com/watch?v=","www.youtube.com/embed/");
+const embed=make("div","aspect-video bg-black");const frame=document.createElement("iframe");frame.className="w-full h-full";frame.src=src;frame.loading="lazy";frame.title=clip.title||"Match footage";frame.referrerPolicy="strict-origin-when-cross-origin";frame.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";frame.allowFullscreen=true;embed.append(frame);item.append(embed);
+const body=make("div","p-4");body.append(make("h3","font-bold",clip.title||"Video"));if(clip.description||clip.note)body.append(make("p","text-sm text-gray-400 mt-2",clip.note||clip.description));item.append(body);return item
+}
+if(!g){el.append(make("h1","text-2xl font-bold","Match not found"));}else{
+document.title=g.opponent+" | Match Review | CE Altafulla";
+const header=make("header","border-b border-gray-700 pb-7");
+header.append(make("p","text-xs font-bold uppercase tracking-widest text-sky-300",g.competition+" · "+g.date));
+header.append(make("h1","text-3xl md:text-4xl font-extrabold mt-2",g.opponent));
+const score=make("p","text-3xl font-extrabold mt-3",g.goalsFor+" – "+g.goalsAgainst);score.style.color="var(--yellow)";header.append(score);
+el.append(header);
+const intro=section("The match");intro.append(make("p","text-gray-300 leading-relaxed",post.intro||g.summary||"Match notes and video examples will be added here."));
+if(post.takeaways?.length){const s=section("What we learned");const list=make("ul","list-disc pl-6 space-y-3 text-gray-300");post.takeaways.forEach(t=>list.append(make("li","",t)));s.append(list)}
+const clips=(post.clips||[]).filter(c=>c.embedUrl||c.url);
+if(clips.length){const s=section("Video examples");const grid=make("div","grid grid-cols-1 md:grid-cols-2 gap-5");clips.forEach(c=>{const card=videoCard(c);if(card)grid.append(card)});s.append(grid)}
+else{const s=section("Video examples");s.append(make("p","text-gray-400 text-sm","Short clips and coaching notes will be added here."))}
+const full=(post.fullVideo||g.clips||[]);const items=Array.isArray(full)?full:[full];const grid=make("div","grid grid-cols-1 md:grid-cols-2 gap-5");items.forEach(c=>{const card=videoCard(typeof c==="string"?{embedUrl:c,title:"Full match"}:c);if(card)grid.append(card)});
+if(grid.childElementCount){const s=section("Full match footage");s.append(make("p","text-sm text-gray-400 mb-4","Watch the full match or the original match segments."));s.append(grid)}
+else{const s=section("Full match footage");s.append(make("p","text-sm text-gray-400","Full-match video will be added here."))}
+}
+</script></body></html>
