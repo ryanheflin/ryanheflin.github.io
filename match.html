@@ -9,6 +9,12 @@ body{background:#111827;color:white}
 @media print{.no-print,#site-sidebar{display:none!important}main{margin:0!important;padding:0!important}body{background:white;color:black}.match-card{break-inside:avoid}}
 </style><script>window.seasonGames=[];</script>
 <script src="js/games/game-01.js"></script><script src="js/games/game-02.js"></script><script src="js/games/game-03.js"></script><script src="js/games/game-04.js"></script><script src="js/games/game-05.js"></script><script src="js/games/game-06.js"></script><script src="js/games/game-07.js"></script>
+<script>window.blogPosts = [];</script>
+<script src="posts/first-video-comparison-pallaresos.js"></script>
+<script src="posts/better-this-week.js"></script>
+<script src="posts/san-pere-clips.js"></script>
+<script src="posts/valls_thoughts.js"></script>
+<script src="posts/game_plan_wk_3.js"></script>
 <script src="js/match-posts.js"></script></head><body class="antialiased min-h-screen pb-16"><div id="site-sidebar"></div><main class="md:ml-64 mx-auto max-w-6xl p-4 pt-20 md:p-10">
 <nav class="mb-5 no-print"><a href="data.html" class="text-gray-400 hover:text-white text-sm">← All matches</a></nav>
 <div id="content"></div></main>
@@ -35,6 +41,27 @@ header.append(make("h1","text-3xl md:text-4xl font-extrabold mt-2",g.opponent));
 const score=make("p","text-3xl font-extrabold mt-3",g.goalsFor+" – "+g.goalsAgainst);score.style.color="var(--yellow)";header.append(score);
 el.append(header);
 const intro=section("The match");intro.append(make("p","text-gray-300 leading-relaxed",post.intro||g.summary||"Match notes and video examples will be added here."));
+// Display original published match-related posts with their embedded video clips.
+const relatedMap={
+  "game-02":["first-video-comparison-pallaresos","better-this-week"],
+  "game-03":["san-pere-clips"],
+  "game-05":["what-we-can-control"],
+  "game-06":["plan-san-pere-liga"]
+};
+const related=(relatedMap[id]||[]).map(pid=>(window.blogPosts||[]).find(p=>p.id===pid)).filter(Boolean);
+if(related.length){
+const relatedSection=section("Coach's posts and video analysis");
+related.forEach(p=>{
+ const article=make("article","rounded-xl bg-gray-800 border border-gray-700 p-5 md:p-7 mb-5");
+ article.append(make("p","text-xs uppercase tracking-wide text-gray-400",p.date||""));
+ article.append(make("h3","text-xl font-bold mt-2 mb-3",p.title));
+ if(p.excerpt)article.append(make("p","text-gray-400 mb-5 text-sm",p.excerpt));
+ const body=make("div","prose text-gray-300");
+ body.innerHTML=p.content||"";
+ body.querySelectorAll("iframe").forEach(frame=>{frame.loading="lazy";frame.classList.add("w-full","h-full");frame.setAttribute("allowfullscreen","")});
+ article.append(body);relatedSection.append(article);
+});
+}
 if(post.takeaways?.length){const s=section("What we learned");const list=make("ul","list-disc pl-6 space-y-3 text-gray-300");post.takeaways.forEach(t=>list.append(make("li","",t)));s.append(list)}
 const clips=(post.clips||[]).filter(c=>c.embedUrl||c.url);
 if(clips.length){const s=section("Video examples");const grid=make("div","grid grid-cols-1 md:grid-cols-2 gap-5");clips.forEach(c=>{const card=videoCard(c);if(card)grid.append(card)});s.append(grid)}
