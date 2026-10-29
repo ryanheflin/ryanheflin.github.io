@@ -1,3 +1,9 @@
+// Reversible schedule-only pause. Leave the schedule accessible.
+(function(){
+ const page=window.location.pathname.split("/").pop()||"index.html";
+ if(page!=="schedule.html")window.location.replace(new URL("schedule.html",window.location.href).href);
+})();
+
 async function loadSidebar() {
   const container = document.getElementById("site-sidebar");
 
