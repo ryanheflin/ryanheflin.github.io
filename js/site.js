@@ -1,7 +1,7 @@
-// Reversible schedule-only pause. Leave the schedule accessible.
+// Schedule-only mode replaced with values-only mode. Reversible in Git history.
 (function(){
- const page=window.location.pathname.split("/").pop()||"index.html";
- if(page!=="schedule.html")window.location.replace(new URL("schedule.html",window.location.href).href);
+  const path=window.location.pathname.split("/").pop()||"index.html";
+  if(path!=="values.html")window.location.replace(new URL("values.html",window.location.href).href);
 })();
 
 async function loadSidebar() {
